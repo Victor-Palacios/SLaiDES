@@ -1,0 +1,31 @@
+version: 1
+theme:
+  palette:
+    primary: "#880E4F"
+    surface: "#FFFFFF"
+    accent: "#FF6D00"
+    text: "#1A1A2E"
+    muted: "#9E9E9E"
+  font: times new roman
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Brand Story"
+    subtitle: "The people behind the product"
+
+  - component: image-half-bleed
+    title: "Built in the Field"
+    image_side: left
+    image:
+      type: image
+      path: "assets/team-photo.jpg"
+      fit: cover
+      alt: "Engineering team at a customer site"
+    content:
+      - type: text
+        content: "Every feature we ship starts with a real customer problem. Our field engineering team spends 30% of their time embedded with customers."
+      - type: spacer
+        size: 1
+      - type: text
+        content: "This hands-on approach has reduced implementation time by 60% and cut support tickets by half."

@@ -1,0 +1,115 @@
+version: 1
+theme:
+  palette:
+    primary: "#263238"
+    surface: "#ECEFF1"
+    accent: "#FF5722"
+    text: "#212121"
+    muted: "#78909C"
+  type_scale:
+    title: 54
+    header: 40
+    body: 32
+    caption: 24
+  font: courier new
+  spacing_unit: 10
+  motif: technical
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: false
+slides:
+  - component: title-slide
+    title: "Component Gallery"
+    subtitle: "All eight components in one deck"
+
+  - component: two-column
+    title: "Two Column"
+    left:
+      - type: text
+        content: "Left column content demonstrating the two-column layout component."
+      - type: icon
+        name: check
+    right:
+      - type: text
+        content: "Right column content with balanced whitespace and clear hierarchy."
+      - type: spacer
+        size: 1
+    left_weight: 1.2
+    right_weight: 0.8
+
+  - component: icon-text-rows
+    title: "Icon Text Rows"
+    rows:
+      - icon: rocket
+        heading: "Speed"
+        body: "Deploy in minutes, not months."
+      - icon: lock
+        heading: "Security"
+        body: "Enterprise-grade protection by default."
+      - icon: chart-up
+        heading: "Scale"
+        body: "From startup to enterprise without rearchitecting."
+
+  - component: stat-callout
+    title: "Stat Callout"
+    stats:
+      - value: "99.9%"
+        label: "Uptime"
+      - value: "< 50ms"
+        label: "Latency"
+        subtext: "p99 globally"
+      - value: "500+"
+        label: "Integrations"
+
+  - component: comparison-columns
+    title: "Comparison Columns"
+    left_title: "Before"
+    right_title: "After"
+    left_items:
+      - text: "Manual processes, error-prone"
+      - text: "Weekly reporting cycles"
+    right_items:
+      - text: "Automated workflows, consistent"
+      - text: "Real-time dashboards"
+
+  - component: timeline
+    title: "Timeline"
+    events:
+      - date: "Month 1"
+        title: "Onboarding"
+        description: "Setup, configuration, and team training."
+      - date: "Month 3"
+        title: "Full Deployment"
+        description: "Production rollout across all business units."
+      - date: "Month 6"
+        title: "Optimization"
+        description: "Performance tuning based on 90 days of usage data."
+
+  - component: image-half-bleed
+    title: "Image Half Bleed"
+    image_side: right
+    image:
+      type: image
+      path: "assets/placeholder.jpg"
+      fit: cover
+      alt: "Placeholder image demonstrating the half-bleed layout"
+    content:
+      - type: text
+        content: "This layout places a full-bleed image on one side with text content on the other."
+
+  - component: card-grid
+    title: "Card Grid"
+    cards:
+      - icon: star
+        title: "Feature One"
+        body: "Brief description of this key capability."
+      - icon: bolt
+        title: "Feature Two"
+        body: "Brief description of this key capability."
+      - icon: shield
+        title: "Feature Three"
+        body: "Brief description of this key capability."
+      - icon: globe
+        title: "Feature Four"
+        body: "Brief description of this key capability."

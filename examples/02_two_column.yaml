@@ -1,0 +1,35 @@
+version: 1
+theme:
+  palette:
+    primary: "#2C3E50"
+    surface: "#ECF0F1"
+    accent: "#E74C3C"
+    text: "#2C3E50"
+    muted: "#95A5A6"
+  font: calibri
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Market Analysis"
+    subtitle: "Competitive Landscape 2025"
+
+  - component: two-column
+    title: "Strengths vs Weaknesses"
+    left:
+      - type: text
+        content: "Strong brand recognition across 45 markets"
+        bold: false
+      - type: text
+        content: "Proven distribution network with 2,400 partners"
+      - type: text
+        content: "Industry-leading customer satisfaction score of 92%"
+    right:
+      - type: text
+        content: "Limited digital presence in emerging markets"
+      - type: text
+        content: "Higher cost structure than key competitors"
+      - type: text
+        content: "Product refresh cycle slower than market demand"
+    left_weight: 1
+    right_weight: 1

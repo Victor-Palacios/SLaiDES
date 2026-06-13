@@ -5,7 +5,7 @@ test passed in the session that checked it. See PLAN.md for full detail;
 NIGHTLY_REPORTS/ for per-session history; NOTES.md for objections/proposals.
 
 **Gate status**
-- Phase 1 calibration gate (2% width threshold): NOT YET RUN
+- Phase 1 calibration gate (2% width threshold): **PASS** (max error 0.076%, commit 23f2b3c)
 - Phase 8 prerequisite (Phase 4 linter complete + defect-fixture test passes): NOT MET
 
 ---
@@ -19,16 +19,16 @@ NIGHTLY_REPORTS/ for per-session history; NOTES.md for objections/proposals.
 
 ## Phase 1 — Font metrics & text measurement
 
-- [ ] Monorepo scaffold: single `pyproject.toml`, src layout, five packages (`slidekit/ir`, `slidekit/metrics`, `slidekit/layout`, `slidekit/lint`, `slidekit/emit`)
-- [ ] Metric-safe font set enforced (Arial, Calibri, Cambria, Times New Roman, Courier New, Bookman Old Style, Century Schoolbook); other fonts rejected at IR validation with clear error
-- [ ] Per-glyph advance widths, kerning pairs, ascent/descent/line-gap extracted via fonttools for each font × weight × style; vendored as JSON in `slidekit/metrics/data/`
-- [ ] `measure_text(text, font, size_pt, bold, italic) -> width_emu` including kerning
-- [ ] Greedy line breaking matching PowerPoint behavior: break at spaces/hyphens, no hyphenation, long unbreakable tokens overflow and are flagged; `wrap()` returns Lines with measured width/height
-- [ ] Text-box internal insets (0.1" L/R, 0.05" T/B) and line spacing (single = 1.2 × font size, explicit IR property) accounted for
-- [ ] Safety margin policy: configurable slack (default 4% width, half-line height), documented in one place
-- [ ] ACCEPTANCE: property test — ~200 sampled strings per font, measured width vs. LibreOffice-rendered width differs by < 2% (one-time calibration harness; NOT part of build loop)
-- [ ] ACCEPTANCE: unit tests for kerning pairs, mixed bold/regular runs, empty strings, very long tokens
-- [ ] **HARD GATE: calibration within 2% — go/no-go decision recorded** (human should read this report before night two; see PLAN.md operator notes)
+- [x] Monorepo scaffold: single `pyproject.toml`, src layout, five packages (`slidekit/ir`, `slidekit/metrics`, `slidekit/layout`, `slidekit/lint`, `slidekit/emit`)
+- [x] Metric-safe font set enforced (Arial, Calibri, Cambria, Times New Roman, Courier New, Bookman Old Style, Century Schoolbook); other fonts rejected at IR validation with clear error
+- [x] Per-glyph advance widths, kerning pairs, ascent/descent/line-gap extracted via fonttools for each font × weight × style; vendored as JSON in `slidekit/metrics/data/`
+- [x] `measure_text(text, font, size_pt, bold, italic) -> width_emu` including kerning
+- [x] Greedy line breaking matching PowerPoint behavior: break at spaces/hyphens, no hyphenation, long unbreakable tokens overflow and are flagged; `wrap()` returns Lines with measured width/height
+- [x] Text-box internal insets (0.1" L/R, 0.05" T/B) and line spacing (single = 1.2 × font size, explicit IR property) accounted for
+- [x] Safety margin policy: configurable slack (default 4% width, half-line height), documented in one place
+- [x] ACCEPTANCE: property test — ~200 sampled strings per font, measured width vs. LibreOffice-rendered width differs by < 2% (calibration harness PASS; max error 0.076%; commit 23f2b3c)
+- [x] ACCEPTANCE: unit tests for kerning pairs, mixed bold/regular runs, empty strings, very long tokens (28 tests pass)
+- [x] **HARD GATE: calibration within 2% — PASS** (max error 0.076%; full report in calibration_report.json)
 
 ## Phase 2 — IR schema
 

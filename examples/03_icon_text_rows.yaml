@@ -1,0 +1,30 @@
+version: 1
+theme:
+  palette:
+    primary: "#0A3D62"
+    surface: "#FAFAFA"
+    accent: "#F39C12"
+    text: "#1A1A2E"
+    muted: "#7F8C8D"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Our Core Values"
+
+  - component: icon-text-rows
+    title: "What Drives Us"
+    rows:
+      - icon: star
+        heading: "Excellence"
+        body: "We set the highest standards for every deliverable and hold ourselves accountable to our clients and each other."
+      - icon: handshake
+        heading: "Integrity"
+        body: "Honest, transparent communication is the foundation of every relationship we build."
+      - icon: lightbulb
+        heading: "Innovation"
+        body: "We challenge conventional thinking and invest in the ideas that will shape tomorrow."
+      - icon: globe
+        heading: "Inclusion"
+        body: "Diverse perspectives make us stronger; every voice has a seat at the table."

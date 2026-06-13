@@ -1,0 +1,38 @@
+version: 1
+theme:
+  palette:
+    primary: "#4A148C"
+    surface: "#FFFFFF"
+    accent: "#FF6F00"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Platform Comparison"
+    subtitle: "Legacy System vs. Modern Stack"
+
+  - component: comparison-columns
+    title: "Side-by-Side Evaluation"
+    left_title: "Legacy Platform"
+    right_title: "Modern Stack"
+    left_items:
+      - text: "Average deploy time: 4 hours"
+        icon: clock
+      - text: "Manual scaling; capacity planned quarterly"
+        icon: chart-down
+      - text: "Monolithic architecture; single point of failure"
+        icon: warning
+      - text: "On-premise only; high capex"
+        icon: server
+    right_items:
+      - text: "Average deploy time: 8 minutes"
+        icon: rocket
+      - text: "Auto-scaling; responds in seconds"
+        icon: chart-up
+      - text: "Microservices; isolated fault domains"
+        icon: shield
+      - text: "Cloud-native; pay-as-you-go"
+        icon: cloud

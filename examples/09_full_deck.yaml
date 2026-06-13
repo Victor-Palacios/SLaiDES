@@ -1,0 +1,84 @@
+version: 1
+theme:
+  palette:
+    primary: "#1B4F8A"
+    surface: "#FFFFFF"
+    accent: "#E84545"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  type_scale:
+    title: 60
+    header: 42
+    body: 34
+    caption: 25
+  font: arial
+  motif: minimal
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "Annual Strategy Review"
+    subtitle: "Executive Leadership — January 2026"
+
+  - component: stat-callout
+    title: "2025 Results at a Glance"
+    stats:
+      - value: "127%"
+        label: "Revenue vs Target"
+        subtext: "$3.8B total"
+      - value: "94%"
+        label: "Customer Retention"
+      - value: "48 NPS"
+        label: "Net Promoter Score"
+        subtext: "+12 points YoY"
+
+  - component: two-column
+    title: "What Drove Growth"
+    left:
+      - type: text
+        content: "Enterprise segment up 42% driven by expanded seat licenses"
+      - type: text
+        content: "APAC region outperformed forecast by 31%"
+      - type: text
+        content: "New product lines contributed 18% of total revenue"
+    right:
+      - type: text
+        content: "SMB segment steady; churn reduced by operational improvements"
+      - type: text
+        content: "Services attach rate improved from 34% to 51%"
+      - type: text
+        content: "Partner channel now represents 28% of bookings"
+
+  - component: timeline
+    title: "Strategic Priorities 2026"
+    events:
+      - date: "Q1"
+        title: "Platform Consolidation"
+        description: "Merge three legacy systems into unified data layer."
+      - date: "Q2"
+        title: "AI Features GA"
+        description: "General availability for all AI-assisted workflows."
+      - date: "Q3"
+        title: "Enterprise Expansion"
+        description: "Target Fortune 500 segment with dedicated sales motion."
+      - date: "Q4"
+        title: "Partner Ecosystem"
+        description: "Launch certified ISV program; target 50 partners."
+
+  - component: card-grid
+    title: "Investment Areas"
+    cards:
+      - icon: code
+        title: "Engineering"
+        body: "Platform reliability, developer experience, and AI infrastructure."
+      - icon: users
+        title: "Go-to-Market"
+        body: "Expanded enterprise sales team and channel partner program."
+      - icon: globe
+        title: "International"
+        body: "APAC and EMEA expansion with local data residency."
+      - icon: chart-up
+        title: "Data & Analytics"
+        body: "Customer intelligence and product usage insights platform."

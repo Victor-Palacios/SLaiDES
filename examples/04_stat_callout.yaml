@@ -1,0 +1,31 @@
+version: 1
+theme:
+  palette:
+    primary: "#1A237E"
+    surface: "#FFFFFF"
+    accent: "#00BCD4"
+    text: "#212121"
+    muted: "#9E9E9E"
+  font: cambria
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "2025 Impact Report"
+    subtitle: "Numbers that define our year"
+
+  - component: stat-callout
+    title: "By the Numbers"
+    stats:
+      - value: "$4.2B"
+        label: "Revenue"
+        subtext: "+18% year over year"
+      - value: "98.7%"
+        label: "Uptime SLA"
+        subtext: "Across all enterprise accounts"
+      - value: "142"
+        label: "Countries Served"
+        subtext: "Up from 98 in 2024"
+      - value: "12,400"
+        label: "Employees Worldwide"
+        subtext: "3,200 hired this year"
