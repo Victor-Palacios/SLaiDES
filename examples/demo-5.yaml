@@ -1,0 +1,81 @@
+version: 1
+theme:
+  palette:
+    primary: "#1B4F8A"
+    surface: "#FFFFFF"
+    accent: "#E84545"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  type_scale:
+    title: 60
+    header: 42
+    body: 34
+    caption: 25
+  font: arial
+  motif: minimal
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "slidekit First Light"
+    subtitle: "Phase 5 demo: lint-clean, zero screenshots"
+
+  - component: two-column
+    title: "How slidekit Works"
+    left:
+      - type: text
+        content: "Author IR YAML once"
+      - type: text
+        content: "Layout engine solves EMU rects"
+      - type: text
+        content: "Linter validates before emit"
+    right:
+      - type: text
+        content: "python-pptx places shapes"
+      - type: text
+        content: "Round-trip test verifies"
+      - type: text
+        content: "Zero screenshot calls needed"
+
+  - component: stat-callout
+    title: "Calibration Results"
+    stats:
+      - value: "0.076%"
+        label: "Max Width Error"
+        subtext: "vs LibreOffice render"
+      - value: "2%"
+        label: "Error Threshold"
+        subtext: "hard gate PASS"
+      - value: "122"
+        label: "Tests Passing"
+        subtext: "phases 1 through 5"
+
+  - component: icon-text-rows
+    title: "Design Principles"
+    rows:
+      - icon: check
+        heading: "Deterministic"
+        body: "Same input always produces same output."
+      - icon: lock
+        heading: "No screenshots"
+        body: "Lint errors cite path and exact fix."
+      - icon: bolt
+        heading: "Agent-ready"
+        body: "Build and fix loop needs no images."
+
+  - component: comparison-columns
+    title: "Before and After"
+    left_title: "Ad-hoc pptx code"
+    right_title: "slidekit"
+    left_items:
+      - text: "Manual EMU math"
+      - text: "Visual QA required"
+      - text: "No lint feedback"
+      - text: "Agent loops on images"
+    right_items:
+      - text: "Declarative IR YAML"
+      - text: "Round-trip verified"
+      - text: "Lint errors with fix"
+      - text: "Agent loops on text"

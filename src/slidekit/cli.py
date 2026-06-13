@@ -48,6 +48,9 @@ def main() -> None:
 
 def _cmd_build(args: argparse.Namespace) -> None:
     from slidekit.ir import load
+    from slidekit.layout import resolve
+    from slidekit.lint import lint
+    from slidekit.emit.pptx_emitter import emit_pptx
 
     try:
         deck = load(args.deck)
@@ -55,9 +58,24 @@ def _cmd_build(args: argparse.Namespace) -> None:
         print(str(exc), file=sys.stderr)
         sys.exit(1)
 
-    out = args.output or Path(args.deck).with_suffix(".pptx")
-    # Phase 3 + 5 required — emit not yet implemented.
-    print(f"[slidekit] build: IR validated ({len(deck.slides)} slides). Emitter not yet implemented.")
+    rd = resolve(deck)
+
+    issues = lint(deck, rd)
+    errors = [i for i in issues if i.code.startswith("E_")]
+    if errors:
+        for issue in errors:
+            print(json.dumps({
+                "code": issue.code,
+                "slide": issue.slide,
+                "node_path": issue.node_path,
+                "message": issue.message,
+                "suggested_fix": issue.suggested_fix,
+            }))
+        sys.exit(1)
+
+    out = Path(args.output) if args.output else Path(args.deck).with_suffix(".pptx")
+    emit_pptx(deck, rd, out)
+    print(f"[slidekit] built {out} ({len(deck.slides)} slides, lint-clean)")
     sys.exit(0)
 
 
