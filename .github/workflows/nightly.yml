@@ -51,8 +51,10 @@ jobs:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: ${{ steps.prompt.outputs.PROMPT }}
           # Tool scope per PLAN.md setup step 4 (scoped allowlist, no permission bypass).
-          claude_args: --allowedTools "Read,Edit,Write,Bash"
-          # TODO: remove once auth is verified — surfaces session errors in the log.
+          # --model opus: run on the latest Opus (alias resolves per installed CLI).
+          claude_args: --allowedTools "Read,Edit,Write,Bash" --model opus
+          # Keep full output: the run's modelUsage/cost block is logged here, which
+          # is how nightly spend is tracked (matters more now that runs use Opus).
           show_full_output: "true"
 
       # The action reports success even when the Claude session errors out
