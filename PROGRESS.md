@@ -79,11 +79,16 @@ NIGHTLY_REPORTS/ for per-session history; NOTES.md for objections/proposals.
 - [x] `slidekit new --template <component-mix>` scaffolds themed starter deck — `slidekit/scaffold.py`, templates title-slide/standard/comparison/pitch + `--list`; all build lint-clean (commit 1fc3b9f)
 - [x] ACCEPTANCE: lint errors name IR path + concrete fix; fresh-agent fix-on-first-try rate measured — tests in `tests/test_cli/test_scaffold.py` assert non-empty node_path + concrete suggested_fix; live measurement (2026-06-13 session 2): 3 fresh agents given only SKILL.md + a broken deck each, **fix-on-first-try 2/3, eventual lint-clean 3/3, zero rendering** (see NIGHTLY_REPORTS/2026-06-13-session2.md)
 
-## Phase 8 — agency-agents integration (BLOCKED until Phase 4 complete)
+## Phase 8 — agency-agents integration
 
-- [ ] Deck Builder agent authored in agency-agents template format (IR YAML only; build→lint→fix loop; never renders; lint-clean in ≤2 iterations; `specialized/specialized-deck-builder.md`)
-- [ ] Handoff seams: Brand Guardian → `theme` block; Visual Storyteller/Content Creator → structured outline; Orchestrator pipeline worked example in `examples/`
-- [ ] Visual QA retired for decks: Reality Checker certification language ("production-ready when `slidekit build` exits 0 and round-trip passes")
-- [ ] Document Generator compatibility shim note
-- [ ] ACCEPTANCE: fresh session with Deck Builder + slidekit turns outline → lint-clean .pptx, zero screenshot calls
-- [ ] ACCEPTANCE: end-to-end orchestrated run — theme block round-trips into emitted colors/fonts exactly
+**Done on branch `agency-agents-integration`.** agency-agents is vendored at
+`integrations/agency-agents/` (MIT, snapshot — see `integrations/README.md`).
+All agent edits go inside that tree and are validated with
+`integrations/agency-agents/scripts/lint-agents.sh`.
+
+- [x] Deck Builder agent authored in agency-agents template format (IR YAML only; build→lint→fix loop; never renders; lint-clean in ≤2 iterations) — `integrations/agency-agents/specialized/specialized-deck-builder.md`; passes upstream `lint-agents.sh` (0 err/warn) and `check-agent-originality.sh` (0.0%)
+- [~] Handoff seams — Brand Guardian → `theme` block and Visual Storyteller/Content Creator → structured outline shapes are **documented in the Deck Builder agent file**; REMAINING: add the Orchestrator pipeline **worked example** under `examples/` (e.g. `examples/agency-pipeline-demo/` with a Brand Guardian theme fixture + Storyteller outline fixture + resulting `deck.yaml`/`deck.pptx`)
+- [~] Visual QA retired for decks — certification language ("production-ready when `slidekit build` exits 0 and round-trip passes") drafted in the Deck Builder agent's "To Reality Checker" seam; REMAINING: apply the suggested language into `integrations/agency-agents/testing/testing-reality-checker.md`, scoped to decks (leave Evidence Collector / screenshot QA for UI work untouched)
+- [x] Document Generator compatibility shim note — delegation note added to `integrations/agency-agents/specialized/specialized-document-generator.md` PPTX section (PDF/DOCX/XLSX paths untouched)
+- [ ] ACCEPTANCE: fresh session with Deck Builder + slidekit turns outline → lint-clean .pptx, zero screenshot calls — RUN THIS: feed the Storyteller outline fixture through `slidekit build`, assert exit 0 + empty lint errors + no render calls; record result
+- [ ] ACCEPTANCE: end-to-end orchestrated run — theme block round-trips into emitted colors/fonts exactly — RUN THIS: build the worked-example deck from the theme fixture, reopen the .pptx, assert emitted RGB/font equal the theme block

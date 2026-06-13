@@ -42,3 +42,38 @@ SESSION WRAP-UP — reserve the final portion of your effort for this, always:
   tomorrow's session in one sentence.
 - If the Phase 5 first-light demo became possible this session, build
   examples/demo-5.yaml -> demo-5.pptx and flag it prominently in the report.
+
+=== PHASE 8 ADDENDUM (added 2026-06-13; branch agency-agents-integration) ===
+State of the build has advanced: slidekit Phases 1-7 are COMPLETE. The only
+remaining work is Phase 8, and it is being done on the branch
+`agency-agents-integration` (NOT claude/busy-rubin-mzpvfu). If you are running on
+this branch, commit and push Phase 8 work HERE.
+
+Phase 8 environment (already set up — do not redo):
+- The agency-agents repo is VENDORED at `integrations/agency-agents/` (MIT, a
+  point-in-time snapshot; see integrations/README.md). Do NOT re-clone it and do
+  NOT edit files in that tree except the three integration artifacts below.
+- The Deck Builder agent is authored and lint-clean:
+  `integrations/agency-agents/specialized/specialized-deck-builder.md`.
+- The Document Generator delegation note is added.
+
+Validate ANY agent-markdown you add or edit with the repo's own linter:
+  `bash integrations/agency-agents/scripts/lint-agents.sh <file>`
+  (and `check-agent-originality.sh <file>`); both must PASS before you check an
+  item off. Run the slidekit test suite too — never regress Phases 1-7.
+
+Remaining Phase 8 items are the `[~]` and `[ ]` lines in PROGRESS.md "Phase 8".
+Work them in order:
+1. Orchestrator worked example under examples/: a Brand Guardian theme fixture +
+   a Visual Storyteller outline fixture (markdown, per the Deck Builder agent's
+   handoff-seam shapes) + the resulting deck.yaml built lint-clean to .pptx.
+2. Apply the Reality-Checker certification language (from the Deck Builder agent's
+   "To Reality Checker" seam) into
+   integrations/agency-agents/testing/testing-reality-checker.md, scoped to decks
+   only — leave Evidence Collector / screenshot QA for UI work untouched.
+3. ACCEPTANCE (automate as tests, no screenshots): (a) feed the outline fixture
+   through `slidekit build`; assert exit 0, empty lint errors, zero render calls.
+   (b) build the worked-example deck from the theme fixture, reopen the .pptx, and
+   assert the emitted RGB/fonts equal the theme block exactly (extend the existing
+   round-trip test style).
+Never render slides to images for QA — the Deck Builder contract forbids it.

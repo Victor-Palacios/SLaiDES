@@ -41,6 +41,29 @@ is followed anyway.
   ("rendered into a colored circle"). Round-trip tests are unaffected (they inspect
   text-box shapes only); all example decks now pass the harness.
 
+## Phase 8 approach (2026-06-13, operator-directed)
+
+- **agency-agents vendored into this repo on a dedicated branch.** Per operator
+  decision, Phase 8 is done entirely inside slaides rather than against the external
+  `msitarzewski/agency-agents` repo (which this session can't write to). The repo is
+  copied to `integrations/agency-agents/` (MIT, point-in-time snapshot; upstream SHA
+  in `.VENDORED_FROM`) on branch `agency-agents-integration`, kept off the slidekit
+  dev branch so the foreign tree doesn't tangle with slidekit's source. Nothing is
+  pushed upstream; contributing the Deck Builder agent back to msitarzewski is a
+  separate, optional fork-and-PR step.
+
+- **NIGHTLY_PROMPT.md is no longer strictly verbatim.** PLAN.md's setup said to keep
+  it verbatim, but the operator directed changing the instructions so an unattended
+  Opus session can finish Phase 8. A clearly-marked "PHASE 8 ADDENDUM" was appended
+  (the original prompt body is unchanged above it). It tells the routine that Phase 8
+  lives on `agency-agents-integration`, where the vendored repo and Deck Builder agent
+  are, how to validate agent files (`lint-agents.sh`), and the remaining items.
+
+- **Phase 8 runs on `agency-agents-integration`, not `claude/busy-rubin-mzpvfu`.** To
+  have Opus finish Phase 8, dispatch the nightly workflow against this branch (same
+  mechanism used for runs 6-8). The scheduled cron only picks up Phase 8 automatically
+  if this branch is made the default branch; otherwise drive it by dispatch.
+
 ## Proposals
 
 (none yet)
