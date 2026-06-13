@@ -46,12 +46,28 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - uses: anthropics/claude-code-action@v1
+        id: claude
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: ${{ steps.prompt.outputs.PROMPT }}
           # Tool scope per PLAN.md setup step 4 (scoped allowlist, no permission bypass).
           claude_args: --allowedTools "Read,Edit,Write,Bash"
 
+      # The action reports success even when the Claude session errors out
+      # (e.g. missing/invalid CLAUDE_CODE_OAUTH_TOKEN); surface that as a red run.
+      - name: Fail if Claude session errored
+        run: |
+          f="${{ steps.claude.outputs.execution_file }}"
+          if [ -z "$f" ] || [ ! -f "$f" ]; then
+            echo "No execution log produced — Claude session never ran"; exit 1
+          fi
+          jq -e 'if type=="array" then last else . end | .is_error != true' "$f" \
+            || { echo "Claude session ended in error — see execution log above"; exit 1; }
+
+      # The action revokes its own GitHub token when it finishes, so re-auth with
+      # the workflow token before the safety-net push.
       - name: Push any unpushed commits
         if: always()
-        run: git push origin HEAD || true
+        run: |
+          git remote set-url origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+          git push origin HEAD || true
