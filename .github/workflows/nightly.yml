@@ -1,0 +1,54 @@
+# Nightly unattended build session for slidekit (see PLAN.md "Overnight routine").
+# Runs Claude Code headless with the verbatim contents of NIGHTLY_PROMPT.md.
+# Requires the ANTHROPIC_API_KEY repository secret.
+# NOTE: scheduled workflows only fire from the repository's default branch.
+name: nightly-slidekit
+
+on:
+  schedule:
+    # 00:00 America/Los_Angeles during PDT. GitHub cron is UTC and ignores DST,
+    # so during PST this fires at 23:00 local — adjust to "0 8 * * *" if exact
+    # midnight matters more than consistency.
+    - cron: "0 7 * * *"
+  workflow_dispatch: {}
+
+# Never let two nightly sessions overlap.
+concurrency:
+  group: nightly-slidekit
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Load nightly prompt
+        id: prompt
+        run: |
+          {
+            echo 'PROMPT<<NIGHTLY_PROMPT_EOF'
+            cat NIGHTLY_PROMPT.md
+            echo ''
+            echo 'CI NOTE: You are running inside GitHub Actions on an ephemeral runner.'
+            echo 'Work is preserved only if pushed — after each commit, and again at'
+            echo 'session wrap-up, run: git push origin HEAD'
+            echo 'NIGHTLY_PROMPT_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: ${{ steps.prompt.outputs.PROMPT }}
+          # Tool scope per PLAN.md setup step 4 (scoped allowlist, no permission bypass).
+          claude_args: --allowedTools "Read,Edit,Write,Bash"
+
+      - name: Push any unpushed commits
+        if: always()
+        run: git push origin HEAD || true
