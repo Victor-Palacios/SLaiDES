@@ -75,9 +75,9 @@ NIGHTLY_REPORTS/ for per-session history; NOTES.md for objections/proposals.
 
 ## Phase 7 — Agent interface
 
-- [ ] SKILL.md: when to use, IR cheatsheet, component gallery, build/fix loop (no image rendering)
-- [ ] `slidekit new --template <component-mix>` scaffolds themed starter deck
-- [ ] ACCEPTANCE: lint errors name IR path + concrete fix; fresh-agent fix-on-first-try rate measured
+- [x] SKILL.md: when to use, IR cheatsheet, component gallery, build/fix loop (no image rendering) — `SKILL.md` (commit 1fc3b9f)
+- [x] `slidekit new --template <component-mix>` scaffolds themed starter deck — `slidekit/scaffold.py`, templates title-slide/standard/comparison/pitch + `--list`; all build lint-clean (commit 1fc3b9f)
+- [x] ACCEPTANCE: lint errors name IR path + concrete fix; fresh-agent fix-on-first-try rate measured — tests in `tests/test_cli/test_scaffold.py` assert non-empty node_path + concrete suggested_fix; live measurement (2026-06-13 session 2): 3 fresh agents given only SKILL.md + a broken deck each, **fix-on-first-try 2/3, eventual lint-clean 3/3, zero rendering** (see NIGHTLY_REPORTS/2026-06-13-session2.md)
 
 ## Phase 8 — agency-agents integration (BLOCKED until Phase 4 complete)
 
