@@ -1,6 +1,7 @@
 # Nightly unattended build session for slidekit (see PLAN.md "Overnight routine").
 # Runs Claude Code headless with the verbatim contents of NIGHTLY_PROMPT.md.
-# Requires the ANTHROPIC_API_KEY repository secret.
+# Requires the CLAUDE_CODE_OAUTH_TOKEN repository secret (subscription auth;
+# generate with `claude setup-token` on your machine).
 # NOTE: scheduled workflows only fire from the repository's default branch.
 name: nightly-slidekit
 
@@ -44,7 +45,7 @@ jobs:
 
       - uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: ${{ steps.prompt.outputs.PROMPT }}
           # Tool scope per PLAN.md setup step 4 (scoped allowlist, no permission bypass).
           claude_args: --allowedTools "Read,Edit,Write,Bash"

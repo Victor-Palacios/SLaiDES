@@ -14,8 +14,9 @@ is followed anyway.
   durable equivalent chosen instead is a scheduled GitHub Actions workflow
   (`.github/workflows/nightly.yml`) running Claude Code headless with the
   verbatim NIGHTLY_PROMPT.md, scoped to `--allowedTools "Read,Edit,Write,Bash"`
-  as the plan specifies. Requires the `ANTHROPIC_API_KEY` repo secret (or
-  `CLAUDE_CODE_OAUTH_TOKEN`) — see README. The operator may alternatively
+  as the plan specifies. Requires the `CLAUDE_CODE_OAUTH_TOKEN` repo secret
+  (subscription auth, per operator decision 2026-06-13; `ANTHROPIC_API_KEY`
+  is the API-billing alternative) — see README. The operator may alternatively
   register a Routine from the Claude Code UI pointing at this repo with the
   same prompt; if so, disable the workflow to avoid double runs.
 

@@ -53,9 +53,11 @@ see NOTES.md.)
 
 ### Operator setup (one-time)
 
-1. Add the **`ANTHROPIC_API_KEY`** repository secret (Settings → Secrets and
-   variables → Actions). `claude_code_oauth_token` is the alternative input
-   if you prefer OAuth.
+1. Generate a subscription OAuth token by running **`claude setup-token`** on
+   your machine, then add it as the **`CLAUDE_CODE_OAUTH_TOKEN`** repository
+   secret (Settings → Secrets and variables → Actions). Nightly runs then draw
+   from your Claude subscription rather than API billing. (`anthropic_api_key`
+   is the alternative input if you'd rather bill an API key.)
 2. Scheduled workflows only fire from the repository's **default branch** —
    make sure this branch (or a merge of it) is the default.
 3. Optional: trigger a run manually via the workflow's **Run workflow**
@@ -70,6 +72,6 @@ see NOTES.md.)
 - Watch for the **first-light flag** in reports — `demo-5.pptx`, the first
   openable deck (end of Phase 5).
 - Headless usage on subscription plans draws from a separate Agent SDK credit
-  (effective June 15, 2026); with the `ANTHROPIC_API_KEY` secret, runs bill
-  to the API key instead. Verify limits at
-  https://code.claude.com/docs/en/headless.
+  (effective June 15, 2026) — since this workflow authenticates with the
+  subscription OAuth token, verify those limits at
+  https://code.claude.com/docs/en/headless before relying on nightly runs.
