@@ -6,11 +6,13 @@
 name: nightly-slidekit
 
 on:
-  schedule:
-    # 00:00 America/Los_Angeles during PDT. GitHub cron is UTC and ignores DST,
-    # so during PST this fires at 23:00 local — adjust to "0 8 * * *" if exact
-    # midnight matters more than consistency.
-    - cron: "0 7 * * *"
+  # Scheduled nightly run DISABLED 2026-06-13: slidekit Phases 0-8 are complete,
+  # so an unattended session would boot, find nothing to do, and still bill a full
+  # (Opus) session. Re-enable by uncommenting the schedule block below if new
+  # build work is queued in PROGRESS.md.
+  # schedule:
+  #   # 00:00 America/Los_Angeles during PDT (UTC, ignores DST).
+  #   - cron: "0 7 * * *"
   workflow_dispatch: {}
 
 # Never let two nightly sessions overlap.
