@@ -1,0 +1,531 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Solution Suite",
+          "lines": [
+            {
+              "text": "Solution Suite",
+              "width_emu": 6066234,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Four pillars of the platform",
+          "lines": [
+            {
+              "text": "Four pillars of the platform",
+              "width_emu": 5758036,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 129282,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "card-grid",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What We Offer",
+          "lines": [
+            {
+              "text": "What We Offer",
+              "width_emu": 4427897,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 457200,
+            "h": 457200
+          },
+          "text_content": "analytics",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2093976,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Insights",
+          "lines": [
+            {
+              "text": "Insights",
+              "width_emu": 1953009,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2749295,
+            "w": 2613660,
+            "h": 3011425
+          },
+          "text_content": "Real-time dashboards and predictive analytics powered by your live data.",
+          "lines": [
+            {
+              "text": "Real-time",
+              "width_emu": 2062225,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "dashboards ",
+              "width_emu": 2646462,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "and",
+              "width_emu": 812366,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "predictive",
+              "width_emu": 2149723,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "analytics",
+              "width_emu": 1930028,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "powered",
+              "width_emu": 1864878,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "by your",
+              "width_emu": 1637804,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "live data.",
+              "width_emu": 2008250,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 457200,
+            "h": 457200
+          },
+          "text_content": "shield",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2093976,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Security",
+          "lines": [
+            {
+              "text": "Security",
+              "width_emu": 2016051,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2749295,
+            "w": 2613660,
+            "h": 3011425
+          },
+          "text_content": "Zero-trust architecture with SOC 2 Type II and ISO 27001 certifications.",
+          "lines": [
+            {
+              "text": "Zero-trust",
+              "width_emu": 2172283,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "architecture ",
+              "width_emu": 2749984,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "with SOC",
+              "width_emu": 1968822,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "2 Type II",
+              "width_emu": 1795723,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "and ISO",
+              "width_emu": 1690936,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "27001",
+              "width_emu": 1373622,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "certifications.",
+              "width_emu": 2933204,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 457200,
+            "h": 457200
+          },
+          "text_content": "bolt",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2093976,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Performance",
+          "lines": [
+            {
+              "text": "Performance",
+              "width_emu": 3117267,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2749295,
+            "w": 2613660,
+            "h": 3011425
+          },
+          "text_content": "Sub-100ms p99 latency globally with automatic failover.",
+          "lines": [
+            {
+              "text": "Sub-",
+              "width_emu": 977664,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "100ms",
+              "width_emu": 1469765,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "p99",
+              "width_emu": 823540,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "latency",
+              "width_emu": 1586148,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "globally",
+              "width_emu": 1692411,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "with",
+              "width_emu": 916099,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "automatic",
+              "width_emu": 2183668,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "failover.",
+              "width_emu": 1717080,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 457200,
+            "h": 457200
+          },
+          "text_content": "puzzle",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2093976,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Integrations",
+          "lines": [
+            {
+              "text": "Integrations",
+              "width_emu": 2996245,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2749295,
+            "w": 2613660,
+            "h": 3011425
+          },
+          "text_content": "300+ native connectors; open API for custom workflows.",
+          "lines": [
+            {
+              "text": "300+",
+              "width_emu": 1185974,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "native",
+              "width_emu": 1348742,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "connectors; ",
+              "width_emu": 2670708,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "open API",
+              "width_emu": 1897980,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "for",
+              "width_emu": 593725,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "custom",
+              "width_emu": 1590154,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "workflows.",
+              "width_emu": 2296468,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 129282,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "calibri",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

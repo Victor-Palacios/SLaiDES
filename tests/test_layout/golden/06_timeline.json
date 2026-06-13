@@ -1,0 +1,705 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Product Roadmap 2025\u20132026",
+          "lines": [
+            {
+              "text": "Product Roadmap",
+              "width_emu": 6562204,
+              "height_emu": 914400,
+              "overflows": false
+            },
+            {
+              "text": "2025\u20132026",
+              "width_emu": 3814093,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "timeline",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Key Milestones",
+          "lines": [
+            {
+              "text": "Key Milestones",
+              "width_emu": 3883298,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2036064,
+            "h": 381000
+          },
+          "text_content": "Q1 2025",
+          "lines": [
+            {
+              "text": "Q1 2025",
+              "width_emu": 1218065,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2154936,
+            "w": 2036064,
+            "h": 518159
+          },
+          "text_content": "Platform Foundation",
+          "lines": [
+            {
+              "text": "Platform ",
+              "width_emu": 1871414,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "Foundation",
+              "width_emu": 2350232,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2947415,
+            "w": 2036064,
+            "h": 2813305
+          },
+          "text_content": "Core infrastructure migration completed; all services on Kubernetes.",
+          "lines": [
+            {
+              "text": "Core",
+              "width_emu": 935918,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "infrastructure ",
+              "width_emu": 2639715,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "migration ",
+              "width_emu": 1895872,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "completed; ",
+              "width_emu": 2232161,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "all",
+              "width_emu": 432011,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "services",
+              "width_emu": 1583618,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "on",
+              "width_emu": 480293,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Kubernetes.",
+              "width_emu": 2328515,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 2767584,
+            "y": 1499616,
+            "w": 2036064,
+            "h": 381000
+          },
+          "text_content": "Q2 2025",
+          "lines": [
+            {
+              "text": "Q2 2025",
+              "width_emu": 1218065,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 2767584,
+            "y": 2154936,
+            "w": 2036064,
+            "h": 518159
+          },
+          "text_content": "API v3 Launch",
+          "lines": [
+            {
+              "text": "API v3",
+              "width_emu": 1320068,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Launch",
+              "width_emu": 1535336,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 2767584,
+            "y": 2947415,
+            "w": 2036064,
+            "h": 2813305
+          },
+          "text_content": "Unified REST/GraphQL gateway with 99.99% SLA commitment.",
+          "lines": [
+            {
+              "text": "Unified",
+              "width_emu": 1344104,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "REST/GraphQL ",
+              "width_emu": 3151634,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "gateway",
+              "width_emu": 1608286,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "with",
+              "width_emu": 767879,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "99.99%",
+              "width_emu": 1464494,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "SLA",
+              "width_emu": 816161,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "commitment.",
+              "width_emu": 2471254,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 5077968,
+            "y": 1499616,
+            "w": 2036064,
+            "h": 381000
+          },
+          "text_content": "Q3 2025",
+          "lines": [
+            {
+              "text": "Q3 2025",
+              "width_emu": 1218065,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 5077968,
+            "y": 2154936,
+            "w": 2036064,
+            "h": 518159
+          },
+          "text_content": "AI Assist Beta",
+          "lines": [
+            {
+              "text": "AI",
+              "width_emu": 431800,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Assist",
+              "width_emu": 1296033,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Beta",
+              "width_emu": 935918,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 5077968,
+            "y": 2947415,
+            "w": 2036064,
+            "h": 2813305
+          },
+          "text_content": "Generative AI features released to 500 design-partner customers.",
+          "lines": [
+            {
+              "text": "Generative ",
+              "width_emu": 2232161,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "AI",
+              "width_emu": 407975,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "features",
+              "width_emu": 1560215,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "released",
+              "width_emu": 1656358,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "to 500",
+              "width_emu": 1200522,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "design-",
+              "width_emu": 1416211,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "partner",
+              "width_emu": 1368140,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "customers.",
+              "width_emu": 2111561,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 7388352,
+            "y": 1499616,
+            "w": 2036064,
+            "h": 381000
+          },
+          "text_content": "Q4 2025",
+          "lines": [
+            {
+              "text": "Q4 2025",
+              "width_emu": 1218065,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 7388352,
+            "y": 2154936,
+            "w": 2036064,
+            "h": 518159
+          },
+          "text_content": "Global Expansion",
+          "lines": [
+            {
+              "text": "Global",
+              "width_emu": 1343471,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Expansion",
+              "width_emu": 2183457,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 7388352,
+            "y": 2947415,
+            "w": 2036064,
+            "h": 2813305
+          },
+          "text_content": "APAC data residency regions live; EU sovereign cloud certified.",
+          "lines": [
+            {
+              "text": "APAC",
+              "width_emu": 1143806,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "data",
+              "width_emu": 840408,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "residency ",
+              "width_emu": 1967979,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "regions",
+              "width_emu": 1416211,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "live; EU",
+              "width_emu": 1487686,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "sovereign ",
+              "width_emu": 1992226,
+              "height_emu": 518160,
+              "overflows": true
+            },
+            {
+              "text": "cloud",
+              "width_emu": 1032272,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "certified.",
+              "width_emu": 1631900,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9698736,
+            "y": 1499616,
+            "w": 2036064,
+            "h": 381000
+          },
+          "text_content": "Q1 2026",
+          "lines": [
+            {
+              "text": "Q1 2026",
+              "width_emu": 1218065,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9698736,
+            "y": 2154936,
+            "w": 2036064,
+            "h": 518159
+          },
+          "text_content": "GA Release",
+          "lines": [
+            {
+              "text": "GA",
+              "width_emu": 647700,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Release",
+              "width_emu": 1632533,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9698736,
+            "y": 2947415,
+            "w": 2036064,
+            "h": 2813305
+          },
+          "text_content": "Full feature parity across all tiers; public launch.",
+          "lines": [
+            {
+              "text": "Full",
+              "width_emu": 695771,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "feature",
+              "width_emu": 1344315,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "parity",
+              "width_emu": 1055886,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "across",
+              "width_emu": 1271786,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "all tiers;",
+              "width_emu": 1487686,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "public",
+              "width_emu": 1128204,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "launch.",
+              "width_emu": 1392386,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

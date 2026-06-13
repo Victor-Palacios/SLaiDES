@@ -63,6 +63,7 @@ def _cmd_build(args: argparse.Namespace) -> None:
 
 def _cmd_layout(args: argparse.Namespace) -> None:
     from slidekit.ir import load
+    from slidekit.layout import resolve
 
     try:
         deck = load(args.deck)
@@ -70,8 +71,14 @@ def _cmd_layout(args: argparse.Namespace) -> None:
         print(str(exc), file=sys.stderr)
         sys.exit(1)
 
-    # Phase 3 required — layout engine not yet implemented.
-    print("[slidekit] layout: IR validated. Layout engine not yet implemented.")
+    rd = resolve(deck)
+    if args.json:
+        print(rd.to_json())
+    else:
+        for slide in rd.slides:
+            node_count = len(slide.nodes) + len(slide.chrome)
+            print(f"  slide {slide.slide_index + 1}: {slide.component} — {node_count} nodes, "
+                  f"page={slide.page_number}")
     sys.exit(0)
 
 

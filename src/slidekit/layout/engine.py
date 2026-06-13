@@ -1,0 +1,562 @@
+"""Two-pass flex layout engine.
+
+Converts a DeckIR into a ResolvedDeck where every node has an absolute
+EMU rect and every text node has its line boxes.
+
+Pass 1 (measure): compute intrinsic/minimum sizes bottom-up.
+Pass 2 (assign):  distribute available space top-down and record rects.
+"""
+
+from __future__ import annotations
+
+import itertools
+from dataclasses import dataclass, field
+from typing import Optional
+
+from slidekit.ir.models import (
+    CardGridSlide,
+    ComparisonColumnsSlide,
+    DeckIR,
+    IconTextRowsSlide,
+    ImageHalfBleedSlide,
+    StatCalloutSlide,
+    TimelineSlide,
+    TitleSlide,
+    TwoColumnSlide,
+    TextSlot,
+    ImageSlot,
+    ChartSlot,
+    IconSlot,
+    SpacerSlot,
+)
+from slidekit.layout.models import Rect, ResolvedDeck, ResolvedNode, ResolvedSlide
+from slidekit.metrics.constants import (
+    BODY_FONT_FLOOR_PT,
+    EMU_PER_INCH,
+    EMU_PER_PT,
+    GAP_MIN_EMU,
+    INSET_BOTTOM_EMU,
+    INSET_LEFT_EMU,
+    INSET_RIGHT_EMU,
+    INSET_TOP_EMU,
+    LINE_SPACING_SINGLE,
+    MARGIN_MIN_EMU,
+    PAGE_NUMBER_PT,
+    SLIDE_16_9_H,
+    SLIDE_16_9_W,
+    SLIDE_4_3_H,
+    SLIDE_4_3_W,
+)
+from slidekit.metrics.measure import line_height_emu, measure_text, total_text_height_emu, wrap
+
+# Unique ID counter for nodes.
+_counter = itertools.count(1)
+
+
+def _nid(prefix: str = "node") -> str:
+    return f"{prefix}_{next(_counter)}"
+
+
+# ── public entry point ────────────────────────────────────────────────────────
+
+
+def resolve(deck: DeckIR, aspect: str = "16:9") -> ResolvedDeck:
+    """Resolve a DeckIR into a ResolvedDeck with absolute EMU geometry."""
+    if aspect == "4:3":
+        canvas_w, canvas_h = SLIDE_4_3_W, SLIDE_4_3_H
+    else:
+        canvas_w, canvas_h = SLIDE_16_9_W, SLIDE_16_9_H
+
+    resolved_slides: list[ResolvedSlide] = []
+    page_num_counter = deck.page_numbers.start_at - 1
+
+    for idx, slide in enumerate(deck.slides):
+        is_title = slide.component == "title-slide"
+        page_num_counter += 1
+        page_num = page_num_counter if deck.page_numbers.enabled else None
+        # skip_title_slide hides the number on the first title-slide (cover) only.
+        if idx == 0 and is_title and deck.page_numbers.skip_title_slide:
+            page_num = None
+
+        rs = _resolve_slide(
+            slide=slide,
+            slide_index=idx,
+            page_num=page_num,
+            deck=deck,
+            canvas_w=canvas_w,
+            canvas_h=canvas_h,
+        )
+        resolved_slides.append(rs)
+
+    return ResolvedDeck(slides=resolved_slides)
+
+
+# ── slide resolver ────────────────────────────────────────────────────────────
+
+
+def _resolve_slide(
+    slide,
+    slide_index: int,
+    page_num: Optional[int],
+    deck: DeckIR,
+    canvas_w: int,
+    canvas_h: int,
+) -> ResolvedSlide:
+    theme = deck.theme
+    font = theme.font
+    ts = theme.type_scale
+    palette = theme.palette
+
+    # Content area: slide canvas minus the minimum margins on all sides.
+    cx = MARGIN_MIN_EMU
+    cy = MARGIN_MIN_EMU
+    cw = canvas_w - 2 * MARGIN_MIN_EMU
+    ch = canvas_h - 2 * MARGIN_MIN_EMU
+
+    # Reserve bottom-right corner for page numbers (chrome).
+    pn_box_w = int(1.5 * EMU_PER_INCH)
+    pn_box_h = int(0.4 * EMU_PER_INCH)
+    pn_x = canvas_w - MARGIN_MIN_EMU - pn_box_w
+    pn_y = canvas_h - MARGIN_MIN_EMU - pn_box_h
+    # Shrink content area height to avoid chrome overlap.
+    ch_with_pn = ch - pn_box_h - GAP_MIN_EMU
+
+    nodes: list[ResolvedNode] = []
+    comp = slide.component
+
+    if comp == "title-slide":
+        nodes = _layout_title_slide(slide, cx, cy, cw, ch, font, ts, palette)
+    elif comp == "two-column":
+        nodes = _layout_two_column(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "icon-text-rows":
+        nodes = _layout_icon_text_rows(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "stat-callout":
+        nodes = _layout_stat_callout(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "comparison-columns":
+        nodes = _layout_comparison_columns(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "timeline":
+        nodes = _layout_timeline(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "image-half-bleed":
+        nodes = _layout_image_half_bleed(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "card-grid":
+        nodes = _layout_card_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    else:
+        nodes = []
+
+    # Chrome: page number box (laid out last, always bottom-right).
+    chrome: list[ResolvedNode] = []
+    if page_num is not None and deck.page_numbers.enabled:
+        pn_node = _make_text_node(
+            node_id=_nid("chrome_pagenum"),
+            text=str(page_num),
+            font=font,
+            size_pt=PAGE_NUMBER_PT,
+            bold=False,
+            italic=False,
+            rect=Rect(pn_x, pn_y, pn_box_w, pn_box_h),
+            is_chrome=True,
+        )
+        chrome.append(pn_node)
+
+    return ResolvedSlide(
+        slide_index=slide_index,
+        page_number=page_num,
+        component=comp,
+        canvas_w=canvas_w,
+        canvas_h=canvas_h,
+        nodes=nodes,
+        chrome=chrome,
+    )
+
+
+# ── component layout functions ────────────────────────────────────────────────
+
+
+def _layout_title_slide(slide: TitleSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
+    nodes: list[ResolvedNode] = []
+    gap = int(0.3 * EMU_PER_INCH)
+    pad = int(0.5 * EMU_PER_INCH)
+
+    # Title — vertically centered in upper 60% of content area.
+    title_area_h = int(ch * 0.6)
+    title_h = int(ts.title * LINE_SPACING_SINGLE * EMU_PER_PT)
+    title_y = cy + (title_area_h - title_h) // 2
+    title_rect = Rect(cx + pad, title_y, cw - 2 * pad, title_h)
+    nodes.append(
+        _make_text_node(_nid("title"), slide.title, font, ts.title, bold=True,
+                        italic=False, rect=title_rect)
+    )
+
+    if slide.subtitle:
+        sub_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+        sub_y = title_y + title_h + gap
+        sub_rect = Rect(cx + pad, sub_y, cw - 2 * pad, sub_h)
+        nodes.append(
+            _make_text_node(_nid("subtitle"), slide.subtitle, font, ts.body,
+                            bold=False, italic=False, rect=sub_rect)
+        )
+
+    return nodes
+
+
+def _layout_two_column(slide: TwoColumnSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+
+    if slide.title:
+        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+        title_rect = Rect(cx, y, cw, title_h)
+        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
+                                     bold=True, italic=False, rect=title_rect))
+        y += title_h + gap
+
+    col_h = cy + ch - y
+    total_w = cw - gap
+    total_weight = slide.left_weight + slide.right_weight
+    left_w = int(total_w * slide.left_weight / total_weight)
+    right_w = total_w - left_w
+
+    left_x = cx
+    right_x = cx + left_w + gap
+
+    left_node = _layout_content_list(slide.left, "left_col", left_x, y, left_w, col_h, font, ts)
+    right_node = _layout_content_list(slide.right, "right_col", right_x, y, right_w, col_h, font, ts)
+    nodes.extend(left_node)
+    nodes.extend(right_node)
+    return nodes
+
+
+def _layout_icon_text_rows(slide: IconTextRowsSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+
+    if slide.title:
+        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+        y += title_h + gap
+
+    if not slide.rows:
+        return nodes
+
+    n_rows = len(slide.rows)
+    available_h = cy + ch - y - gap * max(0, n_rows - 1)
+    row_h = max(1, available_h // n_rows)
+    icon_size = int(0.6 * EMU_PER_INCH)
+    text_x = cx + icon_size + int(0.2 * EMU_PER_INCH)
+    text_w = cw - icon_size - int(0.2 * EMU_PER_INCH)
+
+    for row in slide.rows:
+        icon_rect = Rect(cx, y + (row_h - icon_size) // 2, icon_size, icon_size)
+        nodes.append(ResolvedNode(_nid("icon"), "icon", icon_rect,
+                                  slot_type="icon", text_content=row.icon))
+
+        heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+        body_h = row_h - heading_h - gap
+        nodes.append(_make_text_node(_nid("heading"), row.heading, font, ts.body,
+                                     bold=True, italic=False,
+                                     rect=Rect(text_x, y, text_w, heading_h)))
+        nodes.append(_make_text_node(_nid("body"), row.body, font, ts.body,
+                                     bold=False, italic=False,
+                                     rect=Rect(text_x, y + heading_h + gap, text_w, body_h)))
+        y += row_h + gap
+
+    return nodes
+
+
+def _layout_stat_callout(slide: StatCalloutSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+
+    if slide.title:
+        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+        y += title_h + gap
+
+    n_stats = len(slide.stats)
+    stat_w = (cw - gap * (n_stats - 1)) // n_stats if n_stats else cw
+    stat_h = cy + ch - y
+
+    for i, stat in enumerate(slide.stats):
+        sx = cx + i * (stat_w + gap)
+        value_h = int(ts.title * LINE_SPACING_SINGLE * EMU_PER_PT)
+        label_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+        sub_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT) if stat.subtext else 0
+
+        inner_y = y + (stat_h - value_h - label_h - sub_h - gap * 2) // 2
+        nodes.append(_make_text_node(_nid("stat_value"), stat.value, font, ts.title,
+                                     bold=True, italic=False,
+                                     rect=Rect(sx, inner_y, stat_w, value_h)))
+        nodes.append(_make_text_node(_nid("stat_label"), stat.label, font, ts.body,
+                                     bold=False, italic=False,
+                                     rect=Rect(sx, inner_y + value_h + gap, stat_w, label_h)))
+        if stat.subtext:
+            nodes.append(_make_text_node(_nid("stat_sub"), stat.subtext, font, ts.caption,
+                                         bold=False, italic=False,
+                                         rect=Rect(sx, inner_y + value_h + label_h + gap * 2, stat_w, sub_h)))
+
+    return nodes
+
+
+def _layout_comparison_columns(slide: ComparisonColumnsSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+
+    if slide.title:
+        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+        y += title_h + gap
+
+    col_w = (cw - gap) // 2
+    right_x = cx + col_w + gap
+    col_h = cy + ch - y
+
+    # Column headings.
+    head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+    nodes.append(_make_text_node(_nid("left_head"), slide.left_title, font, ts.body,
+                                 bold=True, italic=False, rect=Rect(cx, y, col_w, head_h)))
+    nodes.append(_make_text_node(_nid("right_head"), slide.right_title, font, ts.body,
+                                 bold=True, italic=False, rect=Rect(right_x, y, col_w, head_h)))
+    y += head_h + gap
+
+    # Items — use available space divided by item count to stay within canvas.
+    n_items = max(len(slide.left_items), len(slide.right_items))
+    available_item_h = cy + ch - y - gap * max(0, n_items)
+    item_h = max(1, available_item_h // n_items) if n_items else 1
+    all_items = list(zip(
+        slide.left_items + [None] * max(0, len(slide.right_items) - len(slide.left_items)),
+        slide.right_items + [None] * max(0, len(slide.left_items) - len(slide.right_items)),
+    ))
+    for left_item, right_item in all_items:
+        if left_item:
+            nodes.append(_make_text_node(_nid("left_item"), left_item.text, font, ts.body,
+                                         bold=False, italic=False,
+                                         rect=Rect(cx, y, col_w, item_h)))
+        if right_item:
+            nodes.append(_make_text_node(_nid("right_item"), right_item.text, font, ts.body,
+                                         bold=False, italic=False,
+                                         rect=Rect(right_x, y, col_w, item_h)))
+        y += item_h + gap
+
+    return nodes
+
+
+def _layout_timeline(slide: TimelineSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+
+    if slide.title:
+        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+        y += title_h + gap
+
+    if not slide.events:
+        return nodes
+
+    n_events = len(slide.events)
+    event_w = max(1, (cw - gap * max(0, n_events - 1)) // n_events)
+    available_h = cy + ch - y
+    date_h = max(1, int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT))
+    title_h = max(1, int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT))
+    desc_h = max(1, available_h - date_h - title_h - gap * 2)
+    event_h = available_h
+
+    for i, event in enumerate(slide.events):
+        ex = cx + i * (event_w + gap)
+        ey = y
+
+        nodes.append(_make_text_node(_nid("ev_date"), event.date, font, ts.caption,
+                                     bold=False, italic=False,
+                                     rect=Rect(ex, ey, event_w, date_h)))
+        ey += date_h + gap
+        nodes.append(_make_text_node(_nid("ev_title"), event.title, font, ts.body,
+                                     bold=True, italic=False,
+                                     rect=Rect(ex, ey, event_w, title_h)))
+        ey += title_h + gap
+        if event.description:
+            nodes.append(_make_text_node(_nid("ev_desc"), event.description, font, ts.body,
+                                         bold=False, italic=False,
+                                         rect=Rect(ex, ey, event_w, desc_h)))
+
+    return nodes
+
+
+def _layout_image_half_bleed(slide: ImageHalfBleedSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+
+    if slide.title:
+        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+        y += title_h + gap
+
+    col_h = cy + ch - y
+    img_w = cw // 2 - gap // 2
+    text_w = cw - img_w - gap
+
+    if slide.image_side == "left":
+        img_x, text_x = cx, cx + img_w + gap
+    else:
+        text_x, img_x = cx, cx + text_w + gap
+
+    img_rect = Rect(img_x, y, img_w, col_h)
+    nodes.append(ResolvedNode(_nid("image"), "image", img_rect,
+                              slot_type="image",
+                              text_content=slide.image.path))
+
+    text_nodes = _layout_content_list(slide.content, "content", text_x, y, text_w, col_h, font, ts)
+    nodes.extend(text_nodes)
+    return nodes
+
+
+def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+
+    if slide.title:
+        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+        y += title_h + gap
+
+    n_cards = len(slide.cards)
+    cols = min(4, n_cards) if n_cards > 0 else 1
+    rows = (n_cards + cols - 1) // cols
+    card_w = (cw - gap * (cols - 1)) // cols
+    available_h = cy + ch - y
+    card_h = (available_h - gap * (rows - 1)) // rows
+
+    icon_size = int(0.5 * EMU_PER_INCH)
+    inner_gap = int(0.15 * EMU_PER_INCH)
+
+    for i, card in enumerate(slide.cards):
+        row_i = i // cols
+        col_i = i % cols
+        card_x = cx + col_i * (card_w + gap)
+        card_y = y + row_i * (card_h + gap)
+
+        inner_y = card_y
+        if card.icon:
+            icon_rect = Rect(card_x, inner_y, icon_size, icon_size)
+            nodes.append(ResolvedNode(_nid("card_icon"), "icon", icon_rect,
+                                      slot_type="icon", text_content=card.icon))
+            inner_y += icon_size + inner_gap
+
+        title_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+        body_h = card_h - (inner_y - card_y) - title_h - inner_gap
+        nodes.append(_make_text_node(_nid("card_title"), card.title, font, ts.body,
+                                     bold=True, italic=False,
+                                     rect=Rect(card_x, inner_y, card_w, title_h)))
+        nodes.append(_make_text_node(_nid("card_body"), card.body, font, ts.body,
+                                     bold=False, italic=False,
+                                     rect=Rect(card_x, inner_y + title_h + inner_gap,
+                                               card_w, max(body_h, title_h))))
+
+    return nodes
+
+
+# ── content list layout helper ────────────────────────────────────────────────
+
+
+def _layout_content_list(slots, prefix: str, x, y, w, h, font, ts) -> list[ResolvedNode]:
+    """Lay out a flat list of content slots top-to-bottom within a rect."""
+    nodes: list[ResolvedNode] = []
+    gap = int(0.15 * EMU_PER_INCH)
+    cur_y = y
+
+    # Count spacers (flexible) vs fixed-height items.
+    fixed_heights: list[int] = []
+    spacer_count = 0
+    for slot in slots:
+        if isinstance(slot, TextSlot):
+            sz = slot.size_pt if slot.size_pt else ts.body
+            # Estimate lines by wrapping.
+            lines = wrap(slot.content, font, sz, w, bold=slot.bold, italic=slot.italic)
+            slot_h = total_text_height_emu(lines)
+            if slot.max_lines:
+                max_h = total_text_height_emu(lines[:slot.max_lines])
+                slot_h = min(slot_h, max_h)
+            fixed_heights.append(slot_h)
+        elif isinstance(slot, ImageSlot):
+            fixed_heights.append(int(h * 0.6))
+        elif isinstance(slot, ChartSlot):
+            fixed_heights.append(int(h * 0.7))
+        elif isinstance(slot, IconSlot):
+            fixed_heights.append(int(0.5 * EMU_PER_INCH))
+        elif isinstance(slot, SpacerSlot):
+            spacer_count += 1
+            fixed_heights.append(0)
+
+    total_fixed = sum(fixed_heights) + gap * (len(slots) - 1)
+    spacer_h = max(0, (h - total_fixed) // spacer_count) if spacer_count else 0
+
+    for slot, fh in zip(slots, fixed_heights):
+        if isinstance(slot, TextSlot):
+            sz = slot.size_pt if slot.size_pt else ts.body
+            lines = wrap(slot.content, font, sz, w, bold=slot.bold, italic=slot.italic)
+            node = _make_text_node(_nid(f"{prefix}_text"), slot.content, font, sz,
+                                   bold=slot.bold, italic=slot.italic,
+                                   rect=Rect(x, cur_y, w, fh), lines=lines)
+            nodes.append(node)
+            cur_y += fh + gap
+        elif isinstance(slot, ImageSlot):
+            nodes.append(ResolvedNode(_nid(f"{prefix}_img"), "image",
+                                      Rect(x, cur_y, w, fh),
+                                      slot_type="image", text_content=slot.path))
+            cur_y += fh + gap
+        elif isinstance(slot, ChartSlot):
+            nodes.append(ResolvedNode(_nid(f"{prefix}_chart"), "chart",
+                                      Rect(x, cur_y, w, fh), slot_type="chart"))
+            cur_y += fh + gap
+        elif isinstance(slot, IconSlot):
+            icon_size = fh
+            nodes.append(ResolvedNode(_nid(f"{prefix}_icon"), "icon",
+                                      Rect(x, cur_y, icon_size, icon_size),
+                                      slot_type="icon", text_content=slot.name))
+            cur_y += icon_size + gap
+        elif isinstance(slot, SpacerSlot):
+            if spacer_h > 0:
+                cur_y += spacer_h + gap
+
+    return nodes
+
+
+# ── node factory ──────────────────────────────────────────────────────────────
+
+
+def _make_text_node(
+    node_id: str,
+    text: str,
+    font: str,
+    size_pt: float,
+    bold: bool,
+    italic: bool,
+    rect: Rect,
+    lines: Optional[list] = None,
+    is_chrome: bool = False,
+) -> ResolvedNode:
+    if lines is None:
+        lines = wrap(text, font, size_pt, rect.w, bold=bold, italic=italic)
+    return ResolvedNode(
+        node_id=node_id,
+        node_type="text",
+        rect=rect,
+        lines=lines,
+        font=font,
+        size_pt=size_pt,
+        bold=bold,
+        italic=italic,
+        text_content=text,
+        is_chrome=is_chrome,
+    )

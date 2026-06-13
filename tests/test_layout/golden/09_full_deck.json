@@ -1,0 +1,1494 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": null,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Annual Strategy Review",
+          "lines": [
+            {
+              "text": "Annual Strategy Review",
+              "width_emu": 8680772,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Executive Leadership \u2014 January 2026",
+          "lines": [
+            {
+              "text": "Executive Leadership \u2014 January 2026",
+              "width_emu": 7417135,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": []
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "stat-callout",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "2025 Results at a Glance",
+          "lines": [
+            {
+              "text": "2025 Results at a Glance",
+              "width_emu": 6255990,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "127%",
+          "lines": [
+            {
+              "text": "127%",
+              "width_emu": 1948904,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Revenue vs Target",
+          "lines": [
+            {
+              "text": "Revenue vs",
+              "width_emu": 2280233,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Target",
+              "width_emu": 1200100,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "$3.8B total",
+          "lines": [
+            {
+              "text": "$3.8B total",
+              "width_emu": 1518047,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2639568,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "94%",
+          "lines": [
+            {
+              "text": "94%",
+              "width_emu": 1525116,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3828288,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Customer Retention",
+          "lines": [
+            {
+              "text": "Customer",
+              "width_emu": 1871625,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Retention",
+              "width_emu": 1848433,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "48 NPS",
+          "lines": [
+            {
+              "text": "48 NPS",
+              "width_emu": 2626072,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Net Promoter Score",
+          "lines": [
+            {
+              "text": "Net Promoter",
+              "width_emu": 2567608,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Score",
+              "width_emu": 1127993,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "+12 points YoY",
+          "lines": [
+            {
+              "text": "+12 points YoY",
+              "width_emu": 2127467,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 2,
+      "page_number": 3,
+      "component": "two-column",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What Drove Growth",
+          "lines": [
+            {
+              "text": "What Drove Growth",
+              "width_emu": 4978487,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 1645920
+          },
+          "text_content": "Enterprise segment up 42% driven by expanded seat licenses",
+          "lines": [
+            {
+              "text": "Enterprise segment up",
+              "width_emu": 4344355,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "42% driven by expanded",
+              "width_emu": 4753173,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "seat licenses",
+              "width_emu": 2496133,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3282696,
+            "w": 5501640,
+            "h": 1127760
+          },
+          "text_content": "APAC region outperformed forecast by 31%",
+          "lines": [
+            {
+              "text": "APAC region outperformed",
+              "width_emu": 5152293,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "forecast by 31%",
+              "width_emu": 3096183,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4547616,
+            "w": 5501640,
+            "h": 1645920
+          },
+          "text_content": "New product lines contributed 18% of total revenue",
+          "lines": [
+            {
+              "text": "New product lines",
+              "width_emu": 3432051,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "contributed 18% of total",
+              "width_emu": 4536852,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "revenue",
+              "width_emu": 1560426,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 1645920
+          },
+          "text_content": "SMB segment steady; churn reduced by operational improvements",
+          "lines": [
+            {
+              "text": "SMB segment steady;",
+              "width_emu": 4223965,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "churn reduced by",
+              "width_emu": 3336541,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "operational improvements",
+              "width_emu": 4968230,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3282696,
+            "w": 5501640,
+            "h": 1127760
+          },
+          "text_content": "Services attach rate improved from 34% to 51%",
+          "lines": [
+            {
+              "text": "Services attach rate",
+              "width_emu": 3815990,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "improved from 34% to 51%",
+              "width_emu": 5207955,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4547616,
+            "w": 5501640,
+            "h": 1645920
+          },
+          "text_content": "Partner channel now represents 28% of bookings",
+          "lines": [
+            {
+              "text": "Partner channel now",
+              "width_emu": 3960626,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "represents 28% of",
+              "width_emu": 3504369,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "bookings",
+              "width_emu": 1728465,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "3",
+          "lines": [
+            {
+              "text": "3",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 3,
+      "page_number": 4,
+      "component": "timeline",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Strategic Priorities 2026",
+          "lines": [
+            {
+              "text": "Strategic Priorities 2026",
+              "width_emu": 6077843,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "Q1",
+          "lines": [
+            {
+              "text": "Q1",
+              "width_emu": 423540,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Platform Consolidation",
+          "lines": [
+            {
+              "text": "Platform",
+              "width_emu": 1751447,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Consolidation",
+              "width_emu": 2878386,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "Merge three legacy systems into unified data layer.",
+          "lines": [
+            {
+              "text": "Merge",
+              "width_emu": 1223925,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "three",
+              "width_emu": 984200,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "legacy",
+              "width_emu": 1248172,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "systems",
+              "width_emu": 1583407,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "into unified",
+              "width_emu": 2088579,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "data layer.",
+              "width_emu": 1992437,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "Q2",
+          "lines": [
+            {
+              "text": "Q2",
+              "width_emu": 423540,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "AI Features GA",
+          "lines": [
+            {
+              "text": "AI",
+              "width_emu": 431800,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Features",
+              "width_emu": 1799940,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "GA",
+              "width_emu": 647700,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "General availability for all AI-assisted workflows.",
+          "lines": [
+            {
+              "text": "General",
+              "width_emu": 1536179,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "availability",
+              "width_emu": 1992015,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "for all AI-",
+              "width_emu": 1703797,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "assisted",
+              "width_emu": 1584040,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "workflows.",
+              "width_emu": 2015418,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "Q3",
+          "lines": [
+            {
+              "text": "Q3",
+              "width_emu": 423540,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Enterprise Expansion",
+          "lines": [
+            {
+              "text": "Enterprise",
+              "width_emu": 2135808,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Expansion",
+              "width_emu": 2183457,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "Target Fortune 500 segment with dedicated sales motion.",
+          "lines": [
+            {
+              "text": "Target",
+              "width_emu": 1200100,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Fortune",
+              "width_emu": 1488108,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "500",
+              "width_emu": 720440,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "segment",
+              "width_emu": 1656147,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "with",
+              "width_emu": 767879,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "dedicated",
+              "width_emu": 1872679,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "sales",
+              "width_emu": 1008025,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "motion.",
+              "width_emu": 1416000,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "Q4",
+          "lines": [
+            {
+              "text": "Q4",
+              "width_emu": 423540,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Partner Ecosystem",
+          "lines": [
+            {
+              "text": "Partner",
+              "width_emu": 1511933,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Ecosystem",
+              "width_emu": 2280233,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "Launch certified ISV program; target 50 partners.",
+          "lines": [
+            {
+              "text": "Launch",
+              "width_emu": 1416633,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "certified",
+              "width_emu": 1511933,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "ISV",
+              "width_emu": 695982,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "program;",
+              "width_emu": 1727833,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "target 50",
+              "width_emu": 1704429,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "partners.",
+              "width_emu": 1704008,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "4",
+          "lines": [
+            {
+              "text": "4",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 4,
+      "page_number": 5,
+      "component": "card-grid",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Investment Areas",
+          "lines": [
+            {
+              "text": "Investment Areas",
+              "width_emu": 4427116,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 457200,
+            "h": 457200
+          },
+          "text_content": "code",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2093976,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Engineering",
+          "lines": [
+            {
+              "text": "Engineering",
+              "width_emu": 2495079,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2749295,
+            "w": 2613660,
+            "h": 3011425
+          },
+          "text_content": "Platform reliability, developer experience, and AI infrastructure.",
+          "lines": [
+            {
+              "text": "Platform",
+              "width_emu": 1607654,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "reliability,",
+              "width_emu": 1767681,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "developer",
+              "width_emu": 1896504,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "experience,",
+              "width_emu": 2232372,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "and AI",
+              "width_emu": 1224558,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "infrastructure.",
+              "width_emu": 2639715,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 457200,
+            "h": 457200
+          },
+          "text_content": "users",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2093976,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Go-to-Market",
+          "lines": [
+            {
+              "text": "Go-to-",
+              "width_emu": 1294767,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Market",
+              "width_emu": 1391965,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2749295,
+            "w": 2613660,
+            "h": 3011425
+          },
+          "text_content": "Expanded enterprise sales team and channel partner program.",
+          "lines": [
+            {
+              "text": "Expanded",
+              "width_emu": 1944787,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "enterprise",
+              "width_emu": 1920118,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "sales team",
+              "width_emu": 2087947,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "and",
+              "width_emu": 720440,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "channel",
+              "width_emu": 1512565,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "partner",
+              "width_emu": 1368140,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "program.",
+              "width_emu": 1727833,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 457200,
+            "h": 457200
+          },
+          "text_content": "globe",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2093976,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "International",
+          "lines": [
+            {
+              "text": "International",
+              "width_emu": 2591011,
+              "height_emu": 518160,
+              "overflows": true
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2749295,
+            "w": 2613660,
+            "h": 3011425
+          },
+          "text_content": "APAC and EMEA expansion with local data residency.",
+          "lines": [
+            {
+              "text": "APAC and",
+              "width_emu": 1984214,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "EMEA",
+              "width_emu": 1223714,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "expansion",
+              "width_emu": 1968612,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "with local",
+              "width_emu": 1775904,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "data",
+              "width_emu": 840408,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "residency.",
+              "width_emu": 1935931,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 457200,
+            "h": 457200
+          },
+          "text_content": "chart-up",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2093976,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Data & Analytics",
+          "lines": [
+            {
+              "text": "Data &",
+              "width_emu": 1367718,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Analytics",
+              "width_emu": 1919908,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2749295,
+            "w": 2613660,
+            "h": 3011425
+          },
+          "text_content": "Customer intelligence and product usage insights platform.",
+          "lines": [
+            {
+              "text": "Customer",
+              "width_emu": 1871625,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "intelligence",
+              "width_emu": 2160476,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "and product",
+              "width_emu": 2280655,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "usage",
+              "width_emu": 1176486,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "insights",
+              "width_emu": 1464072,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "platform.",
+              "width_emu": 1679761,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "5",
+          "lines": [
+            {
+              "text": "5",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

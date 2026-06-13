@@ -1,0 +1,382 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Our Core Values",
+          "lines": [
+            {
+              "text": "Our Core Values",
+              "width_emu": 5928940,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "icon-text-rows",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What Drives Us",
+          "lines": [
+            {
+              "text": "What Drives Us",
+              "width_emu": 3912729,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 457200,
+            "y": 1655064,
+            "w": 548640,
+            "h": 548640
+          },
+          "text_content": "star",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 1188720,
+            "y": 1499616,
+            "w": 10546080,
+            "h": 518159
+          },
+          "text_content": "Excellence",
+          "lines": [
+            {
+              "text": "Excellence",
+              "width_emu": 2232583,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 1188720,
+            "y": 2292095,
+            "w": 10546080,
+            "h": 67057
+          },
+          "text_content": "We set the highest standards for every deliverable and hold ourselves accountable to our clients and each other.",
+          "lines": [
+            {
+              "text": "We set the highest standards for every deliverable",
+              "width_emu": 9592791,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "and hold ourselves accountable to our clients and",
+              "width_emu": 9481889,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "each other.",
+              "width_emu": 2136651,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 457200,
+            "y": 2788920,
+            "w": 548640,
+            "h": 548640
+          },
+          "text_content": "handshake",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 1188720,
+            "y": 2633472,
+            "w": 10546080,
+            "h": 518159
+          },
+          "text_content": "Integrity",
+          "lines": [
+            {
+              "text": "Integrity",
+              "width_emu": 1703375,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 1188720,
+            "y": 3425951,
+            "w": 10546080,
+            "h": 67057
+          },
+          "text_content": "Honest, transparent communication is the foundation of every relationship we build.",
+          "lines": [
+            {
+              "text": "Honest, transparent communication is the foundation",
+              "width_emu": 10105132,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "of every relationship we build.",
+              "width_emu": 5688459,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 457200,
+            "y": 3922776,
+            "w": 548640,
+            "h": 548640
+          },
+          "text_content": "lightbulb",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 1188720,
+            "y": 3767328,
+            "w": 10546080,
+            "h": 518159
+          },
+          "text_content": "Innovation",
+          "lines": [
+            {
+              "text": "Innovation",
+              "width_emu": 2182825,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 1188720,
+            "y": 4559807,
+            "w": 10546080,
+            "h": 67057
+          },
+          "text_content": "We challenge conventional thinking and invest in the ideas that will shape tomorrow.",
+          "lines": [
+            {
+              "text": "We challenge conventional thinking and invest in the",
+              "width_emu": 10026067,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "ideas that will shape tomorrow.",
+              "width_emu": 5904148,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "icon",
+          "rect": {
+            "x": 457200,
+            "y": 5056632,
+            "w": 548640,
+            "h": 548640
+          },
+          "text_content": "globe",
+          "slot_type": "icon"
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 1188720,
+            "y": 4901184,
+            "w": 10546080,
+            "h": 518159
+          },
+          "text_content": "Inclusion",
+          "lines": [
+            {
+              "text": "Inclusion",
+              "width_emu": 1895239,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 1188720,
+            "y": 5693663,
+            "w": 10546080,
+            "h": 67057
+          },
+          "text_content": "Diverse perspectives make us stronger; every voice has a seat at the table.",
+          "lines": [
+            {
+              "text": "Diverse perspectives make us stronger; every voice",
+              "width_emu": 9887334,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "has a seat at the table.",
+              "width_emu": 4369023,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}
