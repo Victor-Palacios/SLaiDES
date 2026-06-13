@@ -1,18 +1,16 @@
 # Phase 6 render-drift verification harness (CI only).
 #
-# INSTALL: copy this file to .github/workflows/verify.yml. It lives under ci/
-# rather than .github/workflows/ because the unattended nightly bot's GitHub App
-# token lacks the `workflows` permission and cannot push workflow files; an
-# operator (or a token with `workflows` scope) installs it once. See ci/README.md.
-#
 # Renders the example decks through LibreOffice + poppler and runs cheap pixel
 # heuristics against the geometry the layout engine computed, to catch drift
 # between our text-measurement/box math and a real renderer. This is EXPLICITLY
-# NOT part of deck generation — it only runs here, on changes that could move the
+# NOT part of deck generation — it only runs on changes that could move the
 # math or the rendered output (layout, metrics, emit, verify, or the examples).
 #
 # If this harness ever disagrees with the linter, the fix goes into
 # metrics/layout/slack constants — never into a per-deck visual loop (see PLAN.md).
+#
+# Authored by the nightly bot under ci/verify.yml (its GitHub App token lacks the
+# `workflows` permission); installed here from an operator-scoped session.
 name: verify-render
 
 on:

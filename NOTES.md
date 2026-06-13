@@ -22,16 +22,14 @@ is followed anyway.
 
 ## Deviations recorded during Phase 6 (2026-06-13, session 2)
 
-- **CI workflow ships under `ci/`, not `.github/workflows/`.** The Phase 6
+- **CI workflow originally shipped under `ci/`, now installed.** The Phase 6
   verification harness needs its own GitHub Actions workflow. The unattended
   nightly bot authenticates as a GitHub App whose token lacks the `workflows`
   permission, so `git push` is rejected when the diff creates or edits any file
-  under `.github/workflows/`. The workflow is therefore committed to
-  `ci/verify.yml` with install instructions in `ci/README.md`; an operator (or a
-  token carrying `workflows` scope) copies it into `.github/workflows/` once. The
-  harness code, CLI (`slidekit verify`), and test suite (`tests/test_verify`) are
-  fully functional locally and in any CI that installs the workflow — only the
-  one-line install of the workflow file is gated on the permission.
+  under `.github/workflows/`. The bot therefore parked it at `ci/verify.yml`.
+  RESOLVED 2026-06-13 (session 2 follow-up): installed to
+  `.github/workflows/verify.yml` from an operator-scoped session that carries the
+  `workflows` permission; the `ci/` parking directory was removed.
 
 - **Icon emitter changed from text label to colored circle.** The Phase 5 icon
   emitter rendered an unmeasured `[name]` text label, centered with word-wrap off,

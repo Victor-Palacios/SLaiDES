@@ -71,7 +71,7 @@ NIGHTLY_REPORTS/ for per-session history; NOTES.md for objections/proposals.
 ## Phase 6 — Verification harness (CI only)
 
 - [x] Smoke test: build all example decks → `soffice --headless --convert-to pdf` → `pdftoppm` → pixel heuristics (ink within margins, no text pixels outside computed rects ± slack) — `slidekit/verify`, 15 tests incl. sensitivity check; all 11 decks pass (max stray 0.41% vs 1% threshold). Surfaced + fixed a real icon-overflow drift in the emitter (commit 7632299)
-- [~] Wired into CI on layout/metrics changes; explicitly NOT part of deck generation — workflow authored (`ci/verify.yml`, triggers on layout/metrics/emit/verify/examples paths) but **requires one-time operator install** into `.github/workflows/`: the nightly bot's GitHub App token lacks the `workflows` permission and cannot push workflow files. See `ci/README.md` and NOTES.md (commit 518f8d0)
+- [x] Wired into CI on layout/metrics changes; explicitly NOT part of deck generation — workflow installed at `.github/workflows/verify.yml` (from `ci/verify.yml`) by an operator-scoped session; triggers on layout/metrics/emit/verify/examples paths. See NOTES.md (commit 518f8d0; installed in follow-up)
 
 ## Phase 7 — Agent interface
 
