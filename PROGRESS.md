@@ -63,10 +63,10 @@ NIGHTLY_REPORTS/ for per-session history; NOTES.md for objections/proposals.
 
 ## Phase 5 — Emitters
 
-- [ ] pptx emitter: python-pptx, resolved EMU rects, auto-fit OFF, word-wrap ON, explicit font runs, literal RGB, images pre-resized to slot
-- [ ] ACCEPTANCE: round-trip test — emit → reopen → positions/sizes match resolved geometry exactly
-- [ ] HTML debug preview (absolute-positioned divs; human spot-check only)
-- [ ] **FIRST-LIGHT DEMO: `examples/demo-5.yaml` → `demo-5.pptx`** — 5 slides (title, two-column, stat callout, icon-text rows, comparison), lint-clean, page numbers, zero screenshot calls — flag prominently in nightly report
+- [x] pptx emitter: python-pptx, resolved EMU rects, auto-fit OFF, word-wrap ON, explicit font runs, literal RGB, text box insets matching constants.py
+- [x] ACCEPTANCE: round-trip test — emit → reopen → positions/sizes match resolved geometry exactly (7 tests pass)
+- [x] HTML debug preview (absolute-positioned divs at 96 DPI; human spot-check only)
+- [x] **FIRST-LIGHT DEMO: `examples/demo-5.yaml` → `demo-5.pptx`** — 5 slides (title, two-column, stat callout, icon-text rows, comparison), lint-clean, page numbers, zero screenshot calls (commit 9db4235)
 
 ## Phase 6 — Verification harness (CI only)
 
