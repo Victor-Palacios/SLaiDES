@@ -1,0 +1,60 @@
+# Phase 6 render-drift verification harness (CI only).
+#
+# INSTALL: copy this file to .github/workflows/verify.yml. It lives under ci/
+# rather than .github/workflows/ because the unattended nightly bot's GitHub App
+# token lacks the `workflows` permission and cannot push workflow files; an
+# operator (or a token with `workflows` scope) installs it once. See ci/README.md.
+#
+# Renders the example decks through LibreOffice + poppler and runs cheap pixel
+# heuristics against the geometry the layout engine computed, to catch drift
+# between our text-measurement/box math and a real renderer. This is EXPLICITLY
+# NOT part of deck generation — it only runs here, on changes that could move the
+# math or the rendered output (layout, metrics, emit, verify, or the examples).
+#
+# If this harness ever disagrees with the linter, the fix goes into
+# metrics/layout/slack constants — never into a per-deck visual loop (see PLAN.md).
+name: verify-render
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/slidekit/layout/**"
+      - "src/slidekit/metrics/**"
+      - "src/slidekit/emit/**"
+      - "src/slidekit/verify/**"
+      - "examples/**"
+      - ".github/workflows/verify.yml"
+      - "pyproject.toml"
+  pull_request:
+    paths:
+      - "src/slidekit/layout/**"
+      - "src/slidekit/metrics/**"
+      - "src/slidekit/emit/**"
+      - "src/slidekit/verify/**"
+      - "examples/**"
+      - ".github/workflows/verify.yml"
+      - "pyproject.toml"
+  workflow_dispatch: {}
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install render tools (LibreOffice + poppler)
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q libreoffice-impress poppler-utils
+
+      - name: Install slidekit
+        run: pip install -e ".[dev]"
+
+      - name: Run verification harness over all example decks
+        run: pytest tests/test_verify -q
