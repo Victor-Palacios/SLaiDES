@@ -40,5 +40,13 @@ SESSION WRAP-UP — reserve the final portion of your effort for this, always:
 - Write NIGHTLY_REPORTS/<YYYY-MM-DD>.md: what was completed (with commit hashes),
   test results summary, any blockers or gate status, and the exact next task for
   tomorrow's session in one sentence.
+- ALSO write a complementary executive summary next to that report, named
+  NIGHTLY_REPORTS/<same-report-basename>-exec-summary.md (e.g. report
+  2026-06-14.md -> 2026-06-14-exec-summary.md; if you suffix the report like
+  -session2, mirror it). It must have exactly two sections for a NON-TECHNICAL
+  reader: first "## ELI5" (explain-like-I'm-5: short, plain language, analogies
+  welcome, no jargon — no code names, file paths, or tool names), then
+  "## Broad strokes" (still non-technical, a few short paragraphs on what happened
+  this session and why it matters). Every report gets one; never skip it.
 - If the Phase 5 first-light demo became possible this session, build
   examples/demo-5.yaml -> demo-5.pptx and flag it prominently in the report.
