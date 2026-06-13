@@ -30,9 +30,18 @@ def main() -> None:
     schema_p.add_argument("-o", "--output", default="slidekit-schema.json")
 
     # slidekit new
-    new_p = sub.add_parser("new", help="Scaffold a new deck from a template")
-    new_p.add_argument("--template", default="title-slide", help="Component mix template")
+    from slidekit.scaffold import DEFAULT_TEMPLATE, list_templates
+
+    new_p = sub.add_parser("new", help="Scaffold a themed starter deck from a template")
+    new_p.add_argument(
+        "--template",
+        default=DEFAULT_TEMPLATE,
+        help=f"Component mix: {', '.join(list_templates())} (default: {DEFAULT_TEMPLATE})",
+    )
     new_p.add_argument("-o", "--output", default="deck.yaml")
+    new_p.add_argument(
+        "--list", action="store_true", help="List available templates and exit"
+    )
 
     # slidekit verify (Phase 6 CI-only render drift harness — NOT part of generation)
     verify_p = sub.add_parser(
@@ -146,22 +155,24 @@ def _cmd_verify(args: argparse.Namespace) -> None:
 
 
 def _cmd_new(args: argparse.Namespace) -> None:
-    # Phase 7 — scaffold not yet implemented; emit a minimal starter.
-    template = f"""version: 1
-theme:
-  palette:
-    primary: "#1B4F8A"
-    surface: "#FFFFFF"
-    accent: "#E84545"
-    text: "#1A1A2E"
-    muted: "#8A8A9A"
-page_numbers:
-  enabled: true
-slides:
-  - component: title-slide
-    title: "Your Title Here"
-    subtitle: "Your subtitle"
-"""
+    """Scaffold a themed, lint-clean starter deck the agent edits in place."""
+    from slidekit.scaffold import list_templates, render_template
+
+    if getattr(args, "list", False):
+        for name in list_templates():
+            print(name)
+        sys.exit(0)
+
+    try:
+        yaml_text = render_template(args.template)
+    except KeyError:
+        print(
+            f"Unknown template '{args.template}'. Available: {', '.join(list_templates())}",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+
     out = Path(args.output)
-    out.write_text(template)
-    print(f"Starter deck written to {out}")
+    out.write_text(yaml_text)
+    print(f"Starter deck ({args.template}) written to {out}")
+    print("Edit the placeholder text, then: slidekit build " + str(out))
