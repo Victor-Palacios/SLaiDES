@@ -1,0 +1,246 @@
+{
+  "gate_passes": true,
+  "overall_max_error": 0.0007581657597012542,
+  "calibrate_pt": 36,
+  "sample_count": 200,
+  "fonts": {
+    "arial": {
+      "regular": {
+        "max_error": 0.0003248159820961102,
+        "mean_error": 0.00016379340541687493,
+        "p95_error": 0.00029332399023892505,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bold": {
+        "max_error": 0.000418191873173044,
+        "mean_error": 0.00019139779050854388,
+        "p95_error": 0.00029332399023892505,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "italic": {
+        "max_error": 0.0003248159820961102,
+        "mean_error": 0.00016378349855919976,
+        "p95_error": 0.00029332399023892505,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bolditalic": {
+        "max_error": 0.000418191873173044,
+        "mean_error": 0.00018815381849446414,
+        "p95_error": 0.00029332399023892505,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      }
+    },
+    "times new roman": {
+      "regular": {
+        "max_error": 0.000418191873173044,
+        "mean_error": 8.012365263104329e-05,
+        "p95_error": 0.00029332399023892505,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bold": {
+        "max_error": 0.000418191873173044,
+        "mean_error": 9.379986691566741e-05,
+        "p95_error": 0.0003032671763487191,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "italic": {
+        "max_error": 0.000418191873173044,
+        "mean_error": 9.891367325306925e-05,
+        "p95_error": 0.000367300128539651,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bolditalic": {
+        "max_error": 0.000418191873173044,
+        "mean_error": 8.437082880394958e-05,
+        "p95_error": 0.00029332399023892505,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      }
+    },
+    "courier new": {
+      "regular": {
+        "max_error": 0.0002716905506117592,
+        "mean_error": 0.00027071442382816204,
+        "p95_error": 0.0002716905506117592,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bold": {
+        "max_error": 0.0002716905506117592,
+        "mean_error": 0.00027071442382816204,
+        "p95_error": 0.0002716905506117592,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "italic": {
+        "max_error": 0.0002716905506117592,
+        "mean_error": 0.00027071442382816204,
+        "p95_error": 0.0002716905506117592,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bolditalic": {
+        "max_error": 0.0002716905506117592,
+        "mean_error": 0.00027071442382816204,
+        "p95_error": 0.0002716905506117592,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      }
+    },
+    "calibri": {
+      "regular": {
+        "max_error": 0.0007373784159333025,
+        "mean_error": 0.00014415219251316693,
+        "p95_error": 0.00034122528942255424,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bold": {
+        "max_error": 0.00037531236739120187,
+        "mean_error": 9.427819302020774e-05,
+        "p95_error": 0.00024120785285716446,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "italic": {
+        "max_error": 0.0007373784159333025,
+        "mean_error": 0.00013928510909407886,
+        "p95_error": 0.00034122528942255424,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bolditalic": {
+        "max_error": 0.00037531236739120187,
+        "mean_error": 9.349676771261723e-05,
+        "p95_error": 0.00024120785285716446,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      }
+    },
+    "cambria": {
+      "regular": {
+        "max_error": 0.0005266988685237874,
+        "mean_error": 9.269114007734745e-05,
+        "p95_error": 0.00028883486338401247,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bold": {
+        "max_error": 0.0004524254612058385,
+        "mean_error": 8.367316872534789e-05,
+        "p95_error": 0.00027186558012126216,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "italic": {
+        "max_error": 0.0005266988685237874,
+        "mean_error": 9.269114007734745e-05,
+        "p95_error": 0.00028883486338401247,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bolditalic": {
+        "max_error": 0.0004524254612058385,
+        "mean_error": 8.367316872534789e-05,
+        "p95_error": 0.00027186558012126216,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      }
+    },
+    "bookman old style": {
+      "regular": {
+        "max_error": 0.0007581657597012542,
+        "mean_error": 0.0001309368139855479,
+        "p95_error": 0.00035884335843195785,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bold": {
+        "max_error": 0.0005237743072171227,
+        "mean_error": 0.00011598484831388827,
+        "p95_error": 0.000351815145508659,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "italic": {
+        "max_error": 0.0005242078304225812,
+        "mean_error": 0.00012288761414539807,
+        "p95_error": 0.0003435185248748876,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bolditalic": {
+        "max_error": 0.0005568801684132172,
+        "mean_error": 0.00010787809931694113,
+        "p95_error": 0.0003667176873431903,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      }
+    },
+    "century schoolbook": {
+      "regular": {
+        "max_error": 0.0007581657597012542,
+        "mean_error": 0.0001309368139855479,
+        "p95_error": 0.00035884335843195785,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bold": {
+        "max_error": 0.0005237743072171227,
+        "mean_error": 0.00011598484831388827,
+        "p95_error": 0.000351815145508659,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "italic": {
+        "max_error": 0.0005242078304225812,
+        "mean_error": 0.00012288761414539807,
+        "p95_error": 0.0003435185248748876,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      },
+      "bolditalic": {
+        "max_error": 0.0005568801684132172,
+        "mean_error": 0.00010787809931694113,
+        "p95_error": 0.0003667176873431903,
+        "n_samples": 194,
+        "skipped_ligatures": 6,
+        "passes_2pct": true
+      }
+    }
+  }
+}
