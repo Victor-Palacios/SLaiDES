@@ -11,6 +11,7 @@ from typing import TYPE_CHECKING, Union
 
 from pptx import Presentation
 from pptx.dml.color import RGBColor
+from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import PP_ALIGN, MSO_AUTO_SIZE
 from pptx.util import Emu, Pt
 
@@ -133,28 +134,26 @@ def _emit_text(slide, node: "ResolvedNode", palette) -> None:
 
 
 def _emit_icon(slide, node: "ResolvedNode", palette) -> None:
-    """Emit icon as a text box placeholder (icon name as label)."""
-    rect = node.rect
-    txBox = slide.shapes.add_textbox(
-        Emu(rect.x), Emu(rect.y), Emu(rect.w), Emu(rect.h)
-    )
-    tf = txBox.text_frame
-    tf.word_wrap = False
-    tf.auto_size = MSO_AUTO_SIZE.NONE
-    tf.margin_left = Emu(0)
-    tf.margin_right = Emu(0)
-    tf.margin_top = Emu(0)
-    tf.margin_bottom = Emu(0)
+    """Emit icon as a colored circle inscribed in its slot (Phase 2 spec).
 
+    A circle of diameter min(w, h), centered in the slot and filled with the theme
+    accent. Drawn strictly inside the resolved rect so it can never overflow — the
+    earlier text-label placeholder rendered an unmeasured ``[name]`` string that
+    spilled past the slot in real renderers (caught by the Phase 6 harness).
+    """
+    rect = node.rect
+    diameter = min(rect.w, rect.h)
+    cx = rect.x + (rect.w - diameter) // 2
+    cy = rect.y + (rect.h - diameter) // 2
+
+    shape = slide.shapes.add_shape(
+        MSO_SHAPE.OVAL, Emu(cx), Emu(cy), Emu(diameter), Emu(diameter)
+    )
     r, g, b = _hex_to_rgb(palette.accent)
-    p = tf.paragraphs[0]
-    p.alignment = PP_ALIGN.CENTER
-    run = p.add_run()
-    run.text = f"[{node.text_content or 'icon'}]"
-    run.font.name = "Arial"
-    run.font.size = Pt(16)
-    run.font.bold = True
-    run.font.color.rgb = RGBColor(r, g, b)
+    shape.fill.solid()
+    shape.fill.fore_color.rgb = RGBColor(r, g, b)
+    shape.line.fill.background()  # no border
+    shape.shadow.inherit = False
 
 
 def _emit_image(slide, node: "ResolvedNode") -> None:

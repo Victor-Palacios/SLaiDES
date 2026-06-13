@@ -34,6 +34,14 @@ def main() -> None:
     new_p.add_argument("--template", default="title-slide", help="Component mix template")
     new_p.add_argument("-o", "--output", default="deck.yaml")
 
+    # slidekit verify (Phase 6 CI-only render drift harness — NOT part of generation)
+    verify_p = sub.add_parser(
+        "verify",
+        help="CI-only: render decks via LibreOffice and check pixels vs computed geometry",
+    )
+    verify_p.add_argument("decks", nargs="+", help="Deck YAML path(s) to verify")
+    verify_p.add_argument("--dpi", type=int, default=None, help="Render DPI (default 150)")
+
     args = parser.parse_args()
 
     if args.command == "build":
@@ -44,6 +52,8 @@ def main() -> None:
         _cmd_schema(args)
     elif args.command == "new":
         _cmd_new(args)
+    elif args.command == "verify":
+        _cmd_verify(args)
 
 
 def _cmd_build(args: argparse.Namespace) -> None:
@@ -105,6 +115,34 @@ def _cmd_schema(args: argparse.Namespace) -> None:
 
     path = write_schema(args.output)
     print(f"Schema written to {path}")
+
+
+def _cmd_verify(args: argparse.Namespace) -> None:
+    """Render decks and run pixel heuristics against computed geometry.
+
+    CI-only drift detector — explicitly NOT part of deck generation. Prints a JSON
+    report per deck and exits non-zero if any deck fails or the render tools are
+    missing.
+    """
+    from slidekit.verify import VerifyConfig, tools_available, verify_deck_yaml
+
+    ok, reason = tools_available()
+    if not ok:
+        print(json.dumps({"error": reason}), file=sys.stderr)
+        sys.exit(2)
+
+    cfg = VerifyConfig()
+    if args.dpi:
+        cfg.dpi = args.dpi
+
+    all_passed = True
+    for deck_path in args.decks:
+        result = verify_deck_yaml(Path(deck_path), cfg=cfg)
+        print(json.dumps(result.to_dict()))
+        if not result.passed:
+            all_passed = False
+
+    sys.exit(0 if all_passed else 1)
 
 
 def _cmd_new(args: argparse.Namespace) -> None:
