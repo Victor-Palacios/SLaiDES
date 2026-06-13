@@ -1,0 +1,137 @@
+version: 1
+theme:
+  palette:
+    primary: "#1B4F8A"
+    surface: "#FFFFFF"
+    accent: "#E84545"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  type_scale:
+    title: 60
+    header: 42
+    body: 34
+    caption: 25
+  font: arial
+  motif: minimal
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "Agents in AI"
+    subtitle: "How software learned to act, not just answer"
+
+  - component: icon-text-rows
+    title: "What Makes Software an Agent"
+    rows:
+      - icon: eye
+        heading: "Perceive"
+        body: "Read its environment."
+      - icon: brain
+        heading: "Reason"
+        body: "Plan a course of action."
+      - icon: bolt
+        heading: "Act"
+        body: "Use tools to change things."
+
+  - component: comparison-columns
+    title: "Assistant vs Agent"
+    left_title: "Assistant"
+    right_title: "Agent"
+    left_items:
+      - text: "Answers one prompt"
+      - text: "Waits for you"
+      - text: "Has no tools"
+    right_items:
+      - text: "Pursues a goal"
+      - text: "Acts on its own"
+      - text: "Calls tools"
+
+  - component: card-grid
+    title: "Core Capabilities"
+    cards:
+      - icon: target
+        title: "Planning"
+        body: "Break goals into steps."
+      - icon: wrench
+        title: "Tool Use"
+        body: "Call APIs and code."
+      - icon: book
+        title: "Memory"
+        body: "Recall past context."
+      - icon: mirror
+        title: "Reflection"
+        body: "Critique and retry."
+
+  - component: stat-callout
+    title: "Why Now"
+    stats:
+      - value: "2022"
+        label: "LLMs Arrive"
+        subtext: "tool use emerges"
+      - value: "10x"
+        label: "Faster"
+        subtext: "early reports"
+      - value: "1M+"
+        label: "Developers"
+        subtext: "building agents"
+
+  - component: timeline
+    title: "From Rules to Agents"
+    events:
+      - date: "1980s"
+        title: "Rules"
+        description: "Hand-coded logic."
+      - date: "2010s"
+        title: "ML"
+        description: "Learned patterns."
+      - date: "Today"
+        title: "Agents"
+        description: "Models that act."
+
+  - component: card-grid
+    title: "Common Agent Patterns"
+    cards:
+      - icon: loop
+        title: "ReAct"
+        body: "Reason, then act."
+      - icon: wrench
+        title: "Tool Use"
+        body: "Call functions."
+      - icon: book
+        title: "RAG"
+        body: "Retrieve facts first."
+      - icon: team
+        title: "Multi-Agent"
+        body: "Specialists team up."
+
+  - component: two-column
+    title: "Multi-Agent Systems"
+    left:
+      - type: text
+        content: "Many narrow agents beat one generalist."
+      - type: text
+        content: "Each owns a clear role."
+    right:
+      - type: text
+        content: "A coordinator routes the work."
+      - type: text
+        content: "They hand off context."
+
+  - component: comparison-columns
+    title: "Promise vs Pitfalls"
+    left_title: "Promise"
+    right_title: "Pitfalls"
+    left_items:
+      - text: "Automate real work"
+      - text: "Scale expertise"
+      - text: "Run all day"
+    right_items:
+      - text: "Errors compound"
+      - text: "Hard to predict"
+      - text: "Needs guardrails"
+
+  - component: title-slide
+    title: "Takeaways"
+    subtitle: "Software that acts, with human oversight"
