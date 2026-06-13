@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_3",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -31,7 +31,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "subtitle_4",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -56,7 +56,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_5",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -89,7 +89,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_6",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -112,25 +112,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_col_text_7",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
             "w": 5501640,
-            "h": 1645920
+            "h": 1127760
           },
-          "text_content": "Strong brand recognition across 45 markets",
+          "text_content": "Strong brand in 45 markets",
           "lines": [
             {
-              "text": "Strong brand",
-              "width_emu": 2824621,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "recognition across 45",
-              "width_emu": 4638266,
+              "text": "Strong brand in 45",
+              "width_emu": 4042221,
               "height_emu": 518160,
               "overflows": false
             },
@@ -147,25 +141,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_col_text_8",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3282696,
+            "y": 2901696,
             "w": 5501640,
-            "h": 1645920
+            "h": 1127760
           },
-          "text_content": "Proven distribution network with 2,400 partners",
+          "text_content": "2,400 distribution partners",
           "lines": [
             {
-              "text": "Proven distribution",
-              "width_emu": 4077853,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "network with 2,400",
-              "width_emu": 4180322,
+              "text": "2,400 distribution",
+              "width_emu": 3834123,
               "height_emu": 518160,
               "overflows": false
             },
@@ -182,31 +170,25 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_col_text_9",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 5065776,
+            "y": 4303776,
             "w": 5501640,
-            "h": 1645920
+            "h": 1127760
           },
-          "text_content": "Industry-leading customer satisfaction score of 92%",
+          "text_content": "92% customer satisfaction",
           "lines": [
             {
-              "text": "Industry-leading",
-              "width_emu": 3516387,
+              "text": "92% customer",
+              "width_emu": 3130339,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "customer satisfaction",
-              "width_emu": 4655555,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "score of 92%",
-              "width_emu": 2810706,
+              "text": "satisfaction",
+              "width_emu": 2484958,
               "height_emu": 518160,
               "overflows": false
             }
@@ -217,31 +199,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_col_text_10",
           "node_type": "text",
           "rect": {
             "x": 6233160,
             "y": 1499616,
             "w": 5501640,
-            "h": 1645920
+            "h": 609600
           },
-          "text_content": "Limited digital presence in emerging markets",
+          "text_content": "Limited digital presence",
           "lines": [
             {
-              "text": "Limited digital",
-              "width_emu": 3089436,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "presence in emerging",
-              "width_emu": 4707000,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "markets",
-              "width_emu": 1757350,
+              "text": "Limited digital presence",
+              "width_emu": 5201841,
               "height_emu": 518160,
               "overflows": false
             }
@@ -252,27 +222,21 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_col_text_11",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 3282696,
+            "y": 2383536,
             "w": 5501640,
-            "h": 1127760
+            "h": 609600
           },
-          "text_content": "Higher cost structure than key competitors",
+          "text_content": "Higher cost structure",
           "lines": [
             {
               "text": "Higher cost structure",
               "width_emu": 4565526,
               "height_emu": 518160,
               "overflows": false
-            },
-            {
-              "text": "than key competitors",
-              "width_emu": 4598839,
-              "height_emu": 518160,
-              "overflows": false
             }
           ],
           "font": "calibri",
@@ -281,31 +245,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_col_text_12",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 4547616,
+            "y": 3267456,
             "w": 5501640,
-            "h": 1645920
+            "h": 609600
           },
-          "text_content": "Product refresh cycle slower than market demand",
+          "text_content": "Slower product refresh",
           "lines": [
             {
-              "text": "Product refresh cycle",
-              "width_emu": 4548026,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "slower than market",
-              "width_emu": 4193604,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "demand",
-              "width_emu": 1772741,
+              "text": "Slower product refresh",
+              "width_emu": 4907930,
               "height_emu": 518160,
               "overflows": false
             }
@@ -318,7 +270,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_13",
           "node_type": "text",
           "rect": {
             "x": 10363200,

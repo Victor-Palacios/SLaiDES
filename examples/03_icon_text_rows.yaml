@@ -18,13 +18,10 @@ slides:
     rows:
       - icon: star
         heading: "Excellence"
-        body: "We set the highest standards for every deliverable and hold ourselves accountable to our clients and each other."
+        body: "High standards in every deliverable we ship."
       - icon: handshake
         heading: "Integrity"
-        body: "Honest, transparent communication is the foundation of every relationship we build."
+        body: "Transparent and honest in all we do."
       - icon: lightbulb
         heading: "Innovation"
-        body: "We challenge conventional thinking and invest in the ideas that will shape tomorrow."
-      - icon: globe
-        heading: "Inclusion"
-        body: "Diverse perspectives make us stronger; every voice has a seat at the table."
+        body: "Investing in ideas that shape tomorrow."

@@ -27,12 +27,12 @@ slides:
     title: "Two Column"
     left:
       - type: text
-        content: "Left column content demonstrating the two-column layout component."
+        content: "Left column with clear hierarchy."
       - type: icon
         name: check
     right:
       - type: text
-        content: "Right column content with balanced whitespace and clear hierarchy."
+        content: "Right column balanced content."
       - type: spacer
         size: 1
     left_weight: 1.2
@@ -43,13 +43,13 @@ slides:
     rows:
       - icon: rocket
         heading: "Speed"
-        body: "Deploy in minutes, not months."
+        body: "Deploy in minutes."
       - icon: lock
         heading: "Security"
-        body: "Enterprise-grade protection by default."
+        body: "Safe by default."
       - icon: chart-up
         heading: "Scale"
-        body: "From startup to enterprise without rearchitecting."
+        body: "Grows with you."
 
   - component: stat-callout
     title: "Stat Callout"
@@ -67,24 +67,24 @@ slides:
     left_title: "Before"
     right_title: "After"
     left_items:
-      - text: "Manual processes, error-prone"
-      - text: "Weekly reporting cycles"
+      - text: "Manual; error-prone"
+      - text: "Weekly reports"
     right_items:
-      - text: "Automated workflows, consistent"
-      - text: "Real-time dashboards"
+      - text: "Automated; reliable"
+      - text: "Real-time data"
 
   - component: timeline
     title: "Timeline"
     events:
       - date: "Month 1"
-        title: "Onboarding"
-        description: "Setup, configuration, and team training."
+        title: "Kickoff"
+        description: "Setup and team training."
       - date: "Month 3"
-        title: "Full Deployment"
-        description: "Production rollout across all business units."
+        title: "Go Live"
+        description: "Full production rollout."
       - date: "Month 6"
-        title: "Optimization"
-        description: "Performance tuning based on 90 days of usage data."
+        title: "Growth"
+        description: "Tuning and expansion."
 
   - component: image-half-bleed
     title: "Image Half Bleed"
@@ -93,23 +93,23 @@ slides:
       type: image
       path: "assets/placeholder.jpg"
       fit: cover
-      alt: "Placeholder image demonstrating the half-bleed layout"
+      alt: "Placeholder image"
     content:
       - type: text
-        content: "This layout places a full-bleed image on one side with text content on the other."
+        content: "Full-bleed image with text side."
 
   - component: card-grid
     title: "Card Grid"
     cards:
       - icon: star
-        title: "Feature One"
-        body: "Brief description of this key capability."
+        title: "Feature A"
+        body: "Fast and reliable."
       - icon: bolt
-        title: "Feature Two"
-        body: "Brief description of this key capability."
+        title: "Feature B"
+        body: "Secure by design."
       - icon: shield
-        title: "Feature Three"
-        body: "Brief description of this key capability."
+        title: "Feature C"
+        body: "Scales with you."
       - icon: globe
-        title: "Feature Four"
-        body: "Brief description of this key capability."
+        title: "Feature D"
+        body: "Pay as you go."

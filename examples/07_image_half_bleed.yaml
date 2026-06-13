@@ -24,8 +24,8 @@ slides:
       alt: "Engineering team at a customer site"
     content:
       - type: text
-        content: "Every feature we ship starts with a real customer problem. Our field engineering team spends 30% of their time embedded with customers."
+        content: "Built with customers, not just for them."
       - type: spacer
         size: 1
       - type: text
-        content: "This hands-on approach has reduced implementation time by 60% and cut support tickets by half."
+        content: "60% faster rollout; 50% fewer tickets."

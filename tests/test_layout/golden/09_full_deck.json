@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_96",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -31,7 +31,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "subtitle_97",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -64,7 +64,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_98",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -87,7 +87,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_value_99",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -110,7 +110,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_label_100",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -118,17 +118,11 @@
             "w": 3576320,
             "h": 518159
           },
-          "text_content": "Revenue vs Target",
+          "text_content": "Revenue Target",
           "lines": [
             {
-              "text": "Revenue vs",
-              "width_emu": 2280233,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "Target",
-              "width_emu": 1200100,
+              "text": "Revenue Target",
+              "width_emu": 3040732,
               "height_emu": 518160,
               "overflows": false
             }
@@ -139,7 +133,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_sub_101",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -159,10 +153,11 @@
           "font": "arial",
           "size_pt": 25.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "stat_value_102",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -185,7 +180,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_label_103",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -193,17 +188,11 @@
             "w": 3576320,
             "h": 518159
           },
-          "text_content": "Customer Retention",
+          "text_content": "Retention Rate",
           "lines": [
             {
-              "text": "Customer",
-              "width_emu": 1871625,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "Retention",
-              "width_emu": 1848433,
+              "text": "Retention Rate",
+              "width_emu": 2880494,
               "height_emu": 518160,
               "overflows": false
             }
@@ -214,7 +203,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_value_104",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -237,7 +226,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_label_105",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -245,17 +234,11 @@
             "w": 3576320,
             "h": 518159
           },
-          "text_content": "Net Promoter Score",
+          "text_content": "Net Promoter",
           "lines": [
             {
               "text": "Net Promoter",
               "width_emu": 2567608,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "Score",
-              "width_emu": 1127993,
               "height_emu": 518160,
               "overflows": false
             }
@@ -266,7 +249,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_sub_106",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -274,11 +257,11 @@
             "w": 3576320,
             "h": 381000
           },
-          "text_content": "+12 points YoY",
+          "text_content": "+12 pts YoY",
           "lines": [
             {
-              "text": "+12 points YoY",
-              "width_emu": 2127467,
+              "text": "+12 pts YoY",
+              "width_emu": 1703772,
               "height_emu": 381000,
               "overflows": false
             }
@@ -286,12 +269,13 @@
           "font": "arial",
           "size_pt": 25.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         }
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_107",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -324,7 +308,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_108",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -347,15 +331,15 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_col_text_109",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
             "w": 5501640,
-            "h": 1645920
+            "h": 1127760
           },
-          "text_content": "Enterprise segment up 42% driven by expanded seat licenses",
+          "text_content": "Enterprise segment up 42%",
           "lines": [
             {
               "text": "Enterprise segment up",
@@ -364,14 +348,8 @@
               "overflows": false
             },
             {
-              "text": "42% driven by expanded",
-              "width_emu": 4753173,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "seat licenses",
-              "width_emu": 2496133,
+              "text": "42%",
+              "width_emu": 864233,
               "height_emu": 518160,
               "overflows": false
             }
@@ -382,25 +360,25 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_col_text_110",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3282696,
+            "y": 2901696,
             "w": 5501640,
             "h": 1127760
           },
-          "text_content": "APAC region outperformed forecast by 31%",
+          "text_content": "APAC region beat forecast by 31%",
           "lines": [
             {
-              "text": "APAC region outperformed",
-              "width_emu": 5152293,
+              "text": "APAC region beat forecast",
+              "width_emu": 5080397,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "forecast by 31%",
-              "width_emu": 3096183,
+              "text": "by 31%",
+              "width_emu": 1440247,
               "height_emu": 518160,
               "overflows": false
             }
@@ -411,25 +389,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_col_text_111",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4547616,
+            "y": 4303776,
             "w": 5501640,
-            "h": 1645920
+            "h": 1127760
           },
-          "text_content": "New product lines contributed 18% of total revenue",
+          "text_content": "New products: 18% of revenue",
           "lines": [
             {
-              "text": "New product lines",
-              "width_emu": 3432051,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "contributed 18% of total",
-              "width_emu": 4536852,
+              "text": "New products: 18% of",
+              "width_emu": 4224176,
               "height_emu": 518160,
               "overflows": false
             },
@@ -446,31 +418,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_col_text_112",
           "node_type": "text",
           "rect": {
             "x": 6233160,
             "y": 1499616,
             "w": 5501640,
-            "h": 1645920
+            "h": 609600
           },
-          "text_content": "SMB segment steady; churn reduced by operational improvements",
+          "text_content": "SMB steady; churn down",
           "lines": [
             {
-              "text": "SMB segment steady;",
-              "width_emu": 4223965,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "churn reduced by",
-              "width_emu": 3336541,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "operational improvements",
-              "width_emu": 4968230,
+              "text": "SMB steady; churn down",
+              "width_emu": 4800191,
               "height_emu": 518160,
               "overflows": false
             }
@@ -481,25 +441,25 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_col_text_113",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 3282696,
+            "y": 2383536,
             "w": 5501640,
             "h": 1127760
           },
-          "text_content": "Services attach rate improved from 34% to 51%",
+          "text_content": "Services attach: 34% to 51%",
           "lines": [
             {
-              "text": "Services attach rate",
-              "width_emu": 3815990,
+              "text": "Services attach: 34% to",
+              "width_emu": 4536219,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "improved from 34% to 51%",
-              "width_emu": 5207955,
+              "text": "51%",
+              "width_emu": 864233,
               "height_emu": 518160,
               "overflows": false
             }
@@ -510,25 +470,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_col_text_114",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 4547616,
+            "y": 3785616,
             "w": 5501640,
-            "h": 1645920
+            "h": 1127760
           },
-          "text_content": "Partner channel now represents 28% of bookings",
+          "text_content": "Partner channel: 28% of bookings",
           "lines": [
             {
-              "text": "Partner channel now",
-              "width_emu": 3960626,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "represents 28% of",
-              "width_emu": 3504369,
+              "text": "Partner channel: 28% of",
+              "width_emu": 4632784,
               "height_emu": 518160,
               "overflows": false
             },
@@ -547,7 +501,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_115",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -580,7 +534,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_116",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -603,7 +557,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_date_117",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -623,10 +577,11 @@
           "font": "arial",
           "size_pt": 25.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "ev_title_118",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -634,19 +589,13 @@
             "w": 2613660,
             "h": 518159
           },
-          "text_content": "Platform Consolidation",
+          "text_content": "Foundation",
           "lines": [
             {
-              "text": "Platform",
-              "width_emu": 1751447,
+              "text": "Foundation",
+              "width_emu": 2350232,
               "height_emu": 518160,
               "overflows": false
-            },
-            {
-              "text": "Consolidation",
-              "width_emu": 2878386,
-              "height_emu": 518160,
-              "overflows": true
             }
           ],
           "font": "arial",
@@ -655,7 +604,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_desc_119",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -663,17 +612,11 @@
             "w": 2613660,
             "h": 2813305
           },
-          "text_content": "Merge three legacy systems into unified data layer.",
+          "text_content": "Merge legacy systems; unified data layer.",
           "lines": [
             {
               "text": "Merge",
               "width_emu": 1223925,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "three",
-              "width_emu": 984200,
               "height_emu": 518160,
               "overflows": false
             },
@@ -684,20 +627,20 @@
               "overflows": false
             },
             {
-              "text": "systems",
-              "width_emu": 1583407,
+              "text": "systems;",
+              "width_emu": 1703375,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "into unified",
-              "width_emu": 2088579,
+              "text": "unified data",
+              "width_emu": 2232794,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "data layer.",
-              "width_emu": 1992437,
+              "text": "layer.",
+              "width_emu": 1032061,
               "height_emu": 518160,
               "overflows": false
             }
@@ -708,7 +651,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_date_120",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -728,10 +671,11 @@
           "font": "arial",
           "size_pt": 25.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "ev_title_121",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -739,23 +683,11 @@
             "w": 2613660,
             "h": 518159
           },
-          "text_content": "AI Features GA",
+          "text_content": "AI Assist",
           "lines": [
             {
-              "text": "AI",
-              "width_emu": 431800,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "Features",
-              "width_emu": 1799940,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "GA",
-              "width_emu": 647700,
+              "text": "AI Assist",
+              "width_emu": 1831777,
               "height_emu": 518160,
               "overflows": false
             }
@@ -766,7 +698,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_desc_122",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -774,35 +706,29 @@
             "w": 2613660,
             "h": 2813305
           },
-          "text_content": "General availability for all AI-assisted workflows.",
+          "text_content": "AI workflows GA for all customers.",
           "lines": [
             {
-              "text": "General",
-              "width_emu": 1536179,
+              "text": "AI",
+              "width_emu": 407975,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "availability",
-              "width_emu": 1992015,
+              "text": "workflows",
+              "width_emu": 1895450,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "for all AI-",
-              "width_emu": 1703797,
+              "text": "GA for all",
+              "width_emu": 1775904,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "assisted",
-              "width_emu": 1584040,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "workflows.",
-              "width_emu": 2015418,
+              "text": "customers.",
+              "width_emu": 2111561,
               "height_emu": 518160,
               "overflows": false
             }
@@ -813,7 +739,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_date_123",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -833,10 +759,11 @@
           "font": "arial",
           "size_pt": 25.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "ev_title_124",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -844,14 +771,8 @@
             "w": 2613660,
             "h": 518159
           },
-          "text_content": "Enterprise Expansion",
+          "text_content": "Expansion",
           "lines": [
-            {
-              "text": "Enterprise",
-              "width_emu": 2135808,
-              "height_emu": 518160,
-              "overflows": false
-            },
             {
               "text": "Expansion",
               "width_emu": 2183457,
@@ -865,7 +786,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_desc_125",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -873,14 +794,8 @@
             "w": 2613660,
             "h": 2813305
           },
-          "text_content": "Target Fortune 500 segment with dedicated sales motion.",
+          "text_content": "Fortune 500 sales motion launched.",
           "lines": [
-            {
-              "text": "Target",
-              "width_emu": 1200100,
-              "height_emu": 518160,
-              "overflows": false
-            },
             {
               "text": "Fortune",
               "width_emu": 1488108,
@@ -888,38 +803,20 @@
               "overflows": false
             },
             {
-              "text": "500",
-              "width_emu": 720440,
+              "text": "500 sales",
+              "width_emu": 1848433,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "segment",
-              "width_emu": 1656147,
+              "text": "motion",
+              "width_emu": 1296033,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "with",
-              "width_emu": 767879,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "dedicated",
+              "text": "launched.",
               "width_emu": 1872679,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "sales",
-              "width_emu": 1008025,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "motion.",
-              "width_emu": 1416000,
               "height_emu": 518160,
               "overflows": false
             }
@@ -930,7 +827,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_date_126",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -950,10 +847,11 @@
           "font": "arial",
           "size_pt": 25.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "ev_title_127",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -961,17 +859,11 @@
             "w": 2613660,
             "h": 518159
           },
-          "text_content": "Partner Ecosystem",
+          "text_content": "Open Beta",
           "lines": [
             {
-              "text": "Partner",
-              "width_emu": 1511933,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "Ecosystem",
-              "width_emu": 2280233,
+              "text": "Open Beta",
+              "width_emu": 2159422,
               "height_emu": 518160,
               "overflows": false
             }
@@ -982,7 +874,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_desc_128",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -990,20 +882,8 @@
             "w": 2613660,
             "h": 2813305
           },
-          "text_content": "Launch certified ISV program; target 50 partners.",
+          "text_content": "ISV program; target 50 partners.",
           "lines": [
-            {
-              "text": "Launch",
-              "width_emu": 1416633,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "certified",
-              "width_emu": 1511933,
-              "height_emu": 518160,
-              "overflows": false
-            },
             {
               "text": "ISV",
               "width_emu": 695982,
@@ -1037,7 +917,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_129",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -1070,7 +950,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_130",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1093,7 +973,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "card_icon_131",
           "node_type": "icon",
           "rect": {
             "x": 457200,
@@ -1102,10 +982,11 @@
             "h": 457200
           },
           "text_content": "code",
+          "group_id": "card_0",
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "card_title_132",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1113,22 +994,23 @@
             "w": 2613660,
             "h": 518159
           },
-          "text_content": "Engineering",
+          "text_content": "Build",
           "lines": [
             {
-              "text": "Engineering",
-              "width_emu": 2495079,
+              "text": "Build",
+              "width_emu": 1079289,
               "height_emu": 518160,
-              "overflows": true
+              "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "group_id": "card_0"
         },
         {
-          "node_id": "",
+          "node_id": "card_body_133",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1136,52 +1018,35 @@
             "w": 2613660,
             "h": 3011425
           },
-          "text_content": "Platform reliability, developer experience, and AI infrastructure.",
+          "text_content": "Reliability and dev tooling.",
           "lines": [
             {
-              "text": "Platform",
-              "width_emu": 1607654,
+              "text": "Reliability",
+              "width_emu": 1847800,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "reliability,",
-              "width_emu": 1767681,
+              "text": "and dev",
+              "width_emu": 1536601,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "developer",
-              "width_emu": 1896504,
+              "text": "tooling.",
+              "width_emu": 1392386,
               "height_emu": 518160,
               "overflows": false
-            },
-            {
-              "text": "experience,",
-              "width_emu": 2232372,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "and AI",
-              "width_emu": 1224558,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "infrastructure.",
-              "width_emu": 2639715,
-              "height_emu": 518160,
-              "overflows": true
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "card_0"
         },
         {
-          "node_id": "",
+          "node_id": "card_icon_134",
           "node_type": "icon",
           "rect": {
             "x": 3345180,
@@ -1190,10 +1055,11 @@
             "h": 457200
           },
           "text_content": "users",
+          "group_id": "card_1",
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "card_title_135",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -1201,17 +1067,11 @@
             "w": 2613660,
             "h": 518159
           },
-          "text_content": "Go-to-Market",
+          "text_content": "Growth",
           "lines": [
             {
-              "text": "Go-to-",
-              "width_emu": 1294767,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "Market",
-              "width_emu": 1391965,
+              "text": "Growth",
+              "width_emu": 1511089,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1219,10 +1079,11 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "group_id": "card_1"
         },
         {
-          "node_id": "",
+          "node_id": "card_body_136",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -1230,47 +1091,23 @@
             "w": 2613660,
             "h": 3011425
           },
-          "text_content": "Expanded enterprise sales team and channel partner program.",
+          "text_content": "Enterprise sales and channels.",
           "lines": [
             {
-              "text": "Expanded",
-              "width_emu": 1944787,
+              "text": "Enterprise",
+              "width_emu": 1967979,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "enterprise",
-              "width_emu": 1920118,
+              "text": "sales and",
+              "width_emu": 1848433,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "sales team",
-              "width_emu": 2087947,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "and",
-              "width_emu": 720440,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "channel",
-              "width_emu": 1512565,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "partner",
-              "width_emu": 1368140,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "program.",
-              "width_emu": 1727833,
+              "text": "channels.",
+              "width_emu": 1848433,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1278,10 +1115,11 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "card_1"
         },
         {
-          "node_id": "",
+          "node_id": "card_icon_137",
           "node_type": "icon",
           "rect": {
             "x": 6233160,
@@ -1290,10 +1128,11 @@
             "h": 457200
           },
           "text_content": "globe",
+          "group_id": "card_2",
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "card_title_138",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1301,22 +1140,23 @@
             "w": 2613660,
             "h": 518159
           },
-          "text_content": "International",
+          "text_content": "Global",
           "lines": [
             {
-              "text": "International",
-              "width_emu": 2591011,
+              "text": "Global",
+              "width_emu": 1343471,
               "height_emu": 518160,
-              "overflows": true
+              "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "group_id": "card_2"
         },
         {
-          "node_id": "",
+          "node_id": "card_body_139",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1324,7 +1164,7 @@
             "w": 2613660,
             "h": 3011425
           },
-          "text_content": "APAC and EMEA expansion with local data residency.",
+          "text_content": "APAC and EMEA expansion.",
           "lines": [
             {
               "text": "APAC and",
@@ -1339,26 +1179,8 @@
               "overflows": false
             },
             {
-              "text": "expansion",
-              "width_emu": 1968612,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "with local",
-              "width_emu": 1775904,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "data",
-              "width_emu": 840408,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "residency.",
-              "width_emu": 1935931,
+              "text": "expansion.",
+              "width_emu": 2088579,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1366,10 +1188,11 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "card_2"
         },
         {
-          "node_id": "",
+          "node_id": "card_icon_140",
           "node_type": "icon",
           "rect": {
             "x": 9121140,
@@ -1378,10 +1201,11 @@
             "h": 457200
           },
           "text_content": "chart-up",
+          "group_id": "card_3",
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "card_title_141",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1389,14 +1213,8 @@
             "w": 2613660,
             "h": 518159
           },
-          "text_content": "Data & Analytics",
+          "text_content": "Analytics",
           "lines": [
-            {
-              "text": "Data &",
-              "width_emu": 1367718,
-              "height_emu": 518160,
-              "overflows": false
-            },
             {
               "text": "Analytics",
               "width_emu": 1919908,
@@ -1407,10 +1225,11 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "group_id": "card_3"
         },
         {
-          "node_id": "",
+          "node_id": "card_body_142",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1418,7 +1237,7 @@
             "w": 2613660,
             "h": 3011425
           },
-          "text_content": "Customer intelligence and product usage insights platform.",
+          "text_content": "Customer and usage insights.",
           "lines": [
             {
               "text": "Customer",
@@ -1427,32 +1246,14 @@
               "overflows": false
             },
             {
-              "text": "intelligence",
-              "width_emu": 2160476,
+              "text": "and usage",
+              "width_emu": 2016894,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "and product",
-              "width_emu": 2280655,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "usage",
-              "width_emu": 1176486,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "insights",
-              "width_emu": 1464072,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "platform.",
-              "width_emu": 1679761,
+              "text": "insights.",
+              "width_emu": 1584040,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1460,12 +1261,13 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "card_3"
         }
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_143",
           "node_type": "text",
           "rect": {
             "x": 10363200,

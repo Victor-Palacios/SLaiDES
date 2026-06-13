@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_27",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -20,18 +20,18 @@
           "lines": [
             {
               "text": "2025 Impact Report",
-              "width_emu": 8569151,
+              "width_emu": 7029896,
               "height_emu": 914400,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 60.0,
           "bold": true,
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "subtitle_28",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -43,12 +43,12 @@
           "lines": [
             {
               "text": "Numbers that define our year",
-              "width_emu": 6528234,
+              "width_emu": 5592316,
               "height_emu": 518160,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false
@@ -56,7 +56,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_29",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -68,12 +68,12 @@
           "lines": [
             {
               "text": "1",
-              "width_emu": 129282,
+              "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 16,
           "bold": false,
           "italic": false,
@@ -89,7 +89,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_30",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -101,344 +101,206 @@
           "lines": [
             {
               "text": "By the Numbers",
-              "width_emu": 4839146,
+              "width_emu": 4090355,
               "height_emu": 640080,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 42.0,
           "bold": true,
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_value_31",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2449068,
-            "w": 2613660,
+            "w": 3576320,
             "h": 914400
           },
-          "text_content": "$4.2B",
+          "text_content": "127%",
           "lines": [
             {
-              "text": "$4.2B",
-              "width_emu": 2499940,
+              "text": "127%",
+              "width_emu": 1948904,
               "height_emu": 914400,
-              "overflows": true
+              "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 60.0,
           "bold": true,
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_label_32",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3637788,
-            "w": 2613660,
+            "w": 3576320,
             "h": 518159
           },
-          "text_content": "Revenue",
+          "text_content": "Revenue Target",
           "lines": [
             {
-              "text": "Revenue",
-              "width_emu": 1891866,
+              "text": "Revenue Target",
+              "width_emu": 3040732,
               "height_emu": 518160,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_sub_33",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 4430267,
-            "w": 2613660,
+            "w": 3576320,
             "h": 381000
           },
-          "text_content": "+18% year over year",
+          "text_content": "$3.8B total",
           "lines": [
             {
-              "text": "+18% year",
-              "width_emu": 1780977,
-              "height_emu": 381000,
-              "overflows": false
-            },
-            {
-              "text": "over year",
-              "width_emu": 1519442,
+              "text": "$3.8B total",
+              "width_emu": 1518047,
               "height_emu": 381000,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 25.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "stat_value_34",
           "node_type": "text",
           "rect": {
-            "x": 3345180,
-            "y": 2449068,
-            "w": 2613660,
+            "x": 4307840,
+            "y": 2639568,
+            "w": 3576320,
             "h": 914400
           },
-          "text_content": "98.7%",
+          "text_content": "94%",
           "lines": [
             {
-              "text": "98.7%",
-              "width_emu": 2579936,
+              "text": "94%",
+              "width_emu": 1525116,
               "height_emu": 914400,
-              "overflows": true
+              "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 60.0,
           "bold": true,
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_label_35",
           "node_type": "text",
           "rect": {
-            "x": 3345180,
-            "y": 3637788,
-            "w": 2613660,
+            "x": 4307840,
+            "y": 3828288,
+            "w": 3576320,
             "h": 518159
           },
-          "text_content": "Uptime SLA",
+          "text_content": "Retention Rate",
           "lines": [
             {
-              "text": "Uptime",
-              "width_emu": 1616931,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "SLA",
-              "width_emu": 894383,
+              "text": "Retention Rate",
+              "width_emu": 2880494,
               "height_emu": 518160,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_value_36",
           "node_type": "text",
           "rect": {
-            "x": 3345180,
-            "y": 4430267,
-            "w": 2613660,
-            "h": 381000
-          },
-          "text_content": "Across all enterprise accounts",
-          "lines": [
-            {
-              "text": "Across all",
-              "width_emu": 1569207,
-              "height_emu": 381000,
-              "overflows": false
-            },
-            {
-              "text": "enterprise",
-              "width_emu": 1667030,
-              "height_emu": 381000,
-              "overflows": false
-            },
-            {
-              "text": "accounts",
-              "width_emu": 1435571,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "cambria",
-          "size_pt": 25.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
+            "x": 8158480,
             "y": 2449068,
-            "w": 2613660,
+            "w": 3576320,
             "h": 914400
           },
-          "text_content": "142",
+          "text_content": "48 NPS",
           "lines": [
             {
-              "text": "142",
-              "width_emu": 1590601,
+              "text": "48 NPS",
+              "width_emu": 2626072,
               "height_emu": 914400,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 60.0,
           "bold": true,
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_label_37",
           "node_type": "text",
           "rect": {
-            "x": 6233160,
+            "x": 8158480,
             "y": 3637788,
-            "w": 2613660,
+            "w": 3576320,
             "h": 518159
           },
-          "text_content": "Countries Served",
+          "text_content": "Net Promoter",
           "lines": [
             {
-              "text": "Countries",
-              "width_emu": 2141711,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "Served",
-              "width_emu": 1533649,
+              "text": "Net Promoter",
+              "width_emu": 2567608,
               "height_emu": 518160,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_sub_38",
           "node_type": "text",
           "rect": {
-            "x": 6233160,
+            "x": 8158480,
             "y": 4430267,
-            "w": 2613660,
+            "w": 3576320,
             "h": 381000
           },
-          "text_content": "Up from 98 in 2024",
+          "text_content": "+12 pts YoY",
           "lines": [
             {
-              "text": "Up from 98 in",
-              "width_emu": 2245134,
-              "height_emu": 381000,
-              "overflows": false
-            },
-            {
-              "text": "2024",
-              "width_emu": 808013,
+              "text": "+12 pts YoY",
+              "width_emu": 1703772,
               "height_emu": 381000,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 25.0,
           "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 2449068,
-            "w": 2613660,
-            "h": 914400
-          },
-          "text_content": "12,400",
-          "lines": [
-            {
-              "text": "12,400",
-              "width_emu": 2916287,
-              "height_emu": 914400,
-              "overflows": true
-            }
-          ],
-          "font": "cambria",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false
-        },
-        {
-          "node_id": "",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 3637788,
-            "w": 2613660,
-            "h": 518159
-          },
-          "text_content": "Employees Worldwide",
-          "lines": [
-            {
-              "text": "Employees ",
-              "width_emu": 2513000,
-              "height_emu": 518160,
-              "overflows": true
-            },
-            {
-              "text": "Worldwide",
-              "width_emu": 2335051,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "cambria",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 4430267,
-            "w": 2613660,
-            "h": 381000
-          },
-          "text_content": "3,200 hired this year",
-          "lines": [
-            {
-              "text": "3,200 hired",
-              "width_emu": 1858801,
-              "height_emu": 381000,
-              "overflows": false
-            },
-            {
-              "text": "this year",
-              "width_emu": 1405806,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "cambria",
-          "size_pt": 25.0,
-          "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         }
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_39",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -450,12 +312,12 @@
           "lines": [
             {
               "text": "2",
-              "width_emu": 129282,
+              "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false
             }
           ],
-          "font": "cambria",
+          "font": "arial",
           "size_pt": 16,
           "bold": false,
           "italic": false,

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_71",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -31,7 +31,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "subtitle_72",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -56,7 +56,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_73",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -89,7 +89,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_74",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -112,7 +112,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "image_75",
           "node_type": "image",
           "rect": {
             "x": 457200,
@@ -124,43 +124,25 @@
           "slot_type": "image"
         },
         {
-          "node_id": "",
+          "node_id": "content_text_76",
           "node_type": "text",
           "rect": {
             "x": 6233160,
             "y": 1499616,
             "w": 5501640,
-            "h": 2682240
+            "h": 1127760
           },
-          "text_content": "Every feature we ship starts with a real customer problem. Our field engineering team spends 30% of their time embedded with customers.",
+          "text_content": "Built with customers, not just for them.",
           "lines": [
             {
-              "text": "Every feature we ship starts",
-              "width_emu": 4795974,
+              "text": "Built with customers, not just",
+              "width_emu": 5097686,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "with a real customer problem.",
-              "width_emu": 5167895,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "Our field engineering team",
-              "width_emu": 4663988,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "spends 30% of their time",
-              "width_emu": 4317157,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "embedded with customers.",
-              "width_emu": 4616760,
+              "text": "for them.",
+              "width_emu": 1582775,
               "height_emu": 518160,
               "overflows": false
             }
@@ -171,37 +153,25 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "content_text_77",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 4319016,
+            "y": 4632960,
             "w": 5501640,
-            "h": 2164080
+            "h": 1127760
           },
-          "text_content": "This hands-on approach has reduced implementation time by 60% and cut support tickets by half.",
+          "text_content": "60% faster rollout; 50% fewer tickets.",
           "lines": [
             {
-              "text": "This hands-on approach has",
-              "width_emu": 4832449,
+              "text": "60% faster rollout; 50%",
+              "width_emu": 4137099,
               "height_emu": 518160,
               "overflows": false
             },
             {
-              "text": "reduced implementation time",
-              "width_emu": 5059945,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "by 60% and cut support",
-              "width_emu": 4101467,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "tickets by half.",
-              "width_emu": 2554114,
+              "text": "fewer tickets.",
+              "width_emu": 2325774,
               "height_emu": 518160,
               "overflows": false
             }
@@ -214,7 +184,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_78",
           "node_type": "text",
           "rect": {
             "x": 10363200,

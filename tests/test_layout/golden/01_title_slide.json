@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_1",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -31,7 +31,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "subtitle_2",
           "node_type": "text",
           "rect": {
             "x": 914400,

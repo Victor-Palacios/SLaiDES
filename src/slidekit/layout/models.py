@@ -55,6 +55,8 @@ class ResolvedNode:
     italic: bool = False
     text_content: Optional[str] = None
     is_chrome: bool = False
+    is_caption: bool = False
+    group_id: Optional[str] = None
     component: Optional[str] = None
     slot_type: Optional[str] = None
 
@@ -83,6 +85,10 @@ class ResolvedNode:
             d["italic"] = self.italic
         if self.is_chrome:
             d["is_chrome"] = True
+        if self.is_caption:
+            d["is_caption"] = True
+        if self.group_id:
+            d["group_id"] = self.group_id
         if self.component:
             d["component"] = self.component
         if self.slot_type:

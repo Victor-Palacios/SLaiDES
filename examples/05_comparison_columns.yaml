@@ -19,20 +19,12 @@ slides:
     left_title: "Legacy Platform"
     right_title: "Modern Stack"
     left_items:
-      - text: "Average deploy time: 4 hours"
-        icon: clock
-      - text: "Manual scaling; capacity planned quarterly"
-        icon: chart-down
-      - text: "Monolithic architecture; single point of failure"
-        icon: warning
-      - text: "On-premise only; high capex"
-        icon: server
+      - text: "Deploy time: 4 hours"
+      - text: "Manual scaling"
+      - text: "Single failure point"
+      - text: "On-premise; high cost"
     right_items:
-      - text: "Average deploy time: 8 minutes"
-        icon: rocket
-      - text: "Auto-scaling; responds in seconds"
-        icon: chart-up
-      - text: "Microservices; isolated fault domains"
-        icon: shield
-      - text: "Cloud-native; pay-as-you-go"
-        icon: cloud
+      - text: "Deploy time: 8 min"
+      - text: "Auto-scales fast"
+      - text: "Isolated fault zones"
+      - text: "Cloud-native; low cost"

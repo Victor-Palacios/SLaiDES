@@ -6,7 +6,7 @@ theme:
     accent: "#00BCD4"
     text: "#212121"
     muted: "#9E9E9E"
-  font: cambria
+  font: arial
 page_numbers:
   enabled: true
 slides:
@@ -17,15 +17,11 @@ slides:
   - component: stat-callout
     title: "By the Numbers"
     stats:
-      - value: "$4.2B"
-        label: "Revenue"
-        subtext: "+18% year over year"
-      - value: "98.7%"
-        label: "Uptime SLA"
-        subtext: "Across all enterprise accounts"
-      - value: "142"
-        label: "Countries Served"
-        subtext: "Up from 98 in 2024"
-      - value: "12,400"
-        label: "Employees Worldwide"
-        subtext: "3,200 hired this year"
+      - value: "127%"
+        label: "Revenue Target"
+        subtext: "$3.8B total"
+      - value: "94%"
+        label: "Retention Rate"
+      - value: "48 NPS"
+        label: "Net Promoter"
+        subtext: "+12 pts YoY"

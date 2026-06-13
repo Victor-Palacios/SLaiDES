@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_40",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -31,7 +31,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "subtitle_41",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -56,7 +56,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_42",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -89,7 +89,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_43",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -112,7 +112,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_head_44",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -135,7 +135,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_head_45",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -158,7 +158,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_item_46",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -166,17 +166,11 @@
             "w": 5501640,
             "h": 566928
           },
-          "text_content": "Average deploy time: 4 hours",
+          "text_content": "Deploy time: 4 hours",
           "lines": [
             {
-              "text": "Average deploy time: 4",
-              "width_emu": 4408661,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "hours",
-              "width_emu": 1080133,
+              "text": "Deploy time: 4 hours",
+              "width_emu": 3959994,
               "height_emu": 518160,
               "overflows": false
             }
@@ -187,7 +181,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_item_47",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -195,17 +189,11 @@
             "w": 5501640,
             "h": 566928
           },
-          "text_content": "Average deploy time: 8 minutes",
+          "text_content": "Deploy time: 8 min",
           "lines": [
             {
-              "text": "Average deploy time: 8",
-              "width_emu": 4408661,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "minutes",
-              "width_emu": 1511933,
+              "text": "Deploy time: 8 min",
+              "width_emu": 3575633,
               "height_emu": 518160,
               "overflows": false
             }
@@ -216,7 +204,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_item_48",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -224,17 +212,11 @@
             "w": 5501640,
             "h": 566928
           },
-          "text_content": "Manual scaling; capacity planned quarterly",
+          "text_content": "Manual scaling",
           "lines": [
             {
-              "text": "Manual scaling; capacity",
-              "width_emu": 4704259,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "planned quarterly",
-              "width_emu": 3336751,
+              "text": "Manual scaling",
+              "width_emu": 2880283,
               "height_emu": 518160,
               "overflows": false
             }
@@ -245,7 +227,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_item_49",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -253,17 +235,11 @@
             "w": 5501640,
             "h": 566928
           },
-          "text_content": "Auto-scaling; responds in seconds",
+          "text_content": "Auto-scales fast",
           "lines": [
             {
-              "text": "Auto-scaling; responds in",
-              "width_emu": 4848473,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "seconds",
-              "width_emu": 1608286,
+              "text": "Auto-scales fast",
+              "width_emu": 3071937,
               "height_emu": 518160,
               "overflows": false
             }
@@ -274,7 +250,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_item_50",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -282,17 +258,11 @@
             "w": 5501640,
             "h": 566928
           },
-          "text_content": "Monolithic architecture; single point of failure",
+          "text_content": "Single failure point",
           "lines": [
             {
-              "text": "Monolithic architecture;",
-              "width_emu": 4439865,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "single point of failure",
-              "width_emu": 3960626,
+              "text": "Single failure point",
+              "width_emu": 3552651,
               "height_emu": 518160,
               "overflows": false
             }
@@ -303,7 +273,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_item_51",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -311,17 +281,11 @@
             "w": 5501640,
             "h": 566928
           },
-          "text_content": "Microservices; isolated fault domains",
+          "text_content": "Isolated fault zones",
           "lines": [
             {
-              "text": "Microservices; isolated",
-              "width_emu": 4367337,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "fault domains",
-              "width_emu": 2568240,
+              "text": "Isolated fault zones",
+              "width_emu": 3720691,
               "height_emu": 518160,
               "overflows": false
             }
@@ -332,7 +296,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_item_52",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -340,46 +304,34 @@
             "w": 5501640,
             "h": 566928
           },
-          "text_content": "On-premise only; high capex",
+          "text_content": "On-premise; high cost",
           "lines": [
             {
-              "text": "On-premise only; high",
+              "text": "On-premise; high cost",
+              "width_emu": 4223755,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "right_item_53",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4919471,
+            "w": 5501640,
+            "h": 566928
+          },
+          "text_content": "Cloud-native; low cost",
+          "lines": [
+            {
+              "text": "Cloud-native; low cost",
               "width_emu": 4223965,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "capex",
-              "width_emu": 1152240,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 4919471,
-            "w": 5501640,
-            "h": 566928
-          },
-          "text_content": "Cloud-native; pay-as-you-go",
-          "lines": [
-            {
-              "text": "Cloud-native; pay-as-you-",
-              "width_emu": 4943983,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "go",
-              "width_emu": 480293,
               "height_emu": 518160,
               "overflows": false
             }
@@ -392,7 +344,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_54",
           "node_type": "text",
           "rect": {
             "x": 10363200,

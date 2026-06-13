@@ -6,7 +6,7 @@ theme:
     accent: "#E65100"
     text: "#1A1A2E"
     muted: "#8A8A9A"
-  font: calibri
+  font: arial
 page_numbers:
   enabled: true
 slides:
@@ -19,13 +19,13 @@ slides:
     cards:
       - icon: analytics
         title: "Insights"
-        body: "Real-time dashboards and predictive analytics powered by your live data."
+        body: "Live data and AI analytics."
       - icon: shield
         title: "Security"
-        body: "Zero-trust architecture with SOC 2 Type II and ISO 27001 certifications."
+        body: "Zero-trust, SOC 2 ready."
       - icon: bolt
-        title: "Performance"
-        body: "Sub-100ms p99 latency globally with automatic failover."
+        title: "Speed"
+        body: "Sub-100ms p99 latency."
       - icon: puzzle
-        title: "Integrations"
-        body: "300+ native connectors; open API for custom workflows."
+        title: "APIs"
+        body: "300+ open connectors."

@@ -26,59 +26,59 @@ slides:
     title: "2025 Results at a Glance"
     stats:
       - value: "127%"
-        label: "Revenue vs Target"
+        label: "Revenue Target"
         subtext: "$3.8B total"
       - value: "94%"
-        label: "Customer Retention"
+        label: "Retention Rate"
       - value: "48 NPS"
-        label: "Net Promoter Score"
-        subtext: "+12 points YoY"
+        label: "Net Promoter"
+        subtext: "+12 pts YoY"
 
   - component: two-column
     title: "What Drove Growth"
     left:
       - type: text
-        content: "Enterprise segment up 42% driven by expanded seat licenses"
+        content: "Enterprise segment up 42%"
       - type: text
-        content: "APAC region outperformed forecast by 31%"
+        content: "APAC region beat forecast by 31%"
       - type: text
-        content: "New product lines contributed 18% of total revenue"
+        content: "New products: 18% of revenue"
     right:
       - type: text
-        content: "SMB segment steady; churn reduced by operational improvements"
+        content: "SMB steady; churn down"
       - type: text
-        content: "Services attach rate improved from 34% to 51%"
+        content: "Services attach: 34% to 51%"
       - type: text
-        content: "Partner channel now represents 28% of bookings"
+        content: "Partner channel: 28% of bookings"
 
   - component: timeline
     title: "Strategic Priorities 2026"
     events:
       - date: "Q1"
-        title: "Platform Consolidation"
-        description: "Merge three legacy systems into unified data layer."
+        title: "Foundation"
+        description: "Merge legacy systems; unified data layer."
       - date: "Q2"
-        title: "AI Features GA"
-        description: "General availability for all AI-assisted workflows."
+        title: "AI Assist"
+        description: "AI workflows GA for all customers."
       - date: "Q3"
-        title: "Enterprise Expansion"
-        description: "Target Fortune 500 segment with dedicated sales motion."
+        title: "Expansion"
+        description: "Fortune 500 sales motion launched."
       - date: "Q4"
-        title: "Partner Ecosystem"
-        description: "Launch certified ISV program; target 50 partners."
+        title: "Open Beta"
+        description: "ISV program; target 50 partners."
 
   - component: card-grid
     title: "Investment Areas"
     cards:
       - icon: code
-        title: "Engineering"
-        body: "Platform reliability, developer experience, and AI infrastructure."
+        title: "Build"
+        body: "Reliability and dev tooling."
       - icon: users
-        title: "Go-to-Market"
-        body: "Expanded enterprise sales team and channel partner program."
+        title: "Growth"
+        body: "Enterprise sales and channels."
       - icon: globe
-        title: "International"
-        body: "APAC and EMEA expansion with local data residency."
+        title: "Global"
+        body: "APAC and EMEA expansion."
       - icon: chart-up
-        title: "Data & Analytics"
-        body: "Customer intelligence and product usage insights platform."
+        title: "Analytics"
+        body: "Customer and usage insights."

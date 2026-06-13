@@ -297,7 +297,8 @@ def _layout_stat_callout(slide: StatCalloutSlide, cx, cy, cw, ch, font, ts, pale
         if stat.subtext:
             nodes.append(_make_text_node(_nid("stat_sub"), stat.subtext, font, ts.caption,
                                          bold=False, italic=False,
-                                         rect=Rect(sx, inner_y + value_h + label_h + gap * 2, stat_w, sub_h)))
+                                         rect=Rect(sx, inner_y + value_h + label_h + gap * 2, stat_w, sub_h),
+                                         is_caption=True))
 
     return nodes
 
@@ -375,7 +376,8 @@ def _layout_timeline(slide: TimelineSlide, cx, cy, cw, ch, font, ts, palette) ->
 
         nodes.append(_make_text_node(_nid("ev_date"), event.date, font, ts.caption,
                                      bold=False, italic=False,
-                                     rect=Rect(ex, ey, event_w, date_h)))
+                                     rect=Rect(ex, ey, event_w, date_h),
+                                     is_caption=True))
         ey += date_h + gap
         nodes.append(_make_text_node(_nid("ev_title"), event.title, font, ts.body,
                                      bold=True, italic=False,
@@ -445,23 +447,27 @@ def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -
         col_i = i % cols
         card_x = cx + col_i * (card_w + gap)
         card_y = y + row_i * (card_h + gap)
+        gid = f"card_{i}"
 
         inner_y = card_y
         if card.icon:
             icon_rect = Rect(card_x, inner_y, icon_size, icon_size)
             nodes.append(ResolvedNode(_nid("card_icon"), "icon", icon_rect,
-                                      slot_type="icon", text_content=card.icon))
+                                      slot_type="icon", text_content=card.icon,
+                                      group_id=gid))
             inner_y += icon_size + inner_gap
 
         title_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
         body_h = card_h - (inner_y - card_y) - title_h - inner_gap
         nodes.append(_make_text_node(_nid("card_title"), card.title, font, ts.body,
                                      bold=True, italic=False,
-                                     rect=Rect(card_x, inner_y, card_w, title_h)))
+                                     rect=Rect(card_x, inner_y, card_w, title_h),
+                                     group_id=gid))
         nodes.append(_make_text_node(_nid("card_body"), card.body, font, ts.body,
                                      bold=False, italic=False,
                                      rect=Rect(card_x, inner_y + title_h + inner_gap,
-                                               card_w, max(body_h, title_h))))
+                                               card_w, max(body_h, title_h)),
+                                     group_id=gid))
 
     return nodes
 
@@ -470,36 +476,49 @@ def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -
 
 
 def _layout_content_list(slots, prefix: str, x, y, w, h, font, ts) -> list[ResolvedNode]:
-    """Lay out a flat list of content slots top-to-bottom within a rect."""
+    """Lay out a flat list of content slots top-to-bottom within a rect.
+
+    Uses GAP_MIN_EMU between items so the layout is consistent with the linter's
+    E_GAP check. Heights are proportionally scaled to fit within the available h.
+    """
     nodes: list[ResolvedNode] = []
-    gap = int(0.15 * EMU_PER_INCH)
+    gap = GAP_MIN_EMU
     cur_y = y
 
-    # Count spacers (flexible) vs fixed-height items.
+    # Pass 1 — compute intrinsic heights.
     fixed_heights: list[int] = []
     spacer_count = 0
     for slot in slots:
         if isinstance(slot, TextSlot):
             sz = slot.size_pt if slot.size_pt else ts.body
-            # Estimate lines by wrapping.
             lines = wrap(slot.content, font, sz, w, bold=slot.bold, italic=slot.italic)
             slot_h = total_text_height_emu(lines)
             if slot.max_lines:
-                max_h = total_text_height_emu(lines[:slot.max_lines])
-                slot_h = min(slot_h, max_h)
-            fixed_heights.append(slot_h)
+                slot_h = min(slot_h, total_text_height_emu(lines[:slot.max_lines]))
+            fixed_heights.append(max(1, slot_h))
         elif isinstance(slot, ImageSlot):
-            fixed_heights.append(int(h * 0.6))
+            fixed_heights.append(max(1, int(h * 0.6)))
         elif isinstance(slot, ChartSlot):
-            fixed_heights.append(int(h * 0.7))
+            fixed_heights.append(max(1, int(h * 0.7)))
         elif isinstance(slot, IconSlot):
-            fixed_heights.append(int(0.5 * EMU_PER_INCH))
+            fixed_heights.append(max(1, int(0.5 * EMU_PER_INCH)))
         elif isinstance(slot, SpacerSlot):
             spacer_count += 1
             fixed_heights.append(0)
 
-    total_fixed = sum(fixed_heights) + gap * (len(slots) - 1)
-    spacer_h = max(0, (h - total_fixed) // spacer_count) if spacer_count else 0
+    n_fixed = sum(1 for fh in fixed_heights if fh > 0)
+    n_gaps = max(0, len(slots) - 1)
+    total_fixed = sum(fixed_heights)
+    total_with_gaps = total_fixed + gap * n_gaps
+
+    # Pass 1b — if total exceeds available height, scale heights proportionally.
+    if total_with_gaps > h and total_fixed > 0:
+        available_for_content = max(1, h - gap * n_gaps)
+        scale = available_for_content / total_fixed
+        fixed_heights = [max(1, int(fh * scale)) for fh in fixed_heights]
+        total_fixed = sum(fixed_heights)
+
+    spacer_h = max(0, (h - total_fixed - gap * n_gaps) // spacer_count) if spacer_count else 0
 
     for slot, fh in zip(slots, fixed_heights):
         if isinstance(slot, TextSlot):
@@ -545,6 +564,8 @@ def _make_text_node(
     rect: Rect,
     lines: Optional[list] = None,
     is_chrome: bool = False,
+    is_caption: bool = False,
+    group_id: Optional[str] = None,
 ) -> ResolvedNode:
     if lines is None:
         lines = wrap(text, font, size_pt, rect.w, bold=bold, italic=italic)
@@ -559,4 +580,6 @@ def _make_text_node(
         italic=italic,
         text_content=text,
         is_chrome=is_chrome,
+        is_caption=is_caption,
+        group_id=group_id,
     )

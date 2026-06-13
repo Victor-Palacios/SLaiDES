@@ -18,18 +18,17 @@ slides:
     title: "Strengths vs Weaknesses"
     left:
       - type: text
-        content: "Strong brand recognition across 45 markets"
-        bold: false
+        content: "Strong brand in 45 markets"
       - type: text
-        content: "Proven distribution network with 2,400 partners"
+        content: "2,400 distribution partners"
       - type: text
-        content: "Industry-leading customer satisfaction score of 92%"
+        content: "92% customer satisfaction"
     right:
       - type: text
-        content: "Limited digital presence in emerging markets"
+        content: "Limited digital presence"
       - type: text
-        content: "Higher cost structure than key competitors"
+        content: "Higher cost structure"
       - type: text
-        content: "Product refresh cycle slower than market demand"
+        content: "Slower product refresh"
     left_weight: 1
     right_weight: 1

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_14",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -33,7 +33,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_15",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -66,7 +66,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_16",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -89,11 +89,11 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "icon_17",
           "node_type": "icon",
           "rect": {
             "x": 457200,
-            "y": 1655064,
+            "y": 1844040,
             "w": 548640,
             "h": 548640
           },
@@ -101,7 +101,7 @@
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "heading_18",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -124,31 +124,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "body_19",
           "node_type": "text",
           "rect": {
             "x": 1188720,
             "y": 2292095,
             "w": 10546080,
-            "h": 67057
+            "h": 445009
           },
-          "text_content": "We set the highest standards for every deliverable and hold ourselves accountable to our clients and each other.",
+          "text_content": "High standards in every deliverable we ship.",
           "lines": [
             {
-              "text": "We set the highest standards for every deliverable",
-              "width_emu": 9592791,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "and hold ourselves accountable to our clients and",
-              "width_emu": 9481889,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "each other.",
-              "width_emu": 2136651,
+              "text": "High standards in every deliverable we ship.",
+              "width_emu": 8448563,
               "height_emu": 518160,
               "overflows": false
             }
@@ -159,11 +147,11 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "icon_20",
           "node_type": "icon",
           "rect": {
             "x": 457200,
-            "y": 2788920,
+            "y": 3355848,
             "w": 548640,
             "h": 548640
           },
@@ -171,11 +159,11 @@
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "heading_21",
           "node_type": "text",
           "rect": {
             "x": 1188720,
-            "y": 2633472,
+            "y": 3011424,
             "w": 10546080,
             "h": 518159
           },
@@ -194,25 +182,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "body_22",
           "node_type": "text",
           "rect": {
             "x": 1188720,
-            "y": 3425951,
+            "y": 3803903,
             "w": 10546080,
-            "h": 67057
+            "h": 445009
           },
-          "text_content": "Honest, transparent communication is the foundation of every relationship we build.",
+          "text_content": "Transparent and honest in all we do.",
           "lines": [
             {
-              "text": "Honest, transparent communication is the foundation",
-              "width_emu": 10105132,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "of every relationship we build.",
-              "width_emu": 5688459,
+              "text": "Transparent and honest in all we do.",
+              "width_emu": 6969100,
               "height_emu": 518160,
               "overflows": false
             }
@@ -223,11 +205,11 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "icon_23",
           "node_type": "icon",
           "rect": {
             "x": 457200,
-            "y": 3922776,
+            "y": 4867656,
             "w": 548640,
             "h": 548640
           },
@@ -235,11 +217,11 @@
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "heading_24",
           "node_type": "text",
           "rect": {
             "x": 1188720,
-            "y": 3767328,
+            "y": 4523232,
             "w": 10546080,
             "h": 518159
           },
@@ -258,89 +240,19 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "body_25",
           "node_type": "text",
           "rect": {
             "x": 1188720,
-            "y": 4559807,
+            "y": 5315711,
             "w": 10546080,
-            "h": 67057
+            "h": 445009
           },
-          "text_content": "We challenge conventional thinking and invest in the ideas that will shape tomorrow.",
+          "text_content": "Investing in ideas that shape tomorrow.",
           "lines": [
             {
-              "text": "We challenge conventional thinking and invest in the",
-              "width_emu": 10026067,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "ideas that will shape tomorrow.",
-              "width_emu": 5904148,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "",
-          "node_type": "icon",
-          "rect": {
-            "x": 457200,
-            "y": 5056632,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "globe",
-          "slot_type": "icon"
-        },
-        {
-          "node_id": "",
-          "node_type": "text",
-          "rect": {
-            "x": 1188720,
-            "y": 4901184,
-            "w": 10546080,
-            "h": 518159
-          },
-          "text_content": "Inclusion",
-          "lines": [
-            {
-              "text": "Inclusion",
-              "width_emu": 1895239,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false
-        },
-        {
-          "node_id": "",
-          "node_type": "text",
-          "rect": {
-            "x": 1188720,
-            "y": 5693663,
-            "w": 10546080,
-            "h": 67057
-          },
-          "text_content": "Diverse perspectives make us stronger; every voice has a seat at the table.",
-          "lines": [
-            {
-              "text": "Diverse perspectives make us stronger; every voice",
-              "width_emu": 9887334,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "has a seat at the table.",
-              "width_emu": 4369023,
+              "text": "Investing in ideas that shape tomorrow.",
+              "width_emu": 7488820,
               "height_emu": 518160,
               "overflows": false
             }
@@ -353,7 +265,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_26",
           "node_type": "text",
           "rect": {
             "x": 10363200,

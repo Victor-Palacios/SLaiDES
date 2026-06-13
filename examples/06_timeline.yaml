@@ -11,23 +11,20 @@ page_numbers:
   enabled: true
 slides:
   - component: title-slide
-    title: "Product Roadmap 2025–2026"
+    title: "Product Roadmap 2025"
 
   - component: timeline
     title: "Key Milestones"
     events:
-      - date: "Q1 2025"
-        title: "Platform Foundation"
-        description: "Core infrastructure migration completed; all services on Kubernetes."
-      - date: "Q2 2025"
-        title: "API v3 Launch"
-        description: "Unified REST/GraphQL gateway with 99.99% SLA commitment."
-      - date: "Q3 2025"
-        title: "AI Assist Beta"
-        description: "Generative AI features released to 500 design-partner customers."
-      - date: "Q4 2025"
-        title: "Global Expansion"
-        description: "APAC data residency regions live; EU sovereign cloud certified."
-      - date: "Q1 2026"
-        title: "GA Release"
-        description: "Full feature parity across all tiers; public launch."
+      - date: "Q1"
+        title: "Foundation"
+        description: "Cloud migration and core setup complete."
+      - date: "Q2"
+        title: "API Launch"
+        description: "REST API live with 99.99% SLA."
+      - date: "Q3"
+        title: "AI Beta"
+        description: "AI features shipped to 500 partners."
+      - date: "Q4"
+        title: "Scale Out"
+        description: "APAC regions live; global coverage."

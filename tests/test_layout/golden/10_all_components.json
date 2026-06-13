@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_144",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -31,7 +31,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "subtitle_145",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -56,7 +56,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_146",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -89,7 +89,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_147",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -112,31 +112,25 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_col_text_148",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1463040,
             "w": 6601968,
-            "h": 1554480
+            "h": 1066800
           },
-          "text_content": "Left column content demonstrating the two-column layout component.",
+          "text_content": "Left column with clear hierarchy.",
           "lines": [
             {
-              "text": "Left column content",
-              "width_emu": 4633714,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "demonstrating the two-",
+              "text": "Left column with clear",
               "width_emu": 5365353,
               "height_emu": 487680,
               "overflows": false
             },
             {
-              "text": "column layout component.",
-              "width_emu": 5853112,
+              "text": "hierarchy.",
+              "width_emu": 2438797,
               "height_emu": 487680,
               "overflows": false
             }
@@ -147,11 +141,11 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_col_icon_149",
           "node_type": "icon",
           "rect": {
             "x": 457200,
-            "y": 3154680,
+            "y": 2804160,
             "w": 457200,
             "h": 457200
           },
@@ -159,15 +153,15 @@
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "right_col_text_150",
           "node_type": "text",
           "rect": {
             "x": 7333488,
             "y": 1463040,
             "w": 4401312,
-            "h": 2529840
+            "h": 1066800
           },
-          "text_content": "Right column content with balanced whitespace and clear hierarchy.",
+          "text_content": "Right column balanced content.",
           "lines": [
             {
               "text": "Right column",
@@ -176,26 +170,8 @@
               "overflows": false
             },
             {
-              "text": "content with",
-              "width_emu": 2926556,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "balanced",
-              "width_emu": 1951038,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "whitespace and",
-              "width_emu": 3414316,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "clear hierarchy.",
-              "width_emu": 3902075,
+              "text": "balanced content.",
+              "width_emu": 4145955,
               "height_emu": 487680,
               "overflows": false
             }
@@ -208,7 +184,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_151",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -241,7 +217,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_152",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -264,7 +240,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "icon_153",
           "node_type": "icon",
           "rect": {
             "x": 457200,
@@ -276,7 +252,7 @@
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "heading_154",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -299,7 +275,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "body_155",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -307,11 +283,11 @@
             "w": 10546080,
             "h": 487680
           },
-          "text_content": "Deploy in minutes, not months.",
+          "text_content": "Deploy in minutes.",
           "lines": [
             {
-              "text": "Deploy in minutes, not months.",
-              "width_emu": 7316391,
+              "text": "Deploy in minutes.",
+              "width_emu": 4389834,
               "height_emu": 487680,
               "overflows": false
             }
@@ -322,7 +298,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "icon_156",
           "node_type": "icon",
           "rect": {
             "x": 457200,
@@ -334,7 +310,7 @@
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "heading_157",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -357,7 +333,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "body_158",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -365,11 +341,11 @@
             "w": 10546080,
             "h": 487680
           },
-          "text_content": "Enterprise-grade protection by default.",
+          "text_content": "Safe by default.",
           "lines": [
             {
-              "text": "Enterprise-grade protection by default.",
-              "width_emu": 9511308,
+              "text": "Safe by default.",
+              "width_emu": 3902075,
               "height_emu": 487680,
               "overflows": false
             }
@@ -380,7 +356,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "icon_159",
           "node_type": "icon",
           "rect": {
             "x": 457200,
@@ -392,7 +368,7 @@
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "heading_160",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -415,7 +391,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "body_161",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -423,16 +399,10 @@
             "w": 10546080,
             "h": 487680
           },
-          "text_content": "From startup to enterprise without rearchitecting.",
+          "text_content": "Grows with you.",
           "lines": [
             {
-              "text": "From startup to enterprise without",
-              "width_emu": 8291909,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "rearchitecting.",
+              "text": "Grows with you.",
               "width_emu": 3658195,
               "height_emu": 487680,
               "overflows": false
@@ -446,7 +416,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_162",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -479,7 +449,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_163",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -502,7 +472,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_value_164",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -525,7 +495,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_label_165",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -548,7 +518,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_value_166",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -571,7 +541,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_label_167",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -594,7 +564,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_sub_168",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -614,10 +584,11 @@
           "font": "courier new",
           "size_pt": 24.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "stat_value_169",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -640,7 +611,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "stat_label_170",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -665,7 +636,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_171",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -698,7 +669,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_172",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -721,7 +692,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_head_173",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -744,7 +715,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_head_174",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -767,7 +738,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_item_175",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -775,17 +746,11 @@
             "w": 5501640,
             "h": 1444752
           },
-          "text_content": "Manual processes, error-prone",
+          "text_content": "Manual; error-prone",
           "lines": [
             {
-              "text": "Manual processes,",
-              "width_emu": 4145955,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "error-prone",
-              "width_emu": 2682677,
+              "text": "Manual; error-prone",
+              "width_emu": 4633714,
               "height_emu": 487680,
               "overflows": false
             }
@@ -796,7 +761,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_item_176",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -804,17 +769,11 @@
             "w": 5501640,
             "h": 1444752
           },
-          "text_content": "Automated workflows, consistent",
+          "text_content": "Automated; reliable",
           "lines": [
             {
-              "text": "Automated workflows,",
-              "width_emu": 4877594,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "consistent",
-              "width_emu": 2438797,
+              "text": "Automated; reliable",
+              "width_emu": 4633714,
               "height_emu": 487680,
               "overflows": false
             }
@@ -825,7 +784,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "left_item_177",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -833,17 +792,11 @@
             "w": 5501640,
             "h": 1444752
           },
-          "text_content": "Weekly reporting cycles",
+          "text_content": "Weekly reports",
           "lines": [
             {
-              "text": "Weekly reporting",
-              "width_emu": 3902075,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "cycles",
-              "width_emu": 1463278,
+              "text": "Weekly reports",
+              "width_emu": 3414316,
               "height_emu": 487680,
               "overflows": false
             }
@@ -854,7 +807,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "right_item_178",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -862,11 +815,11 @@
             "w": 5501640,
             "h": 1444752
           },
-          "text_content": "Real-time dashboards",
+          "text_content": "Real-time data",
           "lines": [
             {
-              "text": "Real-time dashboards",
-              "width_emu": 4877594,
+              "text": "Real-time data",
+              "width_emu": 3414316,
               "height_emu": 487680,
               "overflows": false
             }
@@ -879,7 +832,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_179",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -912,7 +865,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_180",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -935,7 +888,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_date_181",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -955,10 +908,11 @@
           "font": "courier new",
           "size_pt": 24.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "ev_title_182",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -966,11 +920,11 @@
             "w": 3576320,
             "h": 487680
           },
-          "text_content": "Onboarding",
+          "text_content": "Kickoff",
           "lines": [
             {
-              "text": "Onboarding",
-              "width_emu": 2438797,
+              "text": "Kickoff",
+              "width_emu": 1707158,
               "height_emu": 487680,
               "overflows": false
             }
@@ -981,7 +935,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_desc_183",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -989,23 +943,17 @@
             "w": 3576320,
             "h": 2895601
           },
-          "text_content": "Setup, configuration, and team training.",
+          "text_content": "Setup and team training.",
           "lines": [
             {
-              "text": "Setup,",
-              "width_emu": 1463278,
+              "text": "Setup and",
+              "width_emu": 2194917,
               "height_emu": 487680,
               "overflows": false
             },
             {
-              "text": "configuration, ",
-              "width_emu": 3658195,
-              "height_emu": 487680,
-              "overflows": true
-            },
-            {
-              "text": "and team",
-              "width_emu": 1951038,
+              "text": "team",
+              "width_emu": 975519,
               "height_emu": 487680,
               "overflows": false
             },
@@ -1022,7 +970,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_date_184",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -1042,10 +990,11 @@
           "font": "courier new",
           "size_pt": 24.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "ev_title_185",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -1053,17 +1002,11 @@
             "w": 3576320,
             "h": 487680
           },
-          "text_content": "Full Deployment",
+          "text_content": "Go Live",
           "lines": [
             {
-              "text": "Full",
-              "width_emu": 975519,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "Deployment",
-              "width_emu": 2438797,
+              "text": "Go Live",
+              "width_emu": 1707158,
               "height_emu": 487680,
               "overflows": false
             }
@@ -1074,7 +1017,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_desc_186",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -1082,35 +1025,23 @@
             "w": 3576320,
             "h": 2895601
           },
-          "text_content": "Production rollout across all business units.",
+          "text_content": "Full production rollout.",
           "lines": [
             {
-              "text": "Production",
+              "text": "Full",
+              "width_emu": 975519,
+              "height_emu": 487680,
+              "overflows": false
+            },
+            {
+              "text": "production",
               "width_emu": 2438797,
               "height_emu": 487680,
               "overflows": false
             },
             {
-              "text": "rollout",
-              "width_emu": 1707158,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "across all",
-              "width_emu": 2438797,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "business",
+              "text": "rollout.",
               "width_emu": 1951038,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "units.",
-              "width_emu": 1463278,
               "height_emu": 487680,
               "overflows": false
             }
@@ -1121,7 +1052,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_date_187",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -1141,10 +1072,11 @@
           "font": "courier new",
           "size_pt": 24.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "is_caption": true
         },
         {
-          "node_id": "",
+          "node_id": "ev_title_188",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -1152,11 +1084,11 @@
             "w": 3576320,
             "h": 487680
           },
-          "text_content": "Optimization",
+          "text_content": "Growth",
           "lines": [
             {
-              "text": "Optimization",
-              "width_emu": 2926556,
+              "text": "Growth",
+              "width_emu": 1463278,
               "height_emu": 487680,
               "overflows": false
             }
@@ -1167,7 +1099,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "ev_desc_189",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -1175,35 +1107,17 @@
             "w": 3576320,
             "h": 2895601
           },
-          "text_content": "Performance tuning based on 90 days of usage data.",
+          "text_content": "Tuning and expansion.",
           "lines": [
             {
-              "text": "Performance",
-              "width_emu": 2682677,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "tuning based",
-              "width_emu": 2926556,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "on 90 days",
+              "text": "Tuning and",
               "width_emu": 2438797,
               "height_emu": 487680,
               "overflows": false
             },
             {
-              "text": "of usage",
-              "width_emu": 1951038,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "data.",
-              "width_emu": 1219398,
+              "text": "expansion.",
+              "width_emu": 2438797,
               "height_emu": 487680,
               "overflows": false
             }
@@ -1216,7 +1130,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_190",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -1249,7 +1163,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_191",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1272,7 +1186,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "image_192",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -1284,37 +1198,25 @@
           "slot_type": "image"
         },
         {
-          "node_id": "",
+          "node_id": "content_text_193",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1463040,
             "w": 5501640,
-            "h": 2042160
+            "h": 1066800
           },
-          "text_content": "This layout places a full-bleed image on one side with text content on the other.",
+          "text_content": "Full-bleed image with text side.",
           "lines": [
             {
-              "text": "This layout places a",
-              "width_emu": 4877594,
+              "text": "Full-bleed image",
+              "width_emu": 3902075,
               "height_emu": 487680,
               "overflows": false
             },
             {
-              "text": "full-bleed image on",
-              "width_emu": 4633714,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "one side with text",
-              "width_emu": 4389834,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "content on the other.",
-              "width_emu": 5121473,
+              "text": "with text side.",
+              "width_emu": 3658195,
               "height_emu": 487680,
               "overflows": false
             }
@@ -1327,7 +1229,7 @@
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_194",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -1360,7 +1262,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "",
+          "node_id": "title_195",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1383,7 +1285,7 @@
           "italic": false
         },
         {
-          "node_id": "",
+          "node_id": "card_icon_196",
           "node_type": "icon",
           "rect": {
             "x": 457200,
@@ -1392,10 +1294,11 @@
             "h": 457200
           },
           "text_content": "star",
+          "group_id": "card_0",
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "card_title_197",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1403,17 +1306,11 @@
             "w": 2613660,
             "h": 487680
           },
-          "text_content": "Feature One",
+          "text_content": "Feature A",
           "lines": [
             {
-              "text": "Feature",
-              "width_emu": 1707158,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "One",
-              "width_emu": 731639,
+              "text": "Feature A",
+              "width_emu": 2194917,
               "height_emu": 487680,
               "overflows": false
             }
@@ -1421,10 +1318,11 @@
           "font": "courier new",
           "size_pt": 32.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "group_id": "card_0"
         },
         {
-          "node_id": "",
+          "node_id": "card_body_198",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1432,46 +1330,29 @@
             "w": 2613660,
             "h": 3078480
           },
-          "text_content": "Brief description of this key capability.",
+          "text_content": "Fast and reliable.",
           "lines": [
             {
-              "text": "Brief",
-              "width_emu": 1219398,
+              "text": "Fast and",
+              "width_emu": 1951038,
               "height_emu": 487680,
               "overflows": false
             },
             {
-              "text": "description ",
-              "width_emu": 2926556,
-              "height_emu": 487680,
-              "overflows": true
-            },
-            {
-              "text": "of this",
-              "width_emu": 1707158,
+              "text": "reliable.",
+              "width_emu": 2194917,
               "height_emu": 487680,
               "overflows": false
-            },
-            {
-              "text": "key",
-              "width_emu": 731639,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "capability.",
-              "width_emu": 2682677,
-              "height_emu": 487680,
-              "overflows": true
             }
           ],
           "font": "courier new",
           "size_pt": 32.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "card_0"
         },
         {
-          "node_id": "",
+          "node_id": "card_icon_199",
           "node_type": "icon",
           "rect": {
             "x": 3345180,
@@ -1480,10 +1361,11 @@
             "h": 457200
           },
           "text_content": "bolt",
+          "group_id": "card_1",
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "card_title_200",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -1491,17 +1373,11 @@
             "w": 2613660,
             "h": 487680
           },
-          "text_content": "Feature Two",
+          "text_content": "Feature B",
           "lines": [
             {
-              "text": "Feature",
-              "width_emu": 1707158,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "Two",
-              "width_emu": 731639,
+              "text": "Feature B",
+              "width_emu": 2194917,
               "height_emu": 487680,
               "overflows": false
             }
@@ -1509,10 +1385,11 @@
           "font": "courier new",
           "size_pt": 32.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "group_id": "card_1"
         },
         {
-          "node_id": "",
+          "node_id": "card_body_201",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -1520,46 +1397,35 @@
             "w": 2613660,
             "h": 3078480
           },
-          "text_content": "Brief description of this key capability.",
+          "text_content": "Secure by design.",
           "lines": [
             {
-              "text": "Brief",
-              "width_emu": 1219398,
+              "text": "Secure",
+              "width_emu": 1463278,
               "height_emu": 487680,
               "overflows": false
             },
             {
-              "text": "description ",
-              "width_emu": 2926556,
+              "text": "by",
+              "width_emu": 487759,
               "height_emu": 487680,
-              "overflows": true
+              "overflows": false
             },
             {
-              "text": "of this",
+              "text": "design.",
               "width_emu": 1707158,
               "height_emu": 487680,
               "overflows": false
-            },
-            {
-              "text": "key",
-              "width_emu": 731639,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "capability.",
-              "width_emu": 2682677,
-              "height_emu": 487680,
-              "overflows": true
             }
           ],
           "font": "courier new",
           "size_pt": 32.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "card_1"
         },
         {
-          "node_id": "",
+          "node_id": "card_icon_202",
           "node_type": "icon",
           "rect": {
             "x": 6233160,
@@ -1568,10 +1434,11 @@
             "h": 457200
           },
           "text_content": "shield",
+          "group_id": "card_2",
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "card_title_203",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1579,17 +1446,11 @@
             "w": 2613660,
             "h": 487680
           },
-          "text_content": "Feature Three",
+          "text_content": "Feature C",
           "lines": [
             {
-              "text": "Feature",
-              "width_emu": 1707158,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "Three",
-              "width_emu": 1219398,
+              "text": "Feature C",
+              "width_emu": 2194917,
               "height_emu": 487680,
               "overflows": false
             }
@@ -1597,10 +1458,11 @@
           "font": "courier new",
           "size_pt": 32.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "group_id": "card_2"
         },
         {
-          "node_id": "",
+          "node_id": "card_body_204",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1608,46 +1470,29 @@
             "w": 2613660,
             "h": 3078480
           },
-          "text_content": "Brief description of this key capability.",
+          "text_content": "Scales with you.",
           "lines": [
             {
-              "text": "Brief",
-              "width_emu": 1219398,
+              "text": "Scales",
+              "width_emu": 1463278,
               "height_emu": 487680,
               "overflows": false
             },
             {
-              "text": "description ",
-              "width_emu": 2926556,
-              "height_emu": 487680,
-              "overflows": true
-            },
-            {
-              "text": "of this",
-              "width_emu": 1707158,
+              "text": "with you.",
+              "width_emu": 2194917,
               "height_emu": 487680,
               "overflows": false
-            },
-            {
-              "text": "key",
-              "width_emu": 731639,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "capability.",
-              "width_emu": 2682677,
-              "height_emu": 487680,
-              "overflows": true
             }
           ],
           "font": "courier new",
           "size_pt": 32.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "card_2"
         },
         {
-          "node_id": "",
+          "node_id": "card_icon_205",
           "node_type": "icon",
           "rect": {
             "x": 9121140,
@@ -1656,10 +1501,11 @@
             "h": 457200
           },
           "text_content": "globe",
+          "group_id": "card_3",
           "slot_type": "icon"
         },
         {
-          "node_id": "",
+          "node_id": "card_title_206",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1667,17 +1513,11 @@
             "w": 2613660,
             "h": 487680
           },
-          "text_content": "Feature Four",
+          "text_content": "Feature D",
           "lines": [
             {
-              "text": "Feature",
-              "width_emu": 1707158,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "Four",
-              "width_emu": 975519,
+              "text": "Feature D",
+              "width_emu": 2194917,
               "height_emu": 487680,
               "overflows": false
             }
@@ -1685,10 +1525,11 @@
           "font": "courier new",
           "size_pt": 32.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "group_id": "card_3"
         },
         {
-          "node_id": "",
+          "node_id": "card_body_207",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1696,48 +1537,31 @@
             "w": 2613660,
             "h": 3078480
           },
-          "text_content": "Brief description of this key capability.",
+          "text_content": "Pay as you go.",
           "lines": [
             {
-              "text": "Brief",
-              "width_emu": 1219398,
+              "text": "Pay as",
+              "width_emu": 1463278,
               "height_emu": 487680,
               "overflows": false
             },
             {
-              "text": "description ",
-              "width_emu": 2926556,
-              "height_emu": 487680,
-              "overflows": true
-            },
-            {
-              "text": "of this",
+              "text": "you go.",
               "width_emu": 1707158,
               "height_emu": 487680,
               "overflows": false
-            },
-            {
-              "text": "key",
-              "width_emu": 731639,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "capability.",
-              "width_emu": 2682677,
-              "height_emu": 487680,
-              "overflows": true
             }
           ],
           "font": "courier new",
           "size_pt": 32.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "card_3"
         }
       ],
       "chrome": [
         {
-          "node_id": "",
+          "node_id": "chrome_pagenum_208",
           "node_type": "text",
           "rect": {
             "x": 10363200,
