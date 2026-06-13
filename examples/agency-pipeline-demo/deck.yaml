@@ -1,0 +1,67 @@
+# Worked example: the slidekit IR the Deck Builder agent produces from the two
+# upstream fixtures in this directory.
+#   theme:  transcribed verbatim from brand-guardian-theme.md
+#   slides: transcribed from storyteller-outline.md (one block -> one slide)
+# Built lint-clean to deck.pptx via `slidekit build deck.yaml -o deck.pptx`.
+version: 1
+theme:
+  palette:
+    primary: "#16504B"
+    surface: "#FFFFFF"
+    accent: "#E2A03F"
+    text: "#1C1C28"
+    muted: "#8A8A9A"
+  type_scale:
+    title: 58
+    header: 42
+    body: 34
+    caption: 24
+  font: calibri
+  motif: minimal
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "Meridian Analytics"
+    subtitle: "Turn raw events into decisions"
+
+  - component: stat-callout
+    title: "Why Teams Switch"
+    stats:
+      - value: "3.2x"
+        label: "Faster Insights"
+        subtext: "median query time"
+      - value: "40%"
+        label: "Lower Cost"
+        subtext: "vs prior stack"
+      - value: "99.9%"
+        label: "Uptime"
+        subtext: "trailing 12 months"
+
+  - component: icon-text-rows
+    title: "How It Works"
+    rows:
+      - icon: bolt
+        heading: "Ingest"
+        body: "Stream events from any source."
+      - icon: check
+        heading: "Model"
+        body: "Define metrics once, reuse everywhere."
+      - icon: chart
+        heading: "Decide"
+        body: "Dashboards update in real time."
+
+  - component: comparison-columns
+    title: "Old Way vs Meridian"
+    left_title: "Spreadsheets"
+    right_title: "Meridian"
+    left_items:
+      - text: "Manual exports"
+      - text: "Stale numbers"
+      - text: "No lineage"
+    right_items:
+      - text: "Live pipelines"
+      - text: "Always current"
+      - text: "Full lineage"
