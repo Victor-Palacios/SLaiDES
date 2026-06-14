@@ -107,8 +107,12 @@ Each component compiles to a row/column tree; you fill typed slots.
 | `statement` | `text` | — |
 | `definition` | `term`, `definition` | — |
 | `question` | `question` | — |
+| `bullet-list` | `title`, `items[]` (text) | — |
+| `feature-list` | `features[]` = `{icon, heading, body}` (≤3 keeps ≥32pt) | `title` |
+| `checklist` | `title`, `items[]` = `{text, checked?}` | — |
+| `numbered-steps` | `title`?, `steps[]` = `{title, body}` (≤3) | `title` |
 
-Minimal examples of each live in `examples/01..18_*.yaml`; copy and adapt.
+Minimal examples of each live in `examples/01..22_*.yaml`; copy and adapt.
 
 ## Lint error codes and how to fix them
 

@@ -1,0 +1,25 @@
+version: 1
+theme:
+  palette:
+    primary: "#2A1B4A"
+    surface: "#FFFFFF"
+    accent: "#7C4DFF"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "How It Works"
+    subtitle: "From sign-up to value"
+
+  - component: numbered-steps
+    title: "Three Steps to Onboard"
+    steps:
+      - title: "Connect your data"
+        body: "Link a source in minutes with a guided wizard."
+      - title: "Pick a template"
+        body: "Start from a proven layout, then tailor it."
+      - title: "Share the result"
+        body: "Publish to your team and gather feedback fast."

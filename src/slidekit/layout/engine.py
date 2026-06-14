@@ -16,12 +16,16 @@ from typing import Optional
 from slidekit.ir.models import (
     AgendaSlide,
     BigNumberSlide,
+    BulletListSlide,
     CardGridSlide,
+    ChecklistSlide,
     ComparisonColumnsSlide,
     DeckIR,
     DefinitionSlide,
+    FeatureListSlide,
     IconTextRowsSlide,
     ImageHalfBleedSlide,
+    NumberedStepsSlide,
     PullQuoteSlide,
     QuestionSlide,
     QuoteOpenerSlide,
@@ -164,6 +168,14 @@ def _resolve_slide(
         nodes = _layout_definition(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "question":
         nodes = _layout_question(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "bullet-list":
+        nodes = _layout_bullet_list(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "feature-list":
+        nodes = _layout_feature_list(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "checklist":
+        nodes = _layout_checklist(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "numbered-steps":
+        nodes = _layout_numbered_steps(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     else:
         nodes = []
 
@@ -643,6 +655,140 @@ def _layout_agenda(slide: AgendaSlide, cx, cy, cw, ch, font, ts, palette):
                                      group_id=gid))
         y += slot_h + gap
 
+    return nodes
+
+
+# ── Phase 9: lists & text (catalog #11, #13–15) ───────────────────────────────
+
+
+def _list_title(slide_title, cx, y, cw, font, ts):
+    """Emit a header-tier title node; return (node, new_y)."""
+    title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+    node = _make_text_node(_nid("title"), slide_title, font, ts.header,
+                           bold=True, italic=False, rect=Rect(cx, y, cw, title_h))
+    return node, y + title_h + GAP_MIN_EMU
+
+
+def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palette):
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
+    nodes.append(title_node)
+
+    n = len(slide.items)
+    avail = cy + ch - y
+    slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
+    item_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    marker = int(0.18 * EMU_PER_INCH)
+    text_x = cx + int(0.5 * EMU_PER_INCH)
+    text_w = cw - int(0.5 * EMU_PER_INCH)
+    for i, item in enumerate(slide.items):
+        gid = f"bullet_{i}"
+        my = y + (item_h - marker) // 2
+        nodes.append(ResolvedNode(_nid("bullet"), "box", Rect(cx, my, marker, marker),
+                                  fill_color=palette.accent, group_id=gid))
+        nodes.append(_make_text_node(_nid("bl_item"), item, font, ts.body,
+                                     bold=False, italic=False,
+                                     rect=Rect(text_x, y, text_w, item_h), group_id=gid))
+        y += slot_h + gap
+    return nodes
+
+
+def _layout_checklist(slide: ChecklistSlide, cx, cy, cw, ch, font, ts, palette):
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
+    nodes.append(title_node)
+
+    n = len(slide.items)
+    avail = cy + ch - y
+    slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
+    item_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    box = int(0.32 * EMU_PER_INCH)
+    text_x = cx + int(0.6 * EMU_PER_INCH)
+    text_w = cw - int(0.6 * EMU_PER_INCH)
+    for i, item in enumerate(slide.items):
+        gid = f"check_{i}"
+        by = y + (item_h - box) // 2
+        # Filled accent box = checked; muted box = not yet done. Deterministic,
+        # measurable — no glyph checkmarks.
+        fill = palette.accent if item.checked else palette.muted
+        nodes.append(ResolvedNode(_nid("check_box"), "box", Rect(cx, by, box, box),
+                                  fill_color=fill, group_id=gid))
+        nodes.append(_make_text_node(_nid("check_item"), item.text, font, ts.body,
+                                     bold=False, italic=False,
+                                     rect=Rect(text_x, y, text_w, item_h), group_id=gid))
+        y += slot_h + gap
+    return nodes
+
+
+def _layout_feature_list(slide: FeatureListSlide, cx, cy, cw, ch, font, ts, palette):
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+    if slide.title:
+        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
+        nodes.append(title_node)
+
+    n = len(slide.features)
+    avail = cy + ch - y
+    slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
+    icon = int(0.6 * EMU_PER_INCH)
+    text_x = cx + icon + int(0.25 * EMU_PER_INCH)
+    text_w = cw - icon - int(0.25 * EMU_PER_INCH)
+    heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    inner = int(0.1 * EMU_PER_INCH)
+    for i, feat in enumerate(slide.features):
+        gid = f"feat_{i}"
+        nodes.append(ResolvedNode(_nid("feat_icon"), "icon", Rect(cx, y, icon, icon),
+                                  slot_type="icon", text_content=feat.icon, group_id=gid))
+        nodes.append(_make_text_node(_nid("feat_head"), feat.heading, font, ts.body,
+                                     bold=True, italic=False,
+                                     rect=Rect(text_x, y, text_w, heading_h), group_id=gid))
+        body_h = max(1, slot_h - heading_h - inner)
+        nodes.append(_make_text_node(_nid("feat_body"), feat.body, font, ts.body,
+                                     bold=False, italic=False,
+                                     rect=Rect(text_x, y + heading_h + inner, text_w, body_h),
+                                     group_id=gid))
+        y += slot_h + gap
+    return nodes
+
+
+def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, palette):
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+    if slide.title:
+        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
+        nodes.append(title_node)
+
+    n = len(slide.steps)
+    avail = cy + ch - y
+    slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
+    chip = int(0.6 * EMU_PER_INCH)
+    text_x = cx + chip + int(0.25 * EMU_PER_INCH)
+    text_w = cw - chip - int(0.25 * EMU_PER_INCH)
+    heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    inner = int(0.1 * EMU_PER_INCH)
+    for i, step in enumerate(slide.steps):
+        gid = f"step_{i}"
+        # Numbered chip: accent box with the step number on top (same group, so the
+        # intentional text-on-box stack is exempt from E_OVERLAP).
+        nodes.append(ResolvedNode(_nid("step_chip"), "box", Rect(cx, y, chip, chip),
+                                  fill_color=palette.accent, group_id=gid))
+        nodes.append(_make_text_node(_nid("step_num"), str(i + 1), font, ts.body,
+                                     bold=True, italic=False,
+                                     rect=Rect(cx, y, chip, chip), group_id=gid,
+                                     color=palette.surface))
+        nodes.append(_make_text_node(_nid("step_head"), step.title, font, ts.body,
+                                     bold=True, italic=False,
+                                     rect=Rect(text_x, y, text_w, heading_h), group_id=gid))
+        body_h = max(1, slot_h - heading_h - inner)
+        nodes.append(_make_text_node(_nid("step_body"), step.body, font, ts.body,
+                                     bold=False, italic=False,
+                                     rect=Rect(text_x, y + heading_h + inner, text_w, body_h),
+                                     group_id=gid))
+        y += slot_h + gap
     return nodes
 
 

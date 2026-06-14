@@ -1,0 +1,28 @@
+version: 1
+theme:
+  palette:
+    primary: "#243B53"
+    surface: "#FFFFFF"
+    accent: "#2BB0A0"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Platform Highlights"
+    subtitle: "What sets it apart"
+
+  - component: feature-list
+    title: "Built for Teams"
+    features:
+      - icon: shield
+        heading: "Secure by default"
+        body: "Encryption and audit trails on every action."
+      - icon: bolt
+        heading: "Fast to adopt"
+        body: "Live in an afternoon, no migration needed."
+      - icon: chart
+        heading: "Clear results"
+        body: "Dashboards that show value in week one."

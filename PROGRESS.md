@@ -102,7 +102,7 @@ branch + golden test + example deck + SKILL gallery row, lint-clean, before the
 next. (Research reconciliation pending — chatgpt.com/grok.com blocked by egress.)
 
 - [x] B/C openers+emphasis: section-divider, agenda, quote-opener, big-number, pull-quote, statement, definition, question (8 designs; models + `_layout_*` handlers + dispatch + goldens 11–18 + examples + SKILL rows; all lint-clean, golden tests pass; commit pending)
-- [ ] C lists: bullet-list, feature-list, checklist, numbered-steps
+- [x] C lists: bullet-list, feature-list, checklist, numbered-steps (4 designs; models + handlers + dispatch + goldens 19–22 + examples + SKILL rows; all lint-clean, suite green)
 - [ ] D comparison: before-after, pros-cons, this-vs-that
 - [ ] E data: kpi-grid, chart-slide, chart-with-insight, table-slide, metric-comparison
 - [ ] F process/shape: process-steps, roadmap, funnel, pyramid, matrix-2x2, swot

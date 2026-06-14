@@ -276,6 +276,49 @@ class QuestionSlide(BaseModel):
     question: str
 
 
+# ── Phase 9: lists & text (catalog #11, #13–15) ───────────────────────────────
+
+
+class BulletListSlide(BaseModel):
+    component: Literal["bullet-list"]
+    title: str
+    items: list[str] = Field(min_length=1)
+
+
+class Feature(BaseModel):
+    icon: str
+    heading: str
+    body: str
+
+
+class FeatureListSlide(BaseModel):
+    component: Literal["feature-list"]
+    title: Optional[str] = None
+    features: list[Feature] = Field(min_length=1)
+
+
+class ChecklistItem(BaseModel):
+    text: str
+    checked: bool = False
+
+
+class ChecklistSlide(BaseModel):
+    component: Literal["checklist"]
+    title: str
+    items: list[ChecklistItem] = Field(min_length=1)
+
+
+class Step(BaseModel):
+    title: str
+    body: str
+
+
+class NumberedStepsSlide(BaseModel):
+    component: Literal["numbered-steps"]
+    title: Optional[str] = None
+    steps: list[Step] = Field(min_length=1)
+
+
 Slide = Annotated[
     Union[
         TitleSlide,
@@ -294,6 +337,10 @@ Slide = Annotated[
         StatementSlide,
         DefinitionSlide,
         QuestionSlide,
+        BulletListSlide,
+        FeatureListSlide,
+        ChecklistSlide,
+        NumberedStepsSlide,
     ],
     Field(discriminator="component"),
 ]

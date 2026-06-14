@@ -1,0 +1,287 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_1",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Why It Matters",
+          "lines": [
+            {
+              "text": "Why It Matters",
+              "width_emu": 5207496,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "subtitle_2",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "The case in five points",
+          "lines": [
+            {
+              "text": "The case in five points",
+              "width_emu": 4296283,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_3",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_4",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What Changed This Quarter",
+          "lines": [
+            {
+              "text": "What Changed This Quarter",
+              "width_emu": 7053225,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "bullet_5",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1676399,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "bullet_0",
+          "fill_color": "#E8743B"
+        },
+        {
+          "node_id": "bl_item_6",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1499616,
+            "w": 10820400,
+            "h": 518159
+          },
+          "text_content": "Activation time dropped by half",
+          "lines": [
+            {
+              "text": "Activation time dropped by half",
+              "width_emu": 5904570,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "bullet_0"
+        },
+        {
+          "node_id": "bullet_7",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2810255,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "bullet_1",
+          "fill_color": "#E8743B"
+        },
+        {
+          "node_id": "bl_item_8",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2633472,
+            "w": 10820400,
+            "h": 518159
+          },
+          "text_content": "Support tickets fell sharply",
+          "lines": [
+            {
+              "text": "Support tickets fell sharply",
+              "width_emu": 5039916,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "bullet_1"
+        },
+        {
+          "node_id": "bullet_9",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 3944111,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "bullet_2",
+          "fill_color": "#E8743B"
+        },
+        {
+          "node_id": "bl_item_10",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 3767328,
+            "w": 10820400,
+            "h": 518159
+          },
+          "text_content": "Expansion revenue outpaced new sales",
+          "lines": [
+            {
+              "text": "Expansion revenue outpaced new sales",
+              "width_emu": 7633667,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "bullet_2"
+        },
+        {
+          "node_id": "bullet_11",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 5077967,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "bullet_3",
+          "fill_color": "#E8743B"
+        },
+        {
+          "node_id": "bl_item_12",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 4901184,
+            "w": 10820400,
+            "h": 518159
+          },
+          "text_content": "Two flagship accounts renewed early",
+          "lines": [
+            {
+              "text": "Two flagship accounts renewed early",
+              "width_emu": 7080634,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "bullet_3"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_13",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+version: 1
+theme:
+  palette:
+    primary: "#1B3A6B"
+    surface: "#FFFFFF"
+    accent: "#E8743B"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Why It Matters"
+    subtitle: "The case in five points"
+
+  - component: bullet-list
+    title: "What Changed This Quarter"
+    items:
+      - "Activation time dropped by half"
+      - "Support tickets fell sharply"
+      - "Expansion revenue outpaced new sales"
+      - "Two flagship accounts renewed early"
