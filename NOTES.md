@@ -96,3 +96,18 @@ is followed anyway.
   thesis. Scoring is ADVISORY (warnings + 0–100 score); the linter remains the gate.
 - Honesty guard recorded in the spec: do not claim human-judgment correlation
   without a labeled slide-pair dataset (calibration deferred).
+
+## Nightly cron re-enabled + standing research task (2026-06-14, operator-directed)
+
+- **Cron re-enabled.** The schedule in `.github/workflows/nightly.yml` (07:00 UTC ≈
+  midnight Pacific) was re-enabled to continue the work: each run advances the current
+  build phase (Phase 9 designs → Phase 10 aesthetics) AND the standing research task.
+  Recurring Opus spend resumes (~$7–50/session) — operator-accepted.
+- **Web tools added to the nightly allowlist.** `claude_args` now includes
+  `WebSearch,WebFetch` (added to Read/Edit/Write/Bash) so the unattended session can
+  discover and verify new research online. GitHub runners have open egress (unlike the
+  Claude-Code-web environment whose allowlist blocks chatgpt.com/grok.com).
+- **Standing research task.** Every session grows `docs/REFERENCES.md` toward ~20
+  VERIFIED references on mathematical/aesthetic slide design and integrates concrete
+  deterministic metrics into Phase 10. Verify before citing; keep all metrics
+  render-free; never gate the build on a learned score.

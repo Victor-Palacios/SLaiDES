@@ -119,3 +119,24 @@ definitions, and research lineage. Key rules:
 - Do NOT claim correlation with human judgment — that needs a labeled slide-pair
   dataset slidekit doesn't have. Ship default weights with documented rationale;
   mark calibration as DEFERRED in PROGRESS.md.
+
+=== STANDING RESEARCH TASK (added 2026-06-14; EVERY session, alongside the build) ===
+In addition to the current build phase, every session advances the research base for
+mathematical / computational slide aesthetics:
+- Maintain docs/REFERENCES.md — a bibliography of work on mathematically defining or
+  measuring slide / layout / presentation aesthetics. GOAL: grow it to ~20 distinct
+  VERIFIED references, each annotated with HOW it informs slidekit (which metric or
+  feature). It is not a citation dump — every entry must say how it is used.
+- Each session, FIND 1–3 NEW relevant works not already listed (use WebSearch /
+  WebFetch). VERIFY each from a primary source (arXiv id / venue / DOI / official
+  code) before adding it — never add a reference you have not confirmed; mark anything
+  unconfirmed as SECONDHAND and verify a SECONDHAND entry when you can. Record: title,
+  authors (if known), venue/arXiv id, year, one-line summary, and "how used in slidekit".
+- INTEGRATE: when a verified work yields a concrete, deterministic metric definition
+  or threshold that improves Phase 10, apply it in slidekit/aesthetics + docs/AESTHETICS.md
+  and cite the reference in the integration log. Every metric MUST stay computable from
+  the ResolvedDeck geometry + theme (NO rendering, NO vision); never adopt a black-box
+  or learned score as a build gate.
+- In the nightly report, note references added and the running count vs the ~20 target.
+- Once ~20 verified references are reached, stop growing the list; thereafter add only
+  genuinely novel, high-quality works and focus on integration + calibration.

@@ -6,13 +6,13 @@
 name: nightly-slidekit
 
 on:
-  # Scheduled nightly run DISABLED 2026-06-13: slidekit Phases 0-8 are complete,
-  # so an unattended session would boot, find nothing to do, and still bill a full
-  # (Opus) session. Re-enable by uncommenting the schedule block below if new
-  # build work is queued in PROGRESS.md.
-  # schedule:
-  #   # 00:00 America/Los_Angeles during PDT (UTC, ignores DST).
-  #   - cron: "0 7 * * *"
+  # Nightly unattended session (RE-ENABLED 2026-06-14): each run continues the
+  # current build phase in PROGRESS.md (Phase 9 designs, Phase 10 aesthetics) AND
+  # advances the standing research task in NIGHTLY_PROMPT.md (grow docs/REFERENCES.md
+  # toward ~20 verified references and integrate findings).
+  schedule:
+    # 00:00 America/Los_Angeles during PDT = 07:00 UTC (GitHub cron is UTC, ignores DST).
+    - cron: "0 7 * * *"
   workflow_dispatch: {}
 
 # Never let two nightly sessions overlap.
@@ -52,9 +52,10 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: ${{ steps.prompt.outputs.PROMPT }}
-          # Tool scope per PLAN.md setup step 4 (scoped allowlist, no permission bypass).
+          # Tool scope: Read/Edit/Write/Bash for the build; WebSearch/WebFetch for the
+          # standing research task (finding + verifying new aesthetics research online).
           # --model opus: run on the latest Opus (alias resolves per installed CLI).
-          claude_args: --allowedTools "Read,Edit,Write,Bash" --model opus
+          claude_args: --allowedTools "Read,Edit,Write,Bash,WebSearch,WebFetch" --model opus
           # Keep full output: the run's modelUsage/cost block is logged here, which
           # is how nightly spend is tracked (matters more now that runs use Opus).
           show_full_output: "true"

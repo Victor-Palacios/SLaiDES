@@ -43,13 +43,31 @@ in files:
 | [PROGRESS.md](PROGRESS.md) | Phase/criterion checklist + gate status |
 | `NIGHTLY_REPORTS/` | One report per session — the morning check is the newest file here |
 | [NOTES.md](NOTES.md) | Objections and out-of-scope proposals |
+| [docs/SLIDE_DESIGNS.md](docs/SLIDE_DESIGNS.md) | Catalog of the 40 core slide designs (Phase 9) |
+| [docs/AESTHETICS.md](docs/AESTHETICS.md) | Deterministic aesthetic-scoring spec (Phase 10) |
+| [docs/REFERENCES.md](docs/REFERENCES.md) | Living bibliography of slide-aesthetics research (target ~20 verified) |
 
 The schedule is [`.github/workflows/nightly.yml`](.github/workflows/nightly.yml):
-a GitHub Actions cron job running `anthropics/claude-code-action@v1` with the
-contents of `NIGHTLY_PROMPT.md`, tools scoped to `Read,Edit,Write,Bash`.
-(The plan's preferred mechanisms — Claude Code Routines or a local crontab —
+a GitHub Actions cron job (**07:00 UTC ≈ midnight Pacific, nightly**) running
+`anthropics/claude-code-action@v1` on Opus with the contents of `NIGHTLY_PROMPT.md`,
+tools scoped to `Read,Edit,Write,Bash` plus `WebSearch,WebFetch` for the research
+task. (The plan's preferred mechanisms — Claude Code Routines or a local crontab —
 aren't durable in the ephemeral cloud environment this repo is developed in;
 see NOTES.md.)
+
+### What the nightly session does now
+
+The core build (Phases 0–8) is complete. Each nightly run now pursues two tracks:
+
+1. **Build** the current phase in `PROGRESS.md` — Phase 9 (grow the component
+   library to **40 core slide designs**, see `docs/SLIDE_DESIGNS.md`) then Phase 10
+   (a **deterministic aesthetic-scoring** layer over the resolved geometry — balance,
+   alignment, whitespace, overlap, contrast, color harmony, cross-slide consistency —
+   computed from source, never from screenshots; see `docs/AESTHETICS.md`).
+2. **Research** — find and **verify** new work on mathematically defining or measuring
+   slide aesthetics, log it to `docs/REFERENCES.md` with how it's used, and integrate
+   concrete deterministic metrics into Phase 10. The bibliography grows toward **~20
+   verified references**; nothing is cited without a confirmed primary source.
 
 ### Operator setup (one-time)
 
@@ -75,3 +93,8 @@ see NOTES.md.)
   (effective June 15, 2026) — since this workflow authenticates with the
   subscription OAuth token, verify those limits at
   https://code.claude.com/docs/en/headless before relying on nightly runs.
+- **The nightly cron is ENABLED and runs on Opus** (~$7–50 of usage per session).
+  It fires every night until you disable it (comment out the `schedule:` block).
+  Scheduled runs only fire from the **default branch**, so set the default to `main`.
+- Each morning, the newest `NIGHTLY_REPORTS/*-exec-summary.md` is the plain-language
+  readout; `docs/REFERENCES.md` shows research progress toward the ~20-reference goal.
