@@ -101,8 +101,10 @@ blueprint and per-design integration points in `docs/SLIDE_DESIGNS.md`. Build th
 branch + golden test + example deck + SKILL gallery row, lint-clean, before the
 next. (Research reconciliation pending — chatgpt.com/grok.com blocked by egress.)
 
-- [x] B/C openers+emphasis: section-divider, agenda, quote-opener, big-number, pull-quote, statement, definition, question (8 designs; models + `_layout_*` handlers + dispatch + goldens 11–18 + examples + SKILL rows; all lint-clean, golden tests pass; commit pending)
-- [x] C lists: bullet-list, feature-list, checklist, numbered-steps (4 designs; models + handlers + dispatch + goldens 19–22 + examples + SKILL rows; all lint-clean, suite green)
+- [x] B/C openers+emphasis: section-divider, agenda, quote-opener, big-number, pull-quote, statement, definition, question (8 designs; models + `_layout_*` handlers + dispatch + goldens 11–18 + examples + SKILL rows; all lint-clean, golden tests pass; commit c60079b, 2026-06-14)
+- [x] C lists: bullet-list, feature-list, checklist, numbered-steps (4 designs; models + handlers + dispatch + goldens 19–22 + examples + SKILL rows; all lint-clean, suite green; commit f54b7f8, 2026-06-14)
+
+_Phase 9 running tally: **20 of 40** designs shipped (8 v1 + 12 on 2026-06-14). Remaining groups: D comparison, E data, F process/shape, G/H structure+visual._
 - [ ] D comparison: before-after, pros-cons, this-vs-that
 - [ ] E data: kpi-grid, chart-slide, chart-with-insight, table-slide, metric-comparison
 - [ ] F process/shape: process-steps, roadmap, funnel, pyramid, matrix-2x2, swot
