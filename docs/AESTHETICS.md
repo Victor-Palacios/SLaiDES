@@ -82,3 +82,35 @@ The linter (Phase 4) stays the **gate** (errors block; objective defects). Aesth
 scoring is an **advisor** (warnings + a score; graded quality). A deck can be
 lint-clean yet score 62/100 — that's the intended separation: correctness is binary
 and enforced; beauty is graded and advisory.
+
+## Primary-source verification (added 2026-06-14)
+
+The metric set above was first drafted from an operator-pasted synthesis plus
+background knowledge — **not** from the primary papers. Follow-up verification
+(web search + fetch) established the following, and corrects the record:
+
+- **AeSlides** — arXiv:2604.22840, "Incentivizing Aesthetic Layout in LLM-Based
+  Slide Generation via Verifiable Rewards" (2026-04-21; code:
+  github.com/ympan0508/aeslides). VERIFIED metrics: distorted aspect ratio,
+  excessive whitespace, element collision, visual imbalance; GRPO RL; reported
+  aspect-ratio compliance 36%→85%, whitespace −44%, collisions −43%, imbalance
+  −28%, human score 3.31→3.56. **KEY DETAIL the synthesis omitted:** AeSlides
+  computes these "verifiable" metrics over **Playwright-rendered output**
+  (pixel/variance-map analysis) and keeps the full implementation **proprietary**
+  ("we do not release the full system implementation… decoupled render
+  infrastructure… tool implementations").
+- **EvoPresent / PresAesth** — arXiv:2510.05571 (ICLR 2026); multi-task RL (GRPO)
+  for scoring / defect-adjustment / pairwise-comparison; benchmark 650 papers +
+  2,000 slide pairs. VERIFIED.
+
+**Implication for slidekit (now primary-sourced):** the leading verifiable-metric
+system *renders* slides (Playwright) to recover the geometry these metrics need,
+and does not publish its formulas. slidekit already has exact geometry from the
+ResolvedDeck, so it computes equivalent metrics with **no rendering and no
+black box** — but it must define its OWN open formulas (this document). That is a
+real, defensible distinction, stronger than first stated.
+
+**STILL UNVERIFIED — treat as secondhand until checked against primary sources:**
+GRIDS, Ngo/Teo/Byrne, SlidesGen-Bench, "Seeing Like a Designer Without One"
+(Pearson 0.83), PPTAgent/PPTEval (Pearson 0.90), DECKBench, Birkhoff. These
+citations and figures come from the pasted synthesis, not from papers I have read.
