@@ -1,0 +1,132 @@
+"""Native PDF emitter — draws the resolved geometry directly with reportlab.
+
+Mirrors the pptx emitter (same node → visual mapping: surface background, filled
+boxes, icon circles, and text drawn from slidekit's own pre-wrapped line boxes),
+so a PDF is produced deterministically with NO LibreOffice/headless renderer.
+Origin note: slidekit geometry is top-left in EMU; PDF is bottom-left in points
+(1 pt = 12700 EMU).
+"""
+from __future__ import annotations
+
+from pathlib import Path
+from typing import TYPE_CHECKING, Union
+
+from reportlab.pdfgen import canvas as _canvas
+
+if TYPE_CHECKING:
+    from slidekit.ir.models import Deck
+    from slidekit.layout.models import ResolvedDeck, ResolvedNode
+
+from slidekit.metrics.constants import INSET_LEFT_EMU, INSET_TOP_EMU
+
+_EMU_PER_PT = 12700.0
+
+
+def _pt(emu: float) -> float:
+    return emu / _EMU_PER_PT
+
+
+def _rgb(hex_color: str) -> tuple[float, float, float]:
+    h = hex_color.lstrip("#")
+    return int(h[0:2], 16) / 255, int(h[2:4], 16) / 255, int(h[4:6], 16) / 255
+
+
+def _pdf_font(name: str | None, bold: bool, italic: bool) -> str:
+    n = (name or "arial").lower()
+    if n == "courier new":
+        base, b, i, bi = "Courier", "Courier-Bold", "Courier-Oblique", "Courier-BoldOblique"
+    elif n in ("times new roman", "cambria", "bookman old style", "century schoolbook"):
+        base, b, i, bi = "Times-Roman", "Times-Bold", "Times-Italic", "Times-BoldItalic"
+    else:  # arial / calibri → Helvetica
+        base, b, i, bi = "Helvetica", "Helvetica-Bold", "Helvetica-Oblique", "Helvetica-BoldOblique"
+    if bold and italic:
+        return bi
+    if bold:
+        return b
+    if italic:
+        return i
+    return base
+
+
+def emit_pdf(deck: "Deck", resolved: "ResolvedDeck", output_path: Union[str, Path]) -> Path:
+    """Emit a PDF from a fully-resolved deck (one page per slide). Returns the path."""
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    palette = deck.theme.palette
+
+    cw = resolved.slides[0].canvas_w if resolved.slides else 12192000
+    ch = resolved.slides[0].canvas_h if resolved.slides else 6858000
+    page_w, page_h = _pt(cw), _pt(ch)
+
+    c = _canvas.Canvas(str(output_path), pagesize=(page_w, page_h))
+    for rs in resolved.slides:
+        # Surface background.
+        c.setFillColorRGB(*_rgb(palette.surface))
+        c.rect(0, 0, page_w, page_h, stroke=0, fill=1)
+        for node in rs.nodes + rs.chrome:
+            _draw_node(c, node, palette, page_h)
+        c.showPage()
+    c.save()
+    return output_path
+
+
+def _draw_node(c, node: "ResolvedNode", palette, page_h: float) -> None:
+    rect = node.rect
+    x, w, h = _pt(rect.x), _pt(rect.w), _pt(rect.h)
+    # Top edge of the rect in PDF (bottom-left origin) coordinates.
+    top = page_h - _pt(rect.y)
+
+    if node.node_type == "box":
+        c.setFillColorRGB(*_rgb(node.fill_color or palette.primary))
+        c.rect(x, top - h, w, h, stroke=0, fill=1)
+
+    elif node.node_type == "icon":
+        d = min(w, h)
+        icx = x + (w - d) / 2
+        icy = top - (h + d) / 2  # center y
+        c.setFillColorRGB(*_rgb(palette.accent))
+        c.circle(x + w / 2, top - h / 2, d / 2, stroke=0, fill=1)
+
+    elif node.node_type == "image":
+        if node.text_content and Path(node.text_content).exists():
+            try:
+                c.drawImage(node.text_content, x, top - h, w, h, preserveAspectRatio=True, mask="auto")
+                return
+            except Exception:
+                pass
+        # placeholder box for a missing/unresolvable image
+        c.setFillColorRGB(0.87, 0.87, 0.87)
+        c.rect(x, top - h, w, h, stroke=0, fill=1)
+
+    elif node.node_type == "text":
+        _draw_text(c, node, palette, page_h)
+
+
+def _draw_text(c, node: "ResolvedNode", palette, page_h: float) -> None:
+    if node.text_color:
+        hex_color = node.text_color
+    elif node.is_chrome or node.is_caption:
+        hex_color = palette.muted
+    else:
+        hex_color = palette.text
+    c.setFillColorRGB(*_rgb(hex_color))
+
+    size = node.size_pt or 32.0
+    font = _pdf_font(node.font, node.bold, node.italic)
+    c.setFont(font, size)
+
+    x = _pt(node.rect.x) + _pt(INSET_LEFT_EMU)
+    top = page_h - _pt(node.rect.y) - _pt(INSET_TOP_EMU)
+
+    lines = node.lines or []
+    if not lines:
+        # Fallback: single line from text_content.
+        c.drawString(x, top - size * 0.85, node.text_content or "")
+        return
+
+    cur = top
+    for ln in lines:
+        line_h = _pt(ln.height_emu) if ln.height_emu else size * 1.2
+        baseline = cur - size * 0.85  # ascent approximation
+        c.drawString(x, baseline, ln.text)
+        cur -= line_h

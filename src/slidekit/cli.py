@@ -16,9 +16,14 @@ def main() -> None:
     sub = parser.add_subparsers(dest="command", required=True)
 
     # slidekit build
-    build_p = sub.add_parser("build", help="Build a deck YAML → .pptx")
+    build_p = sub.add_parser("build", help="Build a deck YAML → .pptx (or .pdf)")
     build_p.add_argument("deck", help="Path to deck.yaml")
-    build_p.add_argument("-o", "--output", default=None, help="Output .pptx path")
+    build_p.add_argument("-o", "--output", default=None, help="Output path (.pptx or .pdf)")
+    build_p.add_argument(
+        "--pdf",
+        action="store_true",
+        help="Output PDF (rendered via LibreOffice) instead of .pptx",
+    )
 
     # slidekit layout
     layout_p = sub.add_parser("layout", help="Resolve layout geometry")
@@ -92,10 +97,28 @@ def _cmd_build(args: argparse.Namespace) -> None:
             }))
         sys.exit(1)
 
-    out = Path(args.output) if args.output else Path(args.deck).with_suffix(".pptx")
-    emit_pptx(deck, rd, out)
-    print(f"[slidekit] built {out} ({len(deck.slides)} slides, lint-clean)")
+    if args.output:
+        out = Path(args.output)
+    elif args.pdf:
+        out = Path(args.deck).with_suffix(".pdf")
+    else:
+        out = Path(args.deck).with_suffix(".pptx")
+
+    if args.pdf or out.suffix.lower() == ".pdf":
+        out = out.with_suffix(".pdf")
+        _emit_pdf(deck, rd, out)
+        print(f"[slidekit] built {out} ({len(deck.slides)} slides, lint-clean, PDF)")
+    else:
+        emit_pptx(deck, rd, out)
+        print(f"[slidekit] built {out} ({len(deck.slides)} slides, lint-clean)")
     sys.exit(0)
+
+
+def _emit_pdf(deck, rd, out_pdf: Path) -> None:
+    """Emit a PDF natively from the resolved geometry (reportlab, no LibreOffice)."""
+    from slidekit.emit.pdf_emitter import emit_pdf
+
+    emit_pdf(deck, rd, out_pdf)
 
 
 def _cmd_layout(args: argparse.Namespace) -> None:

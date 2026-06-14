@@ -151,3 +151,10 @@ main" only because that was the default at the time; treat the checked-out branc
 authoritative. (The state files — PROGRESS.md, NIGHTLY_PROMPT.md, docs/ — are kept
 identical across `main` and `claude/busy-rubin-mzpvfu`, so either branch is a valid,
 current base.)
+
+=== OUTPUT FORMAT POLICY (added 2026-06-14; operator request) ===
+Example/showcase deck artifacts are committed as **PDF, not PPTX**, from now on.
+Build them with `slidekit build <deck>.yaml --pdf -o examples/pdf/<name>.pdf` (native
+reportlab emitter — no LibreOffice needed; works in any environment). Keep the
+deterministic round-trip TESTS on .pptx (they assert emitter geometry), but the
+human-viewable example outputs are PDF. Only emit .pptx when explicitly requested.
