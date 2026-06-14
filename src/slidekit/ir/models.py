@@ -226,6 +226,56 @@ class CardGridSlide(BaseModel):
     cards: list[Card] = Field(min_length=1)
 
 
+# ── Phase 9: openers & emphasis (catalog #2–9) ────────────────────────────────
+
+
+class SectionDividerSlide(BaseModel):
+    component: Literal["section-divider"]
+    number: str
+    title: str
+
+
+class AgendaSlide(BaseModel):
+    component: Literal["agenda"]
+    title: str = "Agenda"
+    items: list[str] = Field(min_length=1)
+
+
+class QuoteOpenerSlide(BaseModel):
+    component: Literal["quote-opener"]
+    quote: str
+    attribution: str
+
+
+class BigNumberSlide(BaseModel):
+    component: Literal["big-number"]
+    value: str
+    label: str
+    context: Optional[str] = None
+
+
+class PullQuoteSlide(BaseModel):
+    component: Literal["pull-quote"]
+    quote: str
+    attribution: str
+
+
+class StatementSlide(BaseModel):
+    component: Literal["statement"]
+    text: str
+
+
+class DefinitionSlide(BaseModel):
+    component: Literal["definition"]
+    term: str
+    definition: str
+
+
+class QuestionSlide(BaseModel):
+    component: Literal["question"]
+    question: str
+
+
 Slide = Annotated[
     Union[
         TitleSlide,
@@ -236,6 +286,14 @@ Slide = Annotated[
         TimelineSlide,
         ImageHalfBleedSlide,
         CardGridSlide,
+        SectionDividerSlide,
+        AgendaSlide,
+        QuoteOpenerSlide,
+        BigNumberSlide,
+        PullQuoteSlide,
+        StatementSlide,
+        DefinitionSlide,
+        QuestionSlide,
     ],
     Field(discriminator="component"),
 ]

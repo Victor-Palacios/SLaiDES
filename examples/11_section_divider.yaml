@@ -1,0 +1,19 @@
+version: 1
+theme:
+  palette:
+    primary: "#0B3D2E"
+    surface: "#FFFFFF"
+    accent: "#1FA463"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: calibri
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Strategy Review"
+    subtitle: "Fiscal Year 2026"
+
+  - component: section-divider
+    number: "01"
+    title: "Where We Stand Today"

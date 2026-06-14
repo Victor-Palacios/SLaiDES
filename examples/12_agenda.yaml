@@ -1,0 +1,24 @@
+version: 1
+theme:
+  palette:
+    primary: "#1B3A6B"
+    surface: "#FFFFFF"
+    accent: "#E8743B"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Quarterly Business Review"
+    subtitle: "Operations & Growth"
+
+  - component: agenda
+    title: "What We Will Cover"
+    items:
+      - "Performance against targets"
+      - "Customer and market signals"
+      - "Operational health and risks"
+      - "Roadmap for next quarter"
+      - "Decisions we need today"

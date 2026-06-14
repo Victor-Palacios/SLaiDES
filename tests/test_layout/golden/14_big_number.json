@@ -1,0 +1,202 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_31",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Impact in One Number",
+          "lines": [
+            {
+              "text": "Impact in One Number",
+              "width_emu": 8129364,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "subtitle_32",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "2026 Mid-Year Snapshot",
+          "lines": [
+            {
+              "text": "2026 Mid-Year Snapshot",
+              "width_emu": 4737150,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_33",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "big-number",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_37",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1661160,
+            "w": 128016,
+            "h": 2895600
+          },
+          "fill_color": "#00ACC1"
+        },
+        {
+          "node_id": "value_34",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 1661160,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "3.2M",
+          "lines": [
+            {
+              "text": "3.2M",
+              "width_emu": 1694036,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#00ACC1"
+        },
+        {
+          "node_id": "label_35",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2941320,
+            "w": 10738104,
+            "h": 731520
+          },
+          "text_content": "Active customers worldwide",
+          "lines": [
+            {
+              "text": "Active customers worldwide",
+              "width_emu": 6580770,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "context_36",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3947160,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "Up from 1.9M at the start of the year",
+          "lines": [
+            {
+              "text": "Up from 1.9M at the start of the year",
+              "width_emu": 6935788,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "text_color": "#8A8A9A"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_38",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

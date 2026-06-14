@@ -14,12 +14,20 @@ from dataclasses import dataclass, field
 from typing import Optional
 
 from slidekit.ir.models import (
+    AgendaSlide,
+    BigNumberSlide,
     CardGridSlide,
     ComparisonColumnsSlide,
     DeckIR,
+    DefinitionSlide,
     IconTextRowsSlide,
     ImageHalfBleedSlide,
+    PullQuoteSlide,
+    QuestionSlide,
+    QuoteOpenerSlide,
+    SectionDividerSlide,
     StatCalloutSlide,
+    StatementSlide,
     TimelineSlide,
     TitleSlide,
     TwoColumnSlide,
@@ -140,6 +148,22 @@ def _resolve_slide(
         nodes = _layout_image_half_bleed(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "card-grid":
         nodes = _layout_card_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "section-divider":
+        nodes = _layout_section_divider(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "agenda":
+        nodes = _layout_agenda(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "quote-opener":
+        nodes = _layout_quote_opener(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "big-number":
+        nodes = _layout_big_number(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "pull-quote":
+        nodes = _layout_pull_quote(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "statement":
+        nodes = _layout_statement(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "definition":
+        nodes = _layout_definition(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "question":
+        nodes = _layout_question(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     else:
         nodes = []
 
@@ -472,6 +496,156 @@ def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -
     return nodes
 
 
+# ── Phase 9: openers & emphasis (catalog #2–9) ────────────────────────────────
+#
+# These designs share a "left accent bar + vertically-centred text stack" motif.
+# The accent bar is a deterministic ``box`` node (measurable, so the linter still
+# proves fit) and doubles as the non-text media that keeps the slide off the
+# W_TEXT_ONLY warning. The bar sits to the left of the text column with no
+# horizontal overlap, so it never trips E_OVERLAP or E_GAP.
+
+_BAR_W_EMU = int(0.14 * EMU_PER_INCH)
+_BAR_INDENT_EMU = int(0.45 * EMU_PER_INCH)  # gap between bar and text column
+
+
+def _emphasis_stack(items, cx, cy, cw, ch, font, palette, *, bar=True):
+    """Lay out a vertically-centred stack of text rows with an optional left
+    accent bar. ``items`` is a list of dicts: prefix/text/size, optional
+    bold/italic/is_caption/color. Returns a list of ResolvedNodes."""
+    gap = GAP_MIN_EMU
+    text_x = cx + (_BAR_W_EMU + _BAR_INDENT_EMU if bar else 0)
+    text_w = cw - (_BAR_W_EMU + _BAR_INDENT_EMU if bar else 0)
+
+    measured = []
+    for it in items:
+        lines = wrap(it["text"], font, it["size"], text_w,
+                     bold=it.get("bold", False), italic=it.get("italic", False))
+        h = max(1, total_text_height_emu(lines))
+        measured.append((it, lines, h))
+
+    total_h = sum(h for _, _, h in measured) + gap * max(0, len(measured) - 1)
+    y = cy + max(0, (ch - total_h) // 2)
+    block_top = y
+
+    nodes: list[ResolvedNode] = []
+    for it, lines, h in measured:
+        node = _make_text_node(_nid(it["prefix"]), it["text"], font, it["size"],
+                               bold=it.get("bold", False), italic=it.get("italic", False),
+                               rect=Rect(text_x, y, text_w, h), lines=lines,
+                               is_caption=it.get("is_caption", False))
+        if it.get("color"):
+            node.text_color = it["color"]
+        nodes.append(node)
+        y += h + gap
+    block_bottom = y - gap
+
+    if bar:
+        bar_node = ResolvedNode(
+            _nid("accent_bar"), "box",
+            Rect(cx, block_top, _BAR_W_EMU, max(1, block_bottom - block_top)),
+            fill_color=palette.accent,
+        )
+        nodes.insert(0, bar_node)
+    return nodes
+
+
+def _layout_section_divider(slide: SectionDividerSlide, cx, cy, cw, ch, font, ts, palette):
+    return _emphasis_stack([
+        {"prefix": "sec_num", "text": slide.number, "size": ts.title, "bold": True,
+         "color": palette.accent},
+        {"prefix": "sec_title", "text": slide.title, "size": ts.header, "bold": True},
+    ], cx, cy, cw, ch, font, palette)
+
+
+def _layout_quote_opener(slide: QuoteOpenerSlide, cx, cy, cw, ch, font, ts, palette):
+    return _emphasis_stack([
+        {"prefix": "quote", "text": f'"{slide.quote}"', "size": ts.header,
+         "bold": False, "italic": True},
+        {"prefix": "attrib", "text": f"- {slide.attribution}", "size": ts.body,
+         "bold": False, "color": palette.muted},
+    ], cx, cy, cw, ch, font, palette)
+
+
+def _layout_big_number(slide: BigNumberSlide, cx, cy, cw, ch, font, ts, palette):
+    items = [
+        {"prefix": "value", "text": slide.value, "size": ts.title, "bold": True,
+         "color": palette.accent},
+        {"prefix": "label", "text": slide.label, "size": ts.header, "bold": False},
+    ]
+    if slide.context:
+        items.append({"prefix": "context", "text": slide.context, "size": ts.body,
+                      "bold": False, "color": palette.muted})
+    return _emphasis_stack(items, cx, cy, cw, ch, font, palette)
+
+
+def _layout_pull_quote(slide: PullQuoteSlide, cx, cy, cw, ch, font, ts, palette):
+    return _emphasis_stack([
+        {"prefix": "quote", "text": f'"{slide.quote}"', "size": ts.header, "bold": True},
+        {"prefix": "attrib", "text": f"- {slide.attribution}", "size": ts.body,
+         "bold": False, "color": palette.muted},
+    ], cx, cy, cw, ch, font, palette)
+
+
+def _layout_statement(slide: StatementSlide, cx, cy, cw, ch, font, ts, palette):
+    return _emphasis_stack([
+        {"prefix": "statement", "text": slide.text, "size": ts.title, "bold": True},
+    ], cx, cy, cw, ch, font, palette)
+
+
+def _layout_definition(slide: DefinitionSlide, cx, cy, cw, ch, font, ts, palette):
+    return _emphasis_stack([
+        {"prefix": "term", "text": slide.term, "size": ts.title, "bold": True,
+         "color": palette.accent},
+        {"prefix": "def", "text": slide.definition, "size": ts.body, "bold": False},
+    ], cx, cy, cw, ch, font, palette)
+
+
+def _layout_question(slide: QuestionSlide, cx, cy, cw, ch, font, ts, palette):
+    return _emphasis_stack([
+        {"prefix": "question", "text": slide.question, "size": ts.title, "bold": True},
+    ], cx, cy, cw, ch, font, palette)
+
+
+def _layout_agenda(slide: AgendaSlide, cx, cy, cw, ch, font, ts, palette):
+    """Title + a thin accent rule + a numbered list of items (top-aligned)."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+
+    title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+    nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
+                                 bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+    y += title_h + gap
+
+    # Thin accent rule under the title (the non-text media for this slide).
+    rule_h = int(0.07 * EMU_PER_INCH)
+    nodes.append(ResolvedNode(_nid("agenda_rule"), "box",
+                              Rect(cx, y, cw, rule_h), fill_color=palette.accent))
+    y += rule_h + gap
+
+    n = len(slide.items)
+    list_h = cy + ch - y
+    # Equal vertical slots per item; text sits at the top of each slot.
+    slot_h = max(1, (list_h - gap * max(0, n - 1)) // n) if n else list_h
+    item_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    num_w = int(1.0 * EMU_PER_INCH)
+    text_x = cx + num_w
+    text_w = cw - num_w
+    for i, item in enumerate(slide.items):
+        gid = f"agenda_{i}"
+        nodes.append(_make_text_node(_nid("ag_num"), f"{i + 1:02d}", font, ts.body,
+                                     bold=True, italic=False,
+                                     rect=Rect(cx, y, num_w, item_h),
+                                     group_id=gid, color=palette.accent))
+        nodes.append(_make_text_node(_nid("ag_item"), item, font, ts.body,
+                                     bold=False, italic=False,
+                                     rect=Rect(text_x, y, text_w, item_h),
+                                     group_id=gid))
+        y += slot_h + gap
+
+    return nodes
+
+
 # ── content list layout helper ────────────────────────────────────────────────
 
 
@@ -566,6 +740,7 @@ def _make_text_node(
     is_chrome: bool = False,
     is_caption: bool = False,
     group_id: Optional[str] = None,
+    color: Optional[str] = None,
 ) -> ResolvedNode:
     if lines is None:
         lines = wrap(text, font, size_pt, rect.w, bold=bold, italic=italic)
@@ -582,4 +757,5 @@ def _make_text_node(
         is_chrome=is_chrome,
         is_caption=is_caption,
         group_id=group_id,
+        text_color=color,
     )

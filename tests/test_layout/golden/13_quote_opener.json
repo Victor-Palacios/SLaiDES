@@ -1,0 +1,190 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_24",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Designing for Trust",
+          "lines": [
+            {
+              "text": "Designing for Trust",
+              "width_emu": 8343305,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "cambria",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "subtitle_25",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "A product philosophy",
+          "lines": [
+            {
+              "text": "A product philosophy",
+              "width_emu": 4669681,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "cambria",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_26",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 129282,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "cambria",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "quote-opener",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_29",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1661160,
+            "w": 128016,
+            "h": 2895600
+          },
+          "fill_color": "#7C4DFF"
+        },
+        {
+          "node_id": "quote_27",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 1661160,
+            "w": 10738104,
+            "h": 2011680
+          },
+          "text_content": "\"The best interface is the one that disappears the moment it earns your confidence.\"",
+          "lines": [
+            {
+              "text": "\"The best interface is the one that",
+              "width_emu": 9240217,
+              "height_emu": 640080,
+              "overflows": false
+            },
+            {
+              "text": "disappears the moment it earns your",
+              "width_emu": 9988488,
+              "height_emu": 640080,
+              "overflows": false
+            },
+            {
+              "text": "confidence.\"",
+              "width_emu": 3361358,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "cambria",
+          "size_pt": 42.0,
+          "bold": false,
+          "italic": true
+        },
+        {
+          "node_id": "attrib_28",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3947160,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "- Head of Product Design",
+          "lines": [
+            {
+              "text": "- Head of Product Design",
+              "width_emu": 5523371,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "cambria",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "text_color": "#8A8A9A"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_30",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 129282,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "cambria",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_59",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "A Question for the Room",
+          "lines": [
+            {
+              "text": "A Question for the Room",
+              "width_emu": 8988475,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "subtitle_60",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Before we look at the data",
+          "lines": [
+            {
+              "text": "Before we look at the data",
+              "width_emu": 5016934,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_61",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "question",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_63",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1691640,
+            "w": 128016,
+            "h": 2834640
+          },
+          "fill_color": "#00897B"
+        },
+        {
+          "node_id": "question_62",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 1691640,
+            "w": 10738104,
+            "h": 2834640
+          },
+          "text_content": "What would we build if we trusted our customers completely?",
+          "lines": [
+            {
+              "text": "What would we build if we",
+              "width_emu": 9439796,
+              "height_emu": 914400,
+              "overflows": false
+            },
+            {
+              "text": "trusted our customers",
+              "width_emu": 8087320,
+              "height_emu": 914400,
+              "overflows": false
+            },
+            {
+              "text": "completely?",
+              "width_emu": 4446240,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_64",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

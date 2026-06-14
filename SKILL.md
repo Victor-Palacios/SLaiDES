@@ -99,8 +99,16 @@ Each component compiles to a row/column tree; you fill typed slots.
 | `timeline` | `events[]` = `{date, title, description?}` | `title` |
 | `image-half-bleed` | `image` (image slot), `content[]` | `title`, `image_side: left\|right` |
 | `card-grid` | `cards[]` = `{title, body, icon?}` | `title` |
+| `section-divider` | `number`, `title` | — |
+| `agenda` | `items[]` (text) | `title` (default `Agenda`) |
+| `quote-opener` | `quote`, `attribution` | — |
+| `big-number` | `value`, `label` | `context` |
+| `pull-quote` | `quote`, `attribution` | — |
+| `statement` | `text` | — |
+| `definition` | `term`, `definition` | — |
+| `question` | `question` | — |
 
-Minimal examples of each live in `examples/01..10_*.yaml`; copy and adapt.
+Minimal examples of each live in `examples/01..18_*.yaml`; copy and adapt.
 
 ## Lint error codes and how to fix them
 

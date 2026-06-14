@@ -1,0 +1,18 @@
+version: 1
+theme:
+  palette:
+    primary: "#004D40"
+    surface: "#FFFFFF"
+    accent: "#00897B"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "A Question for the Room"
+    subtitle: "Before we look at the data"
+
+  - component: question
+    question: "What would we build if we trusted our customers completely?"

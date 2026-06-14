@@ -1,0 +1,19 @@
+version: 1
+theme:
+  palette:
+    primary: "#3E2723"
+    surface: "#FFFFFF"
+    accent: "#C2571A"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: cambria
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Voices From the Field"
+    subtitle: "Customer research, Q2"
+
+  - component: pull-quote
+    quote: "We stopped buying tools and started buying outcomes."
+    attribution: "VP of Engineering, enterprise customer"
