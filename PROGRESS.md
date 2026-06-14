@@ -92,3 +92,21 @@ All agent edits go inside that tree and are validated with
 - [x] Document Generator compatibility shim note — delegation note added to `integrations/agency-agents/specialized/specialized-document-generator.md` PPTX section (PDF/DOCX/XLSX paths untouched)
 - [x] ACCEPTANCE: outline → lint-clean .pptx, zero screenshot calls — `tests/test_integration/test_agency_pipeline.py::TestOutlineBuildsCleanWithoutRendering`: `slidekit build` exits 0, empty lint-error list, build path shells out to no render tool (subprocess guarded), and deck components match the outline fixture (4 tests; commit 2749067)
 - [x] ACCEPTANCE: end-to-end orchestrated run — theme block round-trips into emitted colors/fonts exactly — `TestThemeRoundTrip`: reopened `.pptx` surface/font/text/muted equal the theme block parsed from `deck.yaml` exactly (3 tests; commit 2749067)
+
+## Phase 9 — 40-design library (operator-directed scope expansion, 2026-06-14)
+
+Goal: grow the component library from 8 to **40 core slide designs**. Full
+blueprint and per-design integration points in `docs/SLIDE_DESIGNS.md`. Build the
+32 new designs in catalog order; each ships model + layout handler + dispatch
+branch + golden test + example deck + SKILL gallery row, lint-clean, before the
+next. (Research reconciliation pending — chatgpt.com/grok.com blocked by egress.)
+
+- [ ] B/C openers+emphasis: section-divider, agenda, quote-opener, big-number, pull-quote, statement, definition, question
+- [ ] C lists: bullet-list, feature-list, checklist, numbered-steps
+- [ ] D comparison: before-after, pros-cons, this-vs-that
+- [ ] E data: kpi-grid, chart-slide, chart-with-insight, table-slide, metric-comparison
+- [ ] F process/shape: process-steps, roadmap, funnel, pyramid, matrix-2x2, swot
+- [ ] G/H structure+visual: comparison-matrix, team-grid, image-full-bleed, image-grid, logo-wall, testimonial
+- [ ] ACCEPTANCE: each new design has a golden-file layout test + a lint-clean example deck
+- [ ] ACCEPTANCE: SKILL.md component gallery lists all 40; `slidekit schema` validates every new component
+- [ ] ACCEPTANCE: full test suite green; verify harness passes on all new example decks

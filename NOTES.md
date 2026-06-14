@@ -67,3 +67,19 @@ is followed anyway.
 ## Proposals
 
 (none yet)
+
+## Phase 9 scope expansion + research-access blocker (2026-06-14, operator-directed)
+
+- **Scope expansion beyond original PLAN.md.** The operator directed growing the
+  component library from 8 to **40 core slide designs**. This is past the v1 plan's
+  scope, so per work rule 6 it is recorded here; it is operator-authorized, not an
+  unsanctioned addition. Blueprint: `docs/SLIDE_DESIGNS.md`; tracked as Phase 9 in
+  PROGRESS.md; build instructions appended to NIGHTLY_PROMPT.md.
+
+- **Research sources unreachable.** The operator provided a ChatGPT share and a Grok
+  share to inform the 40-design catalog. The execution environment's network egress
+  allowlist blocks `chatgpt.com` and `grok.com` ("Host not in allowlist"), so neither
+  WebFetch nor curl can read them. The catalog was therefore built from established
+  presentation-design practice. To integrate the research, add those hosts to the
+  environment's egress settings (see code.claude.com/docs/en/claude-code-on-the-web)
+  or paste the content; then reconcile against docs/SLIDE_DESIGNS.md.

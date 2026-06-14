@@ -85,3 +85,24 @@ Work them in order:
    assert the emitted RGB/fonts equal the theme block exactly (extend the existing
    round-trip test style).
 Never render slides to images for QA — the Deck Builder contract forbids it.
+
+=== PHASE 9 ADDENDUM (added 2026-06-14; branch main) ===
+Phases 0-8 are COMPLETE (the Phase 8 addendum above is historical, merged to main).
+Current work is PHASE 9: grow the component library to 40 core slide designs.
+Work on branch `main` (now the default). Commit and push there.
+
+- Read `docs/SLIDE_DESIGNS.md` — the catalog of all 40 designs and the exact
+  integration points. Build the 32 unbuilt designs in catalog order (skip the 8
+  already shipped). Track against PROGRESS.md "Phase 9".
+- Each design ships COMPLETE before the next: (1) Pydantic model in
+  src/slidekit/ir/models.py (+ add to the slide Union); (2) `_layout_<key>` handler
+  in src/slidekit/layout/engine.py + an `elif comp == "<key>"` dispatch branch;
+  (3) golden test in tests/test_layout/golden/ + an example deck in examples/;
+  (4) a SKILL.md component-gallery row. Add lint rules only if a design needs one.
+- Every example deck must build LINT-CLEAN; run the full test suite before checking
+  anything off; never render slides for QA. Aim ~4-6 designs per session.
+- Deterministic only: render funnels/pyramids/quadrants as measured colored
+  rectangles with text — never freehand connectors — so the linter still proves fit.
+- RESEARCH NOTE: two sources (chatgpt.com, grok.com shares) were meant to inform the
+  catalog but are blocked by the network egress allowlist. If they become reachable,
+  diff them against docs/SLIDE_DESIGNS.md and adjust; otherwise build the catalog as-is.
