@@ -55,6 +55,15 @@ AestheticScore(deck)  = mean(slide scores) · CrossSlideConsistency
 ```
 Report per-slide and per-deck on a 0–100 scale with the sub-metric breakdown.
 
+> **Design note (ref #10, Harrington et al., DocEng 2004).** Harrington combines
+> geometric layout measures **non-linearly** so that a single bad feature (e.g. one
+> overlap or a badly broken margin) dominates rather than being averaged away. When
+> Phase 10 is built, offer a configurable aggregation mode alongside the weighted
+> sum above — e.g. a penalty/min-skewed combiner `100 · Π subscore_i^{w_i}` or
+> `min`-biased mean — so a deck with one severe flaw cannot score well on the
+> strength of the others. Default weights/mode stay documented and calibration
+> DEFERRED (see below).
+
 ## How it surfaces (deterministic, CI-friendly)
 
 - `slidekit score deck.yaml --json` — per-slide + deck score with sub-metric
