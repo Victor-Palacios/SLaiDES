@@ -106,3 +106,16 @@ Work on branch `main` (now the default). Commit and push there.
 - RESEARCH NOTE: two sources (chatgpt.com, grok.com shares) were meant to inform the
   catalog but are blocked by the network egress allowlist. If they become reachable,
   diff them against docs/SLIDE_DESIGNS.md and adjust; otherwise build the catalog as-is.
+
+=== PHASE 10 ADDENDUM (added 2026-06-14; branch main) ===
+After Phase 9 (40-design library) is complete, build PHASE 10: a deterministic
+aesthetic scoring layer. Read `docs/AESTHETICS.md` for the full spec, metric
+definitions, and research lineage. Key rules:
+- Compute every metric over the ResolvedDeck geometry + theme colors only — NO
+  rendering, NO vision (same thesis as the linter). Must be deterministic.
+- Ship `slidekit/aesthetics/` + `slidekit score deck.yaml --json` + advisory
+  `W_AESTH_*` warnings. Warnings NEVER block the build; the linter stays the gate.
+- Unit-test each metric on hand-checked fixtures; assert two-run determinism.
+- Do NOT claim correlation with human judgment — that needs a labeled slide-pair
+  dataset slidekit doesn't have. Ship default weights with documented rationale;
+  mark calibration as DEFERRED in PROGRESS.md.

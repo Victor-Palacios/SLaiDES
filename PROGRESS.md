@@ -110,3 +110,20 @@ next. (Research reconciliation pending — chatgpt.com/grok.com blocked by egres
 - [ ] ACCEPTANCE: each new design has a golden-file layout test + a lint-clean example deck
 - [ ] ACCEPTANCE: SKILL.md component gallery lists all 40; `slidekit schema` validates every new component
 - [ ] ACCEPTANCE: full test suite green; verify harness passes on all new example decks
+
+## Phase 10 — computational aesthetics (operator-directed, 2026-06-14)
+
+Add a deterministic **aesthetic scoring** layer over the ResolvedDeck — balance,
+alignment, whitespace, non-overlap, contrast, color harmony, info density, visual
+hierarchy, cross-slide consistency — turning "no defects" into a graded 0–100 score,
+still computed from source geometry (no rendering, no vision). Full spec + metric
+definitions + research lineage in `docs/AESTHETICS.md`. Advisory only (warnings +
+score); the linter remains the gate.
+
+- [ ] `slidekit/aesthetics/` module: per-metric functions over ResolvedDeck (balance, alignment, whitespace, non-overlap, contrast, color-harmony, density, hierarchy)
+- [ ] Deck-level cross-slide consistency metric
+- [ ] Composite `AestheticScore` (configurable weights) + `slidekit score deck.yaml --json` CLI
+- [ ] Advisory `W_AESTH_*` warnings below thresholds (never block the build)
+- [ ] ACCEPTANCE: deterministic (two runs identical) + unit tests per metric on hand-checked fixtures
+- [ ] ACCEPTANCE: every Phase 9 example deck clears a documented baseline score
+- [ ] DEFERRED (data-dependent): weight calibration against a human-labeled slide-pair set; do NOT claim human correlation until then

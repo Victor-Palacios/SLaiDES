@@ -83,3 +83,16 @@ is followed anyway.
   presentation-design practice. To integrate the research, add those hosts to the
   environment's egress settings (see code.claude.com/docs/en/claude-code-on-the-web)
   or paste the content; then reconcile against docs/SLIDE_DESIGNS.md.
+
+## Phase 10: computational-aesthetics research integrated (2026-06-14, operator-provided)
+
+- The operator pasted a research synthesis (the chatgpt.com/grok.com shares being
+  egress-blocked) arguing slide aesthetics are mathematically definable/measurable.
+  Integrated as Phase 10: a deterministic aesthetic scoring layer over the
+  ResolvedDeck (balance, alignment, whitespace, non-overlap, contrast, color
+  harmony, density, hierarchy, cross-slide consistency). Spec: `docs/AESTHETICS.md`.
+- Fit rationale: slidekit already computes exact element geometry, so these metrics
+  are arithmetic over existing data — no screenshots, consistent with the project
+  thesis. Scoring is ADVISORY (warnings + 0–100 score); the linter remains the gate.
+- Honesty guard recorded in the spec: do not claim human-judgment correlation
+  without a labeled slide-pair dataset (calibration deferred).
