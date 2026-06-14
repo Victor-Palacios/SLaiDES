@@ -151,9 +151,11 @@ def _check_slide(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
 
     # ── Warnings ──────────────────────────────────────────────────────────────
 
-    # W_TEXT_ONLY — text-only slide (no image/chart/icon).
+    # W_TEXT_ONLY — text-only slide (no image/chart/icon/shape).
     slot_types = {n.slot_type for n in slide.nodes if n.slot_type}
-    has_media = bool(slot_types & {"image", "chart", "icon"})
+    has_media = bool(slot_types & {"image", "chart", "icon"}) or any(
+        n.node_type == "box" for n in slide.nodes
+    )
     if not has_media and slide.component not in ("title-slide",):
         issues.append(LintIssue(
             code="W_TEXT_ONLY",
@@ -275,6 +277,12 @@ def _check_overlaps(nodes: list[ResolvedNode], slide: ResolvedSlide) -> list[Lin
     issues = []
     for i, a in enumerate(nodes):
         for b in nodes[i + 1:]:
+            # Skip pairs sharing the same non-None group_id: these are an
+            # intentional stack (e.g. a text label sitting on its background box,
+            # or sub-elements of one card). The plan exempts intentional stacks
+            # from E_OVERLAP.
+            if a.group_id is not None and a.group_id == b.group_id:
+                continue
             if a.rect.intersects(b.rect):
                 issues.append(LintIssue(
                     code="E_OVERLAP",

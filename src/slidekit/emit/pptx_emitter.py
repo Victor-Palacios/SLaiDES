@@ -90,13 +90,31 @@ def emit_pptx(
 
 def _emit_node(slide, node: "ResolvedNode", palette) -> None:
     rect = node.rect
-    if node.node_type == "text":
+    if node.node_type == "box":
+        _emit_box(slide, node, palette)
+    elif node.node_type == "text":
         _emit_text(slide, node, palette)
     elif node.node_type == "icon":
         _emit_icon(slide, node, palette)
     elif node.node_type == "image":
         _emit_image(slide, node)
     # spacer: no visual output
+
+
+def _emit_box(slide, node: "ResolvedNode", palette) -> None:
+    """Emit a filled rectangle for deterministic shape designs (funnel, pyramid,
+    matrix, swot, etc.). Fill comes from node.fill_color (a literal hex resolved
+    from a palette role at layout time); falls back to the theme primary."""
+    rect = node.rect
+    shape = slide.shapes.add_shape(
+        MSO_SHAPE.RECTANGLE, Emu(rect.x), Emu(rect.y), Emu(rect.w), Emu(rect.h)
+    )
+    hex_color = node.fill_color or palette.primary
+    r, g, b = _hex_to_rgb(hex_color)
+    shape.fill.solid()
+    shape.fill.fore_color.rgb = RGBColor(r, g, b)
+    shape.line.fill.background()  # no border
+    shape.shadow.inherit = False
 
 
 def _emit_text(slide, node: "ResolvedNode", palette) -> None:
@@ -112,8 +130,11 @@ def _emit_text(slide, node: "ResolvedNode", palette) -> None:
     tf.margin_top = Emu(INSET_TOP_EMU)
     tf.margin_bottom = Emu(INSET_BOTTOM_EMU)
 
-    # Color: chrome and caption-tier nodes use muted; everything else uses text.
-    if node.is_chrome or node.is_caption:
+    # Color precedence: an explicit text_color override (e.g. a label sitting on a
+    # dark shape) wins; otherwise chrome/caption use muted and the rest use text.
+    if node.text_color:
+        hex_color = node.text_color
+    elif node.is_chrome or node.is_caption:
         hex_color = palette.muted
     else:
         hex_color = palette.text

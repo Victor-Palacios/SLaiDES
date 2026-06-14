@@ -59,6 +59,10 @@ class ResolvedNode:
     group_id: Optional[str] = None
     component: Optional[str] = None
     slot_type: Optional[str] = None
+    # box nodes carry a literal fill color (resolved from a palette role at layout
+    # time); text nodes may override their default color with text_color.
+    fill_color: Optional[str] = None
+    text_color: Optional[str] = None
 
     def to_dict(self) -> dict:
         d: dict = {
@@ -93,6 +97,10 @@ class ResolvedNode:
             d["component"] = self.component
         if self.slot_type:
             d["slot_type"] = self.slot_type
+        if self.fill_color:
+            d["fill_color"] = self.fill_color
+        if self.text_color:
+            d["text_color"] = self.text_color
         if self.children:
             d["children"] = [c.to_dict() for c in self.children]
         return d
