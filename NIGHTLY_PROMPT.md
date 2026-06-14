@@ -140,3 +140,14 @@ mathematical / computational slide aesthetics:
 - In the nightly report, note references added and the running count vs the ~20 target.
 - Once ~20 verified references are reached, stop growing the list; thereafter add only
   genuinely novel, high-quality works and focus on integration + calibration.
+
+=== BRANCH POLICY (added 2026-06-14; OVERRIDES any "branch main" mention above) ===
+Work on and push to the branch THIS session is checked out on — do NOT switch
+branches, and do NOT try to move work onto a different branch. Use `git push origin
+HEAD`. Scheduled (cron) runs check out the repository default branch, which is
+currently `claude/busy-rubin-mzpvfu`; building and pushing there is correct.
+Manual dispatches build on whatever ref was chosen. The earlier addenda say "branch
+main" only because that was the default at the time; treat the checked-out branch as
+authoritative. (The state files — PROGRESS.md, NIGHTLY_PROMPT.md, docs/ — are kept
+identical across `main` and `claude/busy-rubin-mzpvfu`, so either branch is a valid,
+current base.)
