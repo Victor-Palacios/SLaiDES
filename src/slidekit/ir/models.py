@@ -319,6 +319,42 @@ class NumberedStepsSlide(BaseModel):
     steps: list[Step] = Field(min_length=1)
 
 
+# ── Phase 9: comparison (catalog #17–19) ──────────────────────────────────────
+
+
+class BeforeAfterState(BaseModel):
+    title: str
+    items: list[str] = Field(min_length=1)
+
+
+class BeforeAfterSlide(BaseModel):
+    component: Literal["before-after"]
+    title: Optional[str] = None
+    before: BeforeAfterState
+    after: BeforeAfterState
+
+
+class ProsConsSlide(BaseModel):
+    component: Literal["pros-cons"]
+    title: Optional[str] = None
+    pros_title: str = "Pros"
+    cons_title: str = "Cons"
+    pros: list[str] = Field(min_length=1)
+    cons: list[str] = Field(min_length=1)
+
+
+class VersusSide(BaseModel):
+    value: str
+    label: str
+
+
+class ThisVsThatSlide(BaseModel):
+    component: Literal["this-vs-that"]
+    title: Optional[str] = None
+    left: VersusSide
+    right: VersusSide
+
+
 Slide = Annotated[
     Union[
         TitleSlide,
@@ -341,6 +377,9 @@ Slide = Annotated[
         FeatureListSlide,
         ChecklistSlide,
         NumberedStepsSlide,
+        BeforeAfterSlide,
+        ProsConsSlide,
+        ThisVsThatSlide,
     ],
     Field(discriminator="component"),
 ]

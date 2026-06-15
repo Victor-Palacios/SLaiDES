@@ -1,0 +1,28 @@
+version: 1
+theme:
+  palette:
+    primary: "#1B4F8A"
+    surface: "#FFFFFF"
+    accent: "#E84545"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: calibri
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Build vs Buy"
+    subtitle: "Weighing the trade-offs"
+
+  - component: pros-cons
+    title: "Building It In-House"
+    pros_title: "Pros"
+    cons_title: "Cons"
+    pros:
+      - "Full control of the roadmap"
+      - "No per-seat licensing"
+      - "Tailored to our workflow"
+    cons:
+      - "Months of lead time"
+      - "Ongoing maintenance burden"
+      - "Hiring specialised staff"

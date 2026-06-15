@@ -1,0 +1,24 @@
+version: 1
+theme:
+  palette:
+    primary: "#0D47A1"
+    surface: "#FFFFFF"
+    accent: "#F57F17"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "This vs That"
+    subtitle: "Two numbers, head to head"
+
+  - component: this-vs-that
+    title: "Cloud or On-Prem"
+    left:
+      value: "3 wks"
+      label: "Cloud time-to-launch"
+    right:
+      value: "6 mo"
+      label: "On-prem time-to-launch"

@@ -104,8 +104,8 @@ next. (Research reconciliation pending — chatgpt.com/grok.com blocked by egres
 - [x] B/C openers+emphasis: section-divider, agenda, quote-opener, big-number, pull-quote, statement, definition, question (8 designs; models + `_layout_*` handlers + dispatch + goldens 11–18 + examples + SKILL rows; all lint-clean, golden tests pass; commit c60079b, 2026-06-14)
 - [x] C lists: bullet-list, feature-list, checklist, numbered-steps (4 designs; models + handlers + dispatch + goldens 19–22 + examples + SKILL rows; all lint-clean, suite green; commit f54b7f8, 2026-06-14)
 
-_Phase 9 running tally: **20 of 40** designs shipped (8 v1 + 12 on 2026-06-14). Remaining groups: D comparison, E data, F process/shape, G/H structure+visual._
-- [ ] D comparison: before-after, pros-cons, this-vs-that
+_Phase 9 running tally: **23 of 40** designs shipped (8 v1 + 12 on 2026-06-14 + 3 on 2026-06-15). Remaining groups: E data, F process/shape, G/H structure+visual._
+- [x] D comparison: before-after, pros-cons, this-vs-that (3 designs; models + `_layout_*` handlers + dispatch + goldens 23–25 + examples + SKILL rows; all lint-clean, suite green, schema validates; 2026-06-15)
 - [ ] E data: kpi-grid, chart-slide, chart-with-insight, table-slide, metric-comparison
 - [ ] F process/shape: process-steps, roadmap, funnel, pyramid, matrix-2x2, swot
 - [ ] G/H structure+visual: comparison-matrix, team-grid, image-full-bleed, image-grid, logo-wall, testimonial

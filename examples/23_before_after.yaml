@@ -1,0 +1,30 @@
+version: 1
+theme:
+  palette:
+    primary: "#243A5E"
+    surface: "#FFFFFF"
+    accent: "#2E8B57"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Before & After"
+    subtitle: "What the migration changed"
+
+  - component: before-after
+    title: "Onboarding, Reworked"
+    before:
+      title: "Before"
+      items:
+        - "Manual account setup"
+        - "Three-day approval wait"
+        - "Email-only support"
+    after:
+      title: "After"
+      items:
+        - "One-click provisioning"
+        - "Same-day approval"
+        - "In-product live chat"

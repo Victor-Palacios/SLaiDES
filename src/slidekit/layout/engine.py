@@ -15,6 +15,7 @@ from typing import Optional
 
 from slidekit.ir.models import (
     AgendaSlide,
+    BeforeAfterSlide,
     BigNumberSlide,
     BulletListSlide,
     CardGridSlide,
@@ -26,12 +27,14 @@ from slidekit.ir.models import (
     IconTextRowsSlide,
     ImageHalfBleedSlide,
     NumberedStepsSlide,
+    ProsConsSlide,
     PullQuoteSlide,
     QuestionSlide,
     QuoteOpenerSlide,
     SectionDividerSlide,
     StatCalloutSlide,
     StatementSlide,
+    ThisVsThatSlide,
     TimelineSlide,
     TitleSlide,
     TwoColumnSlide,
@@ -176,6 +179,12 @@ def _resolve_slide(
         nodes = _layout_checklist(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "numbered-steps":
         nodes = _layout_numbered_steps(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "before-after":
+        nodes = _layout_before_after(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "pros-cons":
+        nodes = _layout_pros_cons(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "this-vs-that":
+        nodes = _layout_this_vs_that(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     else:
         nodes = []
 
@@ -800,6 +809,135 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
                                      rect=Rect(text_x, y + heading_h + inner, text_w, body_h),
                                      group_id=gid))
         y += slot_h + gap
+    return nodes
+
+
+# ── Phase 9: comparison (catalog #17–19) ──────────────────────────────────────
+
+
+def _panel_items(nodes, items, x, y, w, h, font, ts, marker_color, prefix):
+    """Render a bulleted column of items with square box markers (no glyph bullets).
+
+    Each marker+text pair shares a group_id so the intentional marker-on-text row is
+    exempt from E_GAP/E_OVERLAP while the linter still proves each row fits."""
+    gap = GAP_MIN_EMU
+    n = len(items)
+    slot_h = max(1, (h - gap * max(0, n - 1)) // n)
+    line_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    marker = int(0.18 * EMU_PER_INCH)
+    text_x = x + int(0.4 * EMU_PER_INCH)
+    text_w = w - int(0.4 * EMU_PER_INCH)
+    cur = y
+    for i, item in enumerate(items):
+        gid = f"{prefix}_{i}"
+        # Size each item box to its wrapped height (column is narrow → items may
+        # wrap), capped at the slot so consecutive rows never collide.
+        lines = wrap(item, font, ts.body, text_w)
+        item_h = min(slot_h, max(line_h, total_text_height_emu(lines)))
+        my = cur + (line_h - marker) // 2
+        nodes.append(ResolvedNode(_nid(f"{prefix}_mark"), "box", Rect(x, my, marker, marker),
+                                  fill_color=marker_color, group_id=gid))
+        nodes.append(_make_text_node(_nid(f"{prefix}_item"), item, font, ts.body,
+                                     bold=False, italic=False,
+                                     rect=Rect(text_x, cur, text_w, item_h), lines=lines,
+                                     group_id=gid))
+        cur += slot_h + gap
+
+
+def _two_panel_list(title, left_head, left_items, left_color,
+                    right_head, right_items, right_color,
+                    cx, cy, cw, ch, font, ts, palette):
+    """Two side-by-side titled bullet columns. Headings carry the panel's accent/muted
+    colour to signal the contrast (e.g. before↔after, pros↔cons); item text stays in
+    the default colour for readability. The markers are the non-text media."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+    if title:
+        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+        nodes.append(_make_text_node(_nid("title"), title, font, ts.header, bold=True,
+                                     italic=False, rect=Rect(cx, y, cw, title_h),
+                                     color=palette.primary))
+        y += title_h + gap
+
+    col_w = (cw - gap) // 2
+    right_x = cx + col_w + gap
+    head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+    nodes.append(_make_text_node(_nid("lp_head"), left_head, font, ts.body, bold=True,
+                                 italic=False, rect=Rect(cx, y, col_w, head_h),
+                                 color=left_color))
+    nodes.append(_make_text_node(_nid("rp_head"), right_head, font, ts.body, bold=True,
+                                 italic=False, rect=Rect(right_x, y, col_w, head_h),
+                                 color=right_color))
+    items_y = y + head_h + gap
+    items_h = cy + ch - items_y
+    _panel_items(nodes, left_items, cx, items_y, col_w, items_h, font, ts, left_color, "lp")
+    _panel_items(nodes, right_items, right_x, items_y, col_w, items_h, font, ts, right_color, "rp")
+    return nodes
+
+
+def _layout_before_after(slide: BeforeAfterSlide, cx, cy, cw, ch, font, ts, palette):
+    """Two states head-to-head: the 'before' panel muted, the 'after' panel accent —
+    a deterministic before→after improvement read."""
+    return _two_panel_list(
+        slide.title,
+        slide.before.title, slide.before.items, palette.muted,
+        slide.after.title, slide.after.items, palette.accent,
+        cx, cy, cw, ch, font, ts, palette,
+    )
+
+
+def _layout_pros_cons(slide: ProsConsSlide, cx, cy, cw, ch, font, ts, palette):
+    """Pros (accent) vs cons (muted), each a bulleted column."""
+    return _two_panel_list(
+        slide.title,
+        slide.pros_title, slide.pros, palette.accent,
+        slide.cons_title, slide.cons, palette.muted,
+        cx, cy, cw, ch, font, ts, palette,
+    )
+
+
+def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palette):
+    """Two headline numbers head-to-head with a central VS badge (a measurable box
+    with the text 'VS' on top — also the slide's non-text media)."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = cy
+    if slide.title:
+        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header, bold=True,
+                                     italic=False, rect=Rect(cx, y, cw, title_h),
+                                     color=palette.primary))
+        y += title_h + gap
+
+    badge = int(0.9 * EMU_PER_INCH)
+    col_w = (cw - badge - 2 * gap) // 2
+    left_x = cx
+    right_x = cx + col_w + gap + badge + gap
+    content_h = cy + ch - y
+
+    value_h = int(ts.title * LINE_SPACING_SINGLE * EMU_PER_PT)
+    label_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    block_h = value_h + gap + label_h
+    inner_y = y + max(0, (content_h - block_h) // 2)
+
+    for px, side, color in ((left_x, slide.left, palette.accent),
+                            (right_x, slide.right, palette.primary)):
+        nodes.append(_make_text_node(_nid("vs_value"), side.value, font, ts.title, bold=True,
+                                     italic=False, rect=Rect(px, inner_y, col_w, value_h),
+                                     color=color))
+        nodes.append(_make_text_node(_nid("vs_label"), side.label, font, ts.body, bold=False,
+                                     italic=False,
+                                     rect=Rect(px, inner_y + value_h + gap, col_w, label_h)))
+
+    # Central VS badge, vertically centred on the value line.
+    badge_x = cx + (cw - badge) // 2
+    badge_y = inner_y + max(0, (value_h - badge) // 2)
+    nodes.append(ResolvedNode(_nid("vs_badge"), "box", Rect(badge_x, badge_y, badge, badge),
+                              fill_color=palette.accent, group_id="vs_badge"))
+    nodes.append(_make_text_node(_nid("vs_text"), "VS", font, ts.body, bold=True,
+                                 italic=False, rect=Rect(badge_x, badge_y, badge, badge),
+                                 group_id="vs_badge", color=palette.surface))
     return nodes
 
 

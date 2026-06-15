@@ -1,0 +1,276 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_39",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "This vs That",
+          "lines": [
+            {
+              "text": "This vs That",
+              "width_emu": 4445868,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0D47A1"
+        },
+        {
+          "node_id": "subtitle_40",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Two numbers, head to head",
+          "lines": [
+            {
+              "text": "Two numbers, head to head",
+              "width_emu": 5353013,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_41",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "this-vs-that",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_42",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Cloud or On-Prem",
+          "lines": [
+            {
+              "text": "Cloud or On-Prem",
+              "width_emu": 4593282,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0D47A1"
+        },
+        {
+          "node_id": "vs_value_43",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2776728,
+            "w": 4953000,
+            "h": 914400
+          },
+          "text_content": "3 wks",
+          "lines": [
+            {
+              "text": "3 wks",
+              "width_emu": 2075780,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#F57F17"
+        },
+        {
+          "node_id": "vs_label_44",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3965448,
+            "w": 4953000,
+            "h": 518159
+          },
+          "text_content": "Cloud time-to-launch",
+          "lines": [
+            {
+              "text": "Cloud time-to-launch",
+              "width_emu": 3984030,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "vs_value_45",
+          "node_type": "text",
+          "rect": {
+            "x": 6781800,
+            "y": 2776728,
+            "w": 4953000,
+            "h": 914400
+          },
+          "text_content": "6 mo",
+          "lines": [
+            {
+              "text": "6 mo",
+              "width_emu": 1778496,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0D47A1"
+        },
+        {
+          "node_id": "vs_label_46",
+          "node_type": "text",
+          "rect": {
+            "x": 6781800,
+            "y": 3965448,
+            "w": 4953000,
+            "h": 518159
+          },
+          "text_content": "On-prem time-to-launch",
+          "lines": [
+            {
+              "text": "On-prem time-to-launch",
+              "width_emu": 4559412,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "vs_badge_47",
+          "node_type": "box",
+          "rect": {
+            "x": 5684520,
+            "y": 2822448,
+            "w": 822960,
+            "h": 822960
+          },
+          "group_id": "vs_badge",
+          "fill_color": "#F57F17"
+        },
+        {
+          "node_id": "vs_text_48",
+          "node_type": "text",
+          "rect": {
+            "x": 5684520,
+            "y": 2822448,
+            "w": 822960,
+            "h": 822960
+          },
+          "text_content": "VS",
+          "lines": [
+            {
+              "text": "VS",
+              "width_emu": 576014,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "vs_badge",
+          "text_color": "#FFFFFF"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_49",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

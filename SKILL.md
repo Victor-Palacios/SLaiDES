@@ -111,6 +111,9 @@ Each component compiles to a row/column tree; you fill typed slots.
 | `feature-list` | `features[]` = `{icon, heading, body}` (≤3 keeps ≥32pt) | `title` |
 | `checklist` | `title`, `items[]` = `{text, checked?}` | — |
 | `numbered-steps` | `title`?, `steps[]` = `{title, body}` (≤3) | `title` |
+| `before-after` | `before`/`after` = `{title, items[]}` (≤3 each) | `title` |
+| `pros-cons` | `pros[]`, `cons[]` (≤3 each) | `title`, `pros_title`, `cons_title` |
+| `this-vs-that` | `left`/`right` = `{value, label}` | `title` |
 
 Minimal examples of each live in `examples/01..22_*.yaml`; copy and adapt.
 
