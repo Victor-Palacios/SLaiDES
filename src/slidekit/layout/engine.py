@@ -220,7 +220,7 @@ def _layout_title_slide(slide: TitleSlide, cx, cy, cw, ch, font, ts, palette) ->
     title_rect = Rect(cx + pad, title_y, cw - 2 * pad, title_h)
     nodes.append(
         _make_text_node(_nid("title"), slide.title, font, ts.title, bold=True,
-                        italic=False, rect=title_rect)
+                        italic=False, rect=title_rect, color=palette.primary)
     )
 
     if slide.subtitle:
@@ -244,7 +244,8 @@ def _layout_two_column(slide: TwoColumnSlide, cx, cy, cw, ch, font, ts, palette)
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         title_rect = Rect(cx, y, cw, title_h)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                     bold=True, italic=False, rect=title_rect))
+                                     bold=True, italic=False, rect=title_rect,
+                                     color=palette.primary))
         y += title_h + gap
 
     col_h = cy + ch - y
@@ -256,8 +257,8 @@ def _layout_two_column(slide: TwoColumnSlide, cx, cy, cw, ch, font, ts, palette)
     left_x = cx
     right_x = cx + left_w + gap
 
-    left_node = _layout_content_list(slide.left, "left_col", left_x, y, left_w, col_h, font, ts)
-    right_node = _layout_content_list(slide.right, "right_col", right_x, y, right_w, col_h, font, ts)
+    left_node = _layout_content_list(slide.left, "left_col", left_x, y, left_w, col_h, font, ts, palette)
+    right_node = _layout_content_list(slide.right, "right_col", right_x, y, right_w, col_h, font, ts, palette)
     nodes.extend(left_node)
     nodes.extend(right_node)
     return nodes
@@ -271,7 +272,8 @@ def _layout_icon_text_rows(slide: IconTextRowsSlide, cx, cy, cw, ch, font, ts, p
     if slide.title:
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
+                                     color=palette.primary))
         y += title_h + gap
 
     if not slide.rows:
@@ -287,7 +289,8 @@ def _layout_icon_text_rows(slide: IconTextRowsSlide, cx, cy, cw, ch, font, ts, p
     for row in slide.rows:
         icon_rect = Rect(cx, y + (row_h - icon_size) // 2, icon_size, icon_size)
         nodes.append(ResolvedNode(_nid("icon"), "icon", icon_rect,
-                                  slot_type="icon", text_content=row.icon))
+                                  slot_type="icon", text_content=row.icon,
+                                  fill_color=palette.accent))
 
         heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
         body_h = row_h - heading_h - gap
@@ -310,7 +313,8 @@ def _layout_stat_callout(slide: StatCalloutSlide, cx, cy, cw, ch, font, ts, pale
     if slide.title:
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
+                                     color=palette.primary))
         y += title_h + gap
 
     n_stats = len(slide.stats)
@@ -326,7 +330,8 @@ def _layout_stat_callout(slide: StatCalloutSlide, cx, cy, cw, ch, font, ts, pale
         inner_y = y + (stat_h - value_h - label_h - sub_h - gap * 2) // 2
         nodes.append(_make_text_node(_nid("stat_value"), stat.value, font, ts.title,
                                      bold=True, italic=False,
-                                     rect=Rect(sx, inner_y, stat_w, value_h)))
+                                     rect=Rect(sx, inner_y, stat_w, value_h),
+                                     color=palette.accent))
         nodes.append(_make_text_node(_nid("stat_label"), stat.label, font, ts.body,
                                      bold=False, italic=False,
                                      rect=Rect(sx, inner_y + value_h + gap, stat_w, label_h)))
@@ -347,7 +352,8 @@ def _layout_comparison_columns(slide: ComparisonColumnsSlide, cx, cy, cw, ch, fo
     if slide.title:
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
+                                     color=palette.primary))
         y += title_h + gap
 
     col_w = (cw - gap) // 2
@@ -357,9 +363,11 @@ def _layout_comparison_columns(slide: ComparisonColumnsSlide, cx, cy, cw, ch, fo
     # Column headings.
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     nodes.append(_make_text_node(_nid("left_head"), slide.left_title, font, ts.body,
-                                 bold=True, italic=False, rect=Rect(cx, y, col_w, head_h)))
+                                 bold=True, italic=False, rect=Rect(cx, y, col_w, head_h),
+                                 color=palette.primary))
     nodes.append(_make_text_node(_nid("right_head"), slide.right_title, font, ts.body,
-                                 bold=True, italic=False, rect=Rect(right_x, y, col_w, head_h)))
+                                 bold=True, italic=False, rect=Rect(right_x, y, col_w, head_h),
+                                 color=palette.primary))
     y += head_h + gap
 
     # Items — use available space divided by item count to stay within canvas.
@@ -392,7 +400,8 @@ def _layout_timeline(slide: TimelineSlide, cx, cy, cw, ch, font, ts, palette) ->
     if slide.title:
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
+                                     color=palette.primary))
         y += title_h + gap
 
     if not slide.events:
@@ -411,9 +420,9 @@ def _layout_timeline(slide: TimelineSlide, cx, cy, cw, ch, font, ts, palette) ->
         ey = y
 
         nodes.append(_make_text_node(_nid("ev_date"), event.date, font, ts.caption,
-                                     bold=False, italic=False,
+                                     bold=True, italic=False,
                                      rect=Rect(ex, ey, event_w, date_h),
-                                     is_caption=True))
+                                     is_caption=True, color=palette.accent))
         ey += date_h + gap
         nodes.append(_make_text_node(_nid("ev_title"), event.title, font, ts.body,
                                      bold=True, italic=False,
@@ -435,7 +444,8 @@ def _layout_image_half_bleed(slide: ImageHalfBleedSlide, cx, cy, cw, ch, font, t
     if slide.title:
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
+                                     color=palette.primary))
         y += title_h + gap
 
     col_h = cy + ch - y
@@ -452,7 +462,7 @@ def _layout_image_half_bleed(slide: ImageHalfBleedSlide, cx, cy, cw, ch, font, t
                               slot_type="image",
                               text_content=slide.image.path))
 
-    text_nodes = _layout_content_list(slide.content, "content", text_x, y, text_w, col_h, font, ts)
+    text_nodes = _layout_content_list(slide.content, "content", text_x, y, text_w, col_h, font, ts, palette)
     nodes.extend(text_nodes)
     return nodes
 
@@ -465,7 +475,8 @@ def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -
     if slide.title:
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
+                                     color=palette.primary))
         y += title_h + gap
 
     n_cards = len(slide.cards)
@@ -490,7 +501,7 @@ def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -
             icon_rect = Rect(card_x, inner_y, icon_size, icon_size)
             nodes.append(ResolvedNode(_nid("card_icon"), "icon", icon_rect,
                                       slot_type="icon", text_content=card.icon,
-                                      group_id=gid))
+                                      group_id=gid, fill_color=palette.accent))
             inner_y += icon_size + inner_gap
 
         title_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
@@ -795,7 +806,7 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
 # ── content list layout helper ────────────────────────────────────────────────
 
 
-def _layout_content_list(slots, prefix: str, x, y, w, h, font, ts) -> list[ResolvedNode]:
+def _layout_content_list(slots, prefix: str, x, y, w, h, font, ts, palette=None) -> list[ResolvedNode]:
     """Lay out a flat list of content slots top-to-bottom within a rect.
 
     Uses GAP_MIN_EMU between items so the layout is consistent with the linter's
@@ -862,7 +873,8 @@ def _layout_content_list(slots, prefix: str, x, y, w, h, font, ts) -> list[Resol
             icon_size = fh
             nodes.append(ResolvedNode(_nid(f"{prefix}_icon"), "icon",
                                       Rect(x, cur_y, icon_size, icon_size),
-                                      slot_type="icon", text_content=slot.name))
+                                      slot_type="icon", text_content=slot.name,
+                                      fill_color=palette.accent if palette else None))
             cur_y += icon_size + gap
         elif isinstance(slot, SpacerSlot):
             if spacer_h > 0:

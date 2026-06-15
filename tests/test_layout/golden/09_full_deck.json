@@ -28,7 +28,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1B4F8A"
         },
         {
           "node_id": "subtitle_97",
@@ -84,7 +85,8 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1B4F8A"
         },
         {
           "node_id": "stat_value_99",
@@ -107,7 +109,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#E84545"
         },
         {
           "node_id": "stat_label_100",
@@ -177,7 +180,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#E84545"
         },
         {
           "node_id": "stat_label_103",
@@ -223,7 +227,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#E84545"
         },
         {
           "node_id": "stat_label_105",
@@ -328,7 +333,8 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1B4F8A"
         },
         {
           "node_id": "left_col_text_109",
@@ -554,7 +560,8 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1B4F8A"
         },
         {
           "node_id": "ev_date_117",
@@ -576,9 +583,10 @@
           ],
           "font": "arial",
           "size_pt": 25.0,
-          "bold": false,
+          "bold": true,
           "italic": false,
-          "is_caption": true
+          "is_caption": true,
+          "text_color": "#E84545"
         },
         {
           "node_id": "ev_title_118",
@@ -670,9 +678,10 @@
           ],
           "font": "arial",
           "size_pt": 25.0,
-          "bold": false,
+          "bold": true,
           "italic": false,
-          "is_caption": true
+          "is_caption": true,
+          "text_color": "#E84545"
         },
         {
           "node_id": "ev_title_121",
@@ -758,9 +767,10 @@
           ],
           "font": "arial",
           "size_pt": 25.0,
-          "bold": false,
+          "bold": true,
           "italic": false,
-          "is_caption": true
+          "is_caption": true,
+          "text_color": "#E84545"
         },
         {
           "node_id": "ev_title_124",
@@ -846,9 +856,10 @@
           ],
           "font": "arial",
           "size_pt": 25.0,
-          "bold": false,
+          "bold": true,
           "italic": false,
-          "is_caption": true
+          "is_caption": true,
+          "text_color": "#E84545"
         },
         {
           "node_id": "ev_title_127",
@@ -970,7 +981,8 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1B4F8A"
         },
         {
           "node_id": "card_icon_131",
@@ -983,7 +995,8 @@
           },
           "text_content": "code",
           "group_id": "card_0",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#E84545"
         },
         {
           "node_id": "card_title_132",
@@ -1056,7 +1069,8 @@
           },
           "text_content": "users",
           "group_id": "card_1",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#E84545"
         },
         {
           "node_id": "card_title_135",
@@ -1129,7 +1143,8 @@
           },
           "text_content": "globe",
           "group_id": "card_2",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#E84545"
         },
         {
           "node_id": "card_title_138",
@@ -1202,7 +1217,8 @@
           },
           "text_content": "chart-up",
           "group_id": "card_3",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#E84545"
         },
         {
           "node_id": "card_title_141",

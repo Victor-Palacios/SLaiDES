@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_28",
+          "node_id": "title_300",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -28,10 +28,11 @@
           "font": "calibri",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#0B3D2E"
         },
         {
-          "node_id": "subtitle_29",
+          "node_id": "subtitle_301",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -56,7 +57,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_30",
+          "node_id": "chrome_pagenum_302",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -89,7 +90,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_31",
+          "node_id": "title_303",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -112,7 +113,7 @@
           "italic": false
         },
         {
-          "node_id": "check_box_32",
+          "node_id": "check_box_304",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -124,7 +125,7 @@
           "fill_color": "#1FA463"
         },
         {
-          "node_id": "check_item_33",
+          "node_id": "check_item_305",
           "node_type": "text",
           "rect": {
             "x": 1005840,
@@ -148,7 +149,7 @@
           "group_id": "check_0"
         },
         {
-          "node_id": "check_box_34",
+          "node_id": "check_box_306",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -160,7 +161,7 @@
           "fill_color": "#1FA463"
         },
         {
-          "node_id": "check_item_35",
+          "node_id": "check_item_307",
           "node_type": "text",
           "rect": {
             "x": 1005840,
@@ -184,7 +185,7 @@
           "group_id": "check_1"
         },
         {
-          "node_id": "check_box_36",
+          "node_id": "check_box_308",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -196,7 +197,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "check_item_37",
+          "node_id": "check_item_309",
           "node_type": "text",
           "rect": {
             "x": 1005840,
@@ -220,7 +221,7 @@
           "group_id": "check_2"
         },
         {
-          "node_id": "check_box_38",
+          "node_id": "check_box_310",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -232,7 +233,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "check_item_39",
+          "node_id": "check_item_311",
           "node_type": "text",
           "rect": {
             "x": 1005840,
@@ -258,7 +259,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_40",
+          "node_id": "chrome_pagenum_312",
           "node_type": "text",
           "rect": {
             "x": 10363200,

@@ -28,7 +28,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#4A148C"
         },
         {
           "node_id": "subtitle_41",
@@ -109,7 +110,8 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#4A148C"
         },
         {
           "node_id": "left_head_44",
@@ -132,7 +134,8 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#4A148C"
         },
         {
           "node_id": "right_head_45",
@@ -155,7 +158,8 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#4A148C"
         },
         {
           "node_id": "left_item_46",

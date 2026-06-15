@@ -133,9 +133,13 @@ score); the linter remains the gate.
 ## Phase 10 — first cut shipped (2026-06-14, interactive)
 - [x] `slidekit/aesthetics/` + `slidekit score deck.yaml [--json]` — deterministic 0–100 score over
   ResolvedDeck: balance, whitespace, alignment, non-overlap, hierarchy, contrast. Advisory; 4 tests; 168 green.
-- [ ] FLAW TO FIX: metrics reward tidiness over beauty (plain decks ≥ designed decks); add a visual-
-  richness sub-score + use WCAG 3:1 for large text so accent emphasis isn't penalised.
-- [ ] Add colour-harmony + cross-slide-consistency metrics (docs/AESTHETICS.md).
-- [ ] `W_AESTH_*` advisory warnings + optional `--min-score` gate.
-- [ ] Visual-polish pass on plain component handlers, measured by `slidekit score` (PRIORITY OVERRIDE in NIGHTLY_PROMPT).
+- [x] FLAW FIXED (2026-06-15, commit 7045e5c): added `richness` (visual-engagement) sub-score + WCAG
+  large-text 3:1 for big text so accent emphasis isn't penalised. Validated: designed `big-number` deck
+  out-scores plain `agents-in-ai`/`all_components` (regression test). 7 new unit tests.
+- [x] Added `color_harmony` (theme hue relationship) + `cross_slide_consistency` (deck-level margin
+  variance, bounded [0.9,1.0]) metrics (docs/AESTHETICS.md; commit 7045e5c).
+- [x] Visual-polish pass on the 8 v1 component handlers (PRIORITY OVERRIDE #2, 2026-06-15): headings in
+  brand primary, hero data (stat values, timeline dates) in accent, icon fills recorded; all decks stay
+  lint-clean; every example deck score rose (e.g. all-components 75.4→84.8); PDFs rebuilt; goldens regen.
+- [ ] `W_AESTH_*` advisory warnings + optional `--min-score` gate. (info-density metric also still TODO.)
 - [ ] DEFERRED: weight calibration vs a human-labelled slide-pair set.

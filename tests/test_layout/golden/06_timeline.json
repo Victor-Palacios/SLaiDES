@@ -28,7 +28,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1B5E20"
         }
       ],
       "chrome": [
@@ -86,7 +87,8 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1B5E20"
         },
         {
           "node_id": "ev_date_58",
@@ -108,9 +110,10 @@
           ],
           "font": "arial",
           "size_pt": 25.0,
-          "bold": false,
+          "bold": true,
           "italic": false,
-          "is_caption": true
+          "is_caption": true,
+          "text_color": "#F57F17"
         },
         {
           "node_id": "ev_title_59",
@@ -202,9 +205,10 @@
           ],
           "font": "arial",
           "size_pt": 25.0,
-          "bold": false,
+          "bold": true,
           "italic": false,
-          "is_caption": true
+          "is_caption": true,
+          "text_color": "#F57F17"
         },
         {
           "node_id": "ev_title_62",
@@ -290,9 +294,10 @@
           ],
           "font": "arial",
           "size_pt": 25.0,
-          "bold": false,
+          "bold": true,
           "italic": false,
-          "is_caption": true
+          "is_caption": true,
+          "text_color": "#F57F17"
         },
         {
           "node_id": "ev_title_65",
@@ -378,9 +383,10 @@
           ],
           "font": "arial",
           "size_pt": 25.0,
-          "bold": false,
+          "bold": true,
           "italic": false,
-          "is_caption": true
+          "is_caption": true,
+          "text_color": "#F57F17"
         },
         {
           "node_id": "ev_title_68",

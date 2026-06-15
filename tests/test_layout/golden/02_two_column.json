@@ -28,7 +28,8 @@
           "font": "calibri",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#2C3E50"
         },
         {
           "node_id": "subtitle_4",
@@ -109,7 +110,8 @@
           "font": "calibri",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#2C3E50"
         },
         {
           "node_id": "left_col_text_7",

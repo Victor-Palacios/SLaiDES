@@ -28,7 +28,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1A237E"
         },
         {
           "node_id": "subtitle_28",
@@ -109,7 +110,8 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1A237E"
         },
         {
           "node_id": "stat_value_31",
@@ -132,7 +134,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#00BCD4"
         },
         {
           "node_id": "stat_label_32",
@@ -202,7 +205,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#00BCD4"
         },
         {
           "node_id": "stat_label_35",
@@ -248,7 +252,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#00BCD4"
         },
         {
           "node_id": "stat_label_37",

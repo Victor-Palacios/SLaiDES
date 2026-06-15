@@ -168,6 +168,38 @@ modulator, all still deterministic, geometry/theme-only, zero rendering:
 **Validation (no human-correlation claim — calibration still DEFERRED):** the operator's
 ordering requirement now holds — the designed `big-number` deck (83.3) out-scores the
 plainer `agents-in-ai` (76.5) and `all_components` (75.4). Codified as a regression test
-(`test_designed_deck_outscores_plain_decks`). Still outstanding: `W_AESTH_*` advisory
-warnings + optional `--min-score` gate, and the visual-polish pass on the plain v1
-component handlers (which currently score `richness` 0–0.35).
+(`test_designed_deck_outscores_plain_decks`).
+
+## Visual-polish pass on the v1 component handlers (2026-06-15) — IMPLEMENTED
+
+The richness sub-score exposed that the eight v1 component handlers were geometrically
+clean but visually bare (richness 0–0.35). They now use the same deliberate-accent
+treatment the Phase 9 designs use — **within the linter's rules** (no decorative
+bars/stripes, no accent line under a title, no edge stripes; restraint over ornament):
+
+- **Headings in brand `primary`** — every component title and the title-slide title
+  (high-contrast, textbook hierarchy emphasis, not decoration). Comparison column
+  headings too.
+- **Hero data in `accent`** — `stat-callout` values and `timeline` dates (bolded as
+  date markers), mirroring the `big-number` figure.
+- **Icons record their fill** — icon nodes now carry `fill_color = accent` in the
+  ResolvedDeck (the emitters already drew accent circles; the geometry record now
+  matches reality, so richness sees the emphasis). Emitters honour `node.fill_color`.
+
+All theme-role colours, so every example deck stays **lint-clean** and the Phase 8
+round-trip still proves emitted colours equal theme roles exactly (test widened to the
+full chromatic palette). Measured before→after deck scores:
+
+| deck | before | after |  | deck | before | after |
+|---|---|---|---|---|---|---|
+| 01 title-slide | 77.0 | 87.3 | | 07 image-half-bleed | 67.5 | 77.3 |
+| 02 two-column | 73.2 | 82.9 | | 08 card-grid | 76.4 | 86.2 |
+| 03 icon-text-rows | 76.6 | 86.4 | | 10 all-components | 75.4 | 84.8 |
+| 04 stat-callout | 67.8 | 76.2 | | 14 big-number | 83.3 | 88.3 |
+| 05 comparison-columns | 75.6 | 85.4 | | agents-in-ai | 76.5 | 86.3 |
+| 06 timeline | 69.4 | 77.4 | | | | |
+
+The designed-beats-plain invariant survives the polish (big-number 88.3 still > agents
+86.3 > all_components 84.8). Still outstanding for Phase 10: `W_AESTH_*` advisory
+warnings + optional `--min-score` gate, an info-density metric, and weight calibration
+(DEFERRED — needs a labelled slide-pair dataset).

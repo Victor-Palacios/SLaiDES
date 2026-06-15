@@ -28,7 +28,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#0A3D62"
         }
       ],
       "chrome": [
@@ -86,7 +87,8 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#0A3D62"
         },
         {
           "node_id": "icon_17",
@@ -98,7 +100,8 @@
             "h": 548640
           },
           "text_content": "star",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#F39C12"
         },
         {
           "node_id": "heading_18",
@@ -156,7 +159,8 @@
             "h": 548640
           },
           "text_content": "handshake",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#F39C12"
         },
         {
           "node_id": "heading_21",
@@ -214,7 +218,8 @@
             "h": 548640
           },
           "text_content": "lightbulb",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#F39C12"
         },
         {
           "node_id": "heading_24",

@@ -28,7 +28,8 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#01579B"
         },
         {
           "node_id": "subtitle_80",
@@ -109,7 +110,8 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#01579B"
         },
         {
           "node_id": "card_icon_83",
@@ -122,7 +124,8 @@
           },
           "text_content": "analytics",
           "group_id": "card_0",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#E65100"
         },
         {
           "node_id": "card_title_84",
@@ -195,7 +198,8 @@
           },
           "text_content": "shield",
           "group_id": "card_1",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#E65100"
         },
         {
           "node_id": "card_title_87",
@@ -268,7 +272,8 @@
           },
           "text_content": "bolt",
           "group_id": "card_2",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#E65100"
         },
         {
           "node_id": "card_title_90",
@@ -335,7 +340,8 @@
           },
           "text_content": "puzzle",
           "group_id": "card_3",
-          "slot_type": "icon"
+          "slot_type": "icon",
+          "fill_color": "#E65100"
         },
         {
           "node_id": "card_title_93",

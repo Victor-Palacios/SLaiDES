@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_8",
+          "node_id": "title_216",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -28,10 +28,11 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1B3A6B"
         },
         {
-          "node_id": "subtitle_9",
+          "node_id": "subtitle_217",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -56,7 +57,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_10",
+          "node_id": "chrome_pagenum_218",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -89,7 +90,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_11",
+          "node_id": "title_219",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -112,7 +113,7 @@
           "italic": false
         },
         {
-          "node_id": "agenda_rule_12",
+          "node_id": "agenda_rule_220",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -123,7 +124,7 @@
           "fill_color": "#E8743B"
         },
         {
-          "node_id": "ag_num_13",
+          "node_id": "ag_num_221",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -148,7 +149,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_14",
+          "node_id": "ag_item_222",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -172,7 +173,7 @@
           "group_id": "agenda_0"
         },
         {
-          "node_id": "ag_num_15",
+          "node_id": "ag_num_223",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -197,7 +198,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_16",
+          "node_id": "ag_item_224",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -221,7 +222,7 @@
           "group_id": "agenda_1"
         },
         {
-          "node_id": "ag_num_17",
+          "node_id": "ag_num_225",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -246,7 +247,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_18",
+          "node_id": "ag_item_226",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -270,7 +271,7 @@
           "group_id": "agenda_2"
         },
         {
-          "node_id": "ag_num_19",
+          "node_id": "ag_num_227",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -295,7 +296,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_20",
+          "node_id": "ag_item_228",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -319,7 +320,7 @@
           "group_id": "agenda_3"
         },
         {
-          "node_id": "ag_num_21",
+          "node_id": "ag_num_229",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -344,7 +345,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_22",
+          "node_id": "ag_item_230",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -370,7 +371,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_23",
+          "node_id": "chrome_pagenum_231",
           "node_type": "text",
           "rect": {
             "x": 10363200,

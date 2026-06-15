@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_52",
+          "node_id": "title_260",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -28,10 +28,11 @@
           "font": "calibri",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#1A237E"
         },
         {
-          "node_id": "subtitle_53",
+          "node_id": "subtitle_261",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -56,7 +57,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_54",
+          "node_id": "chrome_pagenum_262",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -89,7 +90,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_57",
+          "node_id": "accent_bar_265",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -100,7 +101,7 @@
           "fill_color": "#3949AB"
         },
         {
-          "node_id": "term_55",
+          "node_id": "term_263",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -124,7 +125,7 @@
           "text_color": "#3949AB"
         },
         {
-          "node_id": "def_56",
+          "node_id": "def_264",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -161,7 +162,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_58",
+          "node_id": "chrome_pagenum_266",
           "node_type": "text",
           "rect": {
             "x": 10363200,

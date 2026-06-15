@@ -170,7 +170,7 @@ def _emit_icon(slide, node: "ResolvedNode", palette) -> None:
     shape = slide.shapes.add_shape(
         MSO_SHAPE.OVAL, Emu(cx), Emu(cy), Emu(diameter), Emu(diameter)
     )
-    r, g, b = _hex_to_rgb(palette.accent)
+    r, g, b = _hex_to_rgb(node.fill_color or palette.accent)
     shape.fill.solid()
     shape.fill.fore_color.rgb = RGBColor(r, g, b)
     shape.line.fill.background()  # no border

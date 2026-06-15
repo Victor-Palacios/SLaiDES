@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_31",
+          "node_id": "title_239",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -28,10 +28,11 @@
           "font": "arial",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#0D47A1"
         },
         {
-          "node_id": "subtitle_32",
+          "node_id": "subtitle_240",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -56,7 +57,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_33",
+          "node_id": "chrome_pagenum_241",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -89,7 +90,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_37",
+          "node_id": "accent_bar_245",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -100,7 +101,7 @@
           "fill_color": "#00ACC1"
         },
         {
-          "node_id": "value_34",
+          "node_id": "value_242",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -124,7 +125,7 @@
           "text_color": "#00ACC1"
         },
         {
-          "node_id": "label_35",
+          "node_id": "label_243",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -147,7 +148,7 @@
           "italic": false
         },
         {
-          "node_id": "context_36",
+          "node_id": "context_244",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -173,7 +174,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_38",
+          "node_id": "chrome_pagenum_246",
           "node_type": "text",
           "rect": {
             "x": 10363200,

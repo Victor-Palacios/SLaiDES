@@ -84,7 +84,7 @@ def _draw_node(c, node: "ResolvedNode", palette, page_h: float) -> None:
         d = min(w, h)
         icx = x + (w - d) / 2
         icy = top - (h + d) / 2  # center y
-        c.setFillColorRGB(*_rgb(palette.accent))
+        c.setFillColorRGB(*_rgb(node.fill_color or palette.accent))
         c.circle(x + w / 2, top - h / 2, d / 2, stroke=0, fill=1)
 
     elif node.node_type == "image":

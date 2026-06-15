@@ -28,7 +28,8 @@
           "font": "times new roman",
           "size_pt": 60.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#880E4F"
         },
         {
           "node_id": "subtitle_72",
@@ -109,7 +110,8 @@
           "font": "times new roman",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#880E4F"
         },
         {
           "node_id": "image_75",

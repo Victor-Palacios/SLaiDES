@@ -139,11 +139,12 @@ class TestThemeRoundTrip:
         assert seen == {expected}, f"fonts {seen} != {{{expected!r}}}"
 
     def test_text_colors_round_trip_to_theme_roles(self, emitted):
-        """Every text run color is exactly a theme role: body text -> text,
-        captions/page-numbers -> muted. No other colors leak in."""
+        """Every text run color is exactly a theme role and nothing else. Body text
+        -> text, captions/page-numbers -> muted, emphasised headings -> primary, hero
+        figures -> accent (Phase 10 visual-polish pass). No raw colors leak in."""
         palette = _theme_block()["palette"]
+        roles = {palette[r].lstrip("#").upper() for r in ("text", "muted", "primary", "accent")}
         text = palette["text"].lstrip("#").upper()
-        muted = palette["muted"].lstrip("#").upper()
         seen = {
             str(run.font.color.rgb).upper()
             for slide in emitted.slides
@@ -152,5 +153,5 @@ class TestThemeRoundTrip:
             for para in shape.text_frame.paragraphs
             for run in para.runs
         }
-        assert seen <= {text, muted}, f"non-theme colors emitted: {seen - {text, muted}}"
+        assert seen <= roles, f"non-theme colors emitted: {seen - roles}"
         assert text in seen, "theme text color never emitted"
