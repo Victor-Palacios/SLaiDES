@@ -138,3 +138,36 @@ accent-coloured emphasis text is wrongly dinged on contrast. Consequences for th
 - Use the WCAG **large-text 3:1** threshold for big text (4.5:1 stays for body).
 - The geometric score is necessary but not sufficient; pair it with a **visual-polish
   pass on the component layout handlers** (the actual source of "ugly").
+
+## Beauty-tracking extension (2026-06-15) — IMPLEMENTED
+
+The flaw above is fixed. `slidekit score` now adds two sub-scores and a deck-level
+modulator, all still deterministic, geometry/theme-only, zero rendering:
+
+- **`richness` (visual engagement), weight 1.5.** `0.45·emphasis + 0.35·structure +
+  0.20·variety`, where *emphasis* = a node deliberately uses the `accent`/`primary`
+  palette role as a fill or text colour, *structure* = ≥1 non-text element
+  (box/icon/image) is present, and *variety* = distinct deliberate colours, peaking at
+  1–3 then **falling** beyond 3 (restraint — a rainbow is not richness). A bare,
+  all-default, text-only slide scores 0 here; a designed slide out-scores it.
+- **`color_harmony` (theme-level), weight 1.0.** Circular hue distance between the two
+  chromatic palette roles (`primary`, `accent`; near-grey roles ignored), rewarding a
+  recognised relationship — mono 0°, analogous 30°, triadic 120°, split-comp 150°,
+  complementary 180° — within a 30° tolerance. Constant across a deck's slides.
+- **`contrast` is now size-aware.** Each text node is judged against its WCAG target:
+  **3:1 for large text (≥24pt)**, 4.5:1 below that. Since the body floor is 32pt, all
+  content text is "large" by WCAG; the 4.5:1 constant is retained for any future
+  sub-24pt text. This is faithful to PLAN.md Phase 4 ("3:1 for ≥24pt") and stops
+  penalising coloured emphasis figures (e.g. a `#00ACC1` big-number: 2.74:1 → was 0.50
+  at 4.5:1, now 0.87 at 3:1).
+- **`cross_slide_consistency` (deck multiplier), bounded [0.9, 1.0].** `deck_score =
+  mean(slide_scores) · consistency`, where consistency falls with the coefficient of
+  variation of per-slide content margins (left/top). Bounded so it modulates gently
+  rather than dominating.
+
+**Validation (no human-correlation claim — calibration still DEFERRED):** the operator's
+ordering requirement now holds — the designed `big-number` deck (83.3) out-scores the
+plainer `agents-in-ai` (76.5) and `all_components` (75.4). Codified as a regression test
+(`test_designed_deck_outscores_plain_decks`). Still outstanding: `W_AESTH_*` advisory
+warnings + optional `--min-score` gate, and the visual-polish pass on the plain v1
+component handlers (which currently score `richness` 0–0.35).

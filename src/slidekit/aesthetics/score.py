@@ -4,6 +4,11 @@ Every metric is a closed-form function of the resolved geometry (node rects) and
 the theme colours — reproducible, no rendering. Each sub-score is in [0, 1]; the
 composite is reported 0–100. ADVISORY only: this never blocks a build.
 
+Sub-scores (per slide unless noted):
+  balance, whitespace, alignment, non_overlap, hierarchy, contrast,
+  richness (visual engagement), color_harmony (theme-level).
+Deck score = mean(slide scores) · cross_slide_consistency  (docs/AESTHETICS.md).
+
 Calibration against human ratings is DEFERRED (needs a labelled slide-pair set);
 do not claim human correlation. Default weights are documented below.
 """
@@ -20,7 +25,10 @@ if TYPE_CHECKING:
 from slidekit.metrics.constants import EMU_PER_INCH
 
 # Default sub-score weights. Overlap and contrast weigh more — a deck that overlaps
-# or is unreadable is "ugly" in a way balance can't compensate for.
+# or is unreadable is "ugly" in a way balance can't compensate for. Richness weighs
+# as much as contrast: a deliberately-designed slide (accent emphasis, structural
+# elements, restrained colour) must out-score a bare, text-only one — otherwise the
+# geometric metrics reward minimalism for its own sake (see docs/AESTHETICS.md).
 DEFAULT_WEIGHTS: dict[str, float] = {
     "balance": 1.0,
     "whitespace": 1.0,
@@ -28,12 +36,22 @@ DEFAULT_WEIGHTS: dict[str, float] = {
     "non_overlap": 1.5,
     "hierarchy": 1.0,
     "contrast": 1.5,
+    "richness": 1.5,
+    "color_harmony": 1.0,
 }
 
 _ALIGN_TOL = int(0.06 * EMU_PER_INCH)  # ~0.06" edge-clustering tolerance
 
+# WCAG contrast targets. Body floor is 32pt so essentially all slidekit content text
+# is "large" by WCAG (≥18pt regular); large text needs only 3:1, which is why an
+# accent emphasis figure (e.g. a coloured big-number) is NOT a contrast failure. The
+# 4.5:1 body target is retained for any text below the large-text boundary.
+_LARGE_TEXT_PT = 24.0  # WCAG / PLAN.md Phase-4 large-text threshold
+_TARGET_LARGE = 3.0
+_TARGET_BODY = 4.5
 
-# ── helpers ───────────────────────────────────────────────────────────────────
+
+# ── colour helpers ──────────────────────────────────────────────────────────────
 
 
 def _rel_lum(hex_color: str) -> float:
@@ -47,6 +65,36 @@ def _contrast_ratio(c1: str, c2: str) -> float:
     l1, l2 = _rel_lum(c1), _rel_lum(c2)
     hi, lo = max(l1, l2), min(l1, l2)
     return (hi + 0.05) / (lo + 0.05)
+
+
+def _hue_sat(hex_color: str) -> tuple[float, float]:
+    """Return (hue 0–360, saturation 0–1) for a hex colour (HSV-style)."""
+    h = hex_color.lstrip("#")
+    r, g, b = (int(h[i : i + 2], 16) / 255 for i in (0, 2, 4))
+    mx, mn = max(r, g, b), min(r, g, b)
+    d = mx - mn
+    if d == 0:
+        hue = 0.0
+    elif mx == r:
+        hue = ((g - b) / d) % 6
+    elif mx == g:
+        hue = (b - r) / d + 2
+    else:
+        hue = (r - g) / d + 4
+    sat = 0.0 if mx == 0 else d / mx
+    return hue * 60.0, sat
+
+
+def _hue_diff(h1: float, h2: float) -> float:
+    d = abs(h1 - h2) % 360.0
+    return min(d, 360.0 - d)
+
+
+def _norm(s: str) -> str:
+    return s.lstrip("#").upper()
+
+
+# ── geometry helpers ────────────────────────────────────────────────────────────
 
 
 def _intersect_area(a: "Rect", b: "Rect") -> int:
@@ -117,16 +165,99 @@ def _hierarchy(deck: "DeckIR") -> float:
 
 
 def _contrast(rs: "ResolvedSlide", deck: "DeckIR") -> float:
+    """Worst per-node contrast, each node judged against its size-appropriate WCAG
+    target (3:1 large text, 4.5:1 body). An accent emphasis figure that clears the
+    large-text bar therefore earns full credit instead of being penalised."""
     pal = deck.theme.palette
-    ratios = []
+    norm = []
     for n in rs.nodes:
         if n.node_type == "text" and not n.is_chrome:
             color = n.text_color or (pal.muted if n.is_caption else pal.text)
-            ratios.append(_contrast_ratio(color, pal.surface))
-    if not ratios:
+            ratio = _contrast_ratio(color, pal.surface)
+            large = (n.size_pt or 0.0) >= _LARGE_TEXT_PT
+            target = _TARGET_LARGE if large else _TARGET_BODY
+            norm.append(min(1.0, max(0.0, (ratio - 1.0) / (target - 1.0))))
+    if not norm:
         return 1.0
-    worst = min(ratios)
-    return min(1.0, max(0.0, (worst - 1.0) / (4.5 - 1.0)))  # WCAG body target 4.5:1
+    return min(norm)
+
+
+def _richness(nodes, deck: "DeckIR") -> float:
+    """Visual engagement: reward deliberate accent-colour emphasis, structural
+    (non-text) elements, and restrained colour variety. A bare, all-default,
+    text-only slide scores low here so a designed slide out-scores it — without
+    rewarding gratuitous decoration (variety peaks at a small palette, then falls)."""
+    if not nodes:
+        return 0.0
+    pal = deck.theme.palette
+    emphasis_roles = {_norm(pal.primary), _norm(pal.accent)}
+
+    deliberate_colors: set[str] = set()
+    has_emphasis = False
+    has_structure = False
+    for n in nodes:
+        if n.node_type in ("box", "icon", "image"):
+            has_structure = True
+        for c in (n.fill_color, n.text_color):
+            if c:
+                cn = _norm(c)
+                deliberate_colors.add(cn)
+                if cn in emphasis_roles:
+                    has_emphasis = True
+
+    emphasis = 1.0 if has_emphasis else 0.0
+    structure = 1.0 if has_structure else 0.0
+    k = len(deliberate_colors)
+    if k == 0:
+        variety = 0.0
+    elif k <= 3:
+        variety = 1.0
+    else:  # restraint: too many distinct deliberate colours reads as noisy
+        variety = max(0.0, 1.0 - (k - 3) * 0.34)
+
+    return 0.45 * emphasis + 0.35 * structure + 0.20 * variety
+
+
+def _color_harmony(deck: "DeckIR") -> float:
+    """Theme-level: hue relationship between the chromatic palette roles. Rewards a
+    recognised relationship (mono / analogous / triadic / split-comp / complementary).
+    Near-grey roles are ignored; a single chromatic role is treated as inoffensive."""
+    pal = deck.theme.palette
+    chromatic = []
+    for c in (pal.primary, pal.accent):
+        hue, sat = _hue_sat(c)
+        if sat >= 0.15:
+            chromatic.append(hue)
+    if len(chromatic) < 2:
+        return 1.0
+    diff = _hue_diff(chromatic[0], chromatic[1])
+    good = (0.0, 30.0, 120.0, 150.0, 180.0)
+    return max(0.0, min(1.0, max(1.0 - abs(diff - g) / 30.0 for g in good)))
+
+
+def _cross_slide_consistency(resolved: "ResolvedDeck") -> float:
+    """Deck-level coherence: low variance in content margins across slides reads as a
+    consistent system. Bounded to [0.9, 1.0] so it modulates the deck score gently
+    rather than dominating it (docs/AESTHETICS.md: deck = mean(slides)·consistency)."""
+    lefts, tops = [], []
+    for rs in resolved.slides:
+        nodes = _content_nodes(rs)
+        if not nodes:
+            continue
+        lefts.append(min(n.rect.x for n in nodes))
+        tops.append(min(n.rect.y for n in nodes))
+    if len(lefts) < 2:
+        return 1.0
+
+    def _cv(xs: list[int]) -> float:
+        m = sum(xs) / len(xs)
+        if m <= 0:
+            return 0.0
+        var = sum((x - m) ** 2 for x in xs) / len(xs)
+        return min(1.0, math.sqrt(var) / m)
+
+    raw = 1.0 - (_cv(lefts) + _cv(tops)) / 2.0
+    return 0.9 + 0.1 * max(0.0, min(1.0, raw))
 
 
 # ── report types ────────────────────────────────────────────────────────────────
@@ -154,10 +285,12 @@ class SlideScore:
 class AestheticReport:
     deck_score: float
     slides: list[SlideScore] = field(default_factory=list)
+    consistency: float = 1.0
 
     def to_dict(self) -> dict:
         return {
             "deck_score": round(self.deck_score, 1),
+            "consistency": round(self.consistency, 3),
             "slides": [s.to_dict() for s in self.slides],
         }
 
@@ -176,6 +309,8 @@ def score_deck(
     """Return a deterministic aesthetic report (0–100) for a resolved deck."""
     w = weights or DEFAULT_WEIGHTS
     wsum = sum(w.values()) or 1.0
+    harmony = _color_harmony(deck)
+    hierarchy = _hierarchy(deck)
 
     slide_scores: list[SlideScore] = []
     for rs in resolved.slides:
@@ -185,8 +320,10 @@ def score_deck(
             "whitespace": _whitespace(nodes, rs.canvas_w, rs.canvas_h),
             "alignment": _alignment(nodes),
             "non_overlap": _non_overlap(nodes),
-            "hierarchy": _hierarchy(deck),
+            "hierarchy": hierarchy,
             "contrast": _contrast(rs, deck),
+            "richness": _richness(nodes, deck),
+            "color_harmony": harmony,
         }
         composite = 100.0 * sum(sub[k] * w.get(k, 0.0) for k in sub) / wsum
         weakest = min(sub, key=lambda k: sub[k])
@@ -194,7 +331,12 @@ def score_deck(
             SlideScore(rs.slide_index, rs.component, sub, composite, weakest)
         )
 
-    deck_score = (
+    consistency = _cross_slide_consistency(resolved)
+    mean_slide = (
         sum(s.score for s in slide_scores) / len(slide_scores) if slide_scores else 0.0
     )
-    return AestheticReport(deck_score=deck_score, slides=slide_scores)
+    return AestheticReport(
+        deck_score=mean_slide * consistency,
+        slides=slide_scores,
+        consistency=consistency,
+    )

@@ -2,9 +2,9 @@
 
 Advisory (not a build gate). Computes geometry/colour sub-scores from source — no
 rendering, no vision — exactly like the linter proves correctness. See
-docs/AESTHETICS.md. This is a first cut: balance, whitespace, alignment,
-non-overlap, hierarchy, and contrast. Colour-harmony and cross-slide consistency
-are TODO (documented).
+docs/AESTHETICS.md. Sub-scores: balance, whitespace, alignment, non-overlap,
+hierarchy, contrast (size-aware WCAG targets), richness (visual engagement), and
+colour-harmony; the deck score is modulated by cross-slide consistency.
 """
 
 from slidekit.aesthetics.score import (
