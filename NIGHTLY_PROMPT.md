@@ -144,13 +144,11 @@ mathematical / computational slide aesthetics:
 === BRANCH POLICY (added 2026-06-14; OVERRIDES any "branch main" mention above) ===
 Work on and push to the branch THIS session is checked out on — do NOT switch
 branches, and do NOT try to move work onto a different branch. Use `git push origin
-HEAD`. Scheduled (cron) runs check out the repository default branch, which is
-currently `claude/busy-rubin-mzpvfu`; building and pushing there is correct.
-Manual dispatches build on whatever ref was chosen. The earlier addenda say "branch
-main" only because that was the default at the time; treat the checked-out branch as
-authoritative. (The state files — PROGRESS.md, NIGHTLY_PROMPT.md, docs/ — are kept
-identical across `main` and `claude/busy-rubin-mzpvfu`, so either branch is a valid,
-current base.)
+HEAD`. Scheduled (cron) runs check out the repository default branch, which is now
+`main`; building and pushing there is correct. Manual dispatches build on whatever
+ref was chosen. The earlier "branch main" addenda are now literally true — `main` is
+the single, live line of development. (The old `claude/busy-rubin-mzpvfu` working
+branch was retired on 2026-06-15 when the default was switched to `main`.)
 
 === OUTPUT FORMAT POLICY (added 2026-06-14; operator request) ===
 Example/showcase deck artifacts are committed as **PDF, not PPTX**, from now on.

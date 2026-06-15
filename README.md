@@ -76,8 +76,8 @@ The core build (Phases 0–8) is complete. Each nightly run now pursues two trac
    secret (Settings → Secrets and variables → Actions). Nightly runs then draw
    from your Claude subscription rather than API billing. (`anthropic_api_key`
    is the alternative input if you'd rather bill an API key.)
-2. Scheduled workflows only fire from the repository's **default branch** —
-   make sure this branch (or a merge of it) is the default.
+2. Scheduled workflows only fire from the repository's **default branch**, which is
+   **`main`** (set 2026-06-15). Nightly work lands there.
 3. Optional: trigger a run manually via the workflow's **Run workflow**
    button (`workflow_dispatch`) to test the pipeline.
 
@@ -94,7 +94,7 @@ The core build (Phases 0–8) is complete. Each nightly run now pursues two trac
   subscription OAuth token, verify those limits at
   https://code.claude.com/docs/en/headless before relying on nightly runs.
 - **The nightly cron is ENABLED and runs on Opus** (~$7–50 of usage per session).
-  It fires every night until you disable it (comment out the `schedule:` block).
-  Scheduled runs only fire from the **default branch**, so set the default to `main`.
+  It fires every night (from the default branch, **`main`**) until you disable it
+  (comment out the `schedule:` block).
 - Each morning, the newest `NIGHTLY_REPORTS/*-exec-summary.md` is the plain-language
   readout; `docs/REFERENCES.md` shows research progress toward the ~20-reference goal.
