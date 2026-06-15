@@ -29,6 +29,8 @@ from slidekit.metrics.constants import EMU_PER_INCH
 # as much as contrast: a deliberately-designed slide (accent emphasis, structural
 # elements, restrained colour) must out-score a bare, text-only one — otherwise the
 # geometric metrics reward minimalism for its own sake (see docs/AESTHETICS.md).
+# These weights are HEURISTIC; calibration is DEFERRED (needs a labelled slide-pair
+# dataset, cf. ref #2 EvoPresent). Per-decision lineage: docs/RESEARCH_TRACE.md.
 DEFAULT_WEIGHTS: dict[str, float] = {
     "balance": 1.0,
     "whitespace": 1.0,
@@ -115,6 +117,7 @@ def _content_nodes(rs: "ResolvedSlide") -> list:
 
 
 def _balance(nodes, cw: int, ch: int) -> float:
+    # ref #4 (Ngo/Teo/Byrne, Info. Sci. 2003) balance/equilibrium — docs/RESEARCH_TRACE.md
     if not nodes:
         return 0.0
     tot = sum(n.rect.w * n.rect.h for n in nodes) or 1
@@ -126,6 +129,7 @@ def _balance(nodes, cw: int, ch: int) -> float:
 
 
 def _whitespace(nodes, cw: int, ch: int) -> float:
+    # ref #1 (AeSlides) excessive-whitespace; band is HEURISTIC — docs/RESEARCH_TRACE.md
     cover = min(1.0, sum(n.rect.w * n.rect.h for n in nodes) / (cw * ch))
     lo, hi = 0.12, 0.55  # comfortable coverage band; outside = bare or crowded
     if lo <= cover <= hi:
@@ -136,6 +140,7 @@ def _whitespace(nodes, cw: int, ch: int) -> float:
 
 
 def _alignment(nodes) -> float:
+    # ref #3 (GRIDS, CHI 2020) alignment objective — docs/RESEARCH_TRACE.md
     if len(nodes) < 2:
         return 1.0
     lines: list[int] = []
@@ -147,6 +152,7 @@ def _alignment(nodes) -> float:
 
 
 def _non_overlap(nodes) -> float:
+    # ref #1 (AeSlides) element-collision — docs/RESEARCH_TRACE.md
     if len(nodes) < 2:
         return 1.0
     tot = sum(n.rect.w * n.rect.h for n in nodes) or 1
@@ -158,6 +164,7 @@ def _non_overlap(nodes) -> float:
 
 
 def _hierarchy(deck: "DeckIR") -> float:
+    # HEURISTIC — no primary source for the exact ratio band; docs/RESEARCH_TRACE.md
     ts = deck.theme.type_scale
     ratio = ts.title / ts.body if ts.body else 1.0
     # Reward a clear title→body step: full credit at ≥1.5×, none at ≤1.0×.
@@ -167,7 +174,10 @@ def _hierarchy(deck: "DeckIR") -> float:
 def _contrast(rs: "ResolvedSlide", deck: "DeckIR") -> float:
     """Worst per-node contrast, each node judged against its size-appropriate WCAG
     target (3:1 large text, 4.5:1 body). An accent emphasis figure that clears the
-    large-text bar therefore earns full credit instead of being penalised."""
+    large-text bar therefore earns full credit instead of being penalised.
+
+    Thresholds: WCAG 2.x standard + PLAN.md Phase 4; ref #11 (Rebelo et al., EvoMUSART
+    2024) backs contrast-as-constraint. See docs/RESEARCH_TRACE.md."""
     pal = deck.theme.palette
     norm = []
     for n in rs.nodes:
@@ -186,7 +196,11 @@ def _richness(nodes, deck: "DeckIR") -> float:
     """Visual engagement: reward deliberate accent-colour emphasis, structural
     (non-text) elements, and restrained colour variety. A bare, all-default,
     text-only slide scores low here so a designed slide out-scores it — without
-    rewarding gratuitous decoration (variety peaks at a small palette, then falls)."""
+    rewarding gratuitous decoration (variety peaks at a small palette, then falls).
+
+    ref #12 (Reinecke et al., CHI 2013) colourfulness/complexity — palette colour
+    variety is a no-render proxy; the 0.45/0.35/0.20 split is HEURISTIC. See
+    docs/RESEARCH_TRACE.md."""
     if not nodes:
         return 0.0
     pal = deck.theme.palette
@@ -221,7 +235,9 @@ def _richness(nodes, deck: "DeckIR") -> float:
 def _color_harmony(deck: "DeckIR") -> float:
     """Theme-level: hue relationship between the chromatic palette roles. Rewards a
     recognised relationship (mono / analogous / triadic / split-comp / complementary).
-    Near-grey roles are ignored; a single chromatic role is treated as inoffensive."""
+    Near-grey roles are ignored; a single chromatic role is treated as inoffensive.
+
+    HEURISTIC — classical colour theory, no primary source cited; docs/RESEARCH_TRACE.md."""
     pal = deck.theme.palette
     chromatic = []
     for c in (pal.primary, pal.accent):
@@ -238,7 +254,10 @@ def _color_harmony(deck: "DeckIR") -> float:
 def _cross_slide_consistency(resolved: "ResolvedDeck") -> float:
     """Deck-level coherence: low variance in content margins across slides reads as a
     consistent system. Bounded to [0.9, 1.0] so it modulates the deck score gently
-    rather than dominating it (docs/AESTHETICS.md: deck = mean(slides)·consistency)."""
+    rather than dominating it (docs/AESTHETICS.md: deck = mean(slides)·consistency).
+
+    ref #7 (PPTEval) / #8 (DECKBench) coherence — both SECONDHAND (unverified); the
+    bound is HEURISTIC. See docs/RESEARCH_TRACE.md."""
     lefts, tops = [], []
     for rs in resolved.slides:
         nodes = _content_nodes(rs)

@@ -33,7 +33,9 @@ are proven from source, like correctness.
 ## Metric definitions (computed over ResolvedDeck)
 
 Per slide, `elements = [node rects (x,y,w,h)]` plus theme colors. Each sub-score is
-normalized to [0,1]:
+normalized to [0,1]. The lineage column below is informal; for the exact paper →
+decision → code map (with verification status and honest HEURISTIC flags) see
+[`RESEARCH_TRACE.md`](RESEARCH_TRACE.md):
 
 | Sub-score | Definition over the resolved geometry | Lineage |
 |---|---|---|

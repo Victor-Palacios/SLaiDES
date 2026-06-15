@@ -46,6 +46,7 @@ in files:
 | [docs/SLIDE_DESIGNS.md](docs/SLIDE_DESIGNS.md) | Catalog of the 40 core slide designs (Phase 9) |
 | [docs/AESTHETICS.md](docs/AESTHETICS.md) | Deterministic aesthetic-scoring spec (Phase 10) |
 | [docs/REFERENCES.md](docs/REFERENCES.md) | Living bibliography of slide-aesthetics research (target ~20 verified) |
+| [docs/RESEARCH_TRACE.md](docs/RESEARCH_TRACE.md) | Which paper influenced which scorer decision (paper → decision → code, with status) |
 
 The schedule is [`.github/workflows/nightly.yml`](.github/workflows/nightly.yml):
 a GitHub Actions cron job (**07:00 UTC ≈ midnight Pacific, nightly**) running
