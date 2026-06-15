@@ -123,3 +123,18 @@ real, defensible distinction, stronger than first stated.
 GRIDS, Ngo/Teo/Byrne, SlidesGen-Bench, "Seeing Like a Designer Without One"
 (Pearson 0.83), PPTAgent/PPTEval (Pearson 0.90), DECKBench, Birkhoff. These
 citations and figures come from the pasted synthesis, not from papers I have read.
+
+## First-cut scorer + a key finding (2026-06-14)
+
+A first `slidekit score` shipped (`slidekit/aesthetics/`): deterministic 0–100 over the
+ResolvedDeck (balance, whitespace, alignment, non-overlap, hierarchy, contrast). It
+immediately exposed the calibration gap this doc warned about: **the geometric metrics
+measure tidiness, not beauty.** Plain, sparse decks score AS HIGH OR HIGHER than
+richly-designed ones (e.g. a bare deck 92.7 vs a designed big-number slide 86.2), and
+accent-coloured emphasis text is wrongly dinged on contrast. Consequences for the build:
+- Add a **visual-richness / engagement** sub-score so deliberate accent-colour use and
+  non-text elements (within restraint) raise the score — otherwise the scorer pushes
+  toward bland minimalism, the opposite of the goal.
+- Use the WCAG **large-text 3:1** threshold for big text (4.5:1 stays for body).
+- The geometric score is necessary but not sufficient; pair it with a **visual-polish
+  pass on the component layout handlers** (the actual source of "ugly").

@@ -56,6 +56,14 @@ def main() -> None:
     verify_p.add_argument("decks", nargs="+", help="Deck YAML path(s) to verify")
     verify_p.add_argument("--dpi", type=int, default=None, help="Render DPI (default 150)")
 
+    # slidekit score (Phase 10 — deterministic aesthetic score, ADVISORY, no render)
+    score_p = sub.add_parser(
+        "score",
+        help="Aesthetic score 0–100 over resolved geometry (advisory; no rendering)",
+    )
+    score_p.add_argument("deck", help="Path to deck.yaml")
+    score_p.add_argument("--json", action="store_true", help="Print the full JSON report")
+
     args = parser.parse_args()
 
     if args.command == "build":
@@ -68,6 +76,8 @@ def main() -> None:
         _cmd_new(args)
     elif args.command == "verify":
         _cmd_verify(args)
+    elif args.command == "score":
+        _cmd_score(args)
 
 
 def _cmd_build(args: argparse.Namespace) -> None:
@@ -119,6 +129,31 @@ def _emit_pdf(deck, rd, out_pdf: Path) -> None:
     from slidekit.emit.pdf_emitter import emit_pdf
 
     emit_pdf(deck, rd, out_pdf)
+
+
+def _cmd_score(args: argparse.Namespace) -> None:
+    """Deterministic aesthetic score (Phase 10). Advisory — never gates a build."""
+    from slidekit.ir import load
+    from slidekit.layout import resolve
+    from slidekit.aesthetics import score_deck
+
+    try:
+        deck = load(args.deck)
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        sys.exit(1)
+
+    report = score_deck(deck, resolve(deck))
+    if args.json:
+        print(report.to_json())
+    else:
+        print(f"deck aesthetic score: {report.deck_score:.1f}/100")
+        for s in report.slides:
+            print(
+                f"  slide {s.slide_index + 1} ({s.component}): "
+                f"{s.score:.0f}/100  weakest: {s.weakest} ({s.subscores[s.weakest]:.2f})"
+            )
+    sys.exit(0)
 
 
 def _cmd_layout(args: argparse.Namespace) -> None:

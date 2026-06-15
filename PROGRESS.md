@@ -129,3 +129,13 @@ score); the linter remains the gate.
 - [ ] ACCEPTANCE: deterministic (two runs identical) + unit tests per metric on hand-checked fixtures
 - [ ] ACCEPTANCE: every Phase 9 example deck clears a documented baseline score
 - [ ] DEFERRED (data-dependent): weight calibration against a human-labeled slide-pair set; do NOT claim human correlation until then
+
+## Phase 10 — first cut shipped (2026-06-14, interactive)
+- [x] `slidekit/aesthetics/` + `slidekit score deck.yaml [--json]` — deterministic 0–100 score over
+  ResolvedDeck: balance, whitespace, alignment, non-overlap, hierarchy, contrast. Advisory; 4 tests; 168 green.
+- [ ] FLAW TO FIX: metrics reward tidiness over beauty (plain decks ≥ designed decks); add a visual-
+  richness sub-score + use WCAG 3:1 for large text so accent emphasis isn't penalised.
+- [ ] Add colour-harmony + cross-slide-consistency metrics (docs/AESTHETICS.md).
+- [ ] `W_AESTH_*` advisory warnings + optional `--min-score` gate.
+- [ ] Visual-polish pass on plain component handlers, measured by `slidekit score` (PRIORITY OVERRIDE in NIGHTLY_PROMPT).
+- [ ] DEFERRED: weight calibration vs a human-labelled slide-pair set.

@@ -158,3 +158,23 @@ Build them with `slidekit build <deck>.yaml --pdf -o examples/pdf/<name>.pdf` (n
 reportlab emitter — no LibreOffice needed; works in any environment). Keep the
 deterministic round-trip TESTS on .pptx (they assert emitter geometry), but the
 human-viewable example outputs are PDF. Only emit .pptx when explicitly requested.
+
+=== PRIORITY OVERRIDE (added 2026-06-14; operator request — do BEFORE remaining Phase 9 designs) ===
+A first cut of Phase 10 `slidekit score` exists (slidekit/aesthetics/). Next sessions, in order:
+1. EXTEND PHASE 10 so the score tracks BEAUTY, not just tidiness. KNOWN FLAW: the current
+   geometric metrics reward sparse/plain decks AS HIGH OR HIGHER than richly-designed ones
+   (e.g. plain agents-in-ai 92.7 > designed big-number 86.2), and accent-coloured emphasis
+   text is wrongly penalised on contrast. Fix:
+   - Add a "visual richness / engagement" sub-score (reward deliberate accent-colour use,
+     colour variety, non-text elements — within restraint) so a designed slide OUTSCORES a bare one.
+   - Use the WCAG LARGE-text threshold (3:1) for big text so accent figures pass; keep 4.5:1 for body.
+   - Add the missing metrics from docs/AESTHETICS.md: colour harmony + cross-slide consistency.
+   - Keep deterministic, no rendering; calibration still DEFERRED. Validate: big-number must
+     score HIGHER than agents-in-ai / all_components once richness lands.
+2. VISUAL-POLISH PASS on the plain component handlers in src/slidekit/layout/engine.py — give the
+   bare ones the treatment the strong ones use (deliberate accent colour on key elements, better
+   vertical balance, clear hierarchy), WITHIN the rules (no decorative bars/stripes — those are
+   linter anti-patterns; restraint over ornament). Measure before/after with `slidekit score`;
+   rebuild the example PDFs (examples/pdf/).
+3. THEN resume the remaining ~20 Phase 9 designs.
+This is the Aesthetic Director agent's remit (specialized/specialized-aesthetic-director.md).
