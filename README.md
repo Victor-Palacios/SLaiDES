@@ -49,7 +49,7 @@ in files:
 | [docs/RESEARCH_TRACE.md](docs/RESEARCH_TRACE.md) | Which paper influenced which scorer decision (paper → decision → code, with status) |
 
 The schedule is [`.github/workflows/nightly.yml`](.github/workflows/nightly.yml):
-a GitHub Actions cron job (**07:00 UTC ≈ midnight Pacific, nightly**) running
+a GitHub Actions cron job (**09:00 UTC ≈ 02:00 Pacific, nightly**) running
 `anthropics/claude-code-action@v1` on Opus with the contents of `NIGHTLY_PROMPT.md`,
 tools scoped to `Read,Edit,Write,Bash` plus `WebSearch,WebFetch` for the research
 task. (The plan's preferred mechanisms — Claude Code Routines or a local crontab —

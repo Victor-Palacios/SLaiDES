@@ -103,6 +103,7 @@ is followed anyway.
   midnight Pacific) was re-enabled to continue the work: each run advances the current
   build phase (Phase 9 designs → Phase 10 aesthetics) AND the standing research task.
   Recurring Opus spend resumes (~$7–50/session) — operator-accepted.
+  *(Update 2026-06-16: shifted 2h later to 09:00 UTC ≈ 02:00 Pacific, operator request.)*
 - **Web tools added to the nightly allowlist.** `claude_args` now includes
   `WebSearch,WebFetch` (added to Read/Edit/Write/Bash) so the unattended session can
   discover and verify new research online. GitHub runners have open egress (unlike the
