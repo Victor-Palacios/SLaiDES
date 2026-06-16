@@ -2,13 +2,13 @@
 
 _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`, then re-render; do not hand-edit. The kanban view of the work; `PROGRESS.md` stays the acceptance ledger._
 
-**backlog** 14 · **todo** 3 · **in_progress** 0 · **blocked** 1 · **done** 10 · _last change 2026-06-16_
+**backlog** 14 · **todo** 1 · **in_progress** 2 · **blocked** 1 · **done** 10 · _last change 2026-06-16_
 
-| Backlog (14) | Todo (3) | In Progress (0) | Blocked (1) | Done (10) |
+| Backlog (14) | Todo (1) | In Progress (2) | Blocked (1) | Done (10) |
 |---|---|---|---|---|
-| **T-006** process-steps design · _P9_ | **T-018** W_AESTH_* advisory warnings + optional --min-score gate · _P10_ |  | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
-| **T-007** roadmap design · _P9_ | **T-022** verify SECONDHAND refs #5/#7/#8/#9 from primary sources · _RES_ |  |  | **T-002** chart-slide design · _P9_ · `high` |
-| **T-008** funnel design · _P9_ | **T-023** grow REFERENCES.md toward ~20 verified (1–3 new/session) · _RES_ |  |  | **T-025** beauty-tracking extension: richness + large-text 3:1 contrast · _P10_ · `high` |
+| **T-006** process-steps design · _P9_ | **T-018** W_AESTH_* advisory warnings + optional --min-score gate · _P10_ | **T-022** verify SECONDHAND refs #5/#7/#8/#9 from primary sources · _RES_ | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
+| **T-007** roadmap design · _P9_ |  | **T-023** grow REFERENCES.md toward ~20 verified (1–3 new/session) · _RES_ |  | **T-002** chart-slide design · _P9_ · `high` |
+| **T-008** funnel design · _P9_ |  |  |  | **T-025** beauty-tracking extension: richness + large-text 3:1 contrast · _P10_ · `high` |
 | **T-009** pyramid design · _P9_ |  |  |  | **T-003** chart-with-insight design · _P9_ |
 | **T-010** matrix-2x2 design · _P9_ |  |  |  | **T-004** table-slide design · _P9_ |
 | **T-011** swot design · _P9_ |  |  |  | **T-005** metric-comparison design · _P9_ |
