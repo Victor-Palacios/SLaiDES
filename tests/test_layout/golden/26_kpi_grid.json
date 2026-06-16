@@ -1,0 +1,517 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_1",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Quarter in Review",
+          "lines": [
+            {
+              "text": "Quarter in Review",
+              "width_emu": 6479232,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1F2A44"
+        },
+        {
+          "node_id": "subtitle_2",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "The dashboard at a glance",
+          "lines": [
+            {
+              "text": "The dashboard at a glance",
+              "width_emu": 5137324,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_3",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "kpi-grid",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_4",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Key Metrics This Quarter",
+          "lines": [
+            {
+              "text": "Key Metrics This Quarter",
+              "width_emu": 6314070,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1F2A44"
+        },
+        {
+          "node_id": "kpi_val_5",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1569720,
+            "w": 3576320,
+            "h": 640080
+          },
+          "text_content": "98.7%",
+          "lines": [
+            {
+              "text": "98.7%",
+              "width_emu": 1512429,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "kpi_0",
+          "text_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_rule_6",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2484120,
+            "w": 1430528,
+            "h": 54864
+          },
+          "group_id": "kpi_0",
+          "fill_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_label_7",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2813304,
+            "w": 3576320,
+            "h": 609600
+          },
+          "text_content": "Uptime",
+          "lines": [
+            {
+              "text": "Uptime",
+              "width_emu": 1367718,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "kpi_0"
+        },
+        {
+          "node_id": "kpi_val_8",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 1569720,
+            "w": 3576320,
+            "h": 640080
+          },
+          "text_content": "1,240",
+          "lines": [
+            {
+              "text": "1,240",
+              "width_emu": 1334802,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "kpi_1",
+          "text_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_rule_9",
+          "node_type": "box",
+          "rect": {
+            "x": 4307840,
+            "y": 2484120,
+            "w": 1430528,
+            "h": 54864
+          },
+          "group_id": "kpi_1",
+          "fill_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_label_10",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2813304,
+            "w": 3576320,
+            "h": 609600
+          },
+          "text_content": "New accounts",
+          "lines": [
+            {
+              "text": "New accounts",
+              "width_emu": 2712033,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "kpi_1"
+        },
+        {
+          "node_id": "kpi_val_11",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 1569720,
+            "w": 3576320,
+            "h": 640080
+          },
+          "text_content": "4.6/5",
+          "lines": [
+            {
+              "text": "4.6/5",
+              "width_emu": 1186346,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "kpi_2",
+          "text_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_rule_12",
+          "node_type": "box",
+          "rect": {
+            "x": 8158480,
+            "y": 2484120,
+            "w": 1430528,
+            "h": 54864
+          },
+          "group_id": "kpi_2",
+          "fill_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_label_13",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2813304,
+            "w": 3576320,
+            "h": 609600
+          },
+          "text_content": "Support rating",
+          "lines": [
+            {
+              "text": "Support rating",
+              "width_emu": 2712455,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "kpi_2"
+        },
+        {
+          "node_id": "kpi_val_14",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3837432,
+            "w": 3576320,
+            "h": 640080
+          },
+          "text_content": "$2.1M",
+          "lines": [
+            {
+              "text": "$2.1M",
+              "width_emu": 1482477,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "kpi_3",
+          "text_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_rule_15",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 4751832,
+            "w": 1430528,
+            "h": 54864
+          },
+          "group_id": "kpi_3",
+          "fill_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_label_16",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5081016,
+            "w": 3576320,
+            "h": 609600
+          },
+          "text_content": "Net new revenue",
+          "lines": [
+            {
+              "text": "Net new revenue",
+              "width_emu": 3264433,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "kpi_3"
+        },
+        {
+          "node_id": "kpi_val_17",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3767328,
+            "w": 3576320,
+            "h": 640080
+          },
+          "text_content": "12 days",
+          "lines": [
+            {
+              "text": "12 days",
+              "width_emu": 1957276,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "kpi_4",
+          "text_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_rule_18",
+          "node_type": "box",
+          "rect": {
+            "x": 4307840,
+            "y": 4681728,
+            "w": 1430528,
+            "h": 54864
+          },
+          "group_id": "kpi_4",
+          "fill_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_label_19",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 5010912,
+            "w": 3576320,
+            "h": 1127760
+          },
+          "text_content": "Avg. time to value",
+          "lines": [
+            {
+              "text": "Avg. time to",
+              "width_emu": 2272010,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "value",
+              "width_emu": 1032272,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "kpi_4"
+        },
+        {
+          "node_id": "kpi_val_20",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3837432,
+            "w": 3576320,
+            "h": 640080
+          },
+          "text_content": "31%",
+          "lines": [
+            {
+              "text": "31%",
+              "width_emu": 1067581,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "kpi_5",
+          "text_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_rule_21",
+          "node_type": "box",
+          "rect": {
+            "x": 8158480,
+            "y": 4751832,
+            "w": 1430528,
+            "h": 54864
+          },
+          "group_id": "kpi_5",
+          "fill_color": "#2DA8A0"
+        },
+        {
+          "node_id": "kpi_label_22",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 5081016,
+            "w": 3576320,
+            "h": 609600
+          },
+          "text_content": "Expansion rate",
+          "lines": [
+            {
+              "text": "Expansion rate",
+              "width_emu": 2880494,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "kpi_5"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_23",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

@@ -19,6 +19,8 @@ from slidekit.ir.models import (
     BigNumberSlide,
     BulletListSlide,
     CardGridSlide,
+    ChartSlide,
+    ChartWithInsightSlide,
     ChecklistSlide,
     ComparisonColumnsSlide,
     DeckIR,
@@ -26,6 +28,8 @@ from slidekit.ir.models import (
     FeatureListSlide,
     IconTextRowsSlide,
     ImageHalfBleedSlide,
+    KpiGridSlide,
+    MetricComparisonSlide,
     NumberedStepsSlide,
     ProsConsSlide,
     PullQuoteSlide,
@@ -34,6 +38,7 @@ from slidekit.ir.models import (
     SectionDividerSlide,
     StatCalloutSlide,
     StatementSlide,
+    TableSlide,
     ThisVsThatSlide,
     TimelineSlide,
     TitleSlide,
@@ -185,6 +190,16 @@ def _resolve_slide(
         nodes = _layout_pros_cons(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "this-vs-that":
         nodes = _layout_this_vs_that(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "kpi-grid":
+        nodes = _layout_kpi_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "chart-slide":
+        nodes = _layout_chart_slide(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "chart-with-insight":
+        nodes = _layout_chart_with_insight(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "table-slide":
+        nodes = _layout_table_slide(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "metric-comparison":
+        nodes = _layout_metric_comparison(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     else:
         nodes = []
 
@@ -938,6 +953,235 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
     nodes.append(_make_text_node(_nid("vs_text"), "VS", font, ts.body, bold=True,
                                  italic=False, rect=Rect(badge_x, badge_y, badge, badge),
                                  group_id="vs_badge", color=palette.surface))
+    return nodes
+
+
+# ── Phase 9: data & stats (catalog #21–25) ────────────────────────────────────
+#
+# These designs render quantitative content with measurable rects only: KPI cells
+# with an accent underline, charts as colored bar rectangles + labels (never
+# freehand strokes), tables as a cell grid with an accent header rule, and metric
+# deltas as small accent chips. Every mark is a node the linter can prove fits.
+
+
+def _slide_title(nodes, title, cx, y, cw, font, ts, palette):
+    """Emit a header-tier slide title (brand primary) if present; return new y."""
+    if not title:
+        return y
+    title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+    nodes.append(_make_text_node(_nid("title"), title, font, ts.header, bold=True,
+                                 italic=False, rect=Rect(cx, y, cw, title_h),
+                                 color=palette.primary))
+    return y + title_h + GAP_MIN_EMU
+
+
+def _fmt_num(v: float) -> str:
+    """Format a chart value: drop a trailing .0 on integers, else keep as-is."""
+    return str(int(v)) if float(v).is_integer() else str(v)
+
+
+def _chart_nodes(chart, x, y, w, h, font, ts, palette, prefix) -> list[ResolvedNode]:
+    """Render a chart slot deterministically. Bar charts become measured accent
+    rectangles with a value label above and a category label below each bar; other
+    chart types render as a single labelled placeholder region. No freehand marks —
+    every element is a rect the linter can verify, per the Phase 9 shape rule."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    if chart.chart_type == "bar" and chart.series and chart.series[0].values:
+        values = chart.series[0].values
+        labels = chart.labels or [str(i + 1) for i in range(len(values))]
+        n = len(values)
+        val_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+        cat_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+        bars_area_h = max(1, h - val_h - cat_h - 2 * gap)
+        slot_w = max(1, (w - gap * max(0, n - 1)) // n)
+        bar_w = max(1, int(slot_w * 0.7))
+        bar_pad = (slot_w - bar_w) // 2
+        maxv = max(values)
+        maxv = maxv if maxv > 0 else 1
+        baseline_y = y + val_h + gap + bars_area_h
+        for i, v in enumerate(values):
+            gid = f"{prefix}_bar_{i}"
+            slot_x = x + i * (slot_w + gap)
+            bh = max(1, int(bars_area_h * (v / maxv)))
+            by = baseline_y - bh
+            nodes.append(_make_text_node(_nid(f"{prefix}_val"), _fmt_num(v), font,
+                                         ts.caption, bold=True, italic=False,
+                                         rect=Rect(slot_x, by - val_h - gap, slot_w, val_h),
+                                         is_caption=True, color=palette.accent, group_id=gid))
+            nodes.append(ResolvedNode(_nid(f"{prefix}_barbox"), "box",
+                                      Rect(slot_x + bar_pad, by, bar_w, bh),
+                                      fill_color=palette.accent, group_id=gid))
+            cat = labels[i] if i < len(labels) else str(i + 1)
+            nodes.append(_make_text_node(_nid(f"{prefix}_cat"), cat, font, ts.caption,
+                                         bold=False, italic=False,
+                                         rect=Rect(slot_x, baseline_y + gap, slot_w, cat_h),
+                                         is_caption=True, color=palette.muted, group_id=gid))
+        return nodes
+
+    # Non-bar fallback: a single labelled region (muted fill, label on top).
+    gid = f"{prefix}_region"
+    nodes.append(ResolvedNode(_nid(f"{prefix}_box"), "box", Rect(x, y, w, h),
+                              fill_color=palette.muted, group_id=gid))
+    label = chart.title or f"{chart.chart_type} chart"
+    lbl_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    nodes.append(_make_text_node(_nid(f"{prefix}_label"), label, font, ts.body, bold=True,
+                                 italic=False,
+                                 rect=Rect(x, y + max(0, (h - lbl_h) // 2), w, lbl_h),
+                                 color=palette.surface, group_id=gid))
+    return nodes
+
+
+def _layout_kpi_grid(slide: KpiGridSlide, cx, cy, cw, ch, font, ts, palette):
+    """Dashboard of small metrics: a grid of cells, each a header-tier value (accent)
+    over a short accent underline over a body-tier label. The underline is the
+    deterministic non-text accent that signals a dashboard tile."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n = len(slide.kpis)
+    cols = min(3, n)
+    rows = (n + cols - 1) // cols
+    cell_w = (cw - gap * (cols - 1)) // cols
+    avail = cy + ch - y
+    cell_h = (avail - gap * (rows - 1)) // rows if rows else avail
+
+    value_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
+    rule_h = int(0.06 * EMU_PER_INCH)
+    for i, kpi in enumerate(slide.kpis):
+        gid = f"kpi_{i}"
+        r, c = divmod(i, cols)
+        kx = cx + c * (cell_w + gap)
+        ky = y + r * (cell_h + gap)
+        # Size the label box to its measured wrapped height so it never overflows;
+        # centre the value/rule/label block within the cell.
+        label_lines = wrap(kpi.label, font, ts.body, cell_w)
+        label_h = max(1, total_text_height_emu(label_lines))
+        block_h = value_h + gap + rule_h + gap + label_h
+        inner_y = ky + max(0, (cell_h - block_h) // 2)
+        nodes.append(_make_text_node(_nid("kpi_val"), kpi.value, font, ts.header, bold=True,
+                                     italic=False, rect=Rect(kx, inner_y, cell_w, value_h),
+                                     color=palette.accent, group_id=gid))
+        ry = inner_y + value_h + gap
+        nodes.append(ResolvedNode(_nid("kpi_rule"), "box",
+                                  Rect(kx, ry, max(1, int(cell_w * 0.4)), rule_h),
+                                  fill_color=palette.accent, group_id=gid))
+        ly = ry + rule_h + gap
+        nodes.append(_make_text_node(_nid("kpi_label"), kpi.label, font, ts.body, bold=False,
+                                     italic=False, rect=Rect(kx, ly, cell_w, label_h),
+                                     lines=label_lines, group_id=gid))
+    return nodes
+
+
+def _layout_chart_slide(slide: ChartSlide, cx, cy, cw, ch, font, ts, palette):
+    """One captioned chart filling the content area below the title."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    caption_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT) if slide.caption else 0
+    chart_h = cy + ch - y - (caption_h + gap if slide.caption else 0)
+    nodes.extend(_chart_nodes(slide.chart, cx, y, cw, chart_h, font, ts, palette, "chart"))
+    if slide.caption:
+        nodes.append(_make_text_node(_nid("caption"), slide.caption, font, ts.caption,
+                                     bold=False, italic=False,
+                                     rect=Rect(cx, cy + ch - caption_h, cw, caption_h),
+                                     is_caption=True, color=palette.muted))
+    return nodes
+
+
+def _layout_chart_with_insight(slide: ChartWithInsightSlide, cx, cy, cw, ch, font, ts, palette):
+    """Chart on the left, a takeaway callout (accent bar + bold text) on the right."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    content_h = cy + ch - y
+    chart_w = int(cw * 0.6)
+    insight_x = cx + chart_w + gap
+    insight_w = cw - chart_w - gap
+    nodes.extend(_chart_nodes(slide.chart, cx, y, chart_w, content_h, font, ts, palette, "chart"))
+    nodes.extend(_emphasis_stack(
+        [{"prefix": "insight", "text": slide.insight, "size": ts.body, "bold": True}],
+        insight_x, y, insight_w, content_h, font, palette,
+    ))
+    return nodes
+
+
+def _layout_table_slide(slide: TableSlide, cx, cy, cw, ch, font, ts, palette):
+    """A small text table: a bold header row (brand primary) over an accent rule,
+    then a grid of body-tier cells. The rule is the deterministic non-text mark."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    ncols = len(slide.headers)
+    col_w = (cw - gap * (ncols - 1)) // ncols if ncols else cw
+    head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    rule_h = int(0.06 * EMU_PER_INCH)
+
+    for c, htext in enumerate(slide.headers):
+        hx = cx + c * (col_w + gap)
+        nodes.append(_make_text_node(_nid("th"), htext, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(hx, y, col_w, head_h),
+                                     color=palette.primary))
+    ry = y + head_h + gap
+    nodes.append(ResolvedNode(_nid("table_rule"), "box", Rect(cx, ry, cw, rule_h),
+                              fill_color=palette.accent))
+    yy = ry + rule_h + gap
+
+    nrows = len(slide.rows)
+    body_h = cy + ch - yy
+    row_h = max(1, (body_h - gap * max(0, nrows - 1)) // nrows) if nrows else body_h
+    for r, row in enumerate(slide.rows):
+        for c in range(ncols):
+            cell = row[c] if c < len(row) else ""
+            cxx = cx + c * (col_w + gap)
+            nodes.append(_make_text_node(_nid("td"), cell, font, ts.body, bold=False,
+                                         italic=False, rect=Rect(cxx, yy, col_w, row_h)))
+        yy += row_h + gap
+    return nodes
+
+
+def _layout_metric_comparison(slide: MetricComparisonSlide, cx, cy, cw, ch, font, ts, palette):
+    """2–3 metrics side by side: a title-tier value (accent), a body label, and an
+    optional change delta rendered as a small accent chip (box + label on top)."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n = len(slide.metrics)
+    col_w = (cw - gap * (n - 1)) // n if n else cw
+    col_h = cy + ch - y
+    value_h = int(ts.title * LINE_SPACING_SINGLE * EMU_PER_PT)
+    delta_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    chip_pad = int(0.18 * EMU_PER_INCH)
+
+    for i, m in enumerate(slide.metrics):
+        gid = f"metric_{i}"
+        mx = cx + i * (col_w + gap)
+        has_delta = m.delta is not None
+        # Size the label box to its measured wrapped height; centre the block.
+        label_lines = wrap(m.label, font, ts.body, col_w)
+        label_h = max(1, total_text_height_emu(label_lines))
+        block_h = value_h + gap + label_h + (gap + delta_h if has_delta else 0)
+        inner_y = y + max(0, (col_h - block_h) // 2)
+        nodes.append(_make_text_node(_nid("metric_val"), m.value, font, ts.title, bold=True,
+                                     italic=False, rect=Rect(mx, inner_y, col_w, value_h),
+                                     color=palette.accent))
+        ly = inner_y + value_h + gap
+        nodes.append(_make_text_node(_nid("metric_label"), m.label, font, ts.body, bold=False,
+                                     italic=False, rect=Rect(mx, ly, col_w, label_h),
+                                     lines=label_lines))
+        if has_delta:
+            dy = ly + label_h + gap
+            chip_w = min(col_w, measure_text(m.delta, font, ts.body, bold=True) + 2 * chip_pad)
+            nodes.append(ResolvedNode(_nid("metric_chip"), "box", Rect(mx, dy, chip_w, delta_h),
+                                      fill_color=palette.accent, group_id=gid))
+            nodes.append(_make_text_node(_nid("metric_delta"), m.delta, font, ts.body, bold=True,
+                                         italic=False, rect=Rect(mx, dy, chip_w, delta_h),
+                                         color=palette.surface, group_id=gid))
     return nodes
 
 

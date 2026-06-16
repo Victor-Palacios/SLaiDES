@@ -1,0 +1,409 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_82",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Year-over-Year",
+          "lines": [
+            {
+              "text": "Year-over-Year",
+              "width_emu": 5337721,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0D3B66"
+        },
+        {
+          "node_id": "subtitle_83",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "How the headline numbers moved",
+          "lines": [
+            {
+              "text": "How the headline numbers moved",
+              "width_emu": 6552692,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_84",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "metric-comparison",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_85",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Performance vs Last Year",
+          "lines": [
+            {
+              "text": "Performance vs Last Year",
+              "width_emu": 6513314,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0D3B66"
+        },
+        {
+          "node_id": "metric_val_86",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2075688,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "$8.4M",
+          "lines": [
+            {
+              "text": "$8.4M",
+              "width_emu": 2117824,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#2A9D8F"
+        },
+        {
+          "node_id": "metric_label_87",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3264408,
+            "w": 3576320,
+            "h": 1127760
+          },
+          "text_content": "Annual recurring revenue",
+          "lines": [
+            {
+              "text": "Annual recurring",
+              "width_emu": 3168290,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "revenue",
+              "width_emu": 1560426,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "metric_chip_88",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 4666488,
+            "w": 1445581,
+            "h": 518159
+          },
+          "group_id": "metric_0",
+          "fill_color": "#2A9D8F"
+        },
+        {
+          "node_id": "metric_delta_89",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4666488,
+            "w": 1445581,
+            "h": 518159
+          },
+          "text_content": "+24%",
+          "lines": [
+            {
+              "text": "+24%",
+              "width_emu": 1116397,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "metric_0",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "metric_val_90",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2334768,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "2.1%",
+          "lines": [
+            {
+              "text": "2.1%",
+              "width_emu": 1736824,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#2A9D8F"
+        },
+        {
+          "node_id": "metric_label_91",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3523488,
+            "w": 3576320,
+            "h": 609600
+          },
+          "text_content": "Monthly churn",
+          "lines": [
+            {
+              "text": "Monthly churn",
+              "width_emu": 2712033,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "metric_chip_92",
+          "node_type": "box",
+          "rect": {
+            "x": 4307840,
+            "y": 4407408,
+            "w": 1840906,
+            "h": 518159
+          },
+          "group_id": "metric_1",
+          "fill_color": "#2A9D8F"
+        },
+        {
+          "node_id": "metric_delta_93",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 4407408,
+            "w": 1840906,
+            "h": 518159
+          },
+          "text_content": "-0.8 pts",
+          "lines": [
+            {
+              "text": "-0.8 pts",
+              "width_emu": 1511722,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "metric_1",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "metric_val_94",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2075688,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "63",
+          "lines": [
+            {
+              "text": "63",
+              "width_emu": 847576,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#2A9D8F"
+        },
+        {
+          "node_id": "metric_label_95",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3264408,
+            "w": 3576320,
+            "h": 1127760
+          },
+          "text_content": "Net promoter score",
+          "lines": [
+            {
+              "text": "Net promoter",
+              "width_emu": 2519747,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "score",
+              "width_emu": 1055886,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "metric_chip_96",
+          "node_type": "box",
+          "rect": {
+            "x": 8158480,
+            "y": 4666488,
+            "w": 1037817,
+            "h": 518159
+          },
+          "group_id": "metric_2",
+          "fill_color": "#2A9D8F"
+        },
+        {
+          "node_id": "metric_delta_97",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 4666488,
+            "w": 1037817,
+            "h": 518159
+          },
+          "text_content": "+11",
+          "lines": [
+            {
+              "text": "+11",
+              "width_emu": 708633,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "metric_2",
+          "text_color": "#FFFFFF"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_98",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

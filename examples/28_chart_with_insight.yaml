@@ -1,0 +1,26 @@
+version: 1
+theme:
+  palette:
+    primary: "#2B2D42"
+    surface: "#FFFFFF"
+    accent: "#1B998B"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Adoption Curve"
+    subtitle: "Where the growth is coming from"
+
+  - component: chart-with-insight
+    title: "Monthly Active Teams"
+    chart:
+      type: chart
+      chart_type: bar
+      labels: ["Jan", "Feb", "Mar", "Apr"]
+      series:
+        - name: "Active teams"
+          values: [120, 180, 290, 460]
+    insight: "Activations nearly quadrupled once self-serve onboarding shipped in February."

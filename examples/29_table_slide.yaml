@@ -1,0 +1,24 @@
+version: 1
+theme:
+  palette:
+    primary: "#1B4F8A"
+    surface: "#FFFFFF"
+    accent: "#C0392B"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Plan Comparison"
+    subtitle: "What each tier includes"
+
+  - component: table-slide
+    title: "Pricing Tiers"
+    headers: ["Plan", "Seats", "Price"]
+    rows:
+      - ["Starter", "Up to 5", "$0"]
+      - ["Team", "Up to 50", "$12/seat"]
+      - ["Business", "Up to 250", "$20/seat"]
+      - ["Enterprise", "Unlimited", "Custom"]

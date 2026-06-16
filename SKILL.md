@@ -114,8 +114,17 @@ Each component compiles to a row/column tree; you fill typed slots.
 | `before-after` | `before`/`after` = `{title, items[]}` (≤3 each) | `title` |
 | `pros-cons` | `pros[]`, `cons[]` (≤3 each) | `title`, `pros_title`, `cons_title` |
 | `this-vs-that` | `left`/`right` = `{value, label}` | `title` |
+| `kpi-grid` | `kpis[]` = `{value, label}` (4–6) | `title` |
+| `chart-slide` | `chart` (chart slot) | `title`, `caption` |
+| `chart-with-insight` | `chart`, `insight` | `title` |
+| `table-slide` | `headers[]`, `rows[][]` (≤4 rows × ≤3 cols keeps ≥32pt) | `title` |
+| `metric-comparison` | `metrics[]` = `{value, label, delta?}` (2–3) | `title` |
 
-Minimal examples of each live in `examples/01..22_*.yaml`; copy and adapt.
+A `chart` slot is `{type: chart, chart_type: bar, labels[], series[] = {name, values[]}}`.
+Bar charts render as measured colored rectangles + labels (deterministic, lint-provable);
+other `chart_type`s render as a labelled placeholder region.
+
+Minimal examples of each live in `examples/01..30_*.yaml`; copy and adapt.
 
 ## Lint error codes and how to fix them
 

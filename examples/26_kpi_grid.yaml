@@ -1,0 +1,31 @@
+version: 1
+theme:
+  palette:
+    primary: "#1F2A44"
+    surface: "#FFFFFF"
+    accent: "#2DA8A0"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Quarter in Review"
+    subtitle: "The dashboard at a glance"
+
+  - component: kpi-grid
+    title: "Key Metrics This Quarter"
+    kpis:
+      - value: "98.7%"
+        label: "Uptime"
+      - value: "1,240"
+        label: "New accounts"
+      - value: "4.6/5"
+        label: "Support rating"
+      - value: "$2.1M"
+        label: "Net new revenue"
+      - value: "12 days"
+        label: "Avg. time to value"
+      - value: "31%"
+        label: "Expansion rate"

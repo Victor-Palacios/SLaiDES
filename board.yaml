@@ -21,11 +21,11 @@ epics:
 
 tasks:
   # ── Phase 9: next group (E data) — todo ──────────────────────────────────────
-  - {id: T-001, title: "kpi-grid design", epic: phase-9, column: todo, priority: high, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data); model+layout+golden+example+SKILL row"}
-  - {id: T-002, title: "chart-slide design", epic: phase-9, column: todo, priority: high, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data)"}
-  - {id: T-003, title: "chart-with-insight design", epic: phase-9, column: todo, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data)"}
-  - {id: T-004, title: "table-slide design", epic: phase-9, column: todo, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data); render as measured colored rects + text"}
-  - {id: T-005, title: "metric-comparison design", epic: phase-9, column: todo, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data)"}
+  - {id: T-001, title: "kpi-grid design", epic: phase-9, column: done, priority: high, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 26; commit pending; lint-clean"}
+  - {id: T-002, title: "chart-slide design", epic: phase-9, column: done, priority: high, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 27; bar rects; lint-clean"}
+  - {id: T-003, title: "chart-with-insight design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 28; chart + accent insight; lint-clean"}
+  - {id: T-004, title: "table-slide design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 29; cell grid + accent rule; lint-clean"}
+  - {id: T-005, title: "metric-comparison design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 30; value/label + delta chip; lint-clean"}
 
   # ── Phase 9: later groups (F, G/H) — backlog ─────────────────────────────────
   - {id: T-006, title: "process-steps design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F (process/shape)"}

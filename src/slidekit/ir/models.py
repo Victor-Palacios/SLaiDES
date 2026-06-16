@@ -112,7 +112,7 @@ class ChartSeries(BaseModel):
 
 
 class ChartSlot(BaseModel):
-    type: Literal["chart"]
+    type: Literal["chart"] = "chart"
     chart_type: Literal["bar", "line", "pie", "scatter"] = "bar"
     title: str = ""
     x_label: str = ""
@@ -355,6 +355,53 @@ class ThisVsThatSlide(BaseModel):
     right: VersusSide
 
 
+# ── Phase 9: data & stats (catalog #21–25) ────────────────────────────────────
+
+
+class Kpi(BaseModel):
+    value: str
+    label: str
+
+
+class KpiGridSlide(BaseModel):
+    component: Literal["kpi-grid"]
+    title: Optional[str] = None
+    kpis: list[Kpi] = Field(min_length=1)
+
+
+class ChartSlide(BaseModel):
+    component: Literal["chart-slide"]
+    title: Optional[str] = None
+    chart: ChartSlot
+    caption: Optional[str] = None
+
+
+class ChartWithInsightSlide(BaseModel):
+    component: Literal["chart-with-insight"]
+    title: Optional[str] = None
+    chart: ChartSlot
+    insight: str
+
+
+class TableSlide(BaseModel):
+    component: Literal["table-slide"]
+    title: Optional[str] = None
+    headers: list[str] = Field(min_length=1)
+    rows: list[list[str]] = Field(min_length=1)
+
+
+class Metric(BaseModel):
+    value: str
+    label: str
+    delta: Optional[str] = None
+
+
+class MetricComparisonSlide(BaseModel):
+    component: Literal["metric-comparison"]
+    title: Optional[str] = None
+    metrics: list[Metric] = Field(min_length=1)
+
+
 Slide = Annotated[
     Union[
         TitleSlide,
@@ -380,6 +427,11 @@ Slide = Annotated[
         BeforeAfterSlide,
         ProsConsSlide,
         ThisVsThatSlide,
+        KpiGridSlide,
+        ChartSlide,
+        ChartWithInsightSlide,
+        TableSlide,
+        MetricComparisonSlide,
     ],
     Field(discriminator="component"),
 ]

@@ -1,0 +1,504 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_61",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Plan Comparison",
+          "lines": [
+            {
+              "text": "Plan Comparison",
+              "width_emu": 6266408,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "subtitle_62",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "What each tier includes",
+          "lines": [
+            {
+              "text": "What each tier includes",
+              "width_emu": 4488148,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_63",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "table-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_64",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Pricing Tiers",
+          "lines": [
+            {
+              "text": "Pricing Tiers",
+              "width_emu": 3221496,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "th_65",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Plan",
+          "lines": [
+            {
+              "text": "Plan",
+              "width_emu": 911882,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "th_66",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Seats",
+          "lines": [
+            {
+              "text": "Seats",
+              "width_emu": 1152240,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "th_67",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Price",
+          "lines": [
+            {
+              "text": "Price",
+              "width_emu": 1056308,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "table_rule_68",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2292095,
+            "w": 11277600,
+            "h": 54864
+          },
+          "fill_color": "#C0392B"
+        },
+        {
+          "node_id": "td_69",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2621279,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "Starter",
+          "lines": [
+            {
+              "text": "Starter",
+              "width_emu": 1295822,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_70",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2621279,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "Up to 5",
+          "lines": [
+            {
+              "text": "Up to 5",
+              "width_emu": 1392175,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_71",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2621279,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "$0",
+          "lines": [
+            {
+              "text": "$0",
+              "width_emu": 480293,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_72",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3474719,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "Team",
+          "lines": [
+            {
+              "text": "Team",
+              "width_emu": 1055886,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_73",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3474719,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "Up to 50",
+          "lines": [
+            {
+              "text": "Up to 50",
+              "width_emu": 1632322,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_74",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3474719,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "$12/seat",
+          "lines": [
+            {
+              "text": "$12/seat",
+              "width_emu": 1656569,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_75",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4328159,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "Business",
+          "lines": [
+            {
+              "text": "Business",
+              "width_emu": 1752079,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_76",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 4328159,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "Up to 250",
+          "lines": [
+            {
+              "text": "Up to 250",
+              "width_emu": 1872469,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_77",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 4328159,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "$20/seat",
+          "lines": [
+            {
+              "text": "$20/seat",
+              "width_emu": 1656569,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_78",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5181599,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "Enterprise",
+          "lines": [
+            {
+              "text": "Enterprise",
+              "width_emu": 1967979,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_79",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 5181599,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "Unlimited",
+          "lines": [
+            {
+              "text": "Unlimited",
+              "width_emu": 1799729,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_80",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 5181599,
+            "w": 3576320,
+            "h": 579120
+          },
+          "text_content": "Custom",
+          "lines": [
+            {
+              "text": "Custom",
+              "width_emu": 1487686,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_81",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

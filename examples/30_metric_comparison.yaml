@@ -1,0 +1,28 @@
+version: 1
+theme:
+  palette:
+    primary: "#0D3B66"
+    surface: "#FFFFFF"
+    accent: "#2A9D8F"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Year-over-Year"
+    subtitle: "How the headline numbers moved"
+
+  - component: metric-comparison
+    title: "Performance vs Last Year"
+    metrics:
+      - value: "$8.4M"
+        label: "Annual recurring revenue"
+        delta: "+24%"
+      - value: "2.1%"
+        label: "Monthly churn"
+        delta: "-0.8 pts"
+      - value: "63"
+        label: "Net promoter score"
+        delta: "+11"
