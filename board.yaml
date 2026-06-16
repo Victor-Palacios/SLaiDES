@@ -1,0 +1,59 @@
+# Agile task board — source of truth. Render to BOARD.md with:
+#   python scripts/render_board.py
+# This is the active/sprint kanban VIEW of the work. PROGRESS.md remains the
+# canonical phase/acceptance ledger; this board carries active + recently-done
+# cards, not the full history. The nightly maintains both (see NIGHTLY_PROMPT.md
+# "TASK BOARD" addendum): move a card to in_progress when picked up, to done (with
+# a commit ref in notes) when its acceptance test passes, or to blocked with a
+# reason; add newly-discovered tasks; then re-render and commit board.yaml + BOARD.md.
+#
+# Task fields: id, title, column (must be one of `columns`), epic (optional, must
+# be a defined epic id), priority (high|med|low), sprint (optional), created,
+# updated (YYYY-MM-DD), notes (short free text — commit ref / blocker reason).
+version: 1
+
+columns: [backlog, todo, in_progress, blocked, done]
+
+epics:
+  - {id: phase-9,  title: "Phase 9 — 40 core slide designs", tag: P9}
+  - {id: phase-10, title: "Phase 10 — computational aesthetics", tag: P10}
+  - {id: research, title: "Standing research task", tag: RES}
+
+tasks:
+  # ── Phase 9: next group (E data) — todo ──────────────────────────────────────
+  - {id: T-001, title: "kpi-grid design", epic: phase-9, column: todo, priority: high, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data); model+layout+golden+example+SKILL row"}
+  - {id: T-002, title: "chart-slide design", epic: phase-9, column: todo, priority: high, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data)"}
+  - {id: T-003, title: "chart-with-insight design", epic: phase-9, column: todo, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data)"}
+  - {id: T-004, title: "table-slide design", epic: phase-9, column: todo, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data); render as measured colored rects + text"}
+  - {id: T-005, title: "metric-comparison design", epic: phase-9, column: todo, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group E (data)"}
+
+  # ── Phase 9: later groups (F, G/H) — backlog ─────────────────────────────────
+  - {id: T-006, title: "process-steps design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F (process/shape)"}
+  - {id: T-007, title: "roadmap design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F (process/shape)"}
+  - {id: T-008, title: "funnel design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F; measured colored rects, never freehand connectors"}
+  - {id: T-009, title: "pyramid design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F; measured colored rects"}
+  - {id: T-010, title: "matrix-2x2 design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F (process/shape)"}
+  - {id: T-011, title: "swot design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F (process/shape)"}
+  - {id: T-012, title: "comparison-matrix design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
+  - {id: T-013, title: "team-grid design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
+  - {id: T-014, title: "image-full-bleed design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
+  - {id: T-015, title: "image-grid design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
+  - {id: T-016, title: "logo-wall design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
+  - {id: T-017, title: "testimonial design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
+
+  # ── Phase 10: aesthetics — open items ────────────────────────────────────────
+  - {id: T-018, title: "W_AESTH_* advisory warnings + optional --min-score gate", epic: phase-10, column: todo, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "warnings never block the build; linter stays the gate"}
+  - {id: T-019, title: "info-density sub-score metric", epic: phase-10, column: backlog, priority: low, created: 2026-06-14, updated: 2026-06-15, notes: "text-area/content-area + words-per-slide vs target band"}
+  - {id: T-020, title: "Harrington non-linear score combiner (ref #10)", epic: phase-10, column: backlog, priority: low, created: 2026-06-15, updated: 2026-06-15, notes: "verified paper, not yet coded; one bad feature should dominate"}
+  - {id: T-021, title: "weight calibration vs human-labelled slide-pair set", epic: phase-10, column: blocked, priority: low, created: 2026-06-14, updated: 2026-06-15, notes: "DEFERRED — needs a labelled dataset; no human-correlation claim until then"}
+
+  # ── Standing research task ───────────────────────────────────────────────────
+  - {id: T-022, title: "verify SECONDHAND refs #5/#7/#8/#9 from primary sources", epic: research, column: todo, priority: med, created: 2026-06-15, updated: 2026-06-15, notes: "SlidesGen-Bench, PPTAgent/PPTEval, DECKBench, Birkhoff"}
+  - {id: T-023, title: "grow REFERENCES.md toward ~20 verified (1–3 new/session)", epic: research, column: todo, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "currently 12 (8 verified); verify before citing"}
+
+  # ── Recently done (kept for context; full history in PROGRESS.md) ─────────────
+  - {id: T-024, title: "D comparison designs: before-after, pros-cons, this-vs-that", epic: phase-9, column: done, priority: med, created: 2026-06-15, updated: 2026-06-15, notes: "3 designs; goldens 23–25; lint-clean"}
+  - {id: T-025, title: "beauty-tracking extension: richness + large-text 3:1 contrast", epic: phase-10, column: done, priority: high, created: 2026-06-15, updated: 2026-06-15, notes: "commit 7045e5c; designed deck now out-scores plain"}
+  - {id: T-026, title: "color_harmony + cross_slide_consistency metrics", epic: phase-10, column: done, priority: med, created: 2026-06-15, updated: 2026-06-15, notes: "commit 7045e5c"}
+  - {id: T-027, title: "visual-polish pass on the 8 v1 component handlers", epic: phase-10, column: done, priority: med, created: 2026-06-15, updated: 2026-06-15, notes: "every example deck score rose; PDFs rebuilt"}
+  - {id: T-028, title: "RESEARCH_TRACE.md — paper → decision → code map", epic: research, column: done, priority: med, created: 2026-06-16, updated: 2026-06-16, notes: "commit a693b95; honest VERIFIED/SECONDHAND/HEURISTIC status"}

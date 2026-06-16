@@ -176,3 +176,21 @@ A first cut of Phase 10 `slidekit score` exists (slidekit/aesthetics/). Next ses
    rebuild the example PDFs (examples/pdf/).
 3. THEN resume the remaining ~20 Phase 9 designs.
 This is the Aesthetic Director agent's remit (specialized/specialized-aesthetic-director.md).
+
+=== TASK BOARD (added 2026-06-16; operator request — maintain EVERY session) ===
+The repo has a file-based agile kanban board: `board.yaml` (source of truth) renders to
+`BOARD.md` via `python scripts/render_board.py`. It is the active/sprint VIEW of the work;
+PROGRESS.md stays the canonical phase/acceptance ledger. Keep them coordinated:
+- At startup, read `BOARD.md` to see the active cards alongside PROGRESS.md.
+- When you pick up a task, move its card to `in_progress` (set `column: in_progress`,
+  bump `updated`). When its acceptance test passes (the SAME gate as ticking PROGRESS.md),
+  move it to `done` and put the commit ref in `notes`. If you hit a blocker, move it to
+  `blocked` with the reason in `notes`.
+- Add a new task (next free `T-NNN` id, an `epic`, a `column`, `priority`, today's date in
+  `created`/`updated`) for any genuinely new work you discover — do NOT silently expand scope
+  (scope proposals still go in NOTES.md).
+- Columns are exactly `[backlog, todo, in_progress, blocked, done]`; epics are `phase-9`,
+  `phase-10`, `research`. Edit ONLY `board.yaml`, never `BOARD.md` by hand.
+- ALWAYS re-render before committing: run `python scripts/render_board.py`, then commit
+  `board.yaml` + `BOARD.md` together. A test (`tests/test_board`) fails if BOARD.md is stale,
+  so run the suite at wrap-up as usual.
