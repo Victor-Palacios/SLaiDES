@@ -1,0 +1,23 @@
+version: 1
+theme:
+  palette:
+    primary: "#0B3954"
+    surface: "#FFFFFF"
+    accent: "#BF6B63"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Strategic Layers"
+    subtitle: "From mission to daily work"
+
+  - component: pyramid
+    title: "Hierarchy of Needs"
+    layers:
+      - label: "Vision"
+      - label: "Strategy"
+      - label: "Goals"
+      - label: "Tactics"

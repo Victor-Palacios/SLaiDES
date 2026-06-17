@@ -1,0 +1,31 @@
+version: 1
+theme:
+  palette:
+    primary: "#1B264F"
+    surface: "#FFFFFF"
+    accent: "#E07A5F"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Product Roadmap"
+    subtitle: "Where we are headed this year"
+
+  - component: roadmap
+    title: "2026 Plan"
+    phases:
+      - title: "Q1"
+        items:
+          - "Ship API"
+          - "Beta launch"
+      - title: "Q2"
+        items:
+          - "Mobile app"
+          - "Integrations"
+      - title: "Q3"
+        items:
+          - "Enterprise tier"
+          - "SSO"

@@ -119,6 +119,12 @@ Each component compiles to a row/column tree; you fill typed slots.
 | `chart-with-insight` | `chart`, `insight` | `title` |
 | `table-slide` | `headers[]`, `rows[][]` (≤4 rows × ≤3 cols keeps ≥32pt) | `title` |
 | `metric-comparison` | `metrics[]` = `{value, label, delta?}` (2–3) | `title` |
+| `process-steps` | `steps[]` = `{label, body}` (≤4 keeps ≥32pt) | `title` |
+| `roadmap` | `phases[]` = `{title, items[]}` (≤4 lanes) | `title` |
+| `funnel` | `stages[]` = `{label, value?}` (narrowing bars) | `title` |
+| `pyramid` | `layers[]` = `{label}` (widening bars) | `title` |
+| `matrix-2x2` | `x_label`, `y_label`, `quadrants[4]` (text) | `title` |
+| `swot` | `strengths[]`, `weaknesses[]`, `opportunities[]`, `threats[]` (≤2 each keeps ≥32pt) | `title` |
 
 A `chart` slot is `{type: chart, chart_type: bar, labels[], series[] = {name, values[]}}`.
 Bar charts render as measured colored rectangles + labels (deterministic, lint-provable);

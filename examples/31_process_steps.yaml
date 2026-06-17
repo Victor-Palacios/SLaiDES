@@ -1,0 +1,27 @@
+version: 1
+theme:
+  palette:
+    primary: "#0D3B66"
+    surface: "#FFFFFF"
+    accent: "#2A9D8F"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "How It Works"
+    subtitle: "From signup to first value"
+
+  - component: process-steps
+    title: "Onboarding Flow"
+    steps:
+      - label: "Sign up"
+        body: "Create an account"
+      - label: "Connect"
+        body: "Link your data"
+      - label: "Configure"
+        body: "Pick your metrics"
+      - label: "Launch"
+        body: "Go live in minutes"

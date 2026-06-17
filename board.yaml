@@ -28,12 +28,12 @@ tasks:
   - {id: T-005, title: "metric-comparison design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 30; value/label + delta chip; lint-clean"}
 
   # ── Phase 9: later groups (F, G/H) — backlog ─────────────────────────────────
-  - {id: T-006, title: "process-steps design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F (process/shape)"}
-  - {id: T-007, title: "roadmap design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F (process/shape)"}
-  - {id: T-008, title: "funnel design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F; measured colored rects, never freehand connectors"}
-  - {id: T-009, title: "pyramid design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F; measured colored rects"}
-  - {id: T-010, title: "matrix-2x2 design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F (process/shape)"}
-  - {id: T-011, title: "swot design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group F (process/shape)"}
+  - {id: T-006, title: "process-steps design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 31; numbered chips, no connectors; lint-clean"}
+  - {id: T-007, title: "roadmap design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 32; lane header bands + bulleted items; lint-clean"}
+  - {id: T-008, title: "funnel design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 33; centered narrowing accent bars; lint-clean"}
+  - {id: T-009, title: "pyramid design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 34; widening alternating bars; lint-clean"}
+  - {id: T-010, title: "matrix-2x2 design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 35; accent cross + 4 quadrants + axis captions; lint-clean"}
+  - {id: T-011, title: "swot design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 36; 2x2 titled panels (accent/muted); lint-clean"}
   - {id: T-012, title: "comparison-matrix design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
   - {id: T-013, title: "team-grid design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
   - {id: T-014, title: "image-full-bleed design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}

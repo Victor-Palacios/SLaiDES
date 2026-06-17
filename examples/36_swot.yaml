@@ -1,0 +1,30 @@
+version: 1
+theme:
+  palette:
+    primary: "#14213D"
+    surface: "#FFFFFF"
+    accent: "#2A9D8F"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Market Position"
+    subtitle: "An honest internal read"
+
+  - component: swot
+    title: "SWOT Analysis"
+    strengths:
+      - "Strong brand"
+      - "Loyal users"
+    weaknesses:
+      - "Thin margins"
+      - "Small team"
+    opportunities:
+      - "New markets"
+      - "Partnerships"
+    threats:
+      - "New entrants"
+      - "Price pressure"

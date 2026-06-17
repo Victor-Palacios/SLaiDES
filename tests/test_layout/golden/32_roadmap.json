@@ -1,0 +1,472 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_22",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Product Roadmap",
+          "lines": [
+            {
+              "text": "Product Roadmap",
+              "width_emu": 6562204,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B264F"
+        },
+        {
+          "node_id": "subtitle_23",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Where we are headed this year",
+          "lines": [
+            {
+              "text": "Where we are headed this year",
+              "width_emu": 6000502,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_24",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "roadmap",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_25",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "2026 Plan",
+          "lines": [
+            {
+              "text": "2026 Plan",
+              "width_emu": 2461245,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B264F"
+        },
+        {
+          "node_id": "rm_head_26",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 621791
+          },
+          "group_id": "phase_0",
+          "fill_color": "#E07A5F"
+        },
+        {
+          "node_id": "rm_title_27",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 621791
+          },
+          "text_content": "Q1",
+          "lines": [
+            {
+              "text": "Q1",
+              "width_emu": 576014,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "phase_0",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "rm0_mark_28",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2572510,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "rm0_0",
+          "fill_color": "#E07A5F"
+        },
+        {
+          "node_id": "rm0_item_29",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 2395727,
+            "w": 3210560,
+            "h": 609600
+          },
+          "text_content": "Ship API",
+          "lines": [
+            {
+              "text": "Ship API",
+              "width_emu": 1656358,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rm0_0"
+        },
+        {
+          "node_id": "rm0_mark_30",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 4392166,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "rm0_1",
+          "fill_color": "#E07A5F"
+        },
+        {
+          "node_id": "rm0_item_31",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 4215383,
+            "w": 3210560,
+            "h": 609600
+          },
+          "text_content": "Beta launch",
+          "lines": [
+            {
+              "text": "Beta launch",
+              "width_emu": 2280655,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rm0_1"
+        },
+        {
+          "node_id": "rm_head_32",
+          "node_type": "box",
+          "rect": {
+            "x": 4307840,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 621791
+          },
+          "group_id": "phase_1",
+          "fill_color": "#E07A5F"
+        },
+        {
+          "node_id": "rm_title_33",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 621791
+          },
+          "text_content": "Q2",
+          "lines": [
+            {
+              "text": "Q2",
+              "width_emu": 576014,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "phase_1",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "rm1_mark_34",
+          "node_type": "box",
+          "rect": {
+            "x": 4307840,
+            "y": 2572510,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "rm1_0",
+          "fill_color": "#E07A5F"
+        },
+        {
+          "node_id": "rm1_item_35",
+          "node_type": "text",
+          "rect": {
+            "x": 4673600,
+            "y": 2395727,
+            "w": 3210560,
+            "h": 609600
+          },
+          "text_content": "Mobile app",
+          "lines": [
+            {
+              "text": "Mobile app",
+              "width_emu": 2112404,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rm1_0"
+        },
+        {
+          "node_id": "rm1_mark_36",
+          "node_type": "box",
+          "rect": {
+            "x": 4307840,
+            "y": 4392166,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "rm1_1",
+          "fill_color": "#E07A5F"
+        },
+        {
+          "node_id": "rm1_item_37",
+          "node_type": "text",
+          "rect": {
+            "x": 4673600,
+            "y": 4215383,
+            "w": 3210560,
+            "h": 609600
+          },
+          "text_content": "Integrations",
+          "lines": [
+            {
+              "text": "Integrations",
+              "width_emu": 2256408,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rm1_1"
+        },
+        {
+          "node_id": "rm_head_38",
+          "node_type": "box",
+          "rect": {
+            "x": 8158480,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 621791
+          },
+          "group_id": "phase_2",
+          "fill_color": "#E07A5F"
+        },
+        {
+          "node_id": "rm_title_39",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 621791
+          },
+          "text_content": "Q3",
+          "lines": [
+            {
+              "text": "Q3",
+              "width_emu": 576014,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "phase_2",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "rm2_mark_40",
+          "node_type": "box",
+          "rect": {
+            "x": 8158480,
+            "y": 2572510,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "rm2_0",
+          "fill_color": "#E07A5F"
+        },
+        {
+          "node_id": "rm2_item_41",
+          "node_type": "text",
+          "rect": {
+            "x": 8524240,
+            "y": 2395727,
+            "w": 3210560,
+            "h": 609600
+          },
+          "text_content": "Enterprise tier",
+          "lines": [
+            {
+              "text": "Enterprise tier",
+              "width_emu": 2687786,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rm2_0"
+        },
+        {
+          "node_id": "rm2_mark_42",
+          "node_type": "box",
+          "rect": {
+            "x": 8158480,
+            "y": 4392166,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "rm2_1",
+          "fill_color": "#E07A5F"
+        },
+        {
+          "node_id": "rm2_item_43",
+          "node_type": "text",
+          "rect": {
+            "x": 8524240,
+            "y": 4215383,
+            "w": 3210560,
+            "h": 609600
+          },
+          "text_content": "SSO",
+          "lines": [
+            {
+              "text": "SSO",
+              "width_emu": 911882,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rm2_1"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_44",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

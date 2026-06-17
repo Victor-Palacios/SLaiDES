@@ -1,0 +1,25 @@
+version: 1
+theme:
+  palette:
+    primary: "#22223B"
+    surface: "#FFFFFF"
+    accent: "#4A7C59"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Priority Matrix"
+    subtitle: "Where to focus effort"
+
+  - component: matrix-2x2
+    title: "Effort vs Impact"
+    x_label: "Effort →"
+    y_label: "Impact →"
+    quadrants:
+      - "Quick wins"
+      - "Major projects"
+      - "Fill-ins"
+      - "Thankless tasks"

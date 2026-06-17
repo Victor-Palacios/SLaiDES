@@ -26,18 +26,24 @@ from slidekit.ir.models import (
     DeckIR,
     DefinitionSlide,
     FeatureListSlide,
+    FunnelSlide,
     IconTextRowsSlide,
     ImageHalfBleedSlide,
     KpiGridSlide,
+    Matrix2x2Slide,
     MetricComparisonSlide,
     NumberedStepsSlide,
+    ProcessStepsSlide,
     ProsConsSlide,
     PullQuoteSlide,
+    PyramidSlide,
     QuestionSlide,
     QuoteOpenerSlide,
+    RoadmapSlide,
     SectionDividerSlide,
     StatCalloutSlide,
     StatementSlide,
+    SwotSlide,
     TableSlide,
     ThisVsThatSlide,
     TimelineSlide,
@@ -200,6 +206,18 @@ def _resolve_slide(
         nodes = _layout_table_slide(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "metric-comparison":
         nodes = _layout_metric_comparison(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "process-steps":
+        nodes = _layout_process_steps(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "roadmap":
+        nodes = _layout_roadmap(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "funnel":
+        nodes = _layout_funnel(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "pyramid":
+        nodes = _layout_pyramid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "matrix-2x2":
+        nodes = _layout_matrix_2x2(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "swot":
+        nodes = _layout_swot(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     else:
         nodes = []
 
@@ -1182,6 +1200,211 @@ def _layout_metric_comparison(slide: MetricComparisonSlide, cx, cy, cw, ch, font
             nodes.append(_make_text_node(_nid("metric_delta"), m.delta, font, ts.body, bold=True,
                                          italic=False, rect=Rect(mx, dy, chip_w, delta_h),
                                          color=palette.surface, group_id=gid))
+    return nodes
+
+
+# ── Phase 9: process & shape (catalog #26, 28–32) ─────────────────────────────
+#
+# Process and shape designs render structure with measured rects only — numbered
+# chips, lane header bands, narrowing/widening bars, and a centered axis cross.
+# Funnels, pyramids and quadrants are colored rectangles with labels (never
+# freehand connectors), so the linter still proves every element fits.
+
+
+def _layout_process_steps(slide: ProcessStepsSlide, cx, cy, cw, ch, font, ts, palette):
+    """Horizontal numbered flow: N columns, each a numbered accent chip over a bold
+    label (brand primary) and a body description. The chips carry the sequence; no
+    connector lines are drawn (deterministic)."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n = len(slide.steps)
+    col_w = (cw - gap * (n - 1)) // n if n else cw
+    col_h = cy + ch - y
+    chip = int(0.6 * EMU_PER_INCH)
+    label_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    inner = int(0.1 * EMU_PER_INCH)
+    for i, step in enumerate(slide.steps):
+        gid = f"pstep_{i}"
+        sx = cx + i * (col_w + gap)
+        # Numbered chip: accent box with the step number on top (same group, so the
+        # intentional text-on-box stack is exempt from E_OVERLAP).
+        nodes.append(ResolvedNode(_nid("ps_chip"), "box", Rect(sx, y, chip, chip),
+                                  fill_color=palette.accent, group_id=gid))
+        nodes.append(_make_text_node(_nid("ps_num"), str(i + 1), font, ts.body, bold=True,
+                                     italic=False, rect=Rect(sx, y, chip, chip),
+                                     group_id=gid, color=palette.surface))
+        # Label + body are one step's text block, grouped with the chip so the tight
+        # internal spacing is exempt from E_GAP (the same pattern as numbered-steps).
+        ly = y + chip + gap
+        nodes.append(_make_text_node(_nid("ps_label"), step.label, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(sx, ly, col_w, label_h),
+                                     color=palette.primary, group_id=gid))
+        by = ly + label_h + inner
+        body_h = max(1, y + col_h - by)
+        nodes.append(_make_text_node(_nid("ps_body"), step.body, font, ts.body, bold=False,
+                                     italic=False, rect=Rect(sx, by, col_w, body_h),
+                                     group_id=gid))
+    return nodes
+
+
+def _layout_roadmap(slide: RoadmapSlide, cx, cy, cw, ch, font, ts, palette):
+    """Phased plan across vertical lanes: each phase is a column with an accent
+    header band (title on top, surface text) over a bulleted list of items."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n = len(slide.phases)
+    col_w = (cw - gap * (n - 1)) // n if n else cw
+    col_h = cy + ch - y
+    head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+    for i, ph in enumerate(slide.phases):
+        gid = f"phase_{i}"
+        px = cx + i * (col_w + gap)
+        # Header band: accent box with the phase title on top (grouped).
+        nodes.append(ResolvedNode(_nid("rm_head"), "box", Rect(px, y, col_w, head_h),
+                                  fill_color=palette.accent, group_id=gid))
+        nodes.append(_make_text_node(_nid("rm_title"), ph.title, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(px, y, col_w, head_h),
+                                     group_id=gid, color=palette.surface))
+        items_y = y + head_h + gap
+        items_h = y + col_h - items_y
+        _panel_items(nodes, ph.items, px, items_y, col_w, items_h, font, ts,
+                     palette.accent, f"rm{i}")
+    return nodes
+
+
+def _layout_funnel(slide: FunnelSlide, cx, cy, cw, ch, font, ts, palette):
+    """Narrowing stages: a vertical stack of centered accent bars, each narrower
+    than the one above, with the stage label (and optional value) on top. The bars
+    are measured rects — the narrowing is the deterministic funnel read."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n = len(slide.stages)
+    avail = cy + ch - y
+    band_h = max(1, (avail - gap * max(0, n - 1)) // n)
+    min_frac = 0.45
+    for i, st in enumerate(slide.stages):
+        gid = f"funnel_{i}"
+        frac = 1.0 - (1.0 - min_frac) * (i / (n - 1)) if n > 1 else 1.0
+        bw = max(1, int(cw * frac))
+        bx = cx + (cw - bw) // 2
+        by = y + i * (band_h + gap)
+        nodes.append(ResolvedNode(_nid("fn_bar"), "box", Rect(bx, by, bw, band_h),
+                                  fill_color=palette.accent, group_id=gid))
+        text = f"{st.label} · {st.value}" if st.value else st.label
+        nodes.append(_make_text_node(_nid("fn_label"), text, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(bx, by, bw, band_h),
+                                     group_id=gid, color=palette.surface))
+    return nodes
+
+
+def _layout_pyramid(slide: PyramidSlide, cx, cy, cw, ch, font, ts, palette):
+    """Layered hierarchy: stacked bars widening toward the base, alternating brand
+    primary and accent fills, each layer's label on top. Measured rects only — the
+    widening is the deterministic pyramid read."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n = len(slide.layers)
+    avail = cy + ch - y
+    band_h = max(1, (avail - gap * max(0, n - 1)) // n)
+    min_frac = 0.4
+    for i, layer in enumerate(slide.layers):
+        gid = f"pyr_{i}"
+        # Top (i=0) narrowest, base (i=n-1) widest.
+        frac = min_frac + (1.0 - min_frac) * (i / (n - 1)) if n > 1 else 1.0
+        bw = max(1, int(cw * frac))
+        bx = cx + (cw - bw) // 2
+        by = y + i * (band_h + gap)
+        fill = palette.primary if i % 2 == 0 else palette.accent
+        nodes.append(ResolvedNode(_nid("pyr_bar"), "box", Rect(bx, by, bw, band_h),
+                                  fill_color=fill, group_id=gid))
+        nodes.append(_make_text_node(_nid("pyr_label"), layer.label, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(bx, by, bw, band_h),
+                                     group_id=gid, color=palette.surface))
+    return nodes
+
+
+def _layout_matrix_2x2(slide: Matrix2x2Slide, cx, cy, cw, ch, font, ts, palette):
+    """Quadrant positioning: a 2×2 field split by a centered accent cross (one
+    horizontal + one vertical rule, grouped so their intersection is intentional),
+    each quadrant holding its label, with the axis names as captions. The cross
+    rules are the measured non-text marks."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    cap_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+    field_y = y + cap_h + gap
+    field_bottom = cy + ch - cap_h - gap
+    field_h = max(1, field_bottom - field_y)
+
+    # Axis captions: y-axis name across the top, x-axis name across the bottom.
+    nodes.append(_make_text_node(_nid("mx_y"), slide.y_label, font, ts.caption, bold=True,
+                                 italic=False, rect=Rect(cx, y, cw, cap_h),
+                                 is_caption=True, color=palette.muted))
+    nodes.append(_make_text_node(_nid("mx_x"), slide.x_label, font, ts.caption, bold=False,
+                                 italic=False, rect=Rect(cx, field_bottom + gap, cw, cap_h),
+                                 is_caption=True, color=palette.muted))
+
+    rule = int(0.05 * EMU_PER_INCH)
+    midx = cx + cw // 2
+    midy = field_y + field_h // 2
+    nodes.append(ResolvedNode(_nid("mx_vrule"), "box",
+                              Rect(midx - rule // 2, field_y, rule, field_h),
+                              fill_color=palette.accent, group_id="mx_cross"))
+    nodes.append(ResolvedNode(_nid("mx_hrule"), "box",
+                              Rect(cx, midy - rule // 2, cw, rule),
+                              fill_color=palette.accent, group_id="mx_cross"))
+
+    # Quadrant cells, inset from the cross by >= gap so neither E_GAP nor E_OVERLAP
+    # trips against the rules.
+    cell_w = cw // 2 - gap - rule
+    cell_h = field_h // 2 - gap - rule
+    positions = [
+        (cx, field_y),                            # top-left
+        (midx + rule + gap, field_y),             # top-right
+        (cx, midy + rule + gap),                  # bottom-left
+        (midx + rule + gap, midy + rule + gap),   # bottom-right
+    ]
+    for i, q in enumerate(slide.quadrants):
+        qx, qy = positions[i]
+        nodes.append(_make_text_node(_nid("mx_q"), q, font, ts.body, bold=False,
+                                     italic=False, rect=Rect(qx, qy, cell_w, cell_h)))
+    return nodes
+
+
+def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
+    """SWOT 2×2: four titled quadrants — Strengths/Opportunities headed in accent,
+    Weaknesses/Threats in muted — each a heading over a bulleted list. Markers are
+    the non-text media; no quadrant background fills (restraint over ornament)."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    col_w = (cw - gap) // 2
+    field_h = cy + ch - y
+    cell_h = (field_h - gap) // 2
+    quads = [
+        ("Strengths", slide.strengths, palette.accent, cx, y),
+        ("Weaknesses", slide.weaknesses, palette.muted, cx + col_w + gap, y),
+        ("Opportunities", slide.opportunities, palette.accent, cx, y + cell_h + gap),
+        ("Threats", slide.threats, palette.muted, cx + col_w + gap, y + cell_h + gap),
+    ]
+    head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+    for idx, (head, items, color, qx, qy) in enumerate(quads):
+        nodes.append(_make_text_node(_nid("swot_head"), head, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(qx, qy, col_w, head_h),
+                                     color=color))
+        items_y = qy + head_h + gap
+        items_h = qy + cell_h - items_y
+        _panel_items(nodes, items, qx, items_y, col_w, items_h, font, ts, color, f"swot{idx}")
     return nodes
 
 

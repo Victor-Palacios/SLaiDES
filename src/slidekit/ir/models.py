@@ -402,6 +402,69 @@ class MetricComparisonSlide(BaseModel):
     metrics: list[Metric] = Field(min_length=1)
 
 
+# ── Phase 9: process & shape (catalog #26, 28–32) ─────────────────────────────
+
+
+class ProcessStep(BaseModel):
+    label: str
+    body: str
+
+
+class ProcessStepsSlide(BaseModel):
+    component: Literal["process-steps"]
+    title: Optional[str] = None
+    steps: list[ProcessStep] = Field(min_length=1)
+
+
+class RoadmapPhase(BaseModel):
+    title: str
+    items: list[str] = Field(min_length=1)
+
+
+class RoadmapSlide(BaseModel):
+    component: Literal["roadmap"]
+    title: Optional[str] = None
+    phases: list[RoadmapPhase] = Field(min_length=1)
+
+
+class FunnelStage(BaseModel):
+    label: str
+    value: Optional[str] = None
+
+
+class FunnelSlide(BaseModel):
+    component: Literal["funnel"]
+    title: Optional[str] = None
+    stages: list[FunnelStage] = Field(min_length=1)
+
+
+class PyramidLayer(BaseModel):
+    label: str
+
+
+class PyramidSlide(BaseModel):
+    component: Literal["pyramid"]
+    title: Optional[str] = None
+    layers: list[PyramidLayer] = Field(min_length=1)
+
+
+class Matrix2x2Slide(BaseModel):
+    component: Literal["matrix-2x2"]
+    title: Optional[str] = None
+    x_label: str
+    y_label: str
+    quadrants: list[str] = Field(min_length=4, max_length=4)
+
+
+class SwotSlide(BaseModel):
+    component: Literal["swot"]
+    title: Optional[str] = None
+    strengths: list[str] = Field(min_length=1)
+    weaknesses: list[str] = Field(min_length=1)
+    opportunities: list[str] = Field(min_length=1)
+    threats: list[str] = Field(min_length=1)
+
+
 Slide = Annotated[
     Union[
         TitleSlide,
@@ -432,6 +495,12 @@ Slide = Annotated[
         ChartWithInsightSlide,
         TableSlide,
         MetricComparisonSlide,
+        ProcessStepsSlide,
+        RoadmapSlide,
+        FunnelSlide,
+        PyramidSlide,
+        Matrix2x2Slide,
+        SwotSlide,
     ],
     Field(discriminator="component"),
 ]

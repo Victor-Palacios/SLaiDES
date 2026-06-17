@@ -1,0 +1,513 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_1",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "How It Works",
+          "lines": [
+            {
+              "text": "How It Works",
+              "width_emu": 4812357,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0D3B66"
+        },
+        {
+          "node_id": "subtitle_2",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "From signup to first value",
+          "lines": [
+            {
+              "text": "From signup to first value",
+              "width_emu": 4847630,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_3",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "process-steps",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_4",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Onboarding Flow",
+          "lines": [
+            {
+              "text": "Onboarding Flow",
+              "width_emu": 4385183,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0D3B66"
+        },
+        {
+          "node_id": "ps_chip_5",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 548640,
+            "h": 548640
+          },
+          "group_id": "pstep_0",
+          "fill_color": "#2A9D8F"
+        },
+        {
+          "node_id": "ps_num_6",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 548640,
+            "h": 548640
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 240147,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_0",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "ps_label_7",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2322576,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Sign up",
+          "lines": [
+            {
+              "text": "Sign up",
+              "width_emu": 1582986,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_0",
+          "text_color": "#0D3B66"
+        },
+        {
+          "node_id": "ps_body_8",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2932175,
+            "w": 2613660,
+            "h": 2828545
+          },
+          "text_content": "Create an account",
+          "lines": [
+            {
+              "text": "Create an",
+              "width_emu": 1896294,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "account",
+              "width_emu": 1512354,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "pstep_0"
+        },
+        {
+          "node_id": "ps_chip_9",
+          "node_type": "box",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 548640,
+            "h": 548640
+          },
+          "group_id": "pstep_1",
+          "fill_color": "#2A9D8F"
+        },
+        {
+          "node_id": "ps_num_10",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 548640,
+            "h": 548640
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 240147,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_1",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "ps_label_11",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2322576,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Connect",
+          "lines": [
+            {
+              "text": "Connect",
+              "width_emu": 1727200,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_1",
+          "text_color": "#0D3B66"
+        },
+        {
+          "node_id": "ps_body_12",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2932175,
+            "w": 2613660,
+            "h": 2828545
+          },
+          "text_content": "Link your data",
+          "lines": [
+            {
+              "text": "Link your",
+              "width_emu": 1752079,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "data",
+              "width_emu": 840408,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "pstep_1"
+        },
+        {
+          "node_id": "ps_chip_13",
+          "node_type": "box",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 548640,
+            "h": 548640
+          },
+          "group_id": "pstep_2",
+          "fill_color": "#2A9D8F"
+        },
+        {
+          "node_id": "ps_num_14",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 548640,
+            "h": 548640
+          },
+          "text_content": "3",
+          "lines": [
+            {
+              "text": "3",
+              "width_emu": 240147,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_2",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "ps_label_15",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2322576,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Configure",
+          "lines": [
+            {
+              "text": "Configure",
+              "width_emu": 2038821,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_2",
+          "text_color": "#0D3B66"
+        },
+        {
+          "node_id": "ps_body_16",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2932175,
+            "w": 2613660,
+            "h": 2828545
+          },
+          "text_content": "Pick your metrics",
+          "lines": [
+            {
+              "text": "Pick your",
+              "width_emu": 1775693,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "metrics",
+              "width_emu": 1391332,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "pstep_2"
+        },
+        {
+          "node_id": "ps_chip_17",
+          "node_type": "box",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 548640,
+            "h": 548640
+          },
+          "group_id": "pstep_3",
+          "fill_color": "#2A9D8F"
+        },
+        {
+          "node_id": "ps_num_18",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 548640,
+            "h": 548640
+          },
+          "text_content": "4",
+          "lines": [
+            {
+              "text": "4",
+              "width_emu": 240147,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_3",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "ps_label_19",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2322576,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Launch",
+          "lines": [
+            {
+              "text": "Launch",
+              "width_emu": 1535336,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_3",
+          "text_color": "#0D3B66"
+        },
+        {
+          "node_id": "ps_body_20",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2932175,
+            "w": 2613660,
+            "h": 2828545
+          },
+          "text_content": "Go live in minutes",
+          "lines": [
+            {
+              "text": "Go live in",
+              "width_emu": 1799940,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "minutes",
+              "width_emu": 1511933,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "pstep_3"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_21",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

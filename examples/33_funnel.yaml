@@ -1,0 +1,27 @@
+version: 1
+theme:
+  palette:
+    primary: "#2D3142"
+    surface: "#FFFFFF"
+    accent: "#4F8A8B"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Conversion Funnel"
+    subtitle: "Where prospects drop off"
+
+  - component: funnel
+    title: "Sales Pipeline"
+    stages:
+      - label: "Visitors"
+        value: "50,000"
+      - label: "Signups"
+        value: "8,000"
+      - label: "Trials"
+        value: "2,400"
+      - label: "Customers"
+        value: "600"
