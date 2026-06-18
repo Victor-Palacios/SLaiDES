@@ -48,6 +48,7 @@ in files:
 | [docs/AESTHETICS.md](docs/AESTHETICS.md) | Deterministic aesthetic-scoring spec (Phase 10) |
 | [docs/REFERENCES.md](docs/REFERENCES.md) | Living bibliography of slide-aesthetics research (target ~20 verified) |
 | [docs/RESEARCH_TRACE.md](docs/RESEARCH_TRACE.md) | Which paper influenced which scorer decision (paper → decision → code, with status) |
+| `examples/pdf/` | Per-deck example PDFs (canonical, one per deck) plus `combined/all-examples.pdf` — a single review aggregate built deterministically by `scripts/build_combined_pdf.py` |
 
 The schedule is [`.github/workflows/nightly.yml`](.github/workflows/nightly.yml):
 a GitHub Actions cron job (**09:00 UTC ≈ 02:00 Pacific, nightly**) running

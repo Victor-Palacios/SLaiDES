@@ -48,6 +48,14 @@ def _pdf_font(name: str | None, bold: bool, italic: bool) -> str:
     return base
 
 
+def _draw_slide(c, rs, palette, page_w: float, page_h: float) -> None:
+    """Paint one resolved slide onto the canvas: surface fill, then every node."""
+    c.setFillColorRGB(*_rgb(palette.surface))
+    c.rect(0, 0, page_w, page_h, stroke=0, fill=1)
+    for node in rs.nodes + rs.chrome:
+        _draw_node(c, node, palette, page_h)
+
+
 def emit_pdf(deck: "Deck", resolved: "ResolvedDeck", output_path: Union[str, Path]) -> Path:
     """Emit a PDF from a fully-resolved deck (one page per slide). Returns the path."""
     output_path = Path(output_path)
@@ -60,14 +68,39 @@ def emit_pdf(deck: "Deck", resolved: "ResolvedDeck", output_path: Union[str, Pat
 
     c = _canvas.Canvas(str(output_path), pagesize=(page_w, page_h))
     for rs in resolved.slides:
-        # Surface background.
-        c.setFillColorRGB(*_rgb(palette.surface))
-        c.rect(0, 0, page_w, page_h, stroke=0, fill=1)
-        for node in rs.nodes + rs.chrome:
-            _draw_node(c, node, palette, page_h)
+        _draw_slide(c, rs, palette, page_w, page_h)
         c.showPage()
     c.save()
     return output_path
+
+
+def emit_combined_pdf(decks_resolved, output_path: Union[str, Path]) -> int:
+    """Emit ONE PDF aggregating many decks — a single review artifact.
+
+    `decks_resolved` is an iterable of `(deck, ResolvedDeck)` pairs, drawn in the
+    order given. Each slide is painted with ITS OWN deck's palette and canvas size
+    (palette is deck-wide and not stored on a resolved slide), reusing the exact
+    same drawing path as `emit_pdf`, so a page here is identical to that deck's own
+    per-deck PDF. Built in reportlab `invariant` mode (fixed timestamp + document
+    id) so the output is byte-deterministic and can be regenerated/guarded.
+
+    Returns the total page count written.
+    """
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    c = _canvas.Canvas(str(output_path), invariant=True)
+    pages = 0
+    for deck, resolved in decks_resolved:
+        palette = deck.theme.palette
+        for rs in resolved.slides:
+            page_w, page_h = _pt(rs.canvas_w), _pt(rs.canvas_h)
+            c.setPageSize((page_w, page_h))
+            _draw_slide(c, rs, palette, page_w, page_h)
+            c.showPage()
+            pages += 1
+    c.save()
+    return pages
 
 
 def _draw_node(c, node: "ResolvedNode", palette, page_h: float) -> None:
