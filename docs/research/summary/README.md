@@ -1,6 +1,6 @@
 # Research paper one-page summaries
 
-Generated one-page PDF summaries for the verified references in `docs/REFERENCES.md`.
+Generated full-page, one-page PDF summaries for the verified references in `docs/REFERENCES.md`.
 
 - `01-aeslides.pdf` — AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via Verifiable Rewards (2026).
 - `02-evopresent-presaesth.pdf` — EvoPresent / PresAesth: Self-Improvement Aesthetic Agents for Academic Presentations (2025).
