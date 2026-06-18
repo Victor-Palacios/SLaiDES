@@ -253,6 +253,21 @@ def _fields(model: type) -> tuple[tuple, tuple]:
     return tuple(req), tuple(opt)
 
 
+def repeatable_field(component: str) -> Optional[str]:
+    """Name of the component's repeatable (list-typed) content field, if any.
+
+    Used to capacity-check an authored slide against the registry's capacity hint.
+    """
+    model = _slide_models().get(component)
+    if model is None:
+        return None
+    for name, f in model.model_fields.items():
+        ann = getattr(f.annotation, "__origin__", None)
+        if ann in (list, tuple) or str(f.annotation).startswith("list["):
+            return name
+    return None
+
+
 def catalog() -> dict[str, Layout]:
     """All 40 components with merged curated + schema-derived metadata, keyed by component."""
     models = _slide_models()

@@ -95,6 +95,12 @@ lists every component's purpose, when-to-use, capacity, and required fields, gro
 ~25 distinct layout families (see [docs/LAYOUT_TAXONOMY.md](docs/LAYOUT_TAXONOMY.md)). The
 same data is machine-readable via `slidekit catalog --json`.
 
+**Authoring from an outline.** `slidekit author outline.yaml [--pdf]` builds a deck from a
+lean outline — a `slides:` list where each slide is a chosen `component` + its fields, or a
+`recommend: {<content shape>}` block the deterministic recommender resolves to a component
+(theme/version default if omitted). It validates, lints, and emits with no rendering. See
+[examples/author-demo/outline.yaml](examples/author-demo/outline.yaml).
+
 | Component | Required keys | Optional |
 |---|---|---|
 | `title-slide` | `title` | `subtitle`, `logo` (image) |

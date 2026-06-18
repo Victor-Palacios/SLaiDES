@@ -1,0 +1,31 @@
+# A lean authoring outline (no theme/version boilerplate — defaults are applied).
+# Each slide is either a chosen `component` + its fields, or a `recommend:` content-shape
+# block that the deterministic recommender resolves to a component.
+# Build it with:  slidekit author examples/author-demo/outline.yaml --pdf
+slides:
+  - component: title-slide
+    title: "Q3 Business Review"
+    subtitle: "Growth, retention, and what's next"
+
+  # component omitted → recommended from the content shape (single hero metric → big-number)
+  - recommend: {single_value: true}
+    value: "3.2M"
+    label: "Active users worldwide"
+
+  - component: comparison-columns
+    title: "Strengths vs gaps"
+    left_title: "Strengths"
+    left_items:
+      - text: "Brand in 45 markets"
+      - text: "92% satisfaction"
+    right_title: "Gaps"
+    right_items:
+      - text: "Thin digital presence"
+      - text: "Slower refresh cycle"
+
+  - component: numbered-steps
+    title: "Rollout plan"
+    steps:
+      - {title: "Pilot", body: "Three lighthouse accounts"}
+      - {title: "Expand", body: "Open two new regions"}
+      - {title: "Scale", body: "General availability"}

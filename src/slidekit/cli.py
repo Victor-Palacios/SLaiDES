@@ -63,6 +63,15 @@ def main() -> None:
     )
     catalog_p.add_argument("--json", action="store_true", help="Emit the full catalog as JSON")
 
+    # slidekit author — build a deck from a lean outline (chosen or recommended components)
+    author_p = sub.add_parser(
+        "author",
+        help="Build a deck from an outline of {component (or recommend), fields} per slide",
+    )
+    author_p.add_argument("outline", help="Path to outline.yaml (slides: [...], optional theme)")
+    author_p.add_argument("-o", "--output", default=None, help="Output path (.pptx or .pdf)")
+    author_p.add_argument("--pdf", action="store_true", help="Output PDF instead of .pptx")
+
     # slidekit score (Phase 10 — deterministic aesthetic score, ADVISORY, no render)
     score_p = sub.add_parser(
         "score",
@@ -93,26 +102,20 @@ def main() -> None:
         _cmd_verify(args)
     elif args.command == "catalog":
         _cmd_catalog(args)
+    elif args.command == "author":
+        _cmd_author(args)
     elif args.command == "score":
         _cmd_score(args)
 
 
-def _cmd_build(args: argparse.Namespace) -> None:
-    from slidekit.ir import load
+def _lint_and_emit(deck, out: Path, as_pdf: bool) -> None:
+    """Shared tail of build/author: resolve, lint (errors block), then emit pptx/pdf."""
     from slidekit.layout import resolve
     from slidekit.lint import lint
     from slidekit.emit.pptx_emitter import emit_pptx
 
-    try:
-        deck = load(args.deck)
-    except ValueError as exc:
-        print(str(exc), file=sys.stderr)
-        sys.exit(1)
-
     rd = resolve(deck)
-
-    issues = lint(deck, rd)
-    errors = [i for i in issues if i.code.startswith("E_")]
+    errors = [i for i in lint(deck, rd) if i.code.startswith("E_")]
     if errors:
         for issue in errors:
             print(json.dumps({
@@ -124,20 +127,61 @@ def _cmd_build(args: argparse.Namespace) -> None:
             }))
         sys.exit(1)
 
-    if args.output:
-        out = Path(args.output)
-    elif args.pdf:
-        out = Path(args.deck).with_suffix(".pdf")
-    else:
-        out = Path(args.deck).with_suffix(".pptx")
-
-    if args.pdf or out.suffix.lower() == ".pdf":
+    if as_pdf or out.suffix.lower() == ".pdf":
         out = out.with_suffix(".pdf")
         _emit_pdf(deck, rd, out)
         print(f"[slidekit] built {out} ({len(deck.slides)} slides, lint-clean, PDF)")
     else:
         emit_pptx(deck, rd, out)
         print(f"[slidekit] built {out} ({len(deck.slides)} slides, lint-clean)")
+
+
+def _cmd_build(args: argparse.Namespace) -> None:
+    from slidekit.ir import load
+
+    try:
+        deck = load(args.deck)
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        sys.exit(1)
+
+    if args.output:
+        out = Path(args.output)
+    elif args.pdf:
+        out = Path(args.deck).with_suffix(".pdf")
+    else:
+        out = Path(args.deck).with_suffix(".pptx")
+    _lint_and_emit(deck, out, args.pdf)
+    sys.exit(0)
+
+
+def _cmd_author(args: argparse.Namespace) -> None:
+    """Build a deck from a lean outline: per slide either a chosen `component` + its fields,
+    or a `recommend:` content-shape block (the deterministic recommender picks the component).
+    Defaults the theme/version, validates against the IR schema, lints, and emits — no vision."""
+    import yaml
+    from slidekit.select.author import build_deck
+
+    try:
+        raw = yaml.safe_load(Path(args.outline).read_text(encoding="utf-8"))
+    except Exception as exc:  # noqa: BLE001 — surface a clean message
+        print(f"cannot read outline: {exc}", file=sys.stderr)
+        sys.exit(1)
+    try:
+        deck_ir, notes = build_deck(raw)
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        sys.exit(1)
+
+    for n in notes:
+        print(f"[slidekit] {n}")
+    if args.output:
+        out = Path(args.output)
+    elif args.pdf:
+        out = Path(args.outline).with_suffix(".pdf")
+    else:
+        out = Path(args.outline).with_suffix(".pptx")
+    _lint_and_emit(deck_ir, out, args.pdf)
     sys.exit(0)
 
 
