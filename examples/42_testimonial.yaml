@@ -1,0 +1,19 @@
+version: 1
+theme:
+  palette:
+    primary: "#14213D"
+    surface: "#FFFFFF"
+    accent: "#2A9D8F"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Customer Proof"
+    subtitle: "One voice from the field"
+  - component: testimonial
+    quote: "The team moved from scattered status updates to a clear launch rhythm in one week."
+    name: "Jordan Lee"
+    role: "VP Operations, Northstar"

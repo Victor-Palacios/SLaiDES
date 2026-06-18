@@ -1,0 +1,18 @@
+version: 1
+theme:
+  palette:
+    primary: "#0B132B"
+    surface: "#FFFFFF"
+    accent: "#5BC0BE"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Field Expansion"
+    subtitle: "A visual opening"
+  - component: image-full-bleed
+    image: {type: image, path: "examples/assets/field-expansion.jpg", fit: cover, alt: "Team in the field"}
+    overlay_title: "Meet customers where work happens"

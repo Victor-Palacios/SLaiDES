@@ -23,13 +23,17 @@ from slidekit.ir.models import (
     ChartWithInsightSlide,
     ChecklistSlide,
     ComparisonColumnsSlide,
+    ComparisonMatrixSlide,
     DeckIR,
     DefinitionSlide,
     FeatureListSlide,
     FunnelSlide,
     IconTextRowsSlide,
     ImageHalfBleedSlide,
+    ImageFullBleedSlide,
+    ImageGridSlide,
     KpiGridSlide,
+    LogoWallSlide,
     Matrix2x2Slide,
     MetricComparisonSlide,
     NumberedStepsSlide,
@@ -45,6 +49,8 @@ from slidekit.ir.models import (
     StatementSlide,
     SwotSlide,
     TableSlide,
+    TeamGridSlide,
+    TestimonialSlide,
     ThisVsThatSlide,
     TimelineSlide,
     TitleSlide,
@@ -218,6 +224,18 @@ def _resolve_slide(
         nodes = _layout_matrix_2x2(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "swot":
         nodes = _layout_swot(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "comparison-matrix":
+        nodes = _layout_comparison_matrix(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "team-grid":
+        nodes = _layout_team_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "image-full-bleed":
+        nodes = _layout_image_full_bleed(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "image-grid":
+        nodes = _layout_image_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "logo-wall":
+        nodes = _layout_logo_wall(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "testimonial":
+        nodes = _layout_testimonial(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     else:
         nodes = []
 
@@ -1405,6 +1423,223 @@ def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
         items_y = qy + head_h + gap
         items_h = qy + cell_h - items_y
         _panel_items(nodes, items, qx, items_y, col_w, items_h, font, ts, color, f"swot{idx}")
+    return nodes
+
+
+
+# ── Phase 9: structured relationships & visual (catalog #33, #35, #37–40) ────
+#
+# These last six designs stay within the same deterministic rules as the rest of
+# Phase 9: images/logos are measured placeholder rects, grids use explicit cells,
+# and overlay text shares a group_id with its background/image where overlap is the
+# intended visual stack.
+
+
+def _layout_comparison_matrix(slide: ComparisonMatrixSlide, cx, cy, cw, ch, font, ts, palette):
+    """Features × options grid: criteria down the left, options across the top,
+    and deterministic text cells with a muted fill. Header cells use brand colour."""
+    nodes: list[ResolvedNode] = []
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n_options = len(slide.options)
+    n_criteria = len(slide.criteria)
+    label_w = int(cw * 0.28)
+    cell_w = max(1, (cw - label_w) // n_options) if n_options else cw - label_w
+    rows = n_criteria + 1
+    row_h = max(1, (cy + ch - y) // rows) if rows else cy + ch - y
+
+    # Top-left header block anchors the matrix and provides a non-text element.
+    nodes.append(ResolvedNode(_nid("cm_corner"), "box", Rect(cx, y, label_w, row_h),
+                              fill_color=palette.primary, group_id="cm_corner"))
+    nodes.append(_make_text_node(_nid("cm_corner_text"), "Criteria", font, ts.body,
+                                 bold=True, italic=False, rect=Rect(cx, y, label_w, row_h),
+                                 color=palette.surface, group_id="cm_corner"))
+    for c, opt in enumerate(slide.options):
+        gid = f"cm_head_{c}"
+        x = cx + label_w + c * cell_w
+        nodes.append(ResolvedNode(_nid("cm_head_box"), "box", Rect(x, y, cell_w, row_h),
+                                  fill_color=palette.accent, group_id=gid))
+        nodes.append(_make_text_node(_nid("cm_head"), opt, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(x, y, cell_w, row_h),
+                                     color=palette.surface, group_id=gid))
+
+    for r, crit in enumerate(slide.criteria):
+        yy = y + (r + 1) * row_h
+        gid = f"cm_crit_{r}"
+        nodes.append(ResolvedNode(_nid("cm_crit_box"), "box", Rect(cx, yy, label_w, row_h),
+                                  fill_color=palette.muted, group_id=gid))
+        nodes.append(_make_text_node(_nid("cm_crit"), crit, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(cx, yy, label_w, row_h),
+                                     color=palette.surface, group_id=gid))
+        row = slide.cells[r] if r < len(slide.cells) else []
+        for c in range(n_options):
+            x = cx + label_w + c * cell_w
+            cell = row[c] if c < len(row) else ""
+            cg = f"cm_cell_{r}_{c}"
+            nodes.append(ResolvedNode(_nid("cm_cell_box"), "box", Rect(x, yy, cell_w, row_h),
+                                      fill_color="#F4F6F8", group_id=cg))
+            nodes.append(_make_text_node(_nid("cm_cell"), cell, font, ts.body, bold=False,
+                                         italic=False, rect=Rect(x, yy, cell_w, row_h),
+                                         group_id=cg))
+    return nodes
+
+
+def _layout_team_grid(slide: TeamGridSlide, cx, cy, cw, ch, font, ts, palette):
+    """People grid: each member gets a measured portrait tile, name, and role."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n = len(slide.members)
+    cols = min(3, n) if n else 1
+    rows = (n + cols - 1) // cols
+    card_w = max(1, (cw - gap * (cols - 1)) // cols)
+    card_h = max(1, (cy + ch - y - gap * (rows - 1)) // rows) if rows else cy + ch - y
+    name_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    role_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+    inner = int(0.12 * EMU_PER_INCH)
+
+    for i, member in enumerate(slide.members):
+        r, c = divmod(i, cols)
+        x = cx + c * (card_w + gap)
+        yy = y + r * (card_h + gap)
+        gid = f"team_{i}"
+        portrait_h = max(1, card_h - name_h - role_h - 2 * inner)
+        if member.image:
+            nodes.append(ResolvedNode(_nid("team_img"), "image", Rect(x, yy, card_w, portrait_h),
+                                      slot_type="image", text_content=member.image.path,
+                                      group_id=gid))
+        else:
+            nodes.append(ResolvedNode(_nid("team_avatar"), "box", Rect(x, yy, card_w, portrait_h),
+                                      fill_color=palette.muted, group_id=gid))
+        nodes.append(_make_text_node(_nid("team_name"), member.name, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(x, yy + portrait_h + inner, card_w, name_h),
+                                     color=palette.primary, group_id=gid))
+        nodes.append(_make_text_node(_nid("team_role"), member.role, font, ts.caption, bold=False,
+                                     italic=False,
+                                     rect=Rect(x, yy + portrait_h + inner + name_h + inner, card_w, role_h),
+                                     is_caption=True, color=palette.muted, group_id=gid))
+    return nodes
+
+
+def _layout_image_full_bleed(slide: ImageFullBleedSlide, cx, cy, cw, ch, font, ts, palette):
+    """Full content-area image with optional lower-left overlay title."""
+    nodes: list[ResolvedNode] = []
+    gid = "image_full_bleed"
+    nodes.append(ResolvedNode(_nid("full_image"), "image", Rect(cx, cy, cw, ch),
+                              slot_type="image", text_content=slide.image.path,
+                              group_id=gid))
+    if slide.overlay_title:
+        pad = int(0.25 * EMU_PER_INCH)
+        box_w = int(cw * 0.62)
+        text_w = box_w - 2 * pad
+        title_lines = wrap(slide.overlay_title, font, ts.header, text_w, bold=True)
+        title_h = max(1, total_text_height_emu(title_lines))
+        box_h = title_h + 2 * pad
+        box_x = cx + pad
+        box_y = cy + ch - box_h - pad
+        nodes.append(ResolvedNode(_nid("overlay_box"), "box", Rect(box_x, box_y, box_w, box_h),
+                                  fill_color=palette.primary, group_id=gid))
+        nodes.append(_make_text_node(_nid("overlay_title"), slide.overlay_title, font, ts.header,
+                                     bold=True, italic=False,
+                                     rect=Rect(box_x + pad, box_y + pad, text_w, title_h),
+                                     lines=title_lines, color=palette.surface, group_id=gid))
+    return nodes
+
+
+def _layout_image_grid(slide: ImageGridSlide, cx, cy, cw, ch, font, ts, palette):
+    """2–4 image gallery with optional captions below each measured image tile."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n = len(slide.images)
+    cols = 2 if n <= 4 else 3
+    rows = (n + cols - 1) // cols
+    cell_w = max(1, (cw - gap * (cols - 1)) // cols)
+    cell_h = max(1, (cy + ch - y - gap * (rows - 1)) // rows) if rows else cy + ch - y
+    cap_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+    for i, img in enumerate(slide.images):
+        r, c = divmod(i, cols)
+        x = cx + c * (cell_w + gap)
+        yy = y + r * (cell_h + gap)
+        gid = f"imggrid_{i}"
+        has_caption = i < len(slide.captions) and bool(slide.captions[i])
+        img_h = cell_h - (cap_h + gap if has_caption else 0)
+        nodes.append(ResolvedNode(_nid("grid_img"), "image", Rect(x, yy, cell_w, img_h),
+                                  slot_type="image", text_content=img.path, group_id=gid))
+        if has_caption:
+            nodes.append(_make_text_node(_nid("grid_cap"), slide.captions[i], font, ts.caption,
+                                         bold=False, italic=False,
+                                         rect=Rect(x, yy + img_h + gap, cell_w, cap_h),
+                                         is_caption=True, color=palette.muted, group_id=gid))
+    return nodes
+
+
+def _layout_logo_wall(slide: LogoWallSlide, cx, cy, cw, ch, font, ts, palette):
+    """Partner/client logo wall: a restrained grid of labelled or image logo tiles."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+
+    n = len(slide.logos)
+    cols = min(4, n) if n else 1
+    rows = (n + cols - 1) // cols
+    cell_w = max(1, (cw - gap * (cols - 1)) // cols)
+    cell_h = max(1, (cy + ch - y - gap * (rows - 1)) // rows) if rows else cy + ch - y
+    for i, logo in enumerate(slide.logos):
+        r, c = divmod(i, cols)
+        x = cx + c * (cell_w + gap)
+        yy = y + r * (cell_h + gap)
+        gid = f"logo_{i}"
+        nodes.append(ResolvedNode(_nid("logo_tile"), "box", Rect(x, yy, cell_w, cell_h),
+                                  fill_color="#F4F6F8", group_id=gid))
+        if logo.image:
+            inset = int(0.18 * EMU_PER_INCH)
+            nodes.append(ResolvedNode(_nid("logo_img"), "image",
+                                      Rect(x + inset, yy + inset, cell_w - 2 * inset, cell_h - 2 * inset),
+                                      slot_type="image", text_content=logo.image.path, group_id=gid))
+        else:
+            label = logo.label or "Logo"
+            nodes.append(_make_text_node(_nid("logo_label"), label, font, ts.body, bold=True,
+                                         italic=False, rect=Rect(x, yy, cell_w, cell_h),
+                                         color=palette.primary, group_id=gid))
+    return nodes
+
+
+def _layout_testimonial(slide: TestimonialSlide, cx, cy, cw, ch, font, ts, palette):
+    """Customer quote with optional portrait, attribution, and accent quote bar."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    portrait_w = int(cw * 0.28) if slide.image else 0
+    quote_x = cx + (portrait_w + gap if slide.image else 0)
+    quote_w = cw - (portrait_w + gap if slide.image else 0)
+    gid = "testimonial"
+
+    if slide.image:
+        nodes.append(ResolvedNode(_nid("test_img"), "image", Rect(cx, cy, portrait_w, ch),
+                                  slot_type="image", text_content=slide.image.path,
+                                  group_id=gid))
+    bar_w = int(0.10 * EMU_PER_INCH)
+    nodes.append(ResolvedNode(_nid("test_bar"), "box", Rect(quote_x, cy, bar_w, ch),
+                              fill_color=palette.accent, group_id=gid))
+    text_x = quote_x + bar_w + int(0.25 * EMU_PER_INCH)
+    text_w = quote_w - bar_w - int(0.25 * EMU_PER_INCH)
+    quote_lines = wrap(f'"{slide.quote}"', font, ts.header, text_w, italic=True)
+    quote_h = total_text_height_emu(quote_lines)
+    name_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    role_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+    block_h = quote_h + gap + name_h + role_h
+    y = cy + max(0, (ch - block_h) // 2)
+    nodes.append(_make_text_node(_nid("test_quote"), f'"{slide.quote}"', font, ts.header,
+                                 bold=False, italic=True, rect=Rect(text_x, y, text_w, quote_h),
+                                 lines=quote_lines, group_id=gid))
+    nodes.append(_make_text_node(_nid("test_name"), slide.name, font, ts.body, bold=True,
+                                 italic=False, rect=Rect(text_x, y + quote_h + gap, text_w, name_h),
+                                 color=palette.primary, group_id=gid))
+    nodes.append(_make_text_node(_nid("test_role"), slide.role, font, ts.caption, bold=False,
+                                 italic=False, rect=Rect(text_x, y + quote_h + gap + name_h, text_w, role_h),
+                                 is_caption=True, color=palette.muted, group_id=gid))
     return nodes
 
 

@@ -100,18 +100,18 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 ### G. Structured relationships
 | # | key | required keys | use |
 |---|---|---|---|
-| 33 | `comparison-matrix` | `options[]`, `criteria[]`, `cells[][]` | features × options grid |
+| 33 | ✓ `comparison-matrix` | `options[]`, `criteria[]`, `cells[][]` | features × options grid |
 | 34 | `card-grid` ✓ | `cards[]` = {title,body,icon?} | grid of short cards |
-| 35 | `team-grid` | `members[]` = {name,role,image?} | people / team |
+| 35 | ✓ `team-grid` | `members[]` = {name,role,image?} | people / team |
 
 ### H. Visual & image
 | # | key | required keys | use |
 |---|---|---|---|
 | 36 | ✓ `image-half-bleed` | `image`, `content[]` (+`image_side`) | image beside text |
-| 37 | `image-full-bleed` | `image` (+`overlay_title`) | full-bleed image + overlay |
-| 38 | `image-grid` | `images[]` (2–4) (+`captions`) | gallery |
-| 39 | `logo-wall` | `logos[]` = {image|label} | client / partner logos |
-| 40 | `testimonial` | `quote`,`name`,`role` (+`image`) | customer testimonial |
+| 37 | ✓ `image-full-bleed` | `image` (+`overlay_title`) | full-bleed image + overlay |
+| 38 | ✓ `image-grid` | `images[]` (2–4) (+`captions`) | gallery |
+| 39 | ✓ `logo-wall` | `logos[]` = {image|label} | client / partner logos |
+| 40 | ✓ `testimonial` | `quote`,`name`,`role` (+`image`) | customer testimonial |
 
 ### Closing (reuse openers)
 A closing / call-to-action slide is covered by `statement` (#7), `big-number` (#5),

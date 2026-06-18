@@ -125,12 +125,18 @@ Each component compiles to a row/column tree; you fill typed slots.
 | `pyramid` | `layers[]` = `{label}` (widening bars) | `title` |
 | `matrix-2x2` | `x_label`, `y_label`, `quadrants[4]` (text) | `title` |
 | `swot` | `strengths[]`, `weaknesses[]`, `opportunities[]`, `threats[]` (≤2 each keeps ≥32pt) | `title` |
+| `comparison-matrix` | `options[]`, `criteria[]`, `cells[][]` | `title` |
+| `team-grid` | `members[]` = `{name, role, image?}` | `title` |
+| `image-full-bleed` | `image` | `overlay_title` |
+| `image-grid` | `images[]` (2–4 best) | `title`, `captions[]` |
+| `logo-wall` | `logos[]` = `{label? image?}` | `title` |
+| `testimonial` | `quote`, `name`, `role` | `image` |
 
 A `chart` slot is `{type: chart, chart_type: bar, labels[], series[] = {name, values[]}}`.
 Bar charts render as measured colored rectangles + labels (deterministic, lint-provable);
 other `chart_type`s render as a labelled placeholder region.
 
-Minimal examples of each live in `examples/01..30_*.yaml`; copy and adapt.
+Minimal examples of each live in `examples/01..42_*.yaml`; copy and adapt.
 
 ## Lint error codes and how to fix them
 
