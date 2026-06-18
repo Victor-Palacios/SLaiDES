@@ -65,7 +65,10 @@ A **second** scheduled session, [`.github/workflows/pr-brainstorm.yml`](.github/
 pull requests (read-only `gh`, `pull-requests: read`), evaluates each for utility against
 `PLAN.md`, and appends *approvable* ideas to [IDEAS.md](IDEAS.md). It is brainstorm-only —
 it never merges, comments on, or modifies PRs or product code; its sole write is `IDEAS.md`,
-which you review and approve.
+which you review and approve. **Closing the loop:** when you mark an item `(approved)` in
+`IDEAS.md`, the nightly build picks it up (the sanctioned exception to its no-scope-additions
+rule), queues it on the board under the `ideas` epic, and works it through the same gates —
+annotating the `IDEAS.md` line as `→ queued as T-NNN` then `→ done (commit …)`.
 
 ### What the nightly session does now
 

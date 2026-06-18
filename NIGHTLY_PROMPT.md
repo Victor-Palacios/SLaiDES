@@ -33,6 +33,9 @@ WORK RULES:
    tried, skip to the next unblocked item IN THE SAME PHASE only, and move on.
    Never skip ahead a phase to route around a blocker.
 6. No scope additions. Features not in PLAN.md go in NOTES.md as proposals, not code.
+   EXCEPTION: items marked `(approved)` in IDEAS.md are operator-SANCTIONED additions and
+   MAY be implemented — see the "APPROVED IDEAS INTAKE" section below. `(proposed)` and
+   `(rejected)` items remain off-limits.
 
 SESSION WRAP-UP — reserve the final portion of your effort for this, always:
 - Run the full test suite one last time; fix or revert anything broken.
@@ -198,7 +201,29 @@ PROGRESS.md stays the canonical phase/acceptance ledger. Keep them coordinated:
   `created`/`updated`) for any genuinely new work you discover — do NOT silently expand scope
   (scope proposals still go in NOTES.md).
 - Columns are exactly `[backlog, todo, in_progress, blocked, done]`; epics are `phase-9`,
-  `phase-10`, `research`. Edit ONLY `board.yaml`, never `BOARD.md` by hand.
+  `phase-10`, `research`, and `ideas` (operator-approved IDEAS.md items). Edit ONLY
+  `board.yaml`, never `BOARD.md` by hand.
 - ALWAYS re-render before committing: run `python scripts/render_board.py`, then commit
   `board.yaml` + `BOARD.md` together. A test (`tests/test_board`) fails if BOARD.md is stale,
   so run the suite at wrap-up as usual.
+
+=== APPROVED IDEAS INTAKE (added 2026-06-18; operator request) ===
+A second scheduled session triages PRs and brainstorms into IDEAS.md; the operator
+reviews it and marks items `(approved)`. Those approved items are the controlled channel
+for work beyond PLAN.md (the WORK RULE 6 exception). Each session, run this intake near
+startup, right after reading the board:
+- Read IDEAS.md and find every item whose status is `(approved)`. IGNORE `(proposed)` and
+  `(rejected)` items entirely — never implement those.
+- For each approved item NOT already on the board: add a board task (next free `T-NNN`,
+  `epic: ideas`, `column: todo`, a `priority`, today's dates) whose `notes` cite the IDEAS.md
+  item, then annotate that IDEAS.md line in place by appending ` → queued as T-NNN` (do NOT
+  remove or alter the operator's `(approved)` tag or checkbox; this is the only edit you may
+  make to IDEAS.md — you never approve/reject/propose items yourself).
+- Work approved-idea tasks like any other board card, honoring the SAME gates (acceptance
+  test passes, lint-clean, determinism, full suite green) and the SAME hard PLAN.md phase
+  order — approved ideas are first-class tasks but must NOT derail or jump a phase gate.
+  Order them by their board `priority` alongside the phase work.
+- When an approved-idea task reaches `done`, append ` → done (commit <hash>)` to its IDEAS.md
+  line so the operator sees it landed. Commit IDEAS.md alongside the board + code changes.
+- If an approved idea is genuinely out of scope or unsafe on inspection, do NOT implement it:
+  leave it, and record the objection in NOTES.md (same as any disputed scope).

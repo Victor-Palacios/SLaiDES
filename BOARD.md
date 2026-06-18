@@ -37,4 +37,5 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 | Phase 9 — 40 core slide designs | 18 | 18 |
 | Phase 10 — computational aesthetics | 3 | 7 |
 | Standing research task | 2 | 3 |
+| Operator-approved ideas (from IDEAS.md) | 0 | 0 |
 

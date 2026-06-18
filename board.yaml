@@ -18,6 +18,7 @@ epics:
   - {id: phase-9,  title: "Phase 9 — 40 core slide designs", tag: P9}
   - {id: phase-10, title: "Phase 10 — computational aesthetics", tag: P10}
   - {id: research, title: "Standing research task", tag: RES}
+  - {id: ideas,    title: "Operator-approved ideas (from IDEAS.md)", tag: IDEA}
 
 tasks:
   # ── Phase 9: next group (E data) — todo ──────────────────────────────────────
