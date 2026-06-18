@@ -172,22 +172,26 @@ def _resolve_slide(
         nodes = _layout_image_half_bleed(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "card-grid":
         nodes = _layout_card_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    # Emphasis-stack hero layouts center a short text block: center it on the FULL content
+    # height (the optical canvas midline), NOT the page-number-reduced height — otherwise
+    # the block sits ~25px high (top-heavy, hurting balance). These blocks are short and
+    # never reach the bottom-right page-number corner; the linter still guards overlap.
     elif comp == "section-divider":
-        nodes = _layout_section_divider(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+        nodes = _layout_section_divider(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "agenda":
         nodes = _layout_agenda(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "quote-opener":
-        nodes = _layout_quote_opener(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+        nodes = _layout_quote_opener(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "big-number":
-        nodes = _layout_big_number(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+        nodes = _layout_big_number(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "pull-quote":
-        nodes = _layout_pull_quote(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+        nodes = _layout_pull_quote(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "statement":
-        nodes = _layout_statement(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+        nodes = _layout_statement(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "definition":
-        nodes = _layout_definition(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+        nodes = _layout_definition(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "question":
-        nodes = _layout_question(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+        nodes = _layout_question(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "bullet-list":
         nodes = _layout_bullet_list(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "feature-list":
