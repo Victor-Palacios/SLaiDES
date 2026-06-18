@@ -202,6 +202,40 @@ full chromatic palette). Measured before→after deck scores:
 | 06 timeline | 69.4 | 77.4 | | | | |
 
 The designed-beats-plain invariant survives the polish (big-number 88.3 still > agents
-86.3 > all_components 84.8). Still outstanding for Phase 10: `W_AESTH_*` advisory
-warnings + optional `--min-score` gate, an info-density metric, and weight calibration
-(DEFERRED — needs a labelled slide-pair dataset).
+86.3 > all_components 84.8). Still outstanding for Phase 10: an info-density metric, and
+weight calibration (DEFERRED — needs a labelled slide-pair dataset).
+
+## Advisory `W_AESTH_*` warnings + `--min-score` gate (shipped 2026-06-18)
+
+`slidekit score` now emits **advisory** `W_AESTH_*` warnings whenever a sub-score falls
+below its threshold, and accepts an opt-in `--min-score N` CI floor. Both honour the
+linter-stays-the-gate rule: warnings never block a build, and `score` exits 0 by default
+— only an explicit `--min-score` can make it exit non-zero.
+
+Warning codes (one per sub-metric; theme-level metrics warn once at the deck level):
+
+| code | metric | level |
+|---|---|---|
+| `W_AESTH_BALANCE` | balance | slide |
+| `W_AESTH_WHITESPACE` | whitespace | slide |
+| `W_AESTH_ALIGNMENT` | alignment | slide |
+| `W_AESTH_OVERLAP` | non_overlap | slide |
+| `W_AESTH_CONTRAST` | contrast | slide |
+| `W_AESTH_RICHNESS` | richness | slide |
+| `W_AESTH_HIERARCHY` | hierarchy | deck (theme) |
+| `W_AESTH_HARMONY` | color_harmony | deck (theme) |
+| `W_AESTH_CONSISTENCY` | cross-slide consistency | deck |
+
+Each warning carries `{code, slide, metric, value, threshold, message, suggested_fix}`
+(linter-issue shape, for tooling parity) and is included in the `--json` report under a
+`warnings` key. Thresholds (`ADVISORY_THRESHOLDS` in `slidekit/aesthetics/score.py`) were
+tuned from the observed per-slide distribution across the 40-design example library so a
+warning flags a genuine outlier rather than ordinary variation (e.g. the structurally-low
+alignment score of legitimate multi-column grids does not trip `W_AESTH_ALIGNMENT`). They
+are **HEURISTIC**; calibration remains DEFERRED. CLI:
+
+```
+slidekit score deck.yaml                  # advisory; prints score + warnings; exit 0
+slidekit score deck.yaml --json           # full report incl. "warnings": [...]
+slidekit score deck.yaml --min-score 70   # CI floor: exit 1 if deck score < 70
+```

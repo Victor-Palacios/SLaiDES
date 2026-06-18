@@ -9,9 +9,18 @@ colour-harmony; the deck score is modulated by cross-slide consistency.
 
 from slidekit.aesthetics.score import (
     AestheticReport,
+    AestheticWarning,
     SlideScore,
     DEFAULT_WEIGHTS,
+    ADVISORY_THRESHOLDS,
     score_deck,
 )
 
-__all__ = ["AestheticReport", "SlideScore", "DEFAULT_WEIGHTS", "score_deck"]
+__all__ = [
+    "AestheticReport",
+    "AestheticWarning",
+    "SlideScore",
+    "DEFAULT_WEIGHTS",
+    "ADVISORY_THRESHOLDS",
+    "score_deck",
+]

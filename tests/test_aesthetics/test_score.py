@@ -1,7 +1,9 @@
 """Tests for the Phase 10 aesthetic scorer (beauty-tracking extension)."""
 
 from slidekit.aesthetics.score import (
+    ADVISORY_THRESHOLDS,
     _balance,
+    _build_warnings,
     _color_harmony,
     _contrast,
     _contrast_ratio,
@@ -11,6 +13,7 @@ from slidekit.aesthetics.score import (
     _non_overlap,
     _richness,
     score_deck,
+    SlideScore,
 )
 from slidekit.ir import load
 from slidekit.layout import resolve
@@ -170,3 +173,49 @@ def test_designed_deck_outscores_plain_decks():
 def _loaded(path):
     deck = load(path)
     return deck, resolve(deck)
+
+
+# ── T-018: advisory W_AESTH_* warnings + --min-score gate ──────────────────────
+
+
+def _ss(idx, **subscores):
+    """A SlideScore stub with arbitrary sub-scores (other fields are decorative)."""
+    sub = {k: 1.0 for k in ADVISORY_THRESHOLDS}
+    sub.update(subscores)
+    return SlideScore(idx, "two-column", sub, 0.0, min(sub, key=lambda k: sub[k]))
+
+
+def test_clean_subscores_emit_no_warnings():
+    clean = [_ss(0), _ss(1)]  # everything at 1.0
+    assert _build_warnings(clean, consistency=1.0) == []
+
+
+def test_low_subscore_emits_matching_warning():
+    warns = _build_warnings([_ss(0, balance=0.1)], consistency=1.0)
+    codes = [w.code for w in warns]
+    assert codes == ["W_AESTH_BALANCE"]
+    w = warns[0]
+    assert w.slide == 1 and w.value == 0.1 and w.suggested_fix  # 1-based, concrete fix
+
+
+def test_deck_level_metric_warns_once_not_per_slide():
+    # hierarchy is theme-level: identical low value on every slide → ONE warning.
+    slides = [_ss(0, hierarchy=0.1), _ss(1, hierarchy=0.1), _ss(2, hierarchy=0.1)]
+    warns = [w for w in _build_warnings(slides, 1.0) if w.code == "W_AESTH_HIERARCHY"]
+    assert len(warns) == 1
+    assert warns[0].slide is None  # deck-level, not pinned to a slide
+
+
+def test_consistency_warning_below_threshold():
+    warns = _build_warnings([_ss(0)], consistency=0.905)
+    assert any(w.code == "W_AESTH_CONSISTENCY" and w.slide is None for w in warns)
+
+
+def test_warnings_are_deterministic_and_advisory_in_report():
+    deck, rd = _loaded("examples/39_image_full_bleed.yaml")
+    r1, r2 = score_deck(deck, rd), score_deck(deck, rd)
+    assert [w.to_dict() for w in r1.warnings] == [w.to_dict() for w in r2.warnings]
+    assert r1.warnings, "image-full-bleed should trip at least one advisory warning"
+    assert "warnings" in r1.to_dict()  # surfaced in JSON
+    # Advisory: warnings never carry an E_ (error / gate) code.
+    assert all(w.code.startswith("W_AESTH_") for w in r1.warnings)

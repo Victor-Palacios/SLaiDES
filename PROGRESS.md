@@ -141,5 +141,10 @@ score); the linter remains the gate.
 - [x] Visual-polish pass on the 8 v1 component handlers (PRIORITY OVERRIDE #2, 2026-06-15): headings in
   brand primary, hero data (stat values, timeline dates) in accent, icon fills recorded; all decks stay
   lint-clean; every example deck score rose (e.g. all-components 75.4→84.8); PDFs rebuilt; goldens regen.
-- [ ] `W_AESTH_*` advisory warnings + optional `--min-score` gate. (info-density metric also still TODO.)
+- [x] `W_AESTH_*` advisory warnings + optional `--min-score` gate (2026-06-18): 9 advisory
+  `W_AESTH_*` codes (one per sub-metric; theme-level metrics warn once at deck level) with
+  documented `ADVISORY_THRESHOLDS` tuned from the 40-deck distribution; warnings included in
+  the `slidekit score --json` report; opt-in `--min-score N` CI floor (exits 1 below the bar,
+  exit 0 by default — the linter stays the gate). 9 tests; suite 214 passed / 47 skipped.
+  (info-density metric still TODO; weight calibration DEFERRED.)
 - [ ] DEFERRED: weight calibration vs a human-labelled slide-pair set.

@@ -63,6 +63,14 @@ def main() -> None:
     )
     score_p.add_argument("deck", help="Path to deck.yaml")
     score_p.add_argument("--json", action="store_true", help="Print the full JSON report")
+    score_p.add_argument(
+        "--min-score",
+        type=float,
+        default=None,
+        metavar="N",
+        help="Optional CI floor: exit non-zero if the deck score is below N "
+        "(0–100). Off by default — scoring is advisory and never gates a build.",
+    )
 
     args = parser.parse_args()
 
@@ -153,6 +161,19 @@ def _cmd_score(args: argparse.Namespace) -> None:
                 f"  slide {s.slide_index + 1} ({s.component}): "
                 f"{s.score:.0f}/100  weakest: {s.weakest} ({s.subscores[s.weakest]:.2f})"
             )
+        if report.warnings:
+            print(f"advisory warnings ({len(report.warnings)}):")
+            for w in report.warnings:
+                print(f"  {w.code}: {w.message} fix: {w.suggested_fix}")
+
+    # --min-score is an OPT-IN CI floor; without it, score never gates (advisory).
+    if args.min_score is not None and report.deck_score < args.min_score:
+        print(
+            f"[slidekit] deck score {report.deck_score:.1f} below "
+            f"--min-score {args.min_score:.1f}",
+            file=sys.stderr,
+        )
+        sys.exit(1)
     sys.exit(0)
 
 
@@ -234,3 +255,7 @@ def _cmd_new(args: argparse.Namespace) -> None:
     out.write_text(yaml_text)
     print(f"Starter deck ({args.template}) written to {out}")
     print("Edit the placeholder text, then: slidekit build " + str(out))
+
+
+if __name__ == "__main__":
+    main()

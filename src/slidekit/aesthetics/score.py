@@ -44,6 +44,81 @@ DEFAULT_WEIGHTS: dict[str, float] = {
 
 _ALIGN_TOL = int(0.06 * EMU_PER_INCH)  # ~0.06" edge-clustering tolerance
 
+# Advisory thresholds for the W_AESTH_* warnings. A sub-score below its threshold
+# emits an advisory warning — NEVER a build-blocking error (the linter stays the
+# gate, per docs/AESTHETICS.md "Relationship to the linter"). Tuned from the
+# observed per-slide distribution across the 40-design example library so a warning
+# flags a genuine outlier, not ordinary variation (e.g. the structurally-low
+# alignment score of legitimate multi-column grids). HEURISTIC — documented in
+# docs/AESTHETICS.md; calibration is DEFERRED.
+ADVISORY_THRESHOLDS: dict[str, float] = {
+    "balance": 0.50,
+    "whitespace": 0.50,
+    "alignment": 0.25,
+    "non_overlap": 0.80,
+    "hierarchy": 0.50,
+    "contrast": 0.50,
+    "richness": 0.40,
+    "color_harmony": 0.40,
+}
+
+# Sub-metric → (warning code, human label, concrete fix). Codes mirror the linter's
+# W_* namespace but live under W_AESTH_ so they are unmistakably advisory.
+_WARN_META: dict[str, tuple[str, str, str]] = {
+    "balance": (
+        "W_AESTH_BALANCE",
+        "visual mass is lopsided",
+        "redistribute elements so the content centroid sits nearer the slide centre,"
+        " or balance a heavy side with a counter-weight element.",
+    ),
+    "whitespace": (
+        "W_AESTH_WHITESPACE",
+        "slide is crowded or nearly empty",
+        "aim for ~12–55% content coverage: add breathing room if crowded, or promote"
+        " content / enlarge type if sparse.",
+    ),
+    "alignment": (
+        "W_AESTH_ALIGNMENT",
+        "element left edges do not share alignment lines",
+        "snap related elements to shared left edges / a common grid column.",
+    ),
+    "non_overlap": (
+        "W_AESTH_OVERLAP",
+        "elements visually overlap",
+        "separate the overlapping rects (the linter's E_OVERLAP is the hard gate; this"
+        " advises on near-touching mass).",
+    ),
+    "hierarchy": (
+        "W_AESTH_HIERARCHY",
+        "title/body type contrast is weak",
+        "increase the theme title size relative to body (aim for ≥1.5× the body size).",
+    ),
+    "contrast": (
+        "W_AESTH_CONTRAST",
+        "text/background contrast is low for its size",
+        "darken/lighten the text colour against the surface (≥3:1 for large text,"
+        " ≥4.5:1 for body).",
+    ),
+    "richness": (
+        "W_AESTH_RICHNESS",
+        "slide reads as bare / under-designed",
+        "add deliberate accent-colour emphasis on a key element or a structural"
+        " (non-text) element — within restraint.",
+    ),
+    "color_harmony": (
+        "W_AESTH_HARMONY",
+        "theme primary/accent hues are not in a recognised relationship",
+        "choose accent vs primary hues that are analogous, complementary, or triadic.",
+    ),
+}
+
+# Sub-metrics that are theme/deck-level (identical on every slide); warn ONCE at the
+# deck level rather than repeating per slide.
+_DECK_LEVEL = {"hierarchy", "color_harmony"}
+
+# Cross-slide consistency advisory threshold (deck-level; metric is bounded [0.9, 1]).
+_CONSISTENCY_THRESHOLD = 0.93
+
 # WCAG contrast targets. Body floor is 32pt so essentially all slidekit content text
 # is "large" by WCAG (≥18pt regular); large text needs only 3:1, which is why an
 # accent emphasis figure (e.g. a coloured big-number) is NOT a contrast failure. The
@@ -301,15 +376,42 @@ class SlideScore:
 
 
 @dataclass
+class AestheticWarning:
+    """One advisory W_AESTH_* finding. Same shape as a linter issue for tooling
+    parity, but ADVISORY — it never blocks a build."""
+
+    code: str
+    slide: Optional[int]  # 1-based slide number, or None for deck/theme-level
+    metric: str
+    value: float
+    threshold: float
+    message: str
+    suggested_fix: str
+
+    def to_dict(self) -> dict:
+        return {
+            "code": self.code,
+            "slide": self.slide,
+            "metric": self.metric,
+            "value": round(self.value, 3),
+            "threshold": self.threshold,
+            "message": self.message,
+            "suggested_fix": self.suggested_fix,
+        }
+
+
+@dataclass
 class AestheticReport:
     deck_score: float
     slides: list[SlideScore] = field(default_factory=list)
     consistency: float = 1.0
+    warnings: list[AestheticWarning] = field(default_factory=list)
 
     def to_dict(self) -> dict:
         return {
             "deck_score": round(self.deck_score, 1),
             "consistency": round(self.consistency, 3),
+            "warnings": [w.to_dict() for w in self.warnings],
             "slides": [s.to_dict() for s in self.slides],
         }
 
@@ -317,6 +419,65 @@ class AestheticReport:
         import json
 
         return json.dumps(self.to_dict(), indent=indent)
+
+
+# ── advisory warnings ───────────────────────────────────────────────────────────
+
+
+def _build_warnings(
+    slide_scores: list[SlideScore], consistency: float
+) -> list[AestheticWarning]:
+    """Derive advisory W_AESTH_* warnings from sub-scores below threshold.
+
+    Deck/theme-level metrics (hierarchy, colour harmony) are emitted ONCE; per-slide
+    metrics are emitted per offending slide. Order is deterministic: deck-level first,
+    then by slide index then metric name. ADVISORY only — never a build gate."""
+    warns: list[AestheticWarning] = []
+    seen_deck: set[str] = set()
+
+    for ss in slide_scores:
+        for metric in ADVISORY_THRESHOLDS:
+            val = ss.subscores.get(metric)
+            if val is None:
+                continue
+            thr = ADVISORY_THRESHOLDS[metric]
+            if val >= thr:
+                continue
+            code, label, fix = _WARN_META[metric]
+            if metric in _DECK_LEVEL:
+                if code in seen_deck:
+                    continue
+                seen_deck.add(code)
+                warns.append(
+                    AestheticWarning(
+                        code, None, metric, val, thr,
+                        f"deck: {label} ({val:.2f} < {thr:.2f}).", fix,
+                    )
+                )
+            else:
+                warns.append(
+                    AestheticWarning(
+                        code, ss.slide_index + 1, metric, val, thr,
+                        f"slide {ss.slide_index + 1} ({ss.component}): {label} "
+                        f"({val:.2f} < {thr:.2f}).",
+                        fix,
+                    )
+                )
+
+    if consistency < _CONSISTENCY_THRESHOLD:
+        warns.append(
+            AestheticWarning(
+                "W_AESTH_CONSISTENCY", None, "consistency", consistency,
+                _CONSISTENCY_THRESHOLD,
+                f"deck: content margins vary across slides "
+                f"({consistency:.3f} < {_CONSISTENCY_THRESHOLD:.2f}).",
+                "align the content block to a shared left/top margin across slides.",
+            )
+        )
+
+    # Deck-level warnings first, then per-slide ordered by (slide, code).
+    warns.sort(key=lambda w: (w.slide if w.slide is not None else -1, w.code))
+    return warns
 
 
 # ── public API ────────────────────────────────────────────────────────────────
@@ -358,4 +519,5 @@ def score_deck(
         deck_score=mean_slide * consistency,
         slides=slide_scores,
         consistency=consistency,
+        warnings=_build_warnings(slide_scores, consistency),
     )
