@@ -197,6 +197,24 @@ A first cut of Phase 10 `slidekit score` exists (slidekit/aesthetics/). Next ses
 3. THEN resume the remaining ~20 Phase 9 designs.
 This is the Aesthetic Director agent's remit (specialized/specialized-aesthetic-director.md).
 
+=== NORTH-STAR PRIORITY (added 2026-06-18; operator realignment — SUPERSEDES the priority above) ===
+The project's north star: ~40 slide layouts that render REPRODUCIBLY from recorded
+math/geometry, where an LLM (no vision) picks which layout per slide for a given topic.
+An audit found two gaps the recent advisory/meta work (aesthetics, research, board,
+brainstorm, dated PDF archive) did NOT serve; both are now BUILT and are the spine of the
+product — keep them first-class and do not let meta-work crowd them out:
+  - Honest taxonomy: 40 components = ~25 distinct layout skeletons + styled variants.
+    Source of truth `src/slidekit/catalog/registry.py` → `docs/LAYOUT_TAXONOMY.md`. Do NOT
+    re-pad "40 distinct"; every new component declares its family/role in the registry.
+  - Selection pipeline (vision-free): `slidekit catalog`/`docs/LAYOUT_SELECTION_GUIDE.md`
+    (LLM picks), `slidekit.select.recommend` (deterministic fallback), `slidekit author`
+    (outline → validate → lint → render). Keep these green and extend them as components change.
+PRIORITY ORDER now: (1) keep the registry/taxonomy/selection pipeline correct and in sync as
+the library evolves; (2) any genuinely-new DISTINCT layout skeletons (not cosmetic variants);
+(3) the aesthetic-scorer + standing research are now BACKGROUND — touch lightly, do not let
+them displace (1)/(2). When you add/restructure components, update the registry and re-run
+`scripts/build_layout_taxonomy.py` + `scripts/build_selection_guide.py` (tests enforce sync).
+
 === TASK BOARD (added 2026-06-16; operator request — maintain EVERY session) ===
 The repo has a file-based agile kanban board: `board.yaml` (source of truth) renders to
 `BOARD.md` via `python scripts/render_board.py`. It is the active/sprint VIEW of the work;

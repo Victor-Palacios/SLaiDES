@@ -112,3 +112,25 @@ is followed anyway.
   VERIFIED references on mathematical/aesthetic slide design and integrates concrete
   deterministic metrics into Phase 10. Verify before citing; keep all metrics
   render-free; never gate the build on a learned score.
+
+## North-star realignment (2026-06-18, operator-directed)
+
+An operator audit re-anchored the project on its core goal: **~40 slide layouts that render
+reproducibly from recorded geometry, with an LLM (no vision) picking which layout per slide
+for a given topic.** Three read-only audits found: (1) the deterministic render/geometry core
+is exactly on-goal and done; (2) "40 distinct layouts" was padded — only ~25 are structurally
+distinct skeletons, ~15 are styled variants; (3) the LLM-selection half of the pipeline did
+not exist in-repo (only un-wired agency-agent scaffolds). Recent advisory/meta work
+(aesthetic scorer, research bibliography, board, brainstorm, dated PDF archive, example index)
+was disciplined but did not advance (2) or (3).
+
+Fix (operator decisions: consolidate to an honest taxonomy; build BOTH an LLM selection
+guide + `slidekit author` AND a deterministic recommender):
+- `src/slidekit/catalog/registry.py` — single source of truth: 40 components → 25 distinct
+  families + 15 variants, plus selection metadata; fields derived from the IR models.
+- `docs/LAYOUT_TAXONOMY.md` (honest count) and `docs/LAYOUT_SELECTION_GUIDE.md` +
+  `slidekit catalog --json` (LLM picks layouts, vision-free), both generated + sync-tested.
+- `src/slidekit/select/recommend.py` (content-shape → component) and `slidekit author`
+  (outline → recommend/validate → lint → render), with `examples/author-demo/`.
+The aesthetic scorer and standing research are now BACKGROUND (kept, not deleted). See the
+NIGHTLY_PROMPT "NORTH-STAR PRIORITY" section.

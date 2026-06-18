@@ -2,13 +2,17 @@
 
 _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`, then re-render; do not hand-edit. The kanban view of the work; `PROGRESS.md` stays the acceptance ledger._
 
-**backlog** 2 · **todo** 0 · **in_progress** 1 · **blocked** 1 · **done** 28 · _last change 2026-06-18_
+**backlog** 2 · **todo** 0 · **in_progress** 2 · **blocked** 1 · **done** 33 · _last change 2026-06-18_
 
-| Backlog (2) | Todo (0) | In Progress (1) | Blocked (1) | Done (28) |
+| Backlog (2) | Todo (0) | In Progress (2) | Blocked (1) | Done (33) |
 |---|---|---|---|---|
 | **T-019** info-density sub-score metric · _P10_ |  | **T-023** grow REFERENCES.md toward ~20 verified (1–3 new/session) · _RES_ | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
-| **T-020** Harrington non-linear score combiner (ref #10) · _P10_ |  |  |  | **T-002** chart-slide design · _P9_ · `high` |
+| **T-020** Harrington non-linear score combiner (ref #10) · _P10_ |  | **T-038** refocus nightly + NOTES + close PR #7 · _PIPE_ |  | **T-002** chart-slide design · _P9_ · `high` |
 |  |  |  |  | **T-025** beauty-tracking extension: richness + large-text 3:1 contrast · _P10_ · `high` |
+|  |  |  |  | **T-033** component-metadata registry (single source of truth) · _PIPE_ · `high` |
+|  |  |  |  | **T-034** honest layout taxonomy doc + reframe '40 distinct' · _PIPE_ · `high` |
+|  |  |  |  | **T-035** slidekit catalog + generated selection guide (LLM picks, no vision) · _PIPE_ · `high` |
+|  |  |  |  | **T-037** slidekit author: outline -> recommend/validate -> lint -> render · _PIPE_ · `high` |
 |  |  |  |  | **T-003** chart-with-insight design · _P9_ |
 |  |  |  |  | **T-004** table-slide design · _P9_ |
 |  |  |  |  | **T-005** metric-comparison design · _P9_ |
@@ -33,6 +37,7 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 |  |  |  |  | **T-029** strip title-slide cover from 39 single-component examples (cover-free specimens) · _IDEA_ |
 |  |  |  |  | **T-030** moment-of-balance _balance sub-score (refs #4/#16/#18) · _IDEA_ |
 |  |  |  |  | **T-032** close Phase 9 acceptance: verify harness green on all example decks · _IDEA_ |
+|  |  |  |  | **T-036** deterministic content-shape -> component recommender · _PIPE_ |
 |  |  |  |  | **T-031** generated example inventory (scripts/build_examples_index.py -> docs/EXAMPLES_INDEX.md) · _IDEA_ |
 
 ## Epics
@@ -43,4 +48,5 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 | Phase 10 — computational aesthetics | 4 | 7 |
 | Standing research task | 2 | 3 |
 | Operator-approved ideas (from IDEAS.md) | 4 | 4 |
+| North-star: honest taxonomy + LLM-selection pipeline | 5 | 6 |
 

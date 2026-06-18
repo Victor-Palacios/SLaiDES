@@ -19,6 +19,7 @@ epics:
   - {id: phase-10, title: "Phase 10 — computational aesthetics", tag: P10}
   - {id: research, title: "Standing research task", tag: RES}
   - {id: ideas,    title: "Operator-approved ideas (from IDEAS.md)", tag: IDEA}
+  - {id: pipeline, title: "North-star: honest taxonomy + LLM-selection pipeline", tag: PIPE}
 
 tasks:
   # ── Phase 9: next group (E data) — todo ──────────────────────────────────────
@@ -62,3 +63,11 @@ tasks:
   - {id: T-030, title: "moment-of-balance _balance sub-score (refs #4/#16/#18)", epic: ideas, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "approved IDEAS idea; H+V area-weighted moments replace centroid offset; RESEARCH_TRACE updated; designed-beats-plain guard green; 16 aesthetics tests pass"}
   - {id: T-031, title: "generated example inventory (scripts/build_examples_index.py -> docs/EXAMPLES_INDEX.md)", epic: ideas, column: done, priority: low, created: 2026-06-18, updated: 2026-06-18, notes: "approved IDEAS idea; --check + tests/test_examples_index sync guard; 44 decks / 40 specimens / 4 showcases"}
   - {id: T-032, title: "close Phase 9 acceptance: verify harness green on all example decks", epic: ideas, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "done — verify-render CI rendered all example decks via LibreOffice+poppler and passed; run 27781859805 / commit 27817bb; PROGRESS line 114 checked. Phase 9 acceptance complete"}
+
+  # ── North-star realignment (2026-06-18): honest taxonomy + LLM-selection pipeline ──
+  - {id: T-033, title: "component-metadata registry (single source of truth)", epic: pipeline, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "done 0730877 — src/slidekit/catalog/registry.py: 40 components -> 25 families + 15 variants; fields derived from IR models; coverage test"}
+  - {id: T-034, title: "honest layout taxonomy doc + reframe '40 distinct'", epic: pipeline, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "done 6558dcb — scripts/build_layout_taxonomy.py -> docs/LAYOUT_TAXONOMY.md (+sync test); README/SLIDE_DESIGNS reframed"}
+  - {id: T-035, title: "slidekit catalog + generated selection guide (LLM picks, no vision)", epic: pipeline, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "done eba1dff — catalog --json + docs/LAYOUT_SELECTION_GUIDE.md (+sync test); SKILL pointer"}
+  - {id: T-036, title: "deterministic content-shape -> component recommender", epic: pipeline, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "done f54d384 — src/slidekit/select/recommend.py; 12 mapping tests"}
+  - {id: T-037, title: "slidekit author: outline -> recommend/validate -> lint -> render", epic: pipeline, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "done e63eeca — src/slidekit/select/author.py + CLI; examples/author-demo; 7 tests; deterministic, vision-free"}
+  - {id: T-038, title: "refocus nightly + NOTES + close PR #7", epic: pipeline, column: in_progress, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "NIGHTLY_PROMPT NORTH-STAR PRIORITY + NOTES realignment done; closing PR #7"}
