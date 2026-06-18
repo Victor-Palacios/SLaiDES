@@ -51,6 +51,7 @@ in files:
 | [docs/REFERENCES.md](docs/REFERENCES.md) | Living bibliography of slide-aesthetics research (target ~20 verified) |
 | [docs/RESEARCH_TRACE.md](docs/RESEARCH_TRACE.md) | Which paper influenced which scorer decision (paper → decision → code, with status) |
 | `examples/pdf/` | Per-deck example PDFs (canonical, one per deck) plus `combined/` — a dated review archive (`all-examples_<date>.pdf` + `manifest.json` + `INDEX.md`) where `scripts/build_combined_pdf.py` mints a new snapshot only when deck layouts change |
+| [docs/EXAMPLES_INDEX.md](docs/EXAMPLES_INDEX.md) | Generated inventory of every example deck (slide count + component sequence), produced by `scripts/build_examples_index.py`; a test keeps it in sync |
 
 The schedule is [`.github/workflows/nightly.yml`](.github/workflows/nightly.yml):
 a GitHub Actions cron job (**09:00 UTC ≈ 02:00 Pacific, nightly**) running

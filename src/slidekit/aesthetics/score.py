@@ -192,15 +192,33 @@ def _content_nodes(rs: "ResolvedSlide") -> list:
 
 
 def _balance(nodes, cw: int, ch: int) -> float:
-    # ref #4 (Ngo/Teo/Byrne, Info. Sci. 2003) balance/equilibrium — docs/RESEARCH_TRACE.md
+    # ref #4 (Ngo/Teo/Byrne, Info. Sci. 2003) balance/equilibrium as an area-weighted
+    # MOMENT about the centre axes — also refs #16 (Lok/Feiner/Ngai, IUI'04) and #18
+    # (Zhang & Xue, Symmetry 2026). Horizontal and vertical imbalance are scored
+    # separately as the normalised difference of Σ(area × distance-from-axis) on the
+    # two sides of each axis; the old single centroid-offset is the degenerate case
+    # (it conflated the two axes and couldn't tell a lopsided layout from a
+    # centred-but-clustered one). A single off-centre element is maximally imbalanced
+    # by construction. docs/RESEARCH_TRACE.md
     if not nodes:
         return 0.0
-    tot = sum(n.rect.w * n.rect.h for n in nodes) or 1
-    cx = sum((n.rect.x + n.rect.w / 2) * n.rect.w * n.rect.h for n in nodes) / tot
-    cy = sum((n.rect.y + n.rect.h / 2) * n.rect.w * n.rect.h for n in nodes) / tot
-    dist = math.hypot(cx - cw / 2, cy - ch / 2)
-    half = math.hypot(cw / 2, ch / 2)
-    return max(0.0, 1 - dist / half)
+    cx0, cy0 = cw / 2, ch / 2
+    wl = wr = wt = wb = 0.0  # left / right / top / bottom moments
+    for n in nodes:
+        area = n.rect.w * n.rect.h
+        dx = (n.rect.x + n.rect.w / 2) - cx0
+        dy = (n.rect.y + n.rect.h / 2) - cy0
+        if dx < 0:
+            wl += area * -dx
+        else:
+            wr += area * dx
+        if dy < 0:
+            wt += area * -dy
+        else:
+            wb += area * dy
+    bm_x = (wl - wr) / max(wl, wr) if max(wl, wr) else 0.0
+    bm_y = (wt - wb) / max(wt, wb) if max(wt, wb) else 0.0
+    return max(0.0, 1.0 - (abs(bm_x) + abs(bm_y)) / 2.0)
 
 
 def _whitespace(nodes, cw: int, ch: int) -> float:

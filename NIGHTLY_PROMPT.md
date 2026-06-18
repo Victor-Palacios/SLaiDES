@@ -165,6 +165,9 @@ stripped 2026-06-18 at operator request: a specimen isolates one unique layout, 
 repeated cover is redundant artifact noise against the minimalism ethos). Do NOT add a
 cover to a component example. Only the genuine composition showcases — `09_full_deck`,
 `10_all_components`, `agents-in-ai`, `demo-5` — are multi-slide (cover + varied content).
+When you add/remove/restructure example decks, regenerate the inventory with
+`python scripts/build_examples_index.py` and commit `docs/EXAMPLES_INDEX.md`
+(a test fails if it drifts).
 The per-deck `examples/pdf/<name>.pdf` files are CANONICAL — keep one per deck (do
 not delete or merge them away). For easy review there is ALSO a DATED archive of a
 combined aggregate under `examples/pdf/combined/`: `all-examples_<YYYY-MM-DD>.pdf`,

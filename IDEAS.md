@@ -70,29 +70,40 @@ ideation pass from repo state (Phase 9 complete, Phase 10 in progress, research 
   specimens (each is now a single unique-layout slide); the convention is now documented the
   other way in `NIGHTLY_PROMPT.md`/`docs/SLIDE_DESIGNS.md`/`SKILL.md`. PR #6's "one-page
   specimen" instinct was right (its binary-PDF execution was not).
-- [ ] **(proposed)** Generated example inventory instead of hand-maintained lists — a tiny
+- [x] **(approved → done)** Generated example inventory instead of hand-maintained lists — a tiny
   `scripts/` generator (mirroring `render_board.py`) that emits the example→slide-count /
   component index, with a sync test. Kills the exact staleness failure mode PR #6
   introduces and gives reviewers a single source of truth for "what's in `examples/`."
   _(effort: S; area: tooling/docs)_
-- [ ] **(proposed)** Close Phase 9's last open acceptance — run + record the verify harness
+  → **Done 2026-06-18 (board T-031):** `scripts/build_examples_index.py` →
+  `docs/EXAMPLES_INDEX.md` (+`--check`), guarded by `tests/test_examples_index`.
+- [x] **(approved)** Close Phase 9's last open acceptance — run + record the verify harness
   across all 42 example decks. PROGRESS.md line 114 ("verify harness passes on all new
   example decks") stays unchecked because `soffice`/`pdftoppm` aren't in the nightly image
   (47 skips). A one-shot CI job (or recorded operator run) with LibreOffice installed would
   let that box be checked honestly rather than perpetually skipped. _(effort: S–M; area:
   Phase 6/9 verify)_
-- [ ] **(proposed)** Adopt the area-weighted moment-of-balance formulation for the `_balance`
+  → **In progress (board T-032):** dispatched the `verify-render` CI workflow (LibreOffice +
+  poppler) over all example decks; PROGRESS line 114 gets checked once the run is green.
+- [x] **(approved → done)** Adopt the area-weighted moment-of-balance formulation for the `_balance`
   sub-score (refs #16 Lok/Feiner/Ngai, #18 Zhang & Xue), behind a designed-beats-plain
   regression guard. The 2026-06-18 nightly report already logged this integration direction
   ("balance as a moment about the layout centre"; current `_balance` uses centroid distance,
   a special case) but left it unapplied — fully deterministic, no render, grounded in
   verified citations. _(effort: M; area: Phase 10 aesthetics)_
-- [ ] **(proposed, speculative)** Deterministic slidekit-native component catalog —
+  → **Done 2026-06-18 (board T-030):** `_balance` now scores horizontal + vertical moment
+  imbalance separately; RESEARCH_TRACE updated; designed-beats-plain guard green
+  (big-number 85.6 > agents-in-ai 83.9 > all-components 82.0).
+- [ ] **(rejected)** Deterministic slidekit-native component catalog —
   `slidekit catalog` that lays out component thumbnails via the **real** layout/emit engine
   (not ReportLab) into one reviewable deck/PDF. This captures the genuinely useful part of
   PR #6's "contact-sheet" idea (spotting duplicate design patterns across 40 components)
   while staying source-traceable and render-free. Flag as nice-to-have, not plan scope —
   only if the operator wants a gallery artifact. _(effort: M; area: emit/tooling)_
+  → **Rejected 2026-06-18 (operator):** redundant with the dated combined-PDF review
+  archive (already a full visual of every example), and true multi-up thumbnails would need
+  rasterisation/down-scaling that the no-render, font-metric engine doesn't do — the
+  distinctive feature is the architecturally awkward part. Not pursued.
 
 ## 2026-06-18 (16:45 UTC re-run)
 
