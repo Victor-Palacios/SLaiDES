@@ -6,7 +6,7 @@ layout / presentation aesthetics mathematically**. Grown by the nightly routine
 works, verifies them against a primary source, records how each informs slidekit,
 and integrates concrete deterministic metrics into Phase 10 (`docs/AESTHETICS.md`).
 
-**Goal: ~20 distinct VERIFIED references.**  **Current: 15 (15 verified, 0 secondhand).**
+**Goal: ~20 distinct VERIFIED references.**  **Current: 18 (18 verified, 0 secondhand).**
 
 Status key — **VERIFIED**: confirmed from a primary source (arXiv / venue / DOI /
 official code). **SECONDHAND**: carried from an operator-pasted synthesis, not yet
@@ -29,6 +29,9 @@ independently confirmed; verify and upgrade before relying on it.
 | 13 | **Kikuchi, Simo-Serra, Otani & Yamaguchi — Constrained Graphic Layout Generation via Latent Optimization** — Proc. ACM MM '21, pp. 88–96; DOI 10.1145/3474085.3475497; arXiv:2108.00871; code github.com/ktrk115/const_layout | 2021 | **VERIFIED** | Defines the now-standard **Alignment** and **Overlap** layout metrics as closed-form functions of element bounding boxes (overlap = pairwise intersection area; alignment = minimal edge/centre misalignment), normalised by element count — exactly slidekit's no-render regime. Primary source backing slidekit's `alignment` and `non-overlap` metric definitions (and the linter's `E_OVERLAP`). (Verified 2026-06-16 from arXiv + ACM DL + official code.) |
 | 14 | **O'Donovan, Agarwala & Hertzmann — Learning Layouts for Single-Page Graphic Designs** — IEEE TVCG 20(8):1200–1213; DOI 10.1109/TVCG.2014.48; project dgp.toronto.edu/~donovan/layout/ | 2014 | **VERIFIED** | Energy-based layout model whose terms — **alignment, overlap, white space**, plus predicted importance and balance — are closed-form functions of element bounding boxes, with the term weights learned by Nonlinear Inverse Optimization from a few examples. Primary source for slidekit's alignment/non-overlap/whitespace metrics AND, like Harrington (#10), strong evidence that the composite should be a learned/non-linear combination rather than an ad-hoc weighted mean. All terms geometry-based — no render. (Verified 2026-06-17 from IEEE TVCG DOI + authors' project page.) |
 | 15 | **Miniukovich & De Angeli — Computation of Interface Aesthetics** — Proc. ACM CHI 2015, pp. 1163–1172; DOI 10.1145/2702123.2702575 | 2015 | **VERIFIED** | Eight automatic GUI-aesthetics metrics across three dimensions: **information amount** (visual clutter, colour variability), **information organization** (symmetry, grid, ease-of-grouping, prototypicality), **information discriminability** (contour density, figure-ground contrast); explained up to 49% of webpage-aesthetics variance. The geometry/theme-computable subset — **symmetry, grid alignment, colour variability, visual clutter, white space** — backs slidekit's balance/alignment, richness/colour-variety, and density scores. NB: contour density & figure-ground contrast need rendered pixels and are deliberately omitted (no-render rule). (Verified 2026-06-17 from ACM DOI.) |
+| 16 | **Lok, Feiner & Ngai — Evaluation of visual balance for automated layout** — Proc. 9th Int. Conf. on Intelligent User Interfaces (IUI '04), pp. 101–108; DOI 10.1145/964460.964462 | 2004 | **VERIFIED** | A primary source defining a **visual-balance metric for automated layout**: each element contributes a *visual weight* (a closed-form function of its bounding box — area/position) and balance is scored from the resulting moment about the layout centre. Geometry-only, no render — a direct primary reference for slidekit's `_balance` sub-score (which currently cites only Ngo #4) and a companion to the moment-based VME model (#18). (Verified 2026-06-18 from Crossref DOI metadata: authors Lok/Feiner/Ngai, IUI '04.) |
+| 17 | **Bauerly & Liu — Computational modeling and experimental investigation of effects of compositional elements on interface and design aesthetics** — Int. J. Human-Computer Studies 64(8):670–682; DOI 10.1016/j.ijhcs.2006.01.002 | 2006 | **VERIFIED** | Computational models of **symmetry** and **balance** computed from the bounding boxes of compositional elements, validated against human aesthetic judgments across two experiments. Primary, human-validated source for slidekit's geometry-only `_balance` definition and the symmetry component of visual order. No render. (Verified 2026-06-18 from Crossref DOI metadata: IJHCS 64(8):670–682, 2006.) |
+| 18 | **Zhang & Xue — Visual Moment Equilibrium: A Computational Cognitive Model for Assessing Visual Balance in Interface Layout Aesthetics** — Symmetry 18(1):41; DOI 10.3390/sym18010041 | 2026 | **VERIFIED** | Models visual balance as a **moment-equilibrium force field** over layout elements (a *Measured Balance index* with psychophysical transforms), specifically targeting **asymmetric** layouts that simpler centroid-distance balance scores mishandle. Geometry-computable (element positions/weights, no render); a recent primary source motivating a future refinement of slidekit's `_balance` metric toward a moment-based formulation for off-centre compositions. (Verified 2026-06-18 from Crossref DOI + MDPI abstract.) |
 
 ## Integration log
 
@@ -81,3 +84,14 @@ independently confirmed; verify and upgrade before relying on it.
   balance/richness/density scores. Running count **15/~20, all 15 verified, 0 secondhand**. With the
   SECONDHAND backlog cleared, future sessions add only genuinely novel high-quality works and shift
   toward integration + (deferred) calibration, per the standing task.
+- 2026-06-18: added three verified, geometry-only **balance/symmetry** primary sources — a cluster
+  that grounds slidekit's `_balance` sub-score (previously citing only Ngo #4): **#16 Lok, Feiner &
+  Ngai — Evaluation of visual balance for automated layout** (IUI '04, DOI 10.1145/964460.964462),
+  **#17 Bauerly & Liu** (IJHCS 64(8):670–682, 2006, DOI 10.1016/j.ijhcs.2006.01.002, human-validated
+  symmetry/balance models), and **#18 Zhang & Xue — Visual Moment Equilibrium** (Symmetry 18(1):41,
+  2026, DOI 10.3390/sym18010041, a moment-equilibrium balance model for asymmetric layouts). All three
+  verified from Crossref DOI metadata (and #18's MDPI abstract); all geometry-computable, no render.
+  Integration direction: #16 + #18 both frame balance as a *moment* about the layout centre — slidekit's
+  current `_balance` uses centroid distance from centre, a special case; a future Phase 10 refinement
+  could adopt the area-weighted moment formulation for off-centre compositions (logged, not yet applied;
+  metrics stay deterministic). Running count **18/~20, all 18 verified, 0 secondhand**.
