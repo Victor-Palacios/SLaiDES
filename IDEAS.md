@@ -1,6 +1,6 @@
 # IDEAS — PR triage & brainstorm inbox
 
-A scheduled second session (`.github/workflows/pr-brainstorm.yml`, 15:00 UTC — 6 hours
+A scheduled second session (`.github/workflows/pr-brainstorm.yml`, 13:30 UTC — 4.5 hours
 after the nightly build) reads the open pull requests, evaluates each for utility against
 `PLAN.md`, and appends a dated section below with its assessment and brainstormed ideas.
 
@@ -27,7 +27,7 @@ status — neither ever changes your `(approved)`/`(rejected)` decision.
 
 ---
 
-<!-- The 15:00 UTC pr-brainstorm session appends dated sections below. -->
+<!-- The 13:30 UTC pr-brainstorm session appends dated sections below. -->
 
 _No brainstorm run has appended to this file yet. The first scheduled run (or a manual
 `workflow_dispatch` of pr-brainstorm-slidekit) will add a `## <YYYY-MM-DD>` section here._
