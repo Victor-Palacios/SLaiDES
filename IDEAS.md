@@ -83,8 +83,9 @@ ideation pass from repo state (Phase 9 complete, Phase 10 in progress, research 
   (47 skips). A one-shot CI job (or recorded operator run) with LibreOffice installed would
   let that box be checked honestly rather than perpetually skipped. _(effort: S–M; area:
   Phase 6/9 verify)_
-  → **In progress (board T-032):** dispatched the `verify-render` CI workflow (LibreOffice +
-  poppler) over all example decks; PROGRESS line 114 gets checked once the run is green.
+  → **Done 2026-06-18 (board T-032):** the `verify-render` CI run (LibreOffice + poppler)
+  rendered every example deck and passed the pixel harness — run 27781859805 on commit
+  27817bb. PROGRESS line 114 now checked; **Phase 9 acceptance is complete.**
 - [x] **(approved → done)** Adopt the area-weighted moment-of-balance formulation for the `_balance`
   sub-score (refs #16 Lok/Feiner/Ngai, #18 Zhang & Xue), behind a designed-beats-plain
   regression guard. The 2026-06-18 nightly report already logged this integration direction

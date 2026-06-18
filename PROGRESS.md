@@ -111,7 +111,7 @@ _Phase 9 running tally: **40 of 40** designs shipped (8 v1 + 12 on 2026-06-14 + 
 - [x] G/H structure+visual: comparison-matrix, team-grid, image-full-bleed, image-grid, logo-wall, testimonial (6 designs; models + `_layout_*` handlers + dispatch + goldens 37–42 + examples + SKILL rows; all build lint-clean; 2026-06-18)
 - [x] ACCEPTANCE: each new design has a golden-file layout test + a lint-clean example deck
 - [x] ACCEPTANCE: SKILL.md component gallery lists all 40; `slidekit schema` validates every new component
-- [ ] ACCEPTANCE: full test suite green; verify harness passes on all new example decks
+- [x] ACCEPTANCE: full test suite green; verify harness passes on all new example decks (suite 217 passed / 47 skipped; verify-render CI rendered every example deck through LibreOffice+poppler and passed the pixel harness — run 27781859805 on commit 27817bb, 2026-06-18)
 
 ## Phase 10 — computational aesthetics (operator-directed, 2026-06-14)
 
