@@ -89,6 +89,12 @@ is an `E_FONT` error at validation.
 
 Each component compiles to a row/column tree; you fill typed slots.
 
+**Choosing a layout (no vision).** Pick a component per slide from its *content shape*, not
+by rendering anything: [docs/LAYOUT_SELECTION_GUIDE.md](docs/LAYOUT_SELECTION_GUIDE.md)
+lists every component's purpose, when-to-use, capacity, and required fields, grouped by the
+~25 distinct layout families (see [docs/LAYOUT_TAXONOMY.md](docs/LAYOUT_TAXONOMY.md)). The
+same data is machine-readable via `slidekit catalog --json`.
+
 | Component | Required keys | Optional |
 |---|---|---|
 | `title-slide` | `title` | `subtitle`, `logo` (image) |

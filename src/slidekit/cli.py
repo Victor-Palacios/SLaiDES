@@ -56,6 +56,13 @@ def main() -> None:
     verify_p.add_argument("decks", nargs="+", help="Deck YAML path(s) to verify")
     verify_p.add_argument("--dpi", type=int, default=None, help="Render DPI (default 150)")
 
+    # slidekit catalog — machine-readable layout selection catalog (for LLM layout-picking)
+    catalog_p = sub.add_parser(
+        "catalog",
+        help="List layout components with selection metadata (purpose, when-to-use, capacity)",
+    )
+    catalog_p.add_argument("--json", action="store_true", help="Emit the full catalog as JSON")
+
     # slidekit score (Phase 10 — deterministic aesthetic score, ADVISORY, no render)
     score_p = sub.add_parser(
         "score",
@@ -84,6 +91,8 @@ def main() -> None:
         _cmd_new(args)
     elif args.command == "verify":
         _cmd_verify(args)
+    elif args.command == "catalog":
+        _cmd_catalog(args)
     elif args.command == "score":
         _cmd_score(args)
 
@@ -137,6 +146,25 @@ def _emit_pdf(deck, rd, out_pdf: Path) -> None:
     from slidekit.emit.pdf_emitter import emit_pdf
 
     emit_pdf(deck, rd, out_pdf)
+
+
+def _cmd_catalog(args: argparse.Namespace) -> None:
+    """Emit the layout selection catalog so an LLM can pick layouts from content (no vision)."""
+    from slidekit.catalog.registry import as_records, distinct_families
+
+    records = as_records()
+    if args.json:
+        print(json.dumps({"distinct_layouts": len(distinct_families()),
+                          "components": len(records), "catalog": records}, indent=2))
+        sys.exit(0)
+    print(f"{len(records)} components across {len(distinct_families())} distinct layouts "
+          "(see docs/LAYOUT_SELECTION_GUIDE.md):\n")
+    for r in records:
+        cap = f"  [{r['capacity'][0]}–{r['capacity'][1]} items]" if r["capacity"] else ""
+        tag = "" if r["distinct"] else f"  (variant of {r['variant_of']})"
+        print(f"  {r['component']:<20} {r['purpose']}{cap}{tag}")
+        print(f"  {'':<20} use when: {r['use_when']}")
+    sys.exit(0)
 
 
 def _cmd_score(args: argparse.Namespace) -> None:

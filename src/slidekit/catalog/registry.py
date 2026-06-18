@@ -281,3 +281,25 @@ def catalog() -> dict[str, Layout]:
 def distinct_families() -> list[str]:
     """Sorted list of distinct layout-family ids (one per distinct geometric skeleton)."""
     return sorted({l.family for l in catalog().values()})
+
+
+def as_records() -> list[dict]:
+    """The catalog as JSON-serialisable records, sorted by component — the machine-readable
+    selection catalog an LLM consumes to pick layouts (no vision)."""
+    out = []
+    for key in sorted(catalog()):
+        lo = catalog()[key]
+        out.append({
+            "component": lo.component,
+            "family": lo.family,
+            "distinct": lo.distinct,
+            "variant_of": lo.variant_of,
+            "differs_by": lo.differs_by,
+            "purpose": lo.purpose,
+            "use_when": lo.use_when,
+            "capacity": list(lo.capacity) if lo.capacity else None,
+            "content_shape": lo.content_shape,
+            "required_fields": list(lo.required_fields),
+            "optional_fields": list(lo.optional_fields),
+        })
+    return out
