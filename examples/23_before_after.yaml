@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Before & After"
-    subtitle: "What the migration changed"
-
   - component: before-after
     title: "Onboarding, Reworked"
     before:

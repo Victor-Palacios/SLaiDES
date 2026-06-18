@@ -21,7 +21,9 @@ Each new design touches the same five places the existing 8 do:
    plus an `elif comp == "<key>"` branch in `_resolve_slide`'s dispatch.
 3. `src/slidekit/lint/checks.py` — usually nothing (checks are generic over ResolvedNodes);
    add only design-specific rules if needed.
-4. `tests/test_layout/golden/<key>.json` + an `examples/NN_<key>.yaml` example deck.
+4. `tests/test_layout/golden/<key>.json` + an `examples/NN_<key>.yaml` example deck — a
+   single-slide **specimen** of just this component (no `title-slide` cover; only the
+   `09_full_deck`/`10_all_components`/`agents-in-ai`/`demo-5` showcases are multi-slide).
 5. `SKILL.md` — one row in the component gallery; and a scaffold template if warranted.
 
 Emit (`emit/pptx_emitter.py`) and the verify harness are already generic over

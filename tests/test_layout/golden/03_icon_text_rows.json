@@ -3,71 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_14",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Our Core Values",
-          "lines": [
-            {
-              "text": "Our Core Values",
-              "width_emu": 5928940,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0A3D62"
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_15",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "icon-text-rows",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_16",
+          "node_id": "title_11",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -91,7 +32,7 @@
           "text_color": "#0A3D62"
         },
         {
-          "node_id": "icon_17",
+          "node_id": "icon_12",
           "node_type": "icon",
           "rect": {
             "x": 457200,
@@ -104,7 +45,7 @@
           "fill_color": "#F39C12"
         },
         {
-          "node_id": "heading_18",
+          "node_id": "heading_13",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -127,7 +68,7 @@
           "italic": false
         },
         {
-          "node_id": "body_19",
+          "node_id": "body_14",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -150,7 +91,7 @@
           "italic": false
         },
         {
-          "node_id": "icon_20",
+          "node_id": "icon_15",
           "node_type": "icon",
           "rect": {
             "x": 457200,
@@ -163,7 +104,7 @@
           "fill_color": "#F39C12"
         },
         {
-          "node_id": "heading_21",
+          "node_id": "heading_16",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -186,7 +127,7 @@
           "italic": false
         },
         {
-          "node_id": "body_22",
+          "node_id": "body_17",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -209,7 +150,7 @@
           "italic": false
         },
         {
-          "node_id": "icon_23",
+          "node_id": "icon_18",
           "node_type": "icon",
           "rect": {
             "x": 457200,
@@ -222,7 +163,7 @@
           "fill_color": "#F39C12"
         },
         {
-          "node_id": "heading_24",
+          "node_id": "heading_19",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -245,7 +186,7 @@
           "italic": false
         },
         {
-          "node_id": "body_25",
+          "node_id": "body_20",
           "node_type": "text",
           "rect": {
             "x": 1188720,
@@ -270,7 +211,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_26",
+          "node_id": "chrome_pagenum_21",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -278,10 +219,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

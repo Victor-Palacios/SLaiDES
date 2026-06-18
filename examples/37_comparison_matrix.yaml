@@ -10,9 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Vendor Shortlist"
-    subtitle: "Capability fit by option"
   - component: comparison-matrix
     title: "Evaluation Matrix"
     options: ["Platform A", "Platform B", "Platform C"]

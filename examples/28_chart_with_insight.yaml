@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Adoption Curve"
-    subtitle: "Where the growth is coming from"
-
   - component: chart-with-insight
     title: "Monthly Active Teams"
     chart:

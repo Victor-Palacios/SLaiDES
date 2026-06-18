@@ -10,9 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Product Moments"
-    subtitle: "Four scenes from the journey"
   - component: image-grid
     title: "Experience Gallery"
     images:

@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Build vs Buy"
-    subtitle: "Weighing the trade-offs"
-
   - component: pros-cons
     title: "Building It In-House"
     pros_title: "Pros"

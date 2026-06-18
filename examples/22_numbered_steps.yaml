@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "How It Works"
-    subtitle: "From sign-up to value"
-
   - component: numbered-steps
     title: "Three Steps to Onboard"
     steps:

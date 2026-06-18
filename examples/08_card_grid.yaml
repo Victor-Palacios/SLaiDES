@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Solution Suite"
-    subtitle: "Four pillars of the platform"
-
   - component: card-grid
     title: "What We Offer"
     cards:

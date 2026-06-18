@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Key Terms"
-    subtitle: "Speaking the same language"
-
   - component: definition
     term: "Net Revenue Retention"
     definition: "The percentage of recurring revenue retained from existing customers over a period, including expansion and after churn."

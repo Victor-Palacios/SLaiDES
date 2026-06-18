@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_1",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Vendor Shortlist",
-          "lines": [
-            {
-              "text": "Vendor Shortlist",
-              "width_emu": 5885036,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#1B4F8A"
-        },
-        {
-          "node_id": "subtitle_2",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Capability fit by option",
-          "lines": [
-            {
-              "text": "Capability fit by option",
-              "width_emu": 4224387,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_3",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "comparison-matrix",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_4",
+          "node_id": "title_488",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "cm_corner_5",
+          "node_id": "cm_corner_489",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -126,7 +44,7 @@
           "fill_color": "#1B4F8A"
         },
         {
-          "node_id": "cm_corner_text_6",
+          "node_id": "cm_corner_text_490",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -151,7 +69,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "cm_head_box_7",
+          "node_id": "cm_head_box_491",
           "node_type": "box",
           "rect": {
             "x": 3614928,
@@ -163,7 +81,7 @@
           "fill_color": "#E84545"
         },
         {
-          "node_id": "cm_head_8",
+          "node_id": "cm_head_492",
           "node_type": "text",
           "rect": {
             "x": 3614928,
@@ -188,7 +106,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "cm_head_box_9",
+          "node_id": "cm_head_box_493",
           "node_type": "box",
           "rect": {
             "x": 6321552,
@@ -200,7 +118,7 @@
           "fill_color": "#E84545"
         },
         {
-          "node_id": "cm_head_10",
+          "node_id": "cm_head_494",
           "node_type": "text",
           "rect": {
             "x": 6321552,
@@ -225,7 +143,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "cm_head_box_11",
+          "node_id": "cm_head_box_495",
           "node_type": "box",
           "rect": {
             "x": 9028176,
@@ -237,7 +155,7 @@
           "fill_color": "#E84545"
         },
         {
-          "node_id": "cm_head_12",
+          "node_id": "cm_head_496",
           "node_type": "text",
           "rect": {
             "x": 9028176,
@@ -262,7 +180,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "cm_crit_box_13",
+          "node_id": "cm_crit_box_497",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -274,7 +192,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "cm_crit_14",
+          "node_id": "cm_crit_498",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -299,7 +217,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "cm_cell_box_15",
+          "node_id": "cm_cell_box_499",
           "node_type": "box",
           "rect": {
             "x": 3614928,
@@ -311,7 +229,7 @@
           "fill_color": "#F4F6F8"
         },
         {
-          "node_id": "cm_cell_16",
+          "node_id": "cm_cell_500",
           "node_type": "text",
           "rect": {
             "x": 3614928,
@@ -335,7 +253,7 @@
           "group_id": "cm_cell_0_0"
         },
         {
-          "node_id": "cm_cell_box_17",
+          "node_id": "cm_cell_box_501",
           "node_type": "box",
           "rect": {
             "x": 6321552,
@@ -347,7 +265,7 @@
           "fill_color": "#F4F6F8"
         },
         {
-          "node_id": "cm_cell_18",
+          "node_id": "cm_cell_502",
           "node_type": "text",
           "rect": {
             "x": 6321552,
@@ -371,7 +289,7 @@
           "group_id": "cm_cell_0_1"
         },
         {
-          "node_id": "cm_cell_box_19",
+          "node_id": "cm_cell_box_503",
           "node_type": "box",
           "rect": {
             "x": 9028176,
@@ -383,7 +301,7 @@
           "fill_color": "#F4F6F8"
         },
         {
-          "node_id": "cm_cell_20",
+          "node_id": "cm_cell_504",
           "node_type": "text",
           "rect": {
             "x": 9028176,
@@ -407,7 +325,7 @@
           "group_id": "cm_cell_0_2"
         },
         {
-          "node_id": "cm_crit_box_21",
+          "node_id": "cm_crit_box_505",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -419,7 +337,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "cm_crit_22",
+          "node_id": "cm_crit_506",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -444,7 +362,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "cm_cell_box_23",
+          "node_id": "cm_cell_box_507",
           "node_type": "box",
           "rect": {
             "x": 3614928,
@@ -456,7 +374,7 @@
           "fill_color": "#F4F6F8"
         },
         {
-          "node_id": "cm_cell_24",
+          "node_id": "cm_cell_508",
           "node_type": "text",
           "rect": {
             "x": 3614928,
@@ -480,7 +398,7 @@
           "group_id": "cm_cell_1_0"
         },
         {
-          "node_id": "cm_cell_box_25",
+          "node_id": "cm_cell_box_509",
           "node_type": "box",
           "rect": {
             "x": 6321552,
@@ -492,7 +410,7 @@
           "fill_color": "#F4F6F8"
         },
         {
-          "node_id": "cm_cell_26",
+          "node_id": "cm_cell_510",
           "node_type": "text",
           "rect": {
             "x": 6321552,
@@ -516,7 +434,7 @@
           "group_id": "cm_cell_1_1"
         },
         {
-          "node_id": "cm_cell_box_27",
+          "node_id": "cm_cell_box_511",
           "node_type": "box",
           "rect": {
             "x": 9028176,
@@ -528,7 +446,7 @@
           "fill_color": "#F4F6F8"
         },
         {
-          "node_id": "cm_cell_28",
+          "node_id": "cm_cell_512",
           "node_type": "text",
           "rect": {
             "x": 9028176,
@@ -552,7 +470,7 @@
           "group_id": "cm_cell_1_2"
         },
         {
-          "node_id": "cm_crit_box_29",
+          "node_id": "cm_crit_box_513",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -564,7 +482,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "cm_crit_30",
+          "node_id": "cm_crit_514",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -589,7 +507,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "cm_cell_box_31",
+          "node_id": "cm_cell_box_515",
           "node_type": "box",
           "rect": {
             "x": 3614928,
@@ -601,7 +519,7 @@
           "fill_color": "#F4F6F8"
         },
         {
-          "node_id": "cm_cell_32",
+          "node_id": "cm_cell_516",
           "node_type": "text",
           "rect": {
             "x": 3614928,
@@ -625,7 +543,7 @@
           "group_id": "cm_cell_2_0"
         },
         {
-          "node_id": "cm_cell_box_33",
+          "node_id": "cm_cell_box_517",
           "node_type": "box",
           "rect": {
             "x": 6321552,
@@ -637,7 +555,7 @@
           "fill_color": "#F4F6F8"
         },
         {
-          "node_id": "cm_cell_34",
+          "node_id": "cm_cell_518",
           "node_type": "text",
           "rect": {
             "x": 6321552,
@@ -661,7 +579,7 @@
           "group_id": "cm_cell_2_1"
         },
         {
-          "node_id": "cm_cell_box_35",
+          "node_id": "cm_cell_box_519",
           "node_type": "box",
           "rect": {
             "x": 9028176,
@@ -673,7 +591,7 @@
           "fill_color": "#F4F6F8"
         },
         {
-          "node_id": "cm_cell_36",
+          "node_id": "cm_cell_520",
           "node_type": "text",
           "rect": {
             "x": 9028176,
@@ -699,7 +617,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_37",
+          "node_id": "chrome_pagenum_521",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -707,10 +625,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

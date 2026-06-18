@@ -10,9 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Product Roadmap 2025"
-
   - component: timeline
     title: "Key Milestones"
     events:

@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Market Analysis"
-    subtitle: "Competitive Landscape 2025"
-
   - component: two-column
     title: "Strengths vs Weaknesses"
     left:

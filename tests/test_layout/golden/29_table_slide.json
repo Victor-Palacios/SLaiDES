@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_61",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Plan Comparison",
-          "lines": [
-            {
-              "text": "Plan Comparison",
-              "width_emu": 6266408,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#1B4F8A"
-        },
-        {
-          "node_id": "subtitle_62",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "What each tier includes",
-          "lines": [
-            {
-              "text": "What each tier includes",
-              "width_emu": 4488148,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_63",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_64",
+          "node_id": "title_366",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "th_65",
+          "node_id": "th_367",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -138,7 +56,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "th_66",
+          "node_id": "th_368",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -162,7 +80,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "th_67",
+          "node_id": "th_369",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -186,7 +104,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "table_rule_68",
+          "node_id": "table_rule_370",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -197,7 +115,7 @@
           "fill_color": "#C0392B"
         },
         {
-          "node_id": "td_69",
+          "node_id": "td_371",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -220,7 +138,7 @@
           "italic": false
         },
         {
-          "node_id": "td_70",
+          "node_id": "td_372",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -243,7 +161,7 @@
           "italic": false
         },
         {
-          "node_id": "td_71",
+          "node_id": "td_373",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -266,7 +184,7 @@
           "italic": false
         },
         {
-          "node_id": "td_72",
+          "node_id": "td_374",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -289,7 +207,7 @@
           "italic": false
         },
         {
-          "node_id": "td_73",
+          "node_id": "td_375",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -312,7 +230,7 @@
           "italic": false
         },
         {
-          "node_id": "td_74",
+          "node_id": "td_376",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -335,7 +253,7 @@
           "italic": false
         },
         {
-          "node_id": "td_75",
+          "node_id": "td_377",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -358,7 +276,7 @@
           "italic": false
         },
         {
-          "node_id": "td_76",
+          "node_id": "td_378",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -381,7 +299,7 @@
           "italic": false
         },
         {
-          "node_id": "td_77",
+          "node_id": "td_379",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -404,7 +322,7 @@
           "italic": false
         },
         {
-          "node_id": "td_78",
+          "node_id": "td_380",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -427,7 +345,7 @@
           "italic": false
         },
         {
-          "node_id": "td_79",
+          "node_id": "td_381",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -450,7 +368,7 @@
           "italic": false
         },
         {
-          "node_id": "td_80",
+          "node_id": "td_382",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -475,7 +393,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_81",
+          "node_id": "chrome_pagenum_383",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -483,10 +401,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

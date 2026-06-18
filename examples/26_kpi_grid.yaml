@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Quarter in Review"
-    subtitle: "The dashboard at a glance"
-
   - component: kpi-grid
     title: "Key Metrics This Quarter"
     kpis:

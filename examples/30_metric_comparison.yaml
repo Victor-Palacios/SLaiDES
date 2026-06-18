@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Year-over-Year"
-    subtitle: "How the headline numbers moved"
-
   - component: metric-comparison
     title: "Performance vs Last Year"
     metrics:

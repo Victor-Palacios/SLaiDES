@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Market Position"
-    subtitle: "An honest internal read"
-
   - component: swot
     title: "SWOT Analysis"
     strengths:

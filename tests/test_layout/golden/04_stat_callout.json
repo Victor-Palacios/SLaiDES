@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_27",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "2025 Impact Report",
-          "lines": [
-            {
-              "text": "2025 Impact Report",
-              "width_emu": 7029896,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#1A237E"
-        },
-        {
-          "node_id": "subtitle_28",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Numbers that define our year",
-          "lines": [
-            {
-              "text": "Numbers that define our year",
-              "width_emu": 5592316,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_29",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "stat-callout",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_30",
+          "node_id": "title_22",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#1A237E"
         },
         {
-          "node_id": "stat_value_31",
+          "node_id": "stat_value_23",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -138,7 +56,7 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_32",
+          "node_id": "stat_label_24",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -161,7 +79,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_33",
+          "node_id": "stat_sub_25",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -185,7 +103,7 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_34",
+          "node_id": "stat_value_26",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -209,7 +127,7 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_35",
+          "node_id": "stat_label_27",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -232,7 +150,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_36",
+          "node_id": "stat_value_28",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -256,7 +174,7 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_37",
+          "node_id": "stat_label_29",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -279,7 +197,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_38",
+          "node_id": "stat_sub_30",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -305,7 +223,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_39",
+          "node_id": "chrome_pagenum_31",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -313,10 +231,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

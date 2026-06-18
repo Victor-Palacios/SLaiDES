@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_24",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Revenue Trajectory",
-          "lines": [
-            {
-              "text": "Revenue Trajectory",
-              "width_emu": 7030641,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#243A5E"
-        },
-        {
-          "node_id": "subtitle_25",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Bookings by quarter",
-          "lines": [
-            {
-              "text": "Bookings by quarter",
-              "width_emu": 3840448,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_26",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "chart-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_27",
+          "node_id": "title_335",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#243A5E"
         },
         {
-          "node_id": "chart_val_28",
+          "node_id": "chart_val_336",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -140,7 +58,7 @@
           "text_color": "#E07A3F"
         },
         {
-          "node_id": "chart_barbox_29",
+          "node_id": "chart_barbox_337",
           "node_type": "box",
           "rect": {
             "x": 849249,
@@ -152,7 +70,7 @@
           "fill_color": "#E07A3F"
         },
         {
-          "node_id": "chart_cat_30",
+          "node_id": "chart_cat_338",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -178,7 +96,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "chart_val_31",
+          "node_id": "chart_val_339",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -204,7 +122,7 @@
           "text_color": "#E07A3F"
         },
         {
-          "node_id": "chart_barbox_32",
+          "node_id": "chart_barbox_340",
           "node_type": "box",
           "rect": {
             "x": 3737229,
@@ -216,7 +134,7 @@
           "fill_color": "#E07A3F"
         },
         {
-          "node_id": "chart_cat_33",
+          "node_id": "chart_cat_341",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -242,7 +160,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "chart_val_34",
+          "node_id": "chart_val_342",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -268,7 +186,7 @@
           "text_color": "#E07A3F"
         },
         {
-          "node_id": "chart_barbox_35",
+          "node_id": "chart_barbox_343",
           "node_type": "box",
           "rect": {
             "x": 6625209,
@@ -280,7 +198,7 @@
           "fill_color": "#E07A3F"
         },
         {
-          "node_id": "chart_cat_36",
+          "node_id": "chart_cat_344",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -306,7 +224,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "chart_val_37",
+          "node_id": "chart_val_345",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -332,7 +250,7 @@
           "text_color": "#E07A3F"
         },
         {
-          "node_id": "chart_barbox_38",
+          "node_id": "chart_barbox_346",
           "node_type": "box",
           "rect": {
             "x": 9513189,
@@ -344,7 +262,7 @@
           "fill_color": "#E07A3F"
         },
         {
-          "node_id": "chart_cat_39",
+          "node_id": "chart_cat_347",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -370,7 +288,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "caption_40",
+          "node_id": "caption_348",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -397,7 +315,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_41",
+          "node_id": "chrome_pagenum_349",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -405,10 +323,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

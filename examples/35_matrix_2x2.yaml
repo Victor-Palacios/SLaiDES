@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Priority Matrix"
-    subtitle: "Where to focus effort"
-
   - component: matrix-2x2
     title: "Effort vs Impact"
     x_label: "Effort →"

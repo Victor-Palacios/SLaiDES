@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Launch Readiness"
-    subtitle: "Where we stand"
-
   - component: checklist
     title: "Go-Live Checklist"
     items:

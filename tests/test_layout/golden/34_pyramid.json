@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_58",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Strategic Layers",
-          "lines": [
-            {
-              "text": "Strategic Layers",
-              "width_emu": 5929685,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0B3954"
-        },
-        {
-          "node_id": "subtitle_59",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "From mission to daily work",
-          "lines": [
-            {
-              "text": "From mission to daily work",
-              "width_emu": 5110758,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_60",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "pyramid",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_61",
+          "node_id": "title_446",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#0B3954"
         },
         {
-          "node_id": "pyr_bar_62",
+          "node_id": "pyr_bar_447",
           "node_type": "box",
           "rect": {
             "x": 3840480,
@@ -126,7 +44,7 @@
           "fill_color": "#0B3954"
         },
         {
-          "node_id": "pyr_label_63",
+          "node_id": "pyr_label_448",
           "node_type": "text",
           "rect": {
             "x": 3840480,
@@ -151,7 +69,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "pyr_bar_64",
+          "node_id": "pyr_bar_449",
           "node_type": "box",
           "rect": {
             "x": 2712720,
@@ -163,7 +81,7 @@
           "fill_color": "#BF6B63"
         },
         {
-          "node_id": "pyr_label_65",
+          "node_id": "pyr_label_450",
           "node_type": "text",
           "rect": {
             "x": 2712720,
@@ -188,7 +106,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "pyr_bar_66",
+          "node_id": "pyr_bar_451",
           "node_type": "box",
           "rect": {
             "x": 1584960,
@@ -200,7 +118,7 @@
           "fill_color": "#0B3954"
         },
         {
-          "node_id": "pyr_label_67",
+          "node_id": "pyr_label_452",
           "node_type": "text",
           "rect": {
             "x": 1584960,
@@ -225,7 +143,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "pyr_bar_68",
+          "node_id": "pyr_bar_453",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -237,7 +155,7 @@
           "fill_color": "#BF6B63"
         },
         {
-          "node_id": "pyr_label_69",
+          "node_id": "pyr_label_454",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -264,7 +182,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_70",
+          "node_id": "chrome_pagenum_455",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -272,10 +190,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

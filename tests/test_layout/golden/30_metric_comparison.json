@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_82",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Year-over-Year",
-          "lines": [
-            {
-              "text": "Year-over-Year",
-              "width_emu": 5337721,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0D3B66"
-        },
-        {
-          "node_id": "subtitle_83",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "How the headline numbers moved",
-          "lines": [
-            {
-              "text": "How the headline numbers moved",
-              "width_emu": 6552692,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_84",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "metric-comparison",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_85",
+          "node_id": "title_384",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "metric_val_86",
+          "node_id": "metric_val_385",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -138,7 +56,7 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_label_87",
+          "node_id": "metric_label_386",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -167,7 +85,7 @@
           "italic": false
         },
         {
-          "node_id": "metric_chip_88",
+          "node_id": "metric_chip_387",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -179,7 +97,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_89",
+          "node_id": "metric_delta_388",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -204,7 +122,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "metric_val_90",
+          "node_id": "metric_val_389",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -228,7 +146,7 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_label_91",
+          "node_id": "metric_label_390",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -251,7 +169,7 @@
           "italic": false
         },
         {
-          "node_id": "metric_chip_92",
+          "node_id": "metric_chip_391",
           "node_type": "box",
           "rect": {
             "x": 4307840,
@@ -263,7 +181,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_93",
+          "node_id": "metric_delta_392",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -288,7 +206,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "metric_val_94",
+          "node_id": "metric_val_393",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -312,7 +230,7 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_label_95",
+          "node_id": "metric_label_394",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -341,7 +259,7 @@
           "italic": false
         },
         {
-          "node_id": "metric_chip_96",
+          "node_id": "metric_chip_395",
           "node_type": "box",
           "rect": {
             "x": 8158480,
@@ -353,7 +271,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_97",
+          "node_id": "metric_delta_396",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -380,7 +298,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_98",
+          "node_id": "chrome_pagenum_397",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -388,10 +306,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

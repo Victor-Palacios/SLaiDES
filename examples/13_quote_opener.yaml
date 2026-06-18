@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Designing for Trust"
-    subtitle: "A product philosophy"
-
   - component: quote-opener
     quote: "The best interface is the one that disappears the moment it earns your confidence."
     attribution: "Head of Product Design"

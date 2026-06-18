@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_260",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Key Terms",
-          "lines": [
-            {
-              "text": "Key Terms",
-              "width_emu": 4414614,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#1A237E"
-        },
-        {
-          "node_id": "subtitle_261",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Speaking the same language",
-          "lines": [
-            {
-              "text": "Speaking the same language",
-              "width_emu": 6302846,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_262",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 129282,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "definition",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_265",
+          "node_id": "accent_bar_225",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -101,7 +19,7 @@
           "fill_color": "#3949AB"
         },
         {
-          "node_id": "term_263",
+          "node_id": "term_223",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -125,7 +43,7 @@
           "text_color": "#3949AB"
         },
         {
-          "node_id": "def_264",
+          "node_id": "def_224",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -162,7 +80,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_266",
+          "node_id": "chrome_pagenum_226",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -170,10 +88,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 129282,
               "height_emu": 243840,
               "overflows": false

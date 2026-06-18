@@ -60,10 +60,16 @@ ideation pass from repo state (Phase 9 complete, Phase 10 in progress, research 
 
 ### Ideas to consider
 
-- [ ] **(proposed)** Document the per-deck `title-slide` cover as an intentional convention —
+- [ ] **(rejected)** Document the per-deck `title-slide` cover as an intentional convention —
   a short note in `NOTES.md`/`docs/` stating that pairing a reusable cover with each
   component example is deliberate (golden + verify traceability), so future PRs don't
   re-propose removing it (as #6 did). _(effort: S; area: docs/conventions)_
+  → **Rejected 2026-06-18 (operator): the opposite was decided.** The cover was never a
+  real convention (undocumented since Phase 2; nothing depends on it) and repeating it on 39
+  examples is redundant against the ethos. Covers were STRIPPED from the 39 single-component
+  specimens (each is now a single unique-layout slide); the convention is now documented the
+  other way in `NIGHTLY_PROMPT.md`/`docs/SLIDE_DESIGNS.md`/`SKILL.md`. PR #6's "one-page
+  specimen" instinct was right (its binary-PDF execution was not).
 - [ ] **(proposed)** Generated example inventory instead of hand-maintained lists — a tiny
   `scripts/` generator (mirroring `render_board.py`) that emits the example→slide-count /
   component index, with a sync test. Kills the exact staleness failure mode PR #6

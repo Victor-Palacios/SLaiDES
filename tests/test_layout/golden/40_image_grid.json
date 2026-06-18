@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_62",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Product Moments",
-          "lines": [
-            {
-              "text": "Product Moments",
-              "width_emu": 6434956,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#1B4F8A"
-        },
-        {
-          "node_id": "subtitle_63",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Four scenes from the journey",
-          "lines": [
-            {
-              "text": "Four scenes from the journey",
-              "width_emu": 5615930,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_64",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "image-grid",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_65",
+          "node_id": "title_540",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "grid_img_66",
+          "node_id": "grid_img_541",
           "node_type": "image",
           "rect": {
             "x": 457200,
@@ -127,7 +45,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "grid_cap_67",
+          "node_id": "grid_cap_542",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -153,7 +71,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "grid_img_68",
+          "node_id": "grid_img_543",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -166,7 +84,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "grid_cap_69",
+          "node_id": "grid_cap_544",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -192,7 +110,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "grid_img_70",
+          "node_id": "grid_img_545",
           "node_type": "image",
           "rect": {
             "x": 457200,
@@ -205,7 +123,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "grid_cap_71",
+          "node_id": "grid_cap_546",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -231,7 +149,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "grid_img_72",
+          "node_id": "grid_img_547",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -244,7 +162,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "grid_cap_73",
+          "node_id": "grid_cap_548",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -272,7 +190,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_74",
+          "node_id": "chrome_pagenum_549",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -280,10 +198,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

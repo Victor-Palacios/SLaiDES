@@ -10,9 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Launch Team"
-    subtitle: "Core ownership model"
   - component: team-grid
     title: "Team Leads"
     members:

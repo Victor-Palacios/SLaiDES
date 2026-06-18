@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_239",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Impact in One Number",
-          "lines": [
-            {
-              "text": "Impact in One Number",
-              "width_emu": 8129364,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0D47A1"
-        },
-        {
-          "node_id": "subtitle_240",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "2026 Mid-Year Snapshot",
-          "lines": [
-            {
-              "text": "2026 Mid-Year Snapshot",
-              "width_emu": 4737150,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_241",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "big-number",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_245",
+          "node_id": "accent_bar_214",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -101,7 +19,7 @@
           "fill_color": "#00ACC1"
         },
         {
-          "node_id": "value_242",
+          "node_id": "value_211",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -125,7 +43,7 @@
           "text_color": "#00ACC1"
         },
         {
-          "node_id": "label_243",
+          "node_id": "label_212",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -148,7 +66,7 @@
           "italic": false
         },
         {
-          "node_id": "context_244",
+          "node_id": "context_213",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -174,7 +92,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_246",
+          "node_id": "chrome_pagenum_215",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -182,10 +100,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

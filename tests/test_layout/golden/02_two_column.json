@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_3",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Market Analysis",
-          "lines": [
-            {
-              "text": "Market Analysis",
-              "width_emu": 6853535,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#2C3E50"
-        },
-        {
-          "node_id": "subtitle_4",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Competitive Landscape 2025",
-          "lines": [
-            {
-              "text": "Competitive Landscape 2025",
-              "width_emu": 6318870,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_5",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 129282,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "two-column",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_6",
+          "node_id": "title_3",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#2C3E50"
         },
         {
-          "node_id": "left_col_text_7",
+          "node_id": "left_col_text_4",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -143,7 +61,7 @@
           "italic": false
         },
         {
-          "node_id": "left_col_text_8",
+          "node_id": "left_col_text_5",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -172,7 +90,7 @@
           "italic": false
         },
         {
-          "node_id": "left_col_text_9",
+          "node_id": "left_col_text_6",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -201,7 +119,7 @@
           "italic": false
         },
         {
-          "node_id": "right_col_text_10",
+          "node_id": "right_col_text_7",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -224,7 +142,7 @@
           "italic": false
         },
         {
-          "node_id": "right_col_text_11",
+          "node_id": "right_col_text_8",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -247,7 +165,7 @@
           "italic": false
         },
         {
-          "node_id": "right_col_text_12",
+          "node_id": "right_col_text_9",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -272,7 +190,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_13",
+          "node_id": "chrome_pagenum_10",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -280,10 +198,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 129282,
               "height_emu": 243840,
               "overflows": false

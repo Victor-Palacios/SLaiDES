@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Why It Matters"
-    subtitle: "The case in five points"
-
   - component: bullet-list
     title: "What Changed This Quarter"
     items:

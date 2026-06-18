@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_216",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Quarterly Business Review",
-          "lines": [
-            {
-              "text": "Quarterly Business Review",
-              "width_emu": 9825633,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#1B3A6B"
-        },
-        {
-          "node_id": "subtitle_217",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Operations & Growth",
-          "lines": [
-            {
-              "text": "Operations & Growth",
-              "width_emu": 4031890,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_218",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "agenda",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_219",
+          "node_id": "title_194",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -113,7 +31,7 @@
           "italic": false
         },
         {
-          "node_id": "agenda_rule_220",
+          "node_id": "agenda_rule_195",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -124,7 +42,7 @@
           "fill_color": "#E8743B"
         },
         {
-          "node_id": "ag_num_221",
+          "node_id": "ag_num_196",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -149,7 +67,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_222",
+          "node_id": "ag_item_197",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -173,7 +91,7 @@
           "group_id": "agenda_0"
         },
         {
-          "node_id": "ag_num_223",
+          "node_id": "ag_num_198",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -198,7 +116,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_224",
+          "node_id": "ag_item_199",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -222,7 +140,7 @@
           "group_id": "agenda_1"
         },
         {
-          "node_id": "ag_num_225",
+          "node_id": "ag_num_200",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -247,7 +165,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_226",
+          "node_id": "ag_item_201",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -271,7 +189,7 @@
           "group_id": "agenda_2"
         },
         {
-          "node_id": "ag_num_227",
+          "node_id": "ag_num_202",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -296,7 +214,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_228",
+          "node_id": "ag_item_203",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -320,7 +238,7 @@
           "group_id": "agenda_3"
         },
         {
-          "node_id": "ag_num_229",
+          "node_id": "ag_num_204",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -345,7 +263,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "ag_item_230",
+          "node_id": "ag_item_205",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -371,7 +289,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_231",
+          "node_id": "chrome_pagenum_206",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -379,10 +297,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

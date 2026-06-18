@@ -10,9 +10,5 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Our Position"
-    subtitle: "One thing to remember"
-
   - component: statement
     text: "Speed without trust is just churn in a faster wrapper."

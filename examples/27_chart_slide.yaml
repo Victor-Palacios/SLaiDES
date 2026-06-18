@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Revenue Trajectory"
-    subtitle: "Bookings by quarter"
-
   - component: chart-slide
     title: "Quarterly Bookings"
     chart:

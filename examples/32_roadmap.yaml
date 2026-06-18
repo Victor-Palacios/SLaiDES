@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Product Roadmap"
-    subtitle: "Where we are headed this year"
-
   - component: roadmap
     title: "2026 Plan"
     phases:

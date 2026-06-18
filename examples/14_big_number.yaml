@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Impact in One Number"
-    subtitle: "2026 Mid-Year Snapshot"
-
   - component: big-number
     value: "3.2M"
     label: "Active customers worldwide"

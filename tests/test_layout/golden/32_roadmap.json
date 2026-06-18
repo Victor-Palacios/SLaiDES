@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_22",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Product Roadmap",
-          "lines": [
-            {
-              "text": "Product Roadmap",
-              "width_emu": 6562204,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#1B264F"
-        },
-        {
-          "node_id": "subtitle_23",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Where we are headed this year",
-          "lines": [
-            {
-              "text": "Where we are headed this year",
-              "width_emu": 6000502,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_24",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "roadmap",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_25",
+          "node_id": "title_416",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#1B264F"
         },
         {
-          "node_id": "rm_head_26",
+          "node_id": "rm_head_417",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -126,7 +44,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm_title_27",
+          "node_id": "rm_title_418",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -151,7 +69,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "rm0_mark_28",
+          "node_id": "rm0_mark_419",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -163,7 +81,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm0_item_29",
+          "node_id": "rm0_item_420",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -187,7 +105,7 @@
           "group_id": "rm0_0"
         },
         {
-          "node_id": "rm0_mark_30",
+          "node_id": "rm0_mark_421",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -199,7 +117,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm0_item_31",
+          "node_id": "rm0_item_422",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -223,7 +141,7 @@
           "group_id": "rm0_1"
         },
         {
-          "node_id": "rm_head_32",
+          "node_id": "rm_head_423",
           "node_type": "box",
           "rect": {
             "x": 4307840,
@@ -235,7 +153,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm_title_33",
+          "node_id": "rm_title_424",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -260,7 +178,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "rm1_mark_34",
+          "node_id": "rm1_mark_425",
           "node_type": "box",
           "rect": {
             "x": 4307840,
@@ -272,7 +190,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm1_item_35",
+          "node_id": "rm1_item_426",
           "node_type": "text",
           "rect": {
             "x": 4673600,
@@ -296,7 +214,7 @@
           "group_id": "rm1_0"
         },
         {
-          "node_id": "rm1_mark_36",
+          "node_id": "rm1_mark_427",
           "node_type": "box",
           "rect": {
             "x": 4307840,
@@ -308,7 +226,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm1_item_37",
+          "node_id": "rm1_item_428",
           "node_type": "text",
           "rect": {
             "x": 4673600,
@@ -332,7 +250,7 @@
           "group_id": "rm1_1"
         },
         {
-          "node_id": "rm_head_38",
+          "node_id": "rm_head_429",
           "node_type": "box",
           "rect": {
             "x": 8158480,
@@ -344,7 +262,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm_title_39",
+          "node_id": "rm_title_430",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -369,7 +287,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "rm2_mark_40",
+          "node_id": "rm2_mark_431",
           "node_type": "box",
           "rect": {
             "x": 8158480,
@@ -381,7 +299,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm2_item_41",
+          "node_id": "rm2_item_432",
           "node_type": "text",
           "rect": {
             "x": 8524240,
@@ -405,7 +323,7 @@
           "group_id": "rm2_0"
         },
         {
-          "node_id": "rm2_mark_42",
+          "node_id": "rm2_mark_433",
           "node_type": "box",
           "rect": {
             "x": 8158480,
@@ -417,7 +335,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm2_item_43",
+          "node_id": "rm2_item_434",
           "node_type": "text",
           "rect": {
             "x": 8524240,
@@ -443,7 +361,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_44",
+          "node_id": "chrome_pagenum_435",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -451,10 +369,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

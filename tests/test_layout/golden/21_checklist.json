@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_300",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Launch Readiness",
-          "lines": [
-            {
-              "text": "Launch Readiness",
-              "width_emu": 7734970,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0B3D2E"
-        },
-        {
-          "node_id": "subtitle_301",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Where we stand",
-          "lines": [
-            {
-              "text": "Where we stand",
-              "width_emu": 3499941,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_302",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 129282,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "checklist",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_303",
+          "node_id": "title_251",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -113,7 +31,7 @@
           "italic": false
         },
         {
-          "node_id": "check_box_304",
+          "node_id": "check_box_252",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -125,7 +43,7 @@
           "fill_color": "#1FA463"
         },
         {
-          "node_id": "check_item_305",
+          "node_id": "check_item_253",
           "node_type": "text",
           "rect": {
             "x": 1005840,
@@ -149,7 +67,7 @@
           "group_id": "check_0"
         },
         {
-          "node_id": "check_box_306",
+          "node_id": "check_box_254",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -161,7 +79,7 @@
           "fill_color": "#1FA463"
         },
         {
-          "node_id": "check_item_307",
+          "node_id": "check_item_255",
           "node_type": "text",
           "rect": {
             "x": 1005840,
@@ -185,7 +103,7 @@
           "group_id": "check_1"
         },
         {
-          "node_id": "check_box_308",
+          "node_id": "check_box_256",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -197,7 +115,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "check_item_309",
+          "node_id": "check_item_257",
           "node_type": "text",
           "rect": {
             "x": 1005840,
@@ -221,7 +139,7 @@
           "group_id": "check_2"
         },
         {
-          "node_id": "check_box_310",
+          "node_id": "check_box_258",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -233,7 +151,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "check_item_311",
+          "node_id": "check_item_259",
           "node_type": "text",
           "rect": {
             "x": 1005840,
@@ -259,7 +177,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_312",
+          "node_id": "chrome_pagenum_260",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -267,10 +185,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 129282,
               "height_emu": 243840,
               "overflows": false

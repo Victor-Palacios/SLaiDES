@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Strategy Review"
-    subtitle: "Fiscal Year 2026"
-
   - component: section-divider
     number: "01"
     title: "Where We Stand Today"

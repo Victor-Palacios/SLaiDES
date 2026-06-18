@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "2025 Impact Report"
-    subtitle: "Numbers that define our year"
-
   - component: stat-callout
     title: "By the Numbers"
     stats:

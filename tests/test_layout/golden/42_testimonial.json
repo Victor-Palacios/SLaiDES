@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_96",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Customer Proof",
-          "lines": [
-            {
-              "text": "Customer Proof",
-              "width_emu": 5757788,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#14213D"
-        },
-        {
-          "node_id": "subtitle_97",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "One voice from the field",
-          "lines": [
-            {
-              "text": "One voice from the field",
-              "width_emu": 4560044,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_98",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "testimonial",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "test_bar_99",
+          "node_id": "test_bar_568",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -102,7 +20,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "test_quote_100",
+          "node_id": "test_quote_569",
           "node_type": "text",
           "rect": {
             "x": 777240,
@@ -138,7 +56,7 @@
           "group_id": "testimonial"
         },
         {
-          "node_id": "test_name_101",
+          "node_id": "test_name_570",
           "node_type": "text",
           "rect": {
             "x": 777240,
@@ -163,7 +81,7 @@
           "text_color": "#14213D"
         },
         {
-          "node_id": "test_role_102",
+          "node_id": "test_role_571",
           "node_type": "text",
           "rect": {
             "x": 777240,
@@ -191,7 +109,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_103",
+          "node_id": "chrome_pagenum_572",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -199,10 +117,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

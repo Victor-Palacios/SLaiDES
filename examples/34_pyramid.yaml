@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Strategic Layers"
-    subtitle: "From mission to daily work"
-
   - component: pyramid
     title: "Hierarchy of Needs"
     layers:

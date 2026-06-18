@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Quarterly Business Review"
-    subtitle: "Operations & Growth"
-
   - component: agenda
     title: "What We Will Cover"
     items:

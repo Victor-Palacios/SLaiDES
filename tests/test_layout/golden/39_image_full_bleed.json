@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_55",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Field Expansion",
-          "lines": [
-            {
-              "text": "Field Expansion",
-              "width_emu": 5842992,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0B132B"
-        },
-        {
-          "node_id": "subtitle_56",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "A visual opening",
-          "lines": [
-            {
-              "text": "A visual opening",
-              "width_emu": 3144887,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_57",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "image-full-bleed",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "full_image_58",
+          "node_id": "full_image_536",
           "node_type": "image",
           "rect": {
             "x": 457200,
@@ -103,7 +21,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "overlay_box_59",
+          "node_id": "overlay_box_537",
           "node_type": "box",
           "rect": {
             "x": 685800,
@@ -115,7 +33,7 @@
           "fill_color": "#0B132B"
         },
         {
-          "node_id": "overlay_title_60",
+          "node_id": "overlay_title_538",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -148,7 +66,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_61",
+          "node_id": "chrome_pagenum_539",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -156,10 +74,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

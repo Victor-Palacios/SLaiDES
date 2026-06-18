@@ -136,7 +136,9 @@ A `chart` slot is `{type: chart, chart_type: bar, labels[], series[] = {name, va
 Bar charts render as measured colored rectangles + labels (deterministic, lint-provable);
 other `chart_type`s render as a labelled placeholder region.
 
-Minimal examples of each live in `examples/01..42_*.yaml`; copy and adapt.
+Minimal examples of each live in `examples/01..42_*.yaml` — one single-slide specimen per
+component (no cover slide); copy and adapt. The `09_full_deck`, `10_all_components`,
+`agents-in-ai`, and `demo-5` decks are multi-slide examples of composing a full presentation.
 
 ## Lint error codes and how to fix them
 

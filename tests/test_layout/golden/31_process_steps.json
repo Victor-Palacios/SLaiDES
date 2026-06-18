@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_1",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "How It Works",
-          "lines": [
-            {
-              "text": "How It Works",
-              "width_emu": 4812357,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0D3B66"
-        },
-        {
-          "node_id": "subtitle_2",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "From signup to first value",
-          "lines": [
-            {
-              "text": "From signup to first value",
-              "width_emu": 4847630,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_3",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "process-steps",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_4",
+          "node_id": "title_398",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_chip_5",
+          "node_id": "ps_chip_399",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -126,7 +44,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "ps_num_6",
+          "node_id": "ps_num_400",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -151,7 +69,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "ps_label_7",
+          "node_id": "ps_label_401",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -176,7 +94,7 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_body_8",
+          "node_id": "ps_body_402",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -206,7 +124,7 @@
           "group_id": "pstep_0"
         },
         {
-          "node_id": "ps_chip_9",
+          "node_id": "ps_chip_403",
           "node_type": "box",
           "rect": {
             "x": 3345180,
@@ -218,7 +136,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "ps_num_10",
+          "node_id": "ps_num_404",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -243,7 +161,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "ps_label_11",
+          "node_id": "ps_label_405",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -268,7 +186,7 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_body_12",
+          "node_id": "ps_body_406",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -298,7 +216,7 @@
           "group_id": "pstep_1"
         },
         {
-          "node_id": "ps_chip_13",
+          "node_id": "ps_chip_407",
           "node_type": "box",
           "rect": {
             "x": 6233160,
@@ -310,7 +228,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "ps_num_14",
+          "node_id": "ps_num_408",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -335,7 +253,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "ps_label_15",
+          "node_id": "ps_label_409",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -360,7 +278,7 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_body_16",
+          "node_id": "ps_body_410",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -390,7 +308,7 @@
           "group_id": "pstep_2"
         },
         {
-          "node_id": "ps_chip_17",
+          "node_id": "ps_chip_411",
           "node_type": "box",
           "rect": {
             "x": 9121140,
@@ -402,7 +320,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "ps_num_18",
+          "node_id": "ps_num_412",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -427,7 +345,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "ps_label_19",
+          "node_id": "ps_label_413",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -452,7 +370,7 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_body_20",
+          "node_id": "ps_body_414",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -484,7 +402,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_21",
+          "node_id": "chrome_pagenum_415",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -492,10 +410,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

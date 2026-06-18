@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_45",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Conversion Funnel",
-          "lines": [
-            {
-              "text": "Conversion Funnel",
-              "width_emu": 6900788,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#2D3142"
-        },
-        {
-          "node_id": "subtitle_46",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Where prospects drop off",
-          "lines": [
-            {
-              "text": "Where prospects drop off",
-              "width_emu": 4840250,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_47",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "funnel",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_48",
+          "node_id": "title_436",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#2D3142"
         },
         {
-          "node_id": "fn_bar_49",
+          "node_id": "fn_bar_437",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -126,7 +44,7 @@
           "fill_color": "#4F8A8B"
         },
         {
-          "node_id": "fn_label_50",
+          "node_id": "fn_label_438",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -151,7 +69,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "fn_bar_51",
+          "node_id": "fn_bar_439",
           "node_type": "box",
           "rect": {
             "x": 1490980,
@@ -163,7 +81,7 @@
           "fill_color": "#4F8A8B"
         },
         {
-          "node_id": "fn_label_52",
+          "node_id": "fn_label_440",
           "node_type": "text",
           "rect": {
             "x": 1490980,
@@ -188,7 +106,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "fn_bar_53",
+          "node_id": "fn_bar_441",
           "node_type": "box",
           "rect": {
             "x": 2524760,
@@ -200,7 +118,7 @@
           "fill_color": "#4F8A8B"
         },
         {
-          "node_id": "fn_label_54",
+          "node_id": "fn_label_442",
           "node_type": "text",
           "rect": {
             "x": 2524760,
@@ -225,7 +143,7 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "fn_bar_55",
+          "node_id": "fn_bar_443",
           "node_type": "box",
           "rect": {
             "x": 3558540,
@@ -237,7 +155,7 @@
           "fill_color": "#4F8A8B"
         },
         {
-          "node_id": "fn_label_56",
+          "node_id": "fn_label_444",
           "node_type": "text",
           "rect": {
             "x": 3558540,
@@ -264,7 +182,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_57",
+          "node_id": "chrome_pagenum_445",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -272,10 +190,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

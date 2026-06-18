@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_40",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Platform Comparison",
-          "lines": [
-            {
-              "text": "Platform Comparison",
-              "width_emu": 7747992,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#4A148C"
-        },
-        {
-          "node_id": "subtitle_41",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Legacy System vs. Modern Stack",
-          "lines": [
-            {
-              "text": "Legacy System vs. Modern Stack",
-              "width_emu": 6407634,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_42",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "comparison-columns",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_43",
+          "node_id": "title_32",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#4A148C"
         },
         {
-          "node_id": "left_head_44",
+          "node_id": "left_head_33",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -138,7 +56,7 @@
           "text_color": "#4A148C"
         },
         {
-          "node_id": "right_head_45",
+          "node_id": "right_head_34",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -162,7 +80,7 @@
           "text_color": "#4A148C"
         },
         {
-          "node_id": "left_item_46",
+          "node_id": "left_item_35",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -185,7 +103,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_47",
+          "node_id": "right_item_36",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -208,7 +126,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_48",
+          "node_id": "left_item_37",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -231,7 +149,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_49",
+          "node_id": "right_item_38",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -254,7 +172,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_50",
+          "node_id": "left_item_39",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -277,7 +195,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_51",
+          "node_id": "right_item_40",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -300,7 +218,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_52",
+          "node_id": "left_item_41",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -323,7 +241,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_53",
+          "node_id": "right_item_42",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -348,7 +266,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_54",
+          "node_id": "chrome_pagenum_43",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -356,10 +274,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

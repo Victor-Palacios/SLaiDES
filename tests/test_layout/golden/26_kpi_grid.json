@@ -3,94 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_1",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Quarter in Review",
-          "lines": [
-            {
-              "text": "Quarter in Review",
-              "width_emu": 6479232,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#1F2A44"
-        },
-        {
-          "node_id": "subtitle_2",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "The dashboard at a glance",
-          "lines": [
-            {
-              "text": "The dashboard at a glance",
-              "width_emu": 5137324,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_3",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "kpi-grid",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_4",
+          "node_id": "title_315",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -114,7 +32,7 @@
           "text_color": "#1F2A44"
         },
         {
-          "node_id": "kpi_val_5",
+          "node_id": "kpi_val_316",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -139,7 +57,7 @@
           "text_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_rule_6",
+          "node_id": "kpi_rule_317",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -151,7 +69,7 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_7",
+          "node_id": "kpi_label_318",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -175,7 +93,7 @@
           "group_id": "kpi_0"
         },
         {
-          "node_id": "kpi_val_8",
+          "node_id": "kpi_val_319",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -200,7 +118,7 @@
           "text_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_rule_9",
+          "node_id": "kpi_rule_320",
           "node_type": "box",
           "rect": {
             "x": 4307840,
@@ -212,7 +130,7 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_10",
+          "node_id": "kpi_label_321",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -236,7 +154,7 @@
           "group_id": "kpi_1"
         },
         {
-          "node_id": "kpi_val_11",
+          "node_id": "kpi_val_322",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -261,7 +179,7 @@
           "text_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_rule_12",
+          "node_id": "kpi_rule_323",
           "node_type": "box",
           "rect": {
             "x": 8158480,
@@ -273,7 +191,7 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_13",
+          "node_id": "kpi_label_324",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -297,7 +215,7 @@
           "group_id": "kpi_2"
         },
         {
-          "node_id": "kpi_val_14",
+          "node_id": "kpi_val_325",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -322,7 +240,7 @@
           "text_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_rule_15",
+          "node_id": "kpi_rule_326",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -334,7 +252,7 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_16",
+          "node_id": "kpi_label_327",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -358,7 +276,7 @@
           "group_id": "kpi_3"
         },
         {
-          "node_id": "kpi_val_17",
+          "node_id": "kpi_val_328",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -383,7 +301,7 @@
           "text_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_rule_18",
+          "node_id": "kpi_rule_329",
           "node_type": "box",
           "rect": {
             "x": 4307840,
@@ -395,7 +313,7 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_19",
+          "node_id": "kpi_label_330",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -425,7 +343,7 @@
           "group_id": "kpi_4"
         },
         {
-          "node_id": "kpi_val_20",
+          "node_id": "kpi_val_331",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -450,7 +368,7 @@
           "text_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_rule_21",
+          "node_id": "kpi_rule_332",
           "node_type": "box",
           "rect": {
             "x": 8158480,
@@ -462,7 +380,7 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_22",
+          "node_id": "kpi_label_333",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -488,7 +406,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_23",
+          "node_id": "chrome_pagenum_334",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -496,10 +414,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

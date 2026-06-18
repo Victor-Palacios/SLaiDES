@@ -3,71 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "title-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_55",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 1783080,
-            "w": 10363200,
-            "h": 914400
-          },
-          "text_content": "Product Roadmap 2025",
-          "lines": [
-            {
-              "text": "Product Roadmap 2025",
-              "width_emu": 8469064,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#1B5E20"
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_56",
-          "node_type": "text",
-          "rect": {
-            "x": 10363200,
-            "y": 6035040,
-            "w": 1371600,
-            "h": 365760
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true
-        }
-      ]
-    },
-    {
-      "slide_index": 1,
-      "page_number": 2,
       "component": "timeline",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_57",
+          "node_id": "title_44",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -91,7 +32,7 @@
           "text_color": "#1B5E20"
         },
         {
-          "node_id": "ev_date_58",
+          "node_id": "ev_date_45",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -116,7 +57,7 @@
           "text_color": "#F57F17"
         },
         {
-          "node_id": "ev_title_59",
+          "node_id": "ev_title_46",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -139,7 +80,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_60",
+          "node_id": "ev_desc_47",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -186,7 +127,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_61",
+          "node_id": "ev_date_48",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -211,7 +152,7 @@
           "text_color": "#F57F17"
         },
         {
-          "node_id": "ev_title_62",
+          "node_id": "ev_title_49",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -234,7 +175,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_63",
+          "node_id": "ev_desc_50",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -275,7 +216,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_64",
+          "node_id": "ev_date_51",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -300,7 +241,7 @@
           "text_color": "#F57F17"
         },
         {
-          "node_id": "ev_title_65",
+          "node_id": "ev_title_52",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -323,7 +264,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_66",
+          "node_id": "ev_desc_53",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -364,7 +305,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_67",
+          "node_id": "ev_date_54",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -389,7 +330,7 @@
           "text_color": "#F57F17"
         },
         {
-          "node_id": "ev_title_68",
+          "node_id": "ev_title_55",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -412,7 +353,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_69",
+          "node_id": "ev_desc_56",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -455,7 +396,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_70",
+          "node_id": "chrome_pagenum_57",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -463,10 +404,10 @@
             "w": 1371600,
             "h": 365760
           },
-          "text_content": "2",
+          "text_content": "1",
           "lines": [
             {
-              "text": "2",
+              "text": "1",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false

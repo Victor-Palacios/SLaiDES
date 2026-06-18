@@ -10,9 +10,5 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "A Question for the Room"
-    subtitle: "Before we look at the data"
-
   - component: question
     question: "What would we build if we trusted our customers completely?"

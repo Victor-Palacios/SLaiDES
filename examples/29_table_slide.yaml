@@ -10,10 +10,6 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: title-slide
-    title: "Plan Comparison"
-    subtitle: "What each tier includes"
-
   - component: table-slide
     title: "Pricing Tiers"
     headers: ["Plan", "Seats", "Price"]
