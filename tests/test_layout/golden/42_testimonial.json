@@ -1,0 +1,220 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_96",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Customer Proof",
+          "lines": [
+            {
+              "text": "Customer Proof",
+              "width_emu": 5757788,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#14213D"
+        },
+        {
+          "node_id": "subtitle_97",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "One voice from the field",
+          "lines": [
+            {
+              "text": "One voice from the field",
+              "width_emu": 4560044,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_98",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "testimonial",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "test_bar_99",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 91440,
+            "h": 5303520
+          },
+          "group_id": "testimonial",
+          "fill_color": "#2A9D8F"
+        },
+        {
+          "node_id": "test_quote_100",
+          "node_type": "text",
+          "rect": {
+            "x": 777240,
+            "y": 1516380,
+            "w": 10957560,
+            "h": 2011680
+          },
+          "text_content": "\"The team moved from scattered status updates to a clear launch rhythm in one week.\"",
+          "lines": [
+            {
+              "text": "\"The team moved from scattered status",
+              "width_emu": 9320175,
+              "height_emu": 640080,
+              "overflows": false
+            },
+            {
+              "text": "updates to a clear launch rhythm in one",
+              "width_emu": 9340230,
+              "height_emu": 640080,
+              "overflows": false
+            },
+            {
+              "text": "week.\"",
+              "width_emu": 1582750,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": false,
+          "italic": true,
+          "group_id": "testimonial"
+        },
+        {
+          "node_id": "test_name_101",
+          "node_type": "text",
+          "rect": {
+            "x": 777240,
+            "y": 3802380,
+            "w": 10957560,
+            "h": 518159
+          },
+          "text_content": "Jordan Lee",
+          "lines": [
+            {
+              "text": "Jordan Lee",
+              "width_emu": 2303636,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "testimonial",
+          "text_color": "#14213D"
+        },
+        {
+          "node_id": "test_role_102",
+          "node_type": "text",
+          "rect": {
+            "x": 777240,
+            "y": 4320539,
+            "w": 10957560,
+            "h": 381000
+          },
+          "text_content": "VP Operations, Northstar",
+          "lines": [
+            {
+              "text": "VP Operations, Northstar",
+              "width_emu": 3541179,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "testimonial",
+          "text_color": "#8A8A9A"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_103",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

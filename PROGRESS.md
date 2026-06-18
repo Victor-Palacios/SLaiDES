@@ -104,13 +104,13 @@ next. (Research reconciliation pending — chatgpt.com/grok.com blocked by egres
 - [x] B/C openers+emphasis: section-divider, agenda, quote-opener, big-number, pull-quote, statement, definition, question (8 designs; models + `_layout_*` handlers + dispatch + goldens 11–18 + examples + SKILL rows; all lint-clean, golden tests pass; commit c60079b, 2026-06-14)
 - [x] C lists: bullet-list, feature-list, checklist, numbered-steps (4 designs; models + handlers + dispatch + goldens 19–22 + examples + SKILL rows; all lint-clean, suite green; commit f54b7f8, 2026-06-14)
 
-_Phase 9 running tally: **34 of 40** designs shipped (8 v1 + 12 on 2026-06-14 + 3 on 2026-06-15 + 5 on 2026-06-16 + 6 on 2026-06-17). Remaining group: G/H structure+visual (6 designs)._
+_Phase 9 running tally: **40 of 40** designs shipped (8 v1 + 12 on 2026-06-14 + 3 on 2026-06-15 + 5 on 2026-06-16 + 6 on 2026-06-17 + 6 on 2026-06-18). Component library complete._
 - [x] D comparison: before-after, pros-cons, this-vs-that (3 designs; models + `_layout_*` handlers + dispatch + goldens 23–25 + examples + SKILL rows; all lint-clean, suite green, schema validates; 2026-06-15)
 - [x] E data: kpi-grid, chart-slide, chart-with-insight, table-slide, metric-comparison (5 designs; models + `_layout_*` handlers + dispatch + goldens 26–30 + examples + SKILL rows; charts render as measured bar rectangles + labels, tables as a cell grid with an accent header rule, deltas as accent chips — all deterministic, no freehand marks; all 5 build lint-clean, suite green at 189 passed / 35 skipped, schema validates; 2026-06-16)
 - [x] F process/shape: process-steps, roadmap, funnel, pyramid, matrix-2x2, swot (6 designs; models + `_layout_*` handlers + dispatch + goldens 31–36 + examples + PDFs + SKILL rows; funnels/pyramids are measured centered narrowing/widening colored bars, matrix-2x2 is a grouped accent cross + 4 quadrant cells + axis captions, swot is a 2×2 of titled accent/muted bulleted panels — all deterministic, no freehand connectors; all 6 build lint-clean, suite green at 195 passed / 41 skipped, schema validates; 2026-06-17)
-- [ ] G/H structure+visual: comparison-matrix, team-grid, image-full-bleed, image-grid, logo-wall, testimonial
-- [ ] ACCEPTANCE: each new design has a golden-file layout test + a lint-clean example deck
-- [ ] ACCEPTANCE: SKILL.md component gallery lists all 40; `slidekit schema` validates every new component
+- [x] G/H structure+visual: comparison-matrix, team-grid, image-full-bleed, image-grid, logo-wall, testimonial (6 designs; models + `_layout_*` handlers + dispatch + goldens 37–42 + examples + SKILL rows; all build lint-clean; 2026-06-18)
+- [x] ACCEPTANCE: each new design has a golden-file layout test + a lint-clean example deck
+- [x] ACCEPTANCE: SKILL.md component gallery lists all 40; `slidekit schema` validates every new component
 - [ ] ACCEPTANCE: full test suite green; verify harness passes on all new example decks
 
 ## Phase 10 — computational aesthetics (operator-directed, 2026-06-14)

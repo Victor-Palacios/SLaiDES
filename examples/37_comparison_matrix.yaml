@@ -1,0 +1,23 @@
+version: 1
+theme:
+  palette:
+    primary: "#1B4F8A"
+    surface: "#FFFFFF"
+    accent: "#E84545"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: title-slide
+    title: "Vendor Shortlist"
+    subtitle: "Capability fit by option"
+  - component: comparison-matrix
+    title: "Evaluation Matrix"
+    options: ["Platform A", "Platform B", "Platform C"]
+    criteria: ["Security", "Workflow", "Support"]
+    cells:
+      - ["Strong", "Medium", "Strong"]
+      - ["Medium", "Strong", "Medium"]
+      - ["Strong", "Strong", "Medium"]

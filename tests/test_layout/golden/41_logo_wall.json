@@ -1,0 +1,441 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_75",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Partner Ecosystem",
+          "lines": [
+            {
+              "text": "Partner Ecosystem",
+              "width_emu": 6903765,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "subtitle_76",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Representative logos",
+          "lines": [
+            {
+              "text": "Representative logos",
+              "width_emu": 4056559,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_77",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "logo-wall",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_78",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Trusted By",
+          "lines": [
+            {
+              "text": "Trusted By",
+              "width_emu": 2756595,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "logo_tile_79",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "group_id": "logo_0",
+          "fill_color": "#F4F6F8"
+        },
+        {
+          "node_id": "logo_label_80",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "text_content": "Northstar",
+          "lines": [
+            {
+              "text": "Northstar",
+              "width_emu": 1943311,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "logo_0",
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "logo_tile_81",
+          "node_type": "box",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "group_id": "logo_1",
+          "fill_color": "#F4F6F8"
+        },
+        {
+          "node_id": "logo_label_82",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "text_content": "Acme",
+          "lines": [
+            {
+              "text": "Acme",
+              "width_emu": 1176065,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "logo_1",
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "logo_tile_83",
+          "node_type": "box",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "group_id": "logo_2",
+          "fill_color": "#F4F6F8"
+        },
+        {
+          "node_id": "logo_label_84",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "text_content": "Beacon",
+          "lines": [
+            {
+              "text": "Beacon",
+              "width_emu": 1559793,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "logo_2",
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "logo_tile_85",
+          "node_type": "box",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "group_id": "logo_3",
+          "fill_color": "#F4F6F8"
+        },
+        {
+          "node_id": "logo_label_86",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "text_content": "Summit",
+          "lines": [
+            {
+              "text": "Summit",
+              "width_emu": 1583407,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "logo_3",
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "logo_tile_87",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 3767328,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "group_id": "logo_4",
+          "fill_color": "#F4F6F8"
+        },
+        {
+          "node_id": "logo_label_88",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3767328,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "text_content": "Orbit",
+          "lines": [
+            {
+              "text": "Orbit",
+              "width_emu": 1031429,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "logo_4",
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "logo_tile_89",
+          "node_type": "box",
+          "rect": {
+            "x": 3345180,
+            "y": 3767328,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "group_id": "logo_5",
+          "fill_color": "#F4F6F8"
+        },
+        {
+          "node_id": "logo_label_90",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 3767328,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "text_content": "Atlas",
+          "lines": [
+            {
+              "text": "Atlas",
+              "width_emu": 1055886,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "logo_5",
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "logo_tile_91",
+          "node_type": "box",
+          "rect": {
+            "x": 6233160,
+            "y": 3767328,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "group_id": "logo_6",
+          "fill_color": "#F4F6F8"
+        },
+        {
+          "node_id": "logo_label_92",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3767328,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "text_content": "Pioneer",
+          "lines": [
+            {
+              "text": "Pioneer",
+              "width_emu": 1583829,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "logo_6",
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "logo_tile_93",
+          "node_type": "box",
+          "rect": {
+            "x": 9121140,
+            "y": 3767328,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "group_id": "logo_7",
+          "fill_color": "#F4F6F8"
+        },
+        {
+          "node_id": "logo_label_94",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 3767328,
+            "w": 2613660,
+            "h": 1993392
+          },
+          "text_content": "Vertex",
+          "lines": [
+            {
+              "text": "Vertex",
+              "width_emu": 1296454,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "logo_7",
+          "text_color": "#1B4F8A"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_95",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

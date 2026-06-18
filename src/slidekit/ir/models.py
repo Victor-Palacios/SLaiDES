@@ -465,6 +465,61 @@ class SwotSlide(BaseModel):
     threats: list[str] = Field(min_length=1)
 
 
+# ── Phase 9: structured relationships & visual (catalog #33, #35, #37–40) ────
+
+
+class ComparisonMatrixSlide(BaseModel):
+    component: Literal["comparison-matrix"]
+    title: Optional[str] = None
+    options: list[str] = Field(min_length=1)
+    criteria: list[str] = Field(min_length=1)
+    cells: list[list[str]] = Field(min_length=1)
+
+
+class TeamMember(BaseModel):
+    name: str
+    role: str
+    image: Optional[ImageSlot] = None
+
+
+class TeamGridSlide(BaseModel):
+    component: Literal["team-grid"]
+    title: Optional[str] = None
+    members: list[TeamMember] = Field(min_length=1)
+
+
+class ImageFullBleedSlide(BaseModel):
+    component: Literal["image-full-bleed"]
+    image: ImageSlot
+    overlay_title: Optional[str] = None
+
+
+class ImageGridSlide(BaseModel):
+    component: Literal["image-grid"]
+    title: Optional[str] = None
+    images: list[ImageSlot] = Field(min_length=1)
+    captions: list[str] = Field(default_factory=list)
+
+
+class LogoMark(BaseModel):
+    label: Optional[str] = None
+    image: Optional[ImageSlot] = None
+
+
+class LogoWallSlide(BaseModel):
+    component: Literal["logo-wall"]
+    title: Optional[str] = None
+    logos: list[LogoMark] = Field(min_length=1)
+
+
+class TestimonialSlide(BaseModel):
+    component: Literal["testimonial"]
+    quote: str
+    name: str
+    role: str
+    image: Optional[ImageSlot] = None
+
+
 Slide = Annotated[
     Union[
         TitleSlide,
@@ -501,6 +556,12 @@ Slide = Annotated[
         PyramidSlide,
         Matrix2x2Slide,
         SwotSlide,
+        ComparisonMatrixSlide,
+        TeamGridSlide,
+        ImageFullBleedSlide,
+        ImageGridSlide,
+        LogoWallSlide,
+        TestimonialSlide,
     ],
     Field(discriminator="component"),
 ]

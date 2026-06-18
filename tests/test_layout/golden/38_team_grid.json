@@ -1,0 +1,397 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_38",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1783080,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Launch Team",
+          "lines": [
+            {
+              "text": "Launch Team",
+              "width_emu": 4855146,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#14213D"
+        },
+        {
+          "node_id": "subtitle_39",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2971800,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Core ownership model",
+          "lines": [
+            {
+              "text": "Core ownership model",
+              "width_emu": 4320108,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_40",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "team-grid",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_41",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Team Leads",
+          "lines": [
+            {
+              "text": "Team Leads",
+              "width_emu": 3043610,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#14213D"
+        },
+        {
+          "node_id": "team_avatar_42",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 874777
+          },
+          "group_id": "team_0",
+          "fill_color": "#8A8A9A"
+        },
+        {
+          "node_id": "team_name_43",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2484121,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Maya Chen",
+          "lines": [
+            {
+              "text": "Maya Chen",
+              "width_emu": 2279600,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "team_0",
+          "text_color": "#14213D"
+        },
+        {
+          "node_id": "team_role_44",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3112008,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Product",
+          "lines": [
+            {
+              "text": "Product",
+              "width_emu": 1094197,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "team_0",
+          "text_color": "#8A8A9A"
+        },
+        {
+          "node_id": "team_avatar_45",
+          "node_type": "box",
+          "rect": {
+            "x": 4307840,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 874777
+          },
+          "group_id": "team_1",
+          "fill_color": "#8A8A9A"
+        },
+        {
+          "node_id": "team_name_46",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2484121,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Omar Patel",
+          "lines": [
+            {
+              "text": "Omar Patel",
+              "width_emu": 2280022,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "team_1",
+          "text_color": "#14213D"
+        },
+        {
+          "node_id": "team_role_47",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3112008,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Engineering",
+          "lines": [
+            {
+              "text": "Engineering",
+              "width_emu": 1694625,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "team_1",
+          "text_color": "#8A8A9A"
+        },
+        {
+          "node_id": "team_avatar_48",
+          "node_type": "box",
+          "rect": {
+            "x": 8158480,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 874777
+          },
+          "group_id": "team_2",
+          "fill_color": "#8A8A9A"
+        },
+        {
+          "node_id": "team_name_49",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2484121,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Lina Torres",
+          "lines": [
+            {
+              "text": "Lina Torres",
+              "width_emu": 2319449,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "team_2",
+          "text_color": "#14213D"
+        },
+        {
+          "node_id": "team_role_50",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3112008,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Design",
+          "lines": [
+            {
+              "text": "Design",
+              "width_emu": 988312,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "team_2",
+          "text_color": "#8A8A9A"
+        },
+        {
+          "node_id": "team_avatar_51",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 3767328,
+            "w": 3576320,
+            "h": 874777
+          },
+          "group_id": "team_3",
+          "fill_color": "#8A8A9A"
+        },
+        {
+          "node_id": "team_name_52",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4751833,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Noah Smith",
+          "lines": [
+            {
+              "text": "Noah Smith",
+              "width_emu": 2398936,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "team_3",
+          "text_color": "#14213D"
+        },
+        {
+          "node_id": "team_role_53",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5379720,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Growth",
+          "lines": [
+            {
+              "text": "Growth",
+              "width_emu": 1023348,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "team_3",
+          "text_color": "#8A8A9A"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_54",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

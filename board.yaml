@@ -34,12 +34,12 @@ tasks:
   - {id: T-009, title: "pyramid design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 34; widening alternating bars; lint-clean"}
   - {id: T-010, title: "matrix-2x2 design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 35; accent cross + 4 quadrants + axis captions; lint-clean"}
   - {id: T-011, title: "swot design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 36; 2x2 titled panels (accent/muted); lint-clean"}
-  - {id: T-012, title: "comparison-matrix design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
-  - {id: T-013, title: "team-grid design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
-  - {id: T-014, title: "image-full-bleed design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
-  - {id: T-015, title: "image-grid design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
-  - {id: T-016, title: "logo-wall design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
-  - {id: T-017, title: "testimonial design", epic: phase-9, column: backlog, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "group G/H (structure+visual)"}
+  - {id: T-012, title: "comparison-matrix design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 37; lint-clean"}
+  - {id: T-013, title: "team-grid design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 38; lint-clean"}
+  - {id: T-014, title: "image-full-bleed design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 39; lint-clean"}
+  - {id: T-015, title: "image-grid design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 40; lint-clean"}
+  - {id: T-016, title: "logo-wall design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 41; lint-clean"}
+  - {id: T-017, title: "testimonial design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 42; lint-clean"}
 
   # ── Phase 10: aesthetics — open items ────────────────────────────────────────
   - {id: T-018, title: "W_AESTH_* advisory warnings + optional --min-score gate", epic: phase-10, column: todo, priority: med, created: 2026-06-14, updated: 2026-06-15, notes: "warnings never block the build; linter stays the gate"}
