@@ -46,7 +46,8 @@ in files:
 | [IDEAS.md](IDEAS.md) | PR-triage & brainstorm inbox — a second scheduled session appends dated, *approvable* ideas here (see below); nothing is acted on until you approve |
 | [BRAINSTORM_PROMPT.md](BRAINSTORM_PROMPT.md) | The verbatim prompt the PR-brainstorm session runs |
 | [NOTES.md](NOTES.md) | Objections and out-of-scope proposals |
-| [docs/SLIDE_DESIGNS.md](docs/SLIDE_DESIGNS.md) | Catalog of the 40 core slide designs (Phase 9) |
+| [docs/SLIDE_DESIGNS.md](docs/SLIDE_DESIGNS.md) | Catalog of the 40 slide components (Phase 9) |
+| [docs/LAYOUT_TAXONOMY.md](docs/LAYOUT_TAXONOMY.md) | Honest map of the 40 components → ~25 distinct layout skeletons (generated from `src/slidekit/catalog/registry.py`) |
 | [docs/AESTHETICS.md](docs/AESTHETICS.md) | Deterministic aesthetic-scoring spec (Phase 10) |
 | [docs/REFERENCES.md](docs/REFERENCES.md) | Living bibliography of slide-aesthetics research (target ~20 verified) |
 | [docs/RESEARCH_TRACE.md](docs/RESEARCH_TRACE.md) | Which paper influenced which scorer decision (paper → decision → code, with status) |
@@ -76,7 +77,8 @@ annotating the `IDEAS.md` line as `→ queued as T-NNN` then `→ done (commit �
 The core build (Phases 0–8) is complete. Each nightly run now pursues two tracks:
 
 1. **Build** the current phase in `PROGRESS.md` — Phase 9 (grow the component
-   library to **40 core slide designs**, see `docs/SLIDE_DESIGNS.md`) then Phase 10
+   library to **40 slide components** (~25 distinct layouts, see `docs/SLIDE_DESIGNS.md` /
+   `docs/LAYOUT_TAXONOMY.md`) then Phase 10
    (a **deterministic aesthetic-scoring** layer over the resolved geometry — balance,
    alignment, whitespace, overlap, contrast, color harmony, cross-slide consistency —
    computed from source, never from screenshots; see `docs/AESTHETICS.md`).

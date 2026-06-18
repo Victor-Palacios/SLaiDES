@@ -1,8 +1,13 @@
-# slidekit slide-design catalog — 40 core designs
+# slidekit slide-design catalog — 40 components (~25 distinct layouts)
 
-Target: **40 core slide designs** (up from the 8 shipped in v1). Each "design" is a
-slidekit *component*: one Pydantic model + one layout handler + golden test + example
+Target: **40 slide components** (up from the 8 shipped in v1). Each component is a
+slidekit unit: one Pydantic model + one layout handler + golden test + example
 + SKILL gallery row. This file is the build blueprint for Phase 9.
+
+Honesty note: those 40 components implement **~25 genuinely distinct layout skeletons** —
+the rest are styled variants of a family anchor (same geometry, different marker / colour /
+orientation / fields). The authoritative mapping is generated in
+[LAYOUT_TAXONOMY.md](LAYOUT_TAXONOMY.md) from `src/slidekit/catalog/registry.py`.
 
 > **Research reconciliation pending.** Two research sources (a ChatGPT share and a
 > Grok share) were provided to inform this catalog, but the execution environment's
