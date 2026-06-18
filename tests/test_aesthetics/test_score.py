@@ -61,6 +61,34 @@ def test_balance_centered_beats_corner():
     assert 0.0 <= _balance(corner, cw, ch) <= 1.0
 
 
+def test_contrast_judged_against_box_fill_not_surface():
+    # White label on a dark accent BOX over a white surface: readable in reality, so the
+    # metric must judge it against the box fill (high), not the surface (which would be ~0).
+    deck = load("examples/14_big_number.yaml")
+    box = _N(0, 0, 200, 80, node_type="box", fill_color="#1B4F8A")
+    label = _N(0, 0, 200, 80, text_color="#FFFFFF", size_pt=40.0)
+    on_box = _Slide([box, label])
+    on_surface = _Slide([_N(0, 0, 200, 80, text_color="#FFFFFF", size_pt=40.0)])
+    assert _contrast(on_box, deck) > 0.9          # white on dark blue: strong
+    assert _contrast(on_surface, deck) < 0.1      # white on white surface: none
+
+
+def test_text_over_image_not_penalised_for_contrast():
+    deck = load("examples/14_big_number.yaml")
+    img = _N(0, 0, 200, 120, node_type="image")
+    title = _N(0, 0, 200, 120, text_color="#FFFFFF", size_pt=40.0)
+    assert _contrast(_Slide([img, title]), deck) == 1.0  # unmeasurable -> not penalised
+
+
+def test_label_inside_its_box_is_not_overlap():
+    box = _N(0, 0, 200, 80, node_type="box", fill_color="#1B4F8A")
+    label = _N(0, 0, 200, 80, text_color="#FFFFFF")
+    assert _non_overlap([box, label]) == 1.0       # intentional containment, not a collision
+    a, b = _N(0, 0, 100, 100), _N(20, 20, 100, 100)  # two real boxes that collide
+    a.node_type = b.node_type = "box"
+    assert _non_overlap([a, b]) < 1.0
+
+
 def test_contrast_ratio_black_on_white():
     # Black/white is the maximum contrast ratio (21:1).
     assert round(_contrast_ratio("#000000", "#FFFFFF"), 1) == 21.0

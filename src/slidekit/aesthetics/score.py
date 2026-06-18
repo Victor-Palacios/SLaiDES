@@ -244,15 +244,51 @@ def _alignment(nodes) -> float:
     return max(0.0, 1 - len(lines) / len(nodes))
 
 
+def _contains(outer, inner) -> bool:
+    """True if `inner`'s centre lies in `outer` and `outer` is at least as large — i.e.
+    `inner` (a label) sits inside `outer` (its tile/band/image container)."""
+    cx, cy = inner.x + inner.w / 2, inner.y + inner.h / 2
+    return (
+        outer.x <= cx <= outer.x + outer.w
+        and outer.y <= cy <= outer.y + outer.h
+        and outer.w * outer.h >= inner.w * inner.h
+    )
+
+
+def _text_background(tnode, nodes, surface: str):
+    """The fill a text node actually sits on: the last box that contains it, else the
+    slide surface. Returns None when that container is an image (contrast unmeasurable).
+
+    WCAG contrast is text vs its ACTUAL background (ref #11) — designed layouts draw
+    labels on filled tiles/bands, so judging them against the surface is wrong.
+    """
+    bg = surface
+    for n in nodes:
+        if n is tnode or n.node_type not in ("box", "image"):
+            continue
+        if _contains(n.rect, tnode.rect):
+            if n.node_type == "image":
+                return None
+            bg = n.fill_color or surface
+    return bg
+
+
 def _non_overlap(nodes) -> float:
-    # ref #1 (AeSlides) element-collision — docs/RESEARCH_TRACE.md
+    # ref #1 (AeSlides) element-collision — docs/RESEARCH_TRACE.md.
+    # A label drawn inside its own tile/band/image is intentional containment, not a
+    # collision, so text-in-its-container pairs are excluded.
     if len(nodes) < 2:
         return 1.0
     tot = sum(n.rect.w * n.rect.h for n in nodes) or 1
     inter = 0
     for i in range(len(nodes)):
         for j in range(i + 1, len(nodes)):
-            inter += _intersect_area(nodes[i].rect, nodes[j].rect)
+            a, b = nodes[i], nodes[j]
+            if a.node_type == "text" and b.node_type in ("box", "image") and _contains(b.rect, a.rect):
+                continue
+            if b.node_type == "text" and a.node_type in ("box", "image") and _contains(a.rect, b.rect):
+                continue
+            inter += _intersect_area(a.rect, b.rect)
     return max(0.0, 1 - inter / tot)
 
 
@@ -276,7 +312,10 @@ def _contrast(rs: "ResolvedSlide", deck: "DeckIR") -> float:
     for n in rs.nodes:
         if n.node_type == "text" and not n.is_chrome:
             color = n.text_color or (pal.muted if n.is_caption else pal.text)
-            ratio = _contrast_ratio(color, pal.surface)
+            bg = _text_background(n, rs.nodes, pal.surface)
+            if bg is None:  # text over an image — contrast not measurable; don't penalise
+                continue
+            ratio = _contrast_ratio(color, bg)
             large = (n.size_pt or 0.0) >= _LARGE_TEXT_PT
             target = _TARGET_LARGE if large else _TARGET_BODY
             norm.append(min(1.0, max(0.0, (ratio - 1.0) / (target - 1.0))))
