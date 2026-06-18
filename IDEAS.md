@@ -29,5 +29,61 @@ status — neither ever changes your `(approved)`/`(rejected)` decision.
 
 <!-- The 13:30 UTC pr-brainstorm session appends dated sections below. -->
 
-_No brainstorm run has appended to this file yet. The first scheduled run (or a manual
-`workflow_dispatch` of pr-brainstorm-slidekit) will add a `## <YYYY-MM-DD>` section here._
+## 2026-06-18
+
+First brainstorm run to append here. One open PR (#6); evaluated below plus a small
+ideation pass from repo state (Phase 9 complete, Phase 10 in progress, research 18/20).
+
+### PR evaluations
+
+- **PR #6 — "Add PDF slide repetition summary"** (`codex/explain-multiple-pages-in-pdf-examples`,
+  @Victor-Palacios) — **CLOSE** (or REVISE hard if the prose insight is wanted). Adds
+  `docs/pdf-slide-repetition-summary.md` (analysis of why example PDFs are multi-page +
+  three "reduce sameness" redesign proposals) and a committed binary
+  `docs/pdf-slide-repetition-summary.pdf` generated with **ReportLab**.
+  - *Accurate core:* the central finding is correct and source-traceable — a PDF's page
+    count equals its deck's slide count because the emitter loops `resolved.slides` and
+    calls `showPage()` per slide. That much fits the "prove from source" ethos.
+  - *Against ethos / why CLOSE:* (1) it commits a **ReportLab-generated binary** into the
+    repo — slidekit's PDFs come from its own deterministic pipeline, not a freehand
+    third-party renderer; a binary PDF can't be diff-reviewed and just duplicates the
+    `.md` prose. (2) The hardcoded page-count inventory (`11_…` through `42_testimonial`,
+    specific counts) will rot the moment the example library changes — no test keeps it
+    honest. (3) The "one-page specimen / drop the cover" alternatives push *against* the
+    intentional per-deck `title-slide` cover convention, which exists for golden-file +
+    verify-harness traceability — the doc itself concedes the repetition is "useful for
+    test stability." No tests, no code change; net utility is one already-implicit
+    sentence wrapped in a stale-prone doc + an off-ethos binary.
+  - *If anything is salvaged:* keep only the one-line emitter insight (as a comment in
+    `src/slidekit/emit/pdf_emitter.py` or a sentence in an existing doc); drop the binary;
+    do not pursue the cover-removal redesigns.
+
+### Ideas to consider
+
+- [ ] **(proposed)** Document the per-deck `title-slide` cover as an intentional convention —
+  a short note in `NOTES.md`/`docs/` stating that pairing a reusable cover with each
+  component example is deliberate (golden + verify traceability), so future PRs don't
+  re-propose removing it (as #6 did). _(effort: S; area: docs/conventions)_
+- [ ] **(proposed)** Generated example inventory instead of hand-maintained lists — a tiny
+  `scripts/` generator (mirroring `render_board.py`) that emits the example→slide-count /
+  component index, with a sync test. Kills the exact staleness failure mode PR #6
+  introduces and gives reviewers a single source of truth for "what's in `examples/`."
+  _(effort: S; area: tooling/docs)_
+- [ ] **(proposed)** Close Phase 9's last open acceptance — run + record the verify harness
+  across all 42 example decks. PROGRESS.md line 114 ("verify harness passes on all new
+  example decks") stays unchecked because `soffice`/`pdftoppm` aren't in the nightly image
+  (47 skips). A one-shot CI job (or recorded operator run) with LibreOffice installed would
+  let that box be checked honestly rather than perpetually skipped. _(effort: S–M; area:
+  Phase 6/9 verify)_
+- [ ] **(proposed)** Adopt the area-weighted moment-of-balance formulation for the `_balance`
+  sub-score (refs #16 Lok/Feiner/Ngai, #18 Zhang & Xue), behind a designed-beats-plain
+  regression guard. The 2026-06-18 nightly report already logged this integration direction
+  ("balance as a moment about the layout centre"; current `_balance` uses centroid distance,
+  a special case) but left it unapplied — fully deterministic, no render, grounded in
+  verified citations. _(effort: M; area: Phase 10 aesthetics)_
+- [ ] **(proposed, speculative)** Deterministic slidekit-native component catalog —
+  `slidekit catalog` that lays out component thumbnails via the **real** layout/emit engine
+  (not ReportLab) into one reviewable deck/PDF. This captures the genuinely useful part of
+  PR #6's "contact-sheet" idea (spotting duplicate design patterns across 40 components)
+  while staying source-traceable and render-free. Flag as nice-to-have, not plan scope —
+  only if the operator wants a gallery artifact. _(effort: M; area: emit/tooling)_
