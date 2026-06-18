@@ -157,10 +157,13 @@ reportlab emitter — no LibreOffice needed; works in any environment). Keep the
 deterministic round-trip TESTS on .pptx (they assert emitter geometry), but the
 human-viewable example outputs are PDF. Only emit .pptx when explicitly requested.
 The per-deck `examples/pdf/<name>.pdf` files are CANONICAL — keep one per deck (do
-not delete or merge them away). For easy review there is ALSO a single aggregate,
-`examples/pdf/combined/all-examples.pdf`; after rebuilding the per-deck PDFs, refresh
-it with `python scripts/build_combined_pdf.py` and commit it (deterministic, stable
-filename — no timestamps; a test asserts its page count tracks the example decks).
+not delete or merge them away). For easy review there is ALSO a DATED archive of a
+combined aggregate under `examples/pdf/combined/`: `all-examples_<YYYY-MM-DD>.pdf`,
+plus `manifest.json` and a generated `INDEX.md`. After rebuilding the per-deck PDFs,
+run `python scripts/build_combined_pdf.py`; it mints a NEW dated snapshot ONLY when the
+example decks' resolved layout actually changed (it fingerprints the geometry), and is a
+no-op otherwise — so commit the new dated PDF + `manifest.json` + `INDEX.md` when one is
+written. NEVER delete older dated snapshots; they are the repo's visual evolution record.
 
 === PRIORITY OVERRIDE (added 2026-06-14; operator request — do BEFORE remaining Phase 9 designs) ===
 A first cut of Phase 10 `slidekit score` exists (slidekit/aesthetics/). Next sessions, in order:
