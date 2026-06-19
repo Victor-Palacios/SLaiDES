@@ -10,6 +10,7 @@ from slidekit.aesthetics.score import (
     _cross_slide_consistency,
     _hue_diff,
     _hue_sat,
+    _info_density,
     _non_overlap,
     _richness,
     score_deck,
@@ -35,6 +36,7 @@ class _N:
         text_color=None,
         size_pt=34.0,
         is_caption=False,
+        text=None,
     ):
         self.rect = Rect(x, y, w, h)
         self.is_chrome = False
@@ -43,6 +45,8 @@ class _N:
         self.text_color = text_color
         self.size_pt = size_pt
         self.is_caption = is_caption
+        self.text_content = text
+        self.lines = []
 
 
 def test_non_overlap_directional():
@@ -169,6 +173,33 @@ def test_color_harmony_recognised_vs_clashing():
     # high; a deliberately clashing pair (e.g. ~70° apart) scores lower.
     good = load("examples/agents-in-ai.yaml")
     assert _color_harmony(good) > 0.8
+
+
+# ── info density: penalise crowding and barrenness, protect hero layouts ────────
+
+
+def test_info_density_penalises_crowding():
+    cw, ch = 1000, 1000
+    # A comfortable single text block at moderate coverage with a sane word count.
+    comfortable = [_N(100, 100, 400, 200, text=" ".join(["word"] * 18))]
+    # A crowded slide: text fills most of the canvas with a huge word count.
+    crowded = [_N(20, 20, 960, 900, text=" ".join(["word"] * 220))]
+    assert _info_density(comfortable, cw, ch) > _info_density(crowded, cw, ch)
+
+
+def test_info_density_protects_sparse_hero_layout():
+    cw, ch = 1000, 1000
+    # A big-number style hero: a few words in a large emphasis block — must NOT be
+    # penalised as barren (the metric primarily catches crowding).
+    hero = [_N(300, 350, 400, 300, text="42 percent")]
+    assert _info_density(hero, cw, ch) >= 0.9
+
+
+def test_info_density_image_only_slide_is_full_credit():
+    cw, ch = 1000, 1000
+    image_only = [_N(0, 0, 1000, 1000, node_type="image")]
+    assert _info_density(image_only, cw, ch) == 1.0
+    assert _info_density([], cw, ch) == 0.0
 
 
 # ── cross-slide consistency: bounded deck-level modulation ──────────────────────

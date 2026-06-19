@@ -202,8 +202,27 @@ full chromatic palette). Measured before→after deck scores:
 | 06 timeline | 69.4 | 77.4 | | | | |
 
 The designed-beats-plain invariant survives the polish (big-number 88.3 still > agents
-86.3 > all_components 84.8). Still outstanding for Phase 10: an info-density metric, and
-weight calibration (DEFERRED — needs a labelled slide-pair dataset).
+86.3 > all_components 84.8). Still outstanding for Phase 10: weight calibration (DEFERRED
+— needs a labelled slide-pair dataset).
+
+### Info-density sub-score (shipped 2026-06-19)
+
+The ninth per-slide sub-metric `info_density` is now implemented (`_info_density`). It
+scores two deterministic quantities against comfortable bands and averages them:
+
+- **words-per-slide** — counted from the wrapped line text (or `text_content`). Full
+  credit `[1, 45]` words, ramping to 0 at 130 (crowding). The low end is deliberately
+  generous so sparse hero layouts (big-number, statement, quote) are NOT penalised; the
+  metric primarily catches **crowding**.
+- **text coverage** — Σ text-rect area / canvas area. Full credit `[0.02, 0.45]`, ramping
+  to 0 at 0.85 (crowding) and from 0 at the low end (barrenness).
+
+A slide with no text node (e.g. `image-full-bleed`) earns full credit — there is no text
+to be crowded or barren. Weight `1.0` in `DEFAULT_WEIGHTS`; advisory threshold `0.45`
+(code `W_AESTH_DENSITY`). The designed-beats-plain invariant is preserved (big-number
+89.5 > agents-in-ai 84.4 > all-components 82.7 with density included). Bands are
+HEURISTIC ("Math Behind Effective Slide Design" — one-idea-per-slide / 6×6 guidance);
+calibration stays DEFERRED.
 
 ## Advisory `W_AESTH_*` warnings + `--min-score` gate (shipped 2026-06-18)
 
@@ -222,6 +241,7 @@ Warning codes (one per sub-metric; theme-level metrics warn once at the deck lev
 | `W_AESTH_OVERLAP` | non_overlap | slide |
 | `W_AESTH_CONTRAST` | contrast | slide |
 | `W_AESTH_RICHNESS` | richness | slide |
+| `W_AESTH_DENSITY` | info_density | slide |
 | `W_AESTH_HIERARCHY` | hierarchy | deck (theme) |
 | `W_AESTH_HARMONY` | color_harmony | deck (theme) |
 | `W_AESTH_CONSISTENCY` | cross-slide consistency | deck |

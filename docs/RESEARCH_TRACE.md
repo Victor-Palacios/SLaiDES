@@ -30,6 +30,7 @@ research" can be checked, not just asserted.
 | **contrast** — size-aware WCAG (3:1 ≥24pt, 4.5:1 below), judged against the text's ACTUAL background | `_contrast`, `_text_background`, `_LARGE_TEXT_PT`, `_TARGET_*` | WCAG 2.x + #11 Rebelo et al. | standard + VERIFIED | Thresholds are the **WCAG 2.x** web standard and PLAN.md Phase 4. WCAG contrast is text vs its real background, so a label on a filled tile is judged against the tile fill (not the slide surface); text over an image is unmeasurable and not penalised. #11 (EvoMUSART 2024) backs contrast-as-constraint. |
 | **richness** — accent emphasis + structure + restrained colour variety | `_richness` | #12 Reinecke et al. (CHI 2013) | VERIFIED | Perceived colourfulness/complexity models. slidekit uses **palette colour variety** as a no-render proxy for colourfulness. The `0.45/0.35/0.20` split and the variety falloff past 3 colours are **HEURISTIC**. |
 | **color_harmony** — hue-angle relationship between palette roles | `_color_harmony` | — | **HEURISTIC (no primary source)** | Classical colour-theory relationships (mono/analogous/triadic/split-comp/complementary). No specific primary paper is cited; the 30° tolerance is our choice. |
+| **info_density** — words-per-slide + text-coverage vs comfortable bands | `_info_density`, `_band` | "Math Behind Effective Slide Design" | **HEURISTIC** | text-area/canvas + word count vs a band (penalise crowding and barrenness). The word band `[1,45]→0@130` is generous on the low end so sparse hero layouts aren't penalised; coverage band `[0.02,0.45]→0@0.85`. Bands are HEURISTIC (6×6 / one-idea-per-slide guidance); the cited source is a practitioner essay, not a primary paper. Image-only slides earn full credit. |
 | **hierarchy** — title:body size-ratio band | `_hierarchy` | — | **HEURISTIC (no primary source)** | Motivated by multimedia-learning intuition, but **no specific primary source** backs the exact ratio thresholds. Candidate for a future verified citation. |
 | **cross_slide_consistency** — deck multiplier on margin variance | `_cross_slide_consistency` | #7 PPTEval, #8 DECKBench | **SECONDHAND** | Both references are still unverified. The metric ships, but its citation is not yet primary-confirmed — verify #7/#8 before relying on this lineage. |
 
@@ -46,8 +47,8 @@ research" can be checked, not just asserted.
 
 - Sub-scores backed by a **VERIFIED** primary paper: balance (#4), whitespace (#1),
   alignment (#3), non_overlap (#1), richness (#12) — plus contrast (WCAG standard + #11).
-- Sub-scores that are **HEURISTIC with no primary source**: color_harmony, hierarchy
-  (and several internal constants noted above).
+- Sub-scores that are **HEURISTIC with no primary source**: color_harmony, hierarchy,
+  info_density (practitioner-essay basis only) — and several internal constants noted above.
 - Sub-scores resting on a **SECONDHAND** (unverified) reference: cross_slide_consistency
   (#7/#8), and the composite's conceptual basis (#9 Birkhoff).
 - **OPEN research-to-product gaps:** (1) implement Harrington's non-linear combiner

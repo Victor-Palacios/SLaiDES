@@ -146,5 +146,11 @@ score); the linter remains the gate.
   documented `ADVISORY_THRESHOLDS` tuned from the 40-deck distribution; warnings included in
   the `slidekit score --json` report; opt-in `--min-score N` CI floor (exits 1 below the bar,
   exit 0 by default — the linter stays the gate). 9 tests; suite 214 passed / 47 skipped.
-  (info-density metric still TODO; weight calibration DEFERRED.)
+  (weight calibration DEFERRED.)
+- [x] `info_density` sub-score (T-019, 2026-06-19): words-per-slide + text-coverage vs
+  comfortable bands (penalise crowding + barrenness); generous low end protects sparse hero
+  layouts; image-only slides get full credit. Weight 1.0, `W_AESTH_DENSITY` advisory
+  (threshold 0.45). Designed-beats-plain invariant preserved (big-number 89.5 > agents-in-ai
+  84.4 > all-components 82.7). 3 unit tests; suite 251 passed / 47 skipped. docs updated
+  (AESTHETICS.md + RESEARCH_TRACE.md).
 - [ ] DEFERRED: weight calibration vs a human-labelled slide-pair set.

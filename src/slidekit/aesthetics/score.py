@@ -6,7 +6,7 @@ composite is reported 0–100. ADVISORY only: this never blocks a build.
 
 Sub-scores (per slide unless noted):
   balance, whitespace, alignment, non_overlap, hierarchy, contrast,
-  richness (visual engagement), color_harmony (theme-level).
+  richness (visual engagement), color_harmony (theme-level), info_density.
 Deck score = mean(slide scores) · cross_slide_consistency  (docs/AESTHETICS.md).
 
 Calibration against human ratings is DEFERRED (needs a labelled slide-pair set);
@@ -40,6 +40,7 @@ DEFAULT_WEIGHTS: dict[str, float] = {
     "contrast": 1.5,
     "richness": 1.5,
     "color_harmony": 1.0,
+    "info_density": 1.0,
 }
 
 _ALIGN_TOL = int(0.06 * EMU_PER_INCH)  # ~0.06" edge-clustering tolerance
@@ -60,6 +61,7 @@ ADVISORY_THRESHOLDS: dict[str, float] = {
     "contrast": 0.50,
     "richness": 0.40,
     "color_harmony": 0.40,
+    "info_density": 0.45,
 }
 
 # Sub-metric → (warning code, human label, concrete fix). Codes mirror the linter's
@@ -109,6 +111,12 @@ _WARN_META: dict[str, tuple[str, str, str]] = {
         "W_AESTH_HARMONY",
         "theme primary/accent hues are not in a recognised relationship",
         "choose accent vs primary hues that are analogous, complementary, or triadic.",
+    ),
+    "info_density": (
+        "W_AESTH_DENSITY",
+        "slide carries too much (or too little) text for its area",
+        "split a crowded slide across two, or cut words toward one idea per slide;"
+        " conversely, give a near-empty content area a clear focal point.",
     ),
 }
 
@@ -230,6 +238,52 @@ def _whitespace(nodes, cw: int, ch: int) -> float:
     if cover < lo:
         return max(0.0, cover / lo)
     return max(0.0, 1 - (cover - hi) / (1 - hi))
+
+
+def _band(v: float, lo: float, hi: float, soft_lo: float, soft_hi: float) -> float:
+    """Score a value against a comfortable band [lo, hi]: 1.0 inside the band, ramping
+    linearly to 0 at the soft edges (soft_lo below, soft_hi above). Used by the
+    info-density metric to penalise both barrenness (< lo) and crowding (> hi)."""
+    if lo <= v <= hi:
+        return 1.0
+    if v < lo:
+        return max(0.0, (v - soft_lo) / (lo - soft_lo)) if lo > soft_lo else 0.0
+    return max(0.0, (soft_hi - v) / (soft_hi - hi)) if soft_hi > hi else 0.0
+
+
+# Info-density bands (HEURISTIC; "Math Behind Effective Slide Design" guidance — one
+# idea per slide, the 6×6 rule, assertion–evidence). Word band is generous on the low
+# end so deliberately-sparse hero layouts (big-number, statement, quote) are NOT
+# penalised; the metric primarily catches CROWDING. Text-coverage band is text rect
+# area / canvas area. See docs/RESEARCH_TRACE.md.
+_DENSITY_WORDS = (1.0, 45.0, 0.0, 130.0)       # lo, hi, soft_lo, soft_hi
+_DENSITY_COVER = (0.02, 0.45, 0.0, 0.85)
+
+
+def _info_density(nodes, cw: int, ch: int) -> float:
+    """text-area / canvas-area and words-per-slide vs. a comfortable band; penalise
+    both crowding and barrenness (docs/AESTHETICS.md). Deterministic — counts words
+    from the wrapped line text (or text_content) and sums text rect areas; no render.
+
+    A slide with NO text node is intentionally visual (e.g. image-full-bleed): there is
+    no text to be crowded or barren, so it earns full credit. A slide with no content
+    nodes at all scores 0.0, consistent with the other metrics."""
+    if not nodes:
+        return 0.0
+    text_nodes = [n for n in nodes if n.node_type == "text"]
+    if not text_nodes:
+        return 1.0
+    words = 0
+    for n in text_nodes:
+        if n.lines:
+            words += sum(len(ln.text.split()) for ln in n.lines)
+        elif n.text_content:
+            words += len(n.text_content.split())
+    text_area = sum(n.rect.w * n.rect.h for n in text_nodes)
+    cover = text_area / (cw * ch) if cw and ch else 0.0
+    word_score = _band(words, *_DENSITY_WORDS)
+    cover_score = _band(cover, *_DENSITY_COVER)
+    return 0.5 * word_score + 0.5 * cover_score
 
 
 def _alignment(nodes) -> float:
@@ -561,6 +615,7 @@ def score_deck(
             "contrast": _contrast(rs, deck),
             "richness": _richness(nodes, deck),
             "color_harmony": harmony,
+            "info_density": _info_density(nodes, rs.canvas_w, rs.canvas_h),
         }
         composite = 100.0 * sum(sub[k] * w.get(k, 0.0) for k in sub) / wsum
         weakest = min(sub, key=lambda k: sub[k])
