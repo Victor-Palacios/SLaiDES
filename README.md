@@ -55,15 +55,16 @@ in files:
 | [docs/EXAMPLES_INDEX.md](docs/EXAMPLES_INDEX.md) | Generated inventory of every example deck (slide count + component sequence), produced by `scripts/build_examples_index.py`; a test keeps it in sync |
 
 The schedule is [`.github/workflows/nightly.yml`](.github/workflows/nightly.yml):
-a GitHub Actions cron job (**09:00 UTC ≈ 02:00 Pacific, nightly**) running
+a GitHub Actions cron job (**05:00 UTC ≈ 22:00 (10pm) Pacific, nightly**) running
 `anthropics/claude-code-action@v1` on Opus with the contents of `NIGHTLY_PROMPT.md`,
 tools scoped to `Read,Edit,Write,Bash` plus `WebSearch,WebFetch` for the research
 task. (The plan's preferred mechanisms — Claude Code Routines or a local crontab —
 aren't durable in the ephemeral cloud environment this repo is developed in;
 see NOTES.md.)
 
-A **second** scheduled session, [`.github/workflows/pr-brainstorm.yml`](.github/workflows/pr-brainstorm.yml)
-(**13:30 UTC, 4.5 h after the build**), runs `BRAINSTORM_PROMPT.md`: it reads the open
+A **second** session, [`.github/workflows/pr-brainstorm.yml`](.github/workflows/pr-brainstorm.yml)
+(**manual only** — its nightly cron was disabled 2026-06-19 by operator request; run it on
+demand from the Actions tab via *Run workflow*), runs `BRAINSTORM_PROMPT.md`: it reads the open
 pull requests (read-only `gh`, `pull-requests: read`), evaluates each for utility against
 `PLAN.md`, and appends *approvable* ideas to [IDEAS.md](IDEAS.md). It is brainstorm-only —
 it never merges, comments on, or modifies PRs or product code; its sole write is `IDEAS.md`,

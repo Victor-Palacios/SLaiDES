@@ -1,6 +1,7 @@
 # Second unattended session for slidekit: PR triage + idea brainstorming.
-# Runs 4.5 HOURS AFTER the nightly build — the build fires at 09:00 UTC (see
-# nightly.yml) and times out at 180m, so by 13:30 UTC it has finished.
+# MANUAL ONLY since 2026-06-19 (its nightly cron was disabled by operator request — see the
+# `on:` block). Trigger it on demand from the Actions tab; run it after a nightly build has
+# finished if you want it to evaluate the latest state.
 # This session READS open PRs (gh CLI, pull-requests: read), evaluates each for
 # utility against PLAN.md, and appends brainstormed ideas to IDEAS.md for the
 # operator to review and approve. It is BRAINSTORM-ONLY: it never merges, comments
@@ -10,9 +11,12 @@
 name: pr-brainstorm-slidekit
 
 on:
-  schedule:
-    # 13:30 UTC = 4.5 hours after the nightly build's 09:00 UTC start (06:30 Pacific PDT).
-    - cron: "30 13 * * *"
+  # Nightly schedule DISABLED 2026-06-19 (operator request — "turn off the second job at
+  # night"). This session now runs MANUALLY ONLY via workflow_dispatch (Actions tab →
+  # pr-brainstorm-slidekit → Run workflow). To re-enable the nightly cron, uncomment the
+  # schedule block below (it ran at 13:30 UTC = 06:30 Pacific PDT, 4.5h after the build).
+  # schedule:
+  #   - cron: "30 13 * * *"
   workflow_dispatch: {}
 
 # Independent of the nightly build's concurrency group; they are 6h apart and never overlap.

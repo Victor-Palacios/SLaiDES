@@ -134,3 +134,31 @@ guide + `slidekit author` AND a deterministic recommender):
   (outline → recommend/validate → lint → render), with `examples/author-demo/`.
 The aesthetic scorer and standing research are now BACKGROUND (kept, not deleted). See the
 NIGHTLY_PROMPT "NORTH-STAR PRIORITY" section.
+
+## Schedule changes — nightly to 10pm Pacific, brainstorm cron off (2026-06-19)
+
+Operator request: "turn off the second job at night, and move the first job to 10pm
+California time." Implemented:
+- **Nightly build** (`.github/workflows/nightly.yml`): cron moved `0 9 * * *` → `0 5 * * *`.
+  GitHub cron is UTC and ignores DST; 05:00 UTC = 22:00 (10pm) America/Los_Angeles during PDT,
+  i.e. ~4h earlier than the previous 09:00 UTC / 02:00 PDT slot. (When PST returns in November,
+  05:00 UTC = 21:00 / 9pm Pacific — acceptable; the cron stays fixed in UTC by design.)
+- **PR-brainstorm** (`.github/workflows/pr-brainstorm.yml`): the nightly `schedule:` cron
+  (was `30 13 * * *`) is commented out — the session is now MANUAL ONLY via `workflow_dispatch`
+  (Actions tab → Run workflow). Re-enable by uncommenting the schedule block.
+- README schedule wording updated to match. GitHub may take a cycle to register the new cron,
+  so the 05:00 UTC slot likely first fires the following night.
+
+## Operator layout-feedback loop (2026-06-19)
+
+Added a phone-native channel for per-layout feedback that feeds the nightly, reusing the
+established "structured file → rendered markdown → AI consumes & annotates" pattern (cf.
+board.yaml/IDEAS.md): the *Layout feedback* GitHub issue form
+(`.github/ISSUE_TEMPLATE/layout-feedback.yml`, dropdown generated from the catalog) →
+`feedback-intake.yml` (owner-gated, untrusted-body-safe) records each comment in
+`FEEDBACK.yaml` and regenerates `FEEDBACK.md` → the nightly treats `status: open` comments as
+actionable (no approval step, since they're operator-authored), queues board tasks under the
+`feedback` epic, and marks them `done`/`wontfix`. Chosen over a GitHub Pages console because
+Pages can't serve a private repo without a paid plan; Issue Forms render natively in the GitHub
+mobile app with zero hosting. See `src/slidekit/feedback/`, the new scripts, and the
+NIGHTLY_PROMPT "FEEDBACK INTAKE" addendum.
