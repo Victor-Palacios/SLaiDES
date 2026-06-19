@@ -251,8 +251,8 @@ def _band(v: float, lo: float, hi: float, soft_lo: float, soft_hi: float) -> flo
     return max(0.0, (soft_hi - v) / (soft_hi - hi)) if soft_hi > hi else 0.0
 
 
-# Info-density bands (HEURISTIC; "Math Behind Effective Slide Design" guidance — one
-# idea per slide, the 6×6 rule, assertion–evidence). Word band is generous on the low
+# Info-density bands (HEURISTIC; direction sourced from ref #20 Alley & Neeley 2005 —
+# assertion–evidence, one idea per slide, against text-dense slides). Word band is generous on the low
 # end so deliberately-sparse hero layouts (big-number, statement, quote) are NOT
 # penalised; the metric primarily catches CROWDING. Text-coverage band is text rect
 # area / canvas area. See docs/RESEARCH_TRACE.md.
@@ -267,7 +267,11 @@ def _info_density(nodes, cw: int, ch: int) -> float:
 
     A slide with NO text node is intentionally visual (e.g. image-full-bleed): there is
     no text to be crowded or barren, so it earns full credit. A slide with no content
-    nodes at all scores 0.0, consistent with the other metrics."""
+    nodes at all scores 0.0, consistent with the other metrics.
+
+    ref #20 (Alley & Neeley, Tech. Comm. 2005) — assertion–evidence: one idea per slide,
+    against text-dense slides — backs the metric's direction; the bands are HEURISTIC.
+    See docs/RESEARCH_TRACE.md."""
     if not nodes:
         return 0.0
     text_nodes = [n for n in nodes if n.node_type == "text"]
@@ -423,7 +427,9 @@ def _color_harmony(deck: "DeckIR") -> float:
     recognised relationship (mono / analogous / triadic / split-comp / complementary).
     Near-grey roles are ignored; a single chromatic role is treated as inoffensive.
 
-    HEURISTIC — classical colour theory, no primary source cited; docs/RESEARCH_TRACE.md."""
+    ref #19 (Cohen-Or et al., SIGGRAPH 2006) — harmonic hue-wheel templates are the
+    primary basis for rewarding recognised hue relationships; the 30° tolerance is
+    HEURISTIC. See docs/RESEARCH_TRACE.md."""
     pal = deck.theme.palette
     chromatic = []
     for c in (pal.primary, pal.accent):

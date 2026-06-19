@@ -6,7 +6,7 @@ layout / presentation aesthetics mathematically**. Grown by the nightly routine
 works, verifies them against a primary source, records how each informs slidekit,
 and integrates concrete deterministic metrics into Phase 10 (`docs/AESTHETICS.md`).
 
-**Goal: ~20 distinct VERIFIED references.**  **Current: 18 (18 verified, 0 secondhand).**
+**Goal: ~20 distinct VERIFIED references.**  **Current: 20 (20 verified, 0 secondhand).**  Target reached.
 
 Status key — **VERIFIED**: confirmed from a primary source (arXiv / venue / DOI /
 official code). **SECONDHAND**: carried from an operator-pasted synthesis, not yet
@@ -32,6 +32,8 @@ independently confirmed; verify and upgrade before relying on it.
 | 16 | **Lok, Feiner & Ngai — Evaluation of visual balance for automated layout** — Proc. 9th Int. Conf. on Intelligent User Interfaces (IUI '04), pp. 101–108; DOI 10.1145/964460.964462 | 2004 | **VERIFIED** | A primary source defining a **visual-balance metric for automated layout**: each element contributes a *visual weight* (a closed-form function of its bounding box — area/position) and balance is scored from the resulting moment about the layout centre. Geometry-only, no render — a direct primary reference for slidekit's `_balance` sub-score (which currently cites only Ngo #4) and a companion to the moment-based VME model (#18). (Verified 2026-06-18 from Crossref DOI metadata: authors Lok/Feiner/Ngai, IUI '04.) |
 | 17 | **Bauerly & Liu — Computational modeling and experimental investigation of effects of compositional elements on interface and design aesthetics** — Int. J. Human-Computer Studies 64(8):670–682; DOI 10.1016/j.ijhcs.2006.01.002 | 2006 | **VERIFIED** | Computational models of **symmetry** and **balance** computed from the bounding boxes of compositional elements, validated against human aesthetic judgments across two experiments. Primary, human-validated source for slidekit's geometry-only `_balance` definition and the symmetry component of visual order. No render. (Verified 2026-06-18 from Crossref DOI metadata: IJHCS 64(8):670–682, 2006.) |
 | 18 | **Zhang & Xue — Visual Moment Equilibrium: A Computational Cognitive Model for Assessing Visual Balance in Interface Layout Aesthetics** — Symmetry 18(1):41; DOI 10.3390/sym18010041 | 2026 | **VERIFIED** | Models visual balance as a **moment-equilibrium force field** over layout elements (a *Measured Balance index* with psychophysical transforms), specifically targeting **asymmetric** layouts that simpler centroid-distance balance scores mishandle. Geometry-computable (element positions/weights, no render); a recent primary source motivating a future refinement of slidekit's `_balance` metric toward a moment-based formulation for off-centre compositions. (Verified 2026-06-18 from Crossref DOI + MDPI abstract.) |
+| 19 | **Cohen-Or, Sorkine, Gal, Leyvand & Xu — Color Harmonization** — ACM SIGGRAPH 2006 / ACM TOG 25(3):624–630; DOI 10.1145/1141911.1141933 | 2006 | **VERIFIED** | Defines a small set of **harmonic colour schemes as templates on the hue wheel** (the i/V/L/I/T/Y/X types — pairs/sectors of hues at fixed angular relationships) and harmonises an image to the nearest template. The hue-template formulation is the primary source for slidekit's `_color_harmony` sub-score, which rewards palette roles whose hue-angle difference matches a recognised relationship (mono/analogous/complementary/triadic). Hue-angle geometry only — no render needed for slidekit's theme-palette use. (Verified 2026-06-19 from ACM DL listing + ETH IGL / TAU project pages; authors + DOI + venue confirmed.) |
+| 20 | **Alley & Neeley — Rethinking the design of presentation slides: A case for sentence headlines and visual evidence** — Technical Communication 52(4):417–426 | 2005 | **VERIFIED** | The **assertion–evidence** approach: each slide carries one succinct sentence assertion plus visual evidence, explicitly arguing **against text-dense, bulleted slides** (text-heavy slides impede comprehension; a later controlled study found the AE structure significantly improved recall, p < .01). Primary, presentation-specific source for slidekit's `info_density` sub-score (penalise crowding; one idea per slide), replacing the practitioner-essay basis. The specific word/coverage bands remain HEURISTIC. (Verified 2026-06-19 from Penn State pure.psu.edu listing + author-hosted PDF writing.engr.psu.edu/2005_alley_neeley.pdf; Technical Communication 52(4):417–426, 2005.) |
 
 ## Integration log
 
@@ -91,6 +93,16 @@ independently confirmed; verify and upgrade before relying on it.
   symmetry/balance models), and **#18 Zhang & Xue — Visual Moment Equilibrium** (Symmetry 18(1):41,
   2026, DOI 10.3390/sym18010041, a moment-equilibrium balance model for asymmetric layouts). All three
   verified from Crossref DOI metadata (and #18's MDPI abstract); all geometry-computable, no render.
+- 2026-06-19: **reached the ~20 target** — added two verified primary sources, each closing a metric
+  lineage that was previously HEURISTIC-with-no-source. **#19 Cohen-Or et al. — Color Harmonization**
+  (SIGGRAPH 2006 / TOG 25(3):624–630, DOI 10.1145/1141911.1141933): its harmonic hue-wheel templates
+  are the primary basis for `_color_harmony` (hue-angle relationships between palette roles); the
+  RESEARCH_TRACE row is upgraded from "no primary source" to cite #19 (the 30° tolerance stays
+  HEURISTIC). **#20 Alley & Neeley — assertion–evidence slide design** (Technical Communication
+  52(4):417–426, 2005): a presentation-specific primary source against text-dense slides, now backing
+  the new `info_density` sub-score (T-019) in place of a practitioner essay. Running count
+  **20/~20, all 20 verified, 0 secondhand — target reached.** Per the standing task, future sessions
+  add only genuinely novel high-quality works and focus on integration + (deferred) calibration.
   Integration direction: #16 + #18 both frame balance as a *moment* about the layout centre — slidekit's
   current `_balance` uses centroid distance from centre, a special case; a future Phase 10 refinement
   could adopt the area-weighted moment formulation for off-centre compositions (logged, not yet applied;
