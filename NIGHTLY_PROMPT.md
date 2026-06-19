@@ -228,8 +228,9 @@ PROGRESS.md stays the canonical phase/acceptance ledger. Keep them coordinated:
   `created`/`updated`) for any genuinely new work you discover — do NOT silently expand scope
   (scope proposals still go in NOTES.md).
 - Columns are exactly `[backlog, todo, in_progress, blocked, done]`; epics are `phase-9`,
-  `phase-10`, `research`, and `ideas` (operator-approved IDEAS.md items). Edit ONLY
-  `board.yaml`, never `BOARD.md` by hand.
+  `phase-10`, `research`, `ideas` (operator-approved IDEAS.md items), `pipeline`, and
+  `feedback` (operator layout feedback from FEEDBACK.yaml). Edit ONLY `board.yaml`, never
+  `BOARD.md` by hand.
 - ALWAYS re-render before committing: run `python scripts/render_board.py`, then commit
   `board.yaml` + `BOARD.md` together. A test (`tests/test_board`) fails if BOARD.md is stale,
   so run the suite at wrap-up as usual.
@@ -254,3 +255,26 @@ startup, right after reading the board:
   line so the operator sees it landed. Commit IDEAS.md alongside the board + code changes.
 - If an approved idea is genuinely out of scope or unsafe on inspection, do NOT implement it:
   leave it, and record the objection in NOTES.md (same as any disputed scope).
+
+=== FEEDBACK INTAKE (added 2026-06-19; operator request) ===
+The operator files per-layout comments from their phone via the *Layout feedback* GitHub
+issue form (`.github/ISSUE_TEMPLATE/layout-feedback.yml`); the `feedback-intake` workflow
+records each as an entry in `FEEDBACK.yaml` (source of truth) and regenerates `FEEDBACK.md`.
+This is operator-authored input (unlike IDEAS.md proposals it needs NO approval step) — treat
+every `status: open` comment as actionable. Each session, run this intake right after the
+APPROVED IDEAS intake:
+- Read `FEEDBACK.yaml`. For each comment with `status: open` NOT already on the board: add a
+  board task (next free `T-NNN`, `epic: feedback`, `column: todo`, a `priority` matching its
+  `severity`, today's dates) whose `notes` cite the comment id + component, then set that
+  comment's `notes` to ` queued as T-NNN` (edit `FEEDBACK.yaml`, never `FEEDBACK.md` by hand).
+- Work feedback tasks like any board card under the SAME gates (acceptance/lint/determinism,
+  full suite green) and the SAME hard phase order — feedback is first-class but must not jump a
+  phase gate. A layout change means updating the engine/handlers and regenerating goldens, the
+  registry/taxonomy/selection docs, and the example PDFs as usual.
+- When a feedback task reaches `done`, set the comment's `status: done` and put the commit ref
+  in its `notes`. If on inspection a comment is wrong/unsafe/out of scope, set `status: wontfix`
+  with the reason in `notes` (and record disputed scope in NOTES.md) — do not silently drop it.
+- ALWAYS regenerate before committing: `python scripts/render_feedback.py` (and
+  `python scripts/build_feedback_form.py` if components changed), then commit `FEEDBACK.yaml` +
+  `FEEDBACK.md` (+ the form) with the board + code. `tests/test_feedback` fails if either the
+  rendered markdown or the issue form drifts, so run the suite at wrap-up as usual.

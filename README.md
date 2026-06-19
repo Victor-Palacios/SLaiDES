@@ -72,6 +72,25 @@ which you review and approve. **Closing the loop:** when you mark an item `(appr
 rule), queues it on the board under the `ideas` epic, and works it through the same gates —
 annotating the `IDEAS.md` line as `→ queued as T-NNN` then `→ done (commit …)`.
 
+### Leaving feedback on a layout (from your phone)
+
+To comment on a specific slide layout, open **Issues → New issue → Layout feedback**
+(the [`.github/ISSUE_TEMPLATE/layout-feedback.yml`](.github/ISSUE_TEMPLATE/layout-feedback.yml)
+form — it renders as a native form in the GitHub mobile app, so no website or local setup
+is needed). Pick the layout from the dropdown (all 40 components, generated from the
+catalog so it can't drift), type your comment, and submit. To *see* the layouts first,
+open the latest combined preview PDF under
+[`examples/pdf/combined/`](examples/pdf/combined) — GitHub renders PDFs on mobile.
+
+The [`feedback-intake`](.github/workflows/feedback-intake.yml) workflow (which only acts
+on `feedback`-labelled issues **you** authored) records each comment in
+[`FEEDBACK.yaml`](FEEDBACK.yaml) (the source of truth), regenerates the readable
+[`FEEDBACK.md`](FEEDBACK.md), and closes the issue with a confirmation. The nightly then
+treats every `status: open` comment as actionable: it queues a board task under the
+`feedback` epic, makes the change through the usual gates, and marks the comment `done`
+(or `wontfix` with a reason). No approval step — feedback you file is yours, so it's acted
+on directly.
+
 ### What the nightly session does now
 
 The core build (Phases 0–8) is complete. Each nightly run now pursues two tracks:

@@ -2,9 +2,9 @@
 
 _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`, then re-render; do not hand-edit. The kanban view of the work; `PROGRESS.md` stays the acceptance ledger._
 
-**backlog** 1 · **todo** 0 · **in_progress** 0 · **blocked** 1 · **done** 36 · _last change 2026-06-19_
+**backlog** 1 · **todo** 0 · **in_progress** 0 · **blocked** 1 · **done** 37 · _last change 2026-06-19_
 
-| Backlog (1) | Todo (0) | In Progress (0) | Blocked (1) | Done (36) |
+| Backlog (1) | Todo (0) | In Progress (0) | Blocked (1) | Done (37) |
 |---|---|---|---|---|
 | **T-020** Harrington non-linear score combiner (ref #10) · _P10_ |  |  | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
 |  |  |  |  | **T-002** chart-slide design · _P9_ · `high` |
@@ -13,6 +13,7 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 |  |  |  |  | **T-034** honest layout taxonomy doc + reframe '40 distinct' · _PIPE_ · `high` |
 |  |  |  |  | **T-035** slidekit catalog + generated selection guide (LLM picks, no vision) · _PIPE_ · `high` |
 |  |  |  |  | **T-037** slidekit author: outline -> recommend/validate -> lint -> render · _PIPE_ · `high` |
+|  |  |  |  | **T-039** layout-feedback loop: issue form -> FEEDBACK.yaml -> render + nightly intake · _FB_ · `high` |
 |  |  |  |  | **T-003** chart-with-insight design · _P9_ |
 |  |  |  |  | **T-004** table-slide design · _P9_ |
 |  |  |  |  | **T-005** metric-comparison design · _P9_ |
@@ -52,4 +53,5 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 | Standing research task | 3 | 3 |
 | Operator-approved ideas (from IDEAS.md) | 4 | 4 |
 | North-star: honest taxonomy + LLM-selection pipeline | 6 | 6 |
+| Operator layout feedback (FEEDBACK.yaml issue-form loop) | 1 | 1 |
 

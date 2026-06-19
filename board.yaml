@@ -20,6 +20,7 @@ epics:
   - {id: research, title: "Standing research task", tag: RES}
   - {id: ideas,    title: "Operator-approved ideas (from IDEAS.md)", tag: IDEA}
   - {id: pipeline, title: "North-star: honest taxonomy + LLM-selection pipeline", tag: PIPE}
+  - {id: feedback, title: "Operator layout feedback (FEEDBACK.yaml issue-form loop)", tag: FB}
 
 tasks:
   # ── Phase 9: next group (E data) — todo ──────────────────────────────────────
@@ -71,3 +72,6 @@ tasks:
   - {id: T-036, title: "deterministic content-shape -> component recommender", epic: pipeline, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "done f54d384 — src/slidekit/select/recommend.py; 12 mapping tests"}
   - {id: T-037, title: "slidekit author: outline -> recommend/validate -> lint -> render", epic: pipeline, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "done e63eeca — src/slidekit/select/author.py + CLI; examples/author-demo; 7 tests; deterministic, vision-free"}
   - {id: T-038, title: "refocus nightly + NOTES + close PR #7", epic: pipeline, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "done 922ceb1 — NIGHTLY_PROMPT NORTH-STAR PRIORITY + NOTES realignment; PR #7 closed (similarity concern absorbed by the honest taxonomy)"}
+
+  # ── Operator layout-feedback loop (2026-06-19): phone issue-form -> FEEDBACK.yaml -> nightly ──
+  - {id: T-039, title: "layout-feedback loop: issue form -> FEEDBACK.yaml -> render + nightly intake", epic: feedback, column: done, priority: high, created: 2026-06-19, updated: 2026-06-19, notes: "done — src/slidekit/feedback (store+intake), scripts/{render_feedback,build_feedback_form,feedback_intake}.py, .github/ISSUE_TEMPLATE/layout-feedback.yml (generated from catalog), .github/workflows/feedback-intake.yml (owner-gated), FEEDBACK.yaml/FEEDBACK.md; 17 tests; NIGHTLY_PROMPT FEEDBACK INTAKE addendum"}
