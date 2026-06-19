@@ -346,16 +346,12 @@ def _layout_icon_text_rows(slide: IconTextRowsSlide, cx, cy, cw, ch, font, ts, p
     n_rows = len(slide.rows)
     available_h = cy + ch - y - gap * max(0, n_rows - 1)
     row_h = max(1, available_h // n_rows)
-    icon_size = int(0.6 * EMU_PER_INCH)
-    text_x = cx + icon_size + int(0.2 * EMU_PER_INCH)
-    text_w = cw - icon_size - int(0.2 * EMU_PER_INCH)
+    # Operator feedback (issue #9): drop the filled accent "bubble" disc; the rows are
+    # heading + body spanning the full width.
+    text_x = cx
+    text_w = cw
 
     for row in slide.rows:
-        icon_rect = Rect(cx, y + (row_h - icon_size) // 2, icon_size, icon_size)
-        nodes.append(ResolvedNode(_nid("icon"), "icon", icon_rect,
-                                  slot_type="icon", text_content=row.icon,
-                                  fill_color=palette.accent))
-
         heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
         body_h = row_h - heading_h - gap
         nodes.append(_make_text_node(_nid("heading"), row.heading, font, ts.body,
@@ -385,13 +381,19 @@ def _layout_stat_callout(slide: StatCalloutSlide, cx, cy, cw, ch, font, ts, pale
     stat_w = (cw - gap * (n_stats - 1)) // n_stats if n_stats else cw
     stat_h = cy + ch - y
 
+    # Operator feedback (issue #10): a uniform block height + shared top y so every
+    # column's value (and label) align across columns, regardless of which stats carry a
+    # subtext. (Previously each column self-centred its own block, so a column without a
+    # subtext sat lower than its neighbours.)
+    value_h = int(ts.title * LINE_SPACING_SINGLE * EMU_PER_PT)
+    label_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    has_sub = any(stat.subtext for stat in slide.stats)
+    sub_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT) if has_sub else 0
+    block_h = value_h + gap + label_h + (gap + sub_h if has_sub else 0)
+    inner_y = y + max(0, (stat_h - block_h) // 2)
+
     for i, stat in enumerate(slide.stats):
         sx = cx + i * (stat_w + gap)
-        value_h = int(ts.title * LINE_SPACING_SINGLE * EMU_PER_PT)
-        label_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-        sub_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT) if stat.subtext else 0
-
-        inner_y = y + (stat_h - value_h - label_h - sub_h - gap * 2) // 2
         nodes.append(_make_text_node(_nid("stat_value"), stat.value, font, ts.title,
                                      bold=True, italic=False,
                                      rect=Rect(sx, inner_y, stat_w, value_h),
@@ -402,7 +404,7 @@ def _layout_stat_callout(slide: StatCalloutSlide, cx, cy, cw, ch, font, ts, pale
         if stat.subtext:
             nodes.append(_make_text_node(_nid("stat_sub"), stat.subtext, font, ts.caption,
                                          bold=False, italic=False,
-                                         rect=Rect(sx, inner_y + value_h + label_h + gap * 2, stat_w, sub_h),
+                                         rect=Rect(sx, inner_y + value_h + gap + label_h + gap, stat_w, sub_h),
                                          is_caption=True))
 
     return nodes
@@ -550,7 +552,6 @@ def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -
     available_h = cy + ch - y
     card_h = (available_h - gap * (rows - 1)) // rows
 
-    icon_size = int(0.5 * EMU_PER_INCH)
     inner_gap = int(0.15 * EMU_PER_INCH)
 
     for i, card in enumerate(slide.cards):
@@ -560,13 +561,9 @@ def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -
         card_y = y + row_i * (card_h + gap)
         gid = f"card_{i}"
 
+        # Operator feedback (issue #12): drop the filled accent "bubble" disc; cards are
+        # title + body starting at the top of the cell.
         inner_y = card_y
-        if card.icon:
-            icon_rect = Rect(card_x, inner_y, icon_size, icon_size)
-            nodes.append(ResolvedNode(_nid("card_icon"), "icon", icon_rect,
-                                      slot_type="icon", text_content=card.icon,
-                                      group_id=gid, fill_color=palette.accent))
-            inner_y += icon_size + inner_gap
 
         title_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
         body_h = card_h - (inner_y - card_y) - title_h - inner_gap
@@ -808,15 +805,14 @@ def _layout_feature_list(slide: FeatureListSlide, cx, cy, cw, ch, font, ts, pale
     n = len(slide.features)
     avail = cy + ch - y
     slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
-    icon = int(0.6 * EMU_PER_INCH)
-    text_x = cx + icon + int(0.25 * EMU_PER_INCH)
-    text_w = cw - icon - int(0.25 * EMU_PER_INCH)
+    # Operator feedback (issue #13): drop the filled accent "bubble" disc; each feature is
+    # heading + body spanning the full width.
+    text_x = cx
+    text_w = cw
     heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     inner = int(0.1 * EMU_PER_INCH)
     for i, feat in enumerate(slide.features):
         gid = f"feat_{i}"
-        nodes.append(ResolvedNode(_nid("feat_icon"), "icon", Rect(cx, y, icon, icon),
-                                  slot_type="icon", text_content=feat.icon, group_id=gid))
         nodes.append(_make_text_node(_nid("feat_head"), feat.heading, font, ts.body,
                                      bold=True, italic=False,
                                      rect=Rect(text_x, y, text_w, heading_h), group_id=gid))

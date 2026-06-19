@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_58",
+          "node_id": "title_19",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#880E4F"
         },
         {
-          "node_id": "image_59",
+          "node_id": "image_20",
           "node_type": "image",
           "rect": {
             "x": 457200,
@@ -44,7 +44,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_60",
+          "node_id": "content_text_21",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -73,11 +73,11 @@
           "italic": false
         },
         {
-          "node_id": "content_text_61",
+          "node_id": "content_text_22",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 4632960,
+            "y": 2901696,
             "w": 5501640,
             "h": 1127760
           },
@@ -104,7 +104,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_62",
+          "node_id": "chrome_pagenum_23",
           "node_type": "text",
           "rect": {
             "x": 10363200,

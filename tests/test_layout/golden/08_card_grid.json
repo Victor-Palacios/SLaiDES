@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_63",
+          "node_id": "title_24",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,25 +32,11 @@
           "text_color": "#01579B"
         },
         {
-          "node_id": "card_icon_64",
-          "node_type": "icon",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 457200,
-            "h": 457200
-          },
-          "text_content": "analytics",
-          "group_id": "card_0",
-          "slot_type": "icon",
-          "fill_color": "#E65100"
-        },
-        {
-          "node_id": "card_title_65",
+          "node_id": "card_title_25",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2093976,
+            "y": 1499616,
             "w": 2613660,
             "h": 518159
           },
@@ -70,13 +56,13 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_body_66",
+          "node_id": "card_body_26",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2749295,
+            "y": 2154935,
             "w": 2613660,
-            "h": 3011425
+            "h": 3605785
           },
           "text_content": "Live data and AI analytics.",
           "lines": [
@@ -106,25 +92,11 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_icon_67",
-          "node_type": "icon",
-          "rect": {
-            "x": 3345180,
-            "y": 1499616,
-            "w": 457200,
-            "h": 457200
-          },
-          "text_content": "shield",
-          "group_id": "card_1",
-          "slot_type": "icon",
-          "fill_color": "#E65100"
-        },
-        {
-          "node_id": "card_title_68",
+          "node_id": "card_title_27",
           "node_type": "text",
           "rect": {
             "x": 3345180,
-            "y": 2093976,
+            "y": 1499616,
             "w": 2613660,
             "h": 518159
           },
@@ -144,13 +116,13 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_body_69",
+          "node_id": "card_body_28",
           "node_type": "text",
           "rect": {
             "x": 3345180,
-            "y": 2749295,
+            "y": 2154935,
             "w": 2613660,
-            "h": 3011425
+            "h": 3605785
           },
           "text_content": "Zero-trust, SOC 2 ready.",
           "lines": [
@@ -180,25 +152,11 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_icon_70",
-          "node_type": "icon",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 457200,
-            "h": 457200
-          },
-          "text_content": "bolt",
-          "group_id": "card_2",
-          "slot_type": "icon",
-          "fill_color": "#E65100"
-        },
-        {
-          "node_id": "card_title_71",
+          "node_id": "card_title_29",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 2093976,
+            "y": 1499616,
             "w": 2613660,
             "h": 518159
           },
@@ -218,13 +176,13 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_body_72",
+          "node_id": "card_body_30",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 2749295,
+            "y": 2154935,
             "w": 2613660,
-            "h": 3011425
+            "h": 3605785
           },
           "text_content": "Sub-100ms p99 latency.",
           "lines": [
@@ -248,25 +206,11 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_icon_73",
-          "node_type": "icon",
-          "rect": {
-            "x": 9121140,
-            "y": 1499616,
-            "w": 457200,
-            "h": 457200
-          },
-          "text_content": "puzzle",
-          "group_id": "card_3",
-          "slot_type": "icon",
-          "fill_color": "#E65100"
-        },
-        {
-          "node_id": "card_title_74",
+          "node_id": "card_title_31",
           "node_type": "text",
           "rect": {
             "x": 9121140,
-            "y": 2093976,
+            "y": 1499616,
             "w": 2613660,
             "h": 518159
           },
@@ -286,13 +230,13 @@
           "group_id": "card_3"
         },
         {
-          "node_id": "card_body_75",
+          "node_id": "card_body_32",
           "node_type": "text",
           "rect": {
             "x": 9121140,
-            "y": 2749295,
+            "y": 2154935,
             "w": 2613660,
-            "h": 3011425
+            "h": 3605785
           },
           "text_content": "300+ open connectors.",
           "lines": [
@@ -318,7 +262,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_76",
+          "node_id": "chrome_pagenum_33",
           "node_type": "text",
           "rect": {
             "x": 10363200,

@@ -1,2 +1,62 @@
 version: 1
-comments: []
+comments:
+- id: FB-001
+  component: icon-text-rows
+  family: icon-text-rows
+  status: done
+  severity: med
+  comment: remove the large bubbles
+  created: '2026-06-19'
+  updated: '2026-06-19'
+  source: 'issue #9'
+  notes: 'issue #9: removed accent ''bubble'' disc; icon-text-rows is heading+body full-width'
+- id: FB-002
+  component: stat-callout
+  family: stat-callout
+  status: done
+  severity: med
+  comment: "alignment is wrong for middle column (top \nmost text should align with right and left text)"
+  created: '2026-06-19'
+  updated: '2026-06-19'
+  source: 'issue #10'
+  notes: 'issue #10: uniform block height + shared top y so every column''s value/label align'
+- id: FB-003
+  component: image-half-bleed
+  family: two-column
+  status: done
+  severity: med
+  comment: text on the bottom right looks odd - should come after the first block of text (too much white space between text)
+  created: '2026-06-19'
+  updated: '2026-06-19'
+  source: 'issue #11'
+  notes: 'issue #11: removed expanding spacer so the second text block follows the first'
+- id: FB-004
+  component: card-grid
+  family: card-grid
+  status: done
+  severity: med
+  comment: remove bubbles
+  created: '2026-06-19'
+  updated: '2026-06-19'
+  source: 'issue #12'
+  notes: 'issue #12: removed accent ''bubble'' disc from cards'
+- id: FB-005
+  component: feature-list
+  family: icon-text-rows
+  status: done
+  severity: med
+  comment: get rid of bubbles
+  created: '2026-06-19'
+  updated: '2026-06-19'
+  source: 'issue #13'
+  notes: 'issue #13: removed accent ''bubble'' disc; feature-list is heading+body full-width'
+- id: FB-006
+  component: checklist
+  family: marker-list
+  status: open
+  severity: med
+  comment: delete this layout
+  created: '2026-06-19'
+  updated: '2026-06-19'
+  source: 'issue #14'
+  notes: 'issue #14: ''delete this layout'' HELD for operator confirmation — removing a component ripples through IR/engine/registry/examples/goldens (destructive).'

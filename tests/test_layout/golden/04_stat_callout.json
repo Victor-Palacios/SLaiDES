@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_22",
+          "node_id": "title_9",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#1A237E"
         },
         {
-          "node_id": "stat_value_23",
+          "node_id": "stat_value_10",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -56,7 +56,7 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_24",
+          "node_id": "stat_label_11",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -79,7 +79,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_25",
+          "node_id": "stat_sub_12",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -103,11 +103,11 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_26",
+          "node_id": "stat_value_13",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 2639568,
+            "y": 2449068,
             "w": 3576320,
             "h": 914400
           },
@@ -127,11 +127,11 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_27",
+          "node_id": "stat_label_14",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 3828288,
+            "y": 3637788,
             "w": 3576320,
             "h": 518159
           },
@@ -150,7 +150,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_28",
+          "node_id": "stat_value_15",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -174,7 +174,7 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_29",
+          "node_id": "stat_label_16",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -197,7 +197,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_30",
+          "node_id": "stat_sub_17",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -223,7 +223,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_31",
+          "node_id": "chrome_pagenum_18",
           "node_type": "text",
           "rect": {
             "x": 10363200,

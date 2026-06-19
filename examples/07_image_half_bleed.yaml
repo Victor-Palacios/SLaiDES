@@ -21,7 +21,5 @@ slides:
     content:
       - type: text
         content: "Built with customers, not just for them."
-      - type: spacer
-        size: 1
       - type: text
         content: "60% faster rollout; 50% fewer tickets."

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_77",
+          "node_id": "title_34",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -32,7 +32,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "subtitle_78",
+          "node_id": "subtitle_35",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -65,7 +65,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_79",
+          "node_id": "title_36",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -89,7 +89,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "stat_value_80",
+          "node_id": "stat_value_37",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -113,7 +113,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_81",
+          "node_id": "stat_label_38",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -136,7 +136,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_82",
+          "node_id": "stat_sub_39",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -160,11 +160,11 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_83",
+          "node_id": "stat_value_40",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 2639568,
+            "y": 2449068,
             "w": 3576320,
             "h": 914400
           },
@@ -184,11 +184,11 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_84",
+          "node_id": "stat_label_41",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 3828288,
+            "y": 3637788,
             "w": 3576320,
             "h": 518159
           },
@@ -207,7 +207,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_85",
+          "node_id": "stat_value_42",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -231,7 +231,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_86",
+          "node_id": "stat_label_43",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -254,7 +254,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_87",
+          "node_id": "stat_sub_44",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -280,7 +280,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_88",
+          "node_id": "chrome_pagenum_45",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -313,7 +313,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_89",
+          "node_id": "title_46",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -337,7 +337,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "left_col_text_90",
+          "node_id": "left_col_text_47",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -366,7 +366,7 @@
           "italic": false
         },
         {
-          "node_id": "left_col_text_91",
+          "node_id": "left_col_text_48",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -395,7 +395,7 @@
           "italic": false
         },
         {
-          "node_id": "left_col_text_92",
+          "node_id": "left_col_text_49",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -424,7 +424,7 @@
           "italic": false
         },
         {
-          "node_id": "right_col_text_93",
+          "node_id": "right_col_text_50",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -447,7 +447,7 @@
           "italic": false
         },
         {
-          "node_id": "right_col_text_94",
+          "node_id": "right_col_text_51",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -476,7 +476,7 @@
           "italic": false
         },
         {
-          "node_id": "right_col_text_95",
+          "node_id": "right_col_text_52",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -507,7 +507,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_96",
+          "node_id": "chrome_pagenum_53",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -540,7 +540,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_97",
+          "node_id": "title_54",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -564,7 +564,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "ev_date_98",
+          "node_id": "ev_date_55",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -589,7 +589,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_99",
+          "node_id": "ev_title_56",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -612,7 +612,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_100",
+          "node_id": "ev_desc_57",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -659,7 +659,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_101",
+          "node_id": "ev_date_58",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -684,7 +684,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_102",
+          "node_id": "ev_title_59",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -707,7 +707,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_103",
+          "node_id": "ev_desc_60",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -748,7 +748,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_104",
+          "node_id": "ev_date_61",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -773,7 +773,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_105",
+          "node_id": "ev_title_62",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -796,7 +796,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_106",
+          "node_id": "ev_desc_63",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -837,7 +837,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_107",
+          "node_id": "ev_date_64",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -862,7 +862,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_108",
+          "node_id": "ev_title_65",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -885,7 +885,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_109",
+          "node_id": "ev_desc_66",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -928,7 +928,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_110",
+          "node_id": "chrome_pagenum_67",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -961,7 +961,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_111",
+          "node_id": "title_68",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -985,25 +985,11 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "card_icon_112",
-          "node_type": "icon",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 457200,
-            "h": 457200
-          },
-          "text_content": "code",
-          "group_id": "card_0",
-          "slot_type": "icon",
-          "fill_color": "#E84545"
-        },
-        {
-          "node_id": "card_title_113",
+          "node_id": "card_title_69",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2093976,
+            "y": 1499616,
             "w": 2613660,
             "h": 518159
           },
@@ -1023,13 +1009,13 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_body_114",
+          "node_id": "card_body_70",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2749295,
+            "y": 2154935,
             "w": 2613660,
-            "h": 3011425
+            "h": 3605785
           },
           "text_content": "Reliability and dev tooling.",
           "lines": [
@@ -1059,25 +1045,11 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_icon_115",
-          "node_type": "icon",
-          "rect": {
-            "x": 3345180,
-            "y": 1499616,
-            "w": 457200,
-            "h": 457200
-          },
-          "text_content": "users",
-          "group_id": "card_1",
-          "slot_type": "icon",
-          "fill_color": "#E84545"
-        },
-        {
-          "node_id": "card_title_116",
+          "node_id": "card_title_71",
           "node_type": "text",
           "rect": {
             "x": 3345180,
-            "y": 2093976,
+            "y": 1499616,
             "w": 2613660,
             "h": 518159
           },
@@ -1097,13 +1069,13 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_body_117",
+          "node_id": "card_body_72",
           "node_type": "text",
           "rect": {
             "x": 3345180,
-            "y": 2749295,
+            "y": 2154935,
             "w": 2613660,
-            "h": 3011425
+            "h": 3605785
           },
           "text_content": "Enterprise sales and channels.",
           "lines": [
@@ -1133,25 +1105,11 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_icon_118",
-          "node_type": "icon",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 457200,
-            "h": 457200
-          },
-          "text_content": "globe",
-          "group_id": "card_2",
-          "slot_type": "icon",
-          "fill_color": "#E84545"
-        },
-        {
-          "node_id": "card_title_119",
+          "node_id": "card_title_73",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 2093976,
+            "y": 1499616,
             "w": 2613660,
             "h": 518159
           },
@@ -1171,13 +1129,13 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_body_120",
+          "node_id": "card_body_74",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 2749295,
+            "y": 2154935,
             "w": 2613660,
-            "h": 3011425
+            "h": 3605785
           },
           "text_content": "APAC and EMEA expansion.",
           "lines": [
@@ -1207,25 +1165,11 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_icon_121",
-          "node_type": "icon",
-          "rect": {
-            "x": 9121140,
-            "y": 1499616,
-            "w": 457200,
-            "h": 457200
-          },
-          "text_content": "chart-up",
-          "group_id": "card_3",
-          "slot_type": "icon",
-          "fill_color": "#E84545"
-        },
-        {
-          "node_id": "card_title_122",
+          "node_id": "card_title_75",
           "node_type": "text",
           "rect": {
             "x": 9121140,
-            "y": 2093976,
+            "y": 1499616,
             "w": 2613660,
             "h": 518159
           },
@@ -1245,13 +1189,13 @@
           "group_id": "card_3"
         },
         {
-          "node_id": "card_body_123",
+          "node_id": "card_body_76",
           "node_type": "text",
           "rect": {
             "x": 9121140,
-            "y": 2749295,
+            "y": 2154935,
             "w": 2613660,
-            "h": 3011425
+            "h": 3605785
           },
           "text_content": "Customer and usage insights.",
           "lines": [
@@ -1283,7 +1227,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_124",
+          "node_id": "chrome_pagenum_77",
           "node_type": "text",
           "rect": {
             "x": 10363200,

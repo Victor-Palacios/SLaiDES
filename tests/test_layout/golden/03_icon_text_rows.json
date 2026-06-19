@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_11",
+          "node_id": "title_1",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,25 +32,12 @@
           "text_color": "#0A3D62"
         },
         {
-          "node_id": "icon_12",
-          "node_type": "icon",
-          "rect": {
-            "x": 457200,
-            "y": 1844040,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "star",
-          "slot_type": "icon",
-          "fill_color": "#F39C12"
-        },
-        {
-          "node_id": "heading_13",
+          "node_id": "heading_2",
           "node_type": "text",
           "rect": {
-            "x": 1188720,
+            "x": 457200,
             "y": 1499616,
-            "w": 10546080,
+            "w": 11277600,
             "h": 518159
           },
           "text_content": "Excellence",
@@ -68,12 +55,12 @@
           "italic": false
         },
         {
-          "node_id": "body_14",
+          "node_id": "body_3",
           "node_type": "text",
           "rect": {
-            "x": 1188720,
+            "x": 457200,
             "y": 2292095,
-            "w": 10546080,
+            "w": 11277600,
             "h": 445009
           },
           "text_content": "High standards in every deliverable we ship.",
@@ -91,25 +78,12 @@
           "italic": false
         },
         {
-          "node_id": "icon_15",
-          "node_type": "icon",
-          "rect": {
-            "x": 457200,
-            "y": 3355848,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "handshake",
-          "slot_type": "icon",
-          "fill_color": "#F39C12"
-        },
-        {
-          "node_id": "heading_16",
+          "node_id": "heading_4",
           "node_type": "text",
           "rect": {
-            "x": 1188720,
+            "x": 457200,
             "y": 3011424,
-            "w": 10546080,
+            "w": 11277600,
             "h": 518159
           },
           "text_content": "Integrity",
@@ -127,12 +101,12 @@
           "italic": false
         },
         {
-          "node_id": "body_17",
+          "node_id": "body_5",
           "node_type": "text",
           "rect": {
-            "x": 1188720,
+            "x": 457200,
             "y": 3803903,
-            "w": 10546080,
+            "w": 11277600,
             "h": 445009
           },
           "text_content": "Transparent and honest in all we do.",
@@ -150,25 +124,12 @@
           "italic": false
         },
         {
-          "node_id": "icon_18",
-          "node_type": "icon",
-          "rect": {
-            "x": 457200,
-            "y": 4867656,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "lightbulb",
-          "slot_type": "icon",
-          "fill_color": "#F39C12"
-        },
-        {
-          "node_id": "heading_19",
+          "node_id": "heading_6",
           "node_type": "text",
           "rect": {
-            "x": 1188720,
+            "x": 457200,
             "y": 4523232,
-            "w": 10546080,
+            "w": 11277600,
             "h": 518159
           },
           "text_content": "Innovation",
@@ -186,12 +147,12 @@
           "italic": false
         },
         {
-          "node_id": "body_20",
+          "node_id": "body_7",
           "node_type": "text",
           "rect": {
-            "x": 1188720,
+            "x": 457200,
             "y": 5315711,
-            "w": 10546080,
+            "w": 11277600,
             "h": 445009
           },
           "text_content": "Investing in ideas that shape tomorrow.",
@@ -211,7 +172,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_21",
+          "node_id": "chrome_pagenum_8",
           "node_type": "text",
           "rect": {
             "x": 10363200,

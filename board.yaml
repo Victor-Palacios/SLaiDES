@@ -75,3 +75,11 @@ tasks:
 
   # ── Operator layout-feedback loop (2026-06-19): phone issue-form -> FEEDBACK.yaml -> nightly ──
   - {id: T-039, title: "layout-feedback loop: issue form -> FEEDBACK.yaml -> render + nightly intake", epic: feedback, column: done, priority: high, created: 2026-06-19, updated: 2026-06-19, notes: "done — src/slidekit/feedback (store+intake), scripts/{render_feedback,build_feedback_form,feedback_intake}.py, .github/ISSUE_TEMPLATE/layout-feedback.yml (generated from catalog), .github/workflows/feedback-intake.yml (owner-gated), FEEDBACK.yaml/FEEDBACK.md; 17 tests; NIGHTLY_PROMPT FEEDBACK INTAKE addendum"}
+
+  # ── Operator feedback intake 2026-06-19 (issues #9–#14 -> FB-001..FB-006) ──
+  - {id: T-040, title: "icon-text-rows: remove accent bubble disc (FB-001 / issue #9)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — engine drops the icon node; rows are heading+body full-width; goldens+PDFs regen"}
+  - {id: T-041, title: "stat-callout: top-align columns regardless of subtext (FB-002 / issue #10)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — uniform block height + shared inner_y so values/labels align across columns"}
+  - {id: T-042, title: "image-half-bleed: pack second text block after first (FB-003 / issue #11)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — removed expanding spacer slot from the specimen so blocks top-pack"}
+  - {id: T-043, title: "card-grid: remove accent bubble disc (FB-004 / issue #12)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — engine drops the card icon node; cards are title+body from the top"}
+  - {id: T-044, title: "feature-list: remove accent bubble disc (FB-005 / issue #13)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — engine drops the icon node; full-width heading+body"}
+  - {id: T-045, title: "checklist: 'delete this layout' (FB-006 / issue #14) — confirm before removing", epic: feedback, column: blocked, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "HELD — deleting a component is destructive (IR/engine/registry/examples/goldens/recommender); awaiting operator go-ahead"}

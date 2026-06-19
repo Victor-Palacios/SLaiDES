@@ -22,8 +22,12 @@ concurrency:
 
 jobs:
   intake:
+    # Trigger on the `feedback` label OR the form's `[feedback]` title prefix — the label
+    # only applies if it already exists in the repo, so the title prefix keeps intake working
+    # even before the label is created. Always gated to issues the repo owner authored.
     if: >-
-      contains(github.event.issue.labels.*.name, 'feedback') &&
+      (contains(github.event.issue.labels.*.name, 'feedback') ||
+       startsWith(github.event.issue.title, '[feedback]')) &&
       github.event.issue.user.login == github.repository_owner
     runs-on: ubuntu-latest
     steps:

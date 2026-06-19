@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_240",
+          "node_id": "title_136",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -31,25 +31,12 @@
           "italic": false
         },
         {
-          "node_id": "feat_icon_241",
-          "node_type": "icon",
+          "node_id": "feat_head_137",
+          "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "shield",
-          "group_id": "feat_0",
-          "slot_type": "icon"
-        },
-        {
-          "node_id": "feat_head_242",
-          "node_type": "text",
-          "rect": {
-            "x": 1234440,
-            "y": 1499616,
-            "w": 10500360,
+            "w": 11277600,
             "h": 518159
           },
           "text_content": "Secure by default",
@@ -68,12 +55,12 @@
           "group_id": "feat_0"
         },
         {
-          "node_id": "feat_body_243",
+          "node_id": "feat_body_138",
           "node_type": "text",
           "rect": {
-            "x": 1234440,
+            "x": 457200,
             "y": 2109215,
-            "w": 10500360,
+            "w": 11277600,
             "h": 627889
           },
           "text_content": "Encryption and audit trails on every action.",
@@ -92,25 +79,12 @@
           "group_id": "feat_0"
         },
         {
-          "node_id": "feat_icon_244",
-          "node_type": "icon",
+          "node_id": "feat_head_139",
+          "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3011424,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "bolt",
-          "group_id": "feat_1",
-          "slot_type": "icon"
-        },
-        {
-          "node_id": "feat_head_245",
-          "node_type": "text",
-          "rect": {
-            "x": 1234440,
-            "y": 3011424,
-            "w": 10500360,
+            "w": 11277600,
             "h": 518159
           },
           "text_content": "Fast to adopt",
@@ -129,12 +103,12 @@
           "group_id": "feat_1"
         },
         {
-          "node_id": "feat_body_246",
+          "node_id": "feat_body_140",
           "node_type": "text",
           "rect": {
-            "x": 1234440,
+            "x": 457200,
             "y": 3621023,
-            "w": 10500360,
+            "w": 11277600,
             "h": 627889
           },
           "text_content": "Live in an afternoon, no migration needed.",
@@ -153,25 +127,12 @@
           "group_id": "feat_1"
         },
         {
-          "node_id": "feat_icon_247",
-          "node_type": "icon",
+          "node_id": "feat_head_141",
+          "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 4523232,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "chart",
-          "group_id": "feat_2",
-          "slot_type": "icon"
-        },
-        {
-          "node_id": "feat_head_248",
-          "node_type": "text",
-          "rect": {
-            "x": 1234440,
-            "y": 4523232,
-            "w": 10500360,
+            "w": 11277600,
             "h": 518159
           },
           "text_content": "Clear results",
@@ -190,12 +151,12 @@
           "group_id": "feat_2"
         },
         {
-          "node_id": "feat_body_249",
+          "node_id": "feat_body_142",
           "node_type": "text",
           "rect": {
-            "x": 1234440,
+            "x": 457200,
             "y": 5132831,
-            "w": 10500360,
+            "w": 11277600,
             "h": 627889
           },
           "text_content": "Dashboards that show value in week one.",
@@ -216,7 +177,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_250",
+          "node_id": "chrome_pagenum_143",
           "node_type": "text",
           "rect": {
             "x": 10363200,
