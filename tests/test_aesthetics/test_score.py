@@ -1,10 +1,15 @@
 """Tests for the Phase 10 aesthetic scorer (beauty-tracking extension)."""
 
+import pytest
+
 from slidekit.aesthetics.score import (
     ADVISORY_THRESHOLDS,
+    COMBINERS,
     _balance,
     _build_warnings,
     _color_harmony,
+    _combine_harrington,
+    _combine_mean,
     _contrast,
     _contrast_ratio,
     _cross_slide_consistency,
@@ -232,6 +237,71 @@ def test_designed_deck_outscores_plain_decks():
 def _loaded(path):
     deck = load(path)
     return deck, resolve(deck)
+
+
+# ── T-020: Harrington (geometric-mean) composite combiner ───────────────────────
+
+
+def test_combiners_agree_when_subscores_uniform():
+    # Geometric mean == arithmetic mean iff every sub-score is equal (AM-GM equality).
+    sub = {k: 0.6 for k in ADVISORY_THRESHOLDS}
+    w = {k: 1.0 for k in sub}
+    wsum = sum(w.values())
+    assert _combine_harrington(sub, w, wsum) == pytest.approx(
+        _combine_mean(sub, w, wsum), abs=1e-9
+    )
+
+
+def test_harrington_never_above_mean():
+    # AM-GM: the weighted geometric mean is ≤ the weighted arithmetic mean for any
+    # mixed sub-score vector.
+    sub = {"a": 0.9, "b": 0.8, "c": 0.4, "d": 0.95}
+    w = {k: 1.0 for k in sub}
+    wsum = sum(w.values())
+    assert _combine_harrington(sub, w, wsum) < _combine_mean(sub, w, wsum)
+
+
+def test_harrington_lets_one_flaw_dominate():
+    # One near-zero sub-score must drag the geometric composite toward zero even when
+    # everything else is excellent — the whole point of the non-linear combiner. The
+    # arithmetic mean, by contrast, averages the flaw away to a still-high score.
+    flawed = {"a": 1.0, "b": 1.0, "c": 1.0, "d": 0.0}
+    w = {k: 1.0 for k in flawed}
+    wsum = sum(w.values())
+    assert _combine_harrington(flawed, w, wsum) < 5.0   # severe flaw dominates
+    assert _combine_mean(flawed, w, wsum) == pytest.approx(75.0)  # flaw averaged away
+
+
+def test_harrington_weights_skew_the_exponent():
+    # A heavier weight on the flawed metric pulls the geometric composite lower.
+    light = {"good": 1.0, "bad": 0.2}
+    w_light = {"good": 1.0, "bad": 1.0}
+    w_heavy = {"good": 1.0, "bad": 3.0}
+    lo_light = _combine_harrington(light, w_light, sum(w_light.values()))
+    lo_heavy = _combine_harrington(light, w_heavy, sum(w_heavy.values()))
+    assert lo_heavy < lo_light
+
+
+def test_score_deck_harrington_at_or_below_mean_and_deterministic():
+    deck, rd = _loaded("examples/10_all_components.yaml")
+    mean = score_deck(deck, rd)                      # default combine="mean"
+    harr1 = score_deck(deck, rd, combine="harrington")
+    harr2 = score_deck(deck, rd, combine="harrington")
+    assert harr1.to_dict() == harr2.to_dict()        # deterministic
+    assert harr1.deck_score <= mean.deck_score + 1e-9
+    # Sub-scores and warnings are mode-independent; only the composite changes.
+    assert [s.subscores for s in harr1.slides] == [s.subscores for s in mean.slides]
+    assert [w.to_dict() for w in harr1.warnings] == [w.to_dict() for w in mean.warnings]
+
+
+def test_score_deck_rejects_unknown_combine():
+    deck, rd = _loaded("examples/01_title_slide.yaml")
+    with pytest.raises(ValueError):
+        score_deck(deck, rd, combine="median")
+
+
+def test_combiners_registry_exposes_both_modes():
+    assert set(COMBINERS) == {"mean", "harrington"}
 
 
 # ── T-018: advisory W_AESTH_* warnings + --min-score gate ──────────────────────

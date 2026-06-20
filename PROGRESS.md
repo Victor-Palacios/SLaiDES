@@ -153,4 +153,12 @@ score); the linter remains the gate.
   (threshold 0.45). Designed-beats-plain invariant preserved (big-number 89.5 > agents-in-ai
   84.4 > all-components 82.7). 3 unit tests; suite 251 passed / 47 skipped. docs updated
   (AESTHETICS.md + RESEARCH_TRACE.md).
+- [x] Harrington non-linear combiner (T-020, 2026-06-20): opt-in `harrington` combine mode —
+  weighted **geometric mean** `100·Π subscore_i^(w_i/Σw)` (ref #10, Harrington et al. DocEng
+  2004) where one near-zero sub-score drives the composite toward 0. Offered alongside the
+  default weighted-arithmetic `mean` via `score_deck(..., combine=)` and `slidekit score
+  --combine harrington`; AM-GM ⇒ harrington ≤ mean (equal iff sub-scores uniform), so the
+  documented baselines + designed-beats-plain invariant are unchanged (mean stays default).
+  Sub-scores/warnings/deck roll-up are mode-independent. 7 unit + 3 CLI tests; suite green.
+  docs (AESTHETICS.md + RESEARCH_TRACE.md) updated.
 - [ ] DEFERRED: weight calibration vs a human-labelled slide-pair set.

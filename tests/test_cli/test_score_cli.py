@@ -44,3 +44,21 @@ def test_min_score_below_floor_fails():
 def test_min_score_above_floor_passes():
     r = _run(DECK, "--min-score", "10")
     assert r.returncode == 0
+
+
+def test_combine_harrington_runs_and_labels_mode():
+    # The non-linear (geometric-mean) combiner is opt-in; default stays advisory exit 0.
+    r = _run(DECK, "--combine", "harrington")
+    assert r.returncode == 0
+    assert "(harrington)" in r.stdout
+
+
+def test_combine_harrington_not_above_mean():
+    mean = json.loads(_run(DECK, "--json").stdout)
+    harr = json.loads(_run(DECK, "--combine", "harrington", "--json").stdout)
+    assert harr["deck_score"] <= mean["deck_score"] + 1e-6
+
+
+def test_combine_rejects_unknown_mode():
+    r = _run(DECK, "--combine", "median")
+    assert r.returncode != 0  # argparse choices rejects it

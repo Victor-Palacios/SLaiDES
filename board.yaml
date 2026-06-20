@@ -47,7 +47,7 @@ tasks:
   # ── Phase 10: aesthetics — open items ────────────────────────────────────────
   - {id: T-018, title: "W_AESTH_* advisory warnings + optional --min-score gate", epic: phase-10, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done 2026-06-18: 9 W_AESTH_* codes + ADVISORY_THRESHOLDS in aesthetics/score.py, warnings in --json report, opt-in --min-score CI floor; 9 tests; linter stays the gate"}
   - {id: T-019, title: "info-density sub-score metric", epic: phase-10, column: done, priority: low, created: 2026-06-14, updated: 2026-06-19, notes: "DONE 2026-06-19: _info_density (words/slide + text-coverage vs bands; crowding+barrenness); weight 1.0, W_AESTH_DENSITY thr 0.45; designed-beats-plain preserved (big-number 89.5 > agents 84.4 > all-components 82.7); 3 tests; suite 251 passed"}
-  - {id: T-020, title: "Harrington non-linear score combiner (ref #10)", epic: phase-10, column: backlog, priority: low, created: 2026-06-15, updated: 2026-06-15, notes: "verified paper, not yet coded; one bad feature should dominate"}
+  - {id: T-020, title: "Harrington non-linear score combiner (ref #10)", epic: phase-10, column: done, priority: low, created: 2026-06-15, updated: 2026-06-20, notes: "done: opt-in 'harrington' weighted geometric-mean combine mode; one severe sub-score dominates; mean stays default"}
   - {id: T-021, title: "weight calibration vs human-labelled slide-pair set", epic: phase-10, column: blocked, priority: low, created: 2026-06-14, updated: 2026-06-15, notes: "DEFERRED — needs a labelled dataset; no human-correlation claim until then"}
 
   # ── Standing research task ───────────────────────────────────────────────────

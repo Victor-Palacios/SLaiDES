@@ -120,6 +120,44 @@ _WARN_META: dict[str, tuple[str, str, str]] = {
     ),
 }
 
+# ── composite combiners ─────────────────────────────────────────────────────────
+# Two ways to fold the per-slide sub-scores into one 0–100 composite, selected by the
+# `combine=` argument to score_deck (default "mean"):
+#   "mean"       — weighted ARITHMETIC mean (the documented default; preserves the
+#                  designed-beats-plain invariant and every existing baseline).
+#   "harrington" — weighted GEOMETRIC mean (ref #10, Harrington et al., DocEng 2004):
+#                  100 · Π subscore_i^(w_i/Σw). One near-zero sub-score drives the whole
+#                  composite toward zero, so a single severe flaw (an overlap, an
+#                  unreadable run) DOMINATES instead of being averaged away. Offered
+#                  alongside the mean, never the default — see docs/AESTHETICS.md.
+# Both are deterministic and combine only the in-[0,1] sub-scores; no rendering.
+
+# Floor for log(subscore) so a 0.0 sub-score yields a near-zero (not NaN) composite
+# under the geometric combiner while still expressing "this flaw dominates".
+_HARRINGTON_EPS = 1e-9
+
+
+def _combine_mean(sub: dict[str, float], w: dict[str, float], wsum: float) -> float:
+    return 100.0 * sum(sub[k] * w.get(k, 0.0) for k in sub) / wsum
+
+
+def _combine_harrington(sub: dict[str, float], w: dict[str, float], wsum: float) -> float:
+    # Weighted geometric mean via logs: 100·exp(Σ w_i·ln(sub_i) / Σ w_i). The exponents
+    # w_i/Σw sum to 1, so an all-equal sub-score vector reproduces the mean exactly; any
+    # sub-score near 0 pulls the product (hence the composite) toward 0.
+    acc = 0.0
+    for k in sub:
+        wi = w.get(k, 0.0)
+        if wi <= 0.0:
+            continue
+        acc += wi * math.log(max(sub[k], _HARRINGTON_EPS))
+    return 100.0 * math.exp(acc / wsum)
+
+
+COMBINERS = {"mean": _combine_mean, "harrington": _combine_harrington}
+DEFAULT_COMBINE = "mean"
+
+
 # Sub-metrics that are theme/deck-level (identical on every slide); warn ONCE at the
 # deck level rather than repeating per slide.
 _DECK_LEVEL = {"hierarchy", "color_harmony"}
@@ -601,11 +639,27 @@ def _build_warnings(
 
 
 def score_deck(
-    deck: "DeckIR", resolved: "ResolvedDeck", weights: Optional[dict] = None
+    deck: "DeckIR",
+    resolved: "ResolvedDeck",
+    weights: Optional[dict] = None,
+    combine: str = DEFAULT_COMBINE,
 ) -> AestheticReport:
-    """Return a deterministic aesthetic report (0–100) for a resolved deck."""
+    """Return a deterministic aesthetic report (0–100) for a resolved deck.
+
+    `combine` selects how the per-slide sub-scores fold into the composite:
+    "mean" (default — weighted arithmetic mean, the documented baseline) or
+    "harrington" (weighted geometric mean, ref #10: one severe sub-score flaw
+    dominates). See COMBINERS / docs/AESTHETICS.md. Sub-scores, warnings, and the
+    deck = mean(slides)·consistency roll-up are identical across modes — only the
+    slide composite changes."""
+    if combine not in COMBINERS:
+        raise ValueError(
+            f"unknown combine mode {combine!r}; choose one of {sorted(COMBINERS)}"
+        )
+    combiner = COMBINERS[combine]
     w = weights or DEFAULT_WEIGHTS
-    wsum = sum(w.values()) or 1.0
+    # Normalise over the weights actually applied to sub-scores so the geometric-mean
+    # exponents sum to 1 (and the arithmetic mean is unchanged for the default keys).
     harmony = _color_harmony(deck)
     hierarchy = _hierarchy(deck)
 
@@ -623,7 +677,8 @@ def score_deck(
             "color_harmony": harmony,
             "info_density": _info_density(nodes, rs.canvas_w, rs.canvas_h),
         }
-        composite = 100.0 * sum(sub[k] * w.get(k, 0.0) for k in sub) / wsum
+        wsum = sum(w.get(k, 0.0) for k in sub) or 1.0
+        composite = combiner(sub, w, wsum)
         weakest = min(sub, key=lambda k: sub[k])
         slide_scores.append(
             SlideScore(rs.slide_index, rs.component, sub, composite, weakest)

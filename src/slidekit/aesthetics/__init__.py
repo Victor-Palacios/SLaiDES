@@ -13,6 +13,8 @@ from slidekit.aesthetics.score import (
     SlideScore,
     DEFAULT_WEIGHTS,
     ADVISORY_THRESHOLDS,
+    COMBINERS,
+    DEFAULT_COMBINE,
     score_deck,
 )
 
@@ -22,5 +24,7 @@ __all__ = [
     "SlideScore",
     "DEFAULT_WEIGHTS",
     "ADVISORY_THRESHOLDS",
+    "COMBINERS",
+    "DEFAULT_COMBINE",
     "score_deck",
 ]

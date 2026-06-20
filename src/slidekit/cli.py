@@ -80,6 +80,14 @@ def main() -> None:
     score_p.add_argument("deck", help="Path to deck.yaml")
     score_p.add_argument("--json", action="store_true", help="Print the full JSON report")
     score_p.add_argument(
+        "--combine",
+        choices=["mean", "harrington"],
+        default="mean",
+        help="Composite mode: 'mean' (default, weighted arithmetic mean) or "
+        "'harrington' (weighted geometric mean — one severe sub-score flaw "
+        "dominates the slide score; ref #10).",
+    )
+    score_p.add_argument(
         "--min-score",
         type=float,
         default=None,
@@ -223,11 +231,11 @@ def _cmd_score(args: argparse.Namespace) -> None:
         print(str(exc), file=sys.stderr)
         sys.exit(1)
 
-    report = score_deck(deck, resolve(deck))
+    report = score_deck(deck, resolve(deck), combine=args.combine)
     if args.json:
         print(report.to_json())
     else:
-        print(f"deck aesthetic score: {report.deck_score:.1f}/100")
+        print(f"deck aesthetic score: {report.deck_score:.1f}/100 ({args.combine})")
         for s in report.slides:
             print(
                 f"  slide {s.slide_index + 1} ({s.component}): "
