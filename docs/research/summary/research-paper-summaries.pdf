@@ -2,7 +2,7 @@
 % ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 6 0 R /F4 8 0 R
+/F1 2 0 R /F2 3 0 R
 >>
 endobj
 2 0 obj
@@ -17,7 +17,7 @@ endobj
 endobj
 4 0 obj
 <<
-/Contents 21 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 28 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -27,7 +27,7 @@ endobj
 endobj
 5 0 obj
 <<
-/Contents 22 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 29 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -37,12 +37,17 @@ endobj
 endobj
 6 0 obj
 <<
-/BaseFont /Symbol /Name /F3 /Subtype /Type1 /Type /Font
+/Contents 30 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
 endobj
 7 0 obj
 <<
-/Contents 23 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 31 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -52,12 +57,17 @@ endobj
 endobj
 8 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
+/Contents 32 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
 endobj
 9 0 obj
 <<
-/Contents 24 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 33 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -67,7 +77,7 @@ endobj
 endobj
 10 0 obj
 <<
-/Contents 25 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 34 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -77,7 +87,7 @@ endobj
 endobj
 11 0 obj
 <<
-/Contents 26 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 35 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -87,7 +97,7 @@ endobj
 endobj
 12 0 obj
 <<
-/Contents 27 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 36 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -97,7 +107,7 @@ endobj
 endobj
 13 0 obj
 <<
-/Contents 28 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 37 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -107,7 +117,7 @@ endobj
 endobj
 14 0 obj
 <<
-/Contents 29 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 38 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -117,7 +127,7 @@ endobj
 endobj
 15 0 obj
 <<
-/Contents 30 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 39 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -127,7 +137,7 @@ endobj
 endobj
 16 0 obj
 <<
-/Contents 31 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 40 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -137,7 +147,7 @@ endobj
 endobj
 17 0 obj
 <<
-/Contents 32 0 R /MediaBox [ 0 0 612 792 ] /Parent 20 0 R /Resources <<
+/Contents 41 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -147,2284 +157,300 @@ endobj
 endobj
 18 0 obj
 <<
-/PageMode /UseNone /Pages 20 0 R /Type /Catalog
+/Contents 42 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
 endobj
 19 0 obj
 <<
-/Author (\(anonymous\)) /CreationDate (D:20260619184342+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260619184342+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (\(unspecified\)) /Title (Research Paper Summaries) /Trapped /False
+/Contents 43 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
 endobj
 20 0 obj
 <<
-/Count 12 /Kids [ 4 0 R 5 0 R 7 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 14 0 R 15 0 R 
-  16 0 R 17 0 R ] /Type /Pages
+/Contents 44 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
 endobj
 21 0 obj
 <<
-/Length 6284
+/Contents 45 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 715.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F2 20 Tf 24 TL 120.92 0 Td (Research Paper Summaries) Tj T* -120.92 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 678.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 15.2 Tm /F1 9.2 Tf 12.2 TL (Consolidated summary generated from docs/REFERENCES.md. Includes all 20 verified references, including the final five) Tj T* (additions \(#16\226#20\).) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 662 cm
-Q
-q
-1 0 0 1 52.8 632 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 4 Tm /F2 14 Tf 18 TL (Contents) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 601.6 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (1. ) Tj /F2 9.2 Tf (AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via Verifiable Rewards) Tj /F1 9.2 Tf ( \227) Tj T* (arXiv:2604.22840; code github.com/ympan0508/aeslides \(2026\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 571.2 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (2. ) Tj /F2 9.2 Tf (EvoPresent / PresAesth: Presenting a Paper is an Art \227 Self-Improvement Aesthetic Agents for Academic) Tj T* (Presentations) Tj /F1 9.2 Tf ( \227 arXiv:2510.05571 \(ICLR 2026\) \(2025\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 540.8 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (3. ) Tj /F2 9.2 Tf (GRIDS: Interactive Layout Design with Integer Programming) Tj /F1 9.2 Tf ( \227 Dayama, Todi, Saarelainen & Oulasvirta; CHI 2020;) Tj T* (DOI 10.1145/3313831.3376553; arXiv:2001.02921 \(2020\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 510.4 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (4. ) Tj /F2 9.2 Tf (Ngo, Teo & Byrne \227 Modelling interface aesthetics) Tj /F1 9.2 Tf ( \227 Information Sciences 152:25\22646; DOI) Tj T* (10.1016/S0020-0255\(02\)00404-8 \(2003\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 480 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (5. ) Tj /F2 9.2 Tf (SlidesGen-Bench: Evaluating Slides Generation via Computational and Quantitative Metrics) Tj /F1 9.2 Tf ( \227 Yang, Li, Ren, Lu,) Tj T* (Wang, Huang, Zong, Zhan & Li; arXiv:2601.09487 \(2026\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 449.6 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (6. ) Tj /F2 9.2 Tf (Seeing Like a Designer Without One: Unsupervised Slide Quality Assessment via Designer Cue Augmentation) Tj /F1 9.2 Tf ( \227) Tj T* (arXiv:2508.19289 \(2025\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 419.2 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (7. ) Tj /F2 9.2 Tf (PPTAgent: Generating and Evaluating Presentations Beyond Text-to-Slides) Tj /F1 9.2 Tf ( \(introduces the ) Tj /F2 9.2 Tf (PPTEval) Tj /F1 9.2 Tf ( framework\) \227) Tj T* (Zheng, Guan, Kong, Zheng, Zhou, Lin, Lu, He, Han & Sun; arXiv:2501.03936; code github.com/icip-cas/PPTAgent \(2025\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 388.8 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (8. ) Tj /F2 9.2 Tf (DECKBench: Benchmarking Multi-Agent Frameworks for Academic Slide Generation and Editing) Tj /F1 9.2 Tf ( \227 Jang, Heisler,) Tj T* (Xing, Li, Wang, Xiong, Zhang & Fan; arXiv:2602.13318 \(2026\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 370.6 cm
-q
-BT 1 0 0 1 0 3 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (9. ) Tj /F2 9.2 Tf (G. D. Birkhoff \227 Aesthetic Measure) Tj /F1 9.2 Tf ( \227 Harvard University Press; DOI 10.4159/harvard.9780674734470 \(1933\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 340.2 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (10. ) Tj /F2 9.2 Tf (Harrington, Naveda, Price Jones, Roetling & Thakkar \227 Aesthetic measures for automated document layout) Tj /F1 9.2 Tf ( \227) Tj T* (Proc. ACM DocEng '04; DOI 10.1145/1030397.1030419 \(2004\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 309.8 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (11. ) Tj /F2 9.2 Tf (Rebelo, Merelo, Bicker & Machado \227 Evaluation Metrics for Automated Typographic Poster Generation) Tj /F1 9.2 Tf ( \227) Tj T* (EvoMUSART 2024 \(Springer LNCS\); arXiv:2402.06945 \(2024\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 267.2 cm
-q
-BT 1 0 0 1 0 27.4 Tm -0.026175 Tw 12.2 TL /F1 9.2 Tf 0 0 0 rg (12. ) Tj /F2 9.2 Tf (Reinecke, Yeh, Miratrix, Mardiko, Zhao, Liu & Gajos \227 Predicting Users' First Impressions of Website Aesthetics) Tj T* 0 Tw (with a Quantification of Perceived Visual Complexity and Colorfulness) Tj /F1 9.2 Tf ( \227 Proc. SIGCHI \(CHI\) 2013; DOI) Tj T* (10.1145/2470654.2481281 \(2013\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 224.6 cm
-q
-BT 1 0 0 1 0 27.4 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (13. ) Tj /F2 9.2 Tf (Kikuchi, Simo-Serra, Otani & Yamaguchi \227 Constrained Graphic Layout Generation via Latent Optimization) Tj /F1 9.2 Tf ( \227) Tj T* (Proc. ACM MM '21, pp. 88\22696; DOI 10.1145/3474085.3475497; arXiv:2108.00871; code github.com/ktrk115/const_layout) Tj T* (\(2021\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 194.2 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (14. ) Tj /F2 9.2 Tf (O'Donovan, Agarwala & Hertzmann \227 Learning Layouts for Single-Page Graphic Designs) Tj /F1 9.2 Tf ( \227 IEEE TVCG) Tj T* (20\(8\):1200\2261213; DOI 10.1109/TVCG.2014.48; project dgp.toronto.edu/~donovan/layout/ \(2014\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 163.8 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (15. ) Tj /F2 9.2 Tf (Miniukovich & De Angeli \227 Computation of Interface Aesthetics) Tj /F1 9.2 Tf ( \227 Proc. ACM CHI 2015, pp. 1163\2261172; DOI) Tj T* (10.1145/2702123.2702575 \(2015\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 133.4 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (16. ) Tj /F2 9.2 Tf (Lok, Feiner & Ngai \227 Evaluation of visual balance for automated layout) Tj /F1 9.2 Tf ( \227 Proc. 9th Int. Conf. on Intelligent User) Tj T* (Interfaces \(IUI '04\), pp. 101\226108; DOI 10.1145/964460.964462 \(2004\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 90.8 cm
-q
-BT 1 0 0 1 0 27.4 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (17. ) Tj /F2 9.2 Tf (Bauerly & Liu \227 Computational modeling and experimental investigation of effects of compositional elements) Tj T* (on interface and design aesthetics) Tj /F1 9.2 Tf ( \227 Int. J. Human-Computer Studies 64\(8\):670\226682; DOI 10.1016/j.ijhcs.2006.01.002) Tj T* (\(2006\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 60.4 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (18. ) Tj /F2 9.2 Tf (Zhang & Xue \227 Visual Moment Equilibrium: A Computational Cognitive Model for Assessing Visual Balance in) Tj T* (Interface Layout Aesthetics) Tj /F1 9.2 Tf ( \227 Symmetry 18\(1\):41; DOI 10.3390/sym18010041 \(2026\)) Tj T* ET
-Q
-Q
- 
-endstream
 endobj
 22 0 obj
 <<
-/Length 639
+/Contents 46 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 714.8 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (19. ) Tj /F2 9.2 Tf (Cohen-Or, Sorkine, Gal, Leyvand & Xu \227 Color Harmonization) Tj /F1 9.2 Tf ( \227 ACM SIGGRAPH 2006 / ACM TOG) Tj T* (25\(3\):624\226630; DOI 10.1145/1141911.1141933 \(2006\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 684.4 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (20. ) Tj /F2 9.2 Tf (Alley & Neeley \227 Rethinking the design of presentation slides: A case for sentence headlines and visual) Tj T* (evidence) Tj /F1 9.2 Tf ( \227 Technical Communication 52\(4\):417\226426 \(2005\)) Tj T* ET
-Q
-Q
- 
-endstream
 endobj
 23 0 obj
 <<
-/Length 7156
+/Contents 47 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 707.2 cm
-q
-BT 1 0 0 1 0 19 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (1. AeSlides: Incentivizing Aesthetic Layout in LLM-Based Slide Generation via) Tj T* (Verifiable Rewards \227 arXiv:2604.22840; code github.com/ympan0508/aeslides) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 690.2 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2026) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 647.6 cm
-q
-BT 1 0 0 1 0 27.4 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Verifiable metrics: aspect ratio, excessive whitespace, element collision, visual) Tj T* (imbalance. Directly maps to slidekit's whitespace/non-overlap/balance scores. NB: AeSlides computes these over) Tj T* (Playwright-) Tj /F2 9.2 Tf (rendered) Tj /F1 9.2 Tf ( pixels with proprietary formulas; slidekit computes equivalents over native geometry, no render.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 629.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 612.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 595 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 577.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 560.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 543.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 526.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 509 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 491.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 474.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 457.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 446.76 cm
-Q
-q
-1 0 0 1 52.8 406.76 cm
-q
-BT 1 0 0 1 0 19 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (2. EvoPresent / PresAesth: Presenting a Paper is an Art \227 Self-Improvement) Tj T* (Aesthetic Agents for Academic Presentations \227 arXiv:2510.05571 \(ICLR 2026\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 389.76 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2025) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 359.36 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Multi-task RL aesthetic model \(scoring, defect adjustment, pairwise compare\);) Tj T* (benchmark of 650 papers + 2,000 slide pairs. Informs the \(deferred\) human-calibration approach for slidekit's weights.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 341.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 323.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 306.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 289.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 272.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 255.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 237.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 220.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 203.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 186.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 169.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 158.52 cm
-Q
-q
-1 0 0 1 52.8 102.52 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (3. GRIDS: Interactive Layout Design with Integer Programming \227 Dayama, Todi,) Tj T* (Saarelainen & Oulasvirta; CHI 2020; DOI 10.1145/3313831.3376553;) Tj T* (arXiv:2001.02921) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 85.52 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2020) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 55.12 cm
-q
-BT 1 0 0 1 0 15.2 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( MILP layout model with explicit objectives for packing, ) Tj /F2 9.2 Tf (alignment) Tj /F1 9.2 Tf (, grouping, and) Tj T* (preferential positioning ) Tj /F3 9.2 Tf 12.2 TL (\256) Tj /F1 9.2 Tf 12.2 TL ( informs slidekit's alignment & balance metrics as scorable geometric constraints. \(Verified) Tj T* ET
-Q
-Q
- 
-endstream
 endobj
 24 0 obj
 <<
-/Length 7098
+/Contents 48 0 R /MediaBox [ 0 0 612 792 ] /Parent 27 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 727 cm
-q
-BT 1 0 0 1 0 3 Tm 12.2 TL /F1 9.2 Tf 0 0 0 rg (2026-06-14 from ACM DL + arXiv.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 708.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 691.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 674.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 657.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 640 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 622.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 605.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 588.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 571.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 554 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 536.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 526.16 cm
-Q
-q
-1 0 0 1 52.8 486.16 cm
-q
-BT 1 0 0 1 0 19 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (4. Ngo, Teo & Byrne \227 Modelling interface aesthetics \227 Information Sciences) Tj T* (152:25\22646; DOI 10.1016/S0020-0255\(02\)00404-8) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 469.16 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2003) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 414.36 cm
-q
-BT 1 0 0 1 0 39.6 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( ) Tj /F2 9.2 Tf (14) Tj /F1 9.2 Tf ( measures \(balance, equilibrium, symmetry, sequence, cohesion, unity, proportion,) Tj T* (simplicity, density, regularity, economy, homogeneity, rhythm, order-and-complexity\), each a closed-form function of element) Tj T* (bounding boxes ) Tj /F3 9.2 Tf 12.2 TL (\256) Tj /F1 9.2 Tf 12.2 TL ( primary source for slidekit's balance/density/regularity/proportion definitions, all computable from) Tj T* (ResolvedDeck geometry. \(Verified 2026-06-14 from ScienceDirect/DOI.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 396.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 378.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 361.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 344.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 327.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 310.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 292.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 275.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 258.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 241.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 224.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 213.52 cm
-Q
-q
-1 0 0 1 52.8 157.52 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (5. SlidesGen-Bench: Evaluating Slides Generation via Computational and) Tj T* (Quantitative Metrics \227 Yang, Li, Ren, Lu, Wang, Huang, Zong, Zhan & Li;) Tj T* (arXiv:2601.09487) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 140.52 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2026) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 73.52 cm
-q
-BT 1 0 0 1 0 51.8 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Scores slides on three reproducible axes \227 ) Tj /F2 9.2 Tf (Content, Aesthetics, Editability) Tj /F1 9.2 Tf ( \227 with a) Tj T* (human-preference dataset \(Slides-Align1.5k, 9 systems \327 7 scenarios\) ) Tj /F3 9.2 Tf 12.2 TL (\256) Tj /F1 9.2 Tf 12.2 TL ( establishes aesthetics as a quantitative,) Tj T* (reproducible, human-aligned axis, motivating ) Tj /F4 9.2 Tf (slidekit score) Tj /F1 9.2 Tf (. NB: the benchmark is a ) Tj /F2 9.2 Tf (unified visual framework that) Tj T* (treats outputs as renderings) Tj /F1 9.2 Tf ( \(method-agnostic but vision-based\); slidekit deliberately computes geometry-only analogues) Tj T* (with no render. \(Verified 2026-06-17 from arXiv abstract.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 55.32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
- 
-endstream
 endobj
 25 0 obj
 <<
-/Length 7361
+/PageMode /UseNone /Pages 27 0 R /Type /Catalog
 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 728 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 710.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 693.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 676.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 659.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 642 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 624.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 607.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 590.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 573.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 562.56 cm
-Q
-q
-1 0 0 1 52.8 522.56 cm
-q
-BT 1 0 0 1 0 19 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (6. Seeing Like a Designer Without One: Unsupervised Slide Quality Assessment) Tj T* (via Designer Cue Augmentation \227 arXiv:2508.19289) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 505.56 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2025) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 426.36 cm
-q
-BT 1 0 0 1 0 64 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( 7 expert-inspired visual-design metrics \(whitespace, colorfulness, edge density,) Tj T* (brightness contrast, text density, color harmony, layout balance\) + CLIP-ViT; correlation ) Tj /F2 9.2 Tf (up to 0.83) Tj /F1 9.2 Tf ( with human slide-quality) Tj T* (ratings \(paper's headline stat is ) Tj /F2 9.2 Tf (Spearman ) Tj /F3 9.2 Tf 12.2 TL (r) Tj /F2 9.2 Tf 12.2 TL ( = ) Tj /F3 9.2 Tf 12.2 TL (-) Tj /F2 9.2 Tf 12.2 TL (0.83) Tj /F1 9.2 Tf (, 1.79\2263.23\327 stronger than VLMs; not Pearson as the synthesis stated\).) Tj T* (Trained on 12k lecture slides, eval on 6 talks/115 slides. NB: edge-density/brightness-contrast/colorfulness need ) Tj /F2 9.2 Tf (rendered) Tj T* (pixels) Tj /F1 9.2 Tf (; slidekit computes the geometry-only analogues \(whitespace, layout balance, text density, colour harmony\) with NO) Tj T* (render and explicitly omits the pixel-only ones. \(Verified 2026-06-15 from arXiv.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 408.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 390.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 373.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 356.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 339.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 322.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 304.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 287.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 270.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 253.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 236.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 225.52 cm
-Q
-q
-1 0 0 1 52.8 169.52 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (7. PPTAgent: Generating and Evaluating Presentations Beyond Text-to-Slides) Tj T* (\(introduces the PPTEval framework\) \227 Zheng, Guan, Kong, Zheng, Zhou, Lin, Lu,) Tj T* (He, Han & Sun; arXiv:2501.03936; code github.com/icip-cas/PPTAgent) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 152.52 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2025) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 85.52 cm
-q
-BT 1 0 0 1 0 51.8 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( PPTEval scores presentations on three dimensions \227 ) Tj /F2 9.2 Tf (Content, Design, Coherence) Tj /F1 9.2 Tf ( \227) Tj T* (establishing design + cross-slide coherence as explicit, separable axes ) Tj /F3 9.2 Tf 12.2 TL (\256) Tj /F1 9.2 Tf 12.2 TL ( motivates slidekit's design-vs-coherence split and) Tj T* (the deck-level cross-slide consistency metric. \(Verified 2026-06-16 from arXiv abstract + authors. NB: the specific Design) Tj T* (sub-metrics "color/contrast/harmony/no-overlap" and the "Pearson ) Tj /F3 9.2 Tf 12.2 TL (\273) Tj /F1 9.2 Tf 12.2 TL ( 0.90" figure in the prior synthesis are NOT in the) Tj T* (abstract and remain unconfirmed; do not cite those numbers until checked against the full paper.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 67.32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
- 
-endstream
 endobj
 26 0 obj
 <<
-/Length 7068
+/Author (\(anonymous\)) /CreationDate (D:20260620202348+00'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260620202348+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 728 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 710.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 693.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 676.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 659.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 642 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 624.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 607.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 590.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 573.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 562.56 cm
-Q
-q
-1 0 0 1 52.8 506.56 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (8. DECKBench: Benchmarking Multi-Agent Frameworks for Academic Slide) Tj T* (Generation and Editing \227 Jang, Heisler, Xing, Li, Wang, Xiong, Zhang & Fan;) Tj T* (arXiv:2602.13318) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 489.56 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2026) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 434.76 cm
-q
-BT 1 0 0 1 0 39.6 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Evaluation protocol that systematically assesses ) Tj /F2 9.2 Tf (slide-level AND deck-level fidelity,) Tj T* (coherence, layout quality) Tj /F1 9.2 Tf (, and multi-turn instruction following ) Tj /F3 9.2 Tf 12.2 TL (\256) Tj /F1 9.2 Tf 12.2 TL ( primary motivation for slidekit treating coherence/layout at) Tj T* (both the slide and the deck level, backing the deck-level ) Tj /F2 9.2 Tf (cross-slide consistency) Tj /F1 9.2 Tf ( metric. \(Verified 2026-06-17 from arXiv) Tj T* (abstract.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 416.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 399.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 382.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 364.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 347.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 330.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 313.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 296.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 278.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 261.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 244.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 233.92 cm
-Q
-q
-1 0 0 1 52.8 193.92 cm
-q
-BT 1 0 0 1 0 19 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (9. G. D. Birkhoff \227 Aesthetic Measure \227 Harvard University Press; DOI) Tj T* (10.4159/harvard.9780674734470) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 176.92 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (1933) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 122.12 cm
-q
-BT 1 0 0 1 0 39.6 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Defines aesthetic measure as ) Tj /F2 9.2 Tf (M = f\(O/C\)) Tj /F1 9.2 Tf ( \(order over complexity\), with O and C as) Tj T* (object-specific closed-form quantities ) Tj /F3 9.2 Tf 12.2 TL (\256) Tj /F1 9.2 Tf 12.2 TL ( the historical basis for slidekit treating beauty as a computed ratio of structure) Tj T* (\(order: alignment, balance, regularity\) to clutter \(complexity: element/colour count, density\), and for a non-linear composite.) Tj T* (\(Verified 2026-06-16 from Harvard UP / DeGruyter DOI + AMS Bulletin 1934 review.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 103.92 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 86.72 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 69.52 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
- 
-endstream
 endobj
 27 0 obj
 <<
-/Length 6972
+/Count 21 /Kids [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 
+  14 0 R 15 0 R 16 0 R 17 0 R 18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R 
+  24 0 R ] /Type /Pages
 >>
-stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 728 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 710.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 693.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 676.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 659.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 642 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 624.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 607.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 596.96 cm
-Q
-q
-1 0 0 1 52.8 540.96 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (10. Harrington, Naveda, Price Jones, Roetling & Thakkar \227 Aesthetic measures) Tj T* (for automated document layout \227 Proc. ACM DocEng '04; DOI) Tj T* (10.1145/1030397.1030419) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 523.96 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2004) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 456.96 cm
-q
-BT 1 0 0 1 0 51.8 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Closed-form heuristic measures for ) Tj /F2 9.2 Tf (alignment, regularity, separation, balance,) Tj T* (white-space fraction, white-space free-flow, proportion, uniformity, page security) Tj /F1 9.2 Tf (, combined ) Tj /F2 9.2 Tf (non-linearly) Tj /F1 9.2 Tf ( so one bad) Tj T* (feature dominates the score. Directly maps to slidekit's alignment/whitespace/balance metrics and argues for a non-linear) Tj T* (\(not simple weighted-mean\) composite. All computable from native geometry \227 no render. \(Verified 2026-06-14 from ACM) Tj T* (DL.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 438.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 421.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 404.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 387.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 369.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 352.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 335.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 318.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 301.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 283.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 266.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 256.12 cm
-Q
-q
-1 0 0 1 52.8 200.12 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (11. Rebelo, Merelo, Bicker & Machado \227 Evaluation Metrics for Automated) Tj T* (Typographic Poster Generation \227 EvoMUSART 2024 \(Springer LNCS\);) Tj T* (arXiv:2402.06945) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 183.12 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2024) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 128.32 cm
-q
-BT 1 0 0 1 0 39.6 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Heuristic metrics in three families \227 ) Tj /F2 9.2 Tf (legibility) Tj /F1 9.2 Tf ( \(text visibility\), ) Tj /F2 9.2 Tf (aesthetics) Tj /F1 9.2 Tf ( \(visual quality\),) Tj T* /F2 9.2 Tf (semantics) Tj /F1 9.2 Tf ( \227 used as computational constraints inside an evolutionary design loop. The legibility family is a primary source) Tj T* (for slidekit's text-visibility/contrast scoring as a deterministic constraint; the aesthetics heuristics inform the) Tj T* (richness/whitespace scores. \(Verified 2026-06-15 from arXiv.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 110.12 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 92.92 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 75.72 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 58.52 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
- 
-endstream
 endobj
 28 0 obj
 <<
-/Length 6938
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2794
 >>
 stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 728 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 710.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 693.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 676.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 659.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 642 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 624.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 614.16 cm
-Q
-q
-1 0 0 1 52.8 542.16 cm
-q
-BT 1 0 0 1 0 51 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (12. Reinecke, Yeh, Miratrix, Mardiko, Zhao, Liu & Gajos \227 Predicting Users' First) Tj T* (Impressions of Website Aesthetics with a Quantification of Perceived Visual) Tj T* (Complexity and Colorfulness \227 Proc. SIGCHI \(CHI\) 2013; DOI) Tj T* (10.1145/2470654.2481281) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 525.16 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2013) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 458.16 cm
-q
-BT 1 0 0 1 0 51.8 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Computational models of perceived ) Tj /F2 9.2 Tf (visual complexity) Tj /F1 9.2 Tf ( and ) Tj /F2 9.2 Tf (colorfulness) Tj /F1 9.2 Tf ( from image) Tj T* (statistics, validated against 548 users \327 450 sites; explains ~half the variance in 500ms appeal judgments. Primary source) Tj T* (for slidekit's ) Tj /F2 9.2 Tf (richness/colour-variety) Tj /F1 9.2 Tf ( sub-score and a \(deferred\) info-density metric. NB: their formulas use rendered-pixel) Tj T* (statistics; slidekit approximates colourfulness via theme-palette colour variety \(no render\). \(Verified 2026-06-15 from ACM) Tj T* (DOI + Harvard DASH.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 439.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 422.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 405.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 388.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 371.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 353.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 336.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 319.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 302.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 285.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 267.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 257.32 cm
-Q
-q
-1 0 0 1 52.8 185.32 cm
-q
-BT 1 0 0 1 0 51 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (13. Kikuchi, Simo-Serra, Otani & Yamaguchi \227 Constrained Graphic Layout) Tj T* (Generation via Latent Optimization \227 Proc. ACM MM '21, pp. 88\22696; DOI) Tj T* (10.1145/3474085.3475497; arXiv:2108.00871; code) Tj T* (github.com/ktrk115/const_layout) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 168.32 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2021) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 113.52 cm
-q
-BT 1 0 0 1 0 39.6 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Defines the now-standard ) Tj /F2 9.2 Tf (Alignment) Tj /F1 9.2 Tf ( and ) Tj /F2 9.2 Tf (Overlap) Tj /F1 9.2 Tf ( layout metrics as closed-form) Tj T* (functions of element bounding boxes \(overlap = pairwise intersection area; alignment = minimal edge/centre misalignment\),) Tj T* (normalised by element count \227 exactly slidekit's no-render regime. Primary source backing slidekit's ) Tj /F4 9.2 Tf (alignment) Tj /F1 9.2 Tf ( and) Tj T* /F4 9.2 Tf (non-overlap) Tj /F1 9.2 Tf ( metric definitions \(and the linter's ) Tj /F4 9.2 Tf (E_OVERLAP) Tj /F1 9.2 Tf (\). \(Verified 2026-06-16 from arXiv + ACM DL + official code.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 95.32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 78.12 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 60.92 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
- 
-endstream
+Gau0FgNTDN'7\>8Tr0g9=^QiuG1*;D]3h,bCuT>ZHMX@dCo[TT$?4Snf7,RX,U[TIOPSr\6lBAbqTV`e.2g!XlJI%YaQ]3'/h*J(R4ehgq_";_aMn)8b5j3`FM7[@9H:_+7mJ/2\lp/jUXX78k9AjF&3<6TNe;^!Y<Sb+FWQX^>Fol4r"Ve*_A,Z6-t5g<PWXh>7Fi[-=\/>>9JJaF1+$]`Zh,%hs,YBR-,".rT\_'k4B$5^Fm;tK`eBF\m8.#fFZc1t6qVhEV_SqebBQ:>b/=@g+Gg/jeJ`PR<h).e?D4s1/4k+V=:>]C5me"H4pcorZI51J&i-(L4GLH^B4N/#iG5SSPuWU.?_<jn"AMXJ#iK="&>2FQ.hOF#0PHfW1dr0&fp=1=X!6+E.3A%;"9.DRnoF&l^<1h17L=u3aCl`_\`-)aLtIk(+-aM&,Z$6f1tSgR11_%FU%FabpUK4:\4"/CC-uma0*_X_:^m$t<+Kbk6?XIAIO3tgPU=9LV3b9=iP$r,CA=YE^<_MnL_u6%g57lJ?XHfBm.R@PCPS_KT(+'5`l.Hq[GFnDQhGpi"3T"mobc)j6bH8ZbFLakp`2=D:QNWpfLL-gMf/mj#u:Ss9_`/<2DPM:@Y=AjG255k.6su,-!*4kWW75p)#;Aj3$"`+T"*mC9Ej[]qE&d+Hg&#J#1/nFI,5b+(dpL]%=C*94tk_L-0\%a@=V+QK*c"(Ob'E_V,)`"YkqDk/%i:NU><-]SNRr,0Qq,FN1C03Be@Na>BI-92je/!Z3LM6)Veh#&eT"NDRA6:?uu[jI%mnnaL^S6&",lk+H$+4Uka^k,Qf*N5d7(o&LPN5W!J5+#pI&s&%5T+eR2=2NI0`o`b&22NB=7R\U-!4DVq)D@ISj9\/B'g"l)+6`A0(2).$WiAIQ=N&pGQ%kSaHdUsqR.@?#o_OQ:cQ-I$cl&88t5fl4:#e-_W6;/9^t#%YB0jUU#Q%YeC<PT5-Sb'.CA-2ECfDH+j%^Q()nfBA2;L5[k=RT\arVF5(hq;.c4S>EI]-<^Tkk,<AlRbJ&QGLRN:Y5sGV/^)t)(Bk/'9^`[Z_D/T'ZS6#QD\^m4.Zc@r/(#4k/:",WY]JH$IEJ7u&P.L=]B5O8"0=+9[n:XN!Eek^#qOMfQf^Fc#2-CYEO:.P0lFe1"3WdO&ZM1CJ?i<i2)+#CaD71*5/t5AJDk]j$OQlc;O<uIK512pHg@DcWT'g["reSjYPXO[N?:kVeCg=\q8j7c3]?MZPo`'3#1-C>dCfN1:(F1L,N6?sCgSiZ]ctT;@-XQI4tn9,iK/'T^]qeZ`4W)#N5k7sJ8#*`DEZ164O5\+r[<ubBpBDEXQr!m6r/GK%(rZ8:\>=h`+K+3TML'bMf3f3(P0YrRt["!K:2t5l?%V.Pj*m"-KX3p.t17j?K%g`^CDfuqW,:b:5+!rai0uf'^Pkc\gY]qHV_D':B61K9L=Gc43A41`&?8XASgZhB6ja\V$nul/;'Z(DR@hg^e"NqE"uHj<X[$RIFg`>op@^/*D5hi9]=2?"+tQs')%sX;Dq0/N3)p<R>gdn-BN\ZV_+V1`uEt&Ugf7JDGY!IpZaP1a-P#=FI5*GN#eF.L[oi9ms-=R!-;STHeFc$q5j_:fK%h7Gkt!4JDlJ]E>r6XJ$6[f5@PJs<#,^R!'rmJC9iSOkn04F1m_'Z9J4;i%t#!PSaeO*;rhERUh#5h*#d7AUU+CMQf;>)!re/d]72=J3TQ2e1FU.G2m@%,(md1KoB7@S[76c?cA\$PPkV`LcDbC9Oh7O(?JJZK<290S%W.SS3;'&1f:32Z"<Z@AD7>,:-4mn/IJupN9#4u%=sVrp8I8CS=T-5-;iu'h-(;E::5\HQpZ9a<B<EEX$JmN,ALQ(Q%qEsf-fiWV;9cRR'i/Jp^A4H31D!_S<nY/,Iu&m8?\p/7SQ.rX?@>fXqs6lu5(#83S3`<gD#Fr41_S^>8Ht`MD)E75jib<MI!J&,REG7iNDA4%-a[;G6H:,/,9MD!Qa'f%p`2@t1A/^T7XcPrF-V03=<&,2c8\bmp,Sn`YfNJ]E$=;U)]\fX(`2AQVPp9_1SX<Y+\KpP&R@FZQadnUhhn#WTf[!+WmGKUdg!L$&W?QQY(aUleBT5t`Ci1%<P`>1-BJpYXu$6p^!gI-HhYA@lHf39[3V;`+*BV$64LgE=q+!Ui%U?*n&Qdj/d44^=>KE@)hP@p'E\HU4iCN_F&iPjgT^+rVpbDJcC=-"V:s]#<''Bm;Da>/Wq"#fj7o\=S?eZcE!+2*7/eAg?qYU9.*!fAW<'RsTr1KW.WGp6,*iF+XQU:c%*cRO'C&Z2:%;1I=mD#R\qr,22?SkEA]*7tkT'jYZsggLZ$a[X<?2$i1[G`Nr&ZRPpuS)P95WY,QQ-q5HR86]l$_.ol57Ys/4>1Uh!4Ln;.TRkD]4_EB6bh*4RRVscT41%B*k*V,8ot%YLQE\\o7QtkIlgEHL.>`rb@ct>q:C$!pDJ"6TUJ/P;)'b`]e@%$Osm'cW26=.)$Kq9uFI+IBk^D/mknB%C(?j5ks>EIiY<)fD)0X^O53[W_C%_p`KG3GL2sC'A'#?q;9r-K>-B.a+G4Np*N->&QaH"#hL61dr\628fM[(<F+MT]Jjj_*S,s/S6@tT.lpK8*S6&6N@c1%L-Dn`EGao,.i6ePI5J3LEGapBQ&BEFVcGFQ/%Te4jl5"@>q6`CL/+jU>ZZ#nAEDh)d)T0>Xps3pEcGs[eB5aQ7GfkEb?E4!orLj-MKC>)NX'Q[,5&esld-"1@T?_0Ud*qurusU3:B~>endstream
 endobj
 29 0 obj
 <<
-/Length 7214
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 726
 >>
 stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 728 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 710.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 693.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 676.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 659.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 642 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 624.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 607.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 596.96 cm
-Q
-q
-1 0 0 1 52.8 540.96 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (14. O'Donovan, Agarwala & Hertzmann \227 Learning Layouts for Single-Page) Tj T* (Graphic Designs \227 IEEE TVCG 20\(8\):1200\2261213; DOI 10.1109/TVCG.2014.48;) Tj T* (project dgp.toronto.edu/~donovan/layout/) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 523.96 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2014) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 444.76 cm
-q
-BT 1 0 0 1 0 64 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Energy-based layout model whose terms \227 ) Tj /F2 9.2 Tf (alignment, overlap, white space) Tj /F1 9.2 Tf (, plus) Tj T* (predicted importance and balance \227 are closed-form functions of element bounding boxes, with the term weights learned by) Tj T* (Nonlinear Inverse Optimization from a few examples. Primary source for slidekit's alignment/non-overlap/whitespace metrics) Tj T* (AND, like Harrington \(#10\), strong evidence that the composite should be a learned/non-linear combination rather than an) Tj T* (ad-hoc weighted mean. All terms geometry-based \227 no render. \(Verified 2026-06-17 from IEEE TVCG DOI + authors') Tj T* (project page.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 426.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 409.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 392.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 374.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 357.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 340.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 323.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 306.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 288.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 271.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 254.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 243.92 cm
-Q
-q
-1 0 0 1 52.8 203.92 cm
-q
-BT 1 0 0 1 0 19 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (15. Miniukovich & De Angeli \227 Computation of Interface Aesthetics \227 Proc. ACM) Tj T* (CHI 2015, pp. 1163\2261172; DOI 10.1145/2702123.2702575) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 186.92 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2015) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 107.72 cm
-q
-BT 1 0 0 1 0 64 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Eight automatic GUI-aesthetics metrics across three dimensions: ) Tj /F2 9.2 Tf (information amount) Tj /F1 9.2 Tf  T* (\(visual clutter, colour variability\), ) Tj /F2 9.2 Tf (information organization) Tj /F1 9.2 Tf ( \(symmetry, grid, ease-of-grouping, prototypicality\), ) Tj /F2 9.2 Tf (information) Tj T* (discriminability) Tj /F1 9.2 Tf ( \(contour density, figure-ground contrast\); explained up to 49% of webpage-aesthetics variance. The) Tj T* (geometry/theme-computable subset \227 ) Tj /F2 9.2 Tf (symmetry, grid alignment, colour variability, visual clutter, white space) Tj /F1 9.2 Tf ( \227) Tj T* (backs slidekit's balance/alignment, richness/colour-variety, and density scores. NB: contour density & figure-ground contrast) Tj T* (need rendered pixels and are deliberately omitted \(no-render rule\). \(Verified 2026-06-17 from ACM DOI.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 89.52 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 72.32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Adds provenance for at least one metric lineage in the aesthetics scorecard.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 55.12 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Clarifies whether the source is best used as a benchmark, formula source, or calibration target.) Tj T* 8 0 Td ET
-Q
-Q
- 
-endstream
+GasIegN(as&:Ml+SB'!M``=)2%8V'M3\Xus[[msk.e4o`lV!>(K_F_7agmK@0QnXcD`W6jg'M6&P45Yii24<%:C.Yb@YuFj;A<Vg/:'O-aX/b`7N&@<_(J`o4UuWklZ$[FX!TS924"qHEaMEE?`9Sbpco@T0$0.C\P^j9^!a*qRBbSZ3B=2qQ7qXR5rTXA^L#bf9B@*,:FIjB&%T3HL5^5cD6VG$O(@l^b=P.4VmS@Xh8V8A42-a%B6h'WIgFb<:'/jo4SHk*rLs7DU`"m/JYM)i6c@b1K"8X!pW<AhG%hY]AkDT"Y=9^odn#9WNW0+U.dI),HID0;6DQ[`dNE6FFEl;Y.4^=UBkoEi=NCZ6^OjPT.*$:O`<V-mU?c6RB*0-WI!EO8\_us6pEO\rp4b972upJOU>u,Y`%haE>t"hNIFoBLM6=/f@DI8q?"9O7c:AZS`)a!m/5%JM_ZhtPe[)(q$Ti9n<J_$k?V*[4jOB=Fo)UkVTaoXpC:;gD>&ooDjR#S)b0O@8L:T&9Hg3=sh0jdrcg*_YonK10:uNRBigi(nYf2*HD$*N_gmsq*@=$bOG3TZlXe=ii-TOii2pYLKD_@L0d0S&d$g(,eIMW+^PH%X/.((5[Wg=AsmBWmkH!r`o7a?som9?O"1lbY<$rOpZp]oK:5#3+G\aX'OX;b>W>-hK3KjaZCgL+Se:i55pI9%d:l1Z7Jk0RV/d/+8./5(6~>endstream
 endobj
 30 0 obj
 <<
-/Length 7161
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 662
 >>
 stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 728 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Documents limitations so downstream code does not over-claim paper support.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 710.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Improves traceability between REFERENCES.md and the consolidated research summary artifact.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 693.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Helps prioritize future calibration against human preferences.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 676.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 659.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 642 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 624.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 607.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 596.96 cm
-Q
-q
-1 0 0 1 52.8 540.96 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (16. Lok, Feiner & Ngai \227 Evaluation of visual balance for automated layout \227) Tj T* (Proc. 9th Int. Conf. on Intelligent User Interfaces \(IUI '04\), pp. 101\226108; DOI) Tj T* (10.1145/964460.964462) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 523.96 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2004) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 456.96 cm
-q
-BT 1 0 0 1 0 51.8 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( A primary source defining a ) Tj /F2 9.2 Tf (visual-balance metric for automated layout) Tj /F1 9.2 Tf (: each) Tj T* (element contributes a *visual weight* \(a closed-form function of its bounding box \227 area/position\) and balance is scored) Tj T* (from the resulting moment about the layout centre. Geometry-only, no render \227 a direct primary reference for slidekit's) Tj T* /F4 9.2 Tf (_balance) Tj /F1 9.2 Tf ( sub-score \(which currently cites only Ngo #4\) and a companion to the moment-based VME model \(#18\). \(Verified) Tj T* (2026-06-18 from Crossref DOI metadata: authors Lok/Feiner/Ngai, IUI '04.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 438.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 421.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Defines visual weight from element geometry and evaluates balance as moment around the centre.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 404.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Provides a direct alternative to simple centroid-distance balance checks.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 387.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Useful for asymmetric slides where equal area can still feel visually unbalanced.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 369.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Complements Ngo-style interface measures with an automated-layout-specific formulation.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 352.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Supports future area-weighted moment metrics without requiring rendered pixels.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 335.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 318.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 301.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 283.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 266.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 256.12 cm
-Q
-q
-1 0 0 1 52.8 200.12 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (17. Bauerly & Liu \227 Computational modeling and experimental investigation of) Tj T* (effects of compositional elements on interface and design aesthetics \227 Int. J.) Tj T* (Human-Computer Studies 64\(8\):670\226682; DOI 10.1016/j.ijhcs.2006.01.002) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 183.12 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2006) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 128.32 cm
-q
-BT 1 0 0 1 0 39.6 Tm -0.0532 Tw 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Computational models of ) Tj /F2 9.2 Tf (symmetry) Tj /F1 9.2 Tf ( and ) Tj /F2 9.2 Tf (balance) Tj /F1 9.2 Tf ( computed from the bounding boxes of) Tj T* 0 Tw (compositional elements, validated against human aesthetic judgments across two experiments. Primary, human-validated) Tj T* (source for slidekit's geometry-only ) Tj /F4 9.2 Tf (_balance) Tj /F1 9.2 Tf ( definition and the symmetry component of visual order. No render. \(Verified) Tj T* (2026-06-18 from Crossref DOI metadata: IJHCS 64\(8\):670\226682, 2006.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 110.12 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 92.92 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Validates computational balance and symmetry models against human aesthetic judgments.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 75.72 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Strengthens the case that bounding-box geometry can predict perceived composition quality.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 58.52 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Provides human-subject grounding for symmetry as part of visual order.) Tj T* 8 0 Td ET
-Q
-Q
- 
-endstream
+GasbWbAQ&g&4Q?mMRui?<Y63@QJGOJU]lW.S43e<,t!Z/`HmfDS`]B&V#6$Y-R^811#r`rc\quNIY;W^%=H9;q,K[NjE$,:N04.U9g8D0'&/ss&uHL=\"mfJ8)A,!,Bah!B^AfA,RKUD85d#YJIHP)BkN0HC+M!r7b?/EjV1p/fdrdM;]Qa?4]I&L@m;)c7"4*:h"(&?99ekO*(c5eK('"l+d!GD;iBQm.5UXZrIt2b!#`l]nE+-5+.RtqG&9(,H7AHdge;9'U+f3&Z$9Vp3lqTBV^lKT^K>!<TZgoZ0Di/WHH])f__)7dj7fF,1_);eis?gkNs[7+R\a)1h=KS74(OM`a5"]0jN!!/^GljN?nq.7.[UoOqZMTc_g?bcp6*><"FRnm@/Gk5r`Z)(/_^JXeQSoGT].c=8nl-E20rCUZb!6mJgqJ2=r:8Og*tCL\uUY#b(A8$[p2rD:qs0djZ,H@kW=9T,A&aE5JQadkl@I7U@=?RGCCjlS"h34oQ&](_b#O9F%*rG2!!hA`OG:MM)`\!k%N<5^M@"G;lkd9B#-^bAt]&u[<fge$u&p/^OYFHBnm+F]1;c2HDukb^=S+<l'JNA3:Q99)JI[3X>,"')+0mVSu=p-\E+b-J9+-*D.>TN:q]*ANLcq*nq>CTcm1>k~>endstream
 endobj
 31 0 obj
 <<
-/Length 7083
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 685
 >>
 stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 728 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Supports treating balance and symmetry as related but separately diagnosable signals.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 710.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Keeps slidekit within a no-render regime because the referenced variables are element boxes.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 693.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 676.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 659.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 642 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 624.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 614.16 cm
-Q
-q
-1 0 0 1 52.8 558.16 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (18. Zhang & Xue \227 Visual Moment Equilibrium: A Computational Cognitive Model) Tj T* (for Assessing Visual Balance in Interface Layout Aesthetics \227 Symmetry) Tj T* (18\(1\):41; DOI 10.3390/sym18010041) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 541.16 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2026) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 474.16 cm
-q
-BT 1 0 0 1 0 51.8 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Models visual balance as a ) Tj /F2 9.2 Tf (moment-equilibrium force field) Tj /F1 9.2 Tf ( over layout elements \(a) Tj T* (*Measured Balance index* with psychophysical transforms\), specifically targeting ) Tj /F2 9.2 Tf (asymmetric) Tj /F1 9.2 Tf ( layouts that simpler) Tj T* (centroid-distance balance scores mishandle. Geometry-computable \(element positions/weights, no render\); a recent primary) Tj T* (source motivating a future refinement of slidekit's ) Tj /F4 9.2 Tf (_balance) Tj /F1 9.2 Tf ( metric toward a moment-based formulation for off-centre) Tj T* (compositions. \(Verified 2026-06-18 from Crossref DOI + MDPI abstract.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 455.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 438.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Introduces a moment-equilibrium model aimed at layouts that are intentionally asymmetric.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 421.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Motivates a richer balance metric than raw distance from the visual centre.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 404.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Frames balance through force-field style reasoning over positioned visual weights.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 387.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Offers a recent bridge between cognitive modelling and interface-layout aesthetics.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 369.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Logged as a future refinement path for off-centre compositions.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 352.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 335.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 318.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 301.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 283.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 273.32 cm
-Q
-q
-1 0 0 1 52.8 233.32 cm
-q
-BT 1 0 0 1 0 19 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (19. Cohen-Or, Sorkine, Gal, Leyvand & Xu \227 Color Harmonization \227 ACM) Tj T* (SIGGRAPH 2006 / ACM TOG 25\(3\):624\226630; DOI 10.1145/1141911.1141933) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 216.32 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2006) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 137.12 cm
-q
-BT 1 0 0 1 0 64 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( Defines a small set of ) Tj /F2 9.2 Tf (harmonic colour schemes as templates on the hue wheel) Tj /F1 9.2 Tf ( \(the) Tj T* (i/V/L/I/T/Y/X types \227 pairs/sectors of hues at fixed angular relationships\) and harmonises an image to the nearest template.) Tj T* (The hue-template formulation is the primary source for slidekit's ) Tj /F4 9.2 Tf (_color_harmony) Tj /F1 9.2 Tf ( sub-score, which rewards palette roles) Tj T* (whose hue-angle difference matches a recognised relationship \(mono/analogous/complementary/triadic\). Hue-angle) Tj T* (geometry only \227 no render needed for slidekit's theme-palette use. \(Verified 2026-06-19 from ACM DL listing + ETH IGL /) Tj T* (TAU project pages; authors + DOI + venue confirmed.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 118.92 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 101.72 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Defines hue-harmony templates on the colour wheel.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 84.52 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Provides a primary basis for colour-harmony scoring via angular relationships.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 67.32 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Supports checks for monochromatic, analogous, complementary, triadic, and related palette structures.) Tj T* 8 0 Td ET
-Q
-Q
- 
-endstream
+GasIdbAu;j']&?qBBa"H@gQWRh6grq3a!`EdqP/K/K6!<VNQK#pQ9!&6D3`@+mZjam^^@@OhHR#k;D``_se$7Tu]if3/j!UiH$pP4WoO$GT8&t7+Ag=g=dci=4P*`P.hi/OO^cR"\DuK8mS,u']Sh+I^>DM/e(l52e'sMa7dcti.c#E8aM+5H?[?Y4(M..Xq9BhVGaLuKrd>)7J1&l2oq.=mZ<t@Ed3C1iDE#R<JMU2:X7J6=8)$.DZC^'#k7!7YTB!\7C,iO5L92uFl$^?_:0"#S^Ai0@77#Xr!3*EBsF:WioK!Ea$&7`T3U[Gr\!htXY`Z#e1aOU2-V.o4Tghb@>aT"@Lr*$L!t%)-6p0/mGZJ?Ust.>WDg[As&L-$eHs#9/M6WC8kLf&]*^"@qm8)I7GH)n]T-7%^+o+A`bVN8d&Y0:'a66S@(g#08)?dRh*RQG^"8"j6fBk'3aX>9NT(kXZkguHhUFD]qsXYIhsBqkYb\Z#j/q/+NXXDB%fBpmL%e!K3BFE6YJ[r%ZO.50e1lu]m9n4&FOZ<:Z9$&q'(6i824"NQ0mn^gcI\?iTs8J!rO$D2B,!]&goU4QaRV+O."cDR%!01]IZJluPd.:7($AIJ)n07]E-XbnB59FYbIeRJi`j6C]RZ*hh>ci1eUDncc501O,MfiHoTqRHn,h!l2DY~>endstream
 endobj
 32 0 obj
 <<
-/Length 5234
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 669
 >>
 stream
-1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
-q
-1 0 0 1 52.8 728 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Separates palette geometry from rendered-image harmonisation, enabling theme-only approximations.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 710.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Leaves tolerance bands as slidekit heuristics that should be calibrated separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 693.6 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 676.4 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 659.2 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 642 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 624.8 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 614.16 cm
-Q
-q
-1 0 0 1 52.8 558.16 cm
-q
-BT 1 0 0 1 0 35 Tm 16 TL /F2 13 Tf .086275 .196078 .309804 rg (20. Alley & Neeley \227 Rethinking the design of presentation slides: A case for) Tj T* (sentence headlines and visual evidence \227 Technical Communication) Tj T* (52\(4\):417\226426) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 541.16 cm
-q
-BT 1 0 0 1 0 2.5 Tm 11 TL /F1 8.5 Tf .333333 .333333 .333333 rg (Year: ) Tj /F2 8.5 Tf (2005) Tj /F1 8.5 Tf (  ) Tj (  Status: ) Tj /F2 8.5 Tf (VERIFIED) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 461.96 cm
-q
-BT 1 0 0 1 0 64 Tm 12.2 TL /F2 9.2 Tf 0 0 0 rg (Reference abstract / source note.) Tj /F1 9.2 Tf ( The ) Tj /F2 9.2 Tf (assertion\226evidence) Tj /F1 9.2 Tf ( approach: each slide carries one succinct sentence assertion) Tj T* (plus visual evidence, explicitly arguing ) Tj /F2 9.2 Tf (against text-dense, bulleted slides) Tj /F1 9.2 Tf ( \(text-heavy slides impede comprehension; a) Tj T* (later controlled study found the AE structure significantly improved recall, p < .01\). Primary, presentation-specific source for) Tj T* (slidekit's ) Tj /F4 9.2 Tf (info_density) Tj /F1 9.2 Tf ( sub-score \(penalise crowding; one idea per slide\), replacing the practitioner-essay basis. The) Tj T* (specific word/coverage bands remain HEURISTIC. \(Verified 2026-06-19 from Penn State pure.psu.edu listing +) Tj T* (author-hosted PDF writing.engr.psu.edu/2005_alley_neeley.pdf; Technical Communication 52\(4\):417\226426, 2005.\)) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 443.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F2 9.2 Tf 12.2 TL (Ten summary bullets.) Tj T* ET
-Q
-Q
-q
-1 0 0 1 52.8 426.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Argues for sentence headlines paired with visual evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 409.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Provides presentation-specific evidence against text-dense bullet slides.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 392.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Backs the information-density score with slide-design literature rather than generic UI heuristics.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 374.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Supports the one-main-idea-per-slide design constraint.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 357.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Keeps exact word and coverage thresholds as implementation heuristics pending local calibration.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 340.56 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Primary contribution: turns design quality into explicit, auditable measures rather than purely subjective review.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 323.36 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Slidekit relevance: maps to deterministic scoring signals that can be computed before rendering where possible.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 306.16 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Measurement mode: distinguishes geometry/theme-computable evidence from render- or vision-dependent evidence.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 288.96 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Quality-control role: helps explain why layout, density, colour, and coherence should be tested separately.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 271.76 cm
-q
-0 0 0 rg
-BT 1 0 0 1 14 2.5 Tm /F1 8.7 Tf 11.2 TL -8 0 Td (\177 Implementation caution: paper-specific constants and learned weights are not copied unless the repository can validate them.) Tj T* 8 0 Td ET
-Q
-Q
-q
-1 0 0 1 52.8 261.12 cm
-Q
- 
-endstream
+Gas1\?#SFN'Rf.GS>V3D?&22\J\>&eVbPpQNbHk:]su>kdO$]T6X0QgXrT\uTp69QpAOJ@kM?K_4@GQZ%:&!3>RLgoHk)9,$1`$0PkY1M`7?^^74H7)Rrlp<*$P#IfY*$(5%nme+YoZ:%`9pG:Eo^=QqQLNn.&M=gCX?V3Q?8A:fWe*!bKiDSL[E2jOtofV0;<ih]]c(3,WuR`"Jt\Yt0pE*3dB%=T4DfduZR$%b<gS*"RU>gu#8ii;Us%XesRG0?r;)>.(2@0[h=*RN07::?@;rV+LMAK639!$r/Bg[c=e`IR`gW0F8K;4Pg#*d]HO20Xmn`MhmX%OaRs4RRA#_isB'0Y)4R$1eWUK\anhk#@s"R':okb#iCq%^Gl:>&>q%o;$Wp7mOK&EFO)ZrNfkD=J^?bJfq'&EWO5>'\QrcMW1osE,?C)uS!oRG1SgaE$`e#$B[pt=oh]_tXIt;Pf<qoRk_pWkq7Z+!&DcsD1[cCrXQqJ,Yc0;aQ?[m!+.^Bsh0'8U)/d`B`+U^5@[pW=r'j24Zbl\5daZdRBM;&tg_6elMpgRXPOu:=qOTRNUt]YU9WZT%43?F)?Iqj6V6V\V:0XI4/WJYdVXST%KiT^2,$(;9@HjJ]7k49=pZA%=IA^h32Z2/kE?/>pdXQU;YLElls+GYOQ2~>endstream
+endobj
+33 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 695
+>>
+stream
+GasIe?#SFN'Rf.GS4?V^=V=%,m&a2fC"fAj7+:kn3Yt?/f5(QT^YcHj5q-nS!k.QacTV"N!IT=tpFf1t-H1bd!J1mI$:3`A8AF.B*W7#_?">eb@a+b3?*\"Qn*FdPim_A7(</m</eoR$CoK+qKuR%%b9G8'hbeNE6^?FXE4Zq*:7/[tG<W6p'O0i0qcpd$qLnJJj%jgNm#89/!i!hV^CumSX_CT+7RlK;pYcPWStB*"j!<o@TAm7t!sd8*p+>LB22m$I:^^@XZ/`K,KKcjOB-)9_0mUF5G=p;/Q;Bg;r?@4!_"6_d1A_U?=kj'BpI+PdB+PLsLtjg#2hE-^hMFR/V<S\*6YJkTl:hh0j<^0gB7-Dbb*u2e,bEreb*Q2"OG"Sp,uu&<DQa>HWtU"R/m>tbe.lIKFQJ3ihp]S).r79Ti3['R%?5r<(aYskO"P/LO_'c*6rO@_GdNVaL"^SEU810$4"DTA2!>Y*nfq1iPTr`f8ks[*/o^H:Inq<OVL9QSpj>%6;0GpK6\2**pk.6aZ2$&jqLGmZpQn9'NTTVUc9:-^TA4"?";eWHDV6M=18nqT$Z(Y<js&Ct4a8Mm\ODf7P,<JQ6'bGJ:Dn9!0k/C4lh?J[Ta\,..\]ORC4!2OF'c!l7:QS<bd1mqm;k<bL:jh[i>\G8C63RLGg$`Q?"s$Kdi3AFkV"n&6D"~>endstream
+endobj
+34 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 644
+>>
+stream
+GasbVbAQ&g&4Q?mMRui?7MQe4QJGio#>bP:;[[HJA>uiY=:^aoSEB95;LZQh',6U#Oi*SK4>RD&HWV+r"+2NemP=t*.-FuPS>*[9VfMEB`3q&B/C$!4hBX&LT7hX+(cb[+O66?Y(Q!bZ4qd$B:6`ed&ZKr)CUG>lHmGI&/SY,\G1lO(hcb>YnfHnH=1rV"F6+\).3Ak:0?A`=OA3CS/iQ1B,kNo]%bD*>#X%&`&@SA$HuP*X?*>QFH3o##2H-1n7Ed*kR(T#04t25>:G$k^^C\jjNZpadWD"s[K=UCgfHjrXetcYH,#@5#fm)KZK2atTnfkico@\u0cCs1aGj<9_Qf29bjqgMo*`ri`O4ki!e\4:'a7(-Wb^&a;Adk@pI'ERg5_#mOd]0I(WB1Jb<E-ZP\e^H*D&_V8p9&oA7740liG>@/6AriKbcPY/&'"69,P5JnL<Wfoh2`P>iVi;cXWJ#QROs,qW%e[GAA=ZTm3PPhm1,XS\2i.\fpE4k3OOP1Q0)Ie)1M=E4;>/nV(#G5CWAaZC^.JclV=T&/5=RDO&'/;0%qJ$l1RC"68!u#DDkB+[:\+fKkN"*V_k2Oq[,=RY#dGs'Ko7reU$fsI:P`5OBlX-Gp,kCo`%+Q([?\$5>sHgbl~>endstream
+endobj
+35 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 689
+>>
+stream
+GasId9lo#B&A@ZchU0S)N\,'Wkc'tA1XkT>'MkShWqI>Nr)Lj(q=e1:?pZ"'fH=tEo_.[9&!%girhgKMTA]-q%ppI$i<O7Nj;T/'dI33IL^ZU/_Sd,S8h7>seuk;`:A'BW,!o1I.02XkV1^OVS;E1"4ScXc\sqZ@C/V>fl6Tu3iF+7[9u!5LdN$,nVUciN]HFb9F&2[fitD4;h0.'1U+A&<]SuB;T/Sa)3&on[LM,!0(6c`$)2uU2i;=k"B""uk_g3=/:P=6U4,<Knln"Tb9'J*(WZT3'-:6%&^%$1ar<Mg;l2b7<K';*V#6X";*F<P"IkL@_Q5[;K.Wd1-.pGp?JqsIe7Mnnq5^S_W%APm$j6b!Ef:3B[%M*"nL0OPW#l2^_^_7MIhe-DU0HRfG"o@u+1!UD[B0ND]9X19GYS`TuNDQ:kVM!)Jb!)LNA]h\%/X8b!GBD1I8**?DZtn/0H*Q//clhq?PiYAQW_0;)H\J&pr-K;9/cGSFOnZI$#M"A/].("h*cE`ZB/]4$fJ2<Y_UCAjKYb#;c)!phO$gO^&-",=F$ipGQOS)dd0sfbQFSD#[QVIAasLC=.hngc\UR&6("/4"k_<U.P0)5rOfkMFGh&c;WqEAH)fs%[Y>@c$CMu,g%:[:m$eeI4U,MGu[VHotd\cGW_N<ImBtb%RGNOS+?\gBs3<~>endstream
+endobj
+36 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 697
+>>
+stream
+GasIegN)"%&:N^lc6LRJf.t?*oI4KGApTkZMPnoe.e3WJ[RFapR_S;``Xi2c`tqn4Mp@nWZ9ZKtn8D;.f,<H$#`&c>*$Pl%A7%%8HG=f9k8B>4"QM1FP:Ci@o]p\Jj&!#,(+%$o:)-'j/l`Ur7/\sXa6AB*f2Sa2"F_bq?0Q*TYFD96K<#/U%;r6ul-\-`NOc<4O?F_u5lXHuS4]n;.s+OrV2D?j[&G1K*7J.OS>c$kd!'lN!1p!+#Q,FBK.B&T%m"g*]@,(+7FFqYB$ZLHp(<!`-N%n62]dSJ1UF?D:8=W`WOJ'>@1'tm.+8+q*[`Pt;bNYY]*Il?"gRN.l<EaFf,IjHZ.>.QQ@uYNPC406&dKjTUG6]N[gF`X8X^(XEobIq%S.gfO&Ms:JcE03q8Er]!uEQH8*W]#gfG4YB^auu3%AYn'Ca^ranCF>r\RY*YDTnF%:l&/rZ:Al.`-V333O06'f.7s=_#)(7EujXSsXh&ZKkG.L7;!:4S5#)pATNao>^q6jc0C,.5:@ZE5*A6XbG*W3ern-GNZn!MD*_uS6DXqf<Or,&8+$$k#a+h&ZeYn'<I#@b_<3Do\dG;C5#ns;GH]RN%D0,N\]+=IH6!@EW$Yf.;ct4XXm=L09)G\r]*_X.(ONW@cgfDQF<5'.>P'rH%5I%rZOOpWo<Y<ep^9dm4c6%-hRB>M'G1S~>endstream
+endobj
+37 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 682
+>>
+stream
+GasakgMYJ*&:Ml+SB"HWlZF2f.8No.&H\r.!==UL@6JM:od/GMUs7dQ?KXYD;Baf,hRT31F%.==7tjsp_"eD:*u.b,=UC?_.:urV@5bV;W(ge`N\X:kcD><]a2)Y3#*Q!0eKh>a8dSJR<D&FWc>X]\,/X3_kJlB'gTnc$,amR24$R@r1qk`UV<(dGh-tQU!FNt?'Kj[Li!5W@LT(>Q5`RqeD0m-!A?ojAEk#QI%\]bp&J31(c+Zsp?FNS.q)I[RfbN0Ah]&n2l\o32d^!pI2kEb8^@>]/QN&V1Bi$,eI/Yg;8X2YWgDWC%(:7KHcR,qSat]J]"Y`21drC[d,<Xcc]TIk0Oml?$'Q:k'AX"PI%IQ7@Gs@[\%&9@i;1ed1]U34UrQQ%nTQJ.r(BZmJ9A5lDJZDrb.LIfb@W%]SXjId?Jj?8K%G`q69S:4/NMY@"o)4_<m\1oO%[Mbl.m-[]\h2Pm.*[a1Ru<l3m'D)K"/2`E^KnqV@F%T[@3usD>R+';1WKa/q!YG(^eofdk@S<g;8$5TT!5p_1[8+X0.YIUF5tZTT$MAr]F[hs_l>*_GLbt?@F;CSeJ_E`5h]h[i0JL[FtLr,R!oK--gP>fg+kU)hKB-=MD!4WBNfLE309)\jd"d0/g+>SHV==a;9_Bp;'"^!AG>!SZiPTT'*`pd)H8W0~>endstream
+endobj
+38 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 675
+>>
+stream
+GasId?#S1G'RfGR30.X&/Fh.F)c$P?#_BorKS7:%EGjNIEEm<mU]6p$BBe!T"6IGjrURM^Sn(Cfb2QW>i(\pcpDG`;C4Rp3E`AZN;,)L8ZMV^jQ5#^aJmD!T4cOWsS8`5OXX4BSRS*rtALJim-oB2s"<XJJ9t0bl"*qsG_+u6:3%*ljj;S7sde/nG(</]7hIu/QIY$c&eIe[d;8&jPUQleIqpE\30DTnqZmbMXkUsRL08lJIa>ADe>J]q:8UD4'7lI)c$B_2G&C&]$oc\U,AU:Cj5O877(VDQhU0GV=s1pcM#/'i)]_FGIq3LP5%^1hMIrARF>NX?P%42p-\L.2)La#Veb[to[0HQLLcAJne_:+Y[ml7!T*1iK_%'S[",qP("!'X46d(L[$![la*&qT#uD2bg>crl)OV,2!_)!I$i;Yc'tjBBHIWb\VAA)0aGUQUWBV/WNcl^!5N(S5GR_t@2+]1EJDnqj")#no&Kh`gQ/m\+EEhfmk_\;Hl"CJK(il/T!&@'@H/+[sWGdpX*j*cWrql*)A;K>`0IeANH-1S2m26aUGX)Md'udU0+R2lIZgb.!j1A4>aAPee5tO\744HO7*Cf(80k-0j:.KT5?`OOmS_\IKink#igmDB$0^)GM%'gE50A9i._Y4B"ceNssnHdkc'^j=an41jT~>endstream
+endobj
+39 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 776
+>>
+stream
+GasIe?#S1G'RfGR30.X&&A)Z1Pp\iO,Qn`a,6SW4?@(@Pb87V9D?$2CVePB#TVQ_sqfV<i7i$pV&`Gr-JI`XT?4.$qC^H4l$*qmeap,Tb@dBG@UD/noZ7.I&4:^Od2;h<9b9g.u-)Zn;;kHZST4fW@KKHcCU'<WV,/R,)-b.m/U/at?'u#bc3k&5B#4GbtQcd_8's\'T(Dpa;9t`<^=mI&7C[9("L+4r%[eF7@\,743:8^Yoq%0M1.K[6_2th4fVD.p6b03370UH/f6H1b]_XVTWmXp;d\huL=7Odq7De:c`iPk%m1B%gB8_O2/[3Y"OVk<=1T*-45@JJ`eD,nEI20B57-8__Go2cK;&kt)%:Ujd\'jZjKBfa-$b/Gk@QqDNtVHt'W_RC[>0+J!MB@5!$5Z]C(U@0Rpkha4s3(h8p21Zl#T8br0W#F8+=s2u=<^J1+?&MhM'q=S!f6S0OU;jEpaBC7,HAS.:S5Hk<BW+g_H\&14-toIGFeO(bG,frA-'4K%d&&F!?VHlSSNcqh>K9V1g+]`7=hUh#c`1dglKno?nfSO)&r\OeSTfn8nFh]g%g1spHgbiss0O/OgsQio"m3W6muHF\ZhR>*hVf`tm5a-cPKQ]WV\V;XeT>--kNVqKW16IhHE,]H%$*dcZ`>Z96.37rlMM5%D('T3PIL0#_k)>3QDL4EXk?57rDD;#aOeQo?>XS9._Dk^`m`4Qg?b*#=N?.SR\#m9?$Z%%DQ?D#l>cI?\![[OrO9hS/UGVS#/:2aGB"#~>endstream
+endobj
+40 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 696
+>>
+stream
+GasIdbAu&c']%q&c8'L?CFP;(Q5)(fb-:*I^bEYqQ*1k/Q=V><D>kSZGr8;'j+j`5d^eN^1Siu=nLZWfTu>&5"61eFYUmmmI`&((n7TO;OkD_90hHY08KI/3[+jgfUp<]PStjf/'F-/b;OmK8L5[Li-In9l-]j*s')^m>JkJb%P$YOpI!9*AcBWMn(V6s6S2.4!WSaA]6[=@D:V(\k'AerE1\+/L[4=MU$J,ZqH',5fm\9&6Z3W$K9m`i)L+rNo_Oe`hOd"uLJu<Df7.YB*DNfi7Ao8p^B79\u&MsFhFHS;.mX)8;hi)1e_Qu56+qjlB\[cAnC25X-=6N%Bp/MZLQ4t0s-fMjc<,t%FMgU2ECH/s9#mCju=j_$D3.>'uIC')qbJBA)*A-@iD7W>!QM59,+cA!8@u*bBMes@74aAQ0DG1GiQlr?-U?Wc17S(B`N&d1nG7?\a^Gq@Q0t*Z4D%IGhWMi+bVXpH8Lt\&P'Y1d*_CguR/:@uRh&rr.]WXPTrSs1N]cn\=)Vd_V\hU*E[e+jt3af/.eKL?>Zd\#hp-!f1T&!hCY_-aup3^Rh4^-n1%/3.qi'OshLU_2[]LSeL8`)(jOVRPrV@:b'(brEb]=3kX@=;7KZp_$cR=6C7Wm=TZ;KP,%fHR96dY"8aWhA)&^%p-Jcie&d*sN25ifX1`O6Moi@IP'Zr&cJ~>endstream
+endobj
+41 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 701
+>>
+stream
+GasId?$"IK&:Dg-fZ2>>f2<U/%8Y?%bWn6dl="(T(SN76)LinZ.H/m"OqT3W;Aao)]$m3N]5*.g/f*<L"Q&:NI*]SfnekOB--1#o0(8c(Z0f\E(o8(gS5QYgGT>^ThP4!"FlOqAP$2k0bdZTe2sR_8KTCGiOp_`\+GpFh3$7+jY,jEG=)*VL&^<X8gk\\<EgWdt)<#[C]g2RIquZi)(6isAEqn-D?0XXEH%LB5f+Z5>QL#_9,P=<)J/@.`*q&Gmk^Q[NN'ldD9??hCA'TT9mVg-oEW<aZ)6$B3hH\stp9lQeKJ;<UHH]N^7<+iWfRMh?dMDgr-;"6>7FFbi"BDcN`E-nXU9L#Q\qF991nmk0=V,9[AJbnIZshT:\f.GK3l'4,2Qs&%j0Uqj]LuRbDkf"u3!-U&VIfeKALRi>W?RAr5!Bf`nb-K%_.12^G;,uQA16\j!F+(7[HUXb?_]''<0.?6.pARi4.fBL.%<P+Lm_0gOCM@'.Ej,"_p8R6*dYatH[hI1r,GM!\YUHC$J^D1gkFd`=F@Vp\)=("h)U)rPH.`RdgR>b<',"0G*^1pSuL0<A6&$H(e^\Di^-kN>D@VC[9R1@NKUHs*0:o*[%e&<VDVh#6tp!p/qe4$>%s5$m%X1e;,)J02NX['$4ugi(SfPb4d&.Co',T:\"X9<3g(>sL+WA5a7P<ckkt[rjZom~>endstream
+endobj
+42 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 717
+>>
+stream
+GasId;,>q#&:X)Opn"pETHk[T"+/`k@@N>_,=7j;MjI\t5\t(V$L<0>c44\?/Xi3\n_JWVn%QD%#^Jl<^Q?7/*(T0(U)<\?;)1h,?Xf0/ILi19aCI,$0b.]:'p@sCLfR+,'Y-UO44MZ'N$ram6GH3JJ2?3^q_PAHUJM3j=:+RE)M*,-6DjW1Ki5F=j"W/X(fdUDQXZZOS_ZY^O*i%c<#aVsUS5RU;%YF>BP2I=1U;/"<cLh/Rb'(DBpS+_m8ukof&7tAT1nCsBD1&(Dh'g+'#9uhkC!dLDY2]u[#OoCR7r_"I_K4f?'*n0rJ0o&m29hhP&sjMP3HRUM(?_)8piEN='fiMgUUuKVFF4#1I<Tq12i=HP@93nBZq:hX+i!s1eWo"HKWHd"1"<3PKXKVTmo"Sl2Cn'[2?U8)oIs#GZE9J7fR9?`i-DN/:sKHQY]Y=kYGhZdFDF:2S+Mh9.E0!D+$Z47Aa6RlB3%k<MFLLd8>b?cPaWSC`BYkduKA'aNgUrAhi)7d5V'\%p5>#q/O76VmR*,=UKXlE8s+?arG<O_O"]SJ?973]7sj\SFld5p;G"pcKu[9BW%.t:+]&;K@1d2idn%>/S^3a?KGOR/fmj?L5N-:]F`7^do%r'bqYqJ6J;MU1LW?$D./6bSS<:e9jh4C:l*\FNKr[p1%\Ss'=Xf=cFs)NXcS3&X,bpC@JuJZh/Rb9:Dj!3L<De=~>endstream
+endobj
+43 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 670
+>>
+stream
+GasId?#S1G'RfGR3):qrOMu+#B&dS62Msb//0H,+@[rq=CVI%%DYs1\:-[=;'679spWM`iHc$EJ`VdKPJbM0"Y8A*H?@p.)N;O&Ik+f[9[Z6<10Z><seg5*I[i'!dKVun,E:1#,Y;fYHl9p*c)$6+Wpo57?>dQ"-kBM[kKSsG3Q,7Ib-b+!YDV9qS[11h&e#"Ku$;%F`h]Y3ME'^@n;m3"MQn5ff]:L0>ZhQLH#E\<Q7f*18OjN:*ZBrCS"7V*mJ2[`!I?tr/[S&4:0^J;Ye7\ackTh1!*dZgf6X^(9T1eO\GTa80=6<Tg5F#B/b+R7$%BC4)d?/ki6lLguP%8#ToN-`Z8XcJc4Q#PfND7L(%?E<srjVl4'?ZM%J3+2ESbL,O`H]QUj;=J:@Q',TbS^9U\7/ZOTSHh]kpODKD%BJX<4kS"feL>9O""i/[?;rgCoPNAP]heo&8#(s69g2p[.nHeG9a0)n9i!ZkPH:YH;3'7.bo>GZo(@#[chGX-K(Q6c*:\Jij5<hLE8Y9FQiKRYbRY8F/ma>oOusMcESMWX;8rd25p>KC?5MNdNn_TnVL@sC,V6kZo1Ct[&D4gaLT[2h2ToPNL@9D+I^1/.1I^ef,^p)SIJ:D7JBbH29ro6NfBtDZF/TaK5I=P=1WU2l%M<0oFI8a/3j~>endstream
+endobj
+44 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 671
+>>
+stream
+GasId?#Q2d'Re<23):3g>)F=eB_OEaR6"?s]!=nkp>UXecsY(6P;`HT[L&`dW?q_e^)oQ5ggbrW%cY76!'Y&*>S%I(C^C`00sWmrA<VKVZM0;j@=ibmXXP'0haW\N#u-Kf;!Oc-(DJ-;Gp5K&$3<^bgr[f$(;-`Z_?YHmYnDO7S`=>*Wg9&NerWO@9AQl\Ip'bUS7="u7q@\%c4I528AP]f:pHR-9lI6in*P?%2+ciW:`WGS5T5WEroQm[qokWBD[et,-jKTmYb)HB_1QQ(cB"`<J):%CrrAT;*RJ:hSFe-"!6;LcXqhNnp3fS><P^=aTuKu%!OLp%=Mr\$+He]X0q6GTJc;V;C6k[;'Q7W2G\mO\C>Iq"l/9GY/)-o,&\nJR*R>rN-(#0BKbW?!0$Hf4Xtg&3,aW<q%/ed,Q@$I38fFq.i5I'#'siMVoQ/FGLHdTB<*Y&-NRaS06aoB9[0obAo$tI8'2(afr:jaQ:PYsh^2C]anDGnGYT8_sU=X:r_bl0c;i6s]='[VB/Tf^Ul*MYU8`IHGC':^LC2*H#2Ol^lMc();XciJa7B(NLWnf22]QAJBTV_<i/&d0*8%rTXfNIBpo3/>o>Hk\XEMZ"I)V61V]G67^gQFeSRp4Ih4BuUF"@k([@s\Q[rK6O*@="hIR(NF\O>3j~>endstream
+endobj
+45 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 702
+>>
+stream
+GasIe9lldX&A@sB]MjSr=q!1+,eYMQ[*@[Ye4aL9j,3tSRfn9ma[uF!]9:"5@qRh8#jmuP]j23piXu'3Tn'0`_j_LJ5X%].KF.32I)uVC#'":DN5H?n8?f*j/8(#g(IY(?'ngO4_]+.dF)`BgoE%<@$#q9CV!AIRi3$6n-H$&=X]hj/ZrPl%)QGBgY*oN);k>.^7"1/H?<<pQ7?(l:Wd,q$X+g:54%I*f>#TPEW$Z.jH=tP'T#VcYBpP:/i#osb#gjfKh^%lkO6h_og&N=S;S\3CDV[AZdrqi$3qiE!qsA]e1mnO#m-Hsi:==!fa-n:@EV*BT!_OFTT2"=GRQ5&tYKEqXD(sSDJmB!iOr8^-M)5MpN5lSqclX!/N70<uiU+dC2scV42GZ*[-(k+E-HsdH'&4/*-2X@Y;N,dt6@nMd"NFbWM_'U$1Daj4%.n;B/:<);]![W28`aTdC0;+l7ObWh1OP:lCfmo[00FHsaLNVaR5&KRUu$bPaLUEqEPSAdkKg?EJ(ZWN3Y)(b`meduSN&Zl7K8hL#"K9n:Na];\_%\[=<g:`a\I%MI$2DiN[@Oldos?$'@D]JW(]\l*pU1Y6<S"P/77O&=h]lAb$\D]OUEb+q1rK/[H5pQR]%saent2F424C_O=OBbAtGJ\drRr2<:X==lJ6s*84@p^)p@o.2#^&?m;dNN:)Nm4<#n=V~>endstream
+endobj
+46 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 646
+>>
+stream
+Gas2F;/_pX&BE]".K3*VXYu&B6:gf.WLYk_d^l)cS+>RU-)&;>g88/iI;KX\d\N/E#2c!M^Y^&!A-_^I/qGYn0!6'/8%&PY_\h'N>\0[c&_hTNj"S<&4&[d!^5ZOt6`dm&k:YuXRY.I)R)ffG6GV"\s43oNi<0(dKE^NPr%<+B.f<s*eHT(cD-<.5Wbgc7Z9)U[meRka?;$*;P7kBh^^_!OTnL0+eBFQOoCUT64Q6\*[tEL_#S,ukX)^7]RW##JUUE),7DK[OZ^AG03LQb8k$q&Ip=](A:QY7<@UGSR,oCaj1mY/(0PeNpCe25g,)O2Oj2oeWkcY>kj!7>OnTqU0f/=c5eigH_N)0FW&XMS^JHm/8nj0<%\D5[ajQN1D@Q'*fR5+JKEJNop"8t/NjJHa.kc-?K77"n*CatP\*]kIs2%CWF#=U(B8k9Dr1o*5Nh+B-G2E\h<Rsj`pQ:^iKqJ-&&%KPQ"JcD]'pQfL-*=__:QYsLSd0Vb0RU\Hg?!WIBIX\1TfL^f^*@9%/D@Fd/:UIAX9&5]CXd]1E_GZVfCAS'un"Lj@FL)5K&c#TY@oo3OU0=`>pESt?`K^e@fXP[!o!VU64dP_."j5PeHh;k)P)qW1Z/p\dr^uqP1qca6N1L%qkq*&~>endstream
+endobj
+47 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 661
+>>
+stream
+Gasak?#Q2d'Re<2301FM.!>k>h:"9!l)%&N#b!S!0-8n*ZktQf[-N2>Y"_*L[[I18hlh*LmLb9M&Uqt^n1hi6(BG\Abou(#7eRjpZek/B=@^BK0Yp:@=0C3tH+UWSEN7Ylj#kSO,XgoI8a5LC@N=B+Z_4mZBg=7L'k/NOLlGDEE1r5.lLM,nbGIHhG),G6JRA$?]R_Ka1iRsq*NnmF*^+Q-RhcV6,\>8LAUdAA%3VDo!PCEpn%7Xgg8mtCa'$lpPKD()WsbF@]:;+rB>Iu!noid03:5E`p*Ao&1)g&CUn5sUV-U(C@W!*DG!T61-(.i(8E)>BE&;/l%i(+[8X^(WHtVr;'2ls20s<>.rne:LV[!\!)!P-ecq8o+G"eStpE!Y"ZXe89!A>0hCjRn`T@TsrklJ5-=><61`Hs-dPnOo`lF3Sbck9;`@'M@-c;j3U$T2kEG]rFGCLs*S(C9lWhd);"l/%m9T-&8.kVWnM:grWPdFK9XfV8>K9u'V[l^&;@*/SPm`u`"0Tb-`<O]RPm9m)B*C$?W36qc[:[!:d_r`(iO4c7ZahH!F!A9fV@."c@r7bnuZm5sCQFN_;@%8gsYNB=WVE*d7?X/29c1XCY-oMEs\'e!k\hG>:rV$VEG[le.KlQP*!lfjZpU%](Pq(7g~>endstream
+endobj
+48 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 690
+>>
+stream
+GasId>u03/'RfGR3)<I<,:"U-"+/b!0km)R!R[]7]Qh_=)i1'/:1=+q>W]<hZtOImg\8TLkM2O@$'-ojPm0EP35&"J$</gW=e)2^N\ArDmj*=Abjr9Z1_K(PRdHW-D@R6^.LdPKf'0"r>5E<'0^KdA87Hs_>?]u+ILu=oXUnE9e$*N0I:MCV(5/,]1H4N0kUeeMK,g?**20r2Fc=DL%7dM/N:)SD.tg?Z*Cf5nVH\Sm0#6?im6rupa:Pur7$?Ur0LsI\2EAA5Q<)C^<^gb3)C8U8m^-<sV5JlLgd]uad=:X]M\6!'-S*clf!ooQAtEJIQ\?oTSo"&"ED+tGb\X20aM$r^^'UOTiY$N#jU8t+nTeH*`>N".I(A3h;K-k]qQ;daCJ1$8mf;-81WmJ]<<^Z+XC?bNfd4X@@UtcK[$<jl6O`U*YYkXU?/#gMF\VN6oW;'qko<jp4.uoI*Q+c$7%>QGhi`V^%:k)DDQ1%NX8%3%htXmSYU&7MrK[,<>Q4J%JZrj.'0OCVSF"mkQXT31]b@OYogYODO(I#=LpM6?%eiG=:r8i2,gH?,9K1<%mYQ8@U2bDp`Vn8/l5k(X8Ib(PKik%*ermjl*$aWICA/ca+mm(O;jPM77HZVXe3:(@:pTg!@HG%"/=2&3WCCC1Hi'^69i.Au\@Pq`E2?og9Q/DeP:)`W44O~>endstream
 endobj
 xref
-0 33
+0 49
 0000000000 65535 f 
 0000000061 00000 n 
-0000000122 00000 n 
-0000000229 00000 n 
-0000000341 00000 n 
-0000000536 00000 n 
-0000000731 00000 n 
-0000000808 00000 n 
-0000001003 00000 n 
-0000001108 00000 n 
-0000001303 00000 n 
-0000001499 00000 n 
-0000001695 00000 n 
-0000001891 00000 n 
-0000002087 00000 n 
-0000002283 00000 n 
-0000002479 00000 n 
-0000002675 00000 n 
-0000002871 00000 n 
-0000002941 00000 n 
-0000003233 00000 n 
-0000003371 00000 n 
-0000009707 00000 n 
-0000010397 00000 n 
-0000017605 00000 n 
-0000024755 00000 n 
-0000032168 00000 n 
-0000039288 00000 n 
-0000046312 00000 n 
-0000053302 00000 n 
-0000060568 00000 n 
-0000067781 00000 n 
-0000074916 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000516 00000 n 
+0000000711 00000 n 
+0000000906 00000 n 
+0000001101 00000 n 
+0000001296 00000 n 
+0000001491 00000 n 
+0000001687 00000 n 
+0000001883 00000 n 
+0000002079 00000 n 
+0000002275 00000 n 
+0000002471 00000 n 
+0000002667 00000 n 
+0000002863 00000 n 
+0000003059 00000 n 
+0000003255 00000 n 
+0000003451 00000 n 
+0000003647 00000 n 
+0000003843 00000 n 
+0000004039 00000 n 
+0000004235 00000 n 
+0000004431 00000 n 
+0000004501 00000 n 
+0000004782 00000 n 
+0000004984 00000 n 
+0000007870 00000 n 
+0000008687 00000 n 
+0000009440 00000 n 
+0000010216 00000 n 
+0000010976 00000 n 
+0000011762 00000 n 
+0000012497 00000 n 
+0000013277 00000 n 
+0000014065 00000 n 
+0000014838 00000 n 
+0000015604 00000 n 
+0000016471 00000 n 
+0000017258 00000 n 
+0000018050 00000 n 
+0000018858 00000 n 
+0000019619 00000 n 
+0000020381 00000 n 
+0000021174 00000 n 
+0000021911 00000 n 
+0000022663 00000 n 
 trailer
 <<
 /ID 
-[<b4d2a07256150f1d5e0029ab887d815a><b4d2a07256150f1d5e0029ab887d815a>]
+[<fe5719eefae322a2431f04810996e857><fe5719eefae322a2431f04810996e857>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 19 0 R
-/Root 18 0 R
-/Size 33
+/Info 26 0 R
+/Root 25 0 R
+/Size 49
 >>
 startxref
-80202
+23444
 %%EOF
