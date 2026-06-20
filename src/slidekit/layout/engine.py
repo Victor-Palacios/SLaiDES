@@ -817,24 +817,15 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
     # linter still proves it fits. Blank lines advance the cursor without emitting a node.
     size = ts.body
     line_h = int(size * LINE_SPACING_SINGLE * EMU_PER_PT)
-    # Each line's box extends a full line downward (clamped to the content area) so the
-    # code block's rects tile into one continuous covered band. Text is top-aligned, so it
-    # does NOT move; the extra coverage simply guarantees the union of rects encloses every
-    # rendered glyph — rects are full-width so any render drift is purely vertical, and this
-    # band absorbs it. Otherwise the renderer's sub-line drift reads as "ink outside rects"
-    # in the drift harness. Sibling code rects share group_id "code", so the resulting
-    # overlap is exempt from E_OVERLAP / E_GAP.
-    bottom_limit = cy + ch
     for raw in slide.code.split("\n"):
         if raw.strip():
             is_comment = raw.lstrip().startswith("#")
             color = _CODE_COMMENT if is_comment else _CODE_FG
             w = measure_text(raw, _CODE_FONT, size)
             line = Line(text=raw, width_emu=w, height_emu=line_h, overflows=w > cw)
-            rect_h = min(2 * line_h, max(line_h, bottom_limit - y))
             nodes.append(_make_text_node(_nid("code_line"), raw, _CODE_FONT, size,
                                          bold=False, italic=False,
-                                         rect=Rect(cx, y, cw, rect_h), lines=[line],
+                                         rect=Rect(cx, y, cw, line_h), lines=[line],
                                          color=color, group_id=gid))
         y += line_h
     return nodes

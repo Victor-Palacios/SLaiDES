@@ -276,10 +276,18 @@ def check_slide(
     all_nodes = resolved_slide.nodes + resolved_slide.chrome
     allowed = Image.new("1", (W, H), 0)
     adraw = ImageDraw.Draw(allowed)
-    for rect in _collect_rects(all_nodes):
-        x0, y0, x1, y1 = to_px(rect, tol_x, tol_y)
-        if x1 >= x0 and y1 >= y0:
-            adraw.rectangle([x0, y0, x1, y1], fill=1)
+    if getattr(resolved_slide, "background", None):
+        # A first-class full-bleed backdrop (e.g. the code layout's dark panel) makes the
+        # WHOLE canvas a deliberate design surface, so "ink outside the content rects" no
+        # longer signals drift — the entire canvas is an allowed region. The margin-band
+        # check below still guards the safe area, and the deterministic linter still proves
+        # the geometry. (Analogue of the background-aware ink baseline in verify_deck_yaml.)
+        adraw.rectangle([0, 0, W - 1, H - 1], fill=1)
+    else:
+        for rect in _collect_rects(all_nodes):
+            x0, y0, x1, y1 = to_px(rect, tol_x, tol_y)
+            if x1 >= x0 and y1 >= y0:
+                adraw.rectangle([x0, y0, x1, y1], fill=1)
 
     not_allowed = ImageChops.invert(allowed.convert("L")).convert("1")
     stray = ImageChops.logical_and(ink, not_allowed)
