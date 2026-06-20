@@ -324,3 +324,36 @@ def test_fuzz_stat_callout(title, n_stats, stat_value):
         for node in slide.all_nodes():
             assert node.rect.w > 0
             assert node.rect.h > 0
+
+
+# ── first-class slide background (the code layout's full-bleed dark panel) ──────
+
+
+def _code_deck(code="# hi\nx = 1\n", **slide_extra):
+    slide = {"component": "code", "code": code}
+    slide.update(slide_extra)
+    return {
+        "version": 1,
+        "theme": {"palette": {"primary": "#0B3D2E", "surface": "#FFFFFF",
+                              "accent": "#1FA463", "text": "#1A1A2E", "muted": "#8A8A9A"}},
+        "page_numbers": {"enabled": False},
+        "slides": [slide],
+    }
+
+
+def test_code_slide_has_first_class_background():
+    rd = resolve(loads(__import__("yaml").safe_dump(_code_deck())))
+    s = rd.slides[0]
+    # The dark panel is the slide's background, NOT a content node (so no margin/overlap
+    # hacks and no node bleeding past the 0.5" margin).
+    assert s.background == "#0C1A1C"
+    assert all(not (n.rect.x == 0 and n.rect.y == 0) for n in s.nodes), \
+        "code layout must not draw a full-bleed background node"
+    assert "background" in s.to_dict()
+
+
+def test_non_code_slide_has_no_background():
+    rd = resolve(load("examples/14_big_number.yaml"))
+    s = rd.slides[0]
+    assert s.background is None
+    assert "background" not in s.to_dict()  # omitted when unset (no golden churn)

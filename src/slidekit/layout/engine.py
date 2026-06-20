@@ -267,6 +267,7 @@ def _resolve_slide(
         canvas_h=canvas_h,
         nodes=nodes,
         chrome=chrome,
+        background=_COMPONENT_BACKGROUNDS.get(comp),
     )
 
 
@@ -780,18 +781,18 @@ _CODE_COMMENT = "#8FB3A4"  # dimmed sage for comment lines (readable on the dark
 _CODE_DOTS = ("#FF5F56", "#FFBD2E", "#27C93F")  # macOS window traffic lights
 _CODE_FONT = "courier new"
 
+# Components whose slide carries an intrinsic full-canvas background (painted by the
+# emitter as a first-class backdrop, not a content node). Keyed by component.
+_COMPONENT_BACKGROUNDS = {"code": _CODE_BG}
+
 
 def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
     nodes: list[ResolvedNode] = []
-    canvas_w = cw + 2 * cx
-    canvas_h = ch + 2 * cy
-
-    # Full-bleed dark panel (chrome: intentionally extends past the content margins).
-    nodes.append(ResolvedNode(_nid("code_bg"), "box", Rect(0, 0, canvas_w, canvas_h),
-                              fill_color=_CODE_BG, is_chrome=True))
-
     gid = "code"
     y = cy
+
+    # The dark panel is the slide's first-class background (see _COMPONENT_BACKGROUNDS),
+    # painted edge-to-edge by the emitter — not a node here, so no margin/overlap hacks.
 
     # macOS-style window dots.
     if slide.chrome:

@@ -61,7 +61,7 @@ def emit_html(
 
 def _slide_html(rs, deck: "Deck") -> str:
     palette = deck.theme.palette
-    surface_color = palette.surface
+    surface_color = rs.background or palette.surface
 
     slide_w_px = rs.canvas_w / _EMU_PER_PX
     slide_h_px = rs.canvas_h / _EMU_PER_PX

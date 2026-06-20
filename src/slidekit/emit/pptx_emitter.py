@@ -74,11 +74,11 @@ def emit_pptx(
     for rs in resolved.slides:
         slide = prs.slides.add_slide(layout)
 
-        # Solid slide background from theme surface color.
+        # Solid slide background: the slide's own backdrop if set, else the theme surface.
         bg = slide.background
         fill = bg.fill
         fill.solid()
-        r, g, b = _hex_to_rgb(palette.surface)
+        r, g, b = _hex_to_rgb(rs.background or palette.surface)
         fill.fore_color.rgb = RGBColor(r, g, b)
 
         for node in rs.nodes + rs.chrome:

@@ -8,19 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "code_bg_1",
-          "node_type": "box",
-          "rect": {
-            "x": 0,
-            "y": 0,
-            "w": 12192000,
-            "h": 6858000
-          },
-          "is_chrome": true,
-          "fill_color": "#0C1A1C"
-        },
-        {
-          "node_id": "code_dot_2",
+          "node_id": "code_dot_1",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -32,7 +20,7 @@
           "fill_color": "#FF5F56"
         },
         {
-          "node_id": "code_dot_3",
+          "node_id": "code_dot_2",
           "node_type": "box",
           "rect": {
             "x": 713232,
@@ -44,7 +32,7 @@
           "fill_color": "#FFBD2E"
         },
         {
-          "node_id": "code_dot_4",
+          "node_id": "code_dot_3",
           "node_type": "box",
           "rect": {
             "x": 969264,
@@ -56,7 +44,7 @@
           "fill_color": "#27C93F"
         },
         {
-          "node_id": "code_title_5",
+          "node_id": "code_title_4",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -82,7 +70,7 @@
           "text_color": "#8FB3A4"
         },
         {
-          "node_id": "code_line_6",
+          "node_id": "code_line_5",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -107,7 +95,7 @@
           "text_color": "#8FB3A4"
         },
         {
-          "node_id": "code_line_7",
+          "node_id": "code_line_6",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -132,7 +120,7 @@
           "text_color": "#E6EDF3"
         },
         {
-          "node_id": "code_line_8",
+          "node_id": "code_line_7",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -157,7 +145,7 @@
           "text_color": "#E6EDF3"
         },
         {
-          "node_id": "code_line_9",
+          "node_id": "code_line_8",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -182,7 +170,7 @@
           "text_color": "#E6EDF3"
         },
         {
-          "node_id": "code_line_10",
+          "node_id": "code_line_9",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -207,7 +195,7 @@
           "text_color": "#8FB3A4"
         },
         {
-          "node_id": "code_line_11",
+          "node_id": "code_line_10",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -232,7 +220,7 @@
           "text_color": "#E6EDF3"
         },
         {
-          "node_id": "code_line_12",
+          "node_id": "code_line_11",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -257,7 +245,8 @@
           "text_color": "#E6EDF3"
         }
       ],
-      "chrome": []
+      "chrome": [],
+      "background": "#0C1A1C"
     }
   ]
 }

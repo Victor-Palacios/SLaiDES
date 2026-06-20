@@ -117,13 +117,17 @@ class ResolvedSlide:
     canvas_h: int
     nodes: list[ResolvedNode] = field(default_factory=list)
     chrome: list[ResolvedNode] = field(default_factory=list)
+    # First-class slide backdrop (hex). None = use the deck surface colour. Painted by the
+    # emitter across the whole canvas before any content — a true background, so it is NOT a
+    # content node and is exempt from margin/overlap rules by design (e.g. the code layout).
+    background: Optional[str] = None
 
     def all_nodes(self) -> list[ResolvedNode]:
         """Flat list of all nodes including chrome."""
         return self.nodes + self.chrome
 
     def to_dict(self) -> dict:
-        return {
+        d = {
             "slide_index": self.slide_index,
             "page_number": self.page_number,
             "component": self.component,
@@ -132,6 +136,9 @@ class ResolvedSlide:
             "nodes": [n.to_dict() for n in self.nodes],
             "chrome": [c.to_dict() for c in self.chrome],
         }
+        if self.background is not None:
+            d["background"] = self.background
+        return d
 
 
 @dataclass

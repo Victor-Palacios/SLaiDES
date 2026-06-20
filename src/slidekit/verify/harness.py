@@ -373,7 +373,11 @@ def verify_deck_yaml(
             return result
 
         for png, rs in zip(pngs, rd.slides):
-            result.slides.append(check_slide(png, rs, surface_rgb, cfg))
+            # Measure ink against the slide's OWN background (a first-class full-bleed
+            # backdrop, e.g. the dark code panel) so a uniform backdrop reads as blank and
+            # only real content counts. Falls back to the deck surface.
+            slide_surface = _hex_to_rgb(rs.background) if rs.background else surface_rgb
+            result.slides.append(check_slide(png, rs, slide_surface, cfg))
 
         result.passed = all(s.passed for s in result.slides)
     except Exception as exc:  # noqa: BLE001 — capture for CI reporting

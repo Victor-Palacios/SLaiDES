@@ -74,11 +74,8 @@ def _check_slide(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
     issues: list[LintIssue] = []
     all_nodes = slide.nodes + slide.chrome
 
-    # E_MARGIN — content too close to slide edge. Chrome is exempt: page numbers sit in
-    # the corner and decorative full-bleed panels (e.g. the code layout) bleed on purpose.
-    for node in slide.nodes:
-        if node.is_chrome:
-            continue
+    # E_MARGIN — content too close to slide edge.
+    for node in slide.nodes:  # don't check chrome (page number in corner is OK)
         issues.extend(_check_margin(node, slide))
 
     # E_OVERFLOW — text exceeds its box.

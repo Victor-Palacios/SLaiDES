@@ -49,8 +49,8 @@ def _pdf_font(name: str | None, bold: bool, italic: bool) -> str:
 
 
 def _draw_slide(c, rs, palette, page_w: float, page_h: float) -> None:
-    """Paint one resolved slide onto the canvas: surface fill, then every node."""
-    c.setFillColorRGB(*_rgb(palette.surface))
+    """Paint one resolved slide onto the canvas: background fill, then every node."""
+    c.setFillColorRGB(*_rgb(getattr(rs, "background", None) or palette.surface))
     c.rect(0, 0, page_w, page_h, stroke=0, fill=1)
     for node in rs.nodes + rs.chrome:
         _draw_node(c, node, palette, page_h)
