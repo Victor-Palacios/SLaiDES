@@ -297,15 +297,11 @@ class FeatureListSlide(BaseModel):
     features: list[Feature] = Field(min_length=1)
 
 
-class ChecklistItem(BaseModel):
-    text: str
-    checked: bool = False
-
-
-class ChecklistSlide(BaseModel):
-    component: Literal["checklist"]
-    title: str
-    items: list[ChecklistItem] = Field(min_length=1)
+class CodeSlide(BaseModel):
+    component: Literal["code"]
+    title: Optional[str] = None  # optional filename / caption shown above the block
+    code: str  # the code or terminal block; newlines are hard line breaks (no wrapping)
+    chrome: bool = True  # show the window traffic-light dots
 
 
 class Step(BaseModel):
@@ -540,7 +536,7 @@ Slide = Annotated[
         QuestionSlide,
         BulletListSlide,
         FeatureListSlide,
-        ChecklistSlide,
+        CodeSlide,
         NumberedStepsSlide,
         BeforeAfterSlide,
         ProsConsSlide,

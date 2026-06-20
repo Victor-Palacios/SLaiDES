@@ -21,7 +21,7 @@ from slidekit.ir.models import (
     CardGridSlide,
     ChartSlide,
     ChartWithInsightSlide,
-    ChecklistSlide,
+    CodeSlide,
     ComparisonColumnsSlide,
     ComparisonMatrixSlide,
     DeckIR,
@@ -79,7 +79,7 @@ from slidekit.metrics.constants import (
     SLIDE_4_3_H,
     SLIDE_4_3_W,
 )
-from slidekit.metrics.measure import line_height_emu, measure_text, total_text_height_emu, wrap
+from slidekit.metrics.measure import Line, line_height_emu, measure_text, total_text_height_emu, wrap
 
 # Unique ID counter for nodes.
 _counter = itertools.count(1)
@@ -196,8 +196,9 @@ def _resolve_slide(
         nodes = _layout_bullet_list(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "feature-list":
         nodes = _layout_feature_list(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "checklist":
-        nodes = _layout_checklist(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "code":
+        # Full canvas height (not ch_with_pn): the dark panel bleeds edge-to-edge.
+        nodes = _layout_code(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "numbered-steps":
         nodes = _layout_numbered_steps(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "before-after":
@@ -766,31 +767,66 @@ def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palett
     return nodes
 
 
-def _layout_checklist(slide: ChecklistSlide, cx, cy, cw, ch, font, ts, palette):
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
-    nodes.append(title_node)
+# ── code / terminal block (dark, full-bleed, monospace) ───────────────────────
+# A distinct skeleton: the whole slide is a near-black IDE/terminal panel that bleeds
+# edge-to-edge, optional macOS-style window dots, and the source rendered verbatim in a
+# metric-safe monospace font (Courier New) — each newline is a hard line break (no
+# wrapping), indentation preserved. Comment lines (`#…`) are dimmed; everything else is
+# the light foreground. Deterministic and measurable: the linter still proves every line
+# fits. (Repurposed from the former `checklist` layout — operator issue #14.)
+_CODE_BG = "#0C1A1C"       # near-black panel (slight teal, like the reference)
+_CODE_FG = "#E6EDF3"       # light foreground for code
+_CODE_COMMENT = "#8FB3A4"  # dimmed sage for comment lines (readable on the dark panel)
+_CODE_DOTS = ("#FF5F56", "#FFBD2E", "#27C93F")  # macOS window traffic lights
+_CODE_FONT = "courier new"
 
-    n = len(slide.items)
-    avail = cy + ch - y
-    slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
-    item_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    box = int(0.32 * EMU_PER_INCH)
-    text_x = cx + int(0.6 * EMU_PER_INCH)
-    text_w = cw - int(0.6 * EMU_PER_INCH)
-    for i, item in enumerate(slide.items):
-        gid = f"check_{i}"
-        by = y + (item_h - box) // 2
-        # Filled accent box = checked; muted box = not yet done. Deterministic,
-        # measurable — no glyph checkmarks.
-        fill = palette.accent if item.checked else palette.muted
-        nodes.append(ResolvedNode(_nid("check_box"), "box", Rect(cx, by, box, box),
-                                  fill_color=fill, group_id=gid))
-        nodes.append(_make_text_node(_nid("check_item"), item.text, font, ts.body,
-                                     bold=False, italic=False,
-                                     rect=Rect(text_x, y, text_w, item_h), group_id=gid))
-        y += slot_h + gap
+
+def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
+    nodes: list[ResolvedNode] = []
+    canvas_w = cw + 2 * cx
+    canvas_h = ch + 2 * cy
+
+    # Full-bleed dark panel (chrome: intentionally extends past the content margins).
+    nodes.append(ResolvedNode(_nid("code_bg"), "box", Rect(0, 0, canvas_w, canvas_h),
+                              fill_color=_CODE_BG, is_chrome=True))
+
+    gid = "code"
+    y = cy
+
+    # macOS-style window dots.
+    if slide.chrome:
+        dot = int(0.16 * EMU_PER_INCH)
+        dgap = int(0.12 * EMU_PER_INCH)
+        for i, color in enumerate(_CODE_DOTS):
+            dx = cx + i * (dot + dgap)
+            nodes.append(ResolvedNode(_nid("code_dot"), "box", Rect(dx, y, dot, dot),
+                                      fill_color=color, group_id=gid))
+        y += dot + int(0.35 * EMU_PER_INCH)
+
+    # Optional filename / caption.
+    if slide.title:
+        cap_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+        nodes.append(_make_text_node(_nid("code_title"), slide.title, _CODE_FONT, ts.caption,
+                                     bold=True, italic=False, rect=Rect(cx, y, cw, cap_h),
+                                     is_caption=True, color=_CODE_COMMENT, group_id=gid))
+        y += cap_h + GAP_MIN_EMU
+
+    # Code lines: verbatim, monospace, no wrapping; comment lines dimmed. Each line is one
+    # measured Line (indentation preserved — measure_text counts leading spaces), so the
+    # linter still proves it fits. Blank lines advance the cursor without emitting a node.
+    size = ts.body
+    line_h = int(size * LINE_SPACING_SINGLE * EMU_PER_PT)
+    for raw in slide.code.split("\n"):
+        if raw.strip():
+            is_comment = raw.lstrip().startswith("#")
+            color = _CODE_COMMENT if is_comment else _CODE_FG
+            w = measure_text(raw, _CODE_FONT, size)
+            line = Line(text=raw, width_emu=w, height_emu=line_h, overflows=w > cw)
+            nodes.append(_make_text_node(_nid("code_line"), raw, _CODE_FONT, size,
+                                         bold=False, italic=False,
+                                         rect=Rect(cx, y, cw, line_h), lines=[line],
+                                         color=color, group_id=gid))
+        y += line_h
     return nodes
 
 

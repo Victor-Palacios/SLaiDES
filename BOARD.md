@@ -2,12 +2,12 @@
 
 _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`, then re-render; do not hand-edit. The kanban view of the work; `PROGRESS.md` stays the acceptance ledger._
 
-**backlog** 1 · **todo** 0 · **in_progress** 0 · **blocked** 2 · **done** 42 · _last change 2026-06-19_
+**backlog** 1 · **todo** 0 · **in_progress** 0 · **blocked** 1 · **done** 43 · _last change 2026-06-19_
 
-| Backlog (1) | Todo (0) | In Progress (0) | Blocked (2) | Done (42) |
+| Backlog (1) | Todo (0) | In Progress (0) | Blocked (1) | Done (43) |
 |---|---|---|---|---|
-| **T-020** Harrington non-linear score combiner (ref #10) · _P10_ |  |  | **T-045** checklist: 'delete this layout' (FB-006 / issue #14) — confirm before removing · _FB_ · ⚠ HELD — deleting a component is destructive (IR/engine/registry/examples/goldens/recommender); awaiting operator go-ahead | **T-001** kpi-grid design · _P9_ · `high` |
-|  |  |  | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-002** chart-slide design · _P9_ · `high` |
+| **T-020** Harrington non-linear score combiner (ref #10) · _P10_ |  |  | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
+|  |  |  |  | **T-002** chart-slide design · _P9_ · `high` |
 |  |  |  |  | **T-025** beauty-tracking extension: richness + large-text 3:1 contrast · _P10_ · `high` |
 |  |  |  |  | **T-033** component-metadata registry (single source of truth) · _PIPE_ · `high` |
 |  |  |  |  | **T-034** honest layout taxonomy doc + reframe '40 distinct' · _PIPE_ · `high` |
@@ -46,6 +46,7 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 |  |  |  |  | **T-042** image-half-bleed: pack second text block after first (FB-003 / issue #11) · _FB_ |
 |  |  |  |  | **T-043** card-grid: remove accent bubble disc (FB-004 / issue #12) · _FB_ |
 |  |  |  |  | **T-044** feature-list: remove accent bubble disc (FB-005 / issue #13) · _FB_ |
+|  |  |  |  | **T-045** repurpose checklist -> 'code' dark terminal/IDE layout (FB-006 / issue #14) · _FB_ |
 |  |  |  |  | **T-019** info-density sub-score metric · _P10_ |
 |  |  |  |  | **T-031** generated example inventory (scripts/build_examples_index.py -> docs/EXAMPLES_INDEX.md) · _IDEA_ |
 
@@ -58,5 +59,5 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 | Standing research task | 3 | 3 |
 | Operator-approved ideas (from IDEAS.md) | 4 | 4 |
 | North-star: honest taxonomy + LLM-selection pipeline | 6 | 6 |
-| Operator layout feedback (FEEDBACK.yaml issue-form loop) | 6 | 7 |
+| Operator layout feedback (FEEDBACK.yaml issue-form loop) | 7 | 7 |
 

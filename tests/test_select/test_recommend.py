@@ -57,8 +57,8 @@ def test_image_and_people():
     assert _top(images=4) == "image-grid"
 
 
-def test_checklist_and_plain_list():
-    assert _top(checklist=True, items=5) == "checklist"
+def test_code_and_plain_list():
+    assert _top(code=True) == "code"
     assert _top(items=5) == "bullet-list"
 
 

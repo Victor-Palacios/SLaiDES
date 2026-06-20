@@ -39,7 +39,7 @@ class ContentFeatures:
     axes: bool = False       # two-axis 2x2 plane
     swot: bool = False       # explicitly a SWOT
     vs: bool = False         # head-to-head A vs B
-    checklist: bool = False  # items have a done/not-done state
+    code: bool = False       # source code / a terminal session
     icons: bool = False      # rows carry icons
     agenda: bool = False     # a table of contents
     cover: bool = False      # a deck / section cover
@@ -138,10 +138,11 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
         add("icon-text-rows", 0.75, "labelled points each with an icon")
         add("feature-list", 0.7, "feature highlights with icons")
 
+    # code / terminal
+    if f.code:
+        add("code", 0.9, "source code or a terminal session")
     # plain lists
-    if f.checklist:
-        add("checklist", 0.85, "items with a done/not-done state")
-    if f.items and f.groups <= 1 and not (f.ordered or f.icons or f.checklist or f.metrics):
+    if f.items and f.groups <= 1 and not (f.ordered or f.icons or f.code or f.metrics):
         add("bullet-list", 0.6, "a plain vertical list")
 
     return s

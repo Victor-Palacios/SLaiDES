@@ -25,7 +25,7 @@ body:
         - card-grid
         - chart-slide
         - chart-with-insight
-        - checklist
+        - code
         - comparison-columns
         - comparison-matrix
         - definition

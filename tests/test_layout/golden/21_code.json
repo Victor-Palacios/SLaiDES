@@ -1,0 +1,263 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": null,
+      "component": "code",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "code_bg_1",
+          "node_type": "box",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "w": 12192000,
+            "h": 6858000
+          },
+          "is_chrome": true,
+          "fill_color": "#0C1A1C"
+        },
+        {
+          "node_id": "code_dot_2",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 146304,
+            "h": 146304
+          },
+          "group_id": "code",
+          "fill_color": "#FF5F56"
+        },
+        {
+          "node_id": "code_dot_3",
+          "node_type": "box",
+          "rect": {
+            "x": 713232,
+            "y": 457200,
+            "w": 146304,
+            "h": 146304
+          },
+          "group_id": "code",
+          "fill_color": "#FFBD2E"
+        },
+        {
+          "node_id": "code_dot_4",
+          "node_type": "box",
+          "rect": {
+            "x": 969264,
+            "y": 457200,
+            "w": 146304,
+            "h": 146304
+          },
+          "group_id": "code",
+          "fill_color": "#27C93F"
+        },
+        {
+          "node_id": "code_title_5",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 923544,
+            "w": 11277600,
+            "h": 381000
+          },
+          "text_content": "app.py",
+          "lines": [
+            {
+              "text": "app.py",
+              "width_emu": 1143186,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "code",
+          "text_color": "#8FB3A4"
+        },
+        {
+          "node_id": "code_line_6",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1578864,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "# Before",
+          "lines": [
+            {
+              "text": "# Before",
+              "width_emu": 2072977,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#8FB3A4"
+        },
+        {
+          "node_id": "code_line_7",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2097023,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "def greet( name,age ,city='NYC' ):",
+          "lines": [
+            {
+              "text": "def greet( name,age ,city='NYC' ):",
+              "width_emu": 8810154,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#E6EDF3"
+        },
+        {
+          "node_id": "code_line_8",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2615182,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "    return f'Hi {name}'",
+          "lines": [
+            {
+              "text": "    return f'Hi {name}'",
+              "width_emu": 5959810,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#E6EDF3"
+        },
+        {
+          "node_id": "code_line_9",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3651500,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "$ black app.py",
+          "lines": [
+            {
+              "text": "$ black app.py",
+              "width_emu": 3627710,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#E6EDF3"
+        },
+        {
+          "node_id": "code_line_10",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4687818,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "# After",
+          "lines": [
+            {
+              "text": "# After",
+              "width_emu": 1813855,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#8FB3A4"
+        },
+        {
+          "node_id": "code_line_11",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5205977,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "def greet(name, age, city=\"NYC\"):",
+          "lines": [
+            {
+              "text": "def greet(name, age, city=\"NYC\"):",
+              "width_emu": 8551032,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#E6EDF3"
+        },
+        {
+          "node_id": "code_line_12",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5724136,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "    return f\"Hi {name}\"",
+          "lines": [
+            {
+              "text": "    return f\"Hi {name}\"",
+              "width_emu": 5959810,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#E6EDF3"
+        }
+      ],
+      "chrome": []
+    }
+  ]
+}

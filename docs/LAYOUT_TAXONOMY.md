@@ -2,15 +2,16 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxonomy.py` — do not hand-edit. A test (`tests/test_catalog`) fails if it drifts._
 
-**40 components** implement **25 distinct layout skeletons** (families); **15** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **25 distinct layouts**.
+**40 components** implement **26 distinct layout skeletons** (families); **14** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **26 distinct layouts**.
 
-## Distinct layout families (25)
+## Distinct layout families (26)
 
 | Family | Anchor component | What the skeleton is |
 |---|---|---|
 | `agenda` | `agenda` | Numbered agenda / table of contents. |
 | `card-grid` | `card-grid` | A grid of content cards. |
 | `chart` | `chart-slide` | A single chart. |
+| `code-block` | `code` | A dark terminal/IDE-style code block. |
 | `comparison-matrix` | `comparison-matrix` | An options × criteria grid. |
 | `emphasis-stack` | `statement` | A single bold centered line — a manifesto/claim. |
 | `funnel` | `funnel` | Narrowing funnel tiers. |
@@ -45,7 +46,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `card-grid` | `card-grid` | **anchor** | — |
 | `chart-slide` | `chart` | **anchor** | — |
 | `chart-with-insight` | `two-column` | variant | chart (60%) + emphasis takeaway (40%) |
-| `checklist` | `marker-list` | variant | checkbox markers (checked state) |
+| `code` | `code-block` | **anchor** | — |
 | `comparison-columns` | `two-column` | variant | fixed 50/50, titled, bulleted |
 | `comparison-matrix` | `comparison-matrix` | **anchor** | — |
 | `definition` | `emphasis-stack` | variant | accent term + definition body |

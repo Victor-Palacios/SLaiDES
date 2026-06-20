@@ -51,12 +51,12 @@ comments:
   source: 'issue #13'
   notes: 'issue #13: removed accent ''bubble'' disc; feature-list is heading+body full-width'
 - id: FB-006
-  component: checklist
-  family: marker-list
-  status: open
+  component: code
+  family: code-block
+  status: done
   severity: med
   comment: delete this layout
   created: '2026-06-19'
   updated: '2026-06-19'
   source: 'issue #14'
-  notes: 'issue #14: ''delete this layout'' HELD for operator confirmation — removing a component ripples through IR/engine/registry/examples/goldens (destructive).'
+  notes: 'issue #14: repurposed checklist into the new dark terminal/IDE ''code'' layout (operator chose repurpose over delete)'

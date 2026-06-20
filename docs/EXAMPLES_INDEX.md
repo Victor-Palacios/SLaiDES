@@ -26,7 +26,7 @@ _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do no
 | `18_question.yaml` | 1 | specimen | question |
 | `19_bullet_list.yaml` | 1 | specimen | bullet-list |
 | `20_feature_list.yaml` | 1 | specimen | feature-list |
-| `21_checklist.yaml` | 1 | specimen | checklist |
+| `21_code.yaml` | 1 | specimen | code |
 | `22_numbered_steps.yaml` | 1 | specimen | numbered-steps |
 | `23_before_after.yaml` | 1 | specimen | before-after |
 | `24_pros_cons.yaml` | 1 | specimen | pros-cons |

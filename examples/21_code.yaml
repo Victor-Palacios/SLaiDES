@@ -1,0 +1,25 @@
+version: 1
+theme:
+  palette:
+    primary: "#0B3D2E"
+    surface: "#FFFFFF"
+    accent: "#1FA463"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  font: calibri
+page_numbers:
+  enabled: false
+slides:
+  - component: code
+    title: "app.py"
+    chrome: true
+    code: |
+      # Before
+      def greet( name,age ,city='NYC' ):
+          return f'Hi {name}'
+
+      $ black app.py
+
+      # After
+      def greet(name, age, city="NYC"):
+          return f"Hi {name}"

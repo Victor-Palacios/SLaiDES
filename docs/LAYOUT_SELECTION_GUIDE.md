@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_selection_guide.py` — do not hand-edit. The machine-readable form is `slidekit catalog --json`. A test (`tests/test_catalog`) fails if it drifts._
 
-Pick a component per slide from its **content shape** — no rendering or vision needed. There are **40 components** across **25 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
+Pick a component per slide from its **content shape** — no rendering or vision needed. There are **40 components** across **26 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
 
 ## agenda — Numbered agenda / table of contents.
 
@@ -24,6 +24,13 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - use when: One chart is the focus.
   - content shape: one chart (+ optional caption)
   - required fields: `chart`
+
+## code-block — A dark terminal/IDE-style code block.
+
+- **`code`**
+  - use when: Showing source code, a CLI session, or a config snippet verbatim.
+  - content shape: a block of monospace code/terminal lines
+  - required fields: `code`
 
 ## comparison-matrix — An options × criteria grid.
 
@@ -118,10 +125,6 @@ Pick a component per slide from its **content shape** — no rendering or vision
 - **`bullet-list`** · capacity 2–8
   - use when: A plain vertical list of points.
   - content shape: a list of short lines
-  - required fields: `title`, `items`
-- **`checklist`** · variant of `bullet-list` (checkbox markers (checked state)) · capacity 2–8
-  - use when: Items have a done/not-done state.
-  - content shape: a list of {text, checked} items
   - required fields: `title`, `items`
 - **`numbered-steps`** · variant of `bullet-list` (numbered chips (vertical)) · capacity 2–6
   - use when: Sequential steps, read top-down.
