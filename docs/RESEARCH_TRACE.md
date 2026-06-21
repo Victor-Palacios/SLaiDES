@@ -32,7 +32,7 @@ research" can be checked, not just asserted.
 | **color_harmony** — hue-angle relationship between palette roles | `_color_harmony` | #19 Cohen-Or et al. (SIGGRAPH 2006) | VERIFIED (templates) / HEURISTIC (tolerance) | Cohen-Or's **harmonic hue-wheel templates** (i/V/L/I/T/Y/X — pairs/sectors at fixed angular relationships) are the primary basis for rewarding palette roles in a recognised hue relationship (mono/analogous/complementary/triadic). The specific 30° tolerance is still **HEURISTIC** (our choice). |
 | **info_density** — words-per-slide + text-coverage vs comfortable bands | `_info_density`, `_band` | #20 Alley & Neeley (Tech. Comm. 2005) | VERIFIED (direction) / HEURISTIC (bands) | Alley & Neeley's **assertion–evidence** work is a presentation-specific primary source against text-dense slides (one idea per slide; text density impedes comprehension) — backs the metric's *direction* (penalise crowding). The word band `[1,45]→0@130` is generous on the low end so sparse hero layouts aren't penalised; coverage band `[0.02,0.45]→0@0.85`. The exact bands are **HEURISTIC**. Image-only slides earn full credit. |
 | **hierarchy** — title:body size-ratio band | `_hierarchy` | — | **HEURISTIC (no primary source)** | Motivated by multimedia-learning intuition, but **no specific primary source** backs the exact ratio thresholds. Candidate for a future verified citation. |
-| **cross_slide_consistency** — deck multiplier on margin variance | `_cross_slide_consistency` | #7 PPTEval, #8 DECKBench | **SECONDHAND** | Both references are still unverified. The metric ships, but its citation is not yet primary-confirmed — verify #7/#8 before relying on this lineage. |
+| **cross_slide_consistency** — deck multiplier on margin variance | `_cross_slide_consistency` | #7 PPTEval, #8 DECKBench | VERIFIED (direction) / **HEURISTIC** (formula) | Both references are now **VERIFIED** from primary sources (#7 2026-06-16, #8 2026-06-17), and #7's deck-level *Coherence* axis is human-correlated (Pearson 0.55) — they establish cross-slide coherence as a real, separable axis (the metric's *direction*). The specific **margin-variance** formula and `[0.9,1.0]` bound are slidekit's own **HEURISTIC**, not taken from either paper. |
 
 ## Composite & weights
 
@@ -41,7 +41,7 @@ research" can be checked, not just asserted.
 | Composite as a **weighted mean** of sub-scores | `score_deck` / `DEFAULT_WEIGHTS` | #9 Birkhoff (M=O/C) | SECONDHAND | Conceptual basis for a single composite score. |
 | **Non-linear** combiner (one bad feature dominates) — **BUILT (T-020)** | `_combine_harrington` / `COMBINERS` / `slidekit score --combine harrington` | #10 Harrington et al. (DocEng 2004) | VERIFIED | Weighted **geometric mean** `100·Π subscore_i^{w_i/Σw}` (Harrington desirability): one near-zero sub-score drives the composite toward 0. Opt-in mode alongside the default weighted `mean`; AM-GM ⇒ harrington ≤ mean, equal iff sub-scores uniform. Sub-scores/warnings/deck roll-up mode-independent. |
 | Weights `non_overlap/contrast/richness = 1.5`, others 1.0 | `DEFAULT_WEIGHTS` | — | **HEURISTIC (no primary source)** | Our judgment that unreadable/overlapping/bare slides are "ugly" in ways balance can't offset. Weight **calibration is DEFERRED** — would require a labelled slide-pair dataset (cf. #2 EvoPresent's 2,000 pairs). No human-correlation claim is made. |
-| `deck = mean(slide scores) · consistency`, consistency bounded `[0.9, 1.0]` | `score_deck` | #7/#8 | SECONDHAND | Gentle deck-level modulation; bound is **HEURISTIC**. |
+| `deck = mean(slide scores) · consistency`, consistency bounded `[0.9, 1.0]` | `score_deck` | #7/#8 | VERIFIED (direction) / HEURISTIC (formula) | Gentle deck-level modulation; refs verified, but the multiplier + bound are **HEURISTIC**. |
 
 ## Scoreboard
 
@@ -51,9 +51,12 @@ research" can be checked, not just asserted.
 - Sub-scores still **HEURISTIC with no primary source**: hierarchy — and several internal
   constants noted above (incl. the color_harmony 30° tolerance and the info_density bands,
   whose *direction* is now sourced even though the exact numbers are our choice).
-- References resting on a **SECONDHAND** (unverified) basis: the composite's conceptual
-  basis (#9 Birkhoff is verified as a book but used conceptually); cross_slide_consistency
-  cites #7/#8 (both verified, but their specific sub-metrics stay unconfirmed).
+- References resting on a **conceptual/direction-only** basis (verified papers, but the
+  exact slidekit formula is our heuristic): the composite's conceptual basis (#9 Birkhoff,
+  verified as a book, used conceptually); cross_slide_consistency cites #7/#8 (both verified;
+  as of 2026-06-21 #7's Design/Coherence sub-aspects + Pearson figures are confirmed from the
+  full text, so nothing in this trace rests on an *unverified* source any longer — only on
+  honestly-labelled heuristic formulas).
 - **OPEN research-to-product gaps:** (1) ~~Harrington's non-linear combiner~~ **DONE
   (T-020)** — shipped as the `harrington` combine mode; (2) find a primary source for the
   hierarchy ratio band; (3) weight calibration (DEFERRED, needs a labelled dataset).
