@@ -162,3 +162,31 @@ actionable (no approval step, since they're operator-authored), queues board tas
 Pages can't serve a private repo without a paid plan; Issue Forms render natively in the GitHub
 mobile app with zero hosting. See `src/slidekit/feedback/`, the new scripts, and the
 NIGHTLY_PROMPT "FEEDBACK INTAKE" addendum.
+
+## Evaluation: largest-empty-rectangle whitespace metric (2026-06-22) — NOT adopted
+
+The 2026-06-21 report flagged evaluating a *largest-empty-rectangle* ("white-space
+free-flow") refinement to `_whitespace`, primary-source verified first. Outcome:
+
+- **Source check:** Harrington et al. (ref #10, DocEng 2004) lists "white-space
+  free-flow" among its measures and O'Donovan et al. (ref #14) has a "white space"
+  energy term, but neither publishes a closed-form free-flow formula (confirmed
+  against the ACM abstract and the authors' patent US20070208996A1 — the exact
+  free-flow computation is not disclosed). So any implementation would be HEURISTIC,
+  not a faithful reproduction of a verified formula.
+- **Redundancy:** the aesthetic concern the docs ascribed to it ("penalise one
+  dominant empty region") is the *uneven whitespace* case — content clustered to one
+  side leaving a large void on the opposite side. That is exactly what `_balance`
+  already scores (area-weighted moment about the centre axes, refs #4/#16/#17/#18).
+  A centred sparse hero slide (big-number) has lots of *evenly distributed*
+  whitespace and is correctly NOT penalised by balance — which a naive
+  largest-empty-rectangle penalty would wrongly punish. Adding it would duplicate
+  balance and risk the well-tuned baselines + the designed-beats-plain invariant.
+- **Honesty fix applied:** `docs/AESTHETICS.md` and `docs/RESEARCH_TRACE.md` claimed
+  `_whitespace` already penalised distribution ("warns when largest empty > 3×
+  median"). The code only ever scored a coverage band. Corrected both docs to match
+  the code and to cross-reference balance for distribution. No code changed.
+
+Decision: do NOT add a largest-empty-rectangle metric. Revisit only if a
+non-redundant, primary-source-formula formulation emerges (e.g. fragmentation of
+*trapped* interior whitespace distinct from off-centre imbalance).

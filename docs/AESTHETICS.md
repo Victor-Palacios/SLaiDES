@@ -41,7 +41,7 @@ decision → code map (with verification status and honest HEURISTIC flags) see
 |---|---|---|
 | **Balance** | area-weighted centroid of element rects vs. slide center; `1 − normalized_distance` | Birkhoff / Ngo equilibrium |
 | **Alignment** | cluster element edges (left/right/cx, top/bottom/cy) at a tolerance; reward few distinct alignment lines (elements snap to an implied grid) | GRIDS alignment objective |
-| **Whitespace** | empty-area proportion **and** evenness of its distribution (penalize one dominant empty region — slidekit already warns when largest empty > 3× median) | AeSlides excessive-whitespace |
+| **Whitespace** | empty-area proportion (occupied area ÷ canvas) scored against a comfortable coverage band; *distribution* evenness is captured separately by **Balance** (off-centre content leaves a dominant void on the opposite side) | AeSlides excessive-whitespace |
 | **Non-overlap** | `1 − (Σ pairwise rect-intersection area / Σ element area)`; intentional `stack` exempt | AeSlides collision; grades the binary E_OVERLAP |
 | **Contrast** | min WCAG ratio of text vs. effective background across nodes, normalized | promotes the E_CONTRAST stub to a scored metric |
 | **Color harmony** | over the theme palette: hue-angle relationships (complementary/analogous/triadic proximity), saturation/lightness spread, count of distinct hues | computational color theory |
