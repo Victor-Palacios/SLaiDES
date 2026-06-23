@@ -40,7 +40,7 @@ decision → code map (with verification status and honest HEURISTIC flags) see
 | Sub-score | Definition over the resolved geometry | Lineage |
 |---|---|---|
 | **Balance** | area-weighted centroid of element rects vs. slide center; `1 − normalized_distance` | Birkhoff / Ngo equilibrium |
-| **Alignment** | cluster element edges (left/right/cx, top/bottom/cy) at a tolerance; reward few distinct alignment lines (elements snap to an implied grid) | GRIDS alignment objective |
+| **Alignment** | cluster element **left edges** (x) at a ~0.06" tolerance; reward few distinct left-alignment columns (elements snap to an implied left grid). Deliberately left-edge only — see the alignment design note below | GRIDS alignment objective; cf. Ngo #4 (not fully adopted) |
 | **Whitespace** | empty-area proportion (occupied area ÷ canvas) scored against a comfortable coverage band; *distribution* evenness is captured separately by **Balance** (off-centre content leaves a dominant void on the opposite side) | AeSlides excessive-whitespace |
 | **Non-overlap** | `1 − (Σ pairwise rect-intersection area / Σ element area)`; intentional `stack` exempt | AeSlides collision; grades the binary E_OVERLAP |
 | **Contrast** | min WCAG ratio of text vs. effective background across nodes, normalized | promotes the E_CONTRAST stub to a scored metric |
@@ -77,6 +77,25 @@ Report per-slide and per-deck on a 0–100 scale with the sub-metric breakdown.
 > composite differs between modes (sub-scores, warnings, and the
 > `deck = mean(slides)·consistency` roll-up are identical). Default weights/mode stay
 > documented and calibration DEFERRED (see below).
+
+> **Design note (ref #4, Ngo/Teo/Byrne 2003) — alignment scope, assessed 2026-06-23.**
+> Ngo's *regularity* measure scores alignment as `1 − (n_vap + n_hap)/(2n)`, counting
+> **both** vertical alignment points (`n_vap`, distinct x-columns of left/centre/right
+> edges) **and** horizontal alignment points (`n_hap`, distinct y-rows of top/centre/
+> bottom edges). slidekit's `_alignment` deliberately clusters **left edges only**
+> (one component of `n_vap`), not the full x+y set. Reason: a slide's dominant structure
+> is a left grid, and Ngo's symmetric x+y treatment penalises the most common, perfectly
+> legitimate slide pattern — a clean single left-aligned text column. Worked example, a
+> tidy 5-bullet column (`n=5`, shared left edge ⇒ `n_vap=1`, five distinct tops ⇒
+> `n_hap=5`): Ngo scores `1 − (1+5)/10 = 0.40`, whereas the left-edge metric scores
+> `1 − 1/5 = 0.80`. Adopting the full formula would roughly halve well-aligned text
+> stacks and risk the designed-beats-plain invariant, so it is **not adopted**.
+> Ngo's *spacing-regularity* and *rhythm* sub-measures were also assessed: their
+> closed-form definitions are **not published in any extractable primary/faithful
+> source** (Information Sciences paywalled; the arXiv reproductions cleanly reproduce
+> only the alignment term), and the spacing-consistency concern is already partly served
+> by **Balance** (off-centre voids) — so implementing them would be heuristic-with-a-
+> citation, which the project avoids. **No code change.**
 
 ## How it surfaces (deterministic, CI-friendly)
 

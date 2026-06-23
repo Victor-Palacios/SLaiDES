@@ -190,3 +190,36 @@ free-flow") refinement to `_whitespace`, primary-source verified first. Outcome:
 Decision: do NOT add a largest-empty-rectangle metric. Revisit only if a
 non-redundant, primary-source-formula formulation emerges (e.g. fragmentation of
 *trapped* interior whitespace distinct from off-centre imbalance).
+
+## 2026-06-23 — Ngo (#4) regularity / rhythm assessment (research, T-048)
+
+Carried over from the 2026-06-22 next-step: assess whether Ngo/Teo/Byrne's
+*regularity* and *rhythm* measures (ref #4) offer a non-redundant deterministic
+addition distinct from slidekit's existing alignment/balance metrics.
+
+- **Alignment-regularity** `1 − (n_vap + n_hap)/(2n)` — the one Ngo term cleanly
+  reproducible from secondary sources (confirmed verbatim across several). It counts
+  vertical alignment points (`n_vap`: distinct x-columns of left/centre/right edges)
+  AND horizontal alignment points (`n_hap`: distinct y-rows of top/centre/bottom).
+  slidekit's `_alignment` clusters **left edges (x) only** — a deliberate subset.
+  Adopting the full symmetric x+y form **regresses the dominant slide pattern**: a
+  clean single left-aligned text column gets `n_vap=1, n_hap=n`, so a tidy 5-bullet
+  column scores `1−(1+5)/10 = 0.40` vs the left-edge metric's `1−1/5 = 0.80`. That
+  halving would threaten the designed-beats-plain invariant for no real gain (a clean
+  left column IS well aligned for a slide). **Not adopted.**
+- **Spacing-regularity** and **rhythm (RHM)** — closed-form definitions are **not
+  available from any extractable primary/faithful source**: Information Sciences is
+  paywalled; the arXiv reproductions (e.g. 1101.1606) are FlateDecode-compressed and
+  the readable secondaries reproduce only the alignment term. Implementing them would
+  be heuristic-with-a-citation — declined, same discipline as the 2026-06-22
+  largest-empty-rect rejection. The spacing-consistency concern is also partly served
+  by `_balance` (off-centre voids).
+- **Doc-honesty fix (applied):** AESTHETICS.md's Alignment row claimed the metric
+  clusters "left/right/cx, top/bottom/cy"; the code (`_alignment`) only ever clustered
+  the left edge x. Corrected AESTHETICS.md + RESEARCH_TRACE.md to match the code, and
+  added an alignment design note recording this assessment. **No code changed.**
+
+Decision: do NOT add Ngo regularity/rhythm metrics. Current left-edge alignment is the
+better-suited choice for slides. Revisit only if (a) a faithful spacing-regularity
+closed-form becomes obtainable from a primary source, and (b) it proves non-redundant
+with `_alignment`/`_balance`.

@@ -118,3 +118,18 @@ independently confirmed; verify and upgrade before relying on it.
   judgment (calibration on slidekit's own weights stays DEFERRED — no labelled slidekit dataset). No
   metric code changed; the bibliography note + RESEARCH_TRACE stay the integration surface this session.
   Running count **20/~20, all 20 verified, 0 secondhand — target held; 0 unresolved caveats remaining.**
+- 2026-06-23: **integration assessment of #4 Ngo/Teo/Byrne regularity & rhythm** (target reached, no new
+  entry). Question carried from 2026-06-22: do Ngo's *regularity*/*rhythm* measures offer a non-redundant
+  deterministic addition? Findings, primary-source re-checked: (1) Ngo's alignment-regularity
+  `1−(n_vap+n_hap)/2n` (the one term cleanly reproducible — confirmed verbatim across multiple secondary
+  reproductions) counts **both** x-columns and y-rows; slidekit's `_alignment` is deliberately **left-edge
+  x only**, and adopting the full symmetric form would roughly **halve** clean single-column text stacks
+  (worked: 5-bullet column 0.40 vs 0.80) — a regression for the dominant slide pattern and a threat to the
+  designed-beats-plain invariant, so **not adopted**. (2) Ngo's *spacing-regularity* and *rhythm*
+  closed-forms are **not published in any extractable primary/faithful source** (Information Sciences
+  paywalled; arXiv reproductions e.g. 1101.1606 are FlateDecode-compressed / give only the alignment term),
+  so implementing them would be heuristic-with-a-citation — declined, same discipline as the 2026-06-22
+  largest-empty-rectangle rejection; the spacing concern is also partly covered by `_balance`. **Doc-honesty
+  fix:** AESTHETICS.md previously claimed `_alignment` clusters "left/right/cx, top/bottom/cy" — the code
+  only ever clustered the left edge x. Corrected AESTHETICS.md + RESEARCH_TRACE.md to match the code and
+  added an alignment design note recording the assessment. No metric code changed.

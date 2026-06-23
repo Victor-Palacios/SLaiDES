@@ -2,9 +2,9 @@
 
 _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`, then re-render; do not hand-edit. The kanban view of the work; `PROGRESS.md` stays the acceptance ledger._
 
-**backlog** 0 · **todo** 0 · **in_progress** 0 · **blocked** 1 · **done** 46 · _last change 2026-06-22_
+**backlog** 0 · **todo** 0 · **in_progress** 0 · **blocked** 1 · **done** 47 · _last change 2026-06-23_
 
-| Backlog (0) | Todo (0) | In Progress (0) | Blocked (1) | Done (46) |
+| Backlog (0) | Todo (0) | In Progress (0) | Blocked (1) | Done (47) |
 |---|---|---|---|---|
 |  |  |  | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
 |  |  |  |  | **T-002** chart-slide design · _P9_ · `high` |
@@ -52,6 +52,7 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 |  |  |  |  | **T-031** generated example inventory (scripts/build_examples_index.py -> docs/EXAMPLES_INDEX.md) · _IDEA_ |
 |  |  |  |  | **T-046** resolve last research caveat: confirm #7 PPTEval Design sub-metrics + Pearson from full text · _RES_ |
 |  |  |  |  | **T-047** evaluate largest-empty-rectangle whitespace metric; fix _whitespace doc overclaim · _RES_ |
+|  |  |  |  | **T-048** assess Ngo #4 regularity/rhythm for a non-redundant alignment/spacing metric; fix _alignment doc overclaim · _RES_ |
 
 ## Epics
 
@@ -59,7 +60,7 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 |---|---|---|
 | Phase 9 — 40 core slide designs | 18 | 18 |
 | Phase 10 — computational aesthetics | 6 | 7 |
-| Standing research task | 5 | 5 |
+| Standing research task | 6 | 6 |
 | Operator-approved ideas (from IDEAS.md) | 4 | 4 |
 | North-star: honest taxonomy + LLM-selection pipeline | 6 | 6 |
 | Operator layout feedback (FEEDBACK.yaml issue-form loop) | 7 | 7 |
