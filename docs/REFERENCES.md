@@ -133,3 +133,22 @@ independently confirmed; verify and upgrade before relying on it.
   fix:** AESTHETICS.md previously claimed `_alignment` clusters "left/right/cx, top/bottom/cy" — the code
   only ever clustered the left edge x. Corrected AESTHETICS.md + RESEARCH_TRACE.md to match the code and
   added an alignment design note recording the assessment. No metric code changed.
+- 2026-06-24: **integration assessment of #4 Ngo/Teo/Byrne proportion & economy** (target reached, no new
+  entry). Question carried from 2026-06-23: do Ngo's *proportion*/*economy* measures admit a faithful,
+  non-redundant deterministic form? Primary source re-checked, plus a NEW source check — the **Aalto
+  Interface Metrics (AIM)** open codebase (github.com/aalto-ui/aim): its open metrics are image/pixel-based
+  (PNG file size, contour density/congestion, figure-ground contrast, saliency, quadtree, grid quality),
+  **not** Ngo's geometric bounding-box closed forms, so AIM is not a faithful source for these scoring
+  functions. Confirmed from Deng & Wang's faithful reproduction (PMC7085848): the proportion "good-ratio"
+  set is {1:1, 1:√2, golden 1:1.618, 1:√3, 1:2}; economy's textbook form is `1/(#distinct sizes)`.
+  **Proportion — not adopted:** the good-ratio set is solid but the aggregation/normalization constant is
+  not cleanly extractable from any open primary/faithful source (heuristic-with-a-citation, same bar as
+  rhythm/largest-empty-rect), and aspect-ratio-to-golden-ratio ill-fits slides (content boxes take their
+  ratio from content + the flex solver; the canvas is a fixed 16:9 not in the set) — redundant-with-noise.
+  **Economy — not adopted:** faithfully computable but *conflicts* with slidekit's deliberate type-scale
+  **hierarchy** (it penalises the multiple intentional sizes title/body/caption that signal good structure)
+  and would reward flat sizeless decks, regressing the designed-beats-plain invariant; the restraint
+  intuition is already served by `_hierarchy` + `_cross_slide_consistency` — redundant-and-conflicting.
+  This closes per-measure mining of #4: of its 14 measures, balance/density are integrated and regularity,
+  rhythm, spacing-regularity, proportion, economy are each assessed-and-declined with reasons; further
+  research favours integration/calibration over more #4 mining. No metric code changed.

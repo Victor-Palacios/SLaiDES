@@ -60,6 +60,15 @@ research" can be checked, not just asserted.
 - **OPEN research-to-product gaps:** (1) ~~Harrington's non-linear combiner~~ **DONE
   (T-020)** — shipped as the `harrington` combine mode; (2) find a primary source for the
   hierarchy ratio band; (3) weight calibration (DEFERRED, needs a labelled dataset).
+- **Ngo #4 measures ASSESSED & DECLINED** (no code): of the 14, balance + density are
+  integrated; **regularity, rhythm, spacing-regularity** (2026-06-23) and **proportion,
+  economy** (2026-06-24) were each assessed against a primary/faithful source and declined —
+  either unfaithful on the scoring function (no extractable closed form: rhythm,
+  spacing-regularity, proportion's normalization constant) or redundant/conflicting for
+  slides (regularity halves clean text columns; economy penalises deliberate type-scale
+  hierarchy; proportion injects content-driven aspect-ratio noise). See NOTES.md +
+  REFERENCES.md integration log. Per-measure mining of #4 is now closed; favour
+  integration/calibration over further single-measure additions.
 
 _Maintained alongside `REFERENCES.md` and `AESTHETICS.md` by the nightly routine. When a
 new metric or threshold is added, add its row here with the ref number and status, and a

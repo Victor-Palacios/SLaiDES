@@ -223,3 +223,50 @@ Decision: do NOT add Ngo regularity/rhythm metrics. Current left-edge alignment 
 better-suited choice for slides. Revisit only if (a) a faithful spacing-regularity
 closed-form becomes obtainable from a primary source, and (b) it proves non-redundant
 with `_alignment`/`_balance`.
+
+## 2026-06-24 — Ngo (#4) proportion / economy assessment (research, T-049)
+
+Carried-forward 2026-06-23 next-step: do Ngo/Teo/Byrne's **proportion** or **economy**
+measures (ref #4) admit a faithful, non-redundant deterministic form that improves the
+slide scorer? Primary source re-checked first.
+
+Source-faithfulness check (same discipline as the regularity/rhythm pass):
+- Information Sciences original remains paywalled; arXiv reproduction 1101.1606 still
+  FlateDecode-compressed. NEW this session: checked the **Aalto Interface Metrics (AIM)**
+  open codebase (github.com/aalto-ui/aim) — its open metrics are **image/pixel-based**
+  (PNG file size, contour density/congestion, figure-ground contrast, saliency,
+  quadtree, grid quality), NOT Ngo's geometric bounding-box closed forms; AIM is **not**
+  a faithful source for the proportion/economy scoring functions.
+- What IS confirmed from a faithful reproduction (Deng & Wang, PMC7085848, which
+  explicitly reproduces Ngo's proportion ratios): the "good proportion" set is
+  **{1:1, 1:√2 (1.414), 1:1.618 (golden), 1:√3 (1.732), 1:2}**. Economy's standard
+  textbook form is **ECM = 1/(number of distinct object sizes)**.
+
+**Proportion — NOT adopted.** Two independent reasons: (a) the *good-ratio set* is solid
+but the exact aggregation/normalization constant is NOT cleanly extractable from any open
+primary/faithful source → adopting it would be heuristic-with-a-citation on the scoring
+function (same bar that rejected spacing-regularity/rhythm and largest-empty-rect). (b)
+Even granted a formula, object/layout aspect-ratio-to-golden-ratio is a poor fit for
+slides: content boxes (text stacks, callouts) take their aspect ratio from content length
+and the flex solver, not from a golden-ratio intent, and the canvas is a fixed 16:9
+(1.778, not in the good set, not author-controlled). Scoring boxes against golden ratio
+injects content-dependent noise uncorrelated with the deterministic fit+restraint thesis
+and pulls against the flex solver. Redundant-with-noise.
+
+**Economy — NOT adopted.** It is faithfully computable (count distinct sizes), but it
+*conflicts* with slidekit's deliberate design choices: the type scale rewards **hierarchy**
+(title 54–66 / header 40–44 / body 32–36 / caption 24–26 — multiple intentional sizes),
+whereas economy *penalizes* multiple sizes. A well-structured slide with clear title/body/
+caption hierarchy (3+ sizes) would score LOW on economy precisely because it is well
+structured — backwards for slides. It would reward flat, sizeless decks, regressing the
+designed-beats-plain invariant the richness sub-score was added to fix. The genuine
+"restraint" intuition is already served by `_hierarchy` (clear scale, not sameness) and
+`_cross_slide_consistency` (consistent treatment across slides). Redundant-and-conflicting.
+
+Decision: do NOT add Ngo proportion or economy metrics. Both are declined — proportion as
+unfaithful-on-the-scoring-function and ill-fitting; economy as redundant-and-conflicting
+with hierarchy/richness. No metric code changed. This closes the productive line of
+single-measure Ngo #4 mining: of the 14 measures, balance/density are already integrated,
+and regularity, rhythm, spacing-regularity, proportion and economy have each been assessed
+and declined with reasons. Future research effort should favour integration/calibration
+over further per-measure mining of #4.
