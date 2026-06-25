@@ -6,7 +6,7 @@ layout / presentation aesthetics mathematically**. Grown by the nightly routine
 works, verifies them against a primary source, records how each informs slidekit,
 and integrates concrete deterministic metrics into Phase 10 (`docs/AESTHETICS.md`).
 
-**Goal: ~20 distinct VERIFIED references.**  **Current: 20 (20 verified, 0 secondhand).**  Target reached.
+**Goal: ~20 distinct VERIFIED references.**  **Current: 21 (21 verified, 0 secondhand).**  Target reached (post-target additions are only genuinely novel works that close a flagged gap).
 
 Status key — **VERIFIED**: confirmed from a primary source (arXiv / venue / DOI /
 official code). **SECONDHAND**: carried from an operator-pasted synthesis, not yet
@@ -34,6 +34,7 @@ independently confirmed; verify and upgrade before relying on it.
 | 18 | **Zhang & Xue — Visual Moment Equilibrium: A Computational Cognitive Model for Assessing Visual Balance in Interface Layout Aesthetics** — Symmetry 18(1):41; DOI 10.3390/sym18010041 | 2026 | **VERIFIED** | Models visual balance as a **moment-equilibrium force field** over layout elements (a *Measured Balance index* with psychophysical transforms), specifically targeting **asymmetric** layouts that simpler centroid-distance balance scores mishandle. Geometry-computable (element positions/weights, no render); a recent primary source motivating a future refinement of slidekit's `_balance` metric toward a moment-based formulation for off-centre compositions. (Verified 2026-06-18 from Crossref DOI + MDPI abstract.) |
 | 19 | **Cohen-Or, Sorkine, Gal, Leyvand & Xu — Color Harmonization** — ACM SIGGRAPH 2006 / ACM TOG 25(3):624–630; DOI 10.1145/1141911.1141933 | 2006 | **VERIFIED** | Defines a small set of **harmonic colour schemes as templates on the hue wheel** (the i/V/L/I/T/Y/X types — pairs/sectors of hues at fixed angular relationships) and harmonises an image to the nearest template. The hue-template formulation is the primary source for slidekit's `_color_harmony` sub-score, which rewards palette roles whose hue-angle difference matches a recognised relationship (mono/analogous/complementary/triadic). Hue-angle geometry only — no render needed for slidekit's theme-palette use. (Verified 2026-06-19 from ACM DL listing + ETH IGL / TAU project pages; authors + DOI + venue confirmed.) |
 | 20 | **Alley & Neeley — Rethinking the design of presentation slides: A case for sentence headlines and visual evidence** — Technical Communication 52(4):417–426 | 2005 | **VERIFIED** | The **assertion–evidence** approach: each slide carries one succinct sentence assertion plus visual evidence, explicitly arguing **against text-dense, bulleted slides** (text-heavy slides impede comprehension; a later controlled study found the AE structure significantly improved recall, p < .01). Primary, presentation-specific source for slidekit's `info_density` sub-score (penalise crowding; one idea per slide), replacing the practitioner-essay basis. The specific word/coverage bands remain HEURISTIC. (Verified 2026-06-19 from Penn State pure.psu.edu listing + author-hosted PDF writing.engr.psu.edu/2005_alley_neeley.pdf; Technical Communication 52(4):417–426, 2005.) |
+| 21 | **van Gog — The Signaling (or Cueing) Principle in Multimedia Learning** — in R. E. Mayer & L. Fiorella (eds.), *The Cambridge Handbook of Multimedia Learning* (2nd ed.), Cambridge University Press, ch. 11; DOI 10.1017/9781108894333.012 | 2021 | **VERIFIED** | The **signaling principle**: "people learn more deeply from a multimedia message when cues are added that **guide attention to the relevant elements** of the material or **highlight the organization** of the essential material" — and the reviewed cue types explicitly include **text-based cues such as headings and emphasis**. A peer-reviewed, presentation-relevant primary source for the **direction** of slidekit's `hierarchy` sub-score: a visually distinct title→body size step is a structural cue that highlights organization, so rewarding a clear ratio is grounded (previously the row cited *no* primary source). Direction only — the **exact 1.5× ratio band remains HEURISTIC** (no empirical source for the precise threshold; the typographic modular-scale "perfect fifth" = 1.5 is a convention, not a measured value — see candidate note below). (Verified 2026-06-25 from Cambridge Core chapter page: author Tamara van Gog, eds. Mayer & Fiorella, CUP 2021.) |
 
 ## Integration log
 
@@ -152,3 +153,21 @@ independently confirmed; verify and upgrade before relying on it.
   This closes per-measure mining of #4: of its 14 measures, balance/density are integrated and regularity,
   rhythm, spacing-regularity, proportion, economy are each assessed-and-declined with reasons; further
   research favours integration/calibration over more #4 mining. No metric code changed.
+- 2026-06-25: **grounded the `hierarchy` sub-score's direction** — closing the *direction* half of
+  RESEARCH_TRACE open gap #2 (the only remaining sub-score that traced to NO primary source). Per the
+  standing task (target reached → add only genuinely novel works that close a flagged gap), added one
+  reference: **#21 van Gog — The Signaling (or Cueing) Principle in Multimedia Learning** (Cambridge
+  Handbook of Multimedia Learning, 2nd ed., Mayer & Fiorella eds., CUP 2021, ch. 11), verified from the
+  Cambridge Core chapter page. The signaling principle (cues that *highlight the organization* of the
+  material — explicitly including text headings/emphasis — improve learning) is a peer-reviewed primary
+  basis for *why* a clear title→body size step earns credit: it is a structural cue, not decoration. This
+  upgrades the RESEARCH_TRACE hierarchy row from "HEURISTIC (no primary source)" to "VERIFIED (direction,
+  #21) / HEURISTIC (exact band)" — parallel to #20 (info_density direction) and #19 (color_harmony
+  templates). **No metric behaviour changed**: the 1.5× full-credit threshold is unchanged; this is
+  grounding, not recalibration, and the *exact* ratio remains HEURISTIC. **Candidate for future
+  verification** of the precise threshold: Bringhurst, *The Elements of Typographic Style* (Hartley &
+  Marks, 2004) — its modular/harmonic type-scale tradition treats 1.5 as the "perfect fifth" step; the
+  book's bibliographic details are confirmed, but the modular-scale passage was only attested via
+  secondary typography sources this session (not read in the primary text), so it is NOT added as a
+  verified reference — recorded here as the lead candidate to confirm if the exact ratio band is ever
+  calibrated. Running count **21/~20, all 21 verified, 0 secondhand.** No metric code changed.

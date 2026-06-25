@@ -270,3 +270,36 @@ single-measure Ngo #4 mining: of the 14 measures, balance/density are already in
 and regularity, rhythm, spacing-regularity, proportion and economy have each been assessed
 and declined with reasons. Future research effort should favour integration/calibration
 over further per-measure mining of #4.
+
+## 2026-06-25 — hierarchy sub-score grounding (research, T-050) — ADOPTED (direction only)
+
+Acted on the 2026-06-24 next-step (shift from #4-mining to *integration*): `hierarchy` was
+the **last sub-score in RESEARCH_TRACE tracing to NO primary source** (open gap #2). The
+metric scores the theme's title:body type-scale ratio (full credit ≥1.5×, none ≤1.0×).
+
+Found + verified a primary source for the metric's **direction**: **ref #21 — van Gog,
+"The Signaling (or Cueing) Principle in Multimedia Learning"** (in Mayer & Fiorella eds.,
+*The Cambridge Handbook of Multimedia Learning*, 2nd ed., CUP 2021, ch. 11; verified from
+the Cambridge Core chapter page — author/editors/publisher/year confirmed). The signaling
+principle: cues that **guide attention to relevant elements** and **highlight the
+organization** of material — explicitly including **text headings/emphasis** — improve
+learning. A visually distinct (larger) title is exactly such a structural cue, so rewarding
+a clear title→body step is grounded, not arbitrary. This is *direction-only* grounding,
+parallel to #20 (Alley & Neeley → info_density direction) and #19 (Cohen-Or → color_harmony
+templates).
+
+**The exact 1.5× threshold stays HEURISTIC.** No empirical primary source measures the
+precise title:body ratio for slide comprehension. 1.5 is the modular-scale "perfect fifth"
+step — a *typographic convention* (Bringhurst, *The Elements of Typographic Style*, Hartley
+& Marks 2004), not a measured value. I did NOT add Bringhurst as a verified reference: the
+book's bibliographic details are confirmed, but its modular-scale/perfect-fifth passage was
+only attested via secondary typography sources this session (not read in the primary text),
+so it falls short of the project's primary-source bar. It is recorded as the **lead candidate
+to verify** if/when the threshold is ever calibrated.
+
+Decision: ADOPT #21 as the direction citation; **no metric behaviour change** (1.5× threshold
+unchanged — grounding, not recalibration; big-number score held at 89.5). Updated
+REFERENCES.md (#21, count 21/21), RESEARCH_TRACE.md (hierarchy row → "VERIFIED direction /
+HEURISTIC band"; scoreboard now shows *no* sub-score with zero primary source; gap #2
+narrowed to the threshold only), AESTHETICS.md (lineage + hierarchy design note), and the
+`_hierarchy` code comment. Full suite green (325 passed / 47 skipped).

@@ -46,7 +46,7 @@ decision → code map (with verification status and honest HEURISTIC flags) see
 | **Contrast** | min WCAG ratio of text vs. effective background across nodes, normalized | promotes the E_CONTRAST stub to a scored metric |
 | **Color harmony** | over the theme palette: hue-angle relationships (complementary/analogous/triadic proximity), saturation/lightness spread, count of distinct hues | computational color theory |
 | **Info density** | text-area / content-area and words-per-slide vs. a target band; penalize both crowding and barrenness | "Math Behind Effective Slide Design" |
-| **Visual hierarchy** | title:body and header:body size ratios within recommended bands (slidekit already warns < 1.4×) | multimedia-learning research |
+| **Visual hierarchy** | title:body and header:body size ratios within recommended bands (slidekit already warns < 1.4×) | #21 van Gog signaling/cueing principle (direction); exact 1.5× band HEURISTIC — see hierarchy design note below |
 | **Cross-slide consistency** (deck-level) | variance across slides of margins, fonts, type sizes, palette usage, component start positions; low variance = coherent | PPTEval coherence; DECKBench deck-level |
 
 ## Composite score
@@ -96,6 +96,21 @@ Report per-slide and per-deck on a 0–100 scale with the sub-metric breakdown.
 > only the alignment term), and the spacing-consistency concern is already partly served
 > by **Balance** (off-centre voids) — so implementing them would be heuristic-with-a-
 > citation, which the project avoids. **No code change.**
+
+> **Design note (ref #21, van Gog 2021) — hierarchy grounding, 2026-06-25.** `_hierarchy`
+> scores the theme's title:body type-scale ratio, awarding full credit at ≥1.5× and none
+> at ≤1.0×. The metric's **direction** — that a clear title→body size step is desirable —
+> is grounded in the **signaling (cueing) principle** (van Gog, *Cambridge Handbook of
+> Multimedia Learning*, 2021): cues that *highlight the organization* of material,
+> explicitly including text headings/emphasis, improve comprehension; a visually distinct
+> title is exactly such a structural cue. This replaces the earlier "no primary source"
+> status (it was the last sub-score tracing to none). The **exact 1.5× threshold remains
+> HEURISTIC** — no empirical source measures the precise title:body ratio for slides; 1.5
+> is the modular-scale "perfect fifth" step, a typographic *convention* (Bringhurst, *The
+> Elements of Typographic Style*) rather than a measured value. So the threshold was **not
+> changed** — this session grounded *why* hierarchy is rewarded, not *how much*; the exact
+> ratio band stays an honest engineering choice, the lead candidate for primary-source
+> verification if the band is ever calibrated. **No code behaviour change.**
 
 ## How it surfaces (deterministic, CI-friendly)
 

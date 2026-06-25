@@ -31,7 +31,7 @@ research" can be checked, not just asserted.
 | **richness** — accent emphasis + structure + restrained colour variety | `_richness` | #12 Reinecke et al. (CHI 2013) | VERIFIED | Perceived colourfulness/complexity models. slidekit uses **palette colour variety** as a no-render proxy for colourfulness. The `0.45/0.35/0.20` split and the variety falloff past 3 colours are **HEURISTIC**. |
 | **color_harmony** — hue-angle relationship between palette roles | `_color_harmony` | #19 Cohen-Or et al. (SIGGRAPH 2006) | VERIFIED (templates) / HEURISTIC (tolerance) | Cohen-Or's **harmonic hue-wheel templates** (i/V/L/I/T/Y/X — pairs/sectors at fixed angular relationships) are the primary basis for rewarding palette roles in a recognised hue relationship (mono/analogous/complementary/triadic). The specific 30° tolerance is still **HEURISTIC** (our choice). |
 | **info_density** — words-per-slide + text-coverage vs comfortable bands | `_info_density`, `_band` | #20 Alley & Neeley (Tech. Comm. 2005) | VERIFIED (direction) / HEURISTIC (bands) | Alley & Neeley's **assertion–evidence** work is a presentation-specific primary source against text-dense slides (one idea per slide; text density impedes comprehension) — backs the metric's *direction* (penalise crowding). The word band `[1,45]→0@130` is generous on the low end so sparse hero layouts aren't penalised; coverage band `[0.02,0.45]→0@0.85`. The exact bands are **HEURISTIC**. Image-only slides earn full credit. |
-| **hierarchy** — title:body size-ratio band | `_hierarchy` | — | **HEURISTIC (no primary source)** | Motivated by multimedia-learning intuition, but **no specific primary source** backs the exact ratio thresholds. Candidate for a future verified citation. |
+| **hierarchy** — title:body size-ratio band | `_hierarchy` | #21 van Gog (signaling/cueing principle) | VERIFIED (direction) / **HEURISTIC** (exact band) | #21 (Cambridge Handbook of Multimedia Learning, 2021) is the primary basis for the metric's *direction*: cues that **highlight the organization** of material — explicitly including text headings/emphasis — improve learning, so a clear title→body size step is a structural cue worth rewarding. The exact **1.5× full-credit threshold remains HEURISTIC** — no empirical source for the precise ratio; the modular-scale "perfect fifth" (1.5) is a typographic convention, not a measured value (Bringhurst's *Elements of Typographic Style* is the lead candidate to verify the exact band, but its modular-scale passage was only attested secondhand as of 2026-06-25 — see REFERENCES.md integration log). |
 | **cross_slide_consistency** — deck multiplier on margin variance | `_cross_slide_consistency` | #7 PPTEval, #8 DECKBench | VERIFIED (direction) / **HEURISTIC** (formula) | Both references are now **VERIFIED** from primary sources (#7 2026-06-16, #8 2026-06-17), and #7's deck-level *Coherence* axis is human-correlated (Pearson 0.55) — they establish cross-slide coherence as a real, separable axis (the metric's *direction*). The specific **margin-variance** formula and `[0.9,1.0]` bound are slidekit's own **HEURISTIC**, not taken from either paper. |
 
 ## Composite & weights
@@ -47,10 +47,12 @@ research" can be checked, not just asserted.
 
 - Sub-scores backed by a **VERIFIED** primary paper: balance (#4/#16/#18), whitespace (#1),
   alignment (#3), non_overlap (#1), richness (#12), color_harmony (#19 templates),
-  info_density (#20 direction) — plus contrast (WCAG standard + #11).
-- Sub-scores still **HEURISTIC with no primary source**: hierarchy — and several internal
-  constants noted above (incl. the color_harmony 30° tolerance and the info_density bands,
-  whose *direction* is now sourced even though the exact numbers are our choice).
+  info_density (#20 direction), hierarchy (#21 direction) — plus contrast (WCAG standard + #11).
+- Sub-scores still **HEURISTIC with no primary source**: **none** — every sub-score now traces
+  at least its *direction* to a verified primary source or web standard. What remains HEURISTIC
+  is several internal **constants/bands**: the hierarchy 1.5× threshold, the color_harmony 30°
+  tolerance, the info_density bands, the whitespace 0.12–0.55 band, the alignment 0.06" tolerance —
+  honestly flagged as our engineering choices even where the metric's direction is sourced.
 - References resting on a **conceptual/direction-only** basis (verified papers, but the
   exact slidekit formula is our heuristic): the composite's conceptual basis (#9 Birkhoff,
   verified as a book, used conceptually); cross_slide_consistency cites #7/#8 (both verified;
@@ -58,8 +60,11 @@ research" can be checked, not just asserted.
   full text, so nothing in this trace rests on an *unverified* source any longer — only on
   honestly-labelled heuristic formulas).
 - **OPEN research-to-product gaps:** (1) ~~Harrington's non-linear combiner~~ **DONE
-  (T-020)** — shipped as the `harrington` combine mode; (2) find a primary source for the
-  hierarchy ratio band; (3) weight calibration (DEFERRED, needs a labelled dataset).
+  (T-020)** — shipped as the `harrington` combine mode; (2) hierarchy ratio band — the
+  *direction* is now sourced (**#21 van Gog signaling**, 2026-06-25); the **exact 1.5×
+  threshold** stays HEURISTIC (no empirical source for the precise ratio — Bringhurst's
+  modular scale is the lead candidate to verify if/when the band is ever calibrated);
+  (3) weight calibration (DEFERRED, needs a labelled dataset).
 - **Ngo #4 measures ASSESSED & DECLINED** (no code): of the 14, balance + density are
   integrated; **regularity, rhythm, spacing-regularity** (2026-06-23) and **proportion,
   economy** (2026-06-24) were each assessed against a primary/faithful source and declined —
