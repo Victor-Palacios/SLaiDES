@@ -470,7 +470,10 @@ def _color_harmony(deck: "DeckIR") -> float:
     Near-grey roles are ignored; a single chromatic role is treated as inoffensive.
 
     ref #19 (Cohen-Or et al., SIGGRAPH 2006) — harmonic hue-wheel templates are the
-    primary basis for rewarding recognised hue relationships; the 30° tolerance is
+    primary basis for rewarding recognised hue relationships. The paper's verified
+    template sector widths are 18° (small) / 79.2° / 93.6° (large) / 180° (T), with
+    centre separations 90° and 180°; the 30° falloff below lies within that range
+    (consistent-with) but is not a value the paper states, so the 30° tolerance is
     HEURISTIC. See docs/RESEARCH_TRACE.md."""
     pal = deck.theme.palette
     chromatic = []

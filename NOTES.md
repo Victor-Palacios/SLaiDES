@@ -303,3 +303,38 @@ REFERENCES.md (#21, count 21/21), RESEARCH_TRACE.md (hierarchy row → "VERIFIED
 HEURISTIC band"; scoreboard now shows *no* sub-score with zero primary source; gap #2
 narrowed to the threshold only), AESTHETICS.md (lineage + hierarchy design note), and the
 `_hierarchy` code comment. Full suite green (325 passed / 47 skipped).
+
+---
+
+## 2026-06-26 — color_harmony 30° tolerance: Cohen-Or sector widths verified from the primary source
+
+Continuing the integration focus (verify the remaining HEURISTIC constants), I pursued the
+`color_harmony` 30° tolerance against its source, **ref #19 Cohen-Or et al., "Color
+Harmonization" (SIGGRAPH 2006)**. Previously the RESEARCH_TRACE row cited the harmonic
+templates as "fixed angular relationships" but carried **no published numbers**, and the 30°
+tolerance was flagged HEURISTIC with no characterization of how far it sat from the paper.
+
+**Verified from the primary source.** Extracted the paper's Appendix from the official PDF
+(igl.ethz.ch/projects/color-harmonization/harmonization.pdf): the precise template sector
+sizes are — small sectors (types i, L, I, Y) = 5% of the disk = **18°**; large sectors
+(V, Y, X) = 26% = **93.6°**; the large sector of L = 22% = **79.2°**; type T = 50% = **180°**;
+the centre-to-centre separation of the two sectors is **180°** (I, X, Y) and **90°** (L).
+
+**Assessment vs slidekit's metric.** `_color_harmony` rewards a hue-difference near one of
+{0, 30, 120, 150, 180}° with a linear falloff over a 30° window. Mapping onto Cohen-Or:
+- The 30° falloff lies **within** the paper's 18°–93.6° sector range (between the small i-type
+  and the large V-type), and the 180° complementary reward matches the I/X/Y centre
+  separation — so 30° is **consistent with** Cohen-Or's published geometry.
+- BUT **30° is not a value the paper states** (the published widths are 18 / 79.2 / 93.6 /
+  180°), and slidekit's 120° (triadic) / 150° (split-comp) reward angles trace to the broader
+  artist colour-wheel tradition (Itten, cited only as *background* in Cohen-Or), not to
+  Cohen-Or's own template centre-separations (which are 90° and 180°).
+
+Decision: **the 30° tolerance stays HEURISTIC** — but the trace moves from "templates exist at
+fixed angular relationships (no numbers)" to "exact sector widths VERIFIED; 30° shown
+consistent-with, not stated-by, the paper." **No metric behaviour change** (grounding, not
+recalibration; big-number held at 89.5). I did NOT tighten the metric toward Cohen-Or's 18°
+small-sector: that would change scores and is exactly the kind of recalibration that belongs
+with the DEFERRED weight calibration (needs a labelled dataset), not an unprompted edit.
+Updated REFERENCES.md (#19 annotation + integration log), RESEARCH_TRACE.md (color_harmony row
++ scoreboard), AESTHETICS.md (lineage note), and the `_color_harmony` code comment.

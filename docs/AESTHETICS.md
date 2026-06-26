@@ -202,6 +202,12 @@ modulator, all still deterministic, geometry/theme-only, zero rendering:
   chromatic palette roles (`primary`, `accent`; near-grey roles ignored), rewarding a
   recognised relationship — mono 0°, analogous 30°, triadic 120°, split-comp 150°,
   complementary 180° — within a 30° tolerance. Constant across a deck's slides.
+  Grounded by ref #19 (Cohen-Or et al., SIGGRAPH 2006), whose harmonic-template
+  **sector widths are now primary-source-verified** (Appendix: small 18°, large 93.6°,
+  T 180°; centre separations 90°/180°). slidekit's 30° falloff lies within that
+  18°–93.6° range (consistent-with), but 30° is not a value the paper states and the
+  120°/150° reward angles are from the artist colour-wheel tradition — so the 30°
+  tolerance stays HEURISTIC. See docs/RESEARCH_TRACE.md.
 - **`contrast` is now size-aware.** Each text node is judged against its WCAG target:
   **3:1 for large text (≥24pt)**, 4.5:1 below that. Since the body floor is 32pt, all
   content text is "large" by WCAG; the 4.5:1 constant is retained for any future
