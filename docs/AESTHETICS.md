@@ -111,6 +111,18 @@ Report per-slide and per-deck on a 0–100 scale with the sub-metric breakdown.
 > changed** — this session grounded *why* hierarchy is rewarded, not *how much*; the exact
 > ratio band stays an honest engineering choice, the lead candidate for primary-source
 > verification if the band is ever calibrated. **No code behaviour change.**
+>
+> **Update (ref #22, Brown 2011) — 1.5× now bounded, 2026-06-27.** The "lead candidate"
+> above is closed: the modular-scale convention is verified from a primary, freely-readable
+> source — Tim Brown, *More Meaningful Typography* (A List Apart, 2011), which quotes
+> Bringhurst's *Elements of Typographic Style* ("Shaping the Page") and builds a scale from a
+> chosen **harmonious ratio** whose menu includes the **perfect fifth (3:2 = 1.5)** and the
+> golden ratio (1.618). So slidekit's 1.5× step is the *perfect-fifth member of an established
+> harmonious-ratio family* (the just perfect fifth is the 3:2 ratio = 1.5 by definition) — **not
+> arbitrary**. It **stays HEURISTIC** only because the source prescribes a *menu* of ratios
+> (1.25 major third, 1.414 √2, 1.5 perfect fifth, 1.618 golden…), not a single title:body value;
+> the *selection* of 1.5 is "consistent-with, not stated-by" the source (parallel to the #19
+> color_harmony tolerance grounding). **No code behaviour change** — grounding, not recalibration.
 
 ## How it surfaces (deterministic, CI-friendly)
 

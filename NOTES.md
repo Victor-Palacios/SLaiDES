@@ -338,3 +338,32 @@ small-sector: that would change scores and is exactly the kind of recalibration 
 with the DEFERRED weight calibration (needs a labelled dataset), not an unprompted edit.
 Updated REFERENCES.md (#19 annotation + integration log), RESEARCH_TRACE.md (color_harmony row
 + scoreboard), AESTHETICS.md (lineage note), and the `_color_harmony` code comment.
+
+---
+
+## 2026-06-27 — hierarchy 1.5× "perfect fifth" grounded (ref #22)
+
+Continued the integration focus on the last unbounded HEURISTIC constants (build complete,
+both startup intakes empty, sync clean). Closed the "lead candidate" the 2026-06-25 entry
+named: the hierarchy 1.5× modular-scale step, previously attested only via secondary typography
+sources (Bringhurst's *Elements of Typographic Style* not read in the primary text).
+
+Verified a primary, freely-readable source instead — **Tim Brown, "More Meaningful Typography",
+A List Apart, 2011** (fetched the article directly): it defines a modular scale by quoting
+Bringhurst verbatim ("a prearranged set of harmonious proportions", crediting the "Shaping the
+Page" section) and builds one by multiplying/dividing a base size by a chosen **harmonious
+ratio**, the menu including the **perfect fifth (3:2 = 1.5)** and golden ratio (1.618). Added it
+as **REFERENCES.md #22 (VERIFIED)**.
+
+Assessment: slidekit's 1.5× full-credit threshold is the **perfect-fifth (3:2) member of an
+established harmonious-ratio family** — the just perfect fifth is the 3:2 frequency ratio = 1.5
+by definition — so it is **not arbitrary**. It **stays HEURISTIC** only because the source
+prescribes a *menu* of ratios (1.25 major third, 1.414 √2, 1.5 perfect fifth, 1.618 golden…),
+not a single title:body value; slidekit's *selection* of 1.5 is "consistent-with, not stated-by"
+the source — directly parallel to the 2026-06-26 color_harmony (#19) grounding.
+
+**No metric behaviour change** (grounding, not recalibration; big-number held at 89.5). Did NOT
+re-pick the ratio or alter the band — that is recalibration and belongs with the DEFERRED weight
+calibration (needs a labelled dataset), not an unprompted edit. Updated REFERENCES.md (#22 +
+header count 22 + integration log), RESEARCH_TRACE.md (hierarchy row + scoreboard + open gap #2),
+AESTHETICS.md (lineage note), the `_hierarchy` code comment, and the board (T-052, research, done).

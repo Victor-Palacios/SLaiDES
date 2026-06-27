@@ -391,9 +391,11 @@ def _non_overlap(nodes) -> float:
 def _hierarchy(deck: "DeckIR") -> float:
     # Direction: ref #21 van Gog, signaling/cueing principle (Cambridge Handbook of
     # Multimedia Learning, 2021) — a clear title→body size step is a structural cue that
-    # highlights organization. The exact 1.5x threshold is HEURISTIC (no empirical source
-    # for the precise ratio; 1.5 = the modular-scale "perfect fifth" convention).
-    # See docs/RESEARCH_TRACE.md (open gap #2).
+    # highlights organization. The 1.5x threshold is BOUNDED but still HEURISTIC: 1.5 is the
+    # perfect-fifth (3:2) member of the Bringhurst/Brown modular-scale harmonious-ratio family
+    # (ref #22, Brown, "More Meaningful Typography", A List Apart 2011) — not arbitrary — but
+    # the sources offer a *menu* of ratios (1.25, 1.414, 1.5, 1.618...), so selecting 1.5 is
+    # consistent-with, not stated-by, the source. See docs/RESEARCH_TRACE.md (open gap #2).
     ts = deck.theme.type_scale
     ratio = ts.title / ts.body if ts.body else 1.0
     # Reward a clear title→body step: full credit at ≥1.5×, none at ≤1.0×.
