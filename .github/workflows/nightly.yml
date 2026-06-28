@@ -6,14 +6,18 @@
 name: nightly-slidekit
 
 on:
-  # Nightly unattended session (RE-ENABLED 2026-06-14): each run continues the
-  # current build phase in PROGRESS.md (Phase 9 designs, Phase 10 aesthetics) AND
-  # advances the standing research task in NIGHTLY_PROMPT.md (grow docs/REFERENCES.md
-  # toward ~20 verified references and integrate findings).
-  schedule:
-    # 22:00 America/Los_Angeles (10pm) during PDT = 05:00 UTC (GitHub cron is UTC, ignores DST).
-    # Moved ~4h earlier than the previous 09:00 UTC / 02:00 PDT slot (operator request 2026-06-19).
-    - cron: "0 5 * * *"
+  # Nightly schedule DISABLED 2026-06-28 (operator request — the daily Opus session draws
+  # from the personal Claude subscription via CLAUDE_CODE_OAUTH_TOKEN and was exhausting the
+  # usage window, leaving no credits in the morning). The session now runs MANUALLY ONLY via
+  # workflow_dispatch (Actions tab → nightly-slidekit → Run workflow).
+  #
+  # To re-enable the nightly cron, uncomment the schedule block below. NOTE: it was set to
+  # 05:00 UTC (intended 22:00 / 10pm America/Los_Angeles during PDT), but GitHub's scheduler
+  # was consistently firing it ~08:15 UTC (~01:15 Pacific). Before re-enabling, consider
+  # billing it to an ANTHROPIC_API_KEY secret instead of the subscription token so it never
+  # touches personal credits.
+  # schedule:
+  #   - cron: "0 5 * * *"
   workflow_dispatch: {}
 
 # Never let two nightly sessions overlap.

@@ -54,8 +54,12 @@ in files:
 | `examples/pdf/` | Per-deck example PDFs (canonical, one per deck) plus `combined/` — a dated review archive (`all-examples_<date>.pdf` + `manifest.json` + `INDEX.md`) where `scripts/build_combined_pdf.py` mints a new snapshot only when deck layouts change |
 | [docs/EXAMPLES_INDEX.md](docs/EXAMPLES_INDEX.md) | Generated inventory of every example deck (slide count + component sequence), produced by `scripts/build_examples_index.py`; a test keeps it in sync |
 
-The schedule is [`.github/workflows/nightly.yml`](.github/workflows/nightly.yml):
-a GitHub Actions cron job (**05:00 UTC ≈ 22:00 (10pm) Pacific, nightly**) running
+The build is [`.github/workflows/nightly.yml`](.github/workflows/nightly.yml). Its nightly
+cron is **disabled as of 2026-06-28** (it ran daily on Opus against the personal Claude
+subscription and was exhausting the usage window); it now runs **manually only** via
+`workflow_dispatch` (Actions tab → *Run workflow*). To restore unattended runs, uncomment the
+schedule block — ideally after pointing it at an `ANTHROPIC_API_KEY` secret so it no longer
+draws from your subscription credits. It runs
 `anthropics/claude-code-action@v1` on Opus with the contents of `NIGHTLY_PROMPT.md`,
 tools scoped to `Read,Edit,Write,Bash` plus `WebSearch,WebFetch` for the research
 task. (The plan's preferred mechanisms — Claude Code Routines or a local crontab —
@@ -131,7 +135,7 @@ The core build (Phases 0–8) is complete. Each nightly run now pursues two trac
   (effective June 15, 2026) — since this workflow authenticates with the
   subscription OAuth token, verify those limits at
   https://code.claude.com/docs/en/headless before relying on nightly runs.
-- **The nightly cron is ENABLED and runs on Opus** (~$7–50 of usage per session).
+- **The nightly cron is DISABLED (2026-06-28); the build runs on Opus only when manually dispatched** (~$7–50 of subscription usage per session).
   It fires every night (from the default branch, **`main`**) until you disable it
   (comment out the `schedule:` block).
 - Each morning, the newest `NIGHTLY_REPORTS/*-exec-summary.md` is the plain-language

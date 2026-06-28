@@ -397,3 +397,14 @@ move the bands — recalibration belongs with the DEFERRED weight calibration (n
 dataset). Updated REFERENCES.md (#23 + header count 23 + integration log), RESEARCH_TRACE.md
 (info_density row + scoreboard), AESTHETICS.md (lineage note), the `_info_density` code comment,
 and the board (T-053, research, done).
+
+## Nightly schedule disabled to stop subscription-credit drain (2026-06-28)
+
+Operator hit "no Claude credits this morning." Cause: `.github/workflows/nightly.yml` ran
+daily on Opus (timeout 180m) authenticated with `CLAUDE_CODE_OAUTH_TOKEN` — the operator's
+personal Claude subscription, the same usage pool used interactively — so each overnight run
+drained the rolling usage window. (Also: the cron was `0 5 * * *` intending 22:00 PT, but
+GitHub's scheduler consistently fired it ~08:15 UTC ≈ 01:15 PT.) Action: commented out the
+`schedule:` block (kept `workflow_dispatch`), so the build is manual-only for now. Operator
+may re-enable later — preferably after switching to an `ANTHROPIC_API_KEY` secret so the
+nightly bills a separate API account instead of personal subscription credits. README updated.
