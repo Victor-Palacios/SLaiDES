@@ -367,3 +367,33 @@ re-pick the ratio or alter the band — that is recalibration and belongs with t
 calibration (needs a labelled dataset), not an unprompted edit. Updated REFERENCES.md (#22 +
 header count 22 + integration log), RESEARCH_TRACE.md (hierarchy row + scoreboard + open gap #2),
 AESTHETICS.md (lineage note), the `_hierarchy` code comment, and the board (T-052, research, done).
+
+---
+
+## 2026-06-28 — info_density direction grounded with a controlled experiment (#23); bands stay HEURISTIC
+
+Standing-research integration session (build complete; both startup intakes empty; all
+generated artifacts re-rendered with zero drift). The 2026-06-27 next-step was to assess the
+`info_density` words-per-slide / coverage bands against a primary source.
+
+A web search of the cognitive-load slide literature established that the consistent guidance is
+a **minimization principle** — "as few words as possible," fewer words → better comprehension —
+**not** a single empirical words-per-slide maximum. So slidekit's 45-word full-credit / 130-word
+zero-credit band (and the 0.45/0.85 coverage band) **stay HEURISTIC** — same honest outcome as
+the #19 color_harmony 30° and #22 hierarchy 1.5× groundings: the *direction* is sourced, the
+exact number is our design choice.
+
+Added **REFERENCES.md #23 — Wecker, "Slide presentations as speech suppressors" (Computers &
+Education 59(2):260–273, 2012; DOI 10.1016/j.compedu.2012.01.013)**, verified from the ERIC
+record EJ966972 + DOI metadata. It is a **controlled experiment** (n=209; no-slides / regular /
+concise conditions) finding a "speech suppression effect": text-dense slides reduce retention of
+*orally-presented* information, via **attention misallocation** (not cognitive overload), an
+effect avoided by concise slides. This backs info_density's direction more strongly than #20 (an
+experiment vs design criteria) and adds a distinct mechanism. Genuinely-novel, high-quality
+post-target addition that closes the info_density direction-grounding gap.
+
+**No metric behaviour change** (grounding, not recalibration; big-number held at 89.5). Did NOT
+move the bands — recalibration belongs with the DEFERRED weight calibration (needs a labelled
+dataset). Updated REFERENCES.md (#23 + header count 23 + integration log), RESEARCH_TRACE.md
+(info_density row + scoreboard), AESTHETICS.md (lineage note), the `_info_density` code comment,
+and the board (T-053, research, done).

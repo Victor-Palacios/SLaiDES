@@ -308,8 +308,11 @@ def _info_density(nodes, cw: int, ch: int) -> float:
     nodes at all scores 0.0, consistent with the other metrics.
 
     ref #20 (Alley & Neeley, Tech. Comm. 2005) — assertion–evidence: one idea per slide,
-    against text-dense slides — backs the metric's direction; the bands are HEURISTIC.
-    See docs/RESEARCH_TRACE.md."""
+    against text-dense slides — and ref #23 (Wecker, Computers & Education 2012) — a
+    controlled n=209 experiment showing text-dense slides suppress retention of oral
+    info (avoided by concise slides) — back the metric's direction. The bands stay
+    HEURISTIC: the literature gives a minimization principle, not a numeric words-per-
+    slide maximum (assessed 2026-06-28). See docs/RESEARCH_TRACE.md."""
     if not nodes:
         return 0.0
     text_nodes = [n for n in nodes if n.node_type == "text"]

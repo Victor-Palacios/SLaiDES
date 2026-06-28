@@ -284,9 +284,15 @@ scores two deterministic quantities against comfortable bands and averages them:
 A slide with no text node (e.g. `image-full-bleed`) earns full credit — there is no text
 to be crowded or barren. Weight `1.0` in `DEFAULT_WEIGHTS`; advisory threshold `0.45`
 (code `W_AESTH_DENSITY`). The designed-beats-plain invariant is preserved (big-number
-89.5 > agents-in-ai 84.4 > all-components 82.7 with density included). Bands are
-HEURISTIC ("Math Behind Effective Slide Design" — one-idea-per-slide / 6×6 guidance);
-calibration stays DEFERRED.
+89.5 > agents-in-ai 84.4 > all-components 82.7 with density included). The metric's
+**direction** (penalise crowding) is grounded in two verified primary sources: ref #20
+(Alley & Neeley 2005, assertion–evidence) and ref #23 (Wecker 2012, *Computers &
+Education* — a controlled n=209 experiment finding text-dense slides suppress retention
+of spoken information via attention misallocation, avoided by concise slides). The exact
+**bands stay HEURISTIC**: the cognitive-load slide literature gives a *minimization
+principle* ("as few words as possible"), not a numeric words-per-slide maximum (assessed
+2026-06-28), so the 45/130 word and 0.45/0.85 coverage cut-offs are slidekit's own
+choice — calibration stays DEFERRED.
 
 ## Advisory `W_AESTH_*` warnings + `--min-score` gate (shipped 2026-06-18)
 
