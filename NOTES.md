@@ -408,3 +408,16 @@ GitHub's scheduler consistently fired it ~08:15 UTC ≈ 01:15 PT.) Action: comme
 `schedule:` block (kept `workflow_dispatch`), so the build is manual-only for now. Operator
 may re-enable later — preferably after switching to an `ANTHROPIC_API_KEY` secret so the
 nightly bills a separate API account instead of personal subscription credits. README updated.
+
+## Statusline "compact?" warning at 100K context (2026-06-28)
+
+Operator wanted a prompt to appear when the Claude Code context window nears/exceeds 100K
+tokens. A CLAUDE.md rule can't do this reliably (the model never sees its own live token
+count). The reliable mechanism is a **statusline**: Claude Code pipes a JSON blob with the
+live count (`context_window.total_input_tokens`) to a statusline command on every render.
+Added `.claude/statusline.sh` (shows `model · dir · ctx Nk/200k (P%)`, turns yellow
+"approaching 100K" at 80K and red "⚠ COMPACT? (/compact)" at 100K) and committed
+`.claude/settings.json` pointing `statusLine.command` at it. These are intentional dev-QoL
+files — do not remove. (`.claude/settings.local.json` stays gitignored.) To make the warning
+global across all repos, the operator copies the script to `~/.claude/statusline.sh` and sets
+the same `statusLine` block in `~/.claude/settings.json`.
