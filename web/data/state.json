@@ -92,12 +92,12 @@
     "title-slide": {
       "status": "flagged",
       "date": "2026-07-02",
-      "comment": "remove distracting subheader",
+      "comment": "left-center align the title",
       "before": {
         "width_px": 1280.0,
         "height_px": 720.0,
         "background": "#FFFFFF",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:96.00px;top:187.20px;width:1088.00px;height:96.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;font-weight:bold;padding:5px 9px 5px 9px;\">Quarterly Business Review</div>\n    <div class=\"node node-text\" style=\"left:96.00px;top:312.00px;width:1088.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Q4 2025 — Finance Division</div>"
+        "nodes_html": "    <div class=\"node node-text\" style=\"left:96.00px;top:187.20px;width:1088.00px;height:96.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Quarterly Business Review</div>"
       }
     }
   }

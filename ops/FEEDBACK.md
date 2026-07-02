@@ -2,7 +2,13 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 0 · **done** 16 · **wontfix** 1 · _last change 2026-07-02_
+**open** 1 · **done** 16 · **wontfix** 1 · _last change 2026-07-02_
+
+## Open (1)
+
+| ID | Layout | Sev | Comment | Notes |
+|---|---|---|---|---|
+| FB-018 | title-slide | med | 👎 left-center align the title |  |
 
 ## Done (16)
 

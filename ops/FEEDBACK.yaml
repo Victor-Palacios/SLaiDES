@@ -79,7 +79,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-054 — subtitle stripped from title-slide specimen (optional field kept)'
+  notes: done T-054 — subtitle stripped from title-slide specimen (optional field kept)
 - id: FB-009
   component: comparison-columns
   family: two-column
@@ -89,10 +89,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-055 — comment was about the retired two-column component; the two-column
-    layout was deleted (model/handler/registry/scaffold/examples/goldens) as redundant, and
-    comparison-columns now anchors the two-column family. Component retargeted to
-    comparison-columns here because the catalog no longer contains two-column.'
+  notes: done T-055 — comment was about the retired two-column component; the two-column layout was deleted (model/handler/registry/scaffold/examples/goldens) as redundant, and comparison-columns now anchors the two-column family. Component retargeted to comparison-columns here because the catalog no longer contains two-column.
 - id: FB-010
   component: icon-text-rows
   family: icon-text-rows
@@ -102,7 +99,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-056 — body box was shorter than one line; paired heading+body on 0.1" inner gap, guaranteed >= one line'
+  notes: done T-056 — body box was shorter than one line; paired heading+body on 0.1" inner gap, guaranteed >= one line
 - id: FB-011
   component: stat-callout
   family: stat-callout
@@ -112,7 +109,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-057 — muted subtext stripped from stat-callout specimen (optional field kept)'
+  notes: done T-057 — muted subtext stripped from stat-callout specimen (optional field kept)
 - id: FB-012
   component: comparison-columns
   family: two-column
@@ -122,7 +119,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-058 — specimen trimmed to 3 items per column; handler distributes items to fill the column, so 3 items get taller boxes and clear space between them (golden captures new geometry)'
+  notes: done T-058 — specimen trimmed to 3 items per column; handler distributes items to fill the column, so 3 items get taller boxes and clear space between them (golden captures new geometry)
 - id: FB-013
   component: timeline
   family: timeline
@@ -132,7 +129,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-059 — new W_TIMELINE_BALANCE advisory flags any timeline column that wraps to more lines than its siblings (deterministic, no render); specimen Q1 trimmed to balance all four columns at 4 lines'
+  notes: done T-059 — new W_TIMELINE_BALANCE advisory flags any timeline column that wraps to more lines than its siblings (deterministic, no render); specimen Q1 trimmed to balance all four columns at 4 lines
 - id: FB-014
   component: section-divider
   family: emphasis-stack
@@ -142,7 +139,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-060 — section-divider centres the title; number rides above (center_on)'
+  notes: done T-060 — section-divider centres the title; number rides above (center_on)
 - id: FB-015
   component: agenda
   family: agenda
@@ -152,7 +149,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-061 — web-preview emitter pinned line-height + dropped vertical padding + overflow visible (single-line-row descender clip class)'
+  notes: done T-061 — web-preview emitter pinned line-height + dropped vertical padding + overflow visible (single-line-row descender clip class)
 - id: FB-016
   component: quote-opener
   family: emphasis-stack
@@ -162,7 +159,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-062 — same root cause as FB-015; fixed by the emitter change'
+  notes: done T-062 — same root cause as FB-015; fixed by the emitter change
 - id: FB-017
   component: big-number
   family: emphasis-stack
@@ -172,4 +169,14 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'done T-063 — context line stripped from big-number specimen (optional field kept)'
+  notes: done T-063 — context line stripped from big-number specimen (optional field kept)
+- id: FB-018
+  component: title-slide
+  family: title
+  status: open
+  severity: med
+  comment: 👎 left-center align the title
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T22:23:19.850Z
+  notes: ''
