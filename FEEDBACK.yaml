@@ -70,3 +70,103 @@ comments:
   updated: '2026-07-02'
   source: web 2026-07-02T01:50:03.368Z
   notes: ''
+- id: FB-008
+  component: title-slide
+  family: title
+  status: open
+  severity: med
+  comment: 👎 remove distracting subheader
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''
+- id: FB-009
+  component: two-column
+  family: two-column
+  status: open
+  severity: med
+  comment: 👎 delete this slide layout - redundant with "comparison-columns"
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''
+- id: FB-010
+  component: icon-text-rows
+  family: icon-text-rows
+  status: open
+  severity: med
+  comment: 👎 Can't read the subtext like "high standards..."
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''
+- id: FB-011
+  component: stat-callout
+  family: stat-callout
+  status: open
+  severity: med
+  comment: 👎 get rid of the small grey text - it's distracting
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''
+- id: FB-012
+  component: comparison-columns
+  family: two-column
+  status: open
+  severity: med
+  comment: 👎 Make it 3 items after the headers of legacy platform and modern stack with more space between items
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''
+- id: FB-013
+  component: timeline
+  family: timeline
+  status: open
+  severity: med
+  comment: 👎 foundation text gets cut off at the end (set limit for how many words can appear - the other columns are perfect)
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''
+- id: FB-014
+  component: section-divider
+  family: emphasis-stack
+  status: open
+  severity: med
+  comment: 👎 Change the position of the number to be a bit higher such that the text is center-aligned instead of the number
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''
+- id: FB-015
+  component: agenda
+  family: agenda
+  status: open
+  severity: med
+  comment: 👎 Need more space or something because letters like g, p, and y have their bottom half missing.
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''
+- id: FB-016
+  component: quote-opener
+  family: emphasis-stack
+  status: open
+  severity: med
+  comment: 👎 not all the text is displayed correctly. might be a spacing issue
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''
+- id: FB-017
+  component: big-number
+  family: emphasis-stack
+  status: open
+  severity: med
+  comment: 👎 remove final line
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:58:57.247Z
+  notes: ''

@@ -2,13 +2,23 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments with the **Layout feedback** issue form (see the README). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 1 · **done** 6 · **wontfix** 0 · _last change 2026-07-02_
+**open** 11 · **done** 6 · **wontfix** 0 · _last change 2026-07-02_
 
-## Open (1)
+## Open (11)
 
 | ID | Layout | Sev | Comment | Notes |
 |---|---|---|---|---|
 | FB-007 | title-slide | med | 👎 remove the distracting subheader |  |
+| FB-008 | title-slide | med | 👎 remove distracting subheader |  |
+| FB-009 | two-column | med | 👎 delete this slide layout - redundant with "comparison-columns" |  |
+| FB-010 | icon-text-rows | med | 👎 Can't read the subtext like "high standards..." |  |
+| FB-011 | stat-callout | med | 👎 get rid of the small grey text - it's distracting |  |
+| FB-012 | comparison-columns | med | 👎 Make it 3 items after the headers of legacy platform and modern stack with more space between items |  |
+| FB-013 | timeline | med | 👎 foundation text gets cut off at the end (set limit for how many words can appear - the other columns are perfect) |  |
+| FB-014 | section-divider | med | 👎 Change the position of the number to be a bit higher such that the text is center-aligned instead of the number |  |
+| FB-015 | agenda | med | 👎 Need more space or something because letters like g, p, and y have their bottom half missing. |  |
+| FB-016 | quote-opener | med | 👎 not all the text is displayed correctly. might be a spacing issue |  |
+| FB-017 | big-number | med | 👎 remove final line |  |
 
 ## Done (6)
 
