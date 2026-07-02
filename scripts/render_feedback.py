@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Render operator layout feedback: FEEDBACK.yaml (source of truth) -> FEEDBACK.md.
 
-FEEDBACK.yaml is filed via the *Layout feedback* GitHub issue form (parsed by the
-feedback-intake workflow) and driven by the nightly; FEEDBACK.md is the generated,
+FEEDBACK.yaml is filed via the feedback website (folded in by the
+web-feedback-intake workflow) and driven by the nightly; FEEDBACK.md is the generated,
 committed view. Deterministic by construction (comments sorted by id, `last change`
 from max(updated) — never wall-clock), and a test (tests/test_feedback) asserts
 FEEDBACK.md stays in sync, the same spirit as BOARD.md / the layout goldens.

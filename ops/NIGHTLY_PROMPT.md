@@ -195,7 +195,7 @@ A first cut of Phase 10 `slidekit score` exists (slidekit/aesthetics/). Next ses
    linter anti-patterns; restraint over ornament). Measure before/after with `slidekit score`;
    rebuild the example PDFs (examples/pdf/).
 3. THEN resume the remaining ~20 Phase 9 designs.
-This is the Aesthetic Director agent's remit (specialized/specialized-aesthetic-director.md).
+This is the Aesthetic Director agent's remit (integrations/agents/specialized-aesthetic-director.md).
 
 === NORTH-STAR PRIORITY (added 2026-06-18; operator realignment — SUPERSEDES the priority above) ===
 The project's north star: ~40 slide layouts that render REPRODUCIBLY from recorded
@@ -257,9 +257,9 @@ startup, right after reading the board:
   leave it, and record the objection in ops/NOTES.md (same as any disputed scope).
 
 === FEEDBACK INTAKE (added 2026-06-19; operator request) ===
-The operator files per-layout comments from their phone via the *Layout feedback* GitHub
-issue form (`.github/ISSUE_TEMPLATE/layout-feedback.yml`); the `feedback-intake` workflow
-records each as an entry in `ops/FEEDBACK.yaml` (source of truth) and regenerates `ops/FEEDBACK.md`.
+The operator files per-layout comments from their phone via the feedback website (web/;
+see web/README.md); the `web-feedback-intake` workflow folds each submission into
+`ops/FEEDBACK.yaml` (source of truth) and regenerates `ops/FEEDBACK.md`.
 This is operator-authored input (unlike ops/IDEAS.md proposals it needs NO approval step) — treat
 every `status: open` comment as actionable. Each session, run this intake right after the
 APPROVED IDEAS intake:
@@ -274,10 +274,9 @@ APPROVED IDEAS intake:
 - When a feedback task reaches `done`, set the comment's `status: done` and put the commit ref
   in its `notes`. If on inspection a comment is wrong/unsafe/out of scope, set `status: wontfix`
   with the reason in `notes` (and record disputed scope in ops/NOTES.md) — do not silently drop it.
-- ALWAYS regenerate before committing: `python scripts/render_feedback.py` (and
-  `python scripts/build_feedback_form.py` if components changed), then commit `ops/FEEDBACK.yaml` +
-  `ops/FEEDBACK.md` (+ the form) with the board + code. `tests/test_feedback` fails if either the
-  rendered markdown or the issue form drifts, so run the suite at wrap-up as usual.
+- ALWAYS regenerate before committing: `python scripts/render_feedback.py`, then commit
+  `ops/FEEDBACK.yaml` + `ops/FEEDBACK.md` with the board + code. `tests/test_feedback` fails
+  if the rendered markdown drifts, so run the suite at wrap-up as usual.
 
 === REPO RESTRUCTURE (added 2026-07-02; operator request) ===
 The repository root was decluttered: every agent-ops meta file now lives under `ops/`.
@@ -332,3 +331,23 @@ SHORT session: pick 2–4 items, finish each completely, push after every item.
 - If all feedback items are done, fall back to the NORTH-STAR PRIORITY order above.
 - The standing research task is SUSPENDED during burst sessions (skip it entirely);
   it resumes with the normal cadence.
+
+=== CHANNEL & TREE CLEANUP (added 2026-07-02; operator-approved removals) ===
+The following were REMOVED — do not recreate them or follow older addenda that reference them:
+- The GitHub issue-form feedback channel: `.github/ISSUE_TEMPLATE/` (whole dir), the
+  `feedback-intake` workflow, `scripts/build_feedback_form.py`, `scripts/feedback_intake.py`,
+  and `src/slidekit/feedback/intake.py`. The feedback WEBSITE (web/) is now the sole channel;
+  the FEEDBACK INTAKE process above is unchanged apart from that.
+- The PR-brainstorm session: `.github/workflows/pr-brainstorm.yml` and ops/BRAINSTORM_PROMPT.md.
+  ops/IDEAS.md REMAINS as the operator-curated idea ledger and the APPROVED IDEAS INTAKE
+  process above is unchanged — the operator now adds ideas by hand.
+- The vendored agency-agents snapshot: `integrations/agency-agents/` (300 files) is pruned to
+  `integrations/agents/` — only the slidekit-authored agent definitions and the two
+  upstream files carrying slidekit edits (document-generator, reality-checker), plus the
+  upstream MIT license. The Phase 8 addendum's `lint-agents.sh` instructions are obsolete
+  (that tooling was part of the removed snapshot); the kept agent files are documentation
+  artifacts — validate them by proofreading, not by the removed linter.
+- ops/reports/ entries older than 2026-06-18 now live in ops/reports/archive/ (same files,
+  just decluttered). "Most recent report" logic is unaffected — newest files stay in
+  ops/reports/ directly; put NEW reports there, never in archive/.
+- One-off docs/yaml-vs-html-executive-summary.{md,pdf} deleted (decision long since made).

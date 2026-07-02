@@ -1,9 +1,12 @@
 """Guards for the operator layout-feedback loop.
 
-Mirrors the board's generated-file pattern: FEEDBACK.md and the issue form are generated
-and committed, and tests assert they stay in sync with their sources (FEEDBACK.yaml and
-the catalog) so neither can silently drift. Also covers the store schema, id/date merge
-behaviour, and the issue-form parser the intake workflow relies on.
+Mirrors the board's generated-file pattern: FEEDBACK.md is generated and committed, and
+a test asserts it stays in sync with its source (ops/FEEDBACK.yaml) so it can never
+silently drift. Also covers the store schema and the id/date merge behaviour the web
+intake (scripts/feedback_intake_web.py) relies on.
+
+(The GitHub issue-form channel — form generator, body parser, and their sync tests —
+was retired 2026-07-02 when the feedback website became the sole channel.)
 """
 import importlib.util
 from pathlib import Path
@@ -13,7 +16,6 @@ import yaml
 
 from slidekit.catalog.registry import catalog
 from slidekit.feedback import store
-from slidekit.feedback.intake import FeedbackParseError, parse_issue_form
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 
@@ -26,7 +28,6 @@ def _load_script(name):
 
 
 render_feedback = _load_script("render_feedback")
-build_feedback_form = _load_script("build_feedback_form")
 
 
 # ── source-of-truth + generated-file sync ──────────────────────────────────────────
@@ -47,23 +48,6 @@ def test_feedback_md_in_sync():
     assert committed == store.render_markdown(fb), (
         "FEEDBACK.md is stale — run `python scripts/render_feedback.py` and commit it"
     )
-
-
-def test_issue_form_in_sync_with_catalog():
-    committed = (ROOT / ".github" / "ISSUE_TEMPLATE" / "layout-feedback.yml").read_text(
-        encoding="utf-8"
-    )
-    assert committed == build_feedback_form.render(), (
-        "layout-feedback.yml is stale — run `python scripts/build_feedback_form.py`"
-    )
-
-
-def test_form_dropdown_lists_exactly_the_catalog():
-    form = yaml.safe_load(
-        (ROOT / ".github" / "ISSUE_TEMPLATE" / "layout-feedback.yml").read_text("utf-8")
-    )
-    dropdown = next(b for b in form["body"] if b.get("id") == "component")
-    assert dropdown["attributes"]["options"] == sorted(catalog())
 
 
 # ── schema validation ───────────────────────────────────────────────────────────────
@@ -123,50 +107,3 @@ def test_dumps_roundtrips():
                      today="2026-06-19")
     again = store.Feedback.model_validate(yaml.safe_load(store.dumps(fb)))
     assert again.comments[0].component == "pyramid"
-
-
-# ── issue-form parser ───────────────────────────────────────────────────────────────
-
-_BODY = """### Layout
-
-big-number
-
-### Your comment
-
-The hero value sits too low; lift it to the optical centre.
-
-### Severity
-
-high
-"""
-
-
-def test_parse_issue_form_happy_path():
-    item = parse_issue_form(_BODY)
-    assert item == {
-        "component": "big-number",
-        "comment": "The hero value sits too low; lift it to the optical centre.",
-        "severity": "high",
-    }
-
-
-def test_parse_no_response_severity_defaults_to_med():
-    body = "### Layout\n\nfunnel\n\n### Your comment\n\ntoo tight\n\n### Severity\n\n_No response_\n"
-    assert parse_issue_form(body)["severity"] == "med"
-
-
-def test_parse_unknown_component_raises():
-    body = "### Layout\n\nnot-a-layout\n\n### Your comment\n\nhi\n"
-    with pytest.raises(FeedbackParseError):
-        parse_issue_form(body)
-
-
-def test_parse_missing_comment_raises():
-    body = "### Layout\n\nbig-number\n\n### Your comment\n\n_No response_\n"
-    with pytest.raises(FeedbackParseError):
-        parse_issue_form(body)
-
-
-def test_parse_missing_layout_raises():
-    with pytest.raises(FeedbackParseError):
-        parse_issue_form("### Your comment\n\nsomething\n")

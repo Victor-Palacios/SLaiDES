@@ -1,7 +1,7 @@
 # slidekit layout-feedback site
 
 A private, phone-friendly website for reviewing every slide layout and marking it 👍/👎
-with a note. It replaces the GitHub **Layout feedback** issue form: instead of filing an
+with a note. It replaced the GitHub **Layout feedback** issue form (retired 2026-07-02): instead of filing an
 issue per layout, you scroll a gallery of all 40 layouts, tap good/needs-work, optionally
 comment, and hit **Submit**. Submissions land in `ops/FEEDBACK.yaml` — the same file the
 nightly already treats as its actionable feedback queue.

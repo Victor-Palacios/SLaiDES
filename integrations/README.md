@@ -1,26 +1,25 @@
 # integrations/
 
-## `agency-agents/` — vendored copy
+## `agents/` — slidekit presentation agents
 
-A **point-in-time snapshot** of [github.com/msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents),
-vendored here so slidekit's Phase 8 integration (PLAN.md) can be authored and
-validated entirely inside this repo without cross-repo access.
+Agent definitions from slidekit's Phase 8 integration with
+[agency-agents](https://github.com/msitarzewski/agency-agents). The full upstream
+repo was originally **vendored** here as a 300-file point-in-time snapshot so the
+integration could be authored and validated in-repo; on 2026-07-02 (operator-approved
+cleanup) the snapshot was pruned to just the slidekit-relevant files:
 
-- Upstream commit: see `agency-agents/.VENDORED_FROM`.
-- License: upstream is **MIT** (`agency-agents/LICENSE`) — preserved unmodified.
-- This is a copy, not a submodule: it does **not** track upstream updates.
+- **slidekit-authored agents** (original work, written in the upstream template
+  format): `specialized-deck-builder.md` (the Phase 8 deliverable),
+  `specialized-aesthetic-director.md`, `specialized-slide-outline-architect.md`,
+  `specialized-deck-repurposer.md`, `specialized-copy-tightener.md`,
+  `specialized-brand-to-ir-translator.md`, `specialized-chart-spec-builder.md`.
+- **Upstream files carrying slidekit edits**: `specialized-document-generator.md`
+  (delegation note appended) and `testing-reality-checker.md` (deck-scoped
+  certification language). These derive from upstream MIT-licensed content —
+  see `LICENSE-upstream-MIT`.
 
-### What slidekit adds to this tree
-
-- `agency-agents/specialized/specialized-deck-builder.md` — the Deck Builder
-  agent (slidekit's Phase 8 deliverable). Authored in the repo's own template
-  format and validated with `agency-agents/scripts/lint-agents.sh`.
-- A delegation note appended to `agency-agents/specialized/specialized-document-generator.md`
-  (the compatibility shim from PLAN.md Phase 8, task 4).
-
-### Upstreaming (optional, later)
-
-To contribute the Deck Builder agent back to the original project, open a PR
-against `msitarzewski/agency-agents` adding only
-`specialized/specialized-deck-builder.md` (and the Document Generator note).
-Nothing here pushes upstream automatically.
+These are documentation artifacts describing agent roles around the slidekit
+pipeline; the *executable* selection path is `slidekit author` /
+`slidekit.select.recommend` (see `docs/LAYOUT_SELECTION_GUIDE.md`). To use an agent
+definition with the upstream project, copy the file into a checkout of
+`msitarzewski/agency-agents`.

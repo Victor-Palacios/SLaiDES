@@ -1,16 +1,19 @@
 """Operator layout-feedback loop.
 
-A phone-native channel for per-layout comments that feeds the nightly AI routine,
+A phone-native channel for per-layout comments that feeds the unattended build sessions,
 mirroring the repo's established "structured file -> rendered markdown -> AI consumes
-and annotates" pattern (cf. board.yaml -> BOARD.md, IDEAS.md intake):
+and annotates" pattern (cf. ops/board.yaml -> ops/BOARD.md):
 
-  GitHub Issue Form (.github/ISSUE_TEMPLATE/layout-feedback.yml, dropdown of all 40
-    components — generated from the catalog so it can't drift)
-    -> feedback-intake workflow parses the issue (intake.parse_issue_form), validates,
-       and merges into FEEDBACK.yaml (store.merge)
-    -> scripts/render_feedback.py regenerates FEEDBACK.md (store.render_markdown)
-    -> nightly reads FEEDBACK.yaml `status: open` items, queues board tasks, marks done.
+  Feedback website (password-gated Netlify site under web/ — a gallery of all 40
+    layouts with a good/bad verdict + comment per layout)
+    -> netlify/functions/submit-feedback.js commits each submission as JSON under
+       web/feedback-inbox/
+    -> the web-feedback-intake workflow runs scripts/feedback_intake_web.py, which
+       folds inbox files into ops/FEEDBACK.yaml (store.merge) and regenerates
+       ops/FEEDBACK.md (store.render_markdown)
+    -> build sessions read `status: open` items, queue board tasks, mark them done.
 
-`store` holds the schema + load/merge/save/render (the single source of truth is
-FEEDBACK.yaml); `intake` parses a GitHub issue-form body into a comment dict.
+`store` holds the schema + load/merge/save/render; ops/FEEDBACK.yaml is the single
+source of truth. (An earlier GitHub issue-form channel — form generator, body parser,
+intake workflow — was retired 2026-07-02 in favour of the website.)
 """

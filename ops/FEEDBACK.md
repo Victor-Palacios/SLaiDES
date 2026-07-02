@@ -1,6 +1,6 @@
 # Layout feedback — slidekit
 
-_Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md) or the **Layout feedback** issue form. The nightly reads `open` items, queues them on the board, and marks them `done`._
+_Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
 **open** 0 · **done** 16 · **wontfix** 1 · _last change 2026-07-02_
 

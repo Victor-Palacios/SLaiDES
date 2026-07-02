@@ -568,3 +568,16 @@ component was gone. Retargeted FB-009's component to `comparison-columns` (the s
 member that absorbed its role) with the original intent preserved in the comment + notes. This is
 the honest minimum; a general "retired-component" allowance in the feedback schema would be scope
 creep and is NOT added.
+
+## Operator-approved removals executed (2026-07-02)
+
+Per operator ("remove the items you suggest I get rid of; keep or archive the ones you
+think I should"): (1) vendored integrations/agency-agents pruned 300→11 files — kept the
+slidekit-authored agents + two upstream files with slidekit edits in integrations/agents/
+(+ upstream MIT license); (2) GitHub issue-form feedback channel fully removed (template,
+workflow, generator, parser, tests) — the website is the sole channel; (3) pr-brainstorm
+workflow + BRAINSTORM_PROMPT removed — IDEAS.md stays as operator-curated ledger; (4)
+docs/yaml-vs-html-executive-summary.{md,pdf} deleted; (5) ops/reports/ older than
+2026-06-18 archived to ops/reports/archive/. Kept: examples/pdf/combined/ snapshots,
+calibration_report.json. Prompt gained a CHANNEL & TREE CLEANUP addendum so sessions
+don't resurrect removed pieces.

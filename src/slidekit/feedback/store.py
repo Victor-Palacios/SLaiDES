@@ -176,7 +176,7 @@ def render_markdown(fb: Feedback) -> str:
     lines.append(
         "_Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not "
         "hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback "
-        "website (see web/README.md) or the **Layout feedback** issue form. The nightly reads `open` items, "
+        "website (see web/README.md). The nightly reads `open` items, "
         "queues them on the board, and marks them `done`._"
     )
     lines.append("")
