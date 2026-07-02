@@ -116,3 +116,70 @@ body {
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 .toast.err { background: var(--bad); color: #fff; }
+
+/* ── review queue: sections, flags, before/after ─────────── */
+.section-h {
+  font-size: 13px; font-weight: 600; color: var(--muted); text-transform: uppercase;
+  letter-spacing: .04em; margin: 8px 2px 0;
+}
+.badge {
+  font-size: 10.5px; font-weight: 600; border-radius: 20px; padding: 2px 8px;
+  text-transform: uppercase; letter-spacing: .03em;
+}
+.b-flag { background: var(--bad); color: #fff; }
+.flaginfo { margin: 6px 0 0; font-size: 13px; color: var(--bad); }
+.flaginfo .flagdate { color: var(--muted); font-size: 12px; }
+.flagwait { margin: 0; padding: 8px 14px; font-size: 12.5px; color: var(--muted);
+  background: var(--bg); border-top: 1px solid var(--line); }
+.cmp-label {
+  font-size: 11.5px; font-weight: 600; padding: 6px 14px 4px; letter-spacing: .02em;
+}
+.cmp-before { color: var(--bad); }
+.cmp-after { color: var(--accent); }
+.sub a, .loading a { color: var(--accent); }
+.nav a { color: var(--accent); font-size: 13.5px; text-decoration: none; white-space: nowrap; }
+
+/* ── gallery: thumbnail grid ─────────────────────────────── */
+.tgrid {
+  max-width: 980px; margin: 0 auto; padding: 16px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px;
+}
+.tile {
+  display: block; width: 100%; text-align: left; padding: 0; cursor: pointer;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: var(--shadow); overflow: hidden; color: var(--ink); font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+.tile:active { transform: scale(.98); }
+.tile-preview { background: #555; overflow: hidden; pointer-events: none; }
+.tile-preview .stage { position: relative; transform-origin: top left; }
+.tile-meta {
+  display: flex; align-items: center; justify-content: space-between; gap: 6px;
+  padding: 7px 9px;
+}
+.tile-name { font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.chip { font-size: 10px; font-weight: 600; border-radius: 20px; padding: 2px 7px; white-space: nowrap; }
+.c-ok { background: var(--accent); color: #fff; }
+.c-flag { background: var(--bad); color: #fff; }
+.c-pending { background: var(--bg); color: var(--muted); border: 1px solid var(--line); }
+
+/* ── lightbox (tap a tile to zoom) ───────────────────────── */
+.lightbox { position: fixed; inset: 0; z-index: 40; }
+.lb-backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, .65); }
+.lb-card {
+  position: relative; margin: 4vh auto 0; width: min(96vw, 1100px); max-height: 92vh;
+  overflow: auto; background: var(--card); border-radius: 14px; padding: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .5);
+}
+.lb-head { display: flex; align-items: center; gap: 10px; padding-right: 40px; }
+.lb-head h2 { margin: 0; font-size: 16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.lb-purpose { margin: 4px 0 12px; font-size: 13px; color: var(--muted); }
+.lb-stagewrap { background: #555; border-radius: 8px; overflow: hidden; }
+.lb-stagewrap .stage { position: relative; transform-origin: top left; }
+.lb-close {
+  position: absolute; top: 10px; right: 10px; width: 32px; height: 32px;
+  border: 1px solid var(--line); border-radius: 50%; background: var(--bg);
+  color: var(--ink); font-size: 14px; cursor: pointer;
+}

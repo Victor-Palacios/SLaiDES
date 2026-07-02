@@ -45,6 +45,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ops/FEEDBACK.yaml ops/FEEDBACK.md web/feedback-inbox
+          git add ops/FEEDBACK.yaml ops/FEEDBACK.md web/feedback-inbox web/data/state.json
           git commit -m "feedback: fold web submissions into FEEDBACK.yaml [skip ci]"
           git push origin HEAD:main

@@ -351,3 +351,16 @@ The following were REMOVED — do not recreate them or follow older addenda that
   just decluttered). "Most recent report" logic is unaffected — newest files stay in
   ops/reports/ directly; put NEW reports there, never in archive/.
 - One-off docs/yaml-vs-html-executive-summary.{md,pdf} deleted (decision long since made).
+
+=== OPERATOR REVIEW STATE (added 2026-07-02; operator request) ===
+The feedback website now has a REVIEW WORKFLOW: `web/data/state.json` records each
+layout as approved (👍 — off the site's review page), flagged (👎 — the site shows the
+snapshot taken at flag time as "before" vs the current preview as "after"), or pending.
+- state.json is OPERATOR REVIEW STATE, written ONLY by scripts/feedback_intake_web.py.
+  Build sessions must NEVER edit it — fixing a flagged layout does NOT mean approving it;
+  the operator confirms fixes on the site by comparing before/after and tapping 👍.
+- What powers the "after" side is you regenerating `web/data/previews.json`
+  (`python scripts/build_web_previews.py`) whenever a layout changes — the re-render
+  discipline above is therefore part of the operator's review loop; never skip it.
+- If you DELETE a component, the intake drops its state entry automatically; do not
+  hand-edit state.json for that either.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>slidekit · all layouts</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <h1>All layouts</h1>
+      <p class="sub">Every layout as a thumbnail — tap one to zoom. Review happens on the
+        <a href="/">main page</a>.</p>
+    </div>
+    <nav class="nav"><a href="/">← Review queue</a></nav>
+  </div>
+</header>
+
+<main id="tgrid" class="tgrid" aria-busy="true">
+  <p class="loading">Loading layouts…</p>
+</main>
+
+<div id="lightbox" class="lightbox" hidden>
+  <div class="lb-backdrop"></div>
+  <div class="lb-card" role="dialog" aria-modal="true">
+    <button class="lb-close" aria-label="Close">✕</button>
+    <div class="lb-head">
+      <h2 id="lb-title"></h2>
+      <span id="lb-chip" class="chip"></span>
+    </div>
+    <p id="lb-purpose" class="lb-purpose"></p>
+    <div id="lb-stagewrap" class="lb-stagewrap"></div>
+  </div>
+</div>
+
+<script src="/gallery.js"></script>
+</body>
+</html>

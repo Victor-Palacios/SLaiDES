@@ -59,10 +59,21 @@ this one repo, so a leak is contained to feedback files (which the CI fold-in re
 
 ## Using it
 
-Open the site on your phone, scroll the layouts, tap **👍 Good** or **👎 Needs work** (tap
-again to clear), add an optional note and severity, then **Submit feedback**. You'll get a
-confirmation with the commit hash. Within a minute the intake workflow folds your marks into
-`ops/FEEDBACK.yaml`, and the (manually run) nightly picks up the `open` items.
+The site has two pages:
+
+- **Review queue** (`/`) — only layouts that need your attention. **👍 approves** a
+  layout: it leaves this page for good (until you re-flag it from the gallery). **👎
+  flags** it: the fix request goes to the build sessions, and the queue then shows a
+  **before/after comparison** (the snapshot you flagged vs the current render) until you
+  approve the fix. A comment with no verdict files a note without changing review state.
+- **All layouts** (`/gallery.html`) — every layout as a thumbnail with a status chip
+  (✓ approved / ⚑ flagged / pending); tap any tile to zoom.
+
+Submit sends your marks; the intake workflow folds them into `ops/FEEDBACK.yaml` and
+`web/data/state.json`, and Netlify redeploys (~1–2 min) — the page also updates
+optimistically right away. Review state lives in `web/data/state.json`, written only by
+`scripts/feedback_intake_web.py` (build sessions never touch it — fixing a layout doesn't
+approve it; you do, by comparing before/after).
 
 ## Maintaining it
 

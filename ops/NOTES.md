@@ -581,3 +581,22 @@ docs/yaml-vs-html-executive-summary.{md,pdf} deleted; (5) ops/reports/ older tha
 2026-06-18 archived to ops/reports/archive/. Kept: examples/pdf/combined/ snapshots,
 calibration_report.json. Prompt gained a CHANNEL & TREE CLEANUP addendum so sessions
 don't resurrect removed pieces.
+
+## Website review workflow: approve/flag state + gallery + before/after (2026-07-02)
+
+Operator requests: (a) a 👍 should remove a layout from the site's main page; (b) a
+separate all-thumbnails page with click-to-zoom for reference; (c) a 👎 should later show
+a before/after comparison on the main page so fixes can be verified visually.
+
+Design: `web/data/state.json` (committed; written ONLY by scripts/feedback_intake_web.py)
+maps component → {status: approved|flagged, date, comment, before}. 👍 → approved (hidden
+from the review queue, ✓ chip in the gallery; clears any flag). 👎 → flagged + a snapshot
+of the component's CURRENT previews.json fragment as `before`; when a fix regenerates
+previews.json, the review queue renders before vs current side by side until the operator
+approves; a repeat 👎 refreshes the snapshot. Notes (comment, no verdict) don't touch
+state. Stale entries for deleted layouts are dropped on fold (two-column was deleted by a
+burst session under FB-009). The main page (index/app.js) is now the review queue (flagged
+first, then pending); gallery.html/gallery.js is the full thumbnail grid with a lightbox.
+Seeded state.json with the 9 layouts flagged 2026-07-02 (before = previews at commit
+c222d5c, pre-fix) so the operator can review tonight's burst fixes as comparisons.
+Sessions MUST NOT edit state.json (prompt addendum "OPERATOR REVIEW STATE").
