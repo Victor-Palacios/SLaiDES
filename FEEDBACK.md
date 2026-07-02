@@ -2,7 +2,13 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments with the **Layout feedback** issue form (see the README). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 0 · **done** 6 · **wontfix** 0 · _last change 2026-06-19_
+**open** 1 · **done** 6 · **wontfix** 0 · _last change 2026-07-02_
+
+## Open (1)
+
+| ID | Layout | Sev | Comment | Notes |
+|---|---|---|---|---|
+| FB-007 | title-slide | med | 👎 remove the distracting subheader |  |
 
 ## Done (6)
 

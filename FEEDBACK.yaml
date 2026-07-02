@@ -60,3 +60,13 @@ comments:
   updated: '2026-06-19'
   source: 'issue #14'
   notes: 'issue #14: repurposed checklist into the new dark terminal/IDE ''code'' layout (operator chose repurpose over delete)'
+- id: FB-007
+  component: title-slide
+  family: title
+  status: open
+  severity: med
+  comment: 👎 remove the distracting subheader
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T01:50:03.368Z
+  notes: ''
