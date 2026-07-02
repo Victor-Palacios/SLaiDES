@@ -604,10 +604,15 @@ _BAR_W_EMU = int(0.14 * EMU_PER_INCH)
 _BAR_INDENT_EMU = int(0.45 * EMU_PER_INCH)  # gap between bar and text column
 
 
-def _emphasis_stack(items, cx, cy, cw, ch, font, palette, *, bar=True):
+def _emphasis_stack(items, cx, cy, cw, ch, font, palette, *, bar=True, center_on=None):
     """Lay out a vertically-centred stack of text rows with an optional left
     accent bar. ``items`` is a list of dicts: prefix/text/size, optional
-    bold/italic/is_caption/color. Returns a list of ResolvedNodes."""
+    bold/italic/is_caption/color. Returns a list of ResolvedNodes.
+
+    ``center_on`` (an item index) anchors that ROW's vertical centre on the
+    field centre instead of centring the whole block — e.g. a section divider
+    centres its title, letting the small number ride above it (feedback FB-014).
+    """
     gap = GAP_MIN_EMU
     text_x = cx + (_BAR_W_EMU + _BAR_INDENT_EMU if bar else 0)
     text_w = cw - (_BAR_W_EMU + _BAR_INDENT_EMU if bar else 0)
@@ -620,7 +625,15 @@ def _emphasis_stack(items, cx, cy, cw, ch, font, palette, *, bar=True):
         measured.append((it, lines, h))
 
     total_h = sum(h for _, _, h in measured) + gap * max(0, len(measured) - 1)
-    y = cy + max(0, (ch - total_h) // 2)
+    if center_on is not None and 0 <= center_on < len(measured):
+        # Offset of the anchored row's top within the block, then place the block
+        # so that row's centre lands on the field centre.
+        before = sum(h for _, _, h in measured[:center_on]) + gap * center_on
+        anchor_h = measured[center_on][2]
+        y = cy + (ch // 2) - before - anchor_h // 2
+        y = max(cy, y)
+    else:
+        y = cy + max(0, (ch - total_h) // 2)
     block_top = y
 
     nodes: list[ResolvedNode] = []
@@ -646,11 +659,13 @@ def _emphasis_stack(items, cx, cy, cw, ch, font, palette, *, bar=True):
 
 
 def _layout_section_divider(slide: SectionDividerSlide, cx, cy, cw, ch, font, ts, palette):
+    # Feedback FB-014: centre the TITLE (index 1) on the field, so the small
+    # section number rides above it rather than the block centring on the number.
     return _emphasis_stack([
         {"prefix": "sec_num", "text": slide.number, "size": ts.title, "bold": True,
          "color": palette.accent},
         {"prefix": "sec_title", "text": slide.title, "size": ts.header, "bold": True},
-    ], cx, cy, cw, ch, font, palette)
+    ], cx, cy, cw, ch, font, palette, center_on=1)
 
 
 def _layout_quote_opener(slide: QuoteOpenerSlide, cx, cy, cw, ch, font, ts, palette):

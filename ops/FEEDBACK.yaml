@@ -133,13 +133,13 @@ comments:
 - id: FB-014
   component: section-divider
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: 👎 Change the position of the number to be a bit higher such that the text is center-aligned instead of the number
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'queued as T-060'
+  notes: 'done T-060 — section-divider centres the title; number rides above (center_on)'
 - id: FB-015
   component: agenda
   family: agenda

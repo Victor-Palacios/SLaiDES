@@ -8,22 +8,22 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_192",
+          "node_id": "accent_bar_171",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2423160,
+            "y": 1783080,
             "w": 128016,
             "h": 2011680
           },
           "fill_color": "#1FA463"
         },
         {
-          "node_id": "sec_num_190",
+          "node_id": "sec_num_169",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 2423160,
+            "y": 1783080,
             "w": 10738104,
             "h": 1005840
           },
@@ -43,11 +43,11 @@
           "text_color": "#1FA463"
         },
         {
-          "node_id": "sec_title_191",
+          "node_id": "sec_title_170",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 3703320,
+            "y": 3063240,
             "w": 10738104,
             "h": 731520
           },
@@ -68,7 +68,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_193",
+          "node_id": "chrome_pagenum_172",
           "node_type": "text",
           "rect": {
             "x": 10363200,

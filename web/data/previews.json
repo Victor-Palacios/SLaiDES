@@ -121,7 +121,7 @@
       "width_px": 1280.0,
       "height_px": 720.0,
       "background": "#FFFFFF",
-      "nodes_html": "\n    <div class=\"node node-text\" style=\"left:104.64px;top:254.40px;width:1127.36px;height:105.60px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">01</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:388.80px;width:1127.36px;height:76.80px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Where We Stand Today</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Calibri',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
+      "nodes_html": "\n    <div class=\"node node-text\" style=\"left:104.64px;top:187.20px;width:1127.36px;height:105.60px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">01</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:321.60px;width:1127.36px;height:76.80px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Where We Stand Today</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Calibri',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
     },
     {
       "component": "agenda",

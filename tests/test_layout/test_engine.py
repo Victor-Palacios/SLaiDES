@@ -357,3 +357,18 @@ def test_non_code_slide_has_no_background():
     s = rd.slides[0]
     assert s.background is None
     assert "background" not in s.to_dict()  # omitted when unset (no golden churn)
+
+
+def test_section_divider_centres_title_not_number():
+    """Feedback FB-014: the section-divider title must sit at the field's vertical
+    centre, with the number riding above it (not the number/block centred)."""
+    rd = resolve(load("examples/11_section_divider.yaml"))
+    s = rd.slides[0]
+    texts = [n for n in s.nodes if n.node_type == "text"]
+    number, title = texts[0], texts[1]
+    field_centre = s.canvas_h / 2
+    title_centre = title.rect.y + title.rect.h / 2
+    number_centre = number.rect.y + number.rect.h / 2
+    # Title centred within a hair (rounding); number clearly above it.
+    assert abs(title_centre - field_centre) <= 0.03 * 914400, "title not vertically centred"
+    assert number_centre < title.rect.y, "number must ride above the title"
