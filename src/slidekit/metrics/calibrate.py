@@ -41,7 +41,7 @@ CALIBRATE_PT = 36
 # applies GSUB substitution while PowerPoint leaves them as separate glyphs.
 LIGATURE_SEQS = ("fi", "fl", "ff", "ffi", "ffl")
 
-REPORT_PATH = Path(__file__).parent.parent.parent.parent / "calibration_report.json"
+REPORT_PATH = Path(__file__).parent.parent.parent.parent / "ops" / "calibration_report.json"
 
 
 def _pil_measure(text: str, ttf_path: str, size_pt: int) -> float:

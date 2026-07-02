@@ -63,13 +63,13 @@ comments:
 - id: FB-007
   component: title-slide
   family: title
-  status: open
+  status: wontfix
   severity: med
   comment: 👎 remove the distracting subheader
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:50:03.368Z
-  notes: ''
+  notes: duplicate of FB-008 (same comment submitted twice while testing the website)
 - id: FB-008
   component: title-slide
   family: title

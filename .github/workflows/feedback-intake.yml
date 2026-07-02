@@ -52,7 +52,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add FEEDBACK.yaml FEEDBACK.md
+          git add ops/FEEDBACK.yaml ops/FEEDBACK.md
           if git diff --cached --quiet; then
             echo "no change to commit"
           else
@@ -66,7 +66,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh issue comment "${{ github.event.issue.number }}" --body \
-            "Recorded as **${{ steps.intake.outputs.feedback_id }}** for layout \`${{ steps.intake.outputs.component }}\` in \`FEEDBACK.yaml\`. The nightly routine will pick it up. Thanks!"
+            "Recorded as **${{ steps.intake.outputs.feedback_id }}** for layout \`${{ steps.intake.outputs.component }}\` in \`ops/FEEDBACK.yaml\`. The nightly routine will pick it up. Thanks!"
           gh issue close "${{ github.event.issue.number }}"
 
       - name: Report a parse failure back on the issue

@@ -43,7 +43,7 @@ def test_render_is_deterministic():
 
 def test_feedback_md_in_sync():
     fb = store.load()
-    committed = (ROOT / "FEEDBACK.md").read_text(encoding="utf-8")
+    committed = (ROOT / "ops" / "FEEDBACK.md").read_text(encoding="utf-8")
     assert committed == store.render_markdown(fb), (
         "FEEDBACK.md is stale — run `python scripts/render_feedback.py` and commit it"
     )

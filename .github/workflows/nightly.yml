@@ -1,26 +1,25 @@
-# Nightly unattended build session for slidekit (see PLAN.md "Overnight routine").
-# Runs Claude Code headless with the verbatim contents of NIGHTLY_PROMPT.md.
+# Unattended build session for slidekit (see ops/PLAN.md "Overnight routine").
+# Runs Claude Code headless with the verbatim contents of ops/NIGHTLY_PROMPT.md.
 # Requires the CLAUDE_CODE_OAUTH_TOKEN repository secret (subscription auth;
 # generate with `claude setup-token` on your machine).
 # NOTE: scheduled workflows only fire from the repository's default branch.
 name: nightly-slidekit
 
+# BURST MODE (operator request, 2026-07-02): run every 2 hours until 8:00 AM
+# Pacific on 2026-07-02 (15:00 UTC), working the open ops/FEEDBACK.yaml items
+# with vision-assisted QA (see the prompt's VISION AUTHORIZATION addendum).
+# The first step below is a deadline guard: past 15:00 UTC it DISABLES this
+# workflow via the API (no file edit) and skips the session. To run again later,
+# re-enable the workflow in the Actions tab (Actions → nightly-slidekit →
+# "Enable workflow"); for a durable schedule, also edit the cron + deadline here.
+# History: the original nightly cron ("0 5 * * *") was disabled 2026-06-28 to
+# stop subscription-credit drain; the operator re-authorized spend for this burst.
 on:
-  # Nightly schedule DISABLED 2026-06-28 (operator request — the daily Opus session draws
-  # from the personal Claude subscription via CLAUDE_CODE_OAUTH_TOKEN and was exhausting the
-  # usage window, leaving no credits in the morning). The session now runs MANUALLY ONLY via
-  # workflow_dispatch (Actions tab → nightly-slidekit → Run workflow).
-  #
-  # To re-enable the nightly cron, uncomment the schedule block below. NOTE: it was set to
-  # 05:00 UTC (intended 22:00 / 10pm America/Los_Angeles during PDT), but GitHub's scheduler
-  # was consistently firing it ~08:15 UTC (~01:15 Pacific). Before re-enabling, consider
-  # billing it to an ANTHROPIC_API_KEY secret instead of the subscription token so it never
-  # touches personal credits.
-  # schedule:
-  #   - cron: "0 5 * * *"
+  schedule:
+    - cron: "0 */2 * * *" # every 2 hours (burst; self-disables after the deadline)
   workflow_dispatch: {}
 
-# Never let two nightly sessions overlap.
+# Never let two sessions overlap.
 concurrency:
   group: nightly-slidekit
   cancel-in-progress: false
@@ -28,23 +27,52 @@ concurrency:
 permissions:
   contents: write
   id-token: write # claude-code-action exchanges an OIDC token for its GitHub credentials
-  actions: read
+  actions: write # the deadline guard disables this workflow via the API
 
 jobs:
   nightly:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    # 105 min so each burst session ends before the next 2-hour slot begins
+    # (was 180 for the single nightly; restore if reverting to a daily cadence).
+    timeout-minutes: 105
     steps:
+      - name: Burst-window guard (self-disables after 2026-07-02 15:00 UTC / 8 AM PT)
+        id: guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          deadline=1783004400  # 2026-07-02T15:00:00Z == 08:00 PDT — operator's "tomorrow 8 AM"
+          now=$(date -u +%s)
+          if [ "$now" -ge "$deadline" ]; then
+            echo "Past burst deadline ($(date -ud @$deadline)) — disabling the workflow and skipping."
+            gh api --method PUT "repos/${{ github.repository }}/actions/workflows/nightly.yml/disable"
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Within burst window (until $(date -ud @$deadline)) — proceeding."
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/checkout@v5
+        if: steps.guard.outputs.run == 'true'
         with:
           fetch-depth: 0
 
+      # Vision-assisted QA (authorized 2026-07-02): poppler's pdftoppm rasterises
+      # the native PDF output; LibreOffice cross-checks the .pptx and powers the
+      # tests/test_verify render harness. Same toolset as verify.yml.
+      - name: Install render tools (LibreOffice + poppler)
+        if: steps.guard.outputs.run == 'true'
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q libreoffice-impress poppler-utils
+
       - name: Load nightly prompt
+        if: steps.guard.outputs.run == 'true'
         id: prompt
         run: |
           {
             echo 'PROMPT<<NIGHTLY_PROMPT_EOF'
-            cat NIGHTLY_PROMPT.md
+            cat ops/NIGHTLY_PROMPT.md
             echo ''
             echo 'CI NOTE: You are running inside GitHub Actions on an ephemeral runner.'
             echo 'Work is preserved only if pushed — after each commit, and again at'
@@ -53,12 +81,14 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - uses: anthropics/claude-code-action@v1
+        if: steps.guard.outputs.run == 'true'
         id: claude
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           prompt: ${{ steps.prompt.outputs.PROMPT }}
-          # Tool scope: Read/Edit/Write/Bash for the build; WebSearch/WebFetch for the
-          # standing research task (finding + verifying new aesthetics research online).
+          # Tool scope: Read/Edit/Write/Bash for the build (Read also views the
+          # rasterised PNGs for the vision pass); WebSearch/WebFetch for the
+          # standing research task.
           # --model opus: run on the latest Opus (alias resolves per installed CLI).
           claude_args: --allowedTools "Read,Edit,Write,Bash,WebSearch,WebFetch" --model opus
           # Keep full output: the run's modelUsage/cost block is logged here, which
@@ -68,6 +98,7 @@ jobs:
       # The action reports success even when the Claude session errors out
       # (e.g. missing/invalid CLAUDE_CODE_OAUTH_TOKEN); surface that as a red run.
       - name: Fail if Claude session errored
+        if: steps.guard.outputs.run == 'true'
         run: |
           f="${{ steps.claude.outputs.execution_file }}"
           if [ -z "$f" ] || [ ! -f "$f" ]; then
@@ -79,7 +110,7 @@ jobs:
       # The action revokes its own GitHub token when it finishes, so re-auth with
       # the workflow token before the safety-net push.
       - name: Push any unpushed commits
-        if: always()
+        if: always() && steps.guard.outputs.run == 'true'
         run: |
           git remote set-url origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
           git push origin HEAD || true

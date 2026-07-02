@@ -3,7 +3,7 @@
 A private, phone-friendly website for reviewing every slide layout and marking it 👍/👎
 with a note. It replaces the GitHub **Layout feedback** issue form: instead of filing an
 issue per layout, you scroll a gallery of all 40 layouts, tap good/needs-work, optionally
-comment, and hit **Submit**. Submissions land in `FEEDBACK.yaml` — the same file the
+comment, and hit **Submit**. Submissions land in `ops/FEEDBACK.yaml` — the same file the
 nightly already treats as its actionable feedback queue.
 
 Only you can reach it: the whole site sits behind a single password (Netlify edge
@@ -33,7 +33,7 @@ function). No Supabase, no OAuth, no per-user accounts — one operator, one sec
 - **Writes** go through `netlify/functions/submit-feedback.js`: it re-verifies that cookie,
   then commits the batch as one JSON file under `web/feedback-inbox/` via the GitHub API.
 - **Fold-in** is `.github/workflows/web-feedback-intake.yml`, which runs
-  `scripts/feedback_intake_web.py` to merge inbox files into `FEEDBACK.yaml` (reusing the
+  `scripts/feedback_intake_web.py` to merge inbox files into `ops/FEEDBACK.yaml` (reusing the
   tested `slidekit.feedback.store`), regenerate `FEEDBACK.md`, and delete the processed
   files. A bare 👍 with no comment is counted but not turned into an open task; anything
   else (👎, a note, or any comment) becomes an `open` item the nightly acts on.
@@ -62,7 +62,7 @@ this one repo, so a leak is contained to feedback files (which the CI fold-in re
 Open the site on your phone, scroll the layouts, tap **👍 Good** or **👎 Needs work** (tap
 again to clear), add an optional note and severity, then **Submit feedback**. You'll get a
 confirmation with the commit hash. Within a minute the intake workflow folds your marks into
-`FEEDBACK.yaml`, and the (manually run) nightly picks up the `open` items.
+`ops/FEEDBACK.yaml`, and the (manually run) nightly picks up the `open` items.
 
 ## Maintaining it
 

@@ -44,13 +44,13 @@ jobs:
         run: |
           {
             echo 'PROMPT<<BRAINSTORM_PROMPT_EOF'
-            cat BRAINSTORM_PROMPT.md
+            cat ops/BRAINSTORM_PROMPT.md
             echo ''
             echo 'CI NOTE: You are running inside GitHub Actions on an ephemeral runner.'
             echo 'The gh CLI is pre-installed and authenticated via $GH_TOKEN (pull-requests:'
             echo 'read) — use it to read PRs: `gh pr list`, `gh pr view <n>`, `gh pr diff <n>`.'
-            echo 'Your ONLY file write is IDEAS.md. Work is preserved only if pushed — after'
-            echo 'writing IDEAS.md run: git add IDEAS.md && git commit -m "..." && git push origin HEAD'
+            echo 'Your ONLY file write is ops/IDEAS.md. Work is preserved only if pushed — after'
+            echo 'writing it run: git add ops/IDEAS.md && git commit -m "..." && git push origin HEAD'
             echo 'BRAINSTORM_PROMPT_EOF'
           } >> "$GITHUB_OUTPUT"
 

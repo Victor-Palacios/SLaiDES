@@ -23,8 +23,8 @@ from pydantic import BaseModel, Field, field_validator, model_validator
 from slidekit.catalog.registry import catalog
 
 ROOT = Path(__file__).resolve().parents[3]
-FEEDBACK_YAML = ROOT / "FEEDBACK.yaml"
-FEEDBACK_MD = ROOT / "FEEDBACK.md"
+FEEDBACK_YAML = ROOT / "ops" / "FEEDBACK.yaml"
+FEEDBACK_MD = ROOT / "ops" / "FEEDBACK.md"
 
 _STATUSES = ("open", "done", "wontfix")
 _SEVERITIES = ("low", "med", "high")
@@ -175,8 +175,8 @@ def render_markdown(fb: Feedback) -> str:
     lines.append("")
     lines.append(
         "_Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not "
-        "hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments with the "
-        "**Layout feedback** issue form (see the README). The nightly reads `open` items, "
+        "hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback "
+        "website (see web/README.md) or the **Layout feedback** issue form. The nightly reads `open` items, "
         "queues them on the board, and marks them `done`._"
     )
     lines.append("")

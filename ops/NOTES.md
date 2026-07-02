@@ -450,3 +450,37 @@ The GitHub issue-form path (`feedback-intake.yml` + `layout-feedback.yml`) is ke
 fallback; both funnel into the same `FEEDBACK.yaml`. Deploy steps + token scope in
 `web/README.md`. Not testable end-to-end here (no Netlify runtime); Python + JSON pieces are
 unit-tested, JS is syntax-checked and reviewed.
+
+## Root restructure (ops/), burst nightly, vision authorization (2026-07-02)
+
+Operator session, three linked requests:
+
+1. **Repo cleanup — "massive overhaul of the overall structure".** Root had 16 loose
+   meta files. All agent-ops state moved into `ops/` (PLAN, NIGHTLY_PROMPT,
+   BRAINSTORM_PROMPT, PROGRESS, NOTES, IDEAS, board.yaml/BOARD.md, FEEDBACK.yaml/.md,
+   calibration_report.json) and `NIGHTLY_REPORTS/` → `ops/reports/`. Root now holds only
+   README.md, SKILL.md, netlify.toml, pyproject.toml + the code dirs. Path constants
+   updated in scripts/render_board.py, src/slidekit/feedback/store.py,
+   src/slidekit/metrics/calibrate.py, both prompts, four workflows, and the two tests
+   that read committed artifacts. PLAN.md content untouched (immutable) — the prompt's
+   REPO RESTRUCTURE addendum carries the old→new path mapping. Suite green throughout.
+   Deletion candidates were compiled for the operator but NOT acted on (their call).
+
+2. **Burst nightly.** Schedule re-enabled as `0 */2 * * *` UNTIL 2026-07-02 15:00 UTC
+   (8 AM Pacific — operator's "every two hours until tomorrow at 8 AM"); a guard step
+   compares epoch time and past the deadline DISABLES the workflow via
+   `gh api PUT .../actions/workflows/nightly.yml/disable` (needs `actions: write`).
+   No file edit on disable — re-enable from the Actions tab. timeout-minutes 180 → 105
+   so each session fits its 2-hour slot. Operator explicitly re-authorized subscription
+   spend for this burst ("right now we have a lot of credits").
+
+3. **Vision authorized — with a codification covenant.** Operator: "you are allowed to
+   use vision in order to check things and improve things … just make sure that whatever
+   is visualized is also codified." This SUPERSEDES Work Rule 4 ("never render for QA")
+   via a dated prompt addendum: sessions may rasterise (pdftoppm on the native PDF;
+   LibreOffice for pptx cross-checks — both now installed in the nightly runner) and
+   LOOK at slides to find/confirm defects, but every visual finding must land as a
+   deterministic check (lint rule, verify metric, constant fix, or golden) in the same
+   session. The build pipeline itself stays vision-free; the linter remains the gate.
+   Burst sessions' top priority: the open web-feedback items (FB-008…FB-017).
+   FB-007 marked wontfix (duplicate of FB-008 from website testing).

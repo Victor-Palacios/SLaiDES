@@ -1,14 +1,13 @@
 # Layout feedback — slidekit
 
-_Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments with the **Layout feedback** issue form (see the README). The nightly reads `open` items, queues them on the board, and marks them `done`._
+_Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md) or the **Layout feedback** issue form. The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 11 · **done** 6 · **wontfix** 0 · _last change 2026-07-02_
+**open** 10 · **done** 6 · **wontfix** 1 · _last change 2026-07-02_
 
-## Open (11)
+## Open (10)
 
 | ID | Layout | Sev | Comment | Notes |
 |---|---|---|---|---|
-| FB-007 | title-slide | med | 👎 remove the distracting subheader |  |
 | FB-008 | title-slide | med | 👎 remove distracting subheader |  |
 | FB-009 | two-column | med | 👎 delete this slide layout - redundant with "comparison-columns" |  |
 | FB-010 | icon-text-rows | med | 👎 Can't read the subtext like "high standards..." |  |
@@ -30,4 +29,10 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-004 | card-grid | med | remove bubbles | issue #12: removed accent 'bubble' disc from cards |
 | FB-005 | feature-list | med | get rid of bubbles | issue #13: removed accent 'bubble' disc; feature-list is heading+body full-width |
 | FB-006 | code | med | delete this layout | issue #14: repurposed checklist into the new dark terminal/IDE 'code' layout (operator chose repurpose over delete) |
+
+## Won't fix (1)
+
+| ID | Layout | Sev | Comment | Notes |
+|---|---|---|---|---|
+| FB-007 | title-slide | med | 👎 remove the distracting subheader | duplicate of FB-008 (same comment submitted twice while testing the website) |
 

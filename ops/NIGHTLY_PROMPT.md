@@ -1,26 +1,26 @@
 You are running an unattended overnight session. No human is available — never ask
 questions; make the conservative choice and record it.
 
-PROJECT: Build "slidekit" per the plan in ./PLAN.md (the agent-first slide builder).
-Read PLAN.md fully before doing anything. It is the source of truth for scope,
+PROJECT: Build "slidekit" per the plan in ./ops/PLAN.md (the agent-first slide builder).
+Read ops/PLAN.md fully before doing anything. It is the source of truth for scope,
 architecture, phase order, hard gates, and acceptance criteria. Do not deviate from
-it; if you believe it's wrong, record the objection in NOTES.md and follow it anyway.
+it; if you believe it's wrong, record the objection in ops/NOTES.md and follow it anyway.
 
 STATE — do this first:
-- If ./PROGRESS.md does not exist, this is night one: initialize a git repo (if not
-  already one), create PROGRESS.md with a checklist of every phase and acceptance
-  criterion from PLAN.md, and create NIGHTLY_REPORTS/ and NOTES.md.
-- If PROGRESS.md exists, read it and the most recent file in NIGHTLY_REPORTS/, then
+- If ./ops/PROGRESS.md does not exist, this is night one: initialize a git repo (if not
+  already one), create ops/PROGRESS.md with a checklist of every phase and acceptance
+  criterion from ops/PLAN.md, and create ops/reports/ and ops/NOTES.md.
+- If ops/PROGRESS.md exists, read it and the most recent file in ops/reports/, then
   resume from the first unchecked item. Trust the state files over your assumptions.
 
 WORK RULES:
-1. Phases strictly in PLAN.md order. Respect both hard gates: (a) if Phase 1
+1. Phases strictly in ops/PLAN.md order. Respect both hard gates: (a) if Phase 1
    calibration cannot reach the 2% threshold, STOP building — spend remaining time
-   diagnosing, write findings to NIGHTLY_REPORTS/, and mark the gate BLOCKED in
-   PROGRESS.md; do not start the layout engine. (b) Phase 8 never starts before
+   diagnosing, write findings to ops/reports/, and mark the gate BLOCKED in
+   ops/PROGRESS.md; do not start the layout engine. (b) Phase 8 never starts before
    Phase 4 is complete and its defect-fixture test passes.
 2. Test-first per the plan's acceptance criteria. An item is only checked off in
-   PROGRESS.md when its acceptance test passes in this session. Run the full test
+   ops/PROGRESS.md when its acceptance test passes in this session. Run the full test
    suite before checking anything off; never check off on "should work."
 3. Commit small and often with descriptive messages (e.g. "phase1: kerning pairs for
    Calibri bold"). Never leave the repo in a non-building state at session end — if
@@ -29,22 +29,22 @@ WORK RULES:
    deterministic verification; the only sanctioned rendering is the Phase 6 CI
    harness, built as specified.
 5. If blocked (missing dependency, ambiguous spec, failing install): try two
-   reasonable alternatives, then record the blocker in PROGRESS.md with what you
+   reasonable alternatives, then record the blocker in ops/PROGRESS.md with what you
    tried, skip to the next unblocked item IN THE SAME PHASE only, and move on.
    Never skip ahead a phase to route around a blocker.
-6. No scope additions. Features not in PLAN.md go in NOTES.md as proposals, not code.
-   EXCEPTION: items marked `(approved)` in IDEAS.md are operator-SANCTIONED additions and
+6. No scope additions. Features not in ops/PLAN.md go in ops/NOTES.md as proposals, not code.
+   EXCEPTION: items marked `(approved)` in ops/IDEAS.md are operator-SANCTIONED additions and
    MAY be implemented — see the "APPROVED IDEAS INTAKE" section below. `(proposed)` and
    `(rejected)` items remain off-limits.
 
 SESSION WRAP-UP — reserve the final portion of your effort for this, always:
 - Run the full test suite one last time; fix or revert anything broken.
-- Update PROGRESS.md checkboxes to match reality exactly.
-- Write NIGHTLY_REPORTS/<YYYY-MM-DD>.md: what was completed (with commit hashes),
+- Update ops/PROGRESS.md checkboxes to match reality exactly.
+- Write ops/reports/<YYYY-MM-DD>.md: what was completed (with commit hashes),
   test results summary, any blockers or gate status, and the exact next task for
   tomorrow's session in one sentence.
 - ALSO write a complementary executive summary next to that report, named
-  NIGHTLY_REPORTS/<same-report-basename>-exec-summary.md (e.g. report
+  ops/reports/<same-report-basename>-exec-summary.md (e.g. report
   2026-06-14.md -> 2026-06-14-exec-summary.md; if you suffix the report like
   -session2, mirror it). It must have exactly two sections for a NON-TECHNICAL
   reader: first "## ELI5" (explain-like-I'm-5: short, plain language, analogies
@@ -73,7 +73,7 @@ Validate ANY agent-markdown you add or edit with the repo's own linter:
   (and `check-agent-originality.sh <file>`); both must PASS before you check an
   item off. Run the slidekit test suite too — never regress Phases 1-7.
 
-Remaining Phase 8 items are the `[~]` and `[ ]` lines in PROGRESS.md "Phase 8".
+Remaining Phase 8 items are the `[~]` and `[ ]` lines in ops/PROGRESS.md "Phase 8".
 Work them in order:
 1. Orchestrator worked example under examples/: a Brand Guardian theme fixture +
    a Visual Storyteller outline fixture (markdown, per the Deck Builder agent's
@@ -96,7 +96,7 @@ Work on branch `main` (now the default). Commit and push there.
 
 - Read `docs/SLIDE_DESIGNS.md` — the catalog of all 40 designs and the exact
   integration points. Build the 32 unbuilt designs in catalog order (skip the 8
-  already shipped). Track against PROGRESS.md "Phase 9".
+  already shipped). Track against ops/PROGRESS.md "Phase 9".
 - Each design ships COMPLETE before the next: (1) Pydantic model in
   src/slidekit/ir/models.py (+ add to the slide Union); (2) `_layout_<key>` handler
   in src/slidekit/layout/engine.py + an `elif comp == "<key>"` dispatch branch;
@@ -121,7 +121,7 @@ definitions, and research lineage. Key rules:
 - Unit-test each metric on hand-checked fixtures; assert two-run determinism.
 - Do NOT claim correlation with human judgment — that needs a labeled slide-pair
   dataset slidekit doesn't have. Ship default weights with documented rationale;
-  mark calibration as DEFERRED in PROGRESS.md.
+  mark calibration as DEFERRED in ops/PROGRESS.md.
 
 === STANDING RESEARCH TASK (added 2026-06-14; EVERY session, alongside the build) ===
 In addition to the current build phase, every session advances the research base for
@@ -216,65 +216,119 @@ them displace (1)/(2). When you add/restructure components, update the registry 
 `scripts/build_layout_taxonomy.py` + `scripts/build_selection_guide.py` (tests enforce sync).
 
 === TASK BOARD (added 2026-06-16; operator request — maintain EVERY session) ===
-The repo has a file-based agile kanban board: `board.yaml` (source of truth) renders to
-`BOARD.md` via `python scripts/render_board.py`. It is the active/sprint VIEW of the work;
-PROGRESS.md stays the canonical phase/acceptance ledger. Keep them coordinated:
-- At startup, read `BOARD.md` to see the active cards alongside PROGRESS.md.
+The repo has a file-based agile kanban board: `ops/board.yaml` (source of truth) renders to
+`ops/BOARD.md` via `python scripts/render_board.py`. It is the active/sprint VIEW of the work;
+ops/PROGRESS.md stays the canonical phase/acceptance ledger. Keep them coordinated:
+- At startup, read `ops/BOARD.md` to see the active cards alongside ops/PROGRESS.md.
 - When you pick up a task, move its card to `in_progress` (set `column: in_progress`,
-  bump `updated`). When its acceptance test passes (the SAME gate as ticking PROGRESS.md),
+  bump `updated`). When its acceptance test passes (the SAME gate as ticking ops/PROGRESS.md),
   move it to `done` and put the commit ref in `notes`. If you hit a blocker, move it to
   `blocked` with the reason in `notes`.
 - Add a new task (next free `T-NNN` id, an `epic`, a `column`, `priority`, today's date in
   `created`/`updated`) for any genuinely new work you discover — do NOT silently expand scope
-  (scope proposals still go in NOTES.md).
+  (scope proposals still go in ops/NOTES.md).
 - Columns are exactly `[backlog, todo, in_progress, blocked, done]`; epics are `phase-9`,
-  `phase-10`, `research`, `ideas` (operator-approved IDEAS.md items), `pipeline`, and
-  `feedback` (operator layout feedback from FEEDBACK.yaml). Edit ONLY `board.yaml`, never
-  `BOARD.md` by hand.
+  `phase-10`, `research`, `ideas` (operator-approved ops/IDEAS.md items), `pipeline`, and
+  `feedback` (operator layout feedback from ops/FEEDBACK.yaml). Edit ONLY `ops/board.yaml`, never
+  `ops/BOARD.md` by hand.
 - ALWAYS re-render before committing: run `python scripts/render_board.py`, then commit
-  `board.yaml` + `BOARD.md` together. A test (`tests/test_board`) fails if BOARD.md is stale,
+  `ops/board.yaml` + `ops/BOARD.md` together. A test (`tests/test_board`) fails if ops/BOARD.md is stale,
   so run the suite at wrap-up as usual.
 
 === APPROVED IDEAS INTAKE (added 2026-06-18; operator request) ===
-A second scheduled session triages PRs and brainstorms into IDEAS.md; the operator
+A second scheduled session triages PRs and brainstorms into ops/IDEAS.md; the operator
 reviews it and marks items `(approved)`. Those approved items are the controlled channel
-for work beyond PLAN.md (the WORK RULE 6 exception). Each session, run this intake near
+for work beyond ops/PLAN.md (the WORK RULE 6 exception). Each session, run this intake near
 startup, right after reading the board:
-- Read IDEAS.md and find every item whose status is `(approved)`. IGNORE `(proposed)` and
+- Read ops/IDEAS.md and find every item whose status is `(approved)`. IGNORE `(proposed)` and
   `(rejected)` items entirely — never implement those.
 - For each approved item NOT already on the board: add a board task (next free `T-NNN`,
-  `epic: ideas`, `column: todo`, a `priority`, today's dates) whose `notes` cite the IDEAS.md
-  item, then annotate that IDEAS.md line in place by appending ` → queued as T-NNN` (do NOT
+  `epic: ideas`, `column: todo`, a `priority`, today's dates) whose `notes` cite the ops/IDEAS.md
+  item, then annotate that ops/IDEAS.md line in place by appending ` → queued as T-NNN` (do NOT
   remove or alter the operator's `(approved)` tag or checkbox; this is the only edit you may
-  make to IDEAS.md — you never approve/reject/propose items yourself).
+  make to ops/IDEAS.md — you never approve/reject/propose items yourself).
 - Work approved-idea tasks like any other board card, honoring the SAME gates (acceptance
-  test passes, lint-clean, determinism, full suite green) and the SAME hard PLAN.md phase
+  test passes, lint-clean, determinism, full suite green) and the SAME hard ops/PLAN.md phase
   order — approved ideas are first-class tasks but must NOT derail or jump a phase gate.
   Order them by their board `priority` alongside the phase work.
-- When an approved-idea task reaches `done`, append ` → done (commit <hash>)` to its IDEAS.md
-  line so the operator sees it landed. Commit IDEAS.md alongside the board + code changes.
+- When an approved-idea task reaches `done`, append ` → done (commit <hash>)` to its ops/IDEAS.md
+  line so the operator sees it landed. Commit ops/IDEAS.md alongside the board + code changes.
 - If an approved idea is genuinely out of scope or unsafe on inspection, do NOT implement it:
-  leave it, and record the objection in NOTES.md (same as any disputed scope).
+  leave it, and record the objection in ops/NOTES.md (same as any disputed scope).
 
 === FEEDBACK INTAKE (added 2026-06-19; operator request) ===
 The operator files per-layout comments from their phone via the *Layout feedback* GitHub
 issue form (`.github/ISSUE_TEMPLATE/layout-feedback.yml`); the `feedback-intake` workflow
-records each as an entry in `FEEDBACK.yaml` (source of truth) and regenerates `FEEDBACK.md`.
-This is operator-authored input (unlike IDEAS.md proposals it needs NO approval step) — treat
+records each as an entry in `ops/FEEDBACK.yaml` (source of truth) and regenerates `ops/FEEDBACK.md`.
+This is operator-authored input (unlike ops/IDEAS.md proposals it needs NO approval step) — treat
 every `status: open` comment as actionable. Each session, run this intake right after the
 APPROVED IDEAS intake:
-- Read `FEEDBACK.yaml`. For each comment with `status: open` NOT already on the board: add a
+- Read `ops/FEEDBACK.yaml`. For each comment with `status: open` NOT already on the board: add a
   board task (next free `T-NNN`, `epic: feedback`, `column: todo`, a `priority` matching its
   `severity`, today's dates) whose `notes` cite the comment id + component, then set that
-  comment's `notes` to ` queued as T-NNN` (edit `FEEDBACK.yaml`, never `FEEDBACK.md` by hand).
+  comment's `notes` to ` queued as T-NNN` (edit `ops/FEEDBACK.yaml`, never `ops/FEEDBACK.md` by hand).
 - Work feedback tasks like any board card under the SAME gates (acceptance/lint/determinism,
   full suite green) and the SAME hard phase order — feedback is first-class but must not jump a
   phase gate. A layout change means updating the engine/handlers and regenerating goldens, the
   registry/taxonomy/selection docs, and the example PDFs as usual.
 - When a feedback task reaches `done`, set the comment's `status: done` and put the commit ref
   in its `notes`. If on inspection a comment is wrong/unsafe/out of scope, set `status: wontfix`
-  with the reason in `notes` (and record disputed scope in NOTES.md) — do not silently drop it.
+  with the reason in `notes` (and record disputed scope in ops/NOTES.md) — do not silently drop it.
 - ALWAYS regenerate before committing: `python scripts/render_feedback.py` (and
-  `python scripts/build_feedback_form.py` if components changed), then commit `FEEDBACK.yaml` +
-  `FEEDBACK.md` (+ the form) with the board + code. `tests/test_feedback` fails if either the
+  `python scripts/build_feedback_form.py` if components changed), then commit `ops/FEEDBACK.yaml` +
+  `ops/FEEDBACK.md` (+ the form) with the board + code. `tests/test_feedback` fails if either the
   rendered markdown or the issue form drifts, so run the suite at wrap-up as usual.
+
+=== REPO RESTRUCTURE (added 2026-07-02; operator request) ===
+The repository root was decluttered: every agent-ops meta file now lives under `ops/`.
+Mapping (old root path → new): PLAN.md → ops/PLAN.md; PROGRESS.md → ops/PROGRESS.md;
+NOTES.md → ops/NOTES.md; IDEAS.md → ops/IDEAS.md; board.yaml/BOARD.md → ops/…;
+FEEDBACK.yaml/FEEDBACK.md → ops/…; NIGHTLY_PROMPT.md/BRAINSTORM_PROMPT.md → ops/…;
+NIGHTLY_REPORTS/ → ops/reports/; calibration_report.json → ops/. Code paths
+(src/, tests/, scripts/, examples/, docs/, web/, netlify/) are unchanged; README.md and
+SKILL.md stay at the root. ops/PLAN.md's own text predates this move — when it names a
+meta file by root-relative path, translate via the mapping above. Do NOT move these
+files back or create duplicates at the root. Path constants live in
+scripts/render_board.py, src/slidekit/feedback/store.py, and
+src/slidekit/metrics/calibrate.py; tests already assert the new locations.
+
+=== VISION AUTHORIZATION (added 2026-07-02; operator request — SUPERSEDES Work Rule 4
+and every earlier "never render slides to images for QA" line) ===
+The operator has explicitly authorized vision-assisted QA. This runner has poppler
+(pdftoppm) and LibreOffice installed. You MAY — and for layout-feedback work SHOULD —
+look at what you build:
+- Rasterise via the native PDF emitter: `slidekit build <deck>.yaml --pdf -o /tmp/d.pdf`
+  then `pdftoppm -png -r 100 /tmp/d.pdf /tmp/slide` and Read the PNG(s). (For .pptx
+  cross-checks, `soffice --headless --convert-to pdf` first.)
+- Use vision to DISCOVER defects (clipped descenders, overflow, misalignment, crowding)
+  and to CONFIRM a fix visually before marking a feedback item done.
+- HARD RULE — codify what you see: vision is discovery, never the durable gate. Every
+  defect found visually MUST land in the same session as a deterministic artifact — a
+  lint check (E_*/W_*), a verify-harness metric, a metrics/layout constant fix, or a
+  golden — such that the defect class would be caught WITHOUT vision from then on. A
+  visual fix with no codified check is NOT done; if you truly cannot codify it, record
+  why in ops/NOTES.md and keep the feedback item open.
+- In each report, list which findings came from vision and which deterministic check
+  now covers each one.
+The build pipeline itself stays vision-free: no rendering inside slidekit, the linter
+remains the ship gate, and aesthetic metrics stay computable from geometry alone.
+
+=== BURST MODE — OPERATOR FEEDBACK BLITZ (added 2026-07-02; CURRENT TOP PRIORITY) ===
+The schedule is temporarily EVERY 2 HOURS until 2026-07-02 15:00 UTC (8 AM Pacific);
+the workflow self-disables after that. Sessions are capped at ~105 minutes — plan for a
+SHORT session: pick 2–4 items, finish each completely, push after every item.
+- TOP PRIORITY, before phase work/research: the `status: open` comments in
+  ops/FEEDBACK.yaml (FB-008…FB-017 at time of writing — operator-filed layout defects
+  from the feedback website). Work them through the FEEDBACK INTAKE process (board task,
+  fix, gates, mark done with commit ref). Prefer smallest-risk items first; use the
+  vision authorization above to confirm each fix looks right AND codify each finding.
+- Re-render discipline after ANY layout change (several past incidents came from
+  skipping this): regenerate goldens deliberately (never blindly), rebuild the affected
+  per-deck PDFs in examples/pdf/, run `python scripts/build_combined_pdf.py`,
+  `python scripts/build_examples_index.py`, the registry/taxonomy/selection sync
+  scripts if components changed, `python scripts/render_feedback.py`, AND
+  `python scripts/build_web_previews.py` (the feedback website's gallery —
+  tests/test_web fails if stale). Run the full suite before every push.
+- If all feedback items are done, fall back to the NORTH-STAR PRIORITY order above.
+- The standing research task is SUSPENDED during burst sessions (skip it entirely);
+  it resumes with the normal cadence.

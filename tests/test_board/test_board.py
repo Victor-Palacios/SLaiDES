@@ -31,7 +31,7 @@ def test_render_is_deterministic():
 def test_board_md_in_sync():
     """The committed BOARD.md must equal a fresh render of board.yaml."""
     board = rb.load_board()
-    committed = (ROOT / "BOARD.md").read_text(encoding="utf-8")
+    committed = (ROOT / "ops" / "BOARD.md").read_text(encoding="utf-8")
     assert committed == rb.render(board), (
         "BOARD.md is stale — run `python scripts/render_board.py` and commit it"
     )

@@ -23,8 +23,8 @@ import yaml
 from pydantic import BaseModel, Field, field_validator, model_validator
 
 ROOT = Path(__file__).resolve().parent.parent
-BOARD_YAML = ROOT / "board.yaml"
-BOARD_MD = ROOT / "BOARD.md"
+BOARD_YAML = ROOT / "ops" / "board.yaml"
+BOARD_MD = ROOT / "ops" / "BOARD.md"
 
 _PRIORITY_RANK = {"high": 0, "med": 1, "low": 2}
 
