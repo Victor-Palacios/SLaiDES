@@ -54,7 +54,6 @@ from slidekit.ir.models import (
     ThisVsThatSlide,
     TimelineSlide,
     TitleSlide,
-    TwoColumnSlide,
     TextSlot,
     ImageSlot,
     ChartSlot,
@@ -158,8 +157,6 @@ def _resolve_slide(
 
     if comp == "title-slide":
         nodes = _layout_title_slide(slide, cx, cy, cw, ch, font, ts, palette)
-    elif comp == "two-column":
-        nodes = _layout_two_column(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "icon-text-rows":
         nodes = _layout_icon_text_rows(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "stat-callout":
@@ -298,35 +295,6 @@ def _layout_title_slide(slide: TitleSlide, cx, cy, cw, ch, font, ts, palette) ->
                             bold=False, italic=False, rect=sub_rect)
         )
 
-    return nodes
-
-
-def _layout_two_column(slide: TwoColumnSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    y = cy
-
-    if slide.title:
-        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
-        title_rect = Rect(cx, y, cw, title_h)
-        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                     bold=True, italic=False, rect=title_rect,
-                                     color=palette.primary))
-        y += title_h + gap
-
-    col_h = cy + ch - y
-    total_w = cw - gap
-    total_weight = slide.left_weight + slide.right_weight
-    left_w = int(total_w * slide.left_weight / total_weight)
-    right_w = total_w - left_w
-
-    left_x = cx
-    right_x = cx + left_w + gap
-
-    left_node = _layout_content_list(slide.left, "left_col", left_x, y, left_w, col_h, font, ts, palette)
-    right_node = _layout_content_list(slide.right, "right_col", right_x, y, right_w, col_h, font, ts, palette)
-    nodes.extend(left_node)
-    nodes.extend(right_node)
     return nodes
 
 

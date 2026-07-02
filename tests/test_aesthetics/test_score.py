@@ -311,7 +311,7 @@ def _ss(idx, **subscores):
     """A SlideScore stub with arbitrary sub-scores (other fields are decorative)."""
     sub = {k: 1.0 for k in ADVISORY_THRESHOLDS}
     sub.update(subscores)
-    return SlideScore(idx, "two-column", sub, 0.0, min(sub, key=lambda k: sub[k]))
+    return SlideScore(idx, "bullet-list", sub, 0.0, min(sub, key=lambda k: sub[k]))
 
 
 def test_clean_subscores_emit_no_warnings():

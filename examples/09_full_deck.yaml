@@ -34,22 +34,18 @@ slides:
         label: "Net Promoter"
         subtext: "+12 pts YoY"
 
-  - component: two-column
+  - component: comparison-columns
     title: "What Drove Growth"
-    left:
-      - type: text
-        content: "Enterprise segment up 42%"
-      - type: text
-        content: "APAC region beat forecast by 31%"
-      - type: text
-        content: "New products: 18% of revenue"
-    right:
-      - type: text
-        content: "SMB steady; churn down"
-      - type: text
-        content: "Services attach: 34% to 51%"
-      - type: text
-        content: "Partner channel: 28% of bookings"
+    left_title: "Enterprise & Products"
+    right_title: "Core & Channel"
+    left_items:
+      - text: "Enterprise up 42%"
+      - text: "APAC beat forecast 31%"
+      - text: "New products: 18%"
+    right_items:
+      - text: "SMB churn down"
+      - text: "Services attach: 34→51%"
+      - text: "Partner channel: 28%"
 
   - component: timeline
     title: "Strategic Priorities 2026"

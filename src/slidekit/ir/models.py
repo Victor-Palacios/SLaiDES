@@ -147,15 +147,6 @@ class TitleSlide(BaseModel):
     logo: Optional[ImageSlot] = None
 
 
-class TwoColumnSlide(BaseModel):
-    component: Literal["two-column"]
-    title: Optional[str] = None
-    left: list[ContentSlot] = Field(min_length=1)
-    right: list[ContentSlot] = Field(min_length=1)
-    left_weight: float = Field(default=1.0, gt=0.0)
-    right_weight: float = Field(default=1.0, gt=0.0)
-
-
 class IconTextRow(BaseModel):
     icon: str
     heading: str
@@ -519,7 +510,6 @@ class TestimonialSlide(BaseModel):
 Slide = Annotated[
     Union[
         TitleSlide,
-        TwoColumnSlide,
         IconTextRowsSlide,
         StatCalloutSlide,
         ComparisonColumnsSlide,

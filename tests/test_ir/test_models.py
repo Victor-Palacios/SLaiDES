@@ -15,7 +15,6 @@ from slidekit.ir.models import (
     Theme,
     TypeScale,
     TitleSlide,
-    TwoColumnSlide,
     StatCalloutSlide,
     TextSlot,
     ImageSlot,
@@ -137,22 +136,6 @@ class TestComponents:
         assert isinstance(s, TitleSlide)
         assert s.subtitle == "World"
 
-    def test_two_column_slide(self):
-        deck = loads(textwrap.dedent("""\
-            version: 1
-            slides:
-              - component: two-column
-                title: "Test"
-                left:
-                  - type: text
-                    content: "Left"
-                right:
-                  - type: text
-                    content: "Right"
-        """))
-        s = deck.slides[0]
-        assert isinstance(s, TwoColumnSlide)
-
     def test_stat_callout_slide(self):
         deck = loads(textwrap.dedent("""\
             version: 1
@@ -239,7 +222,7 @@ class TestComponents:
                       [load(p) for p in sorted(EXAMPLES_DIR.glob("*.yaml"))]
                       for s in deck.slides}
         expected = {
-            "title-slide", "two-column", "icon-text-rows", "stat-callout",
+            "title-slide", "icon-text-rows", "stat-callout",
             "comparison-columns", "timeline", "image-half-bleed", "card-grid",
         }
         assert expected.issubset(components), f"Missing: {expected - components}"
@@ -248,35 +231,10 @@ class TestComponents:
 # ── content slot types ────────────────────────────────────────────────────────
 
 class TestContentSlots:
-    def _two_col(self, left_slot: str, right_slot: str) -> DeckIR:
+    """ContentSlot variants, exercised via image-half-bleed's ``content`` list."""
+
+    def _half_bleed(self, slot_yaml: str) -> DeckIR:
         return loads(textwrap.dedent(f"""\
-            version: 1
-            slides:
-              - component: two-column
-                left:
-                  - {left_slot}
-                right:
-                  - type: text
-                    content: "placeholder"
-        """))
-
-    def test_text_slot(self):
-        deck = loads(textwrap.dedent("""\
-            version: 1
-            slides:
-              - component: two-column
-                left:
-                  - type: text
-                    content: "hello"
-                right:
-                  - type: text
-                    content: "right"
-        """))
-        slot = deck.slides[0].left[0]
-        assert isinstance(slot, TextSlot)
-
-    def test_image_slot(self):
-        deck = loads(textwrap.dedent("""\
             version: 1
             slides:
               - component: image-half-bleed
@@ -284,56 +242,35 @@ class TestContentSlots:
                   type: image
                   path: "x.jpg"
                 content:
-                  - type: text
-                    content: "text"
+{textwrap.indent(slot_yaml, "                  ")}
         """))
+
+    def test_text_slot(self):
+        deck = self._half_bleed("- type: text\n  content: \"hello\"")
+        slot = deck.slides[0].content[0]
+        assert isinstance(slot, TextSlot)
+
+    def test_image_slot(self):
+        deck = self._half_bleed("- type: text\n  content: \"text\"")
         assert isinstance(deck.slides[0].image, ImageSlot)
 
     def test_icon_slot(self):
-        deck = loads(textwrap.dedent("""\
-            version: 1
-            slides:
-              - component: two-column
-                left:
-                  - type: icon
-                    name: star
-                right:
-                  - type: text
-                    content: "right"
-        """))
-        assert deck.slides[0].left[0].type == "icon"
+        deck = self._half_bleed("- type: icon\n  name: star")
+        assert deck.slides[0].content[0].type == "icon"
 
     def test_spacer_slot(self):
-        deck = loads(textwrap.dedent("""\
-            version: 1
-            slides:
-              - component: two-column
-                left:
-                  - type: spacer
-                    size: 2
-                right:
-                  - type: text
-                    content: "right"
-        """))
-        assert deck.slides[0].left[0].type == "spacer"
+        deck = self._half_bleed("- type: spacer\n  size: 2")
+        assert deck.slides[0].content[0].type == "spacer"
 
     def test_chart_slot(self):
-        deck = loads(textwrap.dedent("""\
-            version: 1
-            slides:
-              - component: two-column
-                left:
-                  - type: chart
-                    chart_type: bar
-                    labels: [Jan, Feb]
-                    series:
-                      - name: Revenue
-                        values: [100, 120]
-                right:
-                  - type: text
-                    content: "right"
-        """))
-        assert deck.slides[0].left[0].type == "chart"
+        deck = self._half_bleed(textwrap.dedent("""\
+            - type: chart
+              chart_type: bar
+              labels: [Jan, Feb]
+              series:
+                - name: Revenue
+                  values: [100, 120]"""))
+        assert deck.slides[0].content[0].type == "chart"
 
 
 # ── error message quality ─────────────────────────────────────────────────────

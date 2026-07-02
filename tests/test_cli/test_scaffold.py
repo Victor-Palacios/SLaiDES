@@ -57,14 +57,11 @@ def _overflowing_deck():
     return loads(
         f"""version: 1
 slides:
-  - component: two-column
+  - component: bullet-list
     title: Overfull
-    left:
-      - type: text
-        content: "{long}"
-    right:
-      - type: text
-        content: short
+    items:
+      - "{long}"
+      - short
 """
     )
 

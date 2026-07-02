@@ -68,7 +68,7 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 ### C. Lists & text
 | # | key | required keys | use |
 |---|---|---|---|
-| 10 | ✓ `two-column` | `left[]`, `right[]` | two related blocks |
+| 10 | ~~`two-column`~~ | _(retired 2026-07-02, FB-009)_ | redundant with `comparison-columns`, which now anchors the two-column family |
 | 11 | `bullet-list` | `title`, `items[]` | a single titled list |
 | 12 | ✓ `icon-text-rows` | `rows[]` = {icon,heading,body} | ~3 labelled points |
 | 13 | `feature-list` | `features[]` = {icon,heading,body} | 3–5 features, denser |

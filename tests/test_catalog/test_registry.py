@@ -55,5 +55,5 @@ def test_required_fields_derived_from_schema():
     cat = catalog()
     # bullet-list requires title + items; title is required (not Optional)
     assert "items" in cat["bullet-list"].required_fields
-    # two-column's title is optional
-    assert "title" in cat["two-column"].optional_fields
+    # comparison-columns' title is optional
+    assert "title" in cat["comparison-columns"].optional_fields

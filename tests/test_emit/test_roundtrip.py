@@ -98,7 +98,7 @@ class TestRoundTrip:
         assert out.stat().st_size > 0
 
     def test_html_preview_created(self, tmp_output):
-        deck = load(EXAMPLES_DIR / "02_two_column.yaml")
+        deck = load(EXAMPLES_DIR / "05_comparison_columns.yaml")
         rd = resolve(deck)
         out = emit_html(deck, rd, tmp_output / "preview.html")
         assert out.exists()

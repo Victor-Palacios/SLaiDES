@@ -71,21 +71,19 @@ _META: dict[str, dict] = {
         purpose="Numbered agenda / table of contents.", use_when="Listing what the deck covers.",
         capacity=(2, 8), content_shape="an ordered list of section titles"),
 
-    # two-column family
-    "two-column": dict(family="two-column", role="anchor",
-        purpose="Two weighted columns of free content.",
-        use_when="Two parallel content groups (text/images) side by side.",
-        content_shape="two groups of content slots"),
-    "comparison-columns": dict(family="two-column", role="variant", variant_of="two-column",
-        differs_by="fixed 50/50, titled, bulleted",
-        purpose="Two titled bulleted columns.", use_when="Comparing two labelled options.",
+    # two-column family (anchor: comparison-columns — the generic two-column
+    # specimen was retired 2026-07-02 per operator feedback FB-009 as redundant
+    # with comparison-columns, which now anchors the two-side-by-side skeleton)
+    "comparison-columns": dict(family="two-column", role="anchor",
+        purpose="Two titled bulleted columns side by side.",
+        use_when="Comparing two labelled options or presenting two parallel groups.",
         content_shape="two titled groups of bullets"),
-    "image-half-bleed": dict(family="two-column", role="variant", variant_of="two-column",
+    "image-half-bleed": dict(family="two-column", role="variant", variant_of="comparison-columns",
         differs_by="one column is a half-bleed image",
         purpose="Image on one half, content on the other.",
         use_when="A supporting image should share the slide with text.",
         content_shape="one image + a group of content slots"),
-    "chart-with-insight": dict(family="two-column", role="variant", variant_of="two-column",
+    "chart-with-insight": dict(family="two-column", role="variant", variant_of="comparison-columns",
         differs_by="chart (60%) + emphasis takeaway (40%)",
         purpose="A chart with a called-out takeaway.",
         use_when="A chart needs a one-line 'so what'.",

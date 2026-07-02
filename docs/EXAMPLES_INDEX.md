@@ -2,20 +2,19 @@
 
 _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do not hand-edit; run the script and commit. A single-component **specimen** is one slide of just its component; a **showcase** is a multi-slide composition. A test (`tests/test_examples_index`) fails if this file drifts from the decks._
 
-**44** decks · **40** specimens · **4** showcases · **68** slides total
+**43** decks · **39** specimens · **4** showcases · **66** slides total
 
 | Example | Slides | Kind | Components |
 |---|--:|---|---|
 | `01_title_slide.yaml` | 1 | specimen | title-slide |
-| `02_two_column.yaml` | 1 | specimen | two-column |
 | `03_icon_text_rows.yaml` | 1 | specimen | icon-text-rows |
 | `04_stat_callout.yaml` | 1 | specimen | stat-callout |
 | `05_comparison_columns.yaml` | 1 | specimen | comparison-columns |
 | `06_timeline.yaml` | 1 | specimen | timeline |
 | `07_image_half_bleed.yaml` | 1 | specimen | image-half-bleed |
 | `08_card_grid.yaml` | 1 | specimen | card-grid |
-| `09_full_deck.yaml` | 5 | showcase | title-slide → stat-callout → two-column → timeline → card-grid |
-| `10_all_components.yaml` | 8 | showcase | title-slide → two-column → icon-text-rows → stat-callout → comparison-columns → timeline → image-half-bleed → card-grid |
+| `09_full_deck.yaml` | 5 | showcase | title-slide → stat-callout → comparison-columns → timeline → card-grid |
+| `10_all_components.yaml` | 7 | showcase | title-slide → icon-text-rows → stat-callout → comparison-columns → timeline → image-half-bleed → card-grid |
 | `11_section_divider.yaml` | 1 | specimen | section-divider |
 | `12_agenda.yaml` | 1 | specimen | agenda |
 | `13_quote_opener.yaml` | 1 | specimen | quote-opener |
@@ -48,6 +47,6 @@ _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do no
 | `40_image_grid.yaml` | 1 | specimen | image-grid |
 | `41_logo_wall.yaml` | 1 | specimen | logo-wall |
 | `42_testimonial.yaml` | 1 | specimen | testimonial |
-| `agents-in-ai.yaml` | 10 | showcase | title-slide → icon-text-rows → comparison-columns → card-grid → stat-callout → timeline → card-grid → two-column → comparison-columns → title-slide |
-| `demo-5.yaml` | 5 | showcase | title-slide → two-column → stat-callout → icon-text-rows → comparison-columns |
+| `agents-in-ai.yaml` | 10 | showcase | title-slide → icon-text-rows → comparison-columns → card-grid → stat-callout → timeline → card-grid → bullet-list → comparison-columns → title-slide |
+| `demo-5.yaml` | 5 | showcase | title-slide → bullet-list → stat-callout → icon-text-rows → comparison-columns |
 

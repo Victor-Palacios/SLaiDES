@@ -89,7 +89,7 @@ def test_harness_detects_overflow(tmp_path):
     rects, so the stray-ink heuristic must fire. Proves the heuristic discriminates
     rather than trivially passing.
     """
-    deck = load(EXAMPLES_DIR / "02_two_column.yaml")
+    deck = load(EXAMPLES_DIR / "05_comparison_columns.yaml")
     rd = resolve(deck)
     pptx = emit_pptx(deck, rd, tmp_path / "rt.pptx")
     pngs = render_pptx_to_pngs(pptx, tmp_path, dpi=VerifyConfig().dpi)

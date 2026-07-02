@@ -104,7 +104,6 @@ lean outline — a `slides:` list where each slide is a chosen `component` + its
 | Component | Required keys | Optional |
 |---|---|---|
 | `title-slide` | `title` | `subtitle`, `logo` (image) |
-| `two-column` | `left[]`, `right[]` (content slots) | `title`, `left_weight`, `right_weight` |
 | `icon-text-rows` | `rows[]` = `{icon, heading, body}` | `title` |
 | `stat-callout` | `stats[]` = `{value, label, subtext?}` | `title` |
 | `comparison-columns` | `left_title`, `right_title`, `left_items[]`, `right_items[]` = `{text, icon?}` | `title` |

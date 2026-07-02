@@ -528,3 +528,31 @@ the requested cleaner design, while KEEPING the optional IR fields (subtitle/sub
 remain available to real decks and are still demonstrated in the multi-slide showcases). This
 is reversible and does not remove component capability. If the operator intended the fields
 removed from the layout entirely, they can re-file; recorded here rather than assumed.
+
+## 2026-07-02 — FB-009: two-column component RETIRED + two-column family reparented
+Operator (web feedback FB-009): "delete this slide layout — redundant with comparison-columns."
+INSPECTION FINDING (surfaced, not silently accepted): architecturally `two-column` was the
+*general-purpose anchor* of the two-column family (free ContentSlots, arbitrary weights) and
+`comparison-columns`, `image-half-bleed`, `chart-with-insight` all specialised FROM it — so the
+"redundant" call actually inverts the base/specialisation relationship. BUT the operator's read
+is content-accurate: the two-column specimen (02) was literally titled "Strengths vs Weaknesses",
+i.e. a comparison, and reads as a duplicate of comparison-columns in the gallery. Operator
+feedback needs no approval, so HONORED it.
+DECISION: deleted the `two-column` component end-to-end (IR model + Union, layout handler +
+dispatch, registry entry, scaffold template → bullet-list) and REPARENTED the family so
+`comparison-columns` is now the anchor; `image-half-bleed`/`chart-with-insight` point `variant_of`
+it. The family NAME stays "two-column" (the two-side-by-side skeleton is unchanged), so taxonomy
+invariants (one anchor/family, variants→anchor) still hold.
+SHOWCASE CONVERSIONS (conservative, reuse existing components, preserve text): 10_all_components
+dropped its two-column demo slide (it demoed the removed component and held an icon slot);
+demo-5 + agents-in-ai → bullet-list (both already contained comparison-columns, so no duplicate);
+09_full_deck → comparison-columns (no comparison present; adds variety). NOTE the verify harness
+caught that long comparison-columns items wrap past their one-line boxes (ink-outside-rects on
+render) even though lint passed — items shortened to single lines; the harness is the deterministic
+gate that covers this class, no new check needed.
+FEEDBACK VALIDATOR side-effect: `slidekit.feedback.store` validates each comment's `component`
+against the live catalog, so FB-009's `component: two-column` would no longer validate once the
+component was gone. Retargeted FB-009's component to `comparison-columns` (the surviving family
+member that absorbed its role) with the original intent preserved in the comment + notes. This is
+the honest minimum; a general "retired-component" allowance in the feedback schema would be scope
+creep and is NOT added.

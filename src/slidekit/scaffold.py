@@ -37,22 +37,12 @@ _TITLE_SLIDE = """  - component: title-slide
     subtitle: "A one-line subtitle goes here"
 """
 
-_TWO_COLUMN = """  - component: two-column
+_BULLET_LIST = """  - component: bullet-list
     title: "Section Heading"
-    left:
-      - type: text
-        content: "First point on the left"
-      - type: text
-        content: "Second point on the left"
-      - type: text
-        content: "Third point on the left"
-    right:
-      - type: text
-        content: "First point on the right"
-      - type: text
-        content: "Second point on the right"
-      - type: text
-        content: "Third point on the right"
+    items:
+      - "First point goes here"
+      - "Second point goes here"
+      - "Third point goes here"
 """
 
 _STAT_CALLOUT = """  - component: stat-callout
@@ -100,9 +90,9 @@ _COMPARISON = """  - component: comparison-columns
 # Named templates → ordered list of slide blocks. Keep every template lint-clean.
 TEMPLATES: dict[str, list[str]] = {
     "title-slide": [_TITLE_SLIDE],
-    "standard": [_TITLE_SLIDE, _TWO_COLUMN, _STAT_CALLOUT, _ICON_TEXT_ROWS],
+    "standard": [_TITLE_SLIDE, _BULLET_LIST, _STAT_CALLOUT, _ICON_TEXT_ROWS],
     "comparison": [_TITLE_SLIDE, _COMPARISON],
-    "pitch": [_TITLE_SLIDE, _TWO_COLUMN, _STAT_CALLOUT, _ICON_TEXT_ROWS, _COMPARISON],
+    "pitch": [_TITLE_SLIDE, _BULLET_LIST, _STAT_CALLOUT, _ICON_TEXT_ROWS, _COMPARISON],
 }
 
 DEFAULT_TEMPLATE = "standard"

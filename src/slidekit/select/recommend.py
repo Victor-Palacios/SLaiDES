@@ -121,7 +121,7 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
         add("before-after", 0.6, "two contrasting state panels")
         add("pros-cons", 0.55, "advantages vs disadvantages")
     elif f.groups == 2:
-        add("two-column", 0.7, "two parallel content groups")
+        add("comparison-columns", 0.7, "two parallel content groups")
 
     # image-led
     if f.people >= 1:

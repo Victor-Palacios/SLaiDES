@@ -81,15 +81,18 @@ comments:
   source: web 2026-07-02T01:58:57.247Z
   notes: 'done T-054 — subtitle stripped from title-slide specimen (optional field kept)'
 - id: FB-009
-  component: two-column
+  component: comparison-columns
   family: two-column
-  status: open
+  status: done
   severity: med
   comment: 👎 delete this slide layout - redundant with "comparison-columns"
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'queued as T-055'
+  notes: 'done T-055 — comment was about the retired two-column component; the two-column
+    layout was deleted (model/handler/registry/scaffold/examples/goldens) as redundant, and
+    comparison-columns now anchors the two-column family. Component retargeted to
+    comparison-columns here because the catalog no longer contains two-column.'
 - id: FB-010
   component: icon-text-rows
   family: icon-text-rows

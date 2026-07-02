@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_selection_guide.py` — do not hand-edit. The machine-readable form is `slidekit catalog --json`. A test (`tests/test_catalog`) fails if it drifts._
 
-Pick a component per slide from its **content shape** — no rendering or vision needed. There are **40 components** across **26 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
+Pick a component per slide from its **content shape** — no rendering or vision needed. There are **39 components** across **26 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
 
 ## agenda — Numbered agenda / table of contents.
 
@@ -205,21 +205,17 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - content shape: a title (+ optional subtitle/logo), no body content
   - required fields: `title`
 
-## two-column — Two weighted columns of free content.
+## two-column — Two titled bulleted columns side by side.
 
-- **`two-column`**
-  - use when: Two parallel content groups (text/images) side by side.
-  - content shape: two groups of content slots
-  - required fields: `left`, `right`
-- **`chart-with-insight`** · variant of `two-column` (chart (60%) + emphasis takeaway (40%))
+- **`comparison-columns`**
+  - use when: Comparing two labelled options or presenting two parallel groups.
+  - content shape: two titled groups of bullets
+  - required fields: `left_title`, `right_title`, `left_items`, `right_items`
+- **`chart-with-insight`** · variant of `comparison-columns` (chart (60%) + emphasis takeaway (40%))
   - use when: A chart needs a one-line 'so what'.
   - content shape: one chart + a short insight
   - required fields: `chart`, `insight`
-- **`comparison-columns`** · variant of `two-column` (fixed 50/50, titled, bulleted)
-  - use when: Comparing two labelled options.
-  - content shape: two titled groups of bullets
-  - required fields: `left_title`, `right_title`, `left_items`, `right_items`
-- **`image-half-bleed`** · variant of `two-column` (one column is a half-bleed image)
+- **`image-half-bleed`** · variant of `comparison-columns` (one column is a half-bleed image)
   - use when: A supporting image should share the slide with text.
   - content shape: one image + a group of content slots
   - required fields: `image`, `content`

@@ -22,22 +22,13 @@ slides:
     title: "slidekit First Light"
     subtitle: "Phase 5 demo: lint-clean, zero screenshots"
 
-  - component: two-column
+  - component: bullet-list
     title: "How slidekit Works"
-    left:
-      - type: text
-        content: "Author IR YAML once"
-      - type: text
-        content: "Layout engine solves EMU rects"
-      - type: text
-        content: "Linter validates before emit"
-    right:
-      - type: text
-        content: "python-pptx places shapes"
-      - type: text
-        content: "Round-trip test verifies"
-      - type: text
-        content: "Zero screenshot calls needed"
+    items:
+      - "Author IR YAML once"
+      - "Layout engine solves EMU rects"
+      - "Linter validates before python-pptx emits"
+      - "Round-trip test verifies — zero screenshots"
 
   - component: stat-callout
     title: "Calibration Results"

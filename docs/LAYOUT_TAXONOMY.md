@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxonomy.py` — do not hand-edit. A test (`tests/test_catalog`) fails if it drifts._
 
-**40 components** implement **26 distinct layout skeletons** (families); **14** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **26 distinct layouts**.
+**39 components** implement **26 distinct layout skeletons** (families); **13** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **26 distinct layouts**.
 
 ## Distinct layout families (26)
 
@@ -31,7 +31,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `testimonial` | `testimonial` | A testimonial (portrait + quote + name/role). |
 | `timeline` | `timeline` | Horizontal dated events. |
 | `title` | `title-slide` | Deck/section cover. |
-| `two-column` | `two-column` | Two weighted columns of free content. |
+| `two-column` | `comparison-columns` | Two titled bulleted columns side by side. |
 | `two-panel-list` | `before-after` | Two contrasting bulleted panels (before vs after). |
 | `vs-badge` | `this-vs-that` | Head-to-head with a central VS badge. |
 
@@ -47,7 +47,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `chart-slide` | `chart` | **anchor** | — |
 | `chart-with-insight` | `two-column` | variant | chart (60%) + emphasis takeaway (40%) |
 | `code` | `code-block` | **anchor** | — |
-| `comparison-columns` | `two-column` | variant | fixed 50/50, titled, bulleted |
+| `comparison-columns` | `two-column` | **anchor** | — |
 | `comparison-matrix` | `comparison-matrix` | **anchor** | — |
 | `definition` | `emphasis-stack` | variant | accent term + definition body |
 | `feature-list` | `icon-text-rows` | variant | icon + heading + body per feature |
@@ -78,5 +78,4 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `this-vs-that` | `vs-badge` | **anchor** | — |
 | `timeline` | `timeline` | **anchor** | — |
 | `title-slide` | `title` | **anchor** | — |
-| `two-column` | `two-column` | **anchor** | — |
 

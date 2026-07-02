@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_34",
+          "node_id": "title_1",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -32,7 +32,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "subtitle_35",
+          "node_id": "subtitle_2",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -65,7 +65,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_36",
+          "node_id": "title_3",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -89,7 +89,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "stat_value_37",
+          "node_id": "stat_value_4",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -113,7 +113,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_38",
+          "node_id": "stat_label_5",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -136,7 +136,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_39",
+          "node_id": "stat_sub_6",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -160,7 +160,7 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_40",
+          "node_id": "stat_value_7",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -184,7 +184,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_41",
+          "node_id": "stat_label_8",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -207,7 +207,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_42",
+          "node_id": "stat_value_9",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -231,7 +231,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_43",
+          "node_id": "stat_label_10",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -254,7 +254,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_44",
+          "node_id": "stat_sub_11",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -280,7 +280,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_45",
+          "node_id": "chrome_pagenum_12",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -308,12 +308,12 @@
     {
       "slide_index": 2,
       "page_number": 3,
-      "component": "two-column",
+      "component": "comparison-columns",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_46",
+          "node_id": "title_13",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -337,106 +337,67 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "left_col_text_47",
+          "node_id": "left_head_14",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
             "w": 5501640,
-            "h": 1127760
+            "h": 621791
           },
-          "text_content": "Enterprise segment up 42%",
+          "text_content": "Enterprise & Products",
           "lines": [
             {
-              "text": "Enterprise segment up",
-              "width_emu": 4344355,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "42%",
-              "width_emu": 864233,
+              "text": "Enterprise & Products",
+              "width_emu": 4558990,
               "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
         },
         {
-          "node_id": "left_col_text_48",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2901696,
-            "w": 5501640,
-            "h": 1127760
-          },
-          "text_content": "APAC region beat forecast by 31%",
-          "lines": [
-            {
-              "text": "APAC region beat forecast",
-              "width_emu": 5080397,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "by 31%",
-              "width_emu": 1440247,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "left_col_text_49",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4303776,
-            "w": 5501640,
-            "h": 1127760
-          },
-          "text_content": "New products: 18% of revenue",
-          "lines": [
-            {
-              "text": "New products: 18% of",
-              "width_emu": 4224176,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "revenue",
-              "width_emu": 1560426,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "right_col_text_50",
+          "node_id": "right_head_15",
           "node_type": "text",
           "rect": {
             "x": 6233160,
             "y": 1499616,
             "w": 5501640,
-            "h": 609600
+            "h": 621791
           },
-          "text_content": "SMB steady; churn down",
+          "text_content": "Core & Channel",
           "lines": [
             {
-              "text": "SMB steady; churn down",
-              "width_emu": 4800191,
+              "text": "Core & Channel",
+              "width_emu": 3238922,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "left_item_16",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Enterprise up 42%",
+          "lines": [
+            {
+              "text": "Enterprise up 42%",
+              "width_emu": 3552441,
               "height_emu": 518160,
               "overflows": false
             }
@@ -447,25 +408,19 @@
           "italic": false
         },
         {
-          "node_id": "right_col_text_51",
+          "node_id": "right_item_17",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 2383536,
+            "y": 2395727,
             "w": 5501640,
-            "h": 1127760
+            "h": 847344
           },
-          "text_content": "Services attach: 34% to 51%",
+          "text_content": "SMB churn down",
           "lines": [
             {
-              "text": "Services attach: 34% to",
-              "width_emu": 4536219,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "51%",
-              "width_emu": 864233,
+              "text": "SMB churn down",
+              "width_emu": 3288047,
               "height_emu": 518160,
               "overflows": false
             }
@@ -476,25 +431,88 @@
           "italic": false
         },
         {
-          "node_id": "right_col_text_52",
+          "node_id": "left_item_18",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3517391,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "APAC beat forecast 31%",
+          "lines": [
+            {
+              "text": "APAC beat forecast 31%",
+              "width_emu": 4744318,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "right_item_19",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 3785616,
+            "y": 3517391,
             "w": 5501640,
-            "h": 1127760
+            "h": 847344
           },
-          "text_content": "Partner channel: 28% of bookings",
+          "text_content": "Services attach: 34\u219251%",
           "lines": [
             {
-              "text": "Partner channel: 28% of",
-              "width_emu": 4632784,
+              "text": "Services attach: 34\u219251%",
+              "width_emu": 4968230,
               "height_emu": 518160,
               "overflows": false
-            },
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "left_item_20",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4639055,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "New products: 18%",
+          "lines": [
             {
-              "text": "bookings",
-              "width_emu": 1728465,
+              "text": "New products: 18%",
+              "width_emu": 3744094,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "right_item_21",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4639055,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Partner channel: 28%",
+          "lines": [
+            {
+              "text": "Partner channel: 28%",
+              "width_emu": 4152702,
               "height_emu": 518160,
               "overflows": false
             }
@@ -507,7 +525,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_53",
+          "node_id": "chrome_pagenum_22",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -540,7 +558,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_54",
+          "node_id": "title_23",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -564,7 +582,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "ev_date_55",
+          "node_id": "ev_date_24",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -589,7 +607,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_56",
+          "node_id": "ev_title_25",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -612,7 +630,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_57",
+          "node_id": "ev_desc_26",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -659,7 +677,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_58",
+          "node_id": "ev_date_27",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -684,7 +702,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_59",
+          "node_id": "ev_title_28",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -707,7 +725,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_60",
+          "node_id": "ev_desc_29",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -748,7 +766,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_61",
+          "node_id": "ev_date_30",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -773,7 +791,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_62",
+          "node_id": "ev_title_31",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -796,7 +814,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_63",
+          "node_id": "ev_desc_32",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -837,7 +855,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_64",
+          "node_id": "ev_date_33",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -862,7 +880,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_65",
+          "node_id": "ev_title_34",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -885,7 +903,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_66",
+          "node_id": "ev_desc_35",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -928,7 +946,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_67",
+          "node_id": "chrome_pagenum_36",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -961,7 +979,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_68",
+          "node_id": "title_37",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -985,7 +1003,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "card_title_69",
+          "node_id": "card_title_38",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1009,7 +1027,7 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_body_70",
+          "node_id": "card_body_39",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1045,7 +1063,7 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_title_71",
+          "node_id": "card_title_40",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -1069,7 +1087,7 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_body_72",
+          "node_id": "card_body_41",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -1105,7 +1123,7 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_title_73",
+          "node_id": "card_title_42",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1129,7 +1147,7 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_body_74",
+          "node_id": "card_body_43",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1165,7 +1183,7 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_title_75",
+          "node_id": "card_title_44",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1189,7 +1207,7 @@
           "group_id": "card_3"
         },
         {
-          "node_id": "card_body_76",
+          "node_id": "card_body_45",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1227,7 +1245,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_77",
+          "node_id": "chrome_pagenum_46",
           "node_type": "text",
           "rect": {
             "x": 10363200,

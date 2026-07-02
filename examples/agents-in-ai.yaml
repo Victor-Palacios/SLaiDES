@@ -106,18 +106,13 @@ slides:
         title: "Multi-Agent"
         body: "Specialists team up."
 
-  - component: two-column
+  - component: bullet-list
     title: "Multi-Agent Systems"
-    left:
-      - type: text
-        content: "Many narrow agents beat one generalist."
-      - type: text
-        content: "Each owns a clear role."
-    right:
-      - type: text
-        content: "A coordinator routes the work."
-      - type: text
-        content: "They hand off context."
+    items:
+      - "Many narrow agents beat one generalist."
+      - "Each owns a clear role."
+      - "A coordinator routes the work."
+      - "They hand off context."
 
   - component: comparison-columns
     title: "Promise vs Pitfalls"

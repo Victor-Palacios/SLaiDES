@@ -244,7 +244,7 @@ class TestDefectFixture:
     # W_TEXT_ONLY: slide with only text (no media).
     def test_w_text_only(self):
         node = _text_node("n", Rect(MARGIN_MIN_EMU, MARGIN_MIN_EMU, 5_000_000, 500_000))
-        slide = _make_slide(component="two-column", nodes=[node])
+        slide = _make_slide(component="bullet-list", nodes=[node])
         issues = self._lint_slide(slide)
         assert self._has_code(issues, "W_TEXT_ONLY"), (
             f"Expected W_TEXT_ONLY, got: {[i.code for i in issues]}"
@@ -255,7 +255,7 @@ class TestDefectFixture:
         ir = _minimal_ir()
         node = _text_node("n", Rect(MARGIN_MIN_EMU, MARGIN_MIN_EMU, 5_000_000, 500_000))
         slides = [
-            _make_slide(index=i, component="two-column", nodes=[node], page_number=i + 1)
+            _make_slide(index=i, component="bullet-list", nodes=[node], page_number=i + 1)
             for i in range(3)
         ]
         rd = ResolvedDeck(slides=slides)
@@ -427,7 +427,7 @@ class TestOutputFormat:
         # Node with bad size (error) and a text-only slide (warning).
         node = _text_node("n", Rect(MARGIN_MIN_EMU, MARGIN_MIN_EMU, 5_000_000, 500_000),
                           size_pt=20.0)
-        slide = _make_slide(component="two-column", nodes=[node])
+        slide = _make_slide(component="bullet-list", nodes=[node])
         rd = ResolvedDeck(slides=[slide])
         issues = lint(ir, rd)
         error_codes = {i.code for i in issues if i.severity == "error"}

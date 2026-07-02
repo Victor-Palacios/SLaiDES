@@ -4,7 +4,7 @@
     "w": 1280.0,
     "h": 720.0
   },
-  "count": 40,
+  "count": 39,
   "components": [
     {
       "component": "title-slide",
@@ -18,19 +18,6 @@
       "height_px": 720.0,
       "background": "#FFFFFF",
       "nodes_html": "    <div class=\"node node-text\" style=\"left:96.00px;top:187.20px;width:1088.00px;height:96.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Quarterly Business Review</div>"
-    },
-    {
-      "component": "two-column",
-      "family": "two-column",
-      "role": "anchor",
-      "variant_of": null,
-      "purpose": "Two weighted columns of free content.",
-      "use_when": "Two parallel content groups (text/images) side by side.",
-      "example": "02_two_column.yaml",
-      "width_px": 1280.0,
-      "height_px": 720.0,
-      "background": "#ECF0F1",
-      "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#2C3E50;font-family:'Calibri',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Strengths vs Weaknesses</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:118.40px;color:#2C3E50;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Strong brand in 45 markets</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:304.64px;width:577.60px;height:118.40px;color:#2C3E50;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">2,400 distribution partners</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:451.84px;width:577.60px;height:118.40px;color:#2C3E50;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">92% customer satisfaction</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:157.44px;width:577.60px;height:64.00px;color:#2C3E50;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Limited digital presence</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:250.24px;width:577.60px;height:64.00px;color:#2C3E50;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Higher cost structure</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:343.04px;width:577.60px;height:64.00px;color:#2C3E50;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Slower product refresh</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#95A5A6;font-family:'Calibri',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
     },
     {
       "component": "icon-text-rows",
@@ -61,10 +48,10 @@
     {
       "component": "comparison-columns",
       "family": "two-column",
-      "role": "variant",
-      "variant_of": "two-column",
-      "purpose": "Two titled bulleted columns.",
-      "use_when": "Comparing two labelled options.",
+      "role": "anchor",
+      "variant_of": null,
+      "purpose": "Two titled bulleted columns side by side.",
+      "use_when": "Comparing two labelled options or presenting two parallel groups.",
       "example": "05_comparison_columns.yaml",
       "width_px": 1280.0,
       "height_px": 720.0,
@@ -88,7 +75,7 @@
       "component": "image-half-bleed",
       "family": "two-column",
       "role": "variant",
-      "variant_of": "two-column",
+      "variant_of": "comparison-columns",
       "purpose": "Image on one half, content on the other.",
       "use_when": "A supporting image should share the slide with text.",
       "example": "07_image_half_bleed.yaml",
@@ -335,7 +322,7 @@
       "component": "chart-with-insight",
       "family": "two-column",
       "role": "variant",
-      "variant_of": "two-column",
+      "variant_of": "comparison-columns",
       "purpose": "A chart with a called-out takeaway.",
       "use_when": "A chart needs a one-line 'so what'.",
       "example": "28_chart_with_insight.yaml",

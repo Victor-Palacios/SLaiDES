@@ -2,12 +2,12 @@
 
 _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`, then re-render; do not hand-edit. The kanban view of the work; `PROGRESS.md` stays the acceptance ledger._
 
-**backlog** 0 · **todo** 2 · **in_progress** 0 · **blocked** 1 · **done** 61 · _last change 2026-07-02_
+**backlog** 0 · **todo** 1 · **in_progress** 0 · **blocked** 1 · **done** 62 · _last change 2026-07-02_
 
-| Backlog (0) | Todo (2) | In Progress (0) | Blocked (1) | Done (61) |
+| Backlog (0) | Todo (1) | In Progress (0) | Blocked (1) | Done (62) |
 |---|---|---|---|---|
-|  | **T-055** two-column: delete layout, redundant with comparison-columns (FB-009) · _FB_ |  | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
-|  | **T-064** swot: dense quadrant items get a box shorter than one line (discovered) · _FB_ |  |  | **T-002** chart-slide design · _P9_ · `high` |
+|  | **T-064** swot: dense quadrant items get a box shorter than one line (discovered) · _FB_ |  | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
+|  |  |  |  | **T-002** chart-slide design · _P9_ · `high` |
 |  |  |  |  | **T-025** beauty-tracking extension: richness + large-text 3:1 contrast · _P10_ · `high` |
 |  |  |  |  | **T-033** component-metadata registry (single source of truth) · _PIPE_ · `high` |
 |  |  |  |  | **T-034** honest layout taxonomy doc + reframe '40 distinct' · _PIPE_ · `high` |
@@ -51,6 +51,7 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 |  |  |  |  | **T-044** feature-list: remove accent bubble disc (FB-005 / issue #13) · _FB_ |
 |  |  |  |  | **T-045** repurpose checklist -> 'code' dark terminal/IDE layout (FB-006 / issue #14) · _FB_ |
 |  |  |  |  | **T-054** title-slide: remove distracting subheader (FB-008) · _FB_ |
+|  |  |  |  | **T-055** two-column: delete layout, redundant with comparison-columns (FB-009) · _FB_ |
 |  |  |  |  | **T-057** stat-callout: remove distracting small grey subtext (FB-011) · _FB_ |
 |  |  |  |  | **T-058** comparison-columns: 3 items after headers, more space between (FB-012) · _FB_ |
 |  |  |  |  | **T-059** timeline: word/length cap so last column text is not cut off (FB-013) · _FB_ |
@@ -77,5 +78,5 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 | Standing research task | 11 | 11 |
 | Operator-approved ideas (from IDEAS.md) | 4 | 4 |
 | North-star: honest taxonomy + LLM-selection pipeline | 6 | 6 |
-| Operator layout feedback (FEEDBACK.yaml issue-form loop) | 16 | 18 |
+| Operator layout feedback (FEEDBACK.yaml issue-form loop) | 17 | 18 |
 

@@ -23,21 +23,6 @@ slides:
     title: "Component Gallery"
     subtitle: "All eight components in one deck"
 
-  - component: two-column
-    title: "Two Column"
-    left:
-      - type: text
-        content: "Left column with clear hierarchy."
-      - type: icon
-        name: check
-    right:
-      - type: text
-        content: "Right column balanced content."
-      - type: spacer
-        size: 1
-    left_weight: 1.2
-    right_weight: 0.8
-
   - component: icon-text-rows
     title: "Icon Text Rows"
     rows:
