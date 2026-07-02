@@ -73,13 +73,13 @@ comments:
 - id: FB-008
   component: title-slide
   family: title
-  status: open
+  status: done
   severity: med
   comment: 👎 remove distracting subheader
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'queued as T-054'
+  notes: 'done T-054 — subtitle stripped from title-slide specimen (optional field kept)'
 - id: FB-009
   component: two-column
   family: two-column
@@ -103,13 +103,13 @@ comments:
 - id: FB-011
   component: stat-callout
   family: stat-callout
-  status: open
+  status: done
   severity: med
   comment: 👎 get rid of the small grey text - it's distracting
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'queued as T-057'
+  notes: 'done T-057 — muted subtext stripped from stat-callout specimen (optional field kept)'
 - id: FB-012
   component: comparison-columns
   family: two-column
@@ -163,10 +163,10 @@ comments:
 - id: FB-017
   component: big-number
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: 👎 remove final line
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'queued as T-063'
+  notes: 'done T-063 — context line stripped from big-number specimen (optional field kept)'

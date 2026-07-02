@@ -30,29 +30,6 @@
           "bold": true,
           "italic": false,
           "text_color": "#1B4F8A"
-        },
-        {
-          "node_id": "subtitle_2",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 2971800,
-            "w": 10363200,
-            "h": 518159
-          },
-          "text_content": "Q4 2025 \u2014 Finance Division",
-          "lines": [
-            {
-              "text": "Q4 2025 \u2014 Finance Division",
-              "width_emu": 5496173,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
         }
       ],
       "chrome": []

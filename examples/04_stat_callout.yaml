@@ -15,9 +15,7 @@ slides:
     stats:
       - value: "127%"
         label: "Revenue Target"
-        subtext: "$3.8B total"
       - value: "94%"
         label: "Retention Rate"
       - value: "48 NPS"
         label: "Net Promoter"
-        subtext: "+12 pts YoY"

@@ -8,22 +8,22 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_214",
+          "node_id": "accent_bar_192",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 1981200,
+            "y": 2423160,
             "w": 128016,
-            "h": 2895600
+            "h": 2011680
           },
           "fill_color": "#00ACC1"
         },
         {
-          "node_id": "value_211",
+          "node_id": "value_190",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 1981200,
+            "y": 2423160,
             "w": 10738104,
             "h": 1005840
           },
@@ -43,11 +43,11 @@
           "text_color": "#00ACC1"
         },
         {
-          "node_id": "label_212",
+          "node_id": "label_191",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 3261360,
+            "y": 3703320,
             "w": 10738104,
             "h": 731520
           },
@@ -64,35 +64,11 @@
           "size_pt": 42.0,
           "bold": false,
           "italic": false
-        },
-        {
-          "node_id": "context_213",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 4267200,
-            "w": 10738104,
-            "h": 609600
-          },
-          "text_content": "Up from 1.9M at the start of the year",
-          "lines": [
-            {
-              "text": "Up from 1.9M at the start of the year",
-              "width_emu": 6935788,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "text_color": "#8A8A9A"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_215",
+          "node_id": "chrome_pagenum_193",
           "node_type": "text",
           "rect": {
             "x": 10363200,

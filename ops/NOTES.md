@@ -507,3 +507,13 @@ Operator session, three linked requests:
   blocker, but the geometry is dishonest. Proper fix (adaptive item font or item cap in
   dense cells) is deferred to T-064; the web-preview geometry guard exempts `swot` with a
   pointer here until then.
+
+## 2026-07-02 — FB-008/011/017 (remove tertiary muted lines): specimen-scoped fix
+Three consistent operator notes asked to remove tertiary supporting text: title-slide
+subtitle (FB-008), stat-callout subtext (FB-011), big-number context (FB-017) — all
+optional muted lines, aligned with the repo's minimalism ethos. CONSERVATIVE CHOICE:
+stripped these from the reviewed SPECIMEN decks (examples/01,04,14) so the gallery matches
+the requested cleaner design, while KEEPING the optional IR fields (subtitle/subtext/context
+remain available to real decks and are still demonstrated in the multi-slide showcases). This
+is reversible and does not remove component capability. If the operator intended the fields
+removed from the layout entirely, they can re-file; recorded here rather than assumed.

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_9",
+          "node_id": "title_18",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,11 +32,11 @@
           "text_color": "#1A237E"
         },
         {
-          "node_id": "stat_value_10",
+          "node_id": "stat_value_19",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2449068,
+            "y": 2776728,
             "w": 3576320,
             "h": 914400
           },
@@ -56,11 +56,11 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_11",
+          "node_id": "stat_label_20",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3637788,
+            "y": 3965448,
             "w": 3576320,
             "h": 518159
           },
@@ -79,35 +79,11 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_12",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4430267,
-            "w": 3576320,
-            "h": 381000
-          },
-          "text_content": "$3.8B total",
-          "lines": [
-            {
-              "text": "$3.8B total",
-              "width_emu": 1518047,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": false,
-          "italic": false,
-          "is_caption": true
-        },
-        {
-          "node_id": "stat_value_13",
+          "node_id": "stat_value_21",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 2449068,
+            "y": 2776728,
             "w": 3576320,
             "h": 914400
           },
@@ -127,11 +103,11 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_14",
+          "node_id": "stat_label_22",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 3637788,
+            "y": 3965448,
             "w": 3576320,
             "h": 518159
           },
@@ -150,11 +126,11 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_15",
+          "node_id": "stat_value_23",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 2449068,
+            "y": 2776728,
             "w": 3576320,
             "h": 914400
           },
@@ -174,11 +150,11 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_16",
+          "node_id": "stat_label_24",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 3637788,
+            "y": 3965448,
             "w": 3576320,
             "h": 518159
           },
@@ -195,35 +171,11 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false
-        },
-        {
-          "node_id": "stat_sub_17",
-          "node_type": "text",
-          "rect": {
-            "x": 8158480,
-            "y": 4430267,
-            "w": 3576320,
-            "h": 381000
-          },
-          "text_content": "+12 pts YoY",
-          "lines": [
-            {
-              "text": "+12 pts YoY",
-              "width_emu": 1703772,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": false,
-          "italic": false,
-          "is_caption": true
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_18",
+          "node_id": "chrome_pagenum_25",
           "node_type": "text",
           "rect": {
             "x": 10363200,
