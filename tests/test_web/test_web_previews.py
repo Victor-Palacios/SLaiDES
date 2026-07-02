@@ -8,9 +8,11 @@ step with the layout catalog.
 """
 import importlib.util
 import json
+import re
 from pathlib import Path
 
 from slidekit.catalog.registry import catalog
+from slidekit.metrics.constants import LINE_SPACING_SINGLE
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 _SPEC = importlib.util.spec_from_file_location(
@@ -46,3 +48,59 @@ def test_every_preview_has_a_fragment():
         assert c["background"].startswith("#"), f"{c['component']} background not a hex colour"
         # Metadata the website relies on for the card header.
         assert c["purpose"] and c["use_when"] and c["family"]
+
+
+# Regression guard for FB-015 / FB-016 (web-gallery descender clipping). A single-line
+# text row's resolved height equals exactly one line box, so the preview must (a) pin
+# line-height to slidekit's own spacing — never leave it to the browser's font-dependent
+# "normal", which overflows and clips g/p/y — and (b) reserve NO vertical padding on the
+# border-box, which would steal a line's worth of height. This is the deterministic check
+# that replaces eyeballing the gallery.
+_STYLE_RE = re.compile(r'class="node node-text[^"]*" style="([^"]+)"')
+
+
+def _style_dict(style: str) -> dict:
+    out = {}
+    for decl in style.split(";"):
+        if ":" in decl:
+            k, v = decl.split(":", 1)
+            out[k.strip()] = v.strip()
+    return out
+
+
+# swot's 2×2 quadrants intentionally pack several items into a small cell; when a cell
+# holds enough items each slot is < one body line, a distinct latent defect tracked
+# separately (see ops/NOTES.md / board T-064). The emitter now renders with overflow
+# visible, so those lines spill into the inter-item gap rather than clipping — the (c)
+# geometry invariant is asserted for every other component.
+_GEOMETRY_EXEMPT = {"swot"}
+
+
+def test_text_nodes_pin_line_height_and_never_clip_descenders():
+    data = json.loads(bwp.OUT.read_text(encoding="utf-8"))
+    checked = 0
+    for c in data["components"]:
+        for style in _STYLE_RE.findall(c["nodes_html"]):
+            s = _style_dict(style)
+            # (a) line-height must be pinned to the single-spacing constant.
+            assert s.get("line-height") == str(LINE_SPACING_SINGLE), (
+                f"{c['component']}: text node line-height not pinned ({s.get('line-height')!r})"
+            )
+            # (b) no vertical padding may eat into the border-box height.
+            pad = s.get("padding", "0")
+            parts = pad.split()
+            top = parts[0]
+            bottom = parts[2] if len(parts) == 4 else parts[0]
+            assert top in ("0", "0px") and bottom in ("0", "0px"), (
+                f"{c['component']}: text node has vertical padding {pad!r} — clips descenders"
+            )
+            # (c) one line box fits inside the resolved height (no clip).
+            if c["component"] not in _GEOMETRY_EXEMPT:
+                height = float(s["height"].rstrip("px"))
+                font_px = float(s["font-size"].rstrip("px"))
+                line_box = font_px * LINE_SPACING_SINGLE
+                assert line_box <= height + 0.5, (
+                    f"{c['component']}: line box {line_box:.1f}px exceeds node height {height:.1f}px"
+                )
+            checked += 1
+    assert checked > 100, "expected many text nodes across the gallery"

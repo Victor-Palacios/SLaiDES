@@ -63,7 +63,7 @@ body {
 .preview { background: #555; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
 .stage { position: relative; transform-origin: top left; }
 .node { position: absolute; box-sizing: border-box; }
-.node-text { overflow: hidden; white-space: pre-wrap; }
+.node-text { overflow: visible; white-space: pre-wrap; }
 .node-icon { text-align: center; font-weight: bold; border: 2px dashed currentColor;
   display: flex; align-items: center; justify-content: center; font-size: 12px; }
 .node-image { background: #ddd; border: 1px solid #bbb; display: flex; align-items: center;

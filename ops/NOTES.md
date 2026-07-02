@@ -484,3 +484,26 @@ Operator session, three linked requests:
    session. The build pipeline itself stays vision-free; the linter remains the gate.
    Burst sessions' top priority: the open web-feedback items (FB-008…FB-017).
    FB-007 marked wontfix (duplicate of FB-008 from website testing).
+
+## 2026-07-02 — web-preview descender clipping (FB-010/015/016) + swot latent defect
+- ROOT CAUSE of the web-gallery descender clipping (FB-015 agenda, FB-016 quote-opener):
+  the HTML preview emitter (`emit/html_preview._node_html`) gave each text node a fixed
+  border-box height (a single-line row's `rect.h` == exactly one line box) but then set
+  `padding:5px` top+bottom AND left `line-height` unset. The browser fell back to a
+  font-dependent `normal` line-height and the 10px padding shrank the content below one
+  line, so `overflow:hidden` chopped g/p/y. Fix: pin `line-height` to LINE_SPACING_SINGLE,
+  zero the vertical padding (rect.h already carries the vertical space), and set
+  `.node-text{overflow:visible}` (both the site CSS and the debug emitter). Codified by
+  tests/test_web/test_web_previews.py::test_text_nodes_pin_line_height_and_never_clip_descenders.
+- FB-010 (icon-text-rows "can't read the subtext") was a REAL geometry defect, not just a
+  preview artifact: `_layout_icon_text_rows` split each row as heading-line + 0.3" gap +
+  remainder, and the remainder body box came out SHORTER than one line (46.7px < 54.4px) →
+  its single line clipped. Fixed by pairing heading+body on a 0.1" inner gap (matching
+  feature-list) and flooring body_h at one line. Golden 03/10 regen.
+- DISCOVERED (board T-064, not operator-reported): `_panel_items` (used by swot) does
+  `item_h = min(slot_h, ...)`, which caps an item box below one line when a quadrant packs
+  enough items (swot specimen: 43.2px < 54.4px). With overflow now visible the line spills
+  into the 0.3" inter-item gap (no overlap) rather than clipping, so it is not a ship
+  blocker, but the geometry is dishonest. Proper fix (adaptive item font or item cap in
+  dense cells) is deferred to T-064; the web-preview geometry guard exempts `swot` with a
+  pointer here until then.

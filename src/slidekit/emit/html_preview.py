@@ -10,6 +10,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import TYPE_CHECKING, Union
 
+from slidekit.metrics.constants import LINE_SPACING_SINGLE
+
 if TYPE_CHECKING:
     from slidekit.ir.models import Deck
     from slidekit.layout.models import ResolvedDeck, ResolvedNode
@@ -41,7 +43,7 @@ def emit_html(
   .slide-label {{ color: #ccc; font-size: 12px; margin-bottom: 4px; }}
   .slide {{ position: relative; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,.4); }}
   .node {{ position: absolute; box-sizing: border-box; }}
-  .node-text {{ overflow: hidden; white-space: pre-wrap; }}
+  .node-text {{ overflow: visible; white-space: pre-wrap; }}
   .node-icon {{ text-align: center; font-weight: bold; border: 2px dashed currentColor;
                 display: flex; align-items: center; justify-content: center; font-size: 12px; }}
   .node-image {{ background: #ddd; border: 1px solid #bbb;
@@ -99,11 +101,19 @@ def _node_html(node: "ResolvedNode", palette) -> str:
         font_name = (node.font or "arial").title()
         size_px = (node.size_pt or 32) * 96 / 72  # pt → px at 96 DPI
         weight = "bold" if node.bold else "normal"
+        # line-height MUST be pinned to slidekit's own line-spacing so the browser
+        # reproduces the box math exactly. Left to the browser default ("normal")
+        # it varies by fallback font and overflows the tightly-measured box, which
+        # (with clipping) chops descenders off single-line rows (g/p/y). Vertical
+        # padding is 0: a resolved text rect is exactly its content height (insets,
+        # where present, are already baked into rect.h), so any top/bottom padding on
+        # a border-box would steal a line's worth of space and clip. Horizontal inset
+        # only.
         style = (
             f"left:{left};top:{top};width:{width};height:{height};"
             f"color:{color};font-family:'{font_name}',Arial;font-size:{size_px:.1f}px;"
-            f"font-weight:{weight};"
-            f"padding:5px 9px 5px 9px;"  # approximate INSET_*_EMU at 96 DPI
+            f"line-height:{LINE_SPACING_SINGLE};font-weight:{weight};"
+            f"padding:0 9px;"  # horizontal INSET only; vertical baked into rect.h
         )
         text = (node.text_content or "").replace("&", "&amp;").replace("<", "&lt;")
         return (

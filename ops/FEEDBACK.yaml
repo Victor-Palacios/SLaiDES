@@ -79,7 +79,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'queued as T-054'
 - id: FB-009
   component: two-column
   family: two-column
@@ -89,17 +89,17 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'queued as T-055'
 - id: FB-010
   component: icon-text-rows
   family: icon-text-rows
-  status: open
+  status: done
   severity: med
   comment: 👎 Can't read the subtext like "high standards..."
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'done T-056 — body box was shorter than one line; paired heading+body on 0.1" inner gap, guaranteed >= one line'
 - id: FB-011
   component: stat-callout
   family: stat-callout
@@ -109,7 +109,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'queued as T-057'
 - id: FB-012
   component: comparison-columns
   family: two-column
@@ -119,7 +119,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'queued as T-058'
 - id: FB-013
   component: timeline
   family: timeline
@@ -129,7 +129,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'queued as T-059'
 - id: FB-014
   component: section-divider
   family: emphasis-stack
@@ -139,27 +139,27 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'queued as T-060'
 - id: FB-015
   component: agenda
   family: agenda
-  status: open
+  status: done
   severity: med
   comment: 👎 Need more space or something because letters like g, p, and y have their bottom half missing.
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'done T-061 — web-preview emitter pinned line-height + dropped vertical padding + overflow visible (single-line-row descender clip class)'
 - id: FB-016
   component: quote-opener
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: 👎 not all the text is displayed correctly. might be a spacing issue
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'done T-062 — same root cause as FB-015; fixed by the emitter change'
 - id: FB-017
   component: big-number
   family: emphasis-stack
@@ -169,4 +169,4 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: ''
+  notes: 'queued as T-063'

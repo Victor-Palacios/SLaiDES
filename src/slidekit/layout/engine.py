@@ -353,15 +353,25 @@ def _layout_icon_text_rows(slide: IconTextRowsSlide, cx, cy, cw, ch, font, ts, p
     text_x = cx
     text_w = cw
 
-    for row in slide.rows:
-        heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-        body_h = row_h - heading_h - gap
+    line_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    # Feedback FB-010 (web #issue): the body ("subtext") was unreadable because a full
+    # 0.3" gap between heading and body left the body box SHORTER than a single line, so
+    # its one line was clipped. Pair the heading with its body on a tight 0.1" inner gap
+    # (matching feature-list) and guarantee the body box is at least one line tall.
+    inner = int(0.1 * EMU_PER_INCH)
+    for i, row in enumerate(slide.rows):
+        # A heading and its own body are one intentional pair (shared group_id), so the
+        # tight 0.1" inner gap is exempt from E_GAP — matching feature-list.
+        gid = f"itr_{i}"
+        heading_h = line_h
+        body_h = max(line_h, row_h - heading_h - inner)
         nodes.append(_make_text_node(_nid("heading"), row.heading, font, ts.body,
                                      bold=True, italic=False,
-                                     rect=Rect(text_x, y, text_w, heading_h)))
+                                     rect=Rect(text_x, y, text_w, heading_h), group_id=gid))
         nodes.append(_make_text_node(_nid("body"), row.body, font, ts.body,
                                      bold=False, italic=False,
-                                     rect=Rect(text_x, y + heading_h + gap, text_w, body_h)))
+                                     rect=Rect(text_x, y + heading_h + inner, text_w, body_h),
+                                     group_id=gid))
         y += row_h + gap
 
     return nodes
