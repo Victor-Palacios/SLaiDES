@@ -180,3 +180,73 @@ comments:
   updated: '2026-07-02'
   source: web 2026-07-02T22:23:19.850Z
   notes: ''
+- id: FB-019
+  component: big-number
+  family: emphasis-stack
+  status: open
+  severity: med
+  comment: 👎 Make the number bigger (maybe double or 1.5 bigger) and center everything
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T22:34:13.379Z
+  notes: ''
+- id: FB-020
+  component: bullet-list
+  family: marker-list
+  status: open
+  severity: med
+  comment: 👎 3 items instead of 4
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T22:34:13.379Z
+  notes: ''
+- id: FB-021
+  component: code
+  family: code-block
+  status: open
+  severity: med
+  comment: 👎 Show actual example like “hello world” so I can see text color change
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T22:34:13.379Z
+  notes: ''
+- id: FB-022
+  component: pros-cons
+  family: two-panel-list
+  status: open
+  severity: med
+  comment: 👎 too similar to before after slide type - delete this and give the before after a more versatile name
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T22:34:13.379Z
+  notes: ''
+- id: FB-023
+  component: this-vs-that
+  family: vs-badge
+  status: open
+  severity: med
+  comment: 👎 Proportions are off for VS size and its position is strange
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T22:34:13.379Z
+  notes: ''
+- id: FB-024
+  component: kpi-grid
+  family: kpi-grid
+  status: open
+  severity: med
+  comment: 👎 spacing is bad
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T22:34:13.379Z
+  notes: ''
+- id: FB-025
+  component: chart-slide
+  family: chart
+  status: open
+  severity: med
+  comment: 👎 delete this
+  created: '2026-07-02'
+  updated: '2026-07-02'
+  source: web 2026-07-02T22:34:13.379Z
+  notes: ''

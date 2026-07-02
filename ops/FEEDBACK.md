@@ -2,13 +2,20 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 1 · **done** 16 · **wontfix** 1 · _last change 2026-07-02_
+**open** 8 · **done** 16 · **wontfix** 1 · _last change 2026-07-02_
 
-## Open (1)
+## Open (8)
 
 | ID | Layout | Sev | Comment | Notes |
 |---|---|---|---|---|
 | FB-018 | title-slide | med | 👎 left-center align the title |  |
+| FB-019 | big-number | med | 👎 Make the number bigger (maybe double or 1.5 bigger) and center everything |  |
+| FB-020 | bullet-list | med | 👎 3 items instead of 4 |  |
+| FB-021 | code | med | 👎 Show actual example like “hello world” so I can see text color change |  |
+| FB-022 | pros-cons | med | 👎 too similar to before after slide type - delete this and give the before after a more versatile name |  |
+| FB-023 | this-vs-that | med | 👎 Proportions are off for VS size and its position is strange |  |
+| FB-024 | kpi-grid | med | 👎 spacing is bad |  |
+| FB-025 | chart-slide | med | 👎 delete this |  |
 
 ## Done (16)
 

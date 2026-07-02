@@ -2,92 +2,145 @@
   "note": "Operator review state — maintained ONLY by scripts/feedback_intake_web.py. approved = off the review page; flagged = show before/after until approved.",
   "components": {
     "agenda": {
-      "status": "flagged",
-      "date": "2026-07-02",
-      "comment": "Need more space or something because letters like g, p, and y have their bottom half missing.",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#FFFFFF",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;font-weight:bold;padding:5px 9px 5px 9px;\">What We Will Cover</div>\n\n    <div class=\"node node-text\" style=\"left:48.00px;top:192.96px;width:96.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">01</div>\n    <div class=\"node node-text\" style=\"left:144.00px;top:192.96px;width:1088.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Performance against targets</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:281.09px;width:96.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">02</div>\n    <div class=\"node node-text\" style=\"left:144.00px;top:281.09px;width:1088.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Customer and market signals</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:369.22px;width:96.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">03</div>\n    <div class=\"node node-text\" style=\"left:144.00px;top:369.22px;width:1088.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Operational health and risks</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:457.34px;width:96.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">04</div>\n    <div class=\"node node-text\" style=\"left:144.00px;top:457.34px;width:1088.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Roadmap for next quarter</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:545.47px;width:96.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">05</div>\n    <div class=\"node node-text\" style=\"left:144.00px;top:545.47px;width:1088.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Decisions we need today</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;font-weight:normal;padding:5px 9px 5px 9px;\">1</div>"
-      }
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "before-after": {
+      "status": "approved",
+      "date": "2026-07-02"
     },
     "big-number": {
       "status": "flagged",
       "date": "2026-07-02",
-      "comment": "remove final line",
+      "comment": "Make the number bigger (maybe double or 1.5 bigger) and center everything",
       "before": {
         "width_px": 1280.0,
         "height_px": 720.0,
         "background": "#FFFFFF",
-        "nodes_html": "\n    <div class=\"node node-text\" style=\"left:104.64px;top:208.00px;width:1127.36px;height:105.60px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;font-weight:bold;padding:5px 9px 5px 9px;\">3.2M</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:342.40px;width:1127.36px;height:76.80px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;font-weight:normal;padding:5px 9px 5px 9px;\">Active customers worldwide</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:448.00px;width:1127.36px;height:64.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Up from 1.9M at the start of the year</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;font-weight:normal;padding:5px 9px 5px 9px;\">1</div>"
+        "nodes_html": "\n    <div class=\"node node-text\" style=\"left:104.64px;top:254.40px;width:1127.36px;height:105.60px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">3.2M</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:388.80px;width:1127.36px;height:76.80px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:normal;padding:0 9px;\">Active customers worldwide</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
+      }
+    },
+    "bullet-list": {
+      "status": "flagged",
+      "date": "2026-07-02",
+      "comment": "3 items instead of 4",
+      "before": {
+        "width_px": 1280.0,
+        "height_px": 720.0,
+        "background": "#FFFFFF",
+        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">What Changed This Quarter</div>\n\n    <div class=\"node node-text\" style=\"left:96.00px;top:157.44px;width:1136.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Activation time dropped by half</div>\n\n    <div class=\"node node-text\" style=\"left:96.00px;top:276.48px;width:1136.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Support tickets fell sharply</div>\n\n    <div class=\"node node-text\" style=\"left:96.00px;top:395.52px;width:1136.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Expansion revenue outpaced new sales</div>\n\n    <div class=\"node node-text\" style=\"left:96.00px;top:514.56px;width:1136.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Two flagship accounts renewed early</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
+      }
+    },
+    "card-grid": {
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "chart-slide": {
+      "status": "flagged",
+      "date": "2026-07-02",
+      "comment": "delete this",
+      "before": {
+        "width_px": 1280.0,
+        "height_px": 720.0,
+        "background": "#FFFFFF",
+        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Quarterly Bookings</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:288.25px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">3.2</div>\n\n    <div class=\"node node-text\" style=\"left:48.00px;top:496.00px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Q1</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:257.27px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">4.1</div>\n\n    <div class=\"node node-text\" style=\"left:351.20px;top:496.00px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Q2</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:205.63px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">5.6</div>\n\n    <div class=\"node node-text\" style=\"left:654.40px;top:496.00px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Q3</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:157.44px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">7</div>\n\n    <div class=\"node node-text\" style=\"left:957.60px;top:496.00px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Q4</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:564.80px;width:1184.00px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Figures in $M, net of refunds.</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
+      }
+    },
+    "code": {
+      "status": "flagged",
+      "date": "2026-07-02",
+      "comment": "Show actual example like “hello world” so I can see text color change",
+      "before": {
+        "width_px": 1280.0,
+        "height_px": 720.0,
+        "background": "#0C1A1C",
+        "nodes_html": "\n\n\n    <div class=\"node node-text\" style=\"left:48.00px;top:96.96px;width:1184.00px;height:40.00px;color:#8A8A9A;font-family:'Courier New',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">app.py</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:165.76px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Courier New',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\"># Before</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:220.16px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Courier New',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">def greet( name,age ,city='NYC' ):</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:274.56px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Courier New',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">    return f'Hi {name}'</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:383.36px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Courier New',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">$ black app.py</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:492.16px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Courier New',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\"># After</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:546.56px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Courier New',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">def greet(name, age, city=\"NYC\"):</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:600.96px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Courier New',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">    return f\"Hi {name}\"</div>"
       }
     },
     "comparison-columns": {
-      "status": "flagged",
-      "date": "2026-07-02",
-      "comment": "delete this slide layout - redundant with \"comparison-columns\" · Make it 3 items after the headers of legacy platform and modern stack with more space between items",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#FFFFFF",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;font-weight:bold;padding:5px 9px 5px 9px;\">Side-by-Side Evaluation</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:65.28px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Legacy Platform</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:157.44px;width:577.60px;height:65.28px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Modern Stack</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:251.52px;width:577.60px;height:59.52px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Deploy time: 4 hours</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:251.52px;width:577.60px;height:59.52px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Deploy time: 8 min</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:339.84px;width:577.60px;height:59.52px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Manual scaling</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:339.84px;width:577.60px;height:59.52px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Auto-scales fast</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:428.16px;width:577.60px;height:59.52px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Single failure point</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:428.16px;width:577.60px;height:59.52px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Isolated fault zones</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:516.48px;width:577.60px;height:59.52px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">On-premise; high cost</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:516.48px;width:577.60px;height:59.52px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Cloud-native; low cost</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;font-weight:normal;padding:5px 9px 5px 9px;\">1</div>"
-      }
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "definition": {
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "feature-list": {
+      "status": "approved",
+      "date": "2026-07-02"
     },
     "icon-text-rows": {
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "image-half-bleed": {
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "kpi-grid": {
       "status": "flagged",
       "date": "2026-07-02",
-      "comment": "Can't read the subtext like \"high standards...\"",
+      "comment": "spacing is bad",
       "before": {
         "width_px": 1280.0,
         "height_px": 720.0,
-        "background": "#FAFAFA",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;font-weight:bold;padding:5px 9px 5px 9px;\">What Drives Us</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Excellence</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:240.64px;width:1184.00px;height:46.72px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">High standards in every deliverable we ship.</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:316.16px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Integrity</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:399.36px;width:1184.00px;height:46.72px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Transparent and honest in all we do.</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:474.88px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Innovation</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:558.08px;width:1184.00px;height:46.72px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Investing in ideas that shape tomorrow.</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#7F8C8D;font-family:'Arial',Arial;font-size:21.3px;font-weight:normal;padding:5px 9px 5px 9px;\">1</div>"
+        "background": "#FFFFFF",
+        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Key Metrics This Quarter</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:164.80px;width:375.47px;height:67.20px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">98.7%</div>\n\n    <div class=\"node node-text\" style=\"left:48.00px;top:295.36px;width:375.47px;height:64.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Uptime</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:164.80px;width:375.47px;height:67.20px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">1,240</div>\n\n    <div class=\"node node-text\" style=\"left:452.27px;top:295.36px;width:375.47px;height:64.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">New accounts</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:164.80px;width:375.47px;height:67.20px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">4.6/5</div>\n\n    <div class=\"node node-text\" style=\"left:856.53px;top:295.36px;width:375.47px;height:64.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Support rating</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:402.88px;width:375.47px;height:67.20px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">$2.1M</div>\n\n    <div class=\"node node-text\" style=\"left:48.00px;top:533.44px;width:375.47px;height:64.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Net new revenue</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:395.52px;width:375.47px;height:67.20px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">12 days</div>\n\n    <div class=\"node node-text\" style=\"left:452.27px;top:526.08px;width:375.47px;height:118.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Avg. time to value</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:402.88px;width:375.47px;height:67.20px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">31%</div>\n\n    <div class=\"node node-text\" style=\"left:856.53px;top:533.44px;width:375.47px;height:64.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Expansion rate</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
       }
+    },
+    "numbered-steps": {
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "pros-cons": {
+      "status": "flagged",
+      "date": "2026-07-02",
+      "comment": "too similar to before after slide type - delete this and give the before after a more versatile name",
+      "before": {
+        "width_px": 1280.0,
+        "height_px": 720.0,
+        "background": "#FFFFFF",
+        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Building It In-House</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:65.28px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Pros</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:157.44px;width:577.60px;height:65.28px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Cons</div>\n\n    <div class=\"node node-text\" style=\"left:86.40px;top:251.52px;width:539.20px;height:98.56px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Full control of the roadmap</div>\n\n    <div class=\"node node-text\" style=\"left:86.40px;top:378.88px;width:539.20px;height:64.00px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">No per-seat licensing</div>\n\n    <div class=\"node node-text\" style=\"left:86.40px;top:506.24px;width:539.20px;height:98.56px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Tailored to our workflow</div>\n\n    <div class=\"node node-text\" style=\"left:692.80px;top:251.52px;width:539.20px;height:64.00px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Months of lead time</div>\n\n    <div class=\"node node-text\" style=\"left:692.80px;top:378.88px;width:539.20px;height:98.56px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Ongoing maintenance burden</div>\n\n    <div class=\"node node-text\" style=\"left:692.80px;top:506.24px;width:539.20px;height:64.00px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Hiring specialised staff</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Calibri',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
+      }
+    },
+    "pull-quote": {
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "question": {
+      "status": "approved",
+      "date": "2026-07-02"
     },
     "quote-opener": {
-      "status": "flagged",
-      "date": "2026-07-02",
-      "comment": "not all the text is displayed correctly. might be a spacing issue",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#FFFFFF",
-        "nodes_html": "\n    <div class=\"node node-text\" style=\"left:104.64px;top:208.00px;width:1127.36px;height:211.20px;color:#1A1A2E;font-family:'Cambria',Arial;font-size:56.0px;font-weight:normal;padding:5px 9px 5px 9px;\">\"The best interface is the one that disappears the moment it earns your confidence.\"</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:448.00px;width:1127.36px;height:64.00px;color:#1A1A2E;font-family:'Cambria',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">- Head of Product Design</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Cambria',Arial;font-size:21.3px;font-weight:normal;padding:5px 9px 5px 9px;\">1</div>"
-      }
+      "status": "approved",
+      "date": "2026-07-02"
     },
     "section-divider": {
-      "status": "flagged",
-      "date": "2026-07-02",
-      "comment": "Change the position of the number to be a bit higher such that the text is center-aligned instead of the number",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#FFFFFF",
-        "nodes_html": "\n    <div class=\"node node-text\" style=\"left:104.64px;top:254.40px;width:1127.36px;height:105.60px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:80.0px;font-weight:bold;padding:5px 9px 5px 9px;\">01</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:388.80px;width:1127.36px;height:76.80px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:56.0px;font-weight:bold;padding:5px 9px 5px 9px;\">Where We Stand Today</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Calibri',Arial;font-size:21.3px;font-weight:normal;padding:5px 9px 5px 9px;\">1</div>"
-      }
+      "status": "approved",
+      "date": "2026-07-02"
     },
     "stat-callout": {
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "statement": {
+      "status": "approved",
+      "date": "2026-07-02"
+    },
+    "this-vs-that": {
       "status": "flagged",
       "date": "2026-07-02",
-      "comment": "get rid of the small grey text - it's distracting",
+      "comment": "Proportions are off for VS size and its position is strange",
       "before": {
         "width_px": 1280.0,
         "height_px": 720.0,
         "background": "#FFFFFF",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#212121;font-family:'Arial',Arial;font-size:56.0px;font-weight:bold;padding:5px 9px 5px 9px;\">By the Numbers</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:257.12px;width:375.47px;height:96.00px;color:#212121;font-family:'Arial',Arial;font-size:80.0px;font-weight:bold;padding:5px 9px 5px 9px;\">127%</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:381.92px;width:375.47px;height:54.40px;color:#212121;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Revenue Target</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:465.12px;width:375.47px;height:40.00px;color:#9E9E9E;font-family:'Arial',Arial;font-size:33.3px;font-weight:normal;padding:5px 9px 5px 9px;\">$3.8B total</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:257.12px;width:375.47px;height:96.00px;color:#212121;font-family:'Arial',Arial;font-size:80.0px;font-weight:bold;padding:5px 9px 5px 9px;\">94%</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:381.92px;width:375.47px;height:54.40px;color:#212121;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Retention Rate</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:257.12px;width:375.47px;height:96.00px;color:#212121;font-family:'Arial',Arial;font-size:80.0px;font-weight:bold;padding:5px 9px 5px 9px;\">48 NPS</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:381.92px;width:375.47px;height:54.40px;color:#212121;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Net Promoter</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:465.12px;width:375.47px;height:40.00px;color:#9E9E9E;font-family:'Arial',Arial;font-size:33.3px;font-weight:normal;padding:5px 9px 5px 9px;\">+12 pts YoY</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#9E9E9E;font-family:'Arial',Arial;font-size:21.3px;font-weight:normal;padding:5px 9px 5px 9px;\">1</div>"
+        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Cloud or On-Prem</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:291.52px;width:520.00px;height:96.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">3 wks</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:416.32px;width:520.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Cloud time-to-launch</div>\n    <div class=\"node node-text\" style=\"left:712.00px;top:291.52px;width:520.00px;height:96.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">6 mo</div>\n    <div class=\"node node-text\" style=\"left:712.00px;top:416.32px;width:520.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">On-prem time-to-launch</div>\n\n    <div class=\"node node-text\" style=\"left:596.80px;top:296.32px;width:86.40px;height:86.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">VS</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
       }
     },
     "timeline": {
-      "status": "flagged",
-      "date": "2026-07-02",
-      "comment": "foundation text gets cut off at the end (set limit for how many words can appear - the other columns are perfect)",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#F9FBE7",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;font-weight:bold;padding:5px 9px 5px 9px;\">Key Milestones</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:274.40px;height:40.00px;color:#78909C;font-family:'Arial',Arial;font-size:33.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Q1</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:226.24px;width:274.40px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Foundation</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:309.44px;width:274.40px;height:295.36px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">Cloud migration and core setup complete.</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:157.44px;width:274.40px;height:40.00px;color:#78909C;font-family:'Arial',Arial;font-size:33.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Q2</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:226.24px;width:274.40px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">API Launch</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:309.44px;width:274.40px;height:295.36px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">REST API live with 99.99% SLA.</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:157.44px;width:274.40px;height:40.00px;color:#78909C;font-family:'Arial',Arial;font-size:33.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Q3</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:226.24px;width:274.40px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">AI Beta</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:309.44px;width:274.40px;height:295.36px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">AI features shipped to 500 partners.</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:157.44px;width:274.40px;height:40.00px;color:#78909C;font-family:'Arial',Arial;font-size:33.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Q4</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:226.24px;width:274.40px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:bold;padding:5px 9px 5px 9px;\">Scale Out</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:309.44px;width:274.40px;height:295.36px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;font-weight:normal;padding:5px 9px 5px 9px;\">APAC regions live; global coverage.</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#78909C;font-family:'Arial',Arial;font-size:21.3px;font-weight:normal;padding:5px 9px 5px 9px;\">1</div>"
-      }
+      "status": "approved",
+      "date": "2026-07-02"
     },
     "title-slide": {
       "status": "flagged",
