@@ -1,5 +1,9 @@
 # slidekit — agent-first slide builder
 
+**🔗 Layout feedback site: <https://quiet-arithmetic-72b532.netlify.app/>** — the
+password-gated gallery of all 40 layouts (👍/👎 + comment per layout, from your
+phone; see [web/README.md](web/README.md)).
+
 A slide-generation system where layout correctness is **provable from source**
 rather than verified by rendering screenshots. An agent authors a declarative
 slide IR; a deterministic layout engine computes geometry from real font
