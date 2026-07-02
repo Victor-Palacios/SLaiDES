@@ -15,7 +15,7 @@ slides:
     events:
       - date: "Q1"
         title: "Foundation"
-        description: "Cloud migration and core setup complete."
+        description: "Cloud platform migration done."
       - date: "Q2"
         title: "API Launch"
         description: "REST API live with 99.99% SLA."

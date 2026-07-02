@@ -29,6 +29,13 @@ from slidekit.metrics.constants import (
 
 Severity = Literal["error", "warning"]
 
+# Max acceptable spread (in wrapped lines) between the longest and shortest
+# timeline event description before W_TIMELINE_BALANCE flags the column as
+# unbalanced. In the narrow timeline columns even a one-line outlier reads as
+# "cut off" next to its siblings (operator feedback FB-013), so timelines are
+# held to uniform column heights: any spread beyond this many lines warns.
+TIMELINE_BALANCE_LINE_SLACK = 0
+
 
 @dataclass
 class LintIssue:
@@ -179,6 +186,38 @@ def _check_slide(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
                 message=f"Text block has {len(node.lines)} lines — consider splitting across slides.",
                 suggested_fix="Reduce to ≤6 bullet points or split into two slides.",
             ))
+
+    # W_TIMELINE_BALANCE — one timeline column's description wraps to noticeably
+    # more lines than its siblings, so it reads as crowded/cut-off next to the
+    # others (operator feedback FB-013: "set a limit for how many words can
+    # appear; the other columns are perfect"). Deterministic: compare wrapped
+    # line counts across the event-description nodes.
+    if slide.component == "timeline":
+        desc_nodes = [
+            n for n in slide.nodes
+            if n.node_type == "text" and n.node_id.startswith("ev_desc") and n.lines
+        ]
+        if len(desc_nodes) >= 2:
+            line_counts = [len(n.lines) for n in desc_nodes]
+            lo, hi = min(line_counts), max(line_counts)
+            if hi - lo > TIMELINE_BALANCE_LINE_SLACK:
+                longest = max(desc_nodes, key=lambda n: len(n.lines))
+                issues.append(LintIssue(
+                    code="W_TIMELINE_BALANCE",
+                    severity="warning",
+                    slide=slide.slide_index,
+                    node_path=longest.node_id,
+                    message=(
+                        f"Timeline event description '{longest.node_id}' wraps to "
+                        f"{hi} lines while the shortest column uses {lo} — the columns "
+                        f"look unbalanced and the long one reads as cut off."
+                    ),
+                    suggested_fix=(
+                        f"Shorten this description so every column wraps within "
+                        f"{lo + TIMELINE_BALANCE_LINE_SLACK} lines (trim to roughly the "
+                        f"word count of the shorter columns)."
+                    ),
+                ))
 
     # W_TITLE_HIERARCHY — title not clearly larger than body.
     title_nodes = [n for n in slide.nodes if n.node_type == "text" and n.bold and n.size_pt]

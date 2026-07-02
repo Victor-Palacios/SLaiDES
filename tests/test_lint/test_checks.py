@@ -353,6 +353,55 @@ class TestOutputFormat:
             assert "message" in d
             assert "suggested_fix" in d
 
+    def test_timeline_balance_warns_on_uneven_columns(self):
+        """FB-013: a timeline column that wraps to more lines than its siblings
+        reads as cut off — W_TIMELINE_BALANCE flags it (deterministic, no render)."""
+        deck, rd = _deck_with_one_slide(textwrap.dedent("""\
+            version: 1
+            slides:
+              - component: timeline
+                title: "Roadmap"
+                events:
+                  - date: "Q1"
+                    title: "Foundation"
+                    description: "Cloud migration and core setup complete."
+                  - date: "Q2"
+                    title: "API Launch"
+                    description: "REST API live with 99.99% SLA."
+                  - date: "Q3"
+                    title: "AI Beta"
+                    description: "AI features shipped to 500 partners."
+                  - date: "Q4"
+                    title: "Scale Out"
+                    description: "APAC regions live; global coverage."
+        """))
+        codes = {i.code for i in lint(deck, rd)}
+        assert "W_TIMELINE_BALANCE" in codes
+
+    def test_timeline_balance_clean_when_columns_even(self):
+        """Balanced timeline columns (all wrap to the same line count) do not warn."""
+        deck, rd = _deck_with_one_slide(textwrap.dedent("""\
+            version: 1
+            slides:
+              - component: timeline
+                title: "Roadmap"
+                events:
+                  - date: "Q1"
+                    title: "Foundation"
+                    description: "Cloud platform migration done."
+                  - date: "Q2"
+                    title: "API Launch"
+                    description: "REST API live with 99.99% SLA."
+                  - date: "Q3"
+                    title: "AI Beta"
+                    description: "AI features shipped to 500 partners."
+                  - date: "Q4"
+                    title: "Scale Out"
+                    description: "APAC regions live; global coverage."
+        """))
+        codes = {i.code for i in lint(deck, rd)}
+        assert "W_TIMELINE_BALANCE" not in codes
+
     def test_has_errors_returns_true_on_error(self):
         node = _text_node("n", Rect(0, 0, 5_000_000, 500_000))
         slide = _make_slide(nodes=[node])

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_44",
+          "node_id": "title_1",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#1B5E20"
         },
         {
-          "node_id": "ev_date_45",
+          "node_id": "ev_date_2",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -57,7 +57,7 @@
           "text_color": "#F57F17"
         },
         {
-          "node_id": "ev_title_46",
+          "node_id": "ev_title_3",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -80,7 +80,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_47",
+          "node_id": "ev_desc_4",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -88,11 +88,17 @@
             "w": 2613660,
             "h": 2813305
           },
-          "text_content": "Cloud migration and core setup complete.",
+          "text_content": "Cloud platform migration done.",
           "lines": [
             {
               "text": "Cloud",
               "width_emu": 1128204,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "platform",
+              "width_emu": 1559793,
               "height_emu": 518160,
               "overflows": false
             },
@@ -103,20 +109,8 @@
               "overflows": false
             },
             {
-              "text": "and core",
-              "width_emu": 1680394,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "setup",
-              "width_emu": 1056308,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "complete.",
-              "width_emu": 1872047,
+              "text": "done.",
+              "width_emu": 1080554,
               "height_emu": 518160,
               "overflows": false
             }
@@ -127,7 +121,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_48",
+          "node_id": "ev_date_5",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -152,7 +146,7 @@
           "text_color": "#F57F17"
         },
         {
-          "node_id": "ev_title_49",
+          "node_id": "ev_title_6",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -175,7 +169,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_50",
+          "node_id": "ev_desc_7",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -216,7 +210,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_51",
+          "node_id": "ev_date_8",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -241,7 +235,7 @@
           "text_color": "#F57F17"
         },
         {
-          "node_id": "ev_title_52",
+          "node_id": "ev_title_9",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -264,7 +258,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_53",
+          "node_id": "ev_desc_10",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -305,7 +299,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_54",
+          "node_id": "ev_date_11",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -330,7 +324,7 @@
           "text_color": "#F57F17"
         },
         {
-          "node_id": "ev_title_55",
+          "node_id": "ev_title_12",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -353,7 +347,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_56",
+          "node_id": "ev_desc_13",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -396,7 +390,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_57",
+          "node_id": "chrome_pagenum_14",
           "node_type": "text",
           "rect": {
             "x": 10363200,

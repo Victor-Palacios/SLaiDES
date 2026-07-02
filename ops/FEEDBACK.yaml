@@ -123,13 +123,13 @@ comments:
 - id: FB-013
   component: timeline
   family: timeline
-  status: open
+  status: done
   severity: med
   comment: 👎 foundation text gets cut off at the end (set limit for how many words can appear - the other columns are perfect)
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'queued as T-059'
+  notes: 'done T-059 — new W_TIMELINE_BALANCE advisory flags any timeline column that wraps to more lines than its siblings (deterministic, no render); specimen Q1 trimmed to balance all four columns at 4 lines'
 - id: FB-014
   component: section-divider
   family: emphasis-stack
