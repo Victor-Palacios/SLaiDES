@@ -507,6 +507,17 @@ Operator session, three linked requests:
   blocker, but the geometry is dishonest. Proper fix (adaptive item font or item cap in
   dense cells) is deferred to T-064; the web-preview geometry guard exempts `swot` with a
   pointer here until then.
+- ASSESSMENT (2026-07-02 burst, kept deferred): quantified the budget. A swot quadrant's
+  `items_h` is ~1.2" for the 2-item specimen, but two full leaded-line boxes
+  (2×0.567") plus the mandatory 0.3" inter-item gap (E_GAP floor, and the per-item boxes
+  carry distinct group_ids so the gap is enforced) need ~1.43" — the cell is genuinely too
+  short to make both boxes ≥ one leaded line without triggering E_OVERFLOW/E_OVERLAP. So the
+  `min(slot_h, …)` cap is not a bug to unpick in isolation; an honest fix is STRUCTURAL — a
+  smaller swot item type-tier, an item cap, or taller cells (fewer stacked headings). The PDF
+  render is clean at all times (vision-confirmed this session — descenders on
+  "Opportunities"/"Partnerships" render fully; the emitter does not clip to the box). Keeping
+  T-064 deferred as a structural task rather than shipping a risky mid-burst rework; the guard
+  exemption + this note remain the codified record.
 
 ## 2026-07-02 — FB-008/011/017 (remove tertiary muted lines): specimen-scoped fix
 Three consistent operator notes asked to remove tertiary supporting text: title-slide
