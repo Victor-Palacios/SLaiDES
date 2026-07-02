@@ -1,0 +1,12 @@
+{
+  "submitted_at": "2026-07-02T01:50:03.368Z",
+  "source": "web",
+  "items": [
+    {
+      "component": "title-slide",
+      "verdict": "bad",
+      "comment": "remove the distracting subheader",
+      "severity": "med"
+    }
+  ]
+}
