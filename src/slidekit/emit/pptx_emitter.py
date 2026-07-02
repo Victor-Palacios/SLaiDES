@@ -144,7 +144,7 @@ def _emit_text(slide, node: "ResolvedNode", palette) -> None:
     size_pt = node.size_pt or 32.0
 
     p = tf.paragraphs[0]
-    p.alignment = PP_ALIGN.LEFT
+    p.alignment = PP_ALIGN.CENTER if node.align == "center" else PP_ALIGN.LEFT
     run = p.add_run()
     run.text = node.text_content or ""
     run.font.name = font_name

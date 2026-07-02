@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_230",
+          "node_id": "title_195",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -31,7 +31,7 @@
           "italic": false
         },
         {
-          "node_id": "bullet_231",
+          "node_id": "bullet_196",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -43,7 +43,7 @@
           "fill_color": "#E8743B"
         },
         {
-          "node_id": "bl_item_232",
+          "node_id": "bl_item_197",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -67,11 +67,11 @@
           "group_id": "bullet_0"
         },
         {
-          "node_id": "bullet_233",
+          "node_id": "bullet_198",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2810255,
+            "y": 3188207,
             "w": 164592,
             "h": 164592
           },
@@ -79,11 +79,11 @@
           "fill_color": "#E8743B"
         },
         {
-          "node_id": "bl_item_234",
+          "node_id": "bl_item_199",
           "node_type": "text",
           "rect": {
             "x": 914400,
-            "y": 2633472,
+            "y": 3011424,
             "w": 10820400,
             "h": 518159
           },
@@ -103,11 +103,11 @@
           "group_id": "bullet_1"
         },
         {
-          "node_id": "bullet_235",
+          "node_id": "bullet_200",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 3944111,
+            "y": 4700015,
             "w": 164592,
             "h": 164592
           },
@@ -115,11 +115,11 @@
           "fill_color": "#E8743B"
         },
         {
-          "node_id": "bl_item_236",
+          "node_id": "bl_item_201",
           "node_type": "text",
           "rect": {
             "x": 914400,
-            "y": 3767328,
+            "y": 4523232,
             "w": 10820400,
             "h": 518159
           },
@@ -137,47 +137,11 @@
           "bold": false,
           "italic": false,
           "group_id": "bullet_2"
-        },
-        {
-          "node_id": "bullet_237",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 5077967,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "bullet_3",
-          "fill_color": "#E8743B"
-        },
-        {
-          "node_id": "bl_item_238",
-          "node_type": "text",
-          "rect": {
-            "x": 914400,
-            "y": 4901184,
-            "w": 10820400,
-            "h": 518159
-          },
-          "text_content": "Two flagship accounts renewed early",
-          "lines": [
-            {
-              "text": "Two flagship accounts renewed early",
-              "width_emu": 7080634,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "bullet_3"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_239",
+          "node_id": "chrome_pagenum_202",
           "node_type": "text",
           "rect": {
             "x": 10363200,

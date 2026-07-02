@@ -11,15 +11,14 @@ page_numbers:
   enabled: false
 slides:
   - component: code
-    title: "app.py"
+    title: "hello.py"
     chrome: true
     code: |
-      # Before
-      def greet( name,age ,city='NYC' ):
-          return f'Hi {name}'
+      # The classic, end to end
+      def main():
+          print("Hello, world!")
 
-      $ black app.py
+      main()
 
-      # After
-      def greet(name, age, city="NYC"):
-          return f"Hi {name}"
+      $ python hello.py
+      Hello, world!

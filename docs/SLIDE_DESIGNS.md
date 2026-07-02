@@ -1,10 +1,10 @@
-# slidekit slide-design catalog — 40 components (~25 distinct layouts)
+# slidekit slide-design catalog — 37 components (25 distinct layouts)
 
 Target: **40 slide components** (up from the 8 shipped in v1). Each component is a
 slidekit unit: one Pydantic model + one layout handler + golden test + example
 + SKILL gallery row. This file is the build blueprint for Phase 9.
 
-Honesty note: those 40 components implement **~25 genuinely distinct layout skeletons** —
+Honesty note: the 37 components implement **25 genuinely distinct layout skeletons** —
 the rest are styled variants of a family anchor (same geometry, different marker / colour /
 orientation / fields). The authoritative mapping is generated in
 [LAYOUT_TAXONOMY.md](LAYOUT_TAXONOMY.md) from `src/slidekit/catalog/registry.py`.
@@ -79,8 +79,7 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 | # | key | required keys | use |
 |---|---|---|---|
 | 16 | ✓ `comparison-columns` | `left_title`,`right_title`,`left_items[]`,`right_items[]` | A vs B lists |
-| 17 | `before-after` | `before`={title,items[]}, `after`={title,items[]} | two states |
-| 18 | `pros-cons` | `pros[]`, `cons[]` | plus / minus |
+| 17 | `two-panel-list` | `left`/`right`={title,items[]} | any two-state contrast (before/after, pros/cons) |
 | 19 | `this-vs-that` | `left`={value,label}, `right`={value,label} | two headline numbers head-to-head |
 
 ### E. Data & stats
@@ -88,7 +87,6 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 |---|---|---|---|
 | 20 | ✓ `stat-callout` | `stats[]` = {value,label,subtext?} | 3 headline numbers |
 | 21 | `kpi-grid` | `kpis[]` = {value,label} (4–6) | dashboard of small metrics |
-| 22 | `chart-slide` | `chart` (chart slot) (+`title`,`caption`) | one chart, captioned |
 | 23 | `chart-with-insight` | `chart`, `insight` | chart + takeaway callout |
 | 24 | `table-slide` | `headers[]`, `rows[][]` | a small text table |
 | 25 | `metric-comparison` | `metrics[]` = {value,label,delta?} | 2–3 metrics with change |

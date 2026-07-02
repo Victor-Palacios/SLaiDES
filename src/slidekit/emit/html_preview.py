@@ -93,8 +93,22 @@ def _node_html(node: "ResolvedNode", palette) -> str:
 
     chrome_cls = " node-chrome" if node.is_chrome else ""
 
+    if node.node_type == "box":
+        # Boxes are first-class content (accent bars, markers, bar-chart bars, the VS
+        # badge, code window dots). Dropping them made the preview lie about the slide
+        # — operator feedback FB-021/FB-023 traced back to exactly that.
+        style = (
+            f"left:{left};top:{top};width:{width};height:{height};"
+            f"background:{node.fill_color or palette.primary};"
+        )
+        return f'    <div class="node node-box{chrome_cls}" style="{style}"></div>'
+
     if node.node_type == "text":
-        if node.is_chrome or node.is_caption:
+        if node.text_color:
+            # Explicit per-node color (code syntax roles, accent values, labels on
+            # dark shapes) — same precedence as the pptx/pdf emitters.
+            color = node.text_color
+        elif node.is_chrome or node.is_caption:
             color = palette.muted
         else:
             color = palette.text
@@ -109,11 +123,13 @@ def _node_html(node: "ResolvedNode", palette) -> str:
         # where present, are already baked into rect.h), so any top/bottom padding on
         # a border-box would steal a line's worth of space and clip. Horizontal inset
         # only.
+        centered = ";text-align:center" if node.align == "center" else ""
         style = (
             f"left:{left};top:{top};width:{width};height:{height};"
             f"color:{color};font-family:'{font_name}',Arial;font-size:{size_px:.1f}px;"
             f"line-height:{LINE_SPACING_SINGLE};font-weight:{weight};"
-            f"padding:0 9px;"  # horizontal INSET only; vertical baked into rect.h
+            f"padding:0 9px"  # horizontal INSET only; vertical baked into rect.h
+            f"{centered};"
         )
         text = (node.text_content or "").replace("&", "&amp;").replace("<", "&lt;")
         return (

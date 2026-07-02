@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_selection_guide.py` — do not hand-edit. The machine-readable form is `slidekit catalog --json`. A test (`tests/test_catalog`) fails if it drifts._
 
-Pick a component per slide from its **content shape** — no rendering or vision needed. There are **39 components** across **26 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
+Pick a component per slide from its **content shape** — no rendering or vision needed. There are **37 components** across **25 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
 
 ## agenda — Numbered agenda / table of contents.
 
@@ -17,13 +17,6 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - use when: Several peer items as cards.
   - content shape: a set of {title, body, icon?} cards
   - required fields: `cards`
-
-## chart — A single chart.
-
-- **`chart-slide`**
-  - use when: One chart is the focus.
-  - content shape: one chart (+ optional caption)
-  - required fields: `chart`
 
 ## code-block — A dark terminal/IDE-style code block.
 
@@ -220,16 +213,12 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - content shape: one image + a group of content slots
   - required fields: `image`, `content`
 
-## two-panel-list — Two contrasting bulleted panels (before vs after).
+## two-panel-list — Two contrasting bulleted panels (before/after, pros/cons, old/new).
 
-- **`before-after`**
-  - use when: Showing a transformation between two states.
-  - content shape: two titled groups of bullets (states)
-  - required fields: `before`, `after`
-- **`pros-cons`** · variant of `before-after` (pros (accent) vs cons (muted) colour roles)
-  - use when: Weighing advantages against disadvantages.
-  - content shape: two titled groups of bullets (for/against)
-  - required fields: `pros`, `cons`
+- **`two-panel-list`**
+  - use when: Contrasting two states or weighing two sides; the right panel is the accented one.
+  - content shape: two titled groups of bullets (contrasting states)
+  - required fields: `left`, `right`
 
 ## vs-badge — Head-to-head with a central VS badge.
 

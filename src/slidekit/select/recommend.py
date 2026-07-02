@@ -90,7 +90,8 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
     if f.chart and f.insight:
         add("chart-with-insight", 0.95, "a chart with a takeaway")
     elif f.chart:
-        add("chart-slide", 0.9, "a single chart")
+        # The bare chart-slide was retired (FB-025): every chart ships with a takeaway.
+        add("chart-with-insight", 0.85, "a chart (state its takeaway as the insight)")
 
     # tables / matrices
     if f.options_criteria:
@@ -118,8 +119,7 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
         add("this-vs-that", 0.9, "a head-to-head A vs B")
     elif f.groups == 2 and f.items:
         add("comparison-columns", 0.8, "two titled bulleted columns")
-        add("before-after", 0.6, "two contrasting state panels")
-        add("pros-cons", 0.55, "advantages vs disadvantages")
+        add("two-panel-list", 0.6, "two contrasting panels (before/after, pros/cons)")
     elif f.groups == 2:
         add("comparison-columns", 0.7, "two parallel content groups")
 

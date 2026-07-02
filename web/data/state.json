@@ -5,10 +5,6 @@
       "status": "approved",
       "date": "2026-07-02"
     },
-    "before-after": {
-      "status": "approved",
-      "date": "2026-07-02"
-    },
     "big-number": {
       "status": "flagged",
       "date": "2026-07-02",
@@ -34,17 +30,6 @@
     "card-grid": {
       "status": "approved",
       "date": "2026-07-02"
-    },
-    "chart-slide": {
-      "status": "flagged",
-      "date": "2026-07-02",
-      "comment": "delete this",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#FFFFFF",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Quarterly Bookings</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:288.25px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">3.2</div>\n\n    <div class=\"node node-text\" style=\"left:48.00px;top:496.00px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Q1</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:257.27px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">4.1</div>\n\n    <div class=\"node node-text\" style=\"left:351.20px;top:496.00px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Q2</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:205.63px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">5.6</div>\n\n    <div class=\"node node-text\" style=\"left:654.40px;top:496.00px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Q3</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:157.44px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">7</div>\n\n    <div class=\"node node-text\" style=\"left:957.60px;top:496.00px;width:274.40px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Q4</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:564.80px;width:1184.00px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Figures in $M, net of refunds.</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
-      }
     },
     "code": {
       "status": "flagged",
@@ -91,17 +76,6 @@
     "numbered-steps": {
       "status": "approved",
       "date": "2026-07-02"
-    },
-    "pros-cons": {
-      "status": "flagged",
-      "date": "2026-07-02",
-      "comment": "too similar to before after slide type - delete this and give the before after a more versatile name",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#FFFFFF",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Building It In-House</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:65.28px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Pros</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:157.44px;width:577.60px;height:65.28px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Cons</div>\n\n    <div class=\"node node-text\" style=\"left:86.40px;top:251.52px;width:539.20px;height:98.56px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Full control of the roadmap</div>\n\n    <div class=\"node node-text\" style=\"left:86.40px;top:378.88px;width:539.20px;height:64.00px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">No per-seat licensing</div>\n\n    <div class=\"node node-text\" style=\"left:86.40px;top:506.24px;width:539.20px;height:98.56px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Tailored to our workflow</div>\n\n    <div class=\"node node-text\" style=\"left:692.80px;top:251.52px;width:539.20px;height:64.00px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Months of lead time</div>\n\n    <div class=\"node node-text\" style=\"left:692.80px;top:378.88px;width:539.20px;height:98.56px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Ongoing maintenance burden</div>\n\n    <div class=\"node node-text\" style=\"left:692.80px;top:506.24px;width:539.20px;height:64.00px;color:#1A1A2E;font-family:'Calibri',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Hiring specialised staff</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Calibri',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
-      }
     },
     "pull-quote": {
       "status": "approved",
@@ -152,6 +126,10 @@
         "background": "#FFFFFF",
         "nodes_html": "    <div class=\"node node-text\" style=\"left:96.00px;top:187.20px;width:1088.00px;height:96.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Quarterly Business Review</div>"
       }
+    },
+    "two-panel-list": {
+      "status": "approved",
+      "date": "2026-07-02"
     }
   }
 }

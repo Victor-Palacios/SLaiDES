@@ -2,22 +2,9 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 8 · **done** 16 · **wontfix** 1 · _last change 2026-07-02_
+**open** 0 · **done** 24 · **wontfix** 1 · _last change 2026-07-02_
 
-## Open (8)
-
-| ID | Layout | Sev | Comment | Notes |
-|---|---|---|---|---|
-| FB-018 | title-slide | med | 👎 left-center align the title |  |
-| FB-019 | big-number | med | 👎 Make the number bigger (maybe double or 1.5 bigger) and center everything |  |
-| FB-020 | bullet-list | med | 👎 3 items instead of 4 |  |
-| FB-021 | code | med | 👎 Show actual example like “hello world” so I can see text color change |  |
-| FB-022 | pros-cons | med | 👎 too similar to before after slide type - delete this and give the before after a more versatile name |  |
-| FB-023 | this-vs-that | med | 👎 Proportions are off for VS size and its position is strange |  |
-| FB-024 | kpi-grid | med | 👎 spacing is bad |  |
-| FB-025 | chart-slide | med | 👎 delete this |  |
-
-## Done (16)
+## Done (24)
 
 | ID | Layout | Sev | Comment | Notes |
 |---|---|---|---|---|
@@ -37,6 +24,14 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-015 | agenda | med | 👎 Need more space or something because letters like g, p, and y have their bottom half missing. | done T-061 — web-preview emitter pinned line-height + dropped vertical padding + overflow visible (single-line-row descender clip class) |
 | FB-016 | quote-opener | med | 👎 not all the text is displayed correctly. might be a spacing issue | done T-062 — same root cause as FB-015; fixed by the emitter change |
 | FB-017 | big-number | med | 👎 remove final line | done T-063 — context line stripped from big-number specimen (optional field kept) |
+| FB-018 | title-slide | med | 👎 left-center align the title | done — title(+subtitle) block now vertically centred on the full content area, left-aligned |
+| FB-019 | big-number | med | 👎 Make the number bigger (maybe double or 1.5 bigger) and center everything | done — value 1.75x title tier (105pt default), whole stack centred with a centred accent rule (left bar dropped) |
+| FB-020 | bullet-list | med | 👎 3 items instead of 4 | done — specimen trimmed to 3 items |
+| FB-021 | code | med | 👎 Show actual example like “hello world” so I can see text color change | done — specimen is now a hello-world program AND the web preview renderer was fixed to honour per-node text colours (it silently dropped them, so code colours never showed) |
+| FB-022 | two-panel-list | med | 👎 too similar to before after slide type - delete this and give the before after a more versatile name | done — pros-cons deleted; before-after renamed two-panel-list (left/right panels, right accented) covering before/after, pros/cons, old/new |
+| FB-023 | this-vs-that | med | 👎 Proportions are off for VS size and its position is strange | done — VS badge 0.75" (was 0.9"), 'VS' centred inside it on both axes, badge centred on the value+label block, columns centre-aligned; preview renderer previously dropped the badge box entirely |
+| FB-024 | kpi-grid | med | 👎 spacing is bad | done — intra-tile gaps 0.3"->0.12", rule centred under the value, tile text centre-aligned |
+| FB-025 | chart-with-insight | med | 👎 delete this | done — chart-slide deleted; chart-with-insight is the surviving chart layout |
 
 ## Won't fix (1)
 

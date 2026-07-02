@@ -309,25 +309,21 @@ class NumberedStepsSlide(BaseModel):
 # ── Phase 9: comparison (catalog #17–19) ──────────────────────────────────────
 
 
-class BeforeAfterState(BaseModel):
+class ListPanel(BaseModel):
     title: str
     items: list[str] = Field(min_length=1)
 
 
-class BeforeAfterSlide(BaseModel):
-    component: Literal["before-after"]
-    title: Optional[str] = None
-    before: BeforeAfterState
-    after: BeforeAfterState
+class TwoPanelListSlide(BaseModel):
+    """Two contrasting titled bullet panels. The generalised successor of the old
+    before-after / pros-cons pair (operator FB-022): one layout, any two-state
+    contrast — before/after, pros/cons, old/new, problem/solution. The right panel
+    carries the accent (the "preferred"/later state); the left is muted."""
 
-
-class ProsConsSlide(BaseModel):
-    component: Literal["pros-cons"]
+    component: Literal["two-panel-list"]
     title: Optional[str] = None
-    pros_title: str = "Pros"
-    cons_title: str = "Cons"
-    pros: list[str] = Field(min_length=1)
-    cons: list[str] = Field(min_length=1)
+    left: ListPanel
+    right: ListPanel
 
 
 class VersusSide(BaseModel):
@@ -354,13 +350,6 @@ class KpiGridSlide(BaseModel):
     component: Literal["kpi-grid"]
     title: Optional[str] = None
     kpis: list[Kpi] = Field(min_length=1)
-
-
-class ChartSlide(BaseModel):
-    component: Literal["chart-slide"]
-    title: Optional[str] = None
-    chart: ChartSlot
-    caption: Optional[str] = None
 
 
 class ChartWithInsightSlide(BaseModel):
@@ -528,11 +517,9 @@ Slide = Annotated[
         FeatureListSlide,
         CodeSlide,
         NumberedStepsSlide,
-        BeforeAfterSlide,
-        ProsConsSlide,
+        TwoPanelListSlide,
         ThisVsThatSlide,
         KpiGridSlide,
-        ChartSlide,
         ChartWithInsightSlide,
         TableSlide,
         MetricComparisonSlide,

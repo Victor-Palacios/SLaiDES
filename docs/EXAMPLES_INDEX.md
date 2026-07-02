@@ -2,7 +2,7 @@
 
 _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do not hand-edit; run the script and commit. A single-component **specimen** is one slide of just its component; a **showcase** is a multi-slide composition. A test (`tests/test_examples_index`) fails if this file drifts from the decks._
 
-**43** decks · **39** specimens · **4** showcases · **66** slides total
+**41** decks · **37** specimens · **4** showcases · **64** slides total
 
 | Example | Slides | Kind | Components |
 |---|--:|---|---|
@@ -27,11 +27,9 @@ _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do no
 | `20_feature_list.yaml` | 1 | specimen | feature-list |
 | `21_code.yaml` | 1 | specimen | code |
 | `22_numbered_steps.yaml` | 1 | specimen | numbered-steps |
-| `23_before_after.yaml` | 1 | specimen | before-after |
-| `24_pros_cons.yaml` | 1 | specimen | pros-cons |
+| `23_two_panel_list.yaml` | 1 | specimen | two-panel-list |
 | `25_this_vs_that.yaml` | 1 | specimen | this-vs-that |
 | `26_kpi_grid.yaml` | 1 | specimen | kpi-grid |
-| `27_chart_slide.yaml` | 1 | specimen | chart-slide |
 | `28_chart_with_insight.yaml` | 1 | specimen | chart-with-insight |
 | `29_table_slide.yaml` | 1 | specimen | table-slide |
 | `30_metric_comparison.yaml` | 1 | specimen | metric-comparison |

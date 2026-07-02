@@ -1,0 +1,2138 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": null,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_502",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2575560,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Agents in AI",
+          "lines": [
+            {
+              "text": "Agents in AI",
+              "width_emu": 4416847,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "subtitle_503",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 3764280,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "How software learned to act, not just answer",
+          "lines": [
+            {
+              "text": "How software learned to act, not just answer",
+              "width_emu": 8496213,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": []
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "icon-text-rows",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_504",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What Makes Software an Agent",
+          "lines": [
+            {
+              "text": "What Makes Software an Agent",
+              "width_emu": 7893695,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "heading_505",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Perceive",
+          "lines": [
+            {
+              "text": "Perceive",
+              "width_emu": 1776747,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "itr_0"
+        },
+        {
+          "node_id": "body_506",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2109215,
+            "w": 11277600,
+            "h": 627889
+          },
+          "text_content": "Read its environment.",
+          "lines": [
+            {
+              "text": "Read its environment.",
+              "width_emu": 4200141,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "itr_0"
+        },
+        {
+          "node_id": "heading_507",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3011424,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Reason",
+          "lines": [
+            {
+              "text": "Reason",
+              "width_emu": 1559793,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "itr_1"
+        },
+        {
+          "node_id": "body_508",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3621023,
+            "w": 11277600,
+            "h": 627889
+          },
+          "text_content": "Plan a course of action.",
+          "lines": [
+            {
+              "text": "Plan a course of action.",
+              "width_emu": 4512605,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "itr_1"
+        },
+        {
+          "node_id": "heading_509",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4523232,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Act",
+          "lines": [
+            {
+              "text": "Act",
+              "width_emu": 695771,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "itr_2"
+        },
+        {
+          "node_id": "body_510",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5132831,
+            "w": 11277600,
+            "h": 627889
+          },
+          "text_content": "Use tools to change things.",
+          "lines": [
+            {
+              "text": "Use tools to change things.",
+              "width_emu": 5208798,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "itr_2"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_511",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 2,
+      "page_number": 3,
+      "component": "comparison-columns",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_512",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Assistant vs Agent",
+          "lines": [
+            {
+              "text": "Assistant vs Agent",
+              "width_emu": 4782108,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "left_head_513",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 621791
+          },
+          "text_content": "Assistant",
+          "lines": [
+            {
+              "text": "Assistant",
+              "width_emu": 1943733,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "right_head_514",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 621791
+          },
+          "text_content": "Agent",
+          "lines": [
+            {
+              "text": "Agent",
+              "width_emu": 1223293,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "left_item_515",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Answers one prompt",
+          "lines": [
+            {
+              "text": "Answers one prompt",
+              "width_emu": 3959994,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "right_item_516",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Pursues a goal",
+          "lines": [
+            {
+              "text": "Pursues a goal",
+              "width_emu": 2880494,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "left_item_517",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3517391,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Waits for you",
+          "lines": [
+            {
+              "text": "Waits for you",
+              "width_emu": 2503512,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "right_item_518",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3517391,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Acts on its own",
+          "lines": [
+            {
+              "text": "Acts on its own",
+              "width_emu": 2903897,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "left_item_519",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4639055,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Has no tools",
+          "lines": [
+            {
+              "text": "Has no tools",
+              "width_emu": 2400201,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "right_item_520",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4639055,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Calls tools",
+          "lines": [
+            {
+              "text": "Calls tools",
+              "width_emu": 1991804,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_521",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "3",
+          "lines": [
+            {
+              "text": "3",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 3,
+      "page_number": 4,
+      "component": "card-grid",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_522",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Core Capabilities",
+          "lines": [
+            {
+              "text": "Core Capabilities",
+              "width_emu": 4357315,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "card_title_523",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Planning",
+          "lines": [
+            {
+              "text": "Planning",
+              "width_emu": 1823132,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_0"
+        },
+        {
+          "node_id": "card_body_524",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "Break goals into steps.",
+          "lines": [
+            {
+              "text": "Break goals",
+              "width_emu": 2280233,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "into steps.",
+              "width_emu": 1968190,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_0"
+        },
+        {
+          "node_id": "card_title_525",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Tool Use",
+          "lines": [
+            {
+              "text": "Tool Use",
+              "width_emu": 1791295,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_1"
+        },
+        {
+          "node_id": "card_body_526",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "Call APIs and code.",
+          "lines": [
+            {
+              "text": "Call APIs",
+              "width_emu": 1751868,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "and code.",
+              "width_emu": 1896715,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_1"
+        },
+        {
+          "node_id": "card_title_527",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Memory",
+          "lines": [
+            {
+              "text": "Memory",
+              "width_emu": 1655725,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_2"
+        },
+        {
+          "node_id": "card_body_528",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "Recall past context.",
+          "lines": [
+            {
+              "text": "Recall past",
+              "width_emu": 2136018,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "context.",
+              "width_emu": 1512143,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_2"
+        },
+        {
+          "node_id": "card_title_529",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Reflection",
+          "lines": [
+            {
+              "text": "Reflection",
+              "width_emu": 2087314,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_3"
+        },
+        {
+          "node_id": "card_body_530",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "Critique and retry.",
+          "lines": [
+            {
+              "text": "Critique",
+              "width_emu": 1487897,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "and retry.",
+              "width_emu": 1791928,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_3"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_531",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "4",
+          "lines": [
+            {
+              "text": "4",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 4,
+      "page_number": 5,
+      "component": "stat-callout",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_532",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Why Now",
+          "lines": [
+            {
+              "text": "Why Now",
+              "width_emu": 2400040,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "stat_value_533",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "2022",
+          "lines": [
+            {
+              "text": "2022",
+              "width_emu": 1695152,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#E84545"
+        },
+        {
+          "node_id": "stat_label_534",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "LLMs Arrive",
+          "lines": [
+            {
+              "text": "LLMs Arrive",
+              "width_emu": 2279600,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_535",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "tool use emerges",
+          "lines": [
+            {
+              "text": "tool use emerges",
+              "width_emu": 2435510,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_536",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "10x",
+          "lines": [
+            {
+              "text": "10x",
+              "width_emu": 1271364,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#E84545"
+        },
+        {
+          "node_id": "stat_label_537",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Faster",
+          "lines": [
+            {
+              "text": "Faster",
+              "width_emu": 1223714,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_538",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "early reports",
+          "lines": [
+            {
+              "text": "early reports",
+              "width_emu": 1764543,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_539",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "1M+",
+          "lines": [
+            {
+              "text": "1M+",
+              "width_emu": 1503536,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#E84545"
+        },
+        {
+          "node_id": "stat_label_540",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Developers",
+          "lines": [
+            {
+              "text": "Developers",
+              "width_emu": 2184090,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_541",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "building agents",
+          "lines": [
+            {
+              "text": "building agents",
+              "width_emu": 2135994,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_542",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "5",
+          "lines": [
+            {
+              "text": "5",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 5,
+      "page_number": 6,
+      "component": "timeline",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_543",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "From Rules to Agents",
+          "lines": [
+            {
+              "text": "From Rules to Agents",
+              "width_emu": 5522044,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "ev_date_544",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "1980s",
+          "lines": [
+            {
+              "text": "1980s",
+              "width_emu": 882892,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#E84545"
+        },
+        {
+          "node_id": "ev_title_545",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2154936,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Rules",
+          "lines": [
+            {
+              "text": "Rules",
+              "width_emu": 1175854,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_546",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2947415,
+            "w": 3576320,
+            "h": 2813305
+          },
+          "text_content": "Hand-coded logic.",
+          "lines": [
+            {
+              "text": "Hand-coded",
+              "width_emu": 2352551,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "logic.",
+              "width_emu": 1008025,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "ev_date_547",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "2010s",
+          "lines": [
+            {
+              "text": "2010s",
+              "width_emu": 882892,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#E84545"
+        },
+        {
+          "node_id": "ev_title_548",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2154936,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "ML",
+          "lines": [
+            {
+              "text": "ML",
+              "width_emu": 623453,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_549",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2947415,
+            "w": 3576320,
+            "h": 2813305
+          },
+          "text_content": "Learned patterns.",
+          "lines": [
+            {
+              "text": "Learned patterns.",
+              "width_emu": 3384823,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "ev_date_550",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Today",
+          "lines": [
+            {
+              "text": "Today",
+              "width_emu": 911417,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#E84545"
+        },
+        {
+          "node_id": "ev_title_551",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2154936,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Agents",
+          "lines": [
+            {
+              "text": "Agents",
+              "width_emu": 1463439,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_552",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2947415,
+            "w": 3576320,
+            "h": 2813305
+          },
+          "text_content": "Models that act.",
+          "lines": [
+            {
+              "text": "Models that act.",
+              "width_emu": 3048112,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_553",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "6",
+          "lines": [
+            {
+              "text": "6",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 6,
+      "page_number": 7,
+      "component": "card-grid",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_554",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Common Agent Patterns",
+          "lines": [
+            {
+              "text": "Common Agent Patterns",
+              "width_emu": 6233331,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "card_title_555",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "ReAct",
+          "lines": [
+            {
+              "text": "ReAct",
+              "width_emu": 1247750,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_0"
+        },
+        {
+          "node_id": "card_body_556",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "Reason, then act.",
+          "lines": [
+            {
+              "text": "Reason,",
+              "width_emu": 1608286,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "then act.",
+              "width_emu": 1656358,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_0"
+        },
+        {
+          "node_id": "card_title_557",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Tool Use",
+          "lines": [
+            {
+              "text": "Tool Use",
+              "width_emu": 1791295,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_1"
+        },
+        {
+          "node_id": "card_body_558",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "Call functions.",
+          "lines": [
+            {
+              "text": "Call",
+              "width_emu": 743843,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "functions.",
+              "width_emu": 1848222,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_1"
+        },
+        {
+          "node_id": "card_title_559",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "RAG",
+          "lines": [
+            {
+              "text": "RAG",
+              "width_emu": 959532,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_2"
+        },
+        {
+          "node_id": "card_body_560",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "Retrieve facts first.",
+          "lines": [
+            {
+              "text": "Retrieve",
+              "width_emu": 1607865,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "facts first.",
+              "width_emu": 1847379,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_2"
+        },
+        {
+          "node_id": "card_title_561",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Multi-Agent",
+          "lines": [
+            {
+              "text": "Multi-Agent",
+              "width_emu": 2374267,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_3"
+        },
+        {
+          "node_id": "card_body_562",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "Specialists team up.",
+          "lines": [
+            {
+              "text": "Specialists",
+              "width_emu": 2063911,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "team up.",
+              "width_emu": 1680183,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_3"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_563",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "7",
+          "lines": [
+            {
+              "text": "7",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 7,
+      "page_number": 8,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_564",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Multi-Agent Systems",
+          "lines": [
+            {
+              "text": "Multi-Agent Systems",
+              "width_emu": 5275399,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "bullet_565",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1676399,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "bullet_0",
+          "fill_color": "#E84545"
+        },
+        {
+          "node_id": "bl_item_566",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 1499616,
+            "w": 10820400,
+            "h": 518159
+          },
+          "text_content": "Many narrow agents beat one generalist.",
+          "lines": [
+            {
+              "text": "Many narrow agents beat one generalist.",
+              "width_emu": 7825110,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "bullet_0"
+        },
+        {
+          "node_id": "bullet_567",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2810255,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "bullet_1",
+          "fill_color": "#E84545"
+        },
+        {
+          "node_id": "bl_item_568",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2633472,
+            "w": 10820400,
+            "h": 518159
+          },
+          "text_content": "Each owns a clear role.",
+          "lines": [
+            {
+              "text": "Each owns a clear role.",
+              "width_emu": 4488148,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "bullet_1"
+        },
+        {
+          "node_id": "bullet_569",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 3944111,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "bullet_2",
+          "fill_color": "#E84545"
+        },
+        {
+          "node_id": "bl_item_570",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 3767328,
+            "w": 10820400,
+            "h": 518159
+          },
+          "text_content": "A coordinator routes the work.",
+          "lines": [
+            {
+              "text": "A coordinator routes the work.",
+              "width_emu": 5736320,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "bullet_2"
+        },
+        {
+          "node_id": "bullet_571",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 5077967,
+            "w": 164592,
+            "h": 164592
+          },
+          "group_id": "bullet_3",
+          "fill_color": "#E84545"
+        },
+        {
+          "node_id": "bl_item_572",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 4901184,
+            "w": 10820400,
+            "h": 518159
+          },
+          "text_content": "They hand off context.",
+          "lines": [
+            {
+              "text": "They hand off context.",
+              "width_emu": 4264868,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "bullet_3"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_573",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "8",
+          "lines": [
+            {
+              "text": "8",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 8,
+      "page_number": 9,
+      "component": "comparison-columns",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_574",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Promise vs Pitfalls",
+          "lines": [
+            {
+              "text": "Promise vs Pitfalls",
+              "width_emu": 4743562,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "left_head_575",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 621791
+          },
+          "text_content": "Promise",
+          "lines": [
+            {
+              "text": "Promise",
+              "width_emu": 1704008,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "right_head_576",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 621791
+          },
+          "text_content": "Pitfalls",
+          "lines": [
+            {
+              "text": "Pitfalls",
+              "width_emu": 1415790,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "left_item_577",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Automate real work",
+          "lines": [
+            {
+              "text": "Automate real work",
+              "width_emu": 3719847,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "right_item_578",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Errors compound",
+          "lines": [
+            {
+              "text": "Errors compound",
+              "width_emu": 3311872,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "left_item_579",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3517391,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Scale expertise",
+          "lines": [
+            {
+              "text": "Scale expertise",
+              "width_emu": 2952179,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "right_item_580",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3517391,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Hard to predict",
+          "lines": [
+            {
+              "text": "Hard to predict",
+              "width_emu": 2832001,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "left_item_581",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4639055,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Run all day",
+          "lines": [
+            {
+              "text": "Run all day",
+              "width_emu": 2160265,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "right_item_582",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4639055,
+            "w": 5501640,
+            "h": 847344
+          },
+          "text_content": "Needs guardrails",
+          "lines": [
+            {
+              "text": "Needs guardrails",
+              "width_emu": 3264222,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_583",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "9",
+          "lines": [
+            {
+              "text": "9",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    },
+    {
+      "slide_index": 9,
+      "page_number": 10,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_584",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2575560,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Takeaways",
+          "lines": [
+            {
+              "text": "Takeaways",
+              "width_emu": 3968130,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1B4F8A"
+        },
+        {
+          "node_id": "subtitle_585",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 3764280,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Software that acts, with human oversight",
+          "lines": [
+            {
+              "text": "Software that acts, with human oversight",
+              "width_emu": 7776195,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_586",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "10",
+          "lines": [
+            {
+              "text": "10",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

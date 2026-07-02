@@ -600,3 +600,38 @@ first, then pending); gallery.html/gallery.js is the full thumbnail grid with a 
 Seeded state.json with the 9 layouts flagged 2026-07-02 (before = previews at commit
 c222d5c, pre-fix) so the operator can review tonight's burst fixes as comparisons.
 Sessions MUST NOT edit state.json (prompt addendum "OPERATOR REVIEW STATE").
+
+## Web feedback round 2: FB-018..FB-025 (2026-07-02, operator batch of 23 marks)
+
+Root cause worth remembering: the HTML preview renderer (emit/html_preview.py) silently
+DROPPED box nodes and per-node text colours, so the website showed slides without accent
+bars, KPI rules, chart bars, the VS badge, or the code slide's syntax colours (dark text
+on the dark code panel). Several flags (FB-021, FB-023) were really THIS bug. Fixed and
+pinned by tests/test_emit/test_preview_fidelity.py — the preview must carry every node
+type and colour/alignment attribute the emitters do.
+
+New capability: ResolvedNode.align ("center" | None=left), honoured identically by the
+pptx / pdf / html emitters. Geometry rects stay the contract; align only places glyphs
+inside them.
+
+Per-item outcomes (intent pinned by tests/test_layout/test_feedback_fixes.py):
+- FB-018 title-slide: title(+subtitle) block vertically centred on the full content area,
+  text stays left-aligned ("left-center").
+- FB-019 big-number: value = 1.75x title tier (105pt default), whole stack centred, left
+  accent bar replaced by a short centred accent rule under the value.
+- FB-020 bullet-list specimen: 3 items.
+- FB-021 code specimen: hello-world program (comment/code/terminal lines) so the colour
+  roles are visible; plus the preview-colour fix above.
+- FB-022: pros-cons DELETED; before-after RENAMED two-panel-list (left/right ListPanel,
+  right = accented state) — one layout for any two-state contrast. YAML: left/right keys.
+- FB-023 this-vs-that: badge 0.9"->0.75", "VS" caption-tier centred inside it on both
+  axes, badge centred on the value+label block, columns centre-aligned.
+- FB-024 kpi-grid: intra-tile gaps 0.3"->0.12" (tile shares a group_id so lint-exempt),
+  rule centred under the value, tile text centre-aligned.
+- FB-025: chart-slide DELETED; chart-with-insight is the surviving chart layout (the
+  recommender now routes bare charts there).
+
+Catalog is now 37 components / 25 distinct families. state.json migration was mechanical
+only (dropped deleted layouts exactly as the fold script would; carried before-after's
+approved status to its new name) — no review judgement was invented; the "sessions never
+edit state.json" rule still stands for review VERDICTS.

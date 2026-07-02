@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "code_dot_1",
+          "node_id": "code_dot_211",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -20,7 +20,7 @@
           "fill_color": "#FF5F56"
         },
         {
-          "node_id": "code_dot_2",
+          "node_id": "code_dot_212",
           "node_type": "box",
           "rect": {
             "x": 713232,
@@ -32,7 +32,7 @@
           "fill_color": "#FFBD2E"
         },
         {
-          "node_id": "code_dot_3",
+          "node_id": "code_dot_213",
           "node_type": "box",
           "rect": {
             "x": 969264,
@@ -44,7 +44,7 @@
           "fill_color": "#27C93F"
         },
         {
-          "node_id": "code_title_4",
+          "node_id": "code_title_214",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -52,11 +52,11 @@
             "w": 11277600,
             "h": 381000
           },
-          "text_content": "app.py",
+          "text_content": "hello.py",
           "lines": [
             {
-              "text": "app.py",
-              "width_emu": 1143186,
+              "text": "hello.py",
+              "width_emu": 1524248,
               "height_emu": 381000,
               "overflows": false
             }
@@ -70,7 +70,7 @@
           "text_color": "#8FB3A4"
         },
         {
-          "node_id": "code_line_5",
+          "node_id": "code_line_215",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -78,11 +78,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "# Before",
+          "text_content": "# The classic, end to end",
           "lines": [
             {
-              "text": "# Before",
-              "width_emu": 2072977,
+              "text": "# The classic, end to end",
+              "width_emu": 6478054,
               "height_emu": 518159,
               "overflows": false
             }
@@ -95,7 +95,7 @@
           "text_color": "#8FB3A4"
         },
         {
-          "node_id": "code_line_6",
+          "node_id": "code_line_216",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -103,11 +103,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "def greet( name,age ,city='NYC' ):",
+          "text_content": "def main():",
           "lines": [
             {
-              "text": "def greet( name,age ,city='NYC' ):",
-              "width_emu": 8810154,
+              "text": "def main():",
+              "width_emu": 2850344,
               "height_emu": 518159,
               "overflows": false
             }
@@ -120,7 +120,7 @@
           "text_color": "#E6EDF3"
         },
         {
-          "node_id": "code_line_7",
+          "node_id": "code_line_217",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -128,11 +128,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "    return f'Hi {name}'",
+          "text_content": "    print(\"Hello, world!\")",
           "lines": [
             {
-              "text": "    return f'Hi {name}'",
-              "width_emu": 5959810,
+              "text": "    print(\"Hello, world!\")",
+              "width_emu": 6737176,
               "height_emu": 518159,
               "overflows": false
             }
@@ -145,7 +145,7 @@
           "text_color": "#E6EDF3"
         },
         {
-          "node_id": "code_line_8",
+          "node_id": "code_line_218",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -153,11 +153,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "$ black app.py",
+          "text_content": "main()",
           "lines": [
             {
-              "text": "$ black app.py",
-              "width_emu": 3627710,
+              "text": "main()",
+              "width_emu": 1554733,
               "height_emu": 518159,
               "overflows": false
             }
@@ -170,7 +170,7 @@
           "text_color": "#E6EDF3"
         },
         {
-          "node_id": "code_line_9",
+          "node_id": "code_line_219",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -178,36 +178,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "# After",
+          "text_content": "$ python hello.py",
           "lines": [
             {
-              "text": "# After",
-              "width_emu": 1813855,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#8FB3A4"
-        },
-        {
-          "node_id": "code_line_10",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5205977,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "def greet(name, age, city=\"NYC\"):",
-          "lines": [
-            {
-              "text": "def greet(name, age, city=\"NYC\"):",
-              "width_emu": 8551032,
+              "text": "$ python hello.py",
+              "width_emu": 4405077,
               "height_emu": 518159,
               "overflows": false
             }
@@ -220,19 +195,19 @@
           "text_color": "#E6EDF3"
         },
         {
-          "node_id": "code_line_11",
+          "node_id": "code_line_220",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 5724136,
+            "y": 5205977,
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "    return f\"Hi {name}\"",
+          "text_content": "Hello, world!",
           "lines": [
             {
-              "text": "    return f\"Hi {name}\"",
-              "width_emu": 5959810,
+              "text": "Hello, world!",
+              "width_emu": 3368588,
               "height_emu": 518159,
               "overflows": false
             }

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_315",
+          "node_id": "title_259",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,11 +32,11 @@
           "text_color": "#1F2A44"
         },
         {
-          "node_id": "kpi_val_316",
+          "node_id": "kpi_val_260",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1569720,
+            "y": 1734312,
             "w": 3576320,
             "h": 640080
           },
@@ -54,26 +54,27 @@
           "bold": true,
           "italic": false,
           "group_id": "kpi_0",
-          "text_color": "#2DA8A0"
+          "text_color": "#2DA8A0",
+          "align": "center"
         },
         {
-          "node_id": "kpi_rule_317",
+          "node_id": "kpi_rule_261",
           "node_type": "box",
           "rect": {
-            "x": 457200,
+            "x": 1708912,
             "y": 2484120,
-            "w": 1430528,
+            "w": 1072896,
             "h": 54864
           },
           "group_id": "kpi_0",
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_318",
+          "node_id": "kpi_label_262",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2813304,
+            "y": 2648712,
             "w": 3576320,
             "h": 609600
           },
@@ -90,14 +91,15 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "kpi_0"
+          "group_id": "kpi_0",
+          "align": "center"
         },
         {
-          "node_id": "kpi_val_319",
+          "node_id": "kpi_val_263",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 1569720,
+            "y": 1734312,
             "w": 3576320,
             "h": 640080
           },
@@ -115,26 +117,27 @@
           "bold": true,
           "italic": false,
           "group_id": "kpi_1",
-          "text_color": "#2DA8A0"
+          "text_color": "#2DA8A0",
+          "align": "center"
         },
         {
-          "node_id": "kpi_rule_320",
+          "node_id": "kpi_rule_264",
           "node_type": "box",
           "rect": {
-            "x": 4307840,
+            "x": 5559552,
             "y": 2484120,
-            "w": 1430528,
+            "w": 1072896,
             "h": 54864
           },
           "group_id": "kpi_1",
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_321",
+          "node_id": "kpi_label_265",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 2813304,
+            "y": 2648712,
             "w": 3576320,
             "h": 609600
           },
@@ -151,14 +154,15 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "kpi_1"
+          "group_id": "kpi_1",
+          "align": "center"
         },
         {
-          "node_id": "kpi_val_322",
+          "node_id": "kpi_val_266",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 1569720,
+            "y": 1734312,
             "w": 3576320,
             "h": 640080
           },
@@ -176,26 +180,27 @@
           "bold": true,
           "italic": false,
           "group_id": "kpi_2",
-          "text_color": "#2DA8A0"
+          "text_color": "#2DA8A0",
+          "align": "center"
         },
         {
-          "node_id": "kpi_rule_323",
+          "node_id": "kpi_rule_267",
           "node_type": "box",
           "rect": {
-            "x": 8158480,
+            "x": 9410192,
             "y": 2484120,
-            "w": 1430528,
+            "w": 1072896,
             "h": 54864
           },
           "group_id": "kpi_2",
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_324",
+          "node_id": "kpi_label_268",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 2813304,
+            "y": 2648712,
             "w": 3576320,
             "h": 609600
           },
@@ -212,14 +217,15 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "kpi_2"
+          "group_id": "kpi_2",
+          "align": "center"
         },
         {
-          "node_id": "kpi_val_325",
+          "node_id": "kpi_val_269",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3837432,
+            "y": 4002024,
             "w": 3576320,
             "h": 640080
           },
@@ -237,26 +243,27 @@
           "bold": true,
           "italic": false,
           "group_id": "kpi_3",
-          "text_color": "#2DA8A0"
+          "text_color": "#2DA8A0",
+          "align": "center"
         },
         {
-          "node_id": "kpi_rule_326",
+          "node_id": "kpi_rule_270",
           "node_type": "box",
           "rect": {
-            "x": 457200,
+            "x": 1708912,
             "y": 4751832,
-            "w": 1430528,
+            "w": 1072896,
             "h": 54864
           },
           "group_id": "kpi_3",
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_327",
+          "node_id": "kpi_label_271",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 5081016,
+            "y": 4916424,
             "w": 3576320,
             "h": 609600
           },
@@ -273,10 +280,11 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "kpi_3"
+          "group_id": "kpi_3",
+          "align": "center"
         },
         {
-          "node_id": "kpi_val_328",
+          "node_id": "kpi_val_272",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -298,26 +306,27 @@
           "bold": true,
           "italic": false,
           "group_id": "kpi_4",
-          "text_color": "#2DA8A0"
+          "text_color": "#2DA8A0",
+          "align": "center"
         },
         {
-          "node_id": "kpi_rule_329",
+          "node_id": "kpi_rule_273",
           "node_type": "box",
           "rect": {
-            "x": 4307840,
-            "y": 4681728,
-            "w": 1430528,
+            "x": 5559552,
+            "y": 4517136,
+            "w": 1072896,
             "h": 54864
           },
           "group_id": "kpi_4",
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_330",
+          "node_id": "kpi_label_274",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 5010912,
+            "y": 4681728,
             "w": 3576320,
             "h": 1127760
           },
@@ -340,14 +349,15 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "kpi_4"
+          "group_id": "kpi_4",
+          "align": "center"
         },
         {
-          "node_id": "kpi_val_331",
+          "node_id": "kpi_val_275",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 3837432,
+            "y": 4002024,
             "w": 3576320,
             "h": 640080
           },
@@ -365,26 +375,27 @@
           "bold": true,
           "italic": false,
           "group_id": "kpi_5",
-          "text_color": "#2DA8A0"
+          "text_color": "#2DA8A0",
+          "align": "center"
         },
         {
-          "node_id": "kpi_rule_332",
+          "node_id": "kpi_rule_276",
           "node_type": "box",
           "rect": {
-            "x": 8158480,
+            "x": 9410192,
             "y": 4751832,
-            "w": 1430528,
+            "w": 1072896,
             "h": 54864
           },
           "group_id": "kpi_5",
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_333",
+          "node_id": "kpi_label_277",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 5081016,
+            "y": 4916424,
             "w": 3576320,
             "h": 609600
           },
@@ -401,12 +412,13 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "kpi_5"
+          "group_id": "kpi_5",
+          "align": "center"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_334",
+          "node_id": "chrome_pagenum_278",
           "node_type": "text",
           "rect": {
             "x": 10363200,

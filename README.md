@@ -1,7 +1,7 @@
 # slidekit — agent-first slide builder
 
 **🔗 Layout feedback site: <https://quiet-arithmetic-72b532.netlify.app/>** — the
-password-gated gallery of all 40 layouts (👍/👎 + comment per layout, from your
+password-gated gallery of all layouts (👍/👎 + comment per layout, from your
 phone; see [web/README.md](web/README.md)).
 
 A slide-generation system where layout correctness is **provable from source**
@@ -45,7 +45,7 @@ flowchart TB
 | `docs/` | Component catalog, layout taxonomy, selection guide, aesthetics spec, research bibliography |
 | `web/` + `netlify/` + `netlify.toml` | The private layout-feedback website (password-gated Netlify site; see [web/README.md](web/README.md)) |
 | `ops/` | **Agent-ops state** — the plan, prompts, progress ledger, kanban board, feedback queue, session reports (details below) |
-| [SKILL.md](SKILL.md) | The authoring skill: how an agent (or you) writes deck YAML with all 40 components |
+| [SKILL.md](SKILL.md) | The authoring skill: how an agent (or you) writes deck YAML with all 37 components |
 | `integrations/` | slidekit-authored presentation-agent definitions (Phase 8; vendored snapshot pruned 2026-07-02) |
 
 ## How this repo gets built: unattended sessions
@@ -89,7 +89,7 @@ session that used to feed this file was retired 2026-07-02.)
 ### Leaving feedback on a layout (from your phone)
 
 The primary way is the **private feedback website** (see [`web/README.md`](web/README.md)):
-a password-gated Netlify site that shows all 40 layouts as native previews (rendered from
+a password-gated Netlify site that shows every layout as a native preview (rendered from
 resolved geometry, not screenshots) with a 👍/👎 + comment on each. Submitting commits your
 marks to [`web/feedback-inbox/`](web/feedback-inbox); the
 [`web-feedback-intake`](.github/workflows/web-feedback-intake.yml) workflow folds them into
@@ -105,7 +105,7 @@ a reason). No approval step — feedback you file is yours, so it's acted on dir
 ### What a session works on
 
 The core build (Phases 0–8) is complete; the component library stands at 40
-components (~26 distinct layout skeletons — see `docs/LAYOUT_TAXONOMY.md`).
+components (25 distinct layout skeletons — see `docs/LAYOUT_TAXONOMY.md`).
 Priority order (per the prompt's addenda):
 
 1. **Open operator feedback** in `ops/FEEDBACK.yaml` — top priority, worked through

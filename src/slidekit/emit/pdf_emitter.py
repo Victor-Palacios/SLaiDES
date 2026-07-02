@@ -150,16 +150,25 @@ def _draw_text(c, node: "ResolvedNode", palette, page_h: float) -> None:
 
     x = _pt(node.rect.x) + _pt(INSET_LEFT_EMU)
     top = page_h - _pt(node.rect.y) - _pt(INSET_TOP_EMU)
+    centered = node.align == "center"
 
     lines = node.lines or []
     if not lines:
         # Fallback: single line from text_content.
-        c.drawString(x, top - size * 0.85, node.text_content or "")
+        if centered:
+            c.drawCentredString(_pt(node.rect.x) + _pt(node.rect.w) / 2,
+                                top - size * 0.85, node.text_content or "")
+        else:
+            c.drawString(x, top - size * 0.85, node.text_content or "")
         return
 
     cur = top
     for ln in lines:
         line_h = _pt(ln.height_emu) if ln.height_emu else size * 1.2
         baseline = cur - size * 0.85  # ascent approximation
-        c.drawString(x, baseline, ln.text)
+        if centered:
+            # Center each measured line on the rect midline (insets cancel out).
+            c.drawCentredString(_pt(node.rect.x) + _pt(node.rect.w) / 2, baseline, ln.text)
+        else:
+            c.drawString(x, baseline, ln.text)
         cur -= line_h

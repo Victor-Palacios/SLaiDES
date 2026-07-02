@@ -122,11 +122,9 @@ lean outline — a `slides:` list where each slide is a chosen `component` + its
 | `feature-list` | `features[]` = `{icon, heading, body}` (≤3 keeps ≥32pt) | `title` |
 | `checklist` | `title`, `items[]` = `{text, checked?}` | — |
 | `numbered-steps` | `title`?, `steps[]` = `{title, body}` (≤3) | `title` |
-| `before-after` | `before`/`after` = `{title, items[]}` (≤3 each) | `title` |
-| `pros-cons` | `pros[]`, `cons[]` (≤3 each) | `title`, `pros_title`, `cons_title` |
+| `two-panel-list` | `left`/`right` = `{title, items[]}` (≤3 each; right panel is the accented state) | `title` |
 | `this-vs-that` | `left`/`right` = `{value, label}` | `title` |
 | `kpi-grid` | `kpis[]` = `{value, label}` (4–6) | `title` |
-| `chart-slide` | `chart` (chart slot) | `title`, `caption` |
 | `chart-with-insight` | `chart`, `insight` | `title` |
 | `table-slide` | `headers[]`, `rows[][]` (≤4 rows × ≤3 cols keeps ≥32pt) | `title` |
 | `metric-comparison` | `metrics[]` = `{value, label, delta?}` (2–3) | `title` |

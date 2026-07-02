@@ -173,80 +173,80 @@ comments:
 - id: FB-018
   component: title-slide
   family: title
-  status: open
+  status: done
   severity: med
   comment: 👎 left-center align the title
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T22:23:19.850Z
-  notes: ''
+  notes: done — title(+subtitle) block now vertically centred on the full content area, left-aligned
 - id: FB-019
   component: big-number
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: 👎 Make the number bigger (maybe double or 1.5 bigger) and center everything
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T22:34:13.379Z
-  notes: ''
+  notes: done — value 1.75x title tier (105pt default), whole stack centred with a centred accent rule (left bar dropped)
 - id: FB-020
   component: bullet-list
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👎 3 items instead of 4
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T22:34:13.379Z
-  notes: ''
+  notes: done — specimen trimmed to 3 items
 - id: FB-021
   component: code
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 Show actual example like “hello world” so I can see text color change
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T22:34:13.379Z
-  notes: ''
+  notes: done — specimen is now a hello-world program AND the web preview renderer was fixed to honour per-node text colours (it silently dropped them, so code colours never showed)
 - id: FB-022
-  component: pros-cons
+  component: two-panel-list
   family: two-panel-list
-  status: open
+  status: done
   severity: med
   comment: 👎 too similar to before after slide type - delete this and give the before after a more versatile name
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T22:34:13.379Z
-  notes: ''
+  notes: done — pros-cons deleted; before-after renamed two-panel-list (left/right panels, right accented) covering before/after, pros/cons, old/new
 - id: FB-023
   component: this-vs-that
   family: vs-badge
-  status: open
+  status: done
   severity: med
   comment: 👎 Proportions are off for VS size and its position is strange
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T22:34:13.379Z
-  notes: ''
+  notes: done — VS badge 0.75" (was 0.9"), 'VS' centred inside it on both axes, badge centred on the value+label block, columns centre-aligned; preview renderer previously dropped the badge box entirely
 - id: FB-024
   component: kpi-grid
   family: kpi-grid
-  status: open
+  status: done
   severity: med
   comment: 👎 spacing is bad
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T22:34:13.379Z
-  notes: ''
+  notes: done — intra-tile gaps 0.3"->0.12", rule centred under the value, tile text centre-aligned
 - id: FB-025
-  component: chart-slide
-  family: chart
-  status: open
+  component: chart-with-insight
+  family: two-column
+  status: done
   severity: med
   comment: 👎 delete this
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T22:34:13.379Z
-  notes: ''
+  notes: done — chart-slide deleted; chart-with-insight is the surviving chart layout

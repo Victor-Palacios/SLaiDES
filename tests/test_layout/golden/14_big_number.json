@@ -8,47 +8,48 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_192",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2423160,
-            "w": 128016,
-            "h": 2011680
-          },
-          "fill_color": "#00ACC1"
-        },
-        {
-          "node_id": "value_190",
+          "node_id": "value_177",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 2423160,
-            "w": 10738104,
-            "h": 1005840
+            "x": 457200,
+            "y": 1915668,
+            "w": 11277600,
+            "h": 1691640
           },
           "text_content": "3.2M",
           "lines": [
             {
               "text": "3.2M",
-              "width_emu": 1694036,
-              "height_emu": 914400,
+              "width_emu": 2964563,
+              "height_emu": 1600200,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 60.0,
+          "size_pt": 105.0,
           "bold": true,
           "italic": false,
-          "text_color": "#00ACC1"
+          "text_color": "#00ACC1",
+          "align": "center"
         },
         {
-          "node_id": "label_191",
+          "node_id": "rule_178",
+          "node_type": "box",
+          "rect": {
+            "x": 5547360,
+            "y": 3881628,
+            "w": 1097280,
+            "h": 54864
+          },
+          "fill_color": "#00ACC1"
+        },
+        {
+          "node_id": "label_179",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 3703320,
-            "w": 10738104,
+            "x": 457200,
+            "y": 4210812,
+            "w": 11277600,
             "h": 731520
           },
           "text_content": "Active customers worldwide",
@@ -63,12 +64,13 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "align": "center"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_193",
+          "node_id": "chrome_pagenum_180",
           "node_type": "text",
           "rect": {
             "x": 10363200,

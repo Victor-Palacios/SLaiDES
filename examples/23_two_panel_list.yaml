@@ -10,15 +10,15 @@ theme:
 page_numbers:
   enabled: true
 slides:
-  - component: before-after
+  - component: two-panel-list
     title: "Onboarding, Reworked"
-    before:
+    left:
       title: "Before"
       items:
         - "Manual account setup"
         - "Three-day approval wait"
         - "Email-only support"
-    after:
+    right:
       title: "After"
       items:
         - "One-click provisioning"

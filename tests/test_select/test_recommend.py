@@ -33,7 +33,7 @@ def test_quote_variants():
 
 
 def test_chart_and_insight():
-    assert _top(chart=True) == "chart-slide"
+    assert _top(chart=True) == "chart-with-insight"  # bare chart-slide retired (FB-025)
     assert _top(chart=True, insight=True) == "chart-with-insight"
 
 

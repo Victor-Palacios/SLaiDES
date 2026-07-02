@@ -15,11 +15,10 @@ from typing import Optional
 
 from slidekit.ir.models import (
     AgendaSlide,
-    BeforeAfterSlide,
+    TwoPanelListSlide,
     BigNumberSlide,
     BulletListSlide,
     CardGridSlide,
-    ChartSlide,
     ChartWithInsightSlide,
     CodeSlide,
     ComparisonColumnsSlide,
@@ -38,7 +37,6 @@ from slidekit.ir.models import (
     MetricComparisonSlide,
     NumberedStepsSlide,
     ProcessStepsSlide,
-    ProsConsSlide,
     PullQuoteSlide,
     PyramidSlide,
     QuestionSlide,
@@ -198,16 +196,12 @@ def _resolve_slide(
         nodes = _layout_code(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "numbered-steps":
         nodes = _layout_numbered_steps(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "before-after":
-        nodes = _layout_before_after(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "pros-cons":
-        nodes = _layout_pros_cons(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "two-panel-list":
+        nodes = _layout_two_panel_list(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "this-vs-that":
         nodes = _layout_this_vs_that(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "kpi-grid":
         nodes = _layout_kpi_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "chart-slide":
-        nodes = _layout_chart_slide(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "chart-with-insight":
         nodes = _layout_chart_with_insight(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "table-slide":
@@ -276,10 +270,13 @@ def _layout_title_slide(slide: TitleSlide, cx, cy, cw, ch, font, ts, palette) ->
     gap = int(0.3 * EMU_PER_INCH)
     pad = int(0.5 * EMU_PER_INCH)
 
-    # Title — vertically centered in upper 60% of content area.
-    title_area_h = int(ch * 0.6)
+    # Operator feedback FB-018: the title reads "left-center" — left-aligned text with
+    # the title(+subtitle) block vertically centred on the FULL content area, not
+    # floated in the upper part of the slide.
     title_h = int(ts.title * LINE_SPACING_SINGLE * EMU_PER_PT)
-    title_y = cy + (title_area_h - title_h) // 2
+    sub_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT) if slide.subtitle else 0
+    block_h = title_h + (gap + sub_h if slide.subtitle else 0)
+    title_y = cy + max(0, (ch - block_h) // 2)
     title_rect = Rect(cx + pad, title_y, cw - 2 * pad, title_h)
     nodes.append(
         _make_text_node(_nid("title"), slide.title, font, ts.title, bold=True,
@@ -287,7 +284,6 @@ def _layout_title_slide(slide: TitleSlide, cx, cy, cw, ch, font, ts, palette) ->
     )
 
     if slide.subtitle:
-        sub_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
         sub_y = title_y + title_h + gap
         sub_rect = Rect(cx + pad, sub_y, cw - 2 * pad, sub_h)
         nodes.append(
@@ -645,16 +641,52 @@ def _layout_quote_opener(slide: QuoteOpenerSlide, cx, cy, cw, ch, font, ts, pale
     ], cx, cy, cw, ch, font, palette)
 
 
+# Operator feedback FB-019: the hero value should DOMINATE — 1.75× the title tier
+# (105pt at the default scale) — and the whole slide is centred, not bar-left.
+_BIG_NUMBER_VALUE_SCALE = 1.75
+_BIG_NUMBER_RULE_W_EMU = int(1.2 * EMU_PER_INCH)
+_BIG_NUMBER_RULE_H_EMU = int(0.06 * EMU_PER_INCH)
+
+
 def _layout_big_number(slide: BigNumberSlide, cx, cy, cw, ch, font, ts, palette):
-    items = [
-        {"prefix": "value", "text": slide.value, "size": ts.title, "bold": True,
-         "color": palette.accent},
-        {"prefix": "label", "text": slide.label, "size": ts.header, "bold": False},
-    ]
+    """One oversized centred metric: value, short accent rule, label (+ context).
+    The rule is the deterministic non-text mark (replaces the left accent bar,
+    which fought the centred composition — FB-019)."""
+    nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
+    value_pt = ts.title * _BIG_NUMBER_VALUE_SCALE
+
+    rows = [("value", slide.value, value_pt, True, palette.accent),
+            ("label", slide.label, ts.header, False, None)]
     if slide.context:
-        items.append({"prefix": "context", "text": slide.context, "size": ts.body,
-                      "bold": False, "color": palette.muted})
-    return _emphasis_stack(items, cx, cy, cw, ch, font, palette)
+        rows.append(("context", slide.context, ts.body, False, palette.muted))
+
+    measured = []
+    for prefix, text, size, bold, color in rows:
+        lines = wrap(text, font, size, cw, bold=bold)
+        h = max(1, total_text_height_emu(lines))
+        measured.append((prefix, text, size, bold, color, lines, h))
+
+    rule_slot = _BIG_NUMBER_RULE_H_EMU + 2 * gap  # rule sits between value and label
+    total_h = sum(h for *_, h in measured) + rule_slot + gap * max(0, len(measured) - 2)
+    y = cy + max(0, (ch - total_h) // 2)
+
+    for i, (prefix, text, size, bold, color, lines, h) in enumerate(measured):
+        nodes.append(_make_text_node(_nid(prefix), text, font, size, bold=bold,
+                                     italic=False, rect=Rect(cx, y, cw, h), lines=lines,
+                                     color=color, align="center"))
+        y += h
+        if i == 0:  # centred accent rule right under the value
+            nodes.append(ResolvedNode(
+                _nid("rule"), "box",
+                Rect(cx + (cw - _BIG_NUMBER_RULE_W_EMU) // 2, y + gap,
+                     _BIG_NUMBER_RULE_W_EMU, _BIG_NUMBER_RULE_H_EMU),
+                fill_color=palette.accent,
+            ))
+            y += rule_slot
+        else:
+            y += gap
+    return nodes
 
 
 def _layout_pull_quote(slide: PullQuoteSlide, cx, cy, cw, ch, font, ts, palette):
@@ -965,23 +997,13 @@ def _two_panel_list(title, left_head, left_items, left_color,
     return nodes
 
 
-def _layout_before_after(slide: BeforeAfterSlide, cx, cy, cw, ch, font, ts, palette):
-    """Two states head-to-head: the 'before' panel muted, the 'after' panel accent —
-    a deterministic before→after improvement read."""
+def _layout_two_panel_list(slide: TwoPanelListSlide, cx, cy, cw, ch, font, ts, palette):
+    """Two contrasting states head-to-head (before/after, pros/cons, old/new):
+    left panel muted, right panel accent — a deterministic left→right contrast read."""
     return _two_panel_list(
         slide.title,
-        slide.before.title, slide.before.items, palette.muted,
-        slide.after.title, slide.after.items, palette.accent,
-        cx, cy, cw, ch, font, ts, palette,
-    )
-
-
-def _layout_pros_cons(slide: ProsConsSlide, cx, cy, cw, ch, font, ts, palette):
-    """Pros (accent) vs cons (muted), each a bulleted column."""
-    return _two_panel_list(
-        slide.title,
-        slide.pros_title, slide.pros, palette.accent,
-        slide.cons_title, slide.cons, palette.muted,
+        slide.left.title, slide.left.items, palette.muted,
+        slide.right.title, slide.right.items, palette.accent,
         cx, cy, cw, ch, font, ts, palette,
     )
 
@@ -999,7 +1021,12 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
                                      color=palette.primary))
         y += title_h + gap
 
-    badge = int(0.9 * EMU_PER_INCH)
+    # Operator feedback FB-023: the old 0.9" badge dwarfed its own "VS" text (which also
+    # sat top-left inside it) and hung off the value line only, so it floated high of the
+    # visual middle. Now: a modest 0.75" badge, caption-tier "VS" centred inside it on
+    # both axes, the badge centred on the value+label BLOCK, and the columns centred so
+    # the face-off reads symmetrically.
+    badge = int(0.75 * EMU_PER_INCH)
     col_w = (cw - badge - 2 * gap) // 2
     left_x = cx
     right_x = cx + col_w + gap + badge + gap
@@ -1014,19 +1041,23 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
                             (right_x, slide.right, palette.primary)):
         nodes.append(_make_text_node(_nid("vs_value"), side.value, font, ts.title, bold=True,
                                      italic=False, rect=Rect(px, inner_y, col_w, value_h),
-                                     color=color))
+                                     color=color, align="center"))
         nodes.append(_make_text_node(_nid("vs_label"), side.label, font, ts.body, bold=False,
                                      italic=False,
-                                     rect=Rect(px, inner_y + value_h + gap, col_w, label_h)))
+                                     rect=Rect(px, inner_y + value_h + gap, col_w, label_h),
+                                     align="center"))
 
-    # Central VS badge, vertically centred on the value line.
+    # Central VS badge, centred on the value+label block.
     badge_x = cx + (cw - badge) // 2
-    badge_y = inner_y + max(0, (value_h - badge) // 2)
+    badge_y = inner_y + max(0, (block_h - badge) // 2)
     nodes.append(ResolvedNode(_nid("vs_badge"), "box", Rect(badge_x, badge_y, badge, badge),
                               fill_color=palette.accent, group_id="vs_badge"))
-    nodes.append(_make_text_node(_nid("vs_text"), "VS", font, ts.body, bold=True,
-                                 italic=False, rect=Rect(badge_x, badge_y, badge, badge),
-                                 group_id="vs_badge", color=palette.surface))
+    vs_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+    vs_y = badge_y + max(0, (badge - vs_h) // 2)
+    nodes.append(_make_text_node(_nid("vs_text"), "VS", font, ts.caption, bold=True,
+                                 italic=False, rect=Rect(badge_x, vs_y, badge, vs_h),
+                                 group_id="vs_badge", color=palette.surface,
+                                 is_caption=True, align="center"))
     return nodes
 
 
@@ -1121,8 +1152,15 @@ def _layout_kpi_grid(slide: KpiGridSlide, cx, cy, cw, ch, font, ts, palette):
     avail = cy + ch - y
     cell_h = (avail - gap * (rows - 1)) // rows if rows else avail
 
+    # Operator feedback FB-024: full 0.3" sibling gaps INSIDE a tile pulled the
+    # value / rule / label apart until the grid read as loose scatter. A tile is one
+    # intentional group (shared group_id, so tight gaps are lint-exempt): use a 0.12"
+    # inner gap, centre the rule under the value, and centre the tile's text so each
+    # cell reads as a compact dashboard tile.
+    inner = int(0.12 * EMU_PER_INCH)
     value_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
     rule_h = int(0.06 * EMU_PER_INCH)
+    rule_w = max(1, int(cell_w * 0.3))
     for i, kpi in enumerate(slide.kpis):
         gid = f"kpi_{i}"
         r, c = divmod(i, cols)
@@ -1132,36 +1170,19 @@ def _layout_kpi_grid(slide: KpiGridSlide, cx, cy, cw, ch, font, ts, palette):
         # centre the value/rule/label block within the cell.
         label_lines = wrap(kpi.label, font, ts.body, cell_w)
         label_h = max(1, total_text_height_emu(label_lines))
-        block_h = value_h + gap + rule_h + gap + label_h
+        block_h = value_h + inner + rule_h + inner + label_h
         inner_y = ky + max(0, (cell_h - block_h) // 2)
         nodes.append(_make_text_node(_nid("kpi_val"), kpi.value, font, ts.header, bold=True,
                                      italic=False, rect=Rect(kx, inner_y, cell_w, value_h),
-                                     color=palette.accent, group_id=gid))
-        ry = inner_y + value_h + gap
+                                     color=palette.accent, group_id=gid, align="center"))
+        ry = inner_y + value_h + inner
         nodes.append(ResolvedNode(_nid("kpi_rule"), "box",
-                                  Rect(kx, ry, max(1, int(cell_w * 0.4)), rule_h),
+                                  Rect(kx + (cell_w - rule_w) // 2, ry, rule_w, rule_h),
                                   fill_color=palette.accent, group_id=gid))
-        ly = ry + rule_h + gap
+        ly = ry + rule_h + inner
         nodes.append(_make_text_node(_nid("kpi_label"), kpi.label, font, ts.body, bold=False,
                                      italic=False, rect=Rect(kx, ly, cell_w, label_h),
-                                     lines=label_lines, group_id=gid))
-    return nodes
-
-
-def _layout_chart_slide(slide: ChartSlide, cx, cy, cw, ch, font, ts, palette):
-    """One captioned chart filling the content area below the title."""
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
-
-    caption_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT) if slide.caption else 0
-    chart_h = cy + ch - y - (caption_h + gap if slide.caption else 0)
-    nodes.extend(_chart_nodes(slide.chart, cx, y, cw, chart_h, font, ts, palette, "chart"))
-    if slide.caption:
-        nodes.append(_make_text_node(_nid("caption"), slide.caption, font, ts.caption,
-                                     bold=False, italic=False,
-                                     rect=Rect(cx, cy + ch - caption_h, cw, caption_h),
-                                     is_caption=True, color=palette.muted))
+                                     lines=label_lines, group_id=gid, align="center"))
     return nodes
 
 
@@ -1783,6 +1804,7 @@ def _make_text_node(
     is_caption: bool = False,
     group_id: Optional[str] = None,
     color: Optional[str] = None,
+    align: Optional[str] = None,
 ) -> ResolvedNode:
     if lines is None:
         lines = wrap(text, font, size_pt, rect.w, bold=bold, italic=italic)
@@ -1800,4 +1822,5 @@ def _make_text_node(
         is_caption=is_caption,
         group_id=group_id,
         text_color=color,
+        align=align,
     )

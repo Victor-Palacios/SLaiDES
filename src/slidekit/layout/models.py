@@ -63,6 +63,10 @@ class ResolvedNode:
     # time); text nodes may override their default color with text_color.
     fill_color: Optional[str] = None
     text_color: Optional[str] = None
+    # Horizontal paragraph alignment inside the rect: None (= left) or "center".
+    # The rect stays the geometry contract; align only affects glyph placement
+    # within it, identically in every emitter.
+    align: Optional[str] = None
 
     def to_dict(self) -> dict:
         d: dict = {
@@ -101,6 +105,8 @@ class ResolvedNode:
             d["fill_color"] = self.fill_color
         if self.text_color:
             d["text_color"] = self.text_color
+        if self.align:
+            d["align"] = self.align
         if self.children:
             d["children"] = [c.to_dict() for c in self.children]
         return d

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_307",
+          "node_id": "title_251",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,12 +32,12 @@
           "text_color": "#0D47A1"
         },
         {
-          "node_id": "vs_value_308",
+          "node_id": "vs_value_252",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2776728,
-            "w": 4953000,
+            "w": 5021580,
             "h": 914400
           },
           "text_content": "3 wks",
@@ -53,15 +53,16 @@
           "size_pt": 60.0,
           "bold": true,
           "italic": false,
-          "text_color": "#F57F17"
+          "text_color": "#F57F17",
+          "align": "center"
         },
         {
-          "node_id": "vs_label_309",
+          "node_id": "vs_label_253",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3965448,
-            "w": 4953000,
+            "w": 5021580,
             "h": 518159
           },
           "text_content": "Cloud time-to-launch",
@@ -76,15 +77,16 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "align": "center"
         },
         {
-          "node_id": "vs_value_310",
+          "node_id": "vs_value_254",
           "node_type": "text",
           "rect": {
-            "x": 6781800,
+            "x": 6713220,
             "y": 2776728,
-            "w": 4953000,
+            "w": 5021580,
             "h": 914400
           },
           "text_content": "6 mo",
@@ -100,15 +102,16 @@
           "size_pt": 60.0,
           "bold": true,
           "italic": false,
-          "text_color": "#0D47A1"
+          "text_color": "#0D47A1",
+          "align": "center"
         },
         {
-          "node_id": "vs_label_311",
+          "node_id": "vs_label_255",
           "node_type": "text",
           "rect": {
-            "x": 6781800,
+            "x": 6713220,
             "y": 3965448,
-            "w": 4953000,
+            "w": 5021580,
             "h": 518159
           },
           "text_content": "On-prem time-to-launch",
@@ -123,49 +126,52 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "align": "center"
         },
         {
-          "node_id": "vs_badge_312",
+          "node_id": "vs_badge_256",
           "node_type": "box",
           "rect": {
-            "x": 5684520,
-            "y": 2822448,
-            "w": 822960,
-            "h": 822960
+            "x": 5753100,
+            "y": 3287267,
+            "w": 685800,
+            "h": 685800
           },
           "group_id": "vs_badge",
           "fill_color": "#F57F17"
         },
         {
-          "node_id": "vs_text_313",
+          "node_id": "vs_text_257",
           "node_type": "text",
           "rect": {
-            "x": 5684520,
-            "y": 2822448,
-            "w": 822960,
-            "h": 822960
+            "x": 5753100,
+            "y": 3439667,
+            "w": 685800,
+            "h": 381000
           },
           "text_content": "VS",
           "lines": [
             {
               "text": "VS",
-              "width_emu": 576014,
-              "height_emu": 518160,
+              "width_emu": 423540,
+              "height_emu": 381000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 25.0,
           "bold": true,
           "italic": false,
+          "is_caption": true,
           "group_id": "vs_badge",
-          "text_color": "#FFFFFF"
+          "text_color": "#FFFFFF",
+          "align": "center"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_314",
+          "node_id": "chrome_pagenum_258",
           "node_type": "text",
           "rect": {
             "x": 10363200,

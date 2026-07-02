@@ -1,6 +1,6 @@
 """Component-metadata registry — the single source of truth for layout taxonomy + selection.
 
-Each of the 40 IR components is grouped into a *layout family* (a distinct geometric
+Each of the IR components is grouped into a *layout family* (a distinct geometric
 skeleton). Several components are honest **styled variants** of a family anchor — same
 skeleton, differing only by marker/colour/orientation/field-set — so the true count of
 distinct layouts (~25) is smaller than the component count (40). This module records that
@@ -130,15 +130,12 @@ _META: dict[str, dict] = {
         purpose="An ordered vertical list of steps.", use_when="Sequential steps, read top-down.",
         capacity=(2, 6), content_shape="ordered {title, body} steps"),
 
-    # two-panel-list family
-    "before-after": dict(family="two-panel-list", role="anchor",
-        purpose="Two contrasting bulleted panels (before vs after).",
-        use_when="Showing a transformation between two states.",
-        content_shape="two titled groups of bullets (states)"),
-    "pros-cons": dict(family="two-panel-list", role="variant", variant_of="before-after",
-        differs_by="pros (accent) vs cons (muted) colour roles",
-        purpose="Pros vs cons panels.", use_when="Weighing advantages against disadvantages.",
-        content_shape="two titled groups of bullets (for/against)"),
+    # two-panel-list family (renamed from before-after and merged with pros-cons per
+    # operator feedback FB-022 — one layout for any two-state contrast)
+    "two-panel-list": dict(family="two-panel-list", role="anchor",
+        purpose="Two contrasting bulleted panels (before/after, pros/cons, old/new).",
+        use_when="Contrasting two states or weighing two sides; the right panel is the accented one.",
+        content_shape="two titled groups of bullets (contrasting states)"),
 
     # vs-badge
     "this-vs-that": dict(family="vs-badge", role="anchor",
@@ -150,10 +147,8 @@ _META: dict[str, dict] = {
         purpose="A grid of KPIs (value + rule + label).", use_when="A dashboard of 3–6 KPIs.",
         capacity=(3, 6), content_shape="several {value, label} KPIs in a grid"),
 
-    # chart / table
-    "chart-slide": dict(family="chart", role="anchor",
-        purpose="A single chart.", use_when="One chart is the focus.",
-        content_shape="one chart (+ optional caption)"),
+    # table (the bare chart-slide was retired 2026-07-02 per operator feedback FB-025;
+    # chart-with-insight in the two-column family is the surviving chart layout)
     "table-slide": dict(family="table", role="anchor",
         purpose="A data table.", use_when="Tabular rows and columns of values.",
         content_shape="a header row + body rows"),

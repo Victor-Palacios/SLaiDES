@@ -3,12 +3,12 @@
     {
       "slide_index": 0,
       "page_number": 1,
-      "component": "before-after",
+      "component": "two-panel-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_275",
+          "node_id": "title_235",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#243A5E"
         },
         {
-          "node_id": "lp_head_276",
+          "node_id": "lp_head_236",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -56,7 +56,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "rp_head_277",
+          "node_id": "rp_head_237",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -80,7 +80,7 @@
           "text_color": "#2E8B57"
         },
         {
-          "node_id": "lp_mark_278",
+          "node_id": "lp_mark_238",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -92,7 +92,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "lp_item_279",
+          "node_id": "lp_item_239",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -116,7 +116,7 @@
           "group_id": "lp_0"
         },
         {
-          "node_id": "lp_mark_280",
+          "node_id": "lp_mark_240",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -128,7 +128,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "lp_item_281",
+          "node_id": "lp_item_241",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -152,7 +152,7 @@
           "group_id": "lp_1"
         },
         {
-          "node_id": "lp_mark_282",
+          "node_id": "lp_mark_242",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -164,7 +164,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "lp_item_283",
+          "node_id": "lp_item_243",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -188,7 +188,7 @@
           "group_id": "lp_2"
         },
         {
-          "node_id": "rp_mark_284",
+          "node_id": "rp_mark_244",
           "node_type": "box",
           "rect": {
             "x": 6233160,
@@ -200,7 +200,7 @@
           "fill_color": "#2E8B57"
         },
         {
-          "node_id": "rp_item_285",
+          "node_id": "rp_item_245",
           "node_type": "text",
           "rect": {
             "x": 6598920,
@@ -224,7 +224,7 @@
           "group_id": "rp_0"
         },
         {
-          "node_id": "rp_mark_286",
+          "node_id": "rp_mark_246",
           "node_type": "box",
           "rect": {
             "x": 6233160,
@@ -236,7 +236,7 @@
           "fill_color": "#2E8B57"
         },
         {
-          "node_id": "rp_item_287",
+          "node_id": "rp_item_247",
           "node_type": "text",
           "rect": {
             "x": 6598920,
@@ -260,7 +260,7 @@
           "group_id": "rp_1"
         },
         {
-          "node_id": "rp_mark_288",
+          "node_id": "rp_mark_248",
           "node_type": "box",
           "rect": {
             "x": 6233160,
@@ -272,7 +272,7 @@
           "fill_color": "#2E8B57"
         },
         {
-          "node_id": "rp_item_289",
+          "node_id": "rp_item_249",
           "node_type": "text",
           "rect": {
             "x": 6598920,
@@ -298,7 +298,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_290",
+          "node_id": "chrome_pagenum_250",
           "node_type": "text",
           "rect": {
             "x": 10363200,
