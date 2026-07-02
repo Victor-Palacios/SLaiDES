@@ -79,22 +79,24 @@ annotating the `IDEAS.md` line as `→ queued as T-NNN` then `→ done (commit �
 
 ### Leaving feedback on a layout (from your phone)
 
-To comment on a specific slide layout, open **Issues → New issue → Layout feedback**
-(the [`.github/ISSUE_TEMPLATE/layout-feedback.yml`](.github/ISSUE_TEMPLATE/layout-feedback.yml)
-form — it renders as a native form in the GitHub mobile app, so no website or local setup
-is needed). Pick the layout from the dropdown (all 40 components, generated from the
-catalog so it can't drift), type your comment, and submit. To *see* the layouts first,
-open the latest combined preview PDF under
-[`examples/pdf/combined/`](examples/pdf/combined) — GitHub renders PDFs on mobile.
+The primary way is the **private feedback website** (see [`web/README.md`](web/README.md)):
+a password-gated Netlify site that shows all 40 layouts as native previews (rendered from
+resolved geometry, not screenshots) with a 👍/👎 + comment on each. Submitting commits your
+marks to [`web/feedback-inbox/`](web/feedback-inbox); the
+[`web-feedback-intake`](.github/workflows/web-feedback-intake.yml) workflow folds them into
+[`FEEDBACK.yaml`](FEEDBACK.yaml) via `scripts/feedback_intake_web.py`. Access is a single
+`SITE_PASSWORD` (Netlify edge function) — no third-party auth service.
 
-The [`feedback-intake`](.github/workflows/feedback-intake.yml) workflow (which only acts
-on `feedback`-labelled issues **you** authored) records each comment in
-[`FEEDBACK.yaml`](FEEDBACK.yaml) (the source of truth), regenerates the readable
-[`FEEDBACK.md`](FEEDBACK.md), and closes the issue with a confirmation. The nightly then
-treats every `status: open` comment as actionable: it queues a board task under the
-`feedback` epic, makes the change through the usual gates, and marks the comment `done`
-(or `wontfix` with a reason). No approval step — feedback you file is yours, so it's acted
-on directly.
+A **fallback** path still exists: **Issues → New issue → Layout feedback** (the
+[`.github/ISSUE_TEMPLATE/layout-feedback.yml`](.github/ISSUE_TEMPLATE/layout-feedback.yml)
+form). The [`feedback-intake`](.github/workflows/feedback-intake.yml) workflow (which only
+acts on `feedback`-labelled issues **you** authored) records each comment in `FEEDBACK.yaml`,
+regenerates the readable [`FEEDBACK.md`](FEEDBACK.md), and closes the issue.
+
+Either way, `FEEDBACK.yaml` is the source of truth. The nightly treats every `status: open`
+comment as actionable: it queues a board task under the `feedback` epic, makes the change
+through the usual gates, and marks the comment `done` (or `wontfix` with a reason). No
+approval step — feedback you file is yours, so it's acted on directly.
 
 ### What the nightly session does now
 

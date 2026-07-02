@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>slidekit · layout feedback</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <h1>Layout feedback</h1>
+      <p class="sub">Mark each layout 👍 or 👎 and add a note. Submitting commits to
+        <code>FEEDBACK.yaml</code>.</p>
+    </div>
+    <div class="counts" id="counts" aria-live="polite"></div>
+  </div>
+</header>
+
+<main id="gallery" class="gallery" aria-busy="true">
+  <p class="loading">Loading layouts…</p>
+</main>
+
+<footer class="submitbar">
+  <div class="submitbar-inner">
+    <span id="pending" class="pending">No marks yet.</span>
+    <button id="submit" class="submit" disabled>Submit feedback</button>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

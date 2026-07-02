@@ -1,0 +1,27 @@
+# Netlify config for the slidekit layout-feedback site (web/).
+#
+# The site is fully static: web/data/previews.json is generated and committed by
+# scripts/build_web_previews.py (a test keeps it in sync), so Netlify does not run a build.
+# Access is gated by netlify/edge-functions/auth.js (single SITE_PASSWORD); writes go through
+# netlify/functions/submit-feedback.js. The edge function declares its own path via an
+# in-source `export const config`, so it is not repeated here.
+#
+# Required site environment variables (Site settings → Environment variables):
+#   SITE_PASSWORD  – the one password that unlocks the site
+#   GITHUB_TOKEN   – fine-grained PAT with contents:write on this repo
+#   GITHUB_REPO    – "owner/name"
+#   GITHUB_BRANCH  – optional (defaults to "main")
+
+[build]
+  publish = "web"
+  functions = "netlify/functions"
+  command = "echo 'static site — web/data/previews.json is prebuilt & committed'"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Keep the private tool out of search indexes (belt-and-braces; it is password-gated anyway).
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

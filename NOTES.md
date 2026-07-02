@@ -421,3 +421,32 @@ Added `.claude/statusline.sh` (shows `model · dir · ctx Nk/200k (P%)`, turns y
 files — do not remove. (`.claude/settings.local.json` stays gitignored.) To make the warning
 global across all repos, the operator copies the script to `~/.claude/statusline.sh` and sets
 the same `statusLine` block in `~/.claude/settings.json`.
+
+## Private feedback website replaces GitHub issue forms (2026-07-02)
+
+Operator found the GitHub-issue feedback loop unpleasant and asked for a full website only
+they can access. Built a password-gated Netlify site under `web/`:
+
+- **Auth** (decided with operator): a single `SITE_PASSWORD` gate via a Netlify **edge
+  function** (`netlify/edge-functions/auth.js`) — NOT Supabase. Supabase Auth is built for
+  many users (sign-up, user table, per-user RLS); for one operator it's pure overhead. The
+  edge function sets a signed HttpOnly cookie = `HMAC-SHA256(password, "slaides-v1")`; no
+  session store. Free, stays 100% on Netlify, no third-party auth service.
+- **Write path** (decided with operator): live commit via a Netlify **function**
+  (`netlify/functions/submit-feedback.js`) that re-verifies the cookie (defence in depth)
+  and commits each submission as JSON under `web/feedback-inbox/` using a fine-grained PAT
+  (`GITHUB_TOKEN`, contents:write, this repo only).
+- **No JS schema duplication**: the function writes raw submissions; a CI workflow
+  (`.github/workflows/web-feedback-intake.yml`) runs `scripts/feedback_intake_web.py` to
+  fold them into `FEEDBACK.yaml` via the tested `slidekit.feedback.store` (+ regenerate
+  `FEEDBACK.md`), then deletes processed inbox files. Bare 👍 (no comment) is counted but
+  not turned into an open task; 👎/note/any comment → `open` item.
+- **Previews are geometry, not screenshots**: `scripts/build_web_previews.py` renders each
+  of the 40 components' specimen through `load`→`resolve` and reuses `emit.html_preview`'s
+  node renderer to emit `web/data/previews.json` (backgrounds included, so the dark `code`
+  layout renders right). A `test_web` sync test keeps it locked to the catalog.
+
+The GitHub issue-form path (`feedback-intake.yml` + `layout-feedback.yml`) is kept as a
+fallback; both funnel into the same `FEEDBACK.yaml`. Deploy steps + token scope in
+`web/README.md`. Not testable end-to-end here (no Netlify runtime); Python + JSON pieces are
+unit-tested, JS is syntax-checked and reviewed.

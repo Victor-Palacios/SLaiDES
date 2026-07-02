@@ -1,0 +1,50 @@
+# Fold web feedback submissions into FEEDBACK.yaml.
+#
+# The Netlify submit function commits one JSON file per submission under
+# web/feedback-inbox/. This workflow runs scripts/feedback_intake_web.py to canonicalise
+# them into FEEDBACK.yaml (+ regenerate FEEDBACK.md) using the tested Python store, then
+# commits the result and removes the processed inbox files. Runs on push to the inbox (and
+# is manually dispatchable). Same subscription-credit concern as the nightly does NOT apply
+# here: this is a plain Python fold-in, not a Claude session.
+name: web-feedback-intake
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/feedback-inbox/**.json"
+  workflow_dispatch: {}
+
+concurrency:
+  group: web-feedback-intake
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  intake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install slidekit
+        run: pip install -e .
+
+      - name: Fold inbox into FEEDBACK.yaml
+        run: python scripts/feedback_intake_web.py
+
+      - name: Commit canonicalised feedback
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "No changes to commit."; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add FEEDBACK.yaml FEEDBACK.md web/feedback-inbox
+          git commit -m "feedback: fold web submissions into FEEDBACK.yaml [skip ci]"
+          git push origin HEAD:main

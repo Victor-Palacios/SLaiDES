@@ -1,0 +1,6 @@
+# Web feedback landing zone.
+#
+# netlify/functions/submit-feedback.js commits one JSON file here per submission
+# (schema: { submitted_at, source, items: [{component, verdict, comment, severity}] }).
+# .github/workflows/web-feedback-intake.yml then folds these into FEEDBACK.yaml via
+# scripts/feedback_intake_web.py and deletes the processed files. This dir is normally empty.
