@@ -17,10 +17,8 @@ slides:
     left_items:
       - text: "Deploy time: 4 hours"
       - text: "Manual scaling"
-      - text: "Single failure point"
       - text: "On-premise; high cost"
     right_items:
       - text: "Deploy time: 8 min"
       - text: "Auto-scales fast"
-      - text: "Isolated fault zones"
       - text: "Cloud-native; low cost"

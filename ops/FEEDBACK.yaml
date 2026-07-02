@@ -113,13 +113,13 @@ comments:
 - id: FB-012
   component: comparison-columns
   family: two-column
-  status: open
+  status: done
   severity: med
   comment: 👎 Make it 3 items after the headers of legacy platform and modern stack with more space between items
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: 'queued as T-058'
+  notes: 'done T-058 — specimen trimmed to 3 items per column; handler distributes items to fill the column, so 3 items get taller boxes and clear space between them (golden captures new geometry)'
 - id: FB-013
   component: timeline
   family: timeline

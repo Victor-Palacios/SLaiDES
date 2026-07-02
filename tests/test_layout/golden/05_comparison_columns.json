@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_32",
+          "node_id": "title_1",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#4A148C"
         },
         {
-          "node_id": "left_head_33",
+          "node_id": "left_head_2",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -56,7 +56,7 @@
           "text_color": "#4A148C"
         },
         {
-          "node_id": "right_head_34",
+          "node_id": "right_head_3",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -80,13 +80,13 @@
           "text_color": "#4A148C"
         },
         {
-          "node_id": "left_item_35",
+          "node_id": "left_item_4",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2395727,
             "w": 5501640,
-            "h": 566928
+            "h": 847344
           },
           "text_content": "Deploy time: 4 hours",
           "lines": [
@@ -103,13 +103,13 @@
           "italic": false
         },
         {
-          "node_id": "right_item_36",
+          "node_id": "right_item_5",
           "node_type": "text",
           "rect": {
             "x": 6233160,
             "y": 2395727,
             "w": 5501640,
-            "h": 566928
+            "h": 847344
           },
           "text_content": "Deploy time: 8 min",
           "lines": [
@@ -126,13 +126,13 @@
           "italic": false
         },
         {
-          "node_id": "left_item_37",
+          "node_id": "left_item_6",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3236975,
+            "y": 3517391,
             "w": 5501640,
-            "h": 566928
+            "h": 847344
           },
           "text_content": "Manual scaling",
           "lines": [
@@ -149,13 +149,13 @@
           "italic": false
         },
         {
-          "node_id": "right_item_38",
+          "node_id": "right_item_7",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 3236975,
+            "y": 3517391,
             "w": 5501640,
-            "h": 566928
+            "h": 847344
           },
           "text_content": "Auto-scales fast",
           "lines": [
@@ -172,59 +172,13 @@
           "italic": false
         },
         {
-          "node_id": "left_item_39",
+          "node_id": "left_item_8",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4078223,
+            "y": 4639055,
             "w": 5501640,
-            "h": 566928
-          },
-          "text_content": "Single failure point",
-          "lines": [
-            {
-              "text": "Single failure point",
-              "width_emu": 3552651,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "right_item_40",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 4078223,
-            "w": 5501640,
-            "h": 566928
-          },
-          "text_content": "Isolated fault zones",
-          "lines": [
-            {
-              "text": "Isolated fault zones",
-              "width_emu": 3720691,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "left_item_41",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4919471,
-            "w": 5501640,
-            "h": 566928
+            "h": 847344
           },
           "text_content": "On-premise; high cost",
           "lines": [
@@ -241,13 +195,13 @@
           "italic": false
         },
         {
-          "node_id": "right_item_42",
+          "node_id": "right_item_9",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 4919471,
+            "y": 4639055,
             "w": 5501640,
-            "h": 566928
+            "h": 847344
           },
           "text_content": "Cloud-native; low cost",
           "lines": [
@@ -266,7 +220,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_43",
+          "node_id": "chrome_pagenum_10",
           "node_type": "text",
           "rect": {
             "x": 10363200,
