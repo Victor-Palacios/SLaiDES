@@ -2,11 +2,11 @@
 
 _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`, then re-render; do not hand-edit. The kanban view of the work; `PROGRESS.md` stays the acceptance ledger._
 
-**backlog** 0 · **todo** 1 · **in_progress** 0 · **blocked** 1 · **done** 62 · _last change 2026-07-02_
+**backlog** 0 · **todo** 0 · **in_progress** 0 · **blocked** 1 · **done** 63 · _last change 2026-07-02_
 
-| Backlog (0) | Todo (1) | In Progress (0) | Blocked (1) | Done (62) |
+| Backlog (0) | Todo (0) | In Progress (0) | Blocked (1) | Done (63) |
 |---|---|---|---|---|
-|  | **T-064** swot: dense quadrant items get a box shorter than one line (discovered) · _FB_ |  | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
+|  |  |  | **T-021** weight calibration vs human-labelled slide-pair set · _P10_ · ⚠ DEFERRED — needs a labelled dataset; no human-correlation claim until then | **T-001** kpi-grid design · _P9_ · `high` |
 |  |  |  |  | **T-002** chart-slide design · _P9_ · `high` |
 |  |  |  |  | **T-025** beauty-tracking extension: richness + large-text 3:1 contrast · _P10_ · `high` |
 |  |  |  |  | **T-033** component-metadata registry (single source of truth) · _PIPE_ · `high` |
@@ -68,6 +68,7 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 |  |  |  |  | **T-051** verify color_harmony 30° tolerance against Cohen-Or (#19) exact sector widths · _RES_ |
 |  |  |  |  | **T-052** verify hierarchy 1.5× perfect-fifth modular-scale step from a primary typographic source · _RES_ |
 |  |  |  |  | **T-053** assess info_density words-per-slide / coverage bands against a primary source · _RES_ |
+|  |  |  |  | **T-064** swot: dense quadrant items get a box shorter than one line (discovered) · _FB_ |
 
 ## Epics
 
@@ -78,5 +79,5 @@ _Generated from `board.yaml` by `scripts/render_board.py` — edit `board.yaml`,
 | Standing research task | 11 | 11 |
 | Operator-approved ideas (from IDEAS.md) | 4 | 4 |
 | North-star: honest taxonomy + LLM-selection pipeline | 6 | 6 |
-| Operator layout feedback (FEEDBACK.yaml issue-form loop) | 17 | 18 |
+| Operator layout feedback (FEEDBACK.yaml issue-form loop) | 18 | 18 |
 

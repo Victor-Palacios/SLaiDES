@@ -518,6 +518,18 @@ Operator session, three linked requests:
   "Opportunities"/"Partnerships" render fully; the emitter does not clip to the box). Keeping
   T-064 deferred as a structural task rather than shipping a risky mid-burst rework; the guard
   exemption + this note remain the codified record.
+- RESOLVED (2026-07-02 session4, commit a729aeb): took the "smaller swot item type-tier"
+  option from the assessment above. SWOT item text now renders at the **caption tier**
+  (25pt, `is_caption=True`) instead of body (34pt), via a new `item_pt`/`is_caption` arg on
+  `_panel_items` (only swot passes it; before-after / pros-cons / this-vs-that keep body).
+  This is linter-legal: `E_MIN_BODY_SIZE` exempts caption-tier nodes (24-26pt), and swot
+  items are genuinely dense-grid secondary content. At 25pt a leaded line is 0.417" and the
+  cell gives each item a 0.45" box, so `item_h = min(slot_h, max(line_h, …))` now floors at a
+  full line honestly — no clamp under one line, no content dropped, bold body headings still
+  dominate the tier hierarchy. Codified by REMOVING the `swot` exemption from the web-preview
+  geometry guard (tests/test_web) so the one-line-fits (c) invariant now covers swot too; the
+  defect class would now be caught deterministically without vision. PDF render re-confirmed
+  clean (all descenders full). Golden 36_swot + previews.json + swot PDF + combined snapshot regen.
 
 ## 2026-07-02 — FB-008/011/017 (remove tertiary muted lines): specimen-scoped fix
 Three consistent operator notes asked to remove tertiary supporting text: title-slide
