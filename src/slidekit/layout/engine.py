@@ -896,15 +896,22 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
 # ── Phase 9: comparison (catalog #17–19) ──────────────────────────────────────
 
 
-def _panel_items(nodes, items, x, y, w, h, font, ts, marker_color, prefix):
+def _panel_items(nodes, items, x, y, w, h, font, ts, marker_color, prefix,
+                 item_pt=None, is_caption=False):
     """Render a bulleted column of items with square box markers (no glyph bullets).
 
     Each marker+text pair shares a group_id so the intentional marker-on-text row is
-    exempt from E_GAP/E_OVERLAP while the linter still proves each row fits."""
+    exempt from E_GAP/E_OVERLAP while the linter still proves each row fits.
+
+    ``item_pt`` overrides the item type-tier (default: body). Dense grid callers
+    (swot) pass the caption tier + ``is_caption`` so each item box can honestly hold
+    a full leaded line inside a short cell — without this the ``min(slot_h, …)`` cap
+    below would clamp the box under one line (board T-064)."""
     gap = GAP_MIN_EMU
     n = len(items)
     slot_h = max(1, (h - gap * max(0, n - 1)) // n)
-    line_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    item_pt = ts.body if item_pt is None else item_pt
+    line_h = int(item_pt * LINE_SPACING_SINGLE * EMU_PER_PT)
     marker = int(0.18 * EMU_PER_INCH)
     text_x = x + int(0.4 * EMU_PER_INCH)
     text_w = w - int(0.4 * EMU_PER_INCH)
@@ -912,16 +919,17 @@ def _panel_items(nodes, items, x, y, w, h, font, ts, marker_color, prefix):
     for i, item in enumerate(items):
         gid = f"{prefix}_{i}"
         # Size each item box to its wrapped height (column is narrow → items may
-        # wrap), capped at the slot so consecutive rows never collide.
-        lines = wrap(item, font, ts.body, text_w)
+        # wrap), floored at one leaded line and capped at the slot so consecutive
+        # rows never collide.
+        lines = wrap(item, font, item_pt, text_w)
         item_h = min(slot_h, max(line_h, total_text_height_emu(lines)))
         my = cur + (line_h - marker) // 2
         nodes.append(ResolvedNode(_nid(f"{prefix}_mark"), "box", Rect(x, my, marker, marker),
                                   fill_color=marker_color, group_id=gid))
-        nodes.append(_make_text_node(_nid(f"{prefix}_item"), item, font, ts.body,
+        nodes.append(_make_text_node(_nid(f"{prefix}_item"), item, font, item_pt,
                                      bold=False, italic=False,
                                      rect=Rect(text_x, cur, text_w, item_h), lines=lines,
-                                     group_id=gid))
+                                     is_caption=is_caption, group_id=gid))
         cur += slot_h + gap
 
 
@@ -1452,7 +1460,13 @@ def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
                                      color=color))
         items_y = qy + head_h + gap
         items_h = qy + cell_h - items_y
-        _panel_items(nodes, items, qx, items_y, col_w, items_h, font, ts, color, f"swot{idx}")
+        # SWOT packs four bulleted lists into a 2×2 grid, so each quadrant cell is
+        # short. Item text uses the caption tier (secondary, dense grid content) so
+        # every item box honestly holds a full leaded line inside the cell rather
+        # than being clamped under one line (board T-064). Bold body headings still
+        # dominate the tier hierarchy.
+        _panel_items(nodes, items, qx, items_y, col_w, items_h, font, ts, color,
+                     f"swot{idx}", item_pt=ts.caption, is_caption=True)
     return nodes
 
 

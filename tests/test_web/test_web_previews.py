@@ -68,12 +68,12 @@ def _style_dict(style: str) -> dict:
     return out
 
 
-# swot's 2×2 quadrants intentionally pack several items into a small cell; when a cell
-# holds enough items each slot is < one body line, a distinct latent defect tracked
-# separately (see ops/NOTES.md / board T-064). The emitter now renders with overflow
-# visible, so those lines spill into the inter-item gap rather than clipping — the (c)
-# geometry invariant is asserted for every other component.
-_GEOMETRY_EXEMPT = {"swot"}
+# Every component's text nodes must satisfy the (c) one-line-fits geometry invariant.
+# swot used to be exempt: its 2×2 quadrants pack several items into a short cell, so the
+# body-tier item boxes were clamped under one line (board T-064). Fixed by rendering swot
+# item text at the caption tier — each caption line now fits its cell box honestly — so
+# the exemption is gone and the guard covers swot too.
+_GEOMETRY_EXEMPT: set[str] = set()
 
 
 def test_text_nodes_pin_line_height_and_never_clip_descenders():

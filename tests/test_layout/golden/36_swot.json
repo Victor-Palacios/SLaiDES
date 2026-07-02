@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_466",
+          "node_id": "title_1",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#14213D"
         },
         {
-          "node_id": "swot_head_467",
+          "node_id": "swot_head_2",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -56,11 +56,11 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot0_mark_468",
+          "node_id": "swot0_mark_3",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2572510,
+            "y": 2503931,
             "w": 164592,
             "h": 164592
           },
@@ -68,7 +68,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot0_item_469",
+          "node_id": "swot0_item_4",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -80,23 +80,24 @@
           "lines": [
             {
               "text": "Strong brand",
-              "width_emu": 2496555,
-              "height_emu": 518160,
+              "width_emu": 1835702,
+              "height_emu": 381000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 25.0,
           "bold": false,
           "italic": false,
+          "is_caption": true,
           "group_id": "swot0_0"
         },
         {
-          "node_id": "swot0_mark_470",
+          "node_id": "swot0_mark_5",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 3258310,
+            "y": 3189731,
             "w": 164592,
             "h": 164592
           },
@@ -104,7 +105,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot0_item_471",
+          "node_id": "swot0_item_6",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -116,19 +117,20 @@
           "lines": [
             {
               "text": "Loyal users",
-              "width_emu": 2208126,
-              "height_emu": 518160,
+              "width_emu": 1623622,
+              "height_emu": 381000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 25.0,
           "bold": false,
           "italic": false,
+          "is_caption": true,
           "group_id": "swot0_1"
         },
         {
-          "node_id": "swot_head_472",
+          "node_id": "swot_head_7",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -152,11 +154,11 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "swot1_mark_473",
+          "node_id": "swot1_mark_8",
           "node_type": "box",
           "rect": {
             "x": 6233160,
-            "y": 2572510,
+            "y": 2503931,
             "w": 164592,
             "h": 164592
           },
@@ -164,7 +166,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot1_item_474",
+          "node_id": "swot1_item_9",
           "node_type": "text",
           "rect": {
             "x": 6598920,
@@ -176,23 +178,24 @@
           "lines": [
             {
               "text": "Thin margins",
-              "width_emu": 2495711,
-              "height_emu": 518160,
+              "width_emu": 1835082,
+              "height_emu": 381000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 25.0,
           "bold": false,
           "italic": false,
+          "is_caption": true,
           "group_id": "swot1_0"
         },
         {
-          "node_id": "swot1_mark_475",
+          "node_id": "swot1_mark_10",
           "node_type": "box",
           "rect": {
             "x": 6233160,
-            "y": 3258310,
+            "y": 3189731,
             "w": 164592,
             "h": 164592
           },
@@ -200,7 +203,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot1_item_476",
+          "node_id": "swot1_item_11",
           "node_type": "text",
           "rect": {
             "x": 6598920,
@@ -212,19 +215,20 @@
           "lines": [
             {
               "text": "Small team",
-              "width_emu": 2159633,
-              "height_emu": 518160,
+              "width_emu": 1587965,
+              "height_emu": 381000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 25.0,
           "bold": false,
           "italic": false,
+          "is_caption": true,
           "group_id": "swot1_1"
         },
         {
-          "node_id": "swot_head_477",
+          "node_id": "swot_head_12",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -248,11 +252,11 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot2_mark_478",
+          "node_id": "swot2_mark_13",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 4840222,
+            "y": 4771643,
             "w": 164592,
             "h": 164592
           },
@@ -260,7 +264,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot2_item_479",
+          "node_id": "swot2_item_14",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -272,23 +276,24 @@
           "lines": [
             {
               "text": "New markets",
-              "width_emu": 2519325,
-              "height_emu": 518160,
+              "width_emu": 1852445,
+              "height_emu": 381000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 25.0,
           "bold": false,
           "italic": false,
+          "is_caption": true,
           "group_id": "swot2_0"
         },
         {
-          "node_id": "swot2_mark_480",
+          "node_id": "swot2_mark_15",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 5526022,
+            "y": 5457443,
             "w": 164592,
             "h": 164592
           },
@@ -296,7 +301,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot2_item_481",
+          "node_id": "swot2_item_16",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -308,19 +313,20 @@
           "lines": [
             {
               "text": "Partnerships",
-              "width_emu": 2424026,
-              "height_emu": 518160,
+              "width_emu": 1782372,
+              "height_emu": 381000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 25.0,
           "bold": false,
           "italic": false,
+          "is_caption": true,
           "group_id": "swot2_1"
         },
         {
-          "node_id": "swot_head_482",
+          "node_id": "swot_head_17",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -344,11 +350,11 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "swot3_mark_483",
+          "node_id": "swot3_mark_18",
           "node_type": "box",
           "rect": {
             "x": 6233160,
-            "y": 4840222,
+            "y": 4771643,
             "w": 164592,
             "h": 164592
           },
@@ -356,7 +362,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot3_item_484",
+          "node_id": "swot3_item_19",
           "node_type": "text",
           "rect": {
             "x": 6598920,
@@ -368,23 +374,24 @@
           "lines": [
             {
               "text": "New entrants",
-              "width_emu": 2543994,
-              "height_emu": 518160,
+              "width_emu": 1870583,
+              "height_emu": 381000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 25.0,
           "bold": false,
           "italic": false,
+          "is_caption": true,
           "group_id": "swot3_0"
         },
         {
-          "node_id": "swot3_mark_485",
+          "node_id": "swot3_mark_20",
           "node_type": "box",
           "rect": {
             "x": 6233160,
-            "y": 5526022,
+            "y": 5457443,
             "w": 164592,
             "h": 164592
           },
@@ -392,7 +399,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot3_item_486",
+          "node_id": "swot3_item_21",
           "node_type": "text",
           "rect": {
             "x": 6598920,
@@ -404,21 +411,22 @@
           "lines": [
             {
               "text": "Price pressure",
-              "width_emu": 2783718,
-              "height_emu": 518160,
+              "width_emu": 2046852,
+              "height_emu": 381000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 25.0,
           "bold": false,
           "italic": false,
+          "is_caption": true,
           "group_id": "swot3_1"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_487",
+          "node_id": "chrome_pagenum_22",
           "node_type": "text",
           "rect": {
             "x": 10363200,
