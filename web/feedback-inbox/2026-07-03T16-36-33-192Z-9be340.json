@@ -1,0 +1,42 @@
+{
+  "submitted_at": "2026-07-03T16:36:33.192Z",
+  "source": "web",
+  "items": [
+    {
+      "component": "title-slide",
+      "verdict": "good",
+      "comment": "",
+      "severity": "med"
+    },
+    {
+      "component": "big-number",
+      "verdict": "good",
+      "comment": "",
+      "severity": "med"
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "bad",
+      "comment": "never use bullets",
+      "severity": "med"
+    },
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "the text color needs to match modern IDE color usage for python code",
+      "severity": "med"
+    },
+    {
+      "component": "this-vs-that",
+      "verdict": "bad",
+      "comment": "Use all black text, these colors look jarring. The vs should not have a box around it.",
+      "severity": "med"
+    },
+    {
+      "component": "testimonial",
+      "verdict": "bad",
+      "comment": "delete - too similar to another slide layout",
+      "severity": "med"
+    }
+  ]
+}
