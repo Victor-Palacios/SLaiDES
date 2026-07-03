@@ -71,7 +71,10 @@ The site has two pages:
 
 Submit sends your marks; the intake workflow folds them into `ops/FEEDBACK.yaml` and
 `web/data/state.json`, and Netlify redeploys (~1–2 min) — the page also updates
-optimistically right away. Review state lives in `web/data/state.json`, written only by
+optimistically right away. To keep Netlify credit usage minimal, `netlify.toml` has an
+`ignore` rule: pushes that don't touch `web/` or `netlify/` skip deployment entirely, and
+a submission landing in `web/feedback-inbox/` doesn't deploy either (only the CI fold that
+rewrites `web/data/state.json` does). Review state lives in `web/data/state.json`, written only by
 `scripts/feedback_intake_web.py` (build sessions never touch it — fixing a layout doesn't
 approve it; you do, by comparing before/after).
 

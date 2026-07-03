@@ -16,6 +16,12 @@
   publish = "web"
   functions = "netlify/functions"
   command = "echo 'static site — web/data/previews.json is prebuilt & committed'"
+  # Deploy ONLY when the served site can actually change: anything under web/ or
+  # netlify/ (or this file), EXCEPT web/feedback-inbox — submissions landing there
+  # are inputs to CI, not site content, so they shouldn't burn a deploy. (The CI
+  # fold that consumes them rewrites web/data/state.json, which DOES deploy.)
+  # Exit 0 = skip; a failed diff (missing cached ref) exits non-zero = build anyway.
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- web netlify netlify.toml ':(exclude)web/feedback-inbox'"
 
 [functions]
   node_bundler = "esbuild"
