@@ -250,3 +250,43 @@ comments:
   updated: '2026-07-02'
   source: web 2026-07-02T22:34:13.379Z
   notes: done — chart-slide deleted; chart-with-insight is the surviving chart layout
+- id: FB-026
+  component: bullet-list
+  family: marker-list
+  status: open
+  severity: med
+  comment: 👎 never use bullets
+  created: '2026-07-03'
+  updated: '2026-07-03'
+  source: web 2026-07-03T16:36:33.192Z
+  notes: ''
+- id: FB-027
+  component: code
+  family: code-block
+  status: open
+  severity: med
+  comment: 👎 the text color needs to match modern IDE color usage for python code
+  created: '2026-07-03'
+  updated: '2026-07-03'
+  source: web 2026-07-03T16:36:33.192Z
+  notes: ''
+- id: FB-028
+  component: this-vs-that
+  family: vs-badge
+  status: open
+  severity: med
+  comment: 👎 Use all black text, these colors look jarring. The vs should not have a box around it.
+  created: '2026-07-03'
+  updated: '2026-07-03'
+  source: web 2026-07-03T16:36:33.192Z
+  notes: ''
+- id: FB-029
+  component: testimonial
+  family: testimonial
+  status: open
+  severity: med
+  comment: 👎 delete - too similar to another slide layout
+  created: '2026-07-03'
+  updated: '2026-07-03'
+  source: web 2026-07-03T16:36:33.192Z
+  notes: ''

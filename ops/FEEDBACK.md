@@ -2,7 +2,16 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 0 · **done** 24 · **wontfix** 1 · _last change 2026-07-02_
+**open** 4 · **done** 24 · **wontfix** 1 · _last change 2026-07-03_
+
+## Open (4)
+
+| ID | Layout | Sev | Comment | Notes |
+|---|---|---|---|---|
+| FB-026 | bullet-list | med | 👎 never use bullets |  |
+| FB-027 | code | med | 👎 the text color needs to match modern IDE color usage for python code |  |
+| FB-028 | this-vs-that | med | 👎 Use all black text, these colors look jarring. The vs should not have a box around it. |  |
+| FB-029 | testimonial | med | 👎 delete - too similar to another slide layout |  |
 
 ## Done (24)
 
