@@ -653,3 +653,16 @@ edit state.json" rule still stands for review VERDICTS.
   is exempted from W_TEXT_ONLY by operator decision.
 - FB-029: testimonial deleted (too similar to pull-quote); quote+portrait recommends
   pull-quote now. Catalog: 36 components / 24 distinct families.
+
+## Website: anchor-first family grouping (2026-07-03, operator picked option 2 of 3)
+
+Both pages now surface the family/variant taxonomy (previews.json carries family/role/
+variant_of/differs_by from the registry):
+- Review queue: unreviewed layouts group anchor-first per family — one card per distinct
+  skeleton, remaining pending variants behind a "▸ N variants" expander (cards show a
+  "differs by: …" chip). Flagged cards are unchanged (always fully visible, before/after).
+- Gallery: one tile per family (the anchor); a "+N" chip fans the variants out inline as
+  dashed tiles ("Expand all variants" control above the grid). The +N chip turns red when
+  a collapsed variant is flagged so nothing hides.
+- CSS gotcha codified in a comment: class display rules (grid/block) silently defeat the
+  [hidden] attribute — a global `[hidden]{display:none!important}` guard now prevents it.

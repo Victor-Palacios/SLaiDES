@@ -19,7 +19,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `image-grid` | `image-grid` | A gallery grid of images. |
 | `kpi-grid` | `kpi-grid` | A grid of KPIs (value + rule + label). |
 | `labeled-image-grid` | `team-grid` | A grid of people (portrait + name + role). |
-| `marker-list` | `bullet-list` | A simple bulleted list. |
+| `marker-list` | `bullet-list` | A simple list of points (no bullet glyphs — operator style rule FB-026). |
 | `matrix-2x2` | `matrix-2x2` | A 2×2 axes matrix. |
 | `process-flow` | `process-steps` | Horizontal numbered process. |
 | `pyramid` | `pyramid` | Widening pyramid tiers. |

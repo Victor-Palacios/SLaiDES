@@ -113,7 +113,7 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - content shape: logo tiles {image|label}
   - required fields: `logos`
 
-## marker-list — A simple bulleted list.
+## marker-list — A simple list of points (no bullet glyphs — operator style rule FB-026).
 
 - **`bullet-list`** · capacity 2–8
   - use when: A plain vertical list of points.

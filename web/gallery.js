@@ -28,6 +28,7 @@
   }
 
   function fitStage(stage, host, w, h, maxH) {
+    if (!host.clientWidth) return; // detached (collapsed variant) — rescaled on reveal
     var scale = host.clientWidth / w;
     if (maxH) scale = Math.min(scale, maxH / h);
     stage.style.transform = "scale(" + scale + ")";
@@ -81,16 +82,17 @@
     grid.innerHTML = "";
     grid.setAttribute("aria-busy", "false");
 
-    comps.forEach(function (c) {
+    function makeTile(c, extraCls) {
       var st = review[c.component];
       var chip = chipFor(st);
       var tile = document.createElement("button");
       tile.type = "button";
-      tile.className = "tile";
+      tile.className = "tile" + (extraCls ? " " + extraCls : "");
       tile.innerHTML =
         '<div class="tile-preview"></div>' +
         '<div class="tile-meta"><span class="tile-name">' + esc(c.component) + '</span>' +
-        '<span class="chip ' + chip.cls + '">' + esc(chip.text) + '</span></div>';
+        '<span class="tile-chips"><span class="chip ' + chip.cls + '">' + esc(chip.text) +
+        '</span></span></div>';
       var host = tile.querySelector(".tile-preview");
       var stage = stageEl(c);
       host.appendChild(stage);
@@ -98,8 +100,68 @@
       requestAnimationFrame(rescale);
       window.addEventListener("resize", rescale);
       tile.addEventListener("click", function () { openLightbox(c, st); });
-      grid.appendChild(tile);
+      return tile;
+    }
+
+    // Anchor-first: the grid holds one tile per FAMILY (its anchor); variants fan
+    // out inline behind a "+N" chip on the anchor tile. 24 distinct layouts at a
+    // glance, all 36 components two taps away.
+    var byFamily = {}, famOrder = [];
+    comps.forEach(function (c) {
+      if (!byFamily[c.family]) { byFamily[c.family] = []; famOrder.push(c.family); }
+      byFamily[c.family].push(c);
     });
+
+    var expanders = [];
+    famOrder.forEach(function (fam) {
+      var members = byFamily[fam].slice().sort(function (a, b) {
+        return (a.role === "anchor" ? 0 : 1) - (b.role === "anchor" ? 0 : 1);
+      });
+      var anchor = members[0], variants = members.slice(1);
+      var tile = makeTile(anchor, null);
+      grid.appendChild(tile);
+      if (!variants.length) return;
+
+      var anyFlag = variants.some(function (v) {
+        var st = review[v.component];
+        return st && st.status === "flagged";
+      });
+      var plus = document.createElement("span");
+      plus.className = "chip c-plus" + (anyFlag ? " c-plus-flag" : "");
+      plus.textContent = "+" + variants.length;
+      plus.title = variants.length + " variant(s) — tap to expand";
+      tile.querySelector(".tile-chips").appendChild(plus);
+
+      var vtiles = variants.map(function (v) { return makeTile(v, "tile-variant"); });
+      var open = false;
+      function setOpen(o) {
+        open = o;
+        plus.classList.toggle("c-plus-open", open);
+        if (open) {
+          var after = tile;
+          vtiles.forEach(function (vt) { after.insertAdjacentElement("afterend", vt); after = vt; });
+          window.dispatchEvent(new Event("resize")); // stages were unsized while detached
+        } else {
+          vtiles.forEach(function (vt) { vt.remove(); });
+        }
+      }
+      plus.addEventListener("click", function (e) {
+        e.stopPropagation(); // don't open the anchor's lightbox
+        setOpen(!open);
+      });
+      expanders.push(setOpen);
+    });
+
+    var expandAll = document.getElementById("expandall");
+    if (expandAll && expanders.length) {
+      var allOpen = false;
+      expandAll.hidden = false;
+      expandAll.addEventListener("click", function () {
+        allOpen = !allOpen;
+        expanders.forEach(function (fn) { fn(allOpen); });
+        expandAll.textContent = allOpen ? "Collapse variants" : "Expand all variants";
+      });
+    }
   }).catch(function (err) {
     grid.innerHTML = '<p class="loading">Could not load layouts: ' + esc(err.message) + '</p>';
   });

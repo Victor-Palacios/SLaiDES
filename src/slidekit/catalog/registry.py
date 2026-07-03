@@ -119,7 +119,8 @@ _META: dict[str, dict] = {
 
     # marker-list family
     "bullet-list": dict(family="marker-list", role="anchor",
-        purpose="A simple bulleted list.", use_when="A plain vertical list of points.",
+        purpose="A simple list of points (no bullet glyphs — operator style rule FB-026).",
+        use_when="A plain vertical list of points.",
         capacity=(2, 8), content_shape="a list of short lines"),
     "code": dict(family="code-block", role="anchor",
         purpose="A dark terminal/IDE-style code block.",

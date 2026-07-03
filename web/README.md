@@ -66,8 +66,12 @@ The site has two pages:
   flags** it: the fix request goes to the build sessions, and the queue then shows a
   **before/after comparison** (the snapshot you flagged vs the current render) until you
   approve the fix. A comment with no verdict files a note without changing review state.
-- **All layouts** (`/gallery.html`) — every layout as a thumbnail with a status chip
-  (✓ approved / ⚑ flagged / pending); tap any tile to zoom.
+  Unreviewed layouts are grouped **anchor-first by family**: one card per distinct
+  skeleton, with the family's remaining variants behind a "▸ N variants" expander.
+- **All layouts** (`/gallery.html`) — one tile per distinct layout family (the anchor),
+  with a status chip (✓ approved / ⚑ flagged / pending). Families with variants carry a
+  **+N** chip — tap it to fan the variants out inline (dashed tiles), tap a tile to zoom,
+  or use "Expand all variants". The +N chip turns red if a collapsed variant is flagged.
 
 Submit sends your marks; the intake workflow folds them into `ops/FEEDBACK.yaml` and
 `web/data/state.json`, and Netlify redeploys (~1–2 min) — the page also updates

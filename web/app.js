@@ -92,6 +92,8 @@
     head.innerHTML =
       '<div class="card-title"><h2>' + esc(c.component) + '</h2>' +
       '<span class="tag">' + esc(role) + '</span>' +
+      (c.role === "variant" && c.differs_by
+        ? '<span class="tag tag-diff">differs by: ' + esc(c.differs_by) + '</span>' : '') +
       (review ? '<span class="badge b-flag">flagged</span>' : '') +
       '</div>' +
       '<p class="card-purpose">' + esc(c.purpose) + '</p>' +
@@ -246,8 +248,45 @@
       flagged.forEach(function (c) { gallery.appendChild(makeCard(c, review[c.component])); });
     }
     if (pending.length) {
-      gallery.appendChild(sectionHeading("Not yet reviewed (" + pending.length + ")"));
-      pending.forEach(function (c) { gallery.appendChild(makeCard(c, null)); });
+      // Anchor-first family stacks: each family shows ONE card (its anchor when
+      // pending, else its first pending variant); remaining pending variants sit
+      // behind a "+N variants" expander so the queue length ≈ distinct layouts.
+      var famOrder = [], famMap = {};
+      pending.forEach(function (c) {
+        if (!famMap[c.family]) { famMap[c.family] = []; famOrder.push(c.family); }
+        famMap[c.family].push(c);
+      });
+      gallery.appendChild(sectionHeading(
+        "Not yet reviewed (" + pending.length + " across " + famOrder.length + " layout famil" +
+        (famOrder.length === 1 ? "y" : "ies") + ")"));
+      famOrder.forEach(function (fam) {
+        var members = famMap[fam].slice().sort(function (a, b) {
+          return (a.role === "anchor" ? 0 : 1) - (b.role === "anchor" ? 0 : 1);
+        });
+        gallery.appendChild(makeCard(members[0], null));
+        var rest = members.slice(1);
+        if (!rest.length) return;
+        var toggle = document.createElement("button");
+        toggle.type = "button";
+        toggle.className = "vtoggle";
+        var showLabel = "▸ " + rest.length + " variant" + (rest.length === 1 ? "" : "s") +
+                        " of " + members[0].component;
+        toggle.textContent = showLabel;
+        var group = document.createElement("div");
+        group.className = "variants";
+        group.hidden = true;
+        rest.forEach(function (c) { group.appendChild(makeCard(c, null)); });
+        toggle.addEventListener("click", function () {
+          group.hidden = !group.hidden;
+          toggle.textContent = group.hidden ? showLabel : "▾ hide variants";
+          if (!group.hidden) {
+            // Stages were laid out while hidden (zero width) — rescale now.
+            window.dispatchEvent(new Event("resize"));
+          }
+        });
+        gallery.appendChild(toggle);
+        gallery.appendChild(group);
+      });
     }
     if (!flagged.length && !pending.length) {
       gallery.innerHTML = '<p class="loading">🎉 Everything is reviewed and approved. ' +

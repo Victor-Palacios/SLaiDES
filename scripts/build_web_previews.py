@@ -75,6 +75,7 @@ def build() -> dict:
                 "family": lo.family,
                 "role": lo.role,
                 "variant_of": lo.variant_of,
+                "differs_by": lo.differs_by,
                 "purpose": lo.purpose,
                 "use_when": lo.use_when,
                 "example": f.name,

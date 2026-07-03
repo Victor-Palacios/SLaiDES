@@ -12,12 +12,17 @@
   <div class="topbar-inner">
     <div>
       <h1>All layouts</h1>
-      <p class="sub">Every layout as a thumbnail — tap one to zoom. Review happens on the
+      <p class="sub">One tile per distinct layout family — tap a tile to zoom, tap its
+        <b>+N</b> chip to fan out the family's variants. Review happens on the
         <a href="/">main page</a>.</p>
     </div>
     <nav class="nav"><a href="/">← Review queue</a></nav>
   </div>
 </header>
+
+<div class="gridbar">
+  <button id="expandall" class="vtoggle" hidden>Expand all variants</button>
+</div>
 
 <main id="tgrid" class="tgrid" aria-busy="true">
   <p class="loading">Loading layouts…</p>
