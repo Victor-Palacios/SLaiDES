@@ -1,6 +1,6 @@
 # slidekit — agent-first slide builder
 
-**🔗 Layout feedback site: <https://quiet-arithmetic-72b532.netlify.app/>** — the
+**🔗 Layout feedback site: <https://delicate-malasada-1b3d2c.netlify.app/>** — the
 password-gated gallery of all layouts (👍/👎 + comment per layout, from your
 phone; see [web/README.md](web/README.md)).
 
