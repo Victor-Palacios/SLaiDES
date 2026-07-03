@@ -45,9 +45,11 @@ def test_code_slide_preview_carries_syntax_colours_and_dots():
     rd = resolve(deck)
     html = "\n".join(_node_html(n, deck.theme.palette)
                      for n in rd.slides[0].nodes + rd.slides[0].chrome)
-    assert "color:#E6EDF3" in html          # code foreground
-    assert "color:#8FB3A4" in html          # dimmed comment lines
-    assert html.count("node-box") >= 3      # the three window dots
+    from slidekit.layout.engine import _CODE_COMMENT, _CODE_FUNC, _CODE_STRING
+    assert f"color:{_CODE_COMMENT}" in html  # comment lines
+    assert f"color:{_CODE_STRING}" in html   # string literals
+    assert f"color:{_CODE_FUNC}" in html     # function names
+    assert html.count("node-box") >= 3       # the three window dots
 
 
 def test_pptx_alignment_follows_node_align():

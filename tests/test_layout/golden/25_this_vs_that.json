@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_251",
+          "node_id": "title_254",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#0D47A1"
         },
         {
-          "node_id": "vs_value_252",
+          "node_id": "vs_value_255",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -53,11 +53,10 @@
           "size_pt": 60.0,
           "bold": true,
           "italic": false,
-          "text_color": "#F57F17",
           "align": "center"
         },
         {
-          "node_id": "vs_label_253",
+          "node_id": "vs_label_256",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -81,7 +80,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_value_254",
+          "node_id": "vs_value_257",
           "node_type": "text",
           "rect": {
             "x": 6713220,
@@ -102,11 +101,10 @@
           "size_pt": 60.0,
           "bold": true,
           "italic": false,
-          "text_color": "#0D47A1",
           "align": "center"
         },
         {
-          "node_id": "vs_label_255",
+          "node_id": "vs_label_258",
           "node_type": "text",
           "rect": {
             "x": 6713220,
@@ -130,19 +128,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_badge_256",
-          "node_type": "box",
-          "rect": {
-            "x": 5753100,
-            "y": 3287267,
-            "w": 685800,
-            "h": 685800
-          },
-          "group_id": "vs_badge",
-          "fill_color": "#F57F17"
-        },
-        {
-          "node_id": "vs_text_257",
+          "node_id": "vs_text_259",
           "node_type": "text",
           "rect": {
             "x": 5753100,
@@ -164,14 +150,12 @@
           "bold": true,
           "italic": false,
           "is_caption": true,
-          "group_id": "vs_badge",
-          "text_color": "#FFFFFF",
           "align": "center"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_258",
+          "node_id": "chrome_pagenum_260",
           "node_type": "text",
           "rect": {
             "x": 10363200,

@@ -28,7 +28,7 @@ def test_two_groups_vs_and_default():
 
 
 def test_quote_variants():
-    assert _top(quote=True, portrait=True) == "testimonial"
+    assert _top(quote=True, portrait=True) == "pull-quote"  # testimonial retired (FB-029)
     assert _top(quote=True) == "pull-quote"
 
 

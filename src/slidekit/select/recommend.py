@@ -67,9 +67,9 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
         add("agenda", 0.95, "a table of contents")
 
     # quotes
-    if f.quote and f.portrait:
-        add("testimonial", 0.95, "a quote with a person's photo")
-    elif f.quote:
+    # (testimonial was retired 2026-07-03 per FB-029 — pull-quote covers quotes,
+    # with or without a portrait)
+    if f.quote:
         add("pull-quote", 0.8, "a quote with attribution")
         add("quote-opener", 0.7, "a quote opening a section")
 

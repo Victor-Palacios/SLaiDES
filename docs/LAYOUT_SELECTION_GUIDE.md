@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_selection_guide.py` — do not hand-edit. The machine-readable form is `slidekit catalog --json`. A test (`tests/test_catalog`) fails if it drifts._
 
-Pick a component per slide from its **content shape** — no rendering or vision needed. There are **37 components** across **25 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
+Pick a component per slide from its **content shape** — no rendering or vision needed. There are **36 components** across **24 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
 
 ## agenda — Numbered agenda / table of contents.
 
@@ -176,13 +176,6 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - use when: Tabular rows and columns of values.
   - content shape: a header row + body rows
   - required fields: `headers`, `rows`
-
-## testimonial — A testimonial (portrait + quote + name/role).
-
-- **`testimonial`**
-  - use when: One customer quote with a face.
-  - content shape: a quote + name + role (+ portrait)
-  - required fields: `quote`, `name`, `role`
 
 ## timeline — Horizontal dated events.
 

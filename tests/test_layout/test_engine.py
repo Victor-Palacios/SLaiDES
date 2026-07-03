@@ -346,7 +346,8 @@ def test_code_slide_has_first_class_background():
     s = rd.slides[0]
     # The dark panel is the slide's background, NOT a content node (so no margin/overlap
     # hacks and no node bleeding past the 0.5" margin).
-    assert s.background == "#0C1A1C"
+    from slidekit.layout.engine import _CODE_BG
+    assert s.background == _CODE_BG
     assert all(not (n.rect.x == 0 and n.rect.y == 0) for n in s.nodes), \
         "code layout must not draw a full-bleed background node"
     assert "background" in s.to_dict()

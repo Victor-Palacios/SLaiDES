@@ -45,7 +45,7 @@ flowchart TB
 | `docs/` | Component catalog, layout taxonomy, selection guide, aesthetics spec, research bibliography |
 | `web/` + `netlify/` + `netlify.toml` | The private layout-feedback website (password-gated Netlify site; see [web/README.md](web/README.md)) |
 | `ops/` | **Agent-ops state** — the plan, prompts, progress ledger, kanban board, feedback queue, session reports (details below) |
-| [SKILL.md](SKILL.md) | The authoring skill: how an agent (or you) writes deck YAML with all 37 components |
+| [SKILL.md](SKILL.md) | The authoring skill: how an agent (or you) writes deck YAML with all 36 components |
 | `integrations/` | slidekit-authored presentation-agent definitions (Phase 8; vendored snapshot pruned 2026-07-02) |
 
 ## How this repo gets built: unattended sessions
@@ -105,7 +105,7 @@ a reason). No approval step — feedback you file is yours, so it's acted on dir
 ### What a session works on
 
 The core build (Phases 0–8) is complete; the component library stands at 40
-components (25 distinct layout skeletons — see `docs/LAYOUT_TAXONOMY.md`).
+components (24 distinct layout skeletons — see `docs/LAYOUT_TAXONOMY.md`).
 Priority order (per the prompt's addenda):
 
 1. **Open operator feedback** in `ops/FEEDBACK.yaml` — top priority, worked through

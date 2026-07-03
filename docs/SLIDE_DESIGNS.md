@@ -1,10 +1,10 @@
-# slidekit slide-design catalog — 37 components (25 distinct layouts)
+# slidekit slide-design catalog — 36 components (24 distinct layouts)
 
 Target: **40 slide components** (up from the 8 shipped in v1). Each component is a
 slidekit unit: one Pydantic model + one layout handler + golden test + example
 + SKILL gallery row. This file is the build blueprint for Phase 9.
 
-Honesty note: the 37 components implement **25 genuinely distinct layout skeletons** —
+Honesty note: the 36 components implement **24 genuinely distinct layout skeletons** —
 the rest are styled variants of a family anchor (same geometry, different marker / colour /
 orientation / fields). The authoritative mapping is generated in
 [LAYOUT_TAXONOMY.md](LAYOUT_TAXONOMY.md) from `src/slidekit/catalog/registry.py`.
@@ -116,7 +116,6 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 | 37 | ✓ `image-full-bleed` | `image` (+`overlay_title`) | full-bleed image + overlay |
 | 38 | ✓ `image-grid` | `images[]` (2–4) (+`captions`) | gallery |
 | 39 | ✓ `logo-wall` | `logos[]` = {image|label} | client / partner logos |
-| 40 | ✓ `testimonial` | `quote`,`name`,`role` (+`image`) | customer testimonial |
 
 ### Closing (reuse openers)
 A closing / call-to-action slide is covered by `statement` (#7), `big-number` (#5),

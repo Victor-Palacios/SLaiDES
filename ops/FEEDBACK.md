@@ -2,18 +2,9 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 4 · **done** 24 · **wontfix** 1 · _last change 2026-07-03_
+**open** 0 · **done** 28 · **wontfix** 1 · _last change 2026-07-03_
 
-## Open (4)
-
-| ID | Layout | Sev | Comment | Notes |
-|---|---|---|---|---|
-| FB-026 | bullet-list | med | 👎 never use bullets |  |
-| FB-027 | code | med | 👎 the text color needs to match modern IDE color usage for python code |  |
-| FB-028 | this-vs-that | med | 👎 Use all black text, these colors look jarring. The vs should not have a box around it. |  |
-| FB-029 | testimonial | med | 👎 delete - too similar to another slide layout |  |
-
-## Done (24)
+## Done (28)
 
 | ID | Layout | Sev | Comment | Notes |
 |---|---|---|---|---|
@@ -41,6 +32,10 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-023 | this-vs-that | med | 👎 Proportions are off for VS size and its position is strange | done — VS badge 0.75" (was 0.9"), 'VS' centred inside it on both axes, badge centred on the value+label block, columns centre-aligned; preview renderer previously dropped the badge box entirely |
 | FB-024 | kpi-grid | med | 👎 spacing is bad | done — intra-tile gaps 0.3"->0.12", rule centred under the value, tile text centre-aligned |
 | FB-025 | chart-with-insight | med | 👎 delete this | done — chart-slide deleted; chart-with-insight is the surviving chart layout |
+| FB-026 | bullet-list | med | 👎 never use bullets | done — square list markers removed everywhere (bullet-list, two-panel-list, swot, roadmap items); flush-left lines with a thin accent/panel-colour rule as the non-text mark; codified as a no-bullets test |
+| FB-027 | code | med | 👎 the text color needs to match modern IDE color usage for python code | done — deterministic per-token highlighter, VS Code Dark+ palette (keywords/strings/comments/functions/numbers), background #1E1E1E; each colour run is its own measured node so the linter still proves fit |
+| FB-028 | this-vs-that | med | 👎 Use all black text, these colors look jarring. The vs should not have a box around it. | done — values/labels in the default text colour, VS is a bare muted caption centred between the columns (badge box removed); slide is deliberately text-only (lint-exempted) |
+| FB-029 | pull-quote | med | 👎 delete - too similar to another slide layout | done — testimonial deleted (redundant with pull-quote); recommender routes quote+portrait to pull-quote |
 
 ## Won't fix (1)
 

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_416",
+          "node_id": "title_347",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#1B264F"
         },
         {
-          "node_id": "rm_head_417",
+          "node_id": "rm_head_348",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -44,7 +44,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm_title_418",
+          "node_id": "rm_title_349",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -69,24 +69,12 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "rm0_mark_419",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2572510,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "rm0_0",
-          "fill_color": "#E07A5F"
-        },
-        {
-          "node_id": "rm0_item_420",
+          "node_id": "rm0_item_350",
           "node_type": "text",
           "rect": {
-            "x": 822960,
+            "x": 457200,
             "y": 2395727,
-            "w": 3210560,
+            "w": 3576320,
             "h": 609600
           },
           "text_content": "Ship API",
@@ -101,28 +89,15 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "rm0_0"
+          "italic": false
         },
         {
-          "node_id": "rm0_mark_421",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 4392166,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "rm0_1",
-          "fill_color": "#E07A5F"
-        },
-        {
-          "node_id": "rm0_item_422",
+          "node_id": "rm0_item_351",
           "node_type": "text",
           "rect": {
-            "x": 822960,
+            "x": 457200,
             "y": 4215383,
-            "w": 3210560,
+            "w": 3576320,
             "h": 609600
           },
           "text_content": "Beta launch",
@@ -137,11 +112,10 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "rm0_1"
+          "italic": false
         },
         {
-          "node_id": "rm_head_423",
+          "node_id": "rm_head_352",
           "node_type": "box",
           "rect": {
             "x": 4307840,
@@ -153,7 +127,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm_title_424",
+          "node_id": "rm_title_353",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -178,24 +152,12 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "rm1_mark_425",
-          "node_type": "box",
-          "rect": {
-            "x": 4307840,
-            "y": 2572510,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "rm1_0",
-          "fill_color": "#E07A5F"
-        },
-        {
-          "node_id": "rm1_item_426",
+          "node_id": "rm1_item_354",
           "node_type": "text",
           "rect": {
-            "x": 4673600,
+            "x": 4307840,
             "y": 2395727,
-            "w": 3210560,
+            "w": 3576320,
             "h": 609600
           },
           "text_content": "Mobile app",
@@ -210,28 +172,15 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "rm1_0"
+          "italic": false
         },
         {
-          "node_id": "rm1_mark_427",
-          "node_type": "box",
-          "rect": {
-            "x": 4307840,
-            "y": 4392166,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "rm1_1",
-          "fill_color": "#E07A5F"
-        },
-        {
-          "node_id": "rm1_item_428",
+          "node_id": "rm1_item_355",
           "node_type": "text",
           "rect": {
-            "x": 4673600,
+            "x": 4307840,
             "y": 4215383,
-            "w": 3210560,
+            "w": 3576320,
             "h": 609600
           },
           "text_content": "Integrations",
@@ -246,11 +195,10 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "rm1_1"
+          "italic": false
         },
         {
-          "node_id": "rm_head_429",
+          "node_id": "rm_head_356",
           "node_type": "box",
           "rect": {
             "x": 8158480,
@@ -262,7 +210,7 @@
           "fill_color": "#E07A5F"
         },
         {
-          "node_id": "rm_title_430",
+          "node_id": "rm_title_357",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -287,24 +235,12 @@
           "text_color": "#FFFFFF"
         },
         {
-          "node_id": "rm2_mark_431",
-          "node_type": "box",
-          "rect": {
-            "x": 8158480,
-            "y": 2572510,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "rm2_0",
-          "fill_color": "#E07A5F"
-        },
-        {
-          "node_id": "rm2_item_432",
+          "node_id": "rm2_item_358",
           "node_type": "text",
           "rect": {
-            "x": 8524240,
+            "x": 8158480,
             "y": 2395727,
-            "w": 3210560,
+            "w": 3576320,
             "h": 609600
           },
           "text_content": "Enterprise tier",
@@ -319,28 +255,15 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "rm2_0"
+          "italic": false
         },
         {
-          "node_id": "rm2_mark_433",
-          "node_type": "box",
-          "rect": {
-            "x": 8158480,
-            "y": 4392166,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "rm2_1",
-          "fill_color": "#E07A5F"
-        },
-        {
-          "node_id": "rm2_item_434",
+          "node_id": "rm2_item_359",
           "node_type": "text",
           "rect": {
-            "x": 8524240,
+            "x": 8158480,
             "y": 4215383,
-            "w": 3210560,
+            "w": 3576320,
             "h": 609600
           },
           "text_content": "SSO",
@@ -355,13 +278,12 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "rm2_1"
+          "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_435",
+          "node_id": "chrome_pagenum_360",
           "node_type": "text",
           "rect": {
             "x": 10363200,

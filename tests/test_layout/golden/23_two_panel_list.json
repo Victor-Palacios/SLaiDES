@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_235",
+          "node_id": "title_242",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#243A5E"
         },
         {
-          "node_id": "lp_head_236",
+          "node_id": "lp_head_243",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -53,10 +53,23 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
+          "group_id": "lp_head",
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "rp_head_237",
+          "node_id": "lp_rule_244",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2231135,
+            "w": 1650492,
+            "h": 54864
+          },
+          "group_id": "lp_head",
+          "fill_color": "#8A8A9A"
+        },
+        {
+          "node_id": "rp_head_245",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -77,27 +90,28 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
+          "group_id": "rp_head",
           "text_color": "#2E8B57"
         },
         {
-          "node_id": "lp_mark_238",
+          "node_id": "rp_rule_246",
           "node_type": "box",
           "rect": {
-            "x": 457200,
-            "y": 2572510,
-            "w": 164592,
-            "h": 164592
+            "x": 6233160,
+            "y": 2231135,
+            "w": 1650492,
+            "h": 54864
           },
-          "group_id": "lp_0",
-          "fill_color": "#8A8A9A"
+          "group_id": "rp_head",
+          "fill_color": "#2E8B57"
         },
         {
-          "node_id": "lp_item_239",
+          "node_id": "lp_item_247",
           "node_type": "text",
           "rect": {
-            "x": 822960,
+            "x": 457200,
             "y": 2395727,
-            "w": 5135880,
+            "w": 5501640,
             "h": 609600
           },
           "text_content": "Manual account setup",
@@ -113,27 +127,15 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "lp_0"
+          "group_id": "lp_head"
         },
         {
-          "node_id": "lp_mark_240",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 3785614,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "lp_1",
-          "fill_color": "#8A8A9A"
-        },
-        {
-          "node_id": "lp_item_241",
+          "node_id": "lp_item_248",
           "node_type": "text",
           "rect": {
-            "x": 822960,
+            "x": 457200,
             "y": 3608831,
-            "w": 5135880,
+            "w": 5501640,
             "h": 609600
           },
           "text_content": "Three-day approval wait",
@@ -149,27 +151,15 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "lp_1"
+          "group_id": "lp_head"
         },
         {
-          "node_id": "lp_mark_242",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 4998718,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "lp_2",
-          "fill_color": "#8A8A9A"
-        },
-        {
-          "node_id": "lp_item_243",
+          "node_id": "lp_item_249",
           "node_type": "text",
           "rect": {
-            "x": 822960,
+            "x": 457200,
             "y": 4821935,
-            "w": 5135880,
+            "w": 5501640,
             "h": 609600
           },
           "text_content": "Email-only support",
@@ -185,27 +175,15 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "lp_2"
+          "group_id": "lp_head"
         },
         {
-          "node_id": "rp_mark_244",
-          "node_type": "box",
-          "rect": {
-            "x": 6233160,
-            "y": 2572510,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "rp_0",
-          "fill_color": "#2E8B57"
-        },
-        {
-          "node_id": "rp_item_245",
+          "node_id": "rp_item_250",
           "node_type": "text",
           "rect": {
-            "x": 6598920,
+            "x": 6233160,
             "y": 2395727,
-            "w": 5135880,
+            "w": 5501640,
             "h": 609600
           },
           "text_content": "One-click provisioning",
@@ -221,27 +199,15 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "rp_0"
+          "group_id": "rp_head"
         },
         {
-          "node_id": "rp_mark_246",
-          "node_type": "box",
-          "rect": {
-            "x": 6233160,
-            "y": 3785614,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "rp_1",
-          "fill_color": "#2E8B57"
-        },
-        {
-          "node_id": "rp_item_247",
+          "node_id": "rp_item_251",
           "node_type": "text",
           "rect": {
-            "x": 6598920,
+            "x": 6233160,
             "y": 3608831,
-            "w": 5135880,
+            "w": 5501640,
             "h": 609600
           },
           "text_content": "Same-day approval",
@@ -257,27 +223,15 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "rp_1"
+          "group_id": "rp_head"
         },
         {
-          "node_id": "rp_mark_248",
-          "node_type": "box",
-          "rect": {
-            "x": 6233160,
-            "y": 4998718,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "rp_2",
-          "fill_color": "#2E8B57"
-        },
-        {
-          "node_id": "rp_item_249",
+          "node_id": "rp_item_252",
           "node_type": "text",
           "rect": {
-            "x": 6598920,
+            "x": 6233160,
             "y": 4821935,
-            "w": 5135880,
+            "w": 5501640,
             "h": 609600
           },
           "text_content": "In-product live chat",
@@ -293,12 +247,12 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "rp_2"
+          "group_id": "rp_head"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_250",
+          "node_id": "chrome_pagenum_253",
           "node_type": "text",
           "rect": {
             "x": 10363200,

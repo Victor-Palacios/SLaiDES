@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "code_dot_211",
+          "node_id": "code_dot_209",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -20,7 +20,7 @@
           "fill_color": "#FF5F56"
         },
         {
-          "node_id": "code_dot_212",
+          "node_id": "code_dot_210",
           "node_type": "box",
           "rect": {
             "x": 713232,
@@ -32,7 +32,7 @@
           "fill_color": "#FFBD2E"
         },
         {
-          "node_id": "code_dot_213",
+          "node_id": "code_dot_211",
           "node_type": "box",
           "rect": {
             "x": 969264,
@@ -44,7 +44,7 @@
           "fill_color": "#27C93F"
         },
         {
-          "node_id": "code_title_214",
+          "node_id": "code_title_212",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -67,15 +67,15 @@
           "italic": false,
           "is_caption": true,
           "group_id": "code",
-          "text_color": "#8FB3A4"
+          "text_color": "#858585"
         },
         {
-          "node_id": "code_line_215",
+          "node_id": "code_run_213",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1578864,
-            "w": 11277600,
+            "w": 6660934,
             "h": 518159
           },
           "text_content": "# The classic, end to end",
@@ -92,22 +92,22 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#8FB3A4"
+          "text_color": "#6A9955"
         },
         {
-          "node_id": "code_line_216",
+          "node_id": "code_run_214",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2097023,
-            "w": 11277600,
+            "w": 960247,
             "h": 518159
           },
-          "text_content": "def main():",
+          "text_content": "def",
           "lines": [
             {
-              "text": "def main():",
-              "width_emu": 2850344,
+              "text": "def",
+              "width_emu": 777367,
               "height_emu": 518159,
               "overflows": false
             }
@@ -117,22 +117,97 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#E6EDF3"
+          "text_color": "#569CD6"
         },
         {
-          "node_id": "code_line_217",
+          "node_id": "code_run_215",
+          "node_type": "text",
+          "rect": {
+            "x": 1234567,
+            "y": 2097023,
+            "w": 442002,
+            "h": 518159
+          },
+          "text_content": " ",
+          "lines": [
+            {
+              "text": " ",
+              "width_emu": 259122,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "code_run_216",
+          "node_type": "text",
+          "rect": {
+            "x": 1493689,
+            "y": 2097023,
+            "w": 1219369,
+            "h": 518159
+          },
+          "text_content": "main",
+          "lines": [
+            {
+              "text": "main",
+              "width_emu": 1036489,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#DCDCAA"
+        },
+        {
+          "node_id": "code_run_217",
+          "node_type": "text",
+          "rect": {
+            "x": 2530177,
+            "y": 2097023,
+            "w": 960247,
+            "h": 518159
+          },
+          "text_content": "():",
+          "lines": [
+            {
+              "text": "():",
+              "width_emu": 777367,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "code_run_218",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2615182,
-            "w": 11277600,
+            "w": 1219369,
             "h": 518159
           },
-          "text_content": "    print(\"Hello, world!\")",
+          "text_content": "    ",
           "lines": [
             {
-              "text": "    print(\"Hello, world!\")",
-              "width_emu": 6737176,
+              "text": "    ",
+              "width_emu": 1036489,
               "height_emu": 518159,
               "overflows": false
             }
@@ -142,22 +217,122 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#E6EDF3"
+          "text_color": "#D4D4D4"
         },
         {
-          "node_id": "code_line_218",
+          "node_id": "code_run_219",
+          "node_type": "text",
+          "rect": {
+            "x": 1493689,
+            "y": 2615182,
+            "w": 1478491,
+            "h": 518159
+          },
+          "text_content": "print",
+          "lines": [
+            {
+              "text": "print",
+              "width_emu": 1295611,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#DCDCAA"
+        },
+        {
+          "node_id": "code_run_220",
+          "node_type": "text",
+          "rect": {
+            "x": 2789300,
+            "y": 2615182,
+            "w": 442002,
+            "h": 518159
+          },
+          "text_content": "(",
+          "lines": [
+            {
+              "text": "(",
+              "width_emu": 259122,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "code_run_221",
+          "node_type": "text",
+          "rect": {
+            "x": 3048422,
+            "y": 2615182,
+            "w": 4069713,
+            "h": 518159
+          },
+          "text_content": "\"Hello, world!\"",
+          "lines": [
+            {
+              "text": "\"Hello, world!\"",
+              "width_emu": 3886833,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#CE9178"
+        },
+        {
+          "node_id": "code_run_222",
+          "node_type": "text",
+          "rect": {
+            "x": 6935254,
+            "y": 2615182,
+            "w": 442002,
+            "h": 518159
+          },
+          "text_content": ")",
+          "lines": [
+            {
+              "text": ")",
+              "width_emu": 259122,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "code_run_223",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3651500,
-            "w": 11277600,
+            "w": 1219369,
             "h": 518159
           },
-          "text_content": "main()",
+          "text_content": "main",
           "lines": [
             {
-              "text": "main()",
-              "width_emu": 1554733,
+              "text": "main",
+              "width_emu": 1036489,
               "height_emu": 518159,
               "overflows": false
             }
@@ -167,22 +342,47 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#E6EDF3"
+          "text_color": "#DCDCAA"
         },
         {
-          "node_id": "code_line_219",
+          "node_id": "code_run_224",
+          "node_type": "text",
+          "rect": {
+            "x": 1493689,
+            "y": 3651500,
+            "w": 701124,
+            "h": 518159
+          },
+          "text_content": "()",
+          "lines": [
+            {
+              "text": "()",
+              "width_emu": 518244,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "code_run_225",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 4687818,
-            "w": 11277600,
+            "w": 442002,
             "h": 518159
           },
-          "text_content": "$ python hello.py",
+          "text_content": "$",
           "lines": [
             {
-              "text": "$ python hello.py",
-              "width_emu": 4405077,
+              "text": "$",
+              "width_emu": 259122,
               "height_emu": 518159,
               "overflows": false
             }
@@ -192,15 +392,40 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#E6EDF3"
+          "text_color": "#4EC9B0"
         },
         {
-          "node_id": "code_line_220",
+          "node_id": "code_run_226",
+          "node_type": "text",
+          "rect": {
+            "x": 716322,
+            "y": 4687818,
+            "w": 4328835,
+            "h": 518159
+          },
+          "text_content": " python hello.py",
+          "lines": [
+            {
+              "text": " python hello.py",
+              "width_emu": 4145955,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "code_run_227",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 5205977,
-            "w": 11277600,
+            "w": 3551468,
             "h": 518159
           },
           "text_content": "Hello, world!",
@@ -217,11 +442,11 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#E6EDF3"
+          "text_color": "#D4D4D4"
         }
       ],
       "chrome": [],
-      "background": "#0C1A1C"
+      "background": "#1E1E1E"
     }
   ]
 }

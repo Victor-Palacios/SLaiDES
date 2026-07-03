@@ -199,10 +199,6 @@ _META: dict[str, dict] = {
         purpose="A gallery grid of images.", use_when="Showing several images together.",
         capacity=(2, 4), content_shape="a set of images (+ captions)"),
 
-    # testimonial
-    "testimonial": dict(family="testimonial", role="anchor",
-        purpose="A testimonial (portrait + quote + name/role).", use_when="One customer quote with a face.",
-        content_shape="a quote + name + role (+ portrait)"),
 }
 
 

@@ -31,24 +31,23 @@
           "italic": false
         },
         {
-          "node_id": "bullet_196",
+          "node_id": "bl_rule_196",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 1676399,
-            "w": 164592,
-            "h": 164592
+            "y": 1499616,
+            "w": 1097280,
+            "h": 54864
           },
-          "group_id": "bullet_0",
           "fill_color": "#E8743B"
         },
         {
           "node_id": "bl_item_197",
           "node_type": "text",
           "rect": {
-            "x": 914400,
-            "y": 1499616,
-            "w": 10820400,
+            "x": 457200,
+            "y": 1828800,
+            "w": 11277600,
             "h": 518159
           },
           "text_content": "Activation time dropped by half",
@@ -63,28 +62,15 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "bullet_0"
+          "italic": false
         },
         {
-          "node_id": "bullet_198",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 3188207,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "bullet_1",
-          "fill_color": "#E8743B"
-        },
-        {
-          "node_id": "bl_item_199",
+          "node_id": "bl_item_198",
           "node_type": "text",
           "rect": {
-            "x": 914400,
-            "y": 3011424,
-            "w": 10820400,
+            "x": 457200,
+            "y": 3230880,
+            "w": 11277600,
             "h": 518159
           },
           "text_content": "Support tickets fell sharply",
@@ -99,28 +85,15 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "bullet_1"
+          "italic": false
         },
         {
-          "node_id": "bullet_200",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 4700015,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "bullet_2",
-          "fill_color": "#E8743B"
-        },
-        {
-          "node_id": "bl_item_201",
+          "node_id": "bl_item_199",
           "node_type": "text",
           "rect": {
-            "x": 914400,
-            "y": 4523232,
-            "w": 10820400,
+            "x": 457200,
+            "y": 4632960,
+            "w": 11277600,
             "h": 518159
           },
           "text_content": "Expansion revenue outpaced new sales",
@@ -135,13 +108,12 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "bullet_2"
+          "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_202",
+          "node_id": "chrome_pagenum_200",
           "node_type": "text",
           "rect": {
             "x": 10363200,

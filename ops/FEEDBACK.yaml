@@ -253,40 +253,40 @@ comments:
 - id: FB-026
   component: bullet-list
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👎 never use bullets
   created: '2026-07-03'
   updated: '2026-07-03'
   source: web 2026-07-03T16:36:33.192Z
-  notes: ''
+  notes: done — square list markers removed everywhere (bullet-list, two-panel-list, swot, roadmap items); flush-left lines with a thin accent/panel-colour rule as the non-text mark; codified as a no-bullets test
 - id: FB-027
   component: code
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 the text color needs to match modern IDE color usage for python code
   created: '2026-07-03'
   updated: '2026-07-03'
   source: web 2026-07-03T16:36:33.192Z
-  notes: ''
+  notes: 'done — deterministic per-token highlighter, VS Code Dark+ palette (keywords/strings/comments/functions/numbers), background #1E1E1E; each colour run is its own measured node so the linter still proves fit'
 - id: FB-028
   component: this-vs-that
   family: vs-badge
-  status: open
+  status: done
   severity: med
   comment: 👎 Use all black text, these colors look jarring. The vs should not have a box around it.
   created: '2026-07-03'
   updated: '2026-07-03'
   source: web 2026-07-03T16:36:33.192Z
-  notes: ''
+  notes: done — values/labels in the default text colour, VS is a bare muted caption centred between the columns (badge box removed); slide is deliberately text-only (lint-exempted)
 - id: FB-029
-  component: testimonial
-  family: testimonial
-  status: open
+  component: pull-quote
+  family: emphasis-stack
+  status: done
   severity: med
   comment: 👎 delete - too similar to another slide layout
   created: '2026-07-03'
   updated: '2026-07-03'
   source: web 2026-07-03T16:36:33.192Z
-  notes: ''
+  notes: done — testimonial deleted (redundant with pull-quote); recommender routes quote+portrait to pull-quote

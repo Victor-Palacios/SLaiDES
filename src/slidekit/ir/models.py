@@ -488,14 +488,6 @@ class LogoWallSlide(BaseModel):
     logos: list[LogoMark] = Field(min_length=1)
 
 
-class TestimonialSlide(BaseModel):
-    component: Literal["testimonial"]
-    quote: str
-    name: str
-    role: str
-    image: Optional[ImageSlot] = None
-
-
 Slide = Annotated[
     Union[
         TitleSlide,
@@ -534,7 +526,6 @@ Slide = Annotated[
         ImageFullBleedSlide,
         ImageGridSlide,
         LogoWallSlide,
-        TestimonialSlide,
     ],
     Field(discriminator="component"),
 ]

@@ -2,9 +2,9 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxonomy.py` — do not hand-edit. A test (`tests/test_catalog`) fails if it drifts._
 
-**37 components** implement **25 distinct layout skeletons** (families); **12** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **25 distinct layouts**.
+**36 components** implement **24 distinct layout skeletons** (families); **12** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **24 distinct layouts**.
 
-## Distinct layout families (25)
+## Distinct layout families (24)
 
 | Family | Anchor component | What the skeleton is |
 |---|---|---|
@@ -27,7 +27,6 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `stat-callout` | `stat-callout` | A row of stat cards (value + label). |
 | `swot` | `swot` | A SWOT 2×2 of titled bulleted panels. |
 | `table` | `table-slide` | A data table. |
-| `testimonial` | `testimonial` | A testimonial (portrait + quote + name/role). |
 | `timeline` | `timeline` | Horizontal dated events. |
 | `title` | `title-slide` | Deck/section cover. |
 | `two-column` | `comparison-columns` | Two titled bulleted columns side by side. |
@@ -70,7 +69,6 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `swot` | `swot` | **anchor** | — |
 | `table-slide` | `table` | **anchor** | — |
 | `team-grid` | `labeled-image-grid` | **anchor** | — |
-| `testimonial` | `testimonial` | **anchor** | — |
 | `this-vs-that` | `vs-badge` | **anchor** | — |
 | `timeline` | `timeline` | **anchor** | — |
 | `title-slide` | `title` | **anchor** | — |

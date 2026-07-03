@@ -10,6 +10,7 @@ Pass 2 (assign):  distribute available space top-down and record rects.
 from __future__ import annotations
 
 import itertools
+import re
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -48,7 +49,6 @@ from slidekit.ir.models import (
     SwotSlide,
     TableSlide,
     TeamGridSlide,
-    TestimonialSlide,
     ThisVsThatSlide,
     TimelineSlide,
     TitleSlide,
@@ -230,8 +230,6 @@ def _resolve_slide(
         nodes = _layout_image_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "logo-wall":
         nodes = _layout_logo_wall(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "testimonial":
-        nodes = _layout_testimonial(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     else:
         nodes = []
 
@@ -768,27 +766,31 @@ def _list_title(slide_title, cx, y, cw, font, ts):
     return node, y + title_h + GAP_MIN_EMU
 
 
+# Operator style rule (FB-026): "never use bullets" — list layouts carry NO bullet
+# glyphs/markers; items are clean flush-left lines. A short accent rule under the
+# title is the slide's deterministic non-text mark (same motif as big-number/kpi-grid).
+_LIST_RULE_W_EMU = int(1.2 * EMU_PER_INCH)
+_LIST_RULE_H_EMU = int(0.06 * EMU_PER_INCH)
+
+
 def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palette):
     nodes: list[ResolvedNode] = []
     gap = GAP_MIN_EMU
     title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
     nodes.append(title_node)
+    nodes.append(ResolvedNode(_nid("bl_rule"), "box",
+                              Rect(cx, y, _LIST_RULE_W_EMU, _LIST_RULE_H_EMU),
+                              fill_color=palette.accent))
+    y += _LIST_RULE_H_EMU + gap
 
     n = len(slide.items)
     avail = cy + ch - y
     slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
     item_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    marker = int(0.18 * EMU_PER_INCH)
-    text_x = cx + int(0.5 * EMU_PER_INCH)
-    text_w = cw - int(0.5 * EMU_PER_INCH)
-    for i, item in enumerate(slide.items):
-        gid = f"bullet_{i}"
-        my = y + (item_h - marker) // 2
-        nodes.append(ResolvedNode(_nid("bullet"), "box", Rect(cx, my, marker, marker),
-                                  fill_color=palette.accent, group_id=gid))
+    for item in slide.items:
         nodes.append(_make_text_node(_nid("bl_item"), item, font, ts.body,
                                      bold=False, italic=False,
-                                     rect=Rect(text_x, y, text_w, item_h), group_id=gid))
+                                     rect=Rect(cx, y, cw, item_h)))
         y += slot_h + gap
     return nodes
 
@@ -800,11 +802,78 @@ def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palett
 # wrapping), indentation preserved. Comment lines (`#…`) are dimmed; everything else is
 # the light foreground. Deterministic and measurable: the linter still proves every line
 # fits. (Repurposed from the former `checklist` layout — operator issue #14.)
-_CODE_BG = "#0C1A1C"       # near-black panel (slight teal, like the reference)
-_CODE_FG = "#E6EDF3"       # light foreground for code
-_CODE_COMMENT = "#8FB3A4"  # dimmed sage for comment lines (readable on the dark panel)
+# Token colours follow the VS Code Dark+ Python theme (operator feedback FB-027:
+# "text color needs to match modern IDE color usage"). Highlighting is a small
+# DETERMINISTIC per-line tokenizer (regex, no external highlighter): same source in,
+# same coloured runs out — each run is its own measured text node, so the linter
+# still proves every line fits.
+_CODE_BG = "#1E1E1E"       # VS Code Dark+ editor background
+_CODE_FG = "#D4D4D4"       # default foreground / punctuation
+_CODE_COMMENT = "#6A9955"  # comments
+_CODE_KEYWORD = "#C586C0"  # control-flow keywords (if/for/return/...)
+_CODE_DECL = "#569CD6"     # declaration keywords + constants (def/class/import/None/...)
+_CODE_STRING = "#CE9178"   # string literals
+_CODE_NUMBER = "#B5CEA8"   # numeric literals
+_CODE_FUNC = "#DCDCAA"     # function names at def sites and call sites
+_CODE_PROMPT = "#4EC9B0"   # the "$" sigil on terminal lines
+_CODE_TITLE = "#858585"    # filename tab (Dark+ line-number gray)
 _CODE_DOTS = ("#FF5F56", "#FFBD2E", "#27C93F")  # macOS window traffic lights
 _CODE_FONT = "courier new"
+
+_PY_CONTROL = frozenset("if elif else for while try except finally with return yield "
+                        "break continue pass raise assert del match case".split())
+_PY_DECL = frozenset("def class import from as lambda global nonlocal async await "
+                     "True False None self in not and or is".split())
+
+_CODE_TOKEN_RE = re.compile(
+    r"""(?P<comment>\#.*$)
+      | (?P<string>[rbfuRBFU]{0,2}(?:'[^']*'|"[^"]*"))
+      | (?P<number>\b\d+(?:\.\d+)?\b)
+      | (?P<name>[A-Za-z_][A-Za-z0-9_]*)
+      | (?P<other>.)""",
+    re.VERBOSE,
+)
+
+
+def _code_line_runs(raw: str) -> list[tuple[str, str]]:
+    """Tokenize one source line into (text, colour) runs, VS Code Dark+ style.
+    Deterministic and total: every character lands in exactly one run; adjacent
+    runs with the same colour are merged."""
+    stripped = raw.lstrip()
+    if stripped.startswith("#"):
+        return [(raw, _CODE_COMMENT)]
+    if stripped.startswith("$"):
+        sigil_end = raw.index("$") + 1
+        return [(raw[:sigil_end], _CODE_PROMPT), (raw[sigil_end:], _CODE_FG)] \
+            if raw[sigil_end:] else [(raw, _CODE_PROMPT)]
+
+    runs: list[tuple[str, str]] = []
+    prev_was_def = False
+    for m in _CODE_TOKEN_RE.finditer(raw):
+        text = m.group(0)
+        if m.lastgroup == "comment":
+            color = _CODE_COMMENT
+        elif m.lastgroup == "string":
+            color = _CODE_STRING
+        elif m.lastgroup == "number":
+            color = _CODE_NUMBER
+        elif m.lastgroup == "name":
+            if text in _PY_CONTROL:
+                color = _CODE_KEYWORD
+            elif text in _PY_DECL:
+                color = _CODE_DECL
+            elif prev_was_def or raw[m.end():m.end() + 1] == "(":
+                color = _CODE_FUNC  # def-site or call-site function name
+            else:
+                color = _CODE_FG
+            prev_was_def = text in ("def", "class")
+        else:
+            color = _CODE_FG
+        if runs and runs[-1][1] == color:
+            runs[-1] = (runs[-1][0] + text, color)
+        else:
+            runs.append((text, color))
+    return runs or [(raw, _CODE_FG)]
 
 # Components whose slide carries an intrinsic full-canvas background (painted by the
 # emitter as a first-class backdrop, not a content node). Keyed by component.
@@ -834,24 +903,35 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
         cap_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
         nodes.append(_make_text_node(_nid("code_title"), slide.title, _CODE_FONT, ts.caption,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, cap_h),
-                                     is_caption=True, color=_CODE_COMMENT, group_id=gid))
+                                     is_caption=True, color=_CODE_TITLE, group_id=gid))
         y += cap_h + GAP_MIN_EMU
 
-    # Code lines: verbatim, monospace, no wrapping; comment lines dimmed. Each line is one
-    # measured Line (indentation preserved — measure_text counts leading spaces), so the
-    # linter still proves it fits. Blank lines advance the cursor without emitting a node.
+    # Code lines: verbatim, monospace, no wrapping; syntax-coloured per token (FB-027).
+    # Each coloured run is its own measured node placed at the run's exact x offset.
+    # Emitters draw glyphs at rect.x + INSET_LEFT, so a run's rect.x is its glyph
+    # offset MINUS nothing for the first run (rect.x = cx + prefix width keeps every
+    # glyph exactly where the old single-node line put it) and the rect is widened by
+    # the insets so no emitter re-wraps. Runs of a line overlap by the insets — they
+    # share the "code" group_id, so E_OVERLAP/E_GAP treat the line as one intentional
+    # unit (exactly as the whole block already did). Blank lines advance the cursor.
     size = ts.body
     line_h = int(size * LINE_SPACING_SINGLE * EMU_PER_PT)
     for raw in slide.code.split("\n"):
         if raw.strip():
-            is_comment = raw.lstrip().startswith("#")
-            color = _CODE_COMMENT if is_comment else _CODE_FG
-            w = measure_text(raw, _CODE_FONT, size)
-            line = Line(text=raw, width_emu=w, height_emu=line_h, overflows=w > cw)
-            nodes.append(_make_text_node(_nid("code_line"), raw, _CODE_FONT, size,
-                                         bold=False, italic=False,
-                                         rect=Rect(cx, y, cw, line_h), lines=[line],
-                                         color=color, group_id=gid))
+            line_w = measure_text(raw, _CODE_FONT, size)
+            prefix = ""
+            for text, color in _code_line_runs(raw):
+                run_w = measure_text(text, _CODE_FONT, size)
+                line = Line(text=text, width_emu=run_w, height_emu=line_h,
+                            overflows=line_w > cw)
+                # x from measuring the ACTUAL prefix substring (not accumulated run
+                # widths) so per-call rounding can never drift across a line.
+                nodes.append(_make_text_node(
+                    _nid("code_run"), text, _CODE_FONT, size, bold=False, italic=False,
+                    rect=Rect(cx + measure_text(prefix, _CODE_FONT, size), y,
+                              run_w + INSET_LEFT_EMU + INSET_RIGHT_EMU, line_h),
+                    lines=[line], color=color, group_id=gid))
+                prefix += text
         y += line_h
     return nodes
 
@@ -929,11 +1009,10 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
 
 
 def _panel_items(nodes, items, x, y, w, h, font, ts, marker_color, prefix,
-                 item_pt=None, is_caption=False):
-    """Render a bulleted column of items with square box markers (no glyph bullets).
-
-    Each marker+text pair shares a group_id so the intentional marker-on-text row is
-    exempt from E_GAP/E_OVERLAP while the linter still proves each row fits.
+                 item_pt=None, is_caption=False, group_id=None):
+    """Render a column of items as clean flush-left lines — NO bullet markers
+    (operator style rule FB-026: "never use bullets"). ``marker_color`` is kept in
+    the signature for callers that colour their panel headings/rules with it.
 
     ``item_pt`` overrides the item type-tier (default: body). Dense grid callers
     (swot) pass the caption tier + ``is_caption`` so each item box can honestly hold
@@ -944,24 +1023,17 @@ def _panel_items(nodes, items, x, y, w, h, font, ts, marker_color, prefix,
     slot_h = max(1, (h - gap * max(0, n - 1)) // n)
     item_pt = ts.body if item_pt is None else item_pt
     line_h = int(item_pt * LINE_SPACING_SINGLE * EMU_PER_PT)
-    marker = int(0.18 * EMU_PER_INCH)
-    text_x = x + int(0.4 * EMU_PER_INCH)
-    text_w = w - int(0.4 * EMU_PER_INCH)
     cur = y
-    for i, item in enumerate(items):
-        gid = f"{prefix}_{i}"
+    for item in items:
         # Size each item box to its wrapped height (column is narrow → items may
         # wrap), floored at one leaded line and capped at the slot so consecutive
         # rows never collide.
-        lines = wrap(item, font, item_pt, text_w)
+        lines = wrap(item, font, item_pt, w)
         item_h = min(slot_h, max(line_h, total_text_height_emu(lines)))
-        my = cur + (line_h - marker) // 2
-        nodes.append(ResolvedNode(_nid(f"{prefix}_mark"), "box", Rect(x, my, marker, marker),
-                                  fill_color=marker_color, group_id=gid))
         nodes.append(_make_text_node(_nid(f"{prefix}_item"), item, font, item_pt,
                                      bold=False, italic=False,
-                                     rect=Rect(text_x, cur, text_w, item_h), lines=lines,
-                                     is_caption=is_caption, group_id=gid))
+                                     rect=Rect(x, cur, w, item_h), lines=lines,
+                                     is_caption=is_caption, group_id=group_id))
         cur += slot_h + gap
 
 
@@ -984,16 +1056,28 @@ def _two_panel_list(title, left_head, left_items, left_color,
     col_w = (cw - gap) // 2
     right_x = cx + col_w + gap
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
-    nodes.append(_make_text_node(_nid("lp_head"), left_head, font, ts.body, bold=True,
-                                 italic=False, rect=Rect(cx, y, col_w, head_h),
-                                 color=left_color))
-    nodes.append(_make_text_node(_nid("rp_head"), right_head, font, ts.body, bold=True,
-                                 italic=False, rect=Rect(right_x, y, col_w, head_h),
-                                 color=right_color))
+    rule_h = int(0.06 * EMU_PER_INCH)
+    inner = int(0.12 * EMU_PER_INCH)
+    for px, head, color, prefix in ((cx, left_head, left_color, "lp"),
+                                    (right_x, right_head, right_color, "rp")):
+        gid = f"{prefix}_head"
+        nodes.append(_make_text_node(_nid(f"{prefix}_head"), head, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(px, y, col_w, head_h),
+                                     color=color, group_id=gid))
+        # Panel-coloured rule under the heading: carries the muted-vs-accent contrast
+        # without bullet markers (FB-026) and is the panel's non-text mark. It rides
+        # INSIDE the existing heading->items gap (panel-wide group_id makes the tight
+        # spacing intentional), so the items keep every EMU of space they had.
+        nodes.append(ResolvedNode(_nid(f"{prefix}_rule"), "box",
+                                  Rect(px, y + head_h + inner,
+                                       max(1, int(col_w * 0.3)), rule_h),
+                                  fill_color=color, group_id=gid))
     items_y = y + head_h + gap
     items_h = cy + ch - items_y
-    _panel_items(nodes, left_items, cx, items_y, col_w, items_h, font, ts, left_color, "lp")
-    _panel_items(nodes, right_items, right_x, items_y, col_w, items_h, font, ts, right_color, "rp")
+    _panel_items(nodes, left_items, cx, items_y, col_w, items_h, font, ts, left_color, "lp",
+                 group_id="lp_head")
+    _panel_items(nodes, right_items, right_x, items_y, col_w, items_h, font, ts, right_color, "rp",
+                 group_id="rp_head")
     return nodes
 
 
@@ -1021,15 +1105,15 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
                                      color=palette.primary))
         y += title_h + gap
 
-    # Operator feedback FB-023: the old 0.9" badge dwarfed its own "VS" text (which also
-    # sat top-left inside it) and hung off the value line only, so it floated high of the
-    # visual middle. Now: a modest 0.75" badge, caption-tier "VS" centred inside it on
-    # both axes, the badge centred on the value+label BLOCK, and the columns centred so
-    # the face-off reads symmetrically.
-    badge = int(0.75 * EMU_PER_INCH)
-    col_w = (cw - badge - 2 * gap) // 2
+    # Operator feedback FB-028 (supersedes the FB-023 badge rework): the accent/primary
+    # value colours read as jarring and the boxed VS was unwanted. Now: ALL text in the
+    # default text colour, and "VS" is a bare muted caption centred between the columns
+    # on the value+label block midline — no box, no fills. The slide is deliberately
+    # text-only (exempted from W_TEXT_ONLY in the linter).
+    mid_w = int(0.75 * EMU_PER_INCH)  # breathing room between the columns
+    col_w = (cw - mid_w - 2 * gap) // 2
     left_x = cx
-    right_x = cx + col_w + gap + badge + gap
+    right_x = cx + col_w + gap + mid_w + gap
     content_h = cy + ch - y
 
     value_h = int(ts.title * LINE_SPACING_SINGLE * EMU_PER_PT)
@@ -1037,26 +1121,21 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
     block_h = value_h + gap + label_h
     inner_y = y + max(0, (content_h - block_h) // 2)
 
-    for px, side, color in ((left_x, slide.left, palette.accent),
-                            (right_x, slide.right, palette.primary)):
+    for px, side in ((left_x, slide.left), (right_x, slide.right)):
         nodes.append(_make_text_node(_nid("vs_value"), side.value, font, ts.title, bold=True,
                                      italic=False, rect=Rect(px, inner_y, col_w, value_h),
-                                     color=color, align="center"))
+                                     align="center"))
         nodes.append(_make_text_node(_nid("vs_label"), side.label, font, ts.body, bold=False,
                                      italic=False,
                                      rect=Rect(px, inner_y + value_h + gap, col_w, label_h),
                                      align="center"))
 
-    # Central VS badge, centred on the value+label block.
-    badge_x = cx + (cw - badge) // 2
-    badge_y = inner_y + max(0, (block_h - badge) // 2)
-    nodes.append(ResolvedNode(_nid("vs_badge"), "box", Rect(badge_x, badge_y, badge, badge),
-                              fill_color=palette.accent, group_id="vs_badge"))
+    # Bare "VS", centred between the columns on the block midline.
     vs_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
-    vs_y = badge_y + max(0, (badge - vs_h) // 2)
+    vs_x = cx + (cw - mid_w) // 2
+    vs_y = inner_y + max(0, (block_h - vs_h) // 2)
     nodes.append(_make_text_node(_nid("vs_text"), "VS", font, ts.caption, bold=True,
-                                 italic=False, rect=Rect(badge_x, vs_y, badge, vs_h),
-                                 group_id="vs_badge", color=palette.surface,
+                                 italic=False, rect=Rect(vs_x, vs_y, mid_w, vs_h),
                                  is_caption=True, align="center"))
     return nodes
 
@@ -1475,10 +1554,20 @@ def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
         ("Threats", slide.threats, palette.muted, cx + col_w + gap, y + cell_h + gap),
     ]
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
+    rule_h = int(0.06 * EMU_PER_INCH)
+    inner = int(0.12 * EMU_PER_INCH)
     for idx, (head, items, color, qx, qy) in enumerate(quads):
+        gid = f"swot_head_{idx}"
         nodes.append(_make_text_node(_nid("swot_head"), head, font, ts.body, bold=True,
                                      italic=False, rect=Rect(qx, qy, col_w, head_h),
-                                     color=color))
+                                     color=color, group_id=gid))
+        # Quadrant-coloured rule under the heading — the colour cue + non-text mark
+        # now that list markers are gone (FB-026). Rides inside the existing
+        # heading->items gap (shared gid) so quadrant items lose no space.
+        nodes.append(ResolvedNode(_nid("swot_rule"), "box",
+                                  Rect(qx, qy + head_h + inner,
+                                       max(1, int(col_w * 0.3)), rule_h),
+                                  fill_color=color, group_id=gid))
         items_y = qy + head_h + gap
         items_h = qy + cell_h - items_y
         # SWOT packs four bulleted lists into a 2×2 grid, so each quadrant cell is
@@ -1487,7 +1576,7 @@ def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
         # than being clamped under one line (board T-064). Bold body headings still
         # dominate the tier hierarchy.
         _panel_items(nodes, items, qx, items_y, col_w, items_h, font, ts, color,
-                     f"swot{idx}", item_pt=ts.caption, is_caption=True)
+                     f"swot{idx}", item_pt=ts.caption, is_caption=True, group_id=gid)
     return nodes
 
 
@@ -1670,45 +1759,6 @@ def _layout_logo_wall(slide: LogoWallSlide, cx, cy, cw, ch, font, ts, palette):
                                          italic=False, rect=Rect(x, yy, cell_w, cell_h),
                                          color=palette.primary, group_id=gid))
     return nodes
-
-
-def _layout_testimonial(slide: TestimonialSlide, cx, cy, cw, ch, font, ts, palette):
-    """Customer quote with optional portrait, attribution, and accent quote bar."""
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    portrait_w = int(cw * 0.28) if slide.image else 0
-    quote_x = cx + (portrait_w + gap if slide.image else 0)
-    quote_w = cw - (portrait_w + gap if slide.image else 0)
-    gid = "testimonial"
-
-    if slide.image:
-        nodes.append(ResolvedNode(_nid("test_img"), "image", Rect(cx, cy, portrait_w, ch),
-                                  slot_type="image", text_content=slide.image.path,
-                                  group_id=gid))
-    bar_w = int(0.10 * EMU_PER_INCH)
-    nodes.append(ResolvedNode(_nid("test_bar"), "box", Rect(quote_x, cy, bar_w, ch),
-                              fill_color=palette.accent, group_id=gid))
-    text_x = quote_x + bar_w + int(0.25 * EMU_PER_INCH)
-    text_w = quote_w - bar_w - int(0.25 * EMU_PER_INCH)
-    quote_lines = wrap(f'"{slide.quote}"', font, ts.header, text_w, italic=True)
-    quote_h = total_text_height_emu(quote_lines)
-    name_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    role_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
-    block_h = quote_h + gap + name_h + role_h
-    y = cy + max(0, (ch - block_h) // 2)
-    nodes.append(_make_text_node(_nid("test_quote"), f'"{slide.quote}"', font, ts.header,
-                                 bold=False, italic=True, rect=Rect(text_x, y, text_w, quote_h),
-                                 lines=quote_lines, group_id=gid))
-    nodes.append(_make_text_node(_nid("test_name"), slide.name, font, ts.body, bold=True,
-                                 italic=False, rect=Rect(text_x, y + quote_h + gap, text_w, name_h),
-                                 color=palette.primary, group_id=gid))
-    nodes.append(_make_text_node(_nid("test_role"), slide.role, font, ts.caption, bold=False,
-                                 italic=False, rect=Rect(text_x, y + quote_h + gap + name_h, text_w, role_h),
-                                 is_caption=True, color=palette.muted, group_id=gid))
-    return nodes
-
-
-# ── content list layout helper ────────────────────────────────────────────────
 
 
 def _layout_content_list(slots, prefix: str, x, y, w, h, font, ts, palette=None) -> list[ResolvedNode]:

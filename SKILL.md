@@ -92,7 +92,7 @@ Each component compiles to a row/column tree; you fill typed slots.
 **Choosing a layout (no vision).** Pick a component per slide from its *content shape*, not
 by rendering anything: [docs/LAYOUT_SELECTION_GUIDE.md](docs/LAYOUT_SELECTION_GUIDE.md)
 lists every component's purpose, when-to-use, capacity, and required fields, grouped by the
-~25 distinct layout families (see [docs/LAYOUT_TAXONOMY.md](docs/LAYOUT_TAXONOMY.md)). The
+~24 distinct layout families (see [docs/LAYOUT_TAXONOMY.md](docs/LAYOUT_TAXONOMY.md)). The
 same data is machine-readable via `slidekit catalog --json`.
 
 **Authoring from an outline.** `slidekit author outline.yaml [--pdf]` builds a deck from a
@@ -139,7 +139,6 @@ lean outline — a `slides:` list where each slide is a chosen `component` + its
 | `image-full-bleed` | `image` | `overlay_title` |
 | `image-grid` | `images[]` (2–4 best) | `title`, `captions[]` |
 | `logo-wall` | `logos[]` = `{label? image?}` | `title` |
-| `testimonial` | `quote`, `name`, `role` | `image` |
 
 A `chart` slot is `{type: chart, chart_type: bar, labels[], series[] = {name, values[]}}`.
 Bar charts render as measured colored rectangles + labels (deterministic, lint-provable);

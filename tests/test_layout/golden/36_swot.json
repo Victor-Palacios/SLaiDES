@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1",
+          "node_id": "title_391",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#14213D"
         },
         {
-          "node_id": "swot_head_2",
+          "node_id": "swot_head_392",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -53,27 +53,28 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
+          "group_id": "swot_head_0",
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot0_mark_3",
+          "node_id": "swot_rule_393",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2503931,
-            "w": 164592,
-            "h": 164592
+            "y": 2231135,
+            "w": 1650492,
+            "h": 54864
           },
-          "group_id": "swot0_0",
+          "group_id": "swot_head_0",
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot0_item_4",
+          "node_id": "swot0_item_394",
           "node_type": "text",
           "rect": {
-            "x": 822960,
+            "x": 457200,
             "y": 2395727,
-            "w": 5135880,
+            "w": 5501640,
             "h": 411480
           },
           "text_content": "Strong brand",
@@ -90,27 +91,15 @@
           "bold": false,
           "italic": false,
           "is_caption": true,
-          "group_id": "swot0_0"
+          "group_id": "swot_head_0"
         },
         {
-          "node_id": "swot0_mark_5",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 3189731,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "swot0_1",
-          "fill_color": "#2A9D8F"
-        },
-        {
-          "node_id": "swot0_item_6",
+          "node_id": "swot0_item_395",
           "node_type": "text",
           "rect": {
-            "x": 822960,
+            "x": 457200,
             "y": 3081527,
-            "w": 5135880,
+            "w": 5501640,
             "h": 411480
           },
           "text_content": "Loyal users",
@@ -127,10 +116,10 @@
           "bold": false,
           "italic": false,
           "is_caption": true,
-          "group_id": "swot0_1"
+          "group_id": "swot_head_0"
         },
         {
-          "node_id": "swot_head_7",
+          "node_id": "swot_head_396",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -151,27 +140,28 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
+          "group_id": "swot_head_1",
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "swot1_mark_8",
+          "node_id": "swot_rule_397",
           "node_type": "box",
           "rect": {
             "x": 6233160,
-            "y": 2503931,
-            "w": 164592,
-            "h": 164592
+            "y": 2231135,
+            "w": 1650492,
+            "h": 54864
           },
-          "group_id": "swot1_0",
+          "group_id": "swot_head_1",
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot1_item_9",
+          "node_id": "swot1_item_398",
           "node_type": "text",
           "rect": {
-            "x": 6598920,
+            "x": 6233160,
             "y": 2395727,
-            "w": 5135880,
+            "w": 5501640,
             "h": 411480
           },
           "text_content": "Thin margins",
@@ -188,27 +178,15 @@
           "bold": false,
           "italic": false,
           "is_caption": true,
-          "group_id": "swot1_0"
+          "group_id": "swot_head_1"
         },
         {
-          "node_id": "swot1_mark_10",
-          "node_type": "box",
-          "rect": {
-            "x": 6233160,
-            "y": 3189731,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "swot1_1",
-          "fill_color": "#8A8A9A"
-        },
-        {
-          "node_id": "swot1_item_11",
+          "node_id": "swot1_item_399",
           "node_type": "text",
           "rect": {
-            "x": 6598920,
+            "x": 6233160,
             "y": 3081527,
-            "w": 5135880,
+            "w": 5501640,
             "h": 411480
           },
           "text_content": "Small team",
@@ -225,10 +203,10 @@
           "bold": false,
           "italic": false,
           "is_caption": true,
-          "group_id": "swot1_1"
+          "group_id": "swot_head_1"
         },
         {
-          "node_id": "swot_head_12",
+          "node_id": "swot_head_400",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -249,27 +227,28 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
+          "group_id": "swot_head_2",
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot2_mark_13",
+          "node_id": "swot_rule_401",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 4771643,
-            "w": 164592,
-            "h": 164592
+            "y": 4498847,
+            "w": 1650492,
+            "h": 54864
           },
-          "group_id": "swot2_0",
+          "group_id": "swot_head_2",
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot2_item_14",
+          "node_id": "swot2_item_402",
           "node_type": "text",
           "rect": {
-            "x": 822960,
+            "x": 457200,
             "y": 4663439,
-            "w": 5135880,
+            "w": 5501640,
             "h": 411480
           },
           "text_content": "New markets",
@@ -286,27 +265,15 @@
           "bold": false,
           "italic": false,
           "is_caption": true,
-          "group_id": "swot2_0"
+          "group_id": "swot_head_2"
         },
         {
-          "node_id": "swot2_mark_15",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 5457443,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "swot2_1",
-          "fill_color": "#2A9D8F"
-        },
-        {
-          "node_id": "swot2_item_16",
+          "node_id": "swot2_item_403",
           "node_type": "text",
           "rect": {
-            "x": 822960,
+            "x": 457200,
             "y": 5349239,
-            "w": 5135880,
+            "w": 5501640,
             "h": 411480
           },
           "text_content": "Partnerships",
@@ -323,10 +290,10 @@
           "bold": false,
           "italic": false,
           "is_caption": true,
-          "group_id": "swot2_1"
+          "group_id": "swot_head_2"
         },
         {
-          "node_id": "swot_head_17",
+          "node_id": "swot_head_404",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -347,27 +314,28 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
+          "group_id": "swot_head_3",
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "swot3_mark_18",
+          "node_id": "swot_rule_405",
           "node_type": "box",
           "rect": {
             "x": 6233160,
-            "y": 4771643,
-            "w": 164592,
-            "h": 164592
+            "y": 4498847,
+            "w": 1650492,
+            "h": 54864
           },
-          "group_id": "swot3_0",
+          "group_id": "swot_head_3",
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot3_item_19",
+          "node_id": "swot3_item_406",
           "node_type": "text",
           "rect": {
-            "x": 6598920,
+            "x": 6233160,
             "y": 4663439,
-            "w": 5135880,
+            "w": 5501640,
             "h": 411480
           },
           "text_content": "New entrants",
@@ -384,27 +352,15 @@
           "bold": false,
           "italic": false,
           "is_caption": true,
-          "group_id": "swot3_0"
+          "group_id": "swot_head_3"
         },
         {
-          "node_id": "swot3_mark_20",
-          "node_type": "box",
-          "rect": {
-            "x": 6233160,
-            "y": 5457443,
-            "w": 164592,
-            "h": 164592
-          },
-          "group_id": "swot3_1",
-          "fill_color": "#8A8A9A"
-        },
-        {
-          "node_id": "swot3_item_21",
+          "node_id": "swot3_item_407",
           "node_type": "text",
           "rect": {
-            "x": 6598920,
+            "x": 6233160,
             "y": 5349239,
-            "w": 5135880,
+            "w": 5501640,
             "h": 411480
           },
           "text_content": "Price pressure",
@@ -421,12 +377,12 @@
           "bold": false,
           "italic": false,
           "is_caption": true,
-          "group_id": "swot3_1"
+          "group_id": "swot_head_3"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_22",
+          "node_id": "chrome_pagenum_408",
           "node_type": "text",
           "rect": {
             "x": 10363200,

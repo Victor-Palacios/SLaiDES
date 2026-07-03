@@ -163,7 +163,9 @@ def _check_slide(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
     has_media = bool(slot_types & {"image", "chart", "icon"}) or any(
         n.node_type == "box" for n in slide.nodes
     )
-    if not has_media and slide.component not in ("title-slide",):
+    # this-vs-that is deliberately text-only: the operator rejected the boxed VS
+    # badge and accent colours (FB-028) — a bare typographic face-off is the design.
+    if not has_media and slide.component not in ("title-slide", "this-vs-that"):
         issues.append(LintIssue(
             code="W_TEXT_ONLY",
             severity="warning",

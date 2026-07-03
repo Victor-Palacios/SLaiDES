@@ -635,3 +635,21 @@ Catalog is now 37 components / 25 distinct families. state.json migration was me
 only (dropped deleted layouts exactly as the fold script would; carried before-after's
 approved status to its new name) — no review judgement was invented; the "sessions never
 edit state.json" rule still stands for review VERDICTS.
+
+## Web feedback round 3: FB-026..FB-029 (2026-07-03)
+
+- GLOBAL STYLE RULE (operator, FB-026): **never use bullets.** Square list markers
+  removed from every list layout (bullet-list, two-panel-list panels, swot quadrants,
+  roadmap items); items are flush-left lines. Colour semantics + non-text mark now come
+  from thin rules (accent under a list title; panel/quadrant-coloured under headings).
+  Pinned by test_lists_have_no_bullet_markers — any future layout that emits a small
+  square box beside list items fails it.
+- FB-027: code layout speaks VS Code Dark+ — a deterministic regex tokenizer
+  (_code_line_runs) colours keywords/declarations/strings/numbers/comments/function
+  names/terminal $; each run is its own measured node placed by measuring the ACTUAL
+  prefix substring (no cumulative rounding drift). Background #1E1E1E.
+- FB-028 (supersedes FB-023's badge rework): this-vs-that is a bare typographic
+  face-off — default text colour everywhere, no box around a muted "VS"; the component
+  is exempted from W_TEXT_ONLY by operator decision.
+- FB-029: testimonial deleted (too similar to pull-quote); quote+portrait recommends
+  pull-quote now. Catalog: 36 components / 24 distinct families.
