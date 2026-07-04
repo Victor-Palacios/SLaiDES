@@ -290,3 +290,133 @@ comments:
   updated: '2026-07-03'
   source: web 2026-07-03T16:36:33.192Z
   notes: done — testimonial deleted (redundant with pull-quote); recommender routes quote+portrait to pull-quote
+- id: FB-030
+  component: bullet-list
+  family: marker-list
+  status: open
+  severity: med
+  comment: 👎 Drop the orange, ugly color line
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-031
+  component: code
+  family: code-block
+  status: open
+  severity: med
+  comment: 👎 I want the background color to be as it was in the previous version, but the colors look good for the text
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-032
+  component: this-vs-that
+  family: vs-badge
+  status: open
+  severity: med
+  comment: 👎 make the VS a little larger
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-033
+  component: table-slide
+  family: table
+  status: open
+  severity: med
+  comment: 👎 I think the headers should be a little bit closer to the line
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-034
+  component: metric-comparison
+  family: stat-callout
+  status: open
+  severity: med
+  comment: 👎 The alignment is wrong
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-035
+  component: process-steps
+  family: process-flow
+  status: open
+  severity: med
+  comment: 👎 reimagine this slide
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-036
+  component: roadmap
+  family: roadmap
+  status: open
+  severity: med
+  comment: 👎 The black texts have too much white space between them
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-037
+  component: matrix-2x2
+  family: matrix-2x2
+  status: open
+  severity: med
+  comment: 👎 reimagine this slide
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-038
+  component: swot
+  family: swot
+  status: open
+  severity: med
+  comment: 👎 One item per category
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-039
+  component: comparison-matrix
+  family: comparison-matrix
+  status: open
+  severity: med
+  comment: 👎 any matrix should always only highlight one or two items within the matrix not the categories so the coloring is off
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-040
+  component: team-grid
+  family: labeled-image-grid
+  status: open
+  severity: med
+  comment: 👎 delete this one
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-041
+  component: image-full-bleed
+  family: image-full-bleed
+  status: open
+  severity: med
+  comment: 👎 delete this one
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''
+- id: FB-042
+  component: image-grid
+  family: image-grid
+  status: open
+  severity: med
+  comment: 👎 delete this one
+  created: '2026-07-04'
+  updated: '2026-07-04'
+  source: web 2026-07-04T16:13:11.736Z
+  notes: ''

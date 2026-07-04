@@ -2,7 +2,25 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 0 · **done** 28 · **wontfix** 1 · _last change 2026-07-03_
+**open** 13 · **done** 28 · **wontfix** 1 · _last change 2026-07-04_
+
+## Open (13)
+
+| ID | Layout | Sev | Comment | Notes |
+|---|---|---|---|---|
+| FB-030 | bullet-list | med | 👎 Drop the orange, ugly color line |  |
+| FB-031 | code | med | 👎 I want the background color to be as it was in the previous version, but the colors look good for the text |  |
+| FB-032 | this-vs-that | med | 👎 make the VS a little larger |  |
+| FB-033 | table-slide | med | 👎 I think the headers should be a little bit closer to the line |  |
+| FB-034 | metric-comparison | med | 👎 The alignment is wrong |  |
+| FB-035 | process-steps | med | 👎 reimagine this slide |  |
+| FB-036 | roadmap | med | 👎 The black texts have too much white space between them |  |
+| FB-037 | matrix-2x2 | med | 👎 reimagine this slide |  |
+| FB-038 | swot | med | 👎 One item per category |  |
+| FB-039 | comparison-matrix | med | 👎 any matrix should always only highlight one or two items within the matrix not the categories so the coloring is off |  |
+| FB-040 | team-grid | med | 👎 delete this one |  |
+| FB-041 | image-full-bleed | med | 👎 delete this one |  |
+| FB-042 | image-grid | med | 👎 delete this one |  |
 
 ## Done (28)
 
