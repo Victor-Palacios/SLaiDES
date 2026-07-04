@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_selection_guide.py` — do not hand-edit. The machine-readable form is `slidekit catalog --json`. A test (`tests/test_catalog`) fails if it drifts._
 
-Pick a component per slide from its **content shape** — no rendering or vision needed. There are **36 components** across **24 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
+Pick a component per slide from its **content shape** — no rendering or vision needed. There are **33 components** across **22 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
 
 ## agenda — Numbered agenda / table of contents.
 
@@ -25,11 +25,11 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - content shape: a block of monospace code/terminal lines
   - required fields: `code`
 
-## comparison-matrix — An options × criteria grid.
+## comparison-matrix — An options × criteria grid; 1–2 winning cells highlighted (FB-039).
 
 - **`comparison-matrix`**
   - use when: Comparing many options across criteria.
-  - content shape: row headers × column headers + cells
+  - content shape: row headers × column headers + cells (+ up to 2 highlight cells)
   - required fields: `options`, `criteria`, `cells`
 
 ## emphasis-stack — A single bold centered line — a manifesto/claim.
@@ -81,20 +81,6 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - content shape: rows of {icon, heading, body}
   - required fields: `features`
 
-## image-full-bleed — A full-bleed image (+ overlay title).
-
-- **`image-full-bleed`**
-  - use when: One image should fill the slide.
-  - content shape: one image (+ optional overlay title)
-  - required fields: `image`
-
-## image-grid — A gallery grid of images.
-
-- **`image-grid`** · capacity 2–4
-  - use when: Showing several images together.
-  - content shape: a set of images (+ captions)
-  - required fields: `images`
-
 ## kpi-grid — A grid of KPIs (value + rule + label).
 
 - **`kpi-grid`** · capacity 3–6
@@ -102,13 +88,9 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - content shape: several {value, label} KPIs in a grid
   - required fields: `kpis`
 
-## labeled-image-grid — A grid of people (portrait + name + role).
+## labeled-image-grid — A wall of logos.
 
-- **`team-grid`** · capacity 2–9
-  - use when: Introducing a team.
-  - content shape: members {portrait, name, role}
-  - required fields: `members`
-- **`logo-wall`** · variant of `team-grid` (logo tiles (image/label) instead of portrait+name+role) · capacity 3–12
+- **`logo-wall`** · capacity 3–12
   - use when: Showing customer/partner logos.
   - content shape: logo tiles {image|label}
   - required fields: `logos`
@@ -163,11 +145,11 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - content shape: several {value, label, delta} metrics
   - required fields: `metrics`
 
-## swot — A SWOT 2×2 of titled bulleted panels.
+## swot — A SWOT 2×2 — one defining statement per quadrant (FB-038).
 
 - **`swot`**
   - use when: A SWOT analysis specifically.
-  - content shape: four titled groups of bullets
+  - content shape: four titled single statements
   - required fields: `strengths`, `weaknesses`, `opportunities`, `threats`
 
 ## table — A data table.

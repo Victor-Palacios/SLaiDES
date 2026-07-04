@@ -89,13 +89,14 @@ def test_lists_have_no_bullet_markers():
                 assert n.rect.w >= 4 * n.rect.h, f"{name}: {n.node_id} looks like a bullet"
 
 
-def test_bullet_list_items_flush_left_under_rule():
+def test_bullet_list_items_flush_left_pure_typography():
     _, s = _slide("19_bullet_list")
     items = _by_prefix(s, "bl_item")
     title = _by_prefix(s, "title")[0]
     assert items and all(n.rect.x == title.rect.x for n in items)  # no marker indent
-    rules = [n for n in s.nodes if n.node_type == "box"]
-    assert len(rules) == 1  # the accent rule under the title
+    # FB-030 ("drop the orange, ugly color line"): no rule, no boxes — nothing
+    # but the title and the items.
+    assert not [n for n in s.nodes if n.node_type != "text"]
 
 
 # ── FB-027: code is syntax-coloured like a modern IDE (VS Code Dark+) ────────────
@@ -152,3 +153,114 @@ def test_kpi_grid_tiles_are_tight_and_centred():
         r_mid = r.rect.x + r.rect.w / 2
         assert abs(v_mid - r_mid) <= 1000
         assert v.align == "center" and l.align == "center"
+
+
+# ── 2026-07-04 round (FB-030..FB-042) ─────────────────────────────────────────
+
+
+def test_code_background_is_the_original_deep_teal():
+    """FB-031: token colours stay VS Code Dark+, but the panel returns to the
+    original deep-teal background the operator preferred."""
+    from slidekit.layout.engine import _CODE_BG
+    assert _CODE_BG == "#0C1A1C"
+    _, s = _slide("21_code")
+    assert s.background == _CODE_BG
+
+
+def test_vs_text_is_body_tier():
+    """FB-032: the bare VS steps up from caption to body tier (still muted)."""
+    deck, s = _slide("25_this_vs_that")
+    vs = next(n for n in s.nodes if n.text_content == "VS")
+    assert vs.size_pt == deck.theme.type_scale.body
+    assert vs.is_caption  # muted colour keeps the numbers dominant
+
+
+def test_table_headers_hug_the_rule():
+    """FB-033: the header row sits a tight 0.12" above the accent rule."""
+    _, s = _slide("29_table_slide")
+    inner = int(0.12 * EMU_PER_INCH)
+    ths = _by_prefix(s, "th")
+    rule = next(n for n in s.nodes if n.node_type == "box")
+    assert ths and all(rule.rect.y - th.rect.bottom() == inner for th in ths)
+    assert rule.group_id == ths[0].group_id  # intentional tight pair (E_GAP-exempt)
+
+
+def test_metric_comparison_shares_one_vertical_rhythm():
+    """FB-034: values/labels/chips align across columns and centre in them."""
+    _, s = _slide("30_metric_comparison")
+    values = _by_prefix(s, "metric_val")
+    labels = _by_prefix(s, "metric_label")
+    chips = _by_prefix(s, "metric_chip")
+    assert len({n.rect.y for n in values}) == 1  # one value row
+    assert len({n.rect.y for n in labels}) == 1  # one label row
+    assert len({n.rect.y for n in chips}) == 1   # one chip row
+    assert all(n.align == "center" for n in values + labels)
+    for chip in chips:  # chips centred under their column
+        col = next(v for v in values if v.rect.x <= chip.rect.x < v.rect.right())
+        chip_mid = chip.rect.x + chip.rect.w / 2
+        col_mid = col.rect.x + col.rect.w / 2
+        assert abs(chip_mid - col_mid) <= 1000
+
+
+def test_process_steps_are_typographic_not_chips():
+    """FB-035: large accent numerals + hairline rules — no filled chip badges."""
+    deck, s = _slide("31_process_steps")
+    nums = _by_prefix(s, "ps_num")
+    assert nums and all(n.text_content == f"{i + 1:02d}" for i, n in enumerate(nums))
+    assert all(n.size_pt == deck.theme.type_scale.header for n in nums)
+    for b in (n for n in s.nodes if n.node_type == "box"):
+        assert b.rect.w >= 4 * b.rect.h  # thin rules only, never square chips
+
+
+def test_roadmap_items_pack_tight():
+    """FB-036: items stack at the minimum gap instead of spreading down the lane."""
+    _, s = _slide("32_roadmap")
+    from slidekit.metrics.constants import GAP_MIN_EMU
+    for prefix in ("rm0", "rm1", "rm2"):
+        items = _by_prefix(s, f"{prefix}_item")
+        assert len(items) >= 2
+        for a, b in zip(items, items[1:]):
+            assert b.rect.y - a.rect.bottom() == GAP_MIN_EMU
+
+
+def test_matrix_2x2_hairline_cross_and_single_highlight():
+    """FB-037/FB-039: muted hairline cross; colour only on the highlighted item."""
+    deck, s = _slide("35_matrix_2x2")
+    muted = deck.theme.palette.muted
+    accent = deck.theme.palette.accent
+    boxes = [n for n in s.nodes if n.node_type == "box"]
+    assert boxes and all(b.fill_color == muted for b in boxes)  # cross is quiet
+    quads = _by_prefix(s, "mx_q")
+    assert all(n.align == "center" for n in quads)
+    highlighted = [n for n in quads if n.text_color == accent]
+    assert len(highlighted) == 1  # exactly the specimen's highlight: 0
+    assert highlighted[0].text_content == "Quick wins"
+
+
+def test_swot_rejects_multiple_items_per_category():
+    """FB-038: the IR enforces exactly one statement per quadrant."""
+    import pytest
+    from slidekit.ir.models import SwotSlide
+    SwotSlide(component="swot", strengths=["a"], weaknesses=["b"],
+              opportunities=["c"], threats=["d"])
+    with pytest.raises(Exception):
+        SwotSlide(component="swot", strengths=["a", "extra"], weaknesses=["b"],
+                  opportunities=["c"], threats=["d"])
+
+
+def test_comparison_matrix_highlights_cells_not_categories():
+    """FB-039: no coloured category boxes; accent belongs to the ≤2 highlight
+    chips (plus the thin header rule)."""
+    deck, s = _slide("37_comparison_matrix")
+    accent = deck.theme.palette.accent
+    boxes = [n for n in s.nodes if n.node_type == "box"]
+    rules = [b for b in boxes if b.rect.w >= 4 * b.rect.h]
+    chips = _by_prefix(s, "cm_hl")
+    assert len(rules) == 1 and len(chips) == 2
+    assert len(boxes) == len(rules) + len(chips)  # nothing else is filled
+    assert all(b.fill_color == accent for b in boxes)
+    heads = _by_prefix(s, "cm_head")
+    crits = _by_prefix(s, "cm_crit")
+    # category text is plain (primary headers / default criteria) — never boxed
+    assert heads and crits
+    assert all(n.node_type == "text" for n in heads + crits)

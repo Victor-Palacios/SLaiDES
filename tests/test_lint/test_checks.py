@@ -241,10 +241,12 @@ class TestDefectFixture:
             f"Expected E_PAGE_NUMBER, got: {[i.code for i in issues]}"
         )
 
-    # W_TEXT_ONLY: slide with only text (no media).
+    # W_TEXT_ONLY: slide with only text (no media). Uses feature-list — bullet-list
+    # is exempt now that its accent rule is gone (FB-030) and the layout is
+    # deliberately pure typography.
     def test_w_text_only(self):
         node = _text_node("n", Rect(MARGIN_MIN_EMU, MARGIN_MIN_EMU, 5_000_000, 500_000))
-        slide = _make_slide(component="bullet-list", nodes=[node])
+        slide = _make_slide(component="feature-list", nodes=[node])
         issues = self._lint_slide(slide)
         assert self._has_code(issues, "W_TEXT_ONLY"), (
             f"Expected W_TEXT_ONLY, got: {[i.code for i in issues]}"
@@ -427,7 +429,8 @@ class TestOutputFormat:
         # Node with bad size (error) and a text-only slide (warning).
         node = _text_node("n", Rect(MARGIN_MIN_EMU, MARGIN_MIN_EMU, 5_000_000, 500_000),
                           size_pt=20.0)
-        slide = _make_slide(component="bullet-list", nodes=[node])
+        # feature-list, not bullet-list: the latter is W_TEXT_ONLY-exempt (FB-030).
+        slide = _make_slide(component="feature-list", nodes=[node])
         rd = ResolvedDeck(slides=[slide])
         issues = lint(ir, rd)
         error_codes = {i.code for i in issues if i.severity == "error"}

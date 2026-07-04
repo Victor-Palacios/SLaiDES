@@ -430,18 +430,25 @@ class Matrix2x2Slide(BaseModel):
     x_label: str
     y_label: str
     quadrants: list[str] = Field(min_length=4, max_length=4)
+    # At most ONE quadrant may carry the accent colour (FB-037/FB-039: matrices
+    # highlight items, never scaffolding/categories). Index into `quadrants`.
+    highlight: Optional[int] = Field(default=None, ge=0, le=3)
 
 
 class SwotSlide(BaseModel):
     component: Literal["swot"]
     title: Optional[str] = None
-    strengths: list[str] = Field(min_length=1)
-    weaknesses: list[str] = Field(min_length=1)
-    opportunities: list[str] = Field(min_length=1)
-    threats: list[str] = Field(min_length=1)
+    # Exactly one statement per category (operator feedback FB-038): a SWOT slide
+    # states the single defining point in each quadrant, not a packed list.
+    strengths: list[str] = Field(min_length=1, max_length=1)
+    weaknesses: list[str] = Field(min_length=1, max_length=1)
+    opportunities: list[str] = Field(min_length=1, max_length=1)
+    threats: list[str] = Field(min_length=1, max_length=1)
 
 
 # ── Phase 9: structured relationships & visual (catalog #33, #35, #37–40) ────
+# (team-grid, image-full-bleed and image-grid were retired 2026-07-04 per operator
+# feedback FB-040..FB-042.)
 
 
 class ComparisonMatrixSlide(BaseModel):
@@ -450,31 +457,9 @@ class ComparisonMatrixSlide(BaseModel):
     options: list[str] = Field(min_length=1)
     criteria: list[str] = Field(min_length=1)
     cells: list[list[str]] = Field(min_length=1)
-
-
-class TeamMember(BaseModel):
-    name: str
-    role: str
-    image: Optional[ImageSlot] = None
-
-
-class TeamGridSlide(BaseModel):
-    component: Literal["team-grid"]
-    title: Optional[str] = None
-    members: list[TeamMember] = Field(min_length=1)
-
-
-class ImageFullBleedSlide(BaseModel):
-    component: Literal["image-full-bleed"]
-    image: ImageSlot
-    overlay_title: Optional[str] = None
-
-
-class ImageGridSlide(BaseModel):
-    component: Literal["image-grid"]
-    title: Optional[str] = None
-    images: list[ImageSlot] = Field(min_length=1)
-    captions: list[str] = Field(default_factory=list)
+    # Up to two [row, col] cells rendered as accent chips — the ONLY colour in the
+    # matrix body (FB-039: highlight one or two items, never the categories).
+    highlights: list[tuple[int, int]] = Field(default_factory=list, max_length=2)
 
 
 class LogoMark(BaseModel):
@@ -522,9 +507,6 @@ Slide = Annotated[
         Matrix2x2Slide,
         SwotSlide,
         ComparisonMatrixSlide,
-        TeamGridSlide,
-        ImageFullBleedSlide,
-        ImageGridSlide,
         LogoWallSlide,
     ],
     Field(discriminator="component"),

@@ -666,3 +666,39 @@ variant_of/differs_by from the registry):
   a collapsed variant is flagged so nothing hides.
 - CSS gotcha codified in a comment: class display rules (grid/block) silently defeat the
   [hidden] attribute — a global `[hidden]{display:none!important}` guard now prevents it.
+
+## Web feedback round 4: FB-030..FB-042 (2026-07-04, 17 marks: 4 approvals + 13 flags)
+
+Approved: kpi-grid (clears its FB-024 flag), chart-with-insight, funnel, pyramid.
+
+- FB-030 bullet-list: the title accent rule (added as the FB-026 non-text mark) is gone
+  — "drop the orange, ugly color line". bullet-list is now pure typography and joins the
+  W_TEXT_ONLY exempt list. Lesson: a compensatory decoration added for a lint warning is
+  still decoration; the operator notices.
+- FB-031 code: background reverted to the original deep-teal #0C1A1C — Dark+ token
+  colours stay. The operator liked HALF of FB-027; feedback applies per-property.
+- FB-032 this-vs-that: VS caption→body tier; middle gutter 0.75"→1.0" so the bigger VS
+  clears E_OVERFLOW with standard insets.
+- FB-033 table-slide: header row hugs the accent rule (0.12" inner gap, shared group_id
+  — same E_GAP-exempt pattern as the panel-heading rules).
+- FB-034 metric-comparison root cause: each column vertically self-centred on its OWN
+  wrapped-label height, so values drifted to different heights. All columns now share
+  one rhythm (rows sized to the tallest label) and centre within their column.
+- FB-035 process-steps REIMAGINED: filled chip badges → large accent numerals (01/02)
+  over hairline rules + bold label + body. Motif borrowed from layouts the operator has
+  approved (agenda numerals, kpi-grid rules) — precedent is the best design guide.
+- FB-036 roadmap: _panel_items grew pack=True (stack at GAP_MIN instead of distributing
+  across the lane) — even distribution of few items read as disconnected floating lines.
+- FB-037 matrix-2x2 REIMAGINED: hairline MUTED cross, bold centred quadrant labels, new
+  optional `highlight: <0-3>` puts accent on at most one quadrant.
+- FB-038 swot: IR enforces exactly ONE statement per category (max_length=1); single
+  item renders at full body tier (T-064 caption-density compromise retired).
+- FB-039 comparison-matrix REIMAGINED + operator DESIGN RULE: **matrices highlight one
+  or two ITEMS, never categories.** Category boxes removed (plain bold text + thin header
+  rule); new `highlights: [[row, col], ...]` (≤2) renders winning cells as accent chips —
+  the only colour in the matrix body. The rule also drove matrix-2x2's `highlight`.
+- FB-040..042 deleted team-grid, image-full-bleed, image-grid ("delete this one" ×3).
+  logo-wall becomes the labeled-image-grid anchor; recommender: people→card-grid,
+  images→image-half-bleed. Catalog now **33 components / 22 distinct families**.
+- Golden regen restored 21 files whose diff was node_id churn only; the 12 kept diffs are
+  exactly the changed layouts + the two showcase decks that embed them.

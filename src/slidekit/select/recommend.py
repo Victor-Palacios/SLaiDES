@@ -123,15 +123,15 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
     elif f.groups == 2:
         add("comparison-columns", 0.7, "two parallel content groups")
 
-    # image-led
+    # image-led (team-grid, image-full-bleed and image-grid were retired 2026-07-04
+    # per FB-040..FB-042 — image-half-bleed is the surviving image layout, and a
+    # people/team intro falls back to card-grid text cards)
     if f.people >= 1:
-        add("team-grid", 0.9, "people with photos, names, roles")
+        add("card-grid", 0.7, "people as name+role cards (team-grid retired)")
     if f.logos >= 1:
         add("logo-wall", 0.9, "a wall of logos")
-    if f.images == 1 and not f.quote:
-        add("image-full-bleed", 0.85, "one image fills the slide")
-    elif f.images >= 2:
-        add("image-grid", 0.85, "a gallery of images")
+    if f.images >= 1 and not f.quote:
+        add("image-half-bleed", 0.8, "an image beside supporting text")
 
     # rows with icons
     if f.icons and f.items:

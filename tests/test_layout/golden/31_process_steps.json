@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_398",
+          "node_id": "title_328",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,48 +32,48 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_chip_399",
-          "node_type": "box",
+          "node_id": "ps_num_329",
+          "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 548640,
-            "h": 548640
+            "w": 2613660,
+            "h": 640080
+          },
+          "text_content": "01",
+          "lines": [
+            {
+              "text": "01",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_0",
+          "text_color": "#2A9D8F"
+        },
+        {
+          "node_id": "ps_rule_330",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2249424,
+            "w": 784098,
+            "h": 54864
           },
           "group_id": "pstep_0",
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "ps_num_400",
+          "node_id": "ps_label_331",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1499616,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "1",
-          "lines": [
-            {
-              "text": "1",
-              "width_emu": 240147,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "pstep_0",
-          "text_color": "#FFFFFF"
-        },
-        {
-          "node_id": "ps_label_401",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2322576,
+            "y": 2414016,
             "w": 2613660,
             "h": 518159
           },
@@ -94,13 +94,13 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_body_402",
+          "node_id": "ps_body_332",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2932175,
+            "y": 3041903,
             "w": 2613660,
-            "h": 2828545
+            "h": 2718817
           },
           "text_content": "Create an account",
           "lines": [
@@ -124,48 +124,48 @@
           "group_id": "pstep_0"
         },
         {
-          "node_id": "ps_chip_403",
-          "node_type": "box",
+          "node_id": "ps_num_333",
+          "node_type": "text",
           "rect": {
             "x": 3345180,
             "y": 1499616,
-            "w": 548640,
-            "h": 548640
+            "w": 2613660,
+            "h": 640080
+          },
+          "text_content": "02",
+          "lines": [
+            {
+              "text": "02",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_1",
+          "text_color": "#2A9D8F"
+        },
+        {
+          "node_id": "ps_rule_334",
+          "node_type": "box",
+          "rect": {
+            "x": 3345180,
+            "y": 2249424,
+            "w": 784098,
+            "h": 54864
           },
           "group_id": "pstep_1",
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "ps_num_404",
+          "node_id": "ps_label_335",
           "node_type": "text",
           "rect": {
             "x": 3345180,
-            "y": 1499616,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "2",
-          "lines": [
-            {
-              "text": "2",
-              "width_emu": 240147,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "pstep_1",
-          "text_color": "#FFFFFF"
-        },
-        {
-          "node_id": "ps_label_405",
-          "node_type": "text",
-          "rect": {
-            "x": 3345180,
-            "y": 2322576,
+            "y": 2414016,
             "w": 2613660,
             "h": 518159
           },
@@ -186,13 +186,13 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_body_406",
+          "node_id": "ps_body_336",
           "node_type": "text",
           "rect": {
             "x": 3345180,
-            "y": 2932175,
+            "y": 3041903,
             "w": 2613660,
-            "h": 2828545
+            "h": 2718817
           },
           "text_content": "Link your data",
           "lines": [
@@ -216,48 +216,48 @@
           "group_id": "pstep_1"
         },
         {
-          "node_id": "ps_chip_407",
-          "node_type": "box",
+          "node_id": "ps_num_337",
+          "node_type": "text",
           "rect": {
             "x": 6233160,
             "y": 1499616,
-            "w": 548640,
-            "h": 548640
+            "w": 2613660,
+            "h": 640080
+          },
+          "text_content": "03",
+          "lines": [
+            {
+              "text": "03",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_2",
+          "text_color": "#2A9D8F"
+        },
+        {
+          "node_id": "ps_rule_338",
+          "node_type": "box",
+          "rect": {
+            "x": 6233160,
+            "y": 2249424,
+            "w": 784098,
+            "h": 54864
           },
           "group_id": "pstep_2",
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "ps_num_408",
+          "node_id": "ps_label_339",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 1499616,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "3",
-          "lines": [
-            {
-              "text": "3",
-              "width_emu": 240147,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "pstep_2",
-          "text_color": "#FFFFFF"
-        },
-        {
-          "node_id": "ps_label_409",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 2322576,
+            "y": 2414016,
             "w": 2613660,
             "h": 518159
           },
@@ -278,13 +278,13 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_body_410",
+          "node_id": "ps_body_340",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 2932175,
+            "y": 3041903,
             "w": 2613660,
-            "h": 2828545
+            "h": 2718817
           },
           "text_content": "Pick your metrics",
           "lines": [
@@ -308,48 +308,48 @@
           "group_id": "pstep_2"
         },
         {
-          "node_id": "ps_chip_411",
-          "node_type": "box",
+          "node_id": "ps_num_341",
+          "node_type": "text",
           "rect": {
             "x": 9121140,
             "y": 1499616,
-            "w": 548640,
-            "h": 548640
+            "w": 2613660,
+            "h": 640080
+          },
+          "text_content": "04",
+          "lines": [
+            {
+              "text": "04",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_3",
+          "text_color": "#2A9D8F"
+        },
+        {
+          "node_id": "ps_rule_342",
+          "node_type": "box",
+          "rect": {
+            "x": 9121140,
+            "y": 2249424,
+            "w": 784098,
+            "h": 54864
           },
           "group_id": "pstep_3",
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "ps_num_412",
+          "node_id": "ps_label_343",
           "node_type": "text",
           "rect": {
             "x": 9121140,
-            "y": 1499616,
-            "w": 548640,
-            "h": 548640
-          },
-          "text_content": "4",
-          "lines": [
-            {
-              "text": "4",
-              "width_emu": 240147,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "pstep_3",
-          "text_color": "#FFFFFF"
-        },
-        {
-          "node_id": "ps_label_413",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 2322576,
+            "y": 2414016,
             "w": 2613660,
             "h": 518159
           },
@@ -370,13 +370,13 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "ps_body_414",
+          "node_id": "ps_body_344",
           "node_type": "text",
           "rect": {
             "x": 9121140,
-            "y": 2932175,
+            "y": 3041903,
             "w": 2613660,
-            "h": 2828545
+            "h": 2718817
           },
           "text_content": "Go live in minutes",
           "lines": [
@@ -402,7 +402,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_415",
+          "node_id": "chrome_pagenum_345",
           "node_type": "text",
           "rect": {
             "x": 10363200,

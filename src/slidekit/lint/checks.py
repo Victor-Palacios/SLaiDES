@@ -165,7 +165,9 @@ def _check_slide(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
     )
     # this-vs-that is deliberately text-only: the operator rejected the boxed VS
     # badge and accent colours (FB-028) — a bare typographic face-off is the design.
-    if not has_media and slide.component not in ("title-slide", "this-vs-that"):
+    # bullet-list joined it with FB-030 (its title accent rule was dropped too).
+    if not has_media and slide.component not in ("title-slide", "this-vs-that",
+                                                 "bullet-list"):
         issues.append(LintIssue(
             code="W_TEXT_ONLY",
             severity="warning",

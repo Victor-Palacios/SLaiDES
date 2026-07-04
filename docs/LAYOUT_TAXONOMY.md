@@ -2,30 +2,28 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxonomy.py` — do not hand-edit. A test (`tests/test_catalog`) fails if it drifts._
 
-**36 components** implement **24 distinct layout skeletons** (families); **12** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **24 distinct layouts**.
+**33 components** implement **22 distinct layout skeletons** (families); **11** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **22 distinct layouts**.
 
-## Distinct layout families (24)
+## Distinct layout families (22)
 
 | Family | Anchor component | What the skeleton is |
 |---|---|---|
 | `agenda` | `agenda` | Numbered agenda / table of contents. |
 | `card-grid` | `card-grid` | A grid of content cards. |
 | `code-block` | `code` | A dark terminal/IDE-style code block. |
-| `comparison-matrix` | `comparison-matrix` | An options × criteria grid. |
+| `comparison-matrix` | `comparison-matrix` | An options × criteria grid; 1–2 winning cells highlighted (FB-039). |
 | `emphasis-stack` | `statement` | A single bold centered line — a manifesto/claim. |
 | `funnel` | `funnel` | Narrowing funnel tiers. |
 | `icon-text-rows` | `icon-text-rows` | Rows of icon + text. |
-| `image-full-bleed` | `image-full-bleed` | A full-bleed image (+ overlay title). |
-| `image-grid` | `image-grid` | A gallery grid of images. |
 | `kpi-grid` | `kpi-grid` | A grid of KPIs (value + rule + label). |
-| `labeled-image-grid` | `team-grid` | A grid of people (portrait + name + role). |
+| `labeled-image-grid` | `logo-wall` | A wall of logos. |
 | `marker-list` | `bullet-list` | A simple list of points (no bullet glyphs — operator style rule FB-026). |
 | `matrix-2x2` | `matrix-2x2` | A 2×2 axes matrix. |
 | `process-flow` | `process-steps` | Horizontal numbered process. |
 | `pyramid` | `pyramid` | Widening pyramid tiers. |
 | `roadmap` | `roadmap` | Phased lanes with header bands. |
 | `stat-callout` | `stat-callout` | A row of stat cards (value + label). |
-| `swot` | `swot` | A SWOT 2×2 of titled bulleted panels. |
+| `swot` | `swot` | A SWOT 2×2 — one defining statement per quadrant (FB-038). |
 | `table` | `table-slide` | A data table. |
 | `timeline` | `timeline` | Horizontal dated events. |
 | `title` | `title-slide` | Deck/section cover. |
@@ -49,11 +47,9 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `feature-list` | `icon-text-rows` | variant | icon + heading + body per feature |
 | `funnel` | `funnel` | **anchor** | — |
 | `icon-text-rows` | `icon-text-rows` | **anchor** | — |
-| `image-full-bleed` | `image-full-bleed` | **anchor** | — |
-| `image-grid` | `image-grid` | **anchor** | — |
 | `image-half-bleed` | `two-column` | variant | one column is a half-bleed image |
 | `kpi-grid` | `kpi-grid` | **anchor** | — |
-| `logo-wall` | `labeled-image-grid` | variant | logo tiles (image/label) instead of portrait+name+role |
+| `logo-wall` | `labeled-image-grid` | **anchor** | — |
 | `matrix-2x2` | `matrix-2x2` | **anchor** | — |
 | `metric-comparison` | `stat-callout` | variant | adds a delta chip per metric |
 | `numbered-steps` | `marker-list` | variant | numbered chips (vertical) |
@@ -68,7 +64,6 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `statement` | `emphasis-stack` | **anchor** | — |
 | `swot` | `swot` | **anchor** | — |
 | `table-slide` | `table` | **anchor** | — |
-| `team-grid` | `labeled-image-grid` | **anchor** | — |
 | `this-vs-that` | `vs-badge` | **anchor** | — |
 | `timeline` | `timeline` | **anchor** | — |
 | `title-slide` | `title` | **anchor** | — |

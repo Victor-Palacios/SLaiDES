@@ -92,7 +92,7 @@ Each component compiles to a row/column tree; you fill typed slots.
 **Choosing a layout (no vision).** Pick a component per slide from its *content shape*, not
 by rendering anything: [docs/LAYOUT_SELECTION_GUIDE.md](docs/LAYOUT_SELECTION_GUIDE.md)
 lists every component's purpose, when-to-use, capacity, and required fields, grouped by the
-~24 distinct layout families (see [docs/LAYOUT_TAXONOMY.md](docs/LAYOUT_TAXONOMY.md)). The
+~22 distinct layout families (see [docs/LAYOUT_TAXONOMY.md](docs/LAYOUT_TAXONOMY.md)). The
 same data is machine-readable via `slidekit catalog --json`.
 
 **Authoring from an outline.** `slidekit author outline.yaml [--pdf]` builds a deck from a
@@ -132,12 +132,9 @@ lean outline — a `slides:` list where each slide is a chosen `component` + its
 | `roadmap` | `phases[]` = `{title, items[]}` (≤4 lanes) | `title` |
 | `funnel` | `stages[]` = `{label, value?}` (narrowing bars) | `title` |
 | `pyramid` | `layers[]` = `{label}` (widening bars) | `title` |
-| `matrix-2x2` | `x_label`, `y_label`, `quadrants[4]` (text) | `title` |
-| `swot` | `strengths[]`, `weaknesses[]`, `opportunities[]`, `threats[]` (≤2 each keeps ≥32pt) | `title` |
-| `comparison-matrix` | `options[]`, `criteria[]`, `cells[][]` | `title` |
-| `team-grid` | `members[]` = `{name, role, image?}` | `title` |
-| `image-full-bleed` | `image` | `overlay_title` |
-| `image-grid` | `images[]` (2–4 best) | `title`, `captions[]` |
+| `matrix-2x2` | `x_label`, `y_label`, `quadrants[4]` (text) | `title`, `highlight` (0–3) |
+| `swot` | `strengths[]`, `weaknesses[]`, `opportunities[]`, `threats[]` (exactly 1 each, FB-038) | `title` |
+| `comparison-matrix` | `options[]`, `criteria[]`, `cells[][]` | `title`, `highlights` (≤2 `[row, col]`) |
 | `logo-wall` | `logos[]` = `{label? image?}` | `title` |
 
 A `chart` slot is `{type: chart, chart_type: bar, labels[], series[] = {name, values[]}}`.

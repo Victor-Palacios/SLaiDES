@@ -341,10 +341,11 @@ def test_consistency_warning_below_threshold():
 
 
 def test_warnings_are_deterministic_and_advisory_in_report():
-    deck, rd = _loaded("examples/39_image_full_bleed.yaml")
+    # (was image-full-bleed until that layout was retired, FB-041)
+    deck, rd = _loaded("examples/07_image_half_bleed.yaml")
     r1, r2 = score_deck(deck, rd), score_deck(deck, rd)
     assert [w.to_dict() for w in r1.warnings] == [w.to_dict() for w in r2.warnings]
-    assert r1.warnings, "image-full-bleed should trip at least one advisory warning"
+    assert r1.warnings, "image-half-bleed should trip at least one advisory warning"
     assert "warnings" in r1.to_dict()  # surfaced in JSON
     # Advisory: warnings never carry an E_ (error / gate) code.
     assert all(w.code.startswith("W_AESTH_") for w in r1.warnings)

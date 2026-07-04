@@ -30,8 +30,6 @@ from slidekit.ir.models import (
     FunnelSlide,
     IconTextRowsSlide,
     ImageHalfBleedSlide,
-    ImageFullBleedSlide,
-    ImageGridSlide,
     KpiGridSlide,
     LogoWallSlide,
     Matrix2x2Slide,
@@ -48,7 +46,6 @@ from slidekit.ir.models import (
     StatementSlide,
     SwotSlide,
     TableSlide,
-    TeamGridSlide,
     ThisVsThatSlide,
     TimelineSlide,
     TitleSlide,
@@ -222,12 +219,6 @@ def _resolve_slide(
         nodes = _layout_swot(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "comparison-matrix":
         nodes = _layout_comparison_matrix(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "team-grid":
-        nodes = _layout_team_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "image-full-bleed":
-        nodes = _layout_image_full_bleed(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "image-grid":
-        nodes = _layout_image_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "logo-wall":
         nodes = _layout_logo_wall(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     else:
@@ -767,10 +758,9 @@ def _list_title(slide_title, cx, y, cw, font, ts):
 
 
 # Operator style rule (FB-026): "never use bullets" — list layouts carry NO bullet
-# glyphs/markers; items are clean flush-left lines. A short accent rule under the
-# title is the slide's deterministic non-text mark (same motif as big-number/kpi-grid).
-_LIST_RULE_W_EMU = int(1.2 * EMU_PER_INCH)
-_LIST_RULE_H_EMU = int(0.06 * EMU_PER_INCH)
+# glyphs/markers; items are clean flush-left lines. The accent rule that briefly stood
+# in as the non-text mark was dropped per FB-030 ("drop the orange, ugly color line"):
+# a bullet-list is now pure typography (title + items), exempt from W_TEXT_ONLY.
 
 
 def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palette):
@@ -778,10 +768,6 @@ def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palett
     gap = GAP_MIN_EMU
     title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
     nodes.append(title_node)
-    nodes.append(ResolvedNode(_nid("bl_rule"), "box",
-                              Rect(cx, y, _LIST_RULE_W_EMU, _LIST_RULE_H_EMU),
-                              fill_color=palette.accent))
-    y += _LIST_RULE_H_EMU + gap
 
     n = len(slide.items)
     avail = cy + ch - y
@@ -807,7 +793,10 @@ def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palett
 # DETERMINISTIC per-line tokenizer (regex, no external highlighter): same source in,
 # same coloured runs out — each run is its own measured text node, so the linter
 # still proves every line fits.
-_CODE_BG = "#1E1E1E"       # VS Code Dark+ editor background
+# Background: the operator preferred the original deep-teal panel over VS Code's
+# neutral #1E1E1E (FB-031: "background color as it was in the previous version,
+# but the colors look good for the text") — token colours stay Dark+.
+_CODE_BG = "#0C1A1C"       # deep-teal terminal panel (pre-FB-027 background)
 _CODE_FG = "#D4D4D4"       # default foreground / punctuation
 _CODE_COMMENT = "#6A9955"  # comments
 _CODE_KEYWORD = "#C586C0"  # control-flow keywords (if/for/return/...)
@@ -1009,7 +998,7 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
 
 
 def _panel_items(nodes, items, x, y, w, h, font, ts, marker_color, prefix,
-                 item_pt=None, is_caption=False, group_id=None):
+                 item_pt=None, is_caption=False, group_id=None, pack=False):
     """Render a column of items as clean flush-left lines — NO bullet markers
     (operator style rule FB-026: "never use bullets"). ``marker_color`` is kept in
     the signature for callers that colour their panel headings/rules with it.
@@ -1017,7 +1006,12 @@ def _panel_items(nodes, items, x, y, w, h, font, ts, marker_color, prefix,
     ``item_pt`` overrides the item type-tier (default: body). Dense grid callers
     (swot) pass the caption tier + ``is_caption`` so each item box can honestly hold
     a full leaded line inside a short cell — without this the ``min(slot_h, …)`` cap
-    below would clamp the box under one line (board T-064)."""
+    below would clamp the box under one line (board T-064).
+
+    ``pack=True`` stacks items at the minimum GAP_MIN rhythm instead of distributing
+    them across the full column height (FB-036, roadmap: "the black texts have too
+    much white space between them" — with few items the even distribution read as
+    disconnected floating lines)."""
     gap = GAP_MIN_EMU
     n = len(items)
     slot_h = max(1, (h - gap * max(0, n - 1)) // n)
@@ -1034,7 +1028,7 @@ def _panel_items(nodes, items, x, y, w, h, font, ts, marker_color, prefix,
                                      bold=False, italic=False,
                                      rect=Rect(x, cur, w, item_h), lines=lines,
                                      is_caption=is_caption, group_id=group_id))
-        cur += slot_h + gap
+        cur += (item_h if pack else slot_h) + gap
 
 
 def _two_panel_list(title, left_head, left_items, left_color,
@@ -1110,7 +1104,9 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
     # default text colour, and "VS" is a bare muted caption centred between the columns
     # on the value+label block midline — no box, no fills. The slide is deliberately
     # text-only (exempted from W_TEXT_ONLY in the linter).
-    mid_w = int(0.75 * EMU_PER_INCH)  # breathing room between the columns
+    # 1.0": breathing room between the columns, sized so the body-tier bold "VS"
+    # (FB-032) fits its box with the standard text insets.
+    mid_w = int(1.0 * EMU_PER_INCH)
     col_w = (cw - mid_w - 2 * gap) // 2
     left_x = cx
     right_x = cx + col_w + gap + mid_w + gap
@@ -1130,11 +1126,12 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
                                      rect=Rect(px, inner_y + value_h + gap, col_w, label_h),
                                      align="center"))
 
-    # Bare "VS", centred between the columns on the block midline.
-    vs_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+    # Bare "VS", centred between the columns on the block midline. Body-tier size
+    # (FB-032: "make the VS a little larger"), still muted so the numbers dominate.
+    vs_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     vs_x = cx + (cw - mid_w) // 2
     vs_y = inner_y + max(0, (block_h - vs_h) // 2)
-    nodes.append(_make_text_node(_nid("vs_text"), "VS", font, ts.caption, bold=True,
+    nodes.append(_make_text_node(_nid("vs_text"), "VS", font, ts.body, bold=True,
                                  italic=False, rect=Rect(vs_x, vs_y, mid_w, vs_h),
                                  is_caption=True, align="center"))
     return nodes
@@ -1295,14 +1292,18 @@ def _layout_table_slide(slide: TableSlide, cx, cy, cw, ch, font, ts, palette):
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     rule_h = int(0.06 * EMU_PER_INCH)
 
+    # Headers sit tight above the rule (FB-033: "headers should be a little bit
+    # closer to the line") — the rule rides at a 0.12" inner gap, sharing a group
+    # with the header cells so the intentionally tight spacing is E_GAP-exempt.
+    inner = int(0.12 * EMU_PER_INCH)
     for c, htext in enumerate(slide.headers):
         hx = cx + c * (col_w + gap)
         nodes.append(_make_text_node(_nid("th"), htext, font, ts.body, bold=True,
                                      italic=False, rect=Rect(hx, y, col_w, head_h),
-                                     color=palette.primary))
-    ry = y + head_h + gap
+                                     color=palette.primary, group_id="table_head"))
+    ry = y + head_h + inner
     nodes.append(ResolvedNode(_nid("table_rule"), "box", Rect(cx, ry, cw, rule_h),
-                              fill_color=palette.accent))
+                              fill_color=palette.accent, group_id="table_head"))
     yy = ry + rule_h + gap
 
     nrows = len(slide.rows)
@@ -1332,30 +1333,37 @@ def _layout_metric_comparison(slide: MetricComparisonSlide, cx, cy, cw, ch, font
     delta_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     chip_pad = int(0.18 * EMU_PER_INCH)
 
+    # All columns share ONE vertical rhythm (FB-034: "the alignment is wrong"):
+    # previously each column centred itself on its own wrapped-label height, so the
+    # big values drifted to different heights. Now values sit on a common row, labels
+    # share the tallest wrapped-label box, delta chips share a row — and everything
+    # is centred within its column (the same centred read as kpi-grid/big-number).
+    label_lines_all = [wrap(m.label, font, ts.body, col_w) for m in slide.metrics]
+    label_h = max((max(1, total_text_height_emu(ls)) for ls in label_lines_all), default=1)
+    has_delta_any = any(m.delta is not None for m in slide.metrics)
+    block_h = value_h + gap + label_h + (gap + delta_h if has_delta_any else 0)
+    inner_y = y + max(0, (col_h - block_h) // 2)
+
     for i, m in enumerate(slide.metrics):
         gid = f"metric_{i}"
         mx = cx + i * (col_w + gap)
-        has_delta = m.delta is not None
-        # Size the label box to its measured wrapped height; centre the block.
-        label_lines = wrap(m.label, font, ts.body, col_w)
-        label_h = max(1, total_text_height_emu(label_lines))
-        block_h = value_h + gap + label_h + (gap + delta_h if has_delta else 0)
-        inner_y = y + max(0, (col_h - block_h) // 2)
         nodes.append(_make_text_node(_nid("metric_val"), m.value, font, ts.title, bold=True,
                                      italic=False, rect=Rect(mx, inner_y, col_w, value_h),
-                                     color=palette.accent))
+                                     color=palette.accent, align="center"))
         ly = inner_y + value_h + gap
         nodes.append(_make_text_node(_nid("metric_label"), m.label, font, ts.body, bold=False,
                                      italic=False, rect=Rect(mx, ly, col_w, label_h),
-                                     lines=label_lines))
-        if has_delta:
+                                     lines=label_lines_all[i], align="center"))
+        if m.delta is not None:
             dy = ly + label_h + gap
             chip_w = min(col_w, measure_text(m.delta, font, ts.body, bold=True) + 2 * chip_pad)
-            nodes.append(ResolvedNode(_nid("metric_chip"), "box", Rect(mx, dy, chip_w, delta_h),
+            chip_x = mx + (col_w - chip_w) // 2
+            nodes.append(ResolvedNode(_nid("metric_chip"), "box",
+                                      Rect(chip_x, dy, chip_w, delta_h),
                                       fill_color=palette.accent, group_id=gid))
             nodes.append(_make_text_node(_nid("metric_delta"), m.delta, font, ts.body, bold=True,
-                                         italic=False, rect=Rect(mx, dy, chip_w, delta_h),
-                                         color=palette.surface, group_id=gid))
+                                         italic=False, rect=Rect(chip_x, dy, chip_w, delta_h),
+                                         color=palette.surface, group_id=gid, align="center"))
     return nodes
 
 
@@ -1368,37 +1376,39 @@ def _layout_metric_comparison(slide: MetricComparisonSlide, cx, cy, cw, ch, font
 
 
 def _layout_process_steps(slide: ProcessStepsSlide, cx, cy, cw, ch, font, ts, palette):
-    """Horizontal numbered flow: N columns, each a numbered accent chip over a bold
-    label (brand primary) and a body description. The chips carry the sequence; no
-    connector lines are drawn (deterministic)."""
+    """Horizontal numbered flow, reimagined per FB-035 ("reimagine this slide"):
+    the filled chip badges are gone. Each step column is a large accent numeral
+    ("01") over a thin accent rule, then a bold label (brand primary) and body —
+    the typographic motif the operator has approved elsewhere (agenda's numerals,
+    kpi-grid's hairline rules). The rule rides inside the numeral->label gap
+    (shared group_id), so the text block keeps its space."""
     nodes: list[ResolvedNode] = []
     gap = GAP_MIN_EMU
     y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
 
     n = len(slide.steps)
     col_w = (cw - gap * (n - 1)) // n if n else cw
-    col_h = cy + ch - y
-    chip = int(0.6 * EMU_PER_INCH)
+    num_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
+    rule_h = int(0.06 * EMU_PER_INCH)
     label_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    inner = int(0.1 * EMU_PER_INCH)
+    inner = int(0.12 * EMU_PER_INCH)
     for i, step in enumerate(slide.steps):
         gid = f"pstep_{i}"
         sx = cx + i * (col_w + gap)
-        # Numbered chip: accent box with the step number on top (same group, so the
-        # intentional text-on-box stack is exempt from E_OVERLAP).
-        nodes.append(ResolvedNode(_nid("ps_chip"), "box", Rect(sx, y, chip, chip),
+        nodes.append(_make_text_node(_nid("ps_num"), f"{i + 1:02d}", font, ts.header,
+                                     bold=True, italic=False,
+                                     rect=Rect(sx, y, col_w, num_h),
+                                     color=palette.accent, group_id=gid))
+        nodes.append(ResolvedNode(_nid("ps_rule"), "box",
+                                  Rect(sx, y + num_h + inner,
+                                       max(1, int(col_w * 0.3)), rule_h),
                                   fill_color=palette.accent, group_id=gid))
-        nodes.append(_make_text_node(_nid("ps_num"), str(i + 1), font, ts.body, bold=True,
-                                     italic=False, rect=Rect(sx, y, chip, chip),
-                                     group_id=gid, color=palette.surface))
-        # Label + body are one step's text block, grouped with the chip so the tight
-        # internal spacing is exempt from E_GAP (the same pattern as numbered-steps).
-        ly = y + chip + gap
+        ly = y + num_h + gap
         nodes.append(_make_text_node(_nid("ps_label"), step.label, font, ts.body, bold=True,
                                      italic=False, rect=Rect(sx, ly, col_w, label_h),
                                      color=palette.primary, group_id=gid))
         by = ly + label_h + inner
-        body_h = max(1, y + col_h - by)
+        body_h = max(1, cy + ch - by)
         nodes.append(_make_text_node(_nid("ps_body"), step.body, font, ts.body, bold=False,
                                      italic=False, rect=Rect(sx, by, col_w, body_h),
                                      group_id=gid))
@@ -1427,8 +1437,10 @@ def _layout_roadmap(slide: RoadmapSlide, cx, cy, cw, ch, font, ts, palette):
                                      group_id=gid, color=palette.surface))
         items_y = y + head_h + gap
         items_h = y + col_h - items_y
+        # Packed rhythm, not distributed (FB-036): items cluster under their phase
+        # band instead of floating apart across the lane height.
         _panel_items(nodes, ph.items, px, items_y, col_w, items_h, font, ts,
-                     palette.accent, f"rm{i}")
+                     palette.accent, f"rm{i}", pack=True)
     return nodes
 
 
@@ -1488,10 +1500,11 @@ def _layout_pyramid(slide: PyramidSlide, cx, cy, cw, ch, font, ts, palette):
 
 
 def _layout_matrix_2x2(slide: Matrix2x2Slide, cx, cy, cw, ch, font, ts, palette):
-    """Quadrant positioning: a 2×2 field split by a centered accent cross (one
-    horizontal + one vertical rule, grouped so their intersection is intentional),
-    each quadrant holding its label, with the axis names as captions. The cross
-    rules are the measured non-text marks."""
+    """Quadrant positioning, reimagined per FB-037 ("reimagine this slide"): a
+    HAIRLINE muted cross replaces the heavy accent rules, quadrant labels are bold
+    and optically centred in their cells, and colour is reserved for at most one
+    highlighted quadrant (accent) — matrices spotlight items, not scaffolding
+    (the operator's FB-039 rule). Axis names are centred muted captions."""
     nodes: list[ResolvedNode] = []
     gap = GAP_MIN_EMU
     y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
@@ -1504,23 +1517,23 @@ def _layout_matrix_2x2(slide: Matrix2x2Slide, cx, cy, cw, ch, font, ts, palette)
     # Axis captions: y-axis name across the top, x-axis name across the bottom.
     nodes.append(_make_text_node(_nid("mx_y"), slide.y_label, font, ts.caption, bold=True,
                                  italic=False, rect=Rect(cx, y, cw, cap_h),
-                                 is_caption=True, color=palette.muted))
+                                 is_caption=True, color=palette.muted, align="center"))
     nodes.append(_make_text_node(_nid("mx_x"), slide.x_label, font, ts.caption, bold=False,
                                  italic=False, rect=Rect(cx, field_bottom + gap, cw, cap_h),
-                                 is_caption=True, color=palette.muted))
+                                 is_caption=True, color=palette.muted, align="center"))
 
-    rule = int(0.05 * EMU_PER_INCH)
+    rule = int(0.03 * EMU_PER_INCH)  # hairline, quiet scaffolding
     midx = cx + cw // 2
     midy = field_y + field_h // 2
     nodes.append(ResolvedNode(_nid("mx_vrule"), "box",
                               Rect(midx - rule // 2, field_y, rule, field_h),
-                              fill_color=palette.accent, group_id="mx_cross"))
+                              fill_color=palette.muted, group_id="mx_cross"))
     nodes.append(ResolvedNode(_nid("mx_hrule"), "box",
                               Rect(cx, midy - rule // 2, cw, rule),
-                              fill_color=palette.accent, group_id="mx_cross"))
+                              fill_color=palette.muted, group_id="mx_cross"))
 
     # Quadrant cells, inset from the cross by >= gap so neither E_GAP nor E_OVERLAP
-    # trips against the rules.
+    # trips against the rules. Labels are bold, wrapped, and centred both ways.
     cell_w = cw // 2 - gap - rule
     cell_h = field_h // 2 - gap - rule
     positions = [
@@ -1529,17 +1542,24 @@ def _layout_matrix_2x2(slide: Matrix2x2Slide, cx, cy, cw, ch, font, ts, palette)
         (cx, midy + rule + gap),                  # bottom-left
         (midx + rule + gap, midy + rule + gap),   # bottom-right
     ]
+    line_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     for i, q in enumerate(slide.quadrants):
         qx, qy = positions[i]
-        nodes.append(_make_text_node(_nid("mx_q"), q, font, ts.body, bold=False,
-                                     italic=False, rect=Rect(qx, qy, cell_w, cell_h)))
+        lines = wrap(q, font, ts.body, cell_w, bold=True)
+        text_h = min(cell_h, max(line_h, total_text_height_emu(lines)))
+        ty = qy + max(0, (cell_h - text_h) // 2)
+        color = palette.accent if slide.highlight == i else None
+        nodes.append(_make_text_node(_nid("mx_q"), q, font, ts.body, bold=True,
+                                     italic=False, rect=Rect(qx, ty, cell_w, text_h),
+                                     lines=lines, color=color, align="center"))
     return nodes
 
 
 def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
     """SWOT 2×2: four titled quadrants — Strengths/Opportunities headed in accent,
-    Weaknesses/Threats in muted — each a heading over a bulleted list. Markers are
-    the non-text media; no quadrant background fills (restraint over ornament)."""
+    Weaknesses/Threats in muted — each a heading over ONE statement (the IR enforces
+    a single item per category, operator feedback FB-038). No quadrant background
+    fills (restraint over ornament)."""
     nodes: list[ResolvedNode] = []
     gap = GAP_MIN_EMU
     y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
@@ -1570,13 +1590,11 @@ def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
                                   fill_color=color, group_id=gid))
         items_y = qy + head_h + gap
         items_h = qy + cell_h - items_y
-        # SWOT packs four bulleted lists into a 2×2 grid, so each quadrant cell is
-        # short. Item text uses the caption tier (secondary, dense grid content) so
-        # every item box honestly holds a full leaded line inside the cell rather
-        # than being clamped under one line (board T-064). Bold body headings still
-        # dominate the tier hierarchy.
+        # One statement per quadrant (FB-038) at the full body tier — with a single
+        # item there is no dense-grid clamping concern, so the old caption-tier
+        # compromise (board T-064) is retired along with multi-item quadrants.
         _panel_items(nodes, items, qx, items_y, col_w, items_h, font, ts, color,
-                     f"swot{idx}", item_pt=ts.caption, is_caption=True, group_id=gid)
+                     f"swot{idx}", group_id=gid, pack=True)
     return nodes
 
 
@@ -1590,144 +1608,76 @@ def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
 
 
 def _layout_comparison_matrix(slide: ComparisonMatrixSlide, cx, cy, cw, ch, font, ts, palette):
-    """Features × options grid: criteria down the left, options across the top,
-    and deterministic text cells with a muted fill. Header cells use brand colour."""
+    """Features × options grid, reimagined per operator feedback FB-039 ("a matrix
+    should only highlight one or two items within the matrix, not the categories"):
+    the coloured header/criteria boxes are gone. Option headers are plain bold text
+    over a thin accent rule (the table-slide motif), criteria are bold text down the
+    left, cells are plain text — and colour is reserved for the 1–2 highlighted
+    cells, each an accent chip (box + surface text, the metric-comparison motif)."""
     nodes: list[ResolvedNode] = []
+    gap = GAP_MIN_EMU
     y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
 
     n_options = len(slide.options)
     n_criteria = len(slide.criteria)
     label_w = int(cw * 0.28)
-    cell_w = max(1, (cw - label_w) // n_options) if n_options else cw - label_w
-    rows = n_criteria + 1
-    row_h = max(1, (cy + ch - y) // rows) if rows else cy + ch - y
+    cell_w = max(1, (cw - label_w - gap * n_options) // n_options) if n_options else cw - label_w
+    head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    rule_h = int(0.06 * EMU_PER_INCH)
+    inner = int(0.12 * EMU_PER_INCH)
+    chip_pad = int(0.18 * EMU_PER_INCH)
 
-    # Top-left header block anchors the matrix and provides a non-text element.
-    nodes.append(ResolvedNode(_nid("cm_corner"), "box", Rect(cx, y, label_w, row_h),
-                              fill_color=palette.primary, group_id="cm_corner"))
-    nodes.append(_make_text_node(_nid("cm_corner_text"), "Criteria", font, ts.body,
-                                 bold=True, italic=False, rect=Rect(cx, y, label_w, row_h),
-                                 color=palette.surface, group_id="cm_corner"))
+    # Header row: bold primary option names (corner over the criteria column stays
+    # empty); a full-width accent rule rides tight beneath (shared group, FB-033
+    # spacing) — the slide's only structural colour.
     for c, opt in enumerate(slide.options):
-        gid = f"cm_head_{c}"
-        x = cx + label_w + c * cell_w
-        nodes.append(ResolvedNode(_nid("cm_head_box"), "box", Rect(x, y, cell_w, row_h),
-                                  fill_color=palette.accent, group_id=gid))
+        x = cx + label_w + gap + c * (cell_w + gap)
         nodes.append(_make_text_node(_nid("cm_head"), opt, font, ts.body, bold=True,
-                                     italic=False, rect=Rect(x, y, cell_w, row_h),
-                                     color=palette.surface, group_id=gid))
+                                     italic=False, rect=Rect(x, y, cell_w, head_h),
+                                     color=palette.primary, group_id="cm_head",
+                                     align="center"))
+    ry = y + head_h + inner
+    nodes.append(ResolvedNode(_nid("cm_rule"), "box", Rect(cx, ry, cw, rule_h),
+                              fill_color=palette.accent, group_id="cm_head"))
 
+    body_y = ry + rule_h + gap
+    row_h = max(1, (cy + ch - body_y - gap * max(0, n_criteria - 1)) // n_criteria) \
+        if n_criteria else cy + ch - body_y
+    cell_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    highlights = {tuple(pair) for pair in slide.highlights}
+    yy = body_y
     for r, crit in enumerate(slide.criteria):
-        yy = y + (r + 1) * row_h
-        gid = f"cm_crit_{r}"
-        nodes.append(ResolvedNode(_nid("cm_crit_box"), "box", Rect(cx, yy, label_w, row_h),
-                                  fill_color=palette.muted, group_id=gid))
         nodes.append(_make_text_node(_nid("cm_crit"), crit, font, ts.body, bold=True,
-                                     italic=False, rect=Rect(cx, yy, label_w, row_h),
-                                     color=palette.surface, group_id=gid))
+                                     italic=False, rect=Rect(cx, yy, label_w, row_h)))
         row = slide.cells[r] if r < len(slide.cells) else []
         for c in range(n_options):
-            x = cx + label_w + c * cell_w
+            x = cx + label_w + gap + c * (cell_w + gap)
             cell = row[c] if c < len(row) else ""
             cg = f"cm_cell_{r}_{c}"
-            nodes.append(ResolvedNode(_nid("cm_cell_box"), "box", Rect(x, yy, cell_w, row_h),
-                                      fill_color="#F4F6F8", group_id=cg))
-            nodes.append(_make_text_node(_nid("cm_cell"), cell, font, ts.body, bold=False,
-                                         italic=False, rect=Rect(x, yy, cell_w, row_h),
-                                         group_id=cg))
+            if (r, c) in highlights and cell:
+                chip_w = min(cell_w, measure_text(cell, font, ts.body, bold=True)
+                             + 2 * chip_pad)
+                chip_x = x + (cell_w - chip_w) // 2
+                nodes.append(ResolvedNode(_nid("cm_hl"), "box",
+                                          Rect(chip_x, yy, chip_w, cell_h),
+                                          fill_color=palette.accent, group_id=cg))
+                nodes.append(_make_text_node(_nid("cm_cell"), cell, font, ts.body,
+                                             bold=True, italic=False,
+                                             rect=Rect(chip_x, yy, chip_w, cell_h),
+                                             color=palette.surface, group_id=cg,
+                                             align="center"))
+            else:
+                nodes.append(_make_text_node(_nid("cm_cell"), cell, font, ts.body,
+                                             bold=False, italic=False,
+                                             rect=Rect(x, yy, cell_w, row_h),
+                                             group_id=cg, align="center"))
+        yy += row_h + gap
     return nodes
 
 
-def _layout_team_grid(slide: TeamGridSlide, cx, cy, cw, ch, font, ts, palette):
-    """People grid: each member gets a measured portrait tile, name, and role."""
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
-
-    n = len(slide.members)
-    cols = min(3, n) if n else 1
-    rows = (n + cols - 1) // cols
-    card_w = max(1, (cw - gap * (cols - 1)) // cols)
-    card_h = max(1, (cy + ch - y - gap * (rows - 1)) // rows) if rows else cy + ch - y
-    name_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    role_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
-    inner = int(0.12 * EMU_PER_INCH)
-
-    for i, member in enumerate(slide.members):
-        r, c = divmod(i, cols)
-        x = cx + c * (card_w + gap)
-        yy = y + r * (card_h + gap)
-        gid = f"team_{i}"
-        portrait_h = max(1, card_h - name_h - role_h - 2 * inner)
-        if member.image:
-            nodes.append(ResolvedNode(_nid("team_img"), "image", Rect(x, yy, card_w, portrait_h),
-                                      slot_type="image", text_content=member.image.path,
-                                      group_id=gid))
-        else:
-            nodes.append(ResolvedNode(_nid("team_avatar"), "box", Rect(x, yy, card_w, portrait_h),
-                                      fill_color=palette.muted, group_id=gid))
-        nodes.append(_make_text_node(_nid("team_name"), member.name, font, ts.body, bold=True,
-                                     italic=False, rect=Rect(x, yy + portrait_h + inner, card_w, name_h),
-                                     color=palette.primary, group_id=gid))
-        nodes.append(_make_text_node(_nid("team_role"), member.role, font, ts.caption, bold=False,
-                                     italic=False,
-                                     rect=Rect(x, yy + portrait_h + inner + name_h + inner, card_w, role_h),
-                                     is_caption=True, color=palette.muted, group_id=gid))
-    return nodes
-
-
-def _layout_image_full_bleed(slide: ImageFullBleedSlide, cx, cy, cw, ch, font, ts, palette):
-    """Full content-area image with optional lower-left overlay title."""
-    nodes: list[ResolvedNode] = []
-    gid = "image_full_bleed"
-    nodes.append(ResolvedNode(_nid("full_image"), "image", Rect(cx, cy, cw, ch),
-                              slot_type="image", text_content=slide.image.path,
-                              group_id=gid))
-    if slide.overlay_title:
-        pad = int(0.25 * EMU_PER_INCH)
-        box_w = int(cw * 0.62)
-        text_w = box_w - 2 * pad
-        title_lines = wrap(slide.overlay_title, font, ts.header, text_w, bold=True)
-        title_h = max(1, total_text_height_emu(title_lines))
-        box_h = title_h + 2 * pad
-        box_x = cx + pad
-        box_y = cy + ch - box_h - pad
-        nodes.append(ResolvedNode(_nid("overlay_box"), "box", Rect(box_x, box_y, box_w, box_h),
-                                  fill_color=palette.primary, group_id=gid))
-        nodes.append(_make_text_node(_nid("overlay_title"), slide.overlay_title, font, ts.header,
-                                     bold=True, italic=False,
-                                     rect=Rect(box_x + pad, box_y + pad, text_w, title_h),
-                                     lines=title_lines, color=palette.surface, group_id=gid))
-    return nodes
-
-
-def _layout_image_grid(slide: ImageGridSlide, cx, cy, cw, ch, font, ts, palette):
-    """2–4 image gallery with optional captions below each measured image tile."""
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
-
-    n = len(slide.images)
-    cols = 2 if n <= 4 else 3
-    rows = (n + cols - 1) // cols
-    cell_w = max(1, (cw - gap * (cols - 1)) // cols)
-    cell_h = max(1, (cy + ch - y - gap * (rows - 1)) // rows) if rows else cy + ch - y
-    cap_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
-    for i, img in enumerate(slide.images):
-        r, c = divmod(i, cols)
-        x = cx + c * (cell_w + gap)
-        yy = y + r * (cell_h + gap)
-        gid = f"imggrid_{i}"
-        has_caption = i < len(slide.captions) and bool(slide.captions[i])
-        img_h = cell_h - (cap_h + gap if has_caption else 0)
-        nodes.append(ResolvedNode(_nid("grid_img"), "image", Rect(x, yy, cell_w, img_h),
-                                  slot_type="image", text_content=img.path, group_id=gid))
-        if has_caption:
-            nodes.append(_make_text_node(_nid("grid_cap"), slide.captions[i], font, ts.caption,
-                                         bold=False, italic=False,
-                                         rect=Rect(x, yy + img_h + gap, cell_w, cap_h),
-                                         is_caption=True, color=palette.muted, group_id=gid))
-    return nodes
+# team-grid, image-full-bleed and image-grid were retired 2026-07-04 per operator
+# feedback FB-040/FB-041/FB-042 ("delete this one" ×3). logo-wall (below) survives
+# as the sole labeled-image-grid layout; image-half-bleed remains the image layout.
 
 
 def _layout_logo_wall(slide: LogoWallSlide, cx, cy, cw, ch, font, ts, palette):

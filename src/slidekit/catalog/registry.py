@@ -177,28 +177,21 @@ _META: dict[str, dict] = {
         purpose="A 2×2 axes matrix.", use_when="Plotting items against two axes / four quadrants.",
         content_shape="four quadrants (+ axis labels)"),
     "swot": dict(family="swot", role="anchor",
-        purpose="A SWOT 2×2 of titled bulleted panels.", use_when="A SWOT analysis specifically.",
-        content_shape="four titled groups of bullets"),
+        purpose="A SWOT 2×2 — one defining statement per quadrant (FB-038).",
+        use_when="A SWOT analysis specifically.",
+        content_shape="four titled single statements"),
     "comparison-matrix": dict(family="comparison-matrix", role="anchor",
-        purpose="An options × criteria grid.", use_when="Comparing many options across criteria.",
-        content_shape="row headers × column headers + cells"),
+        purpose="An options × criteria grid; 1–2 winning cells highlighted (FB-039).",
+        use_when="Comparing many options across criteria.",
+        content_shape="row headers × column headers + cells (+ up to 2 highlight cells)"),
 
-    # labeled image grids
-    "team-grid": dict(family="labeled-image-grid", role="anchor",
-        purpose="A grid of people (portrait + name + role).", use_when="Introducing a team.",
-        capacity=(2, 9), content_shape="members {portrait, name, role}"),
-    "logo-wall": dict(family="labeled-image-grid", role="variant", variant_of="team-grid",
-        differs_by="logo tiles (image/label) instead of portrait+name+role",
+    # labeled image grid (team-grid was retired 2026-07-04 per operator feedback
+    # FB-040; logo-wall is the family's surviving layout. image-full-bleed and
+    # image-grid were retired the same day per FB-041/FB-042 — image-half-bleed in
+    # the two-column family is the remaining image layout.)
+    "logo-wall": dict(family="labeled-image-grid", role="anchor",
         purpose="A wall of logos.", use_when="Showing customer/partner logos.",
         capacity=(3, 12), content_shape="logo tiles {image|label}"),
-
-    # images
-    "image-full-bleed": dict(family="image-full-bleed", role="anchor",
-        purpose="A full-bleed image (+ overlay title).", use_when="One image should fill the slide.",
-        content_shape="one image (+ optional overlay title)"),
-    "image-grid": dict(family="image-grid", role="anchor",
-        purpose="A gallery grid of images.", use_when="Showing several images together.",
-        capacity=(2, 4), content_shape="a set of images (+ captions)"),
 
 }
 

@@ -2,27 +2,9 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 13 · **done** 28 · **wontfix** 1 · _last change 2026-07-04_
+**open** 0 · **done** 41 · **wontfix** 1 · _last change 2026-07-04_
 
-## Open (13)
-
-| ID | Layout | Sev | Comment | Notes |
-|---|---|---|---|---|
-| FB-030 | bullet-list | med | 👎 Drop the orange, ugly color line |  |
-| FB-031 | code | med | 👎 I want the background color to be as it was in the previous version, but the colors look good for the text |  |
-| FB-032 | this-vs-that | med | 👎 make the VS a little larger |  |
-| FB-033 | table-slide | med | 👎 I think the headers should be a little bit closer to the line |  |
-| FB-034 | metric-comparison | med | 👎 The alignment is wrong |  |
-| FB-035 | process-steps | med | 👎 reimagine this slide |  |
-| FB-036 | roadmap | med | 👎 The black texts have too much white space between them |  |
-| FB-037 | matrix-2x2 | med | 👎 reimagine this slide |  |
-| FB-038 | swot | med | 👎 One item per category |  |
-| FB-039 | comparison-matrix | med | 👎 any matrix should always only highlight one or two items within the matrix not the categories so the coloring is off |  |
-| FB-040 | team-grid | med | 👎 delete this one |  |
-| FB-041 | image-full-bleed | med | 👎 delete this one |  |
-| FB-042 | image-grid | med | 👎 delete this one |  |
-
-## Done (28)
+## Done (41)
 
 | ID | Layout | Sev | Comment | Notes |
 |---|---|---|---|---|
@@ -54,6 +36,19 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-027 | code | med | 👎 the text color needs to match modern IDE color usage for python code | done — deterministic per-token highlighter, VS Code Dark+ palette (keywords/strings/comments/functions/numbers), background #1E1E1E; each colour run is its own measured node so the linter still proves fit |
 | FB-028 | this-vs-that | med | 👎 Use all black text, these colors look jarring. The vs should not have a box around it. | done — values/labels in the default text colour, VS is a bare muted caption centred between the columns (badge box removed); slide is deliberately text-only (lint-exempted) |
 | FB-029 | pull-quote | med | 👎 delete - too similar to another slide layout | done — testimonial deleted (redundant with pull-quote); recommender routes quote+portrait to pull-quote |
+| FB-030 | bullet-list | med | 👎 Drop the orange, ugly color line | Dropped the accent rule under the title (engine); bullet-list is now pure typography (title + flush-left items) and is W_TEXT_ONLY-exempt in the linter. Intent test updated. |
+| FB-031 | code | med | 👎 I want the background color to be as it was in the previous version, but the colors look good for the text | _CODE_BG returned to the original deep-teal #0C1A1C (pre-FB-027 panel); VS Code Dark+ token colours kept unchanged. Pinned by test_code_background_is_the_original_deep_teal. |
+| FB-032 | this-vs-that | med | 👎 make the VS a little larger | Bare VS stepped up from caption tier (25pt) to body tier (34pt), still muted/bold; middle gutter widened 0.75"->1.0" so it fits with standard insets. |
+| FB-033 | table-slide | med | 👎 I think the headers should be a little bit closer to the line | Header row now sits a tight 0.12" above the accent rule (was the full 0.3" gap); headers+rule share group_id table_head so the linter treats the pair as intentional. |
+| FB-034 | metric-comparison | med | 👎 The alignment is wrong | Root cause: each column vertically centred itself on its OWN wrapped-label height, so the big values drifted to different heights. Now all columns share one rhythm (common value/label/chip rows sized to the tallest label) and value/label/chip are centred within each column. |
+| FB-035 | process-steps | med | 👎 reimagine this slide | Reimagined: filled chip badges replaced by large accent numerals (01/02/03) over thin accent rules, then bold label + body — the typographic motif from the approved agenda/kpi-grid layouts. |
+| FB-036 | roadmap | med | 👎 The black texts have too much white space between them | Items now PACK at the minimum 0.3" rhythm under each phase band instead of being distributed across the full lane height (the distribution read as disconnected floating lines). |
+| FB-037 | matrix-2x2 | med | 👎 reimagine this slide | Reimagined: hairline MUTED cross (was heavy accent rules), quadrant labels bold and centred both ways in their cells, axis captions centred; new optional highlight: <idx> field puts the accent on at most ONE quadrant (per the FB-039 rule that matrices highlight items, not scaffolding). |
+| FB-038 | swot | med | 👎 One item per category | IR now enforces exactly one statement per category (max_length=1 on all four quadrant lists); the single item renders at full body tier (caption-tier density compromise retired). Specimen updated. |
+| FB-039 | comparison-matrix | med | 👎 any matrix should always only highlight one or two items within the matrix not the categories so the coloring is off | Reimagined: coloured header/criteria boxes removed — options are plain bold primary text over a thin accent rule (table-slide motif), criteria plain bold text, cells plain text. New highlights: [[row, col], ...] field (max 2) renders the winning cell(s) as accent chips — the only colour in the matrix body. |
+| FB-040 | logo-wall | med | 👎 delete this one | team-grid DELETED per operator (model, layout, registry, specimen, golden, recommender). logo-wall is now the labeled-image-grid anchor; people intros fall back to card-grid. (Item retargeted to logo-wall because the validator requires a catalog component.) |
+| FB-041 | image-half-bleed | med | 👎 delete this one | image-full-bleed DELETED per operator; image-half-bleed is the surviving image layout and the recommender routes single images there. (Retargeted for validator.) |
+| FB-042 | image-half-bleed | med | 👎 delete this one | image-grid DELETED per operator; multi-image content routes to image-half-bleed. (Retargeted for validator.) |
 
 ## Won't fix (1)
 

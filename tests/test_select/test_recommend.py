@@ -51,10 +51,12 @@ def test_matrices_and_tables():
 
 
 def test_image_and_people():
-    assert _top(people=4) == "team-grid"
+    # team-grid / image-full-bleed / image-grid retired (FB-040..FB-042): people
+    # fall back to card-grid cards; any image count routes to image-half-bleed.
+    assert _top(people=4) == "card-grid"
     assert _top(logos=6) == "logo-wall"
-    assert _top(images=1) == "image-full-bleed"
-    assert _top(images=4) == "image-grid"
+    assert _top(images=1) == "image-half-bleed"
+    assert _top(images=4) == "image-half-bleed"
 
 
 def test_code_and_plain_list():

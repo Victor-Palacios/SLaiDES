@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_391",
+          "node_id": "title_390",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#14213D"
         },
         {
-          "node_id": "swot_head_392",
+          "node_id": "swot_head_391",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -57,7 +57,7 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot_rule_393",
+          "node_id": "swot_rule_392",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -69,57 +69,37 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot0_item_394",
+          "node_id": "swot0_item_393",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2395727,
             "w": 5501640,
-            "h": 411480
+            "h": 1097281
           },
-          "text_content": "Strong brand",
+          "text_content": "A strong brand with loyal users",
           "lines": [
             {
-              "text": "Strong brand",
-              "width_emu": 1835702,
-              "height_emu": 381000,
+              "text": "A strong brand with loyal",
+              "width_emu": 4704469,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "users",
+              "width_emu": 1055886,
+              "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 25.0,
+          "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "is_caption": true,
           "group_id": "swot_head_0"
         },
         {
-          "node_id": "swot0_item_395",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3081527,
-            "w": 5501640,
-            "h": 411480
-          },
-          "text_content": "Loyal users",
-          "lines": [
-            {
-              "text": "Loyal users",
-              "width_emu": 1623622,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": false,
-          "italic": false,
-          "is_caption": true,
-          "group_id": "swot_head_0"
-        },
-        {
-          "node_id": "swot_head_396",
+          "node_id": "swot_head_394",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -144,7 +124,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "swot_rule_397",
+          "node_id": "swot_rule_395",
           "node_type": "box",
           "rect": {
             "x": 6233160,
@@ -156,57 +136,37 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot1_item_398",
+          "node_id": "swot1_item_396",
           "node_type": "text",
           "rect": {
             "x": 6233160,
             "y": 2395727,
             "w": 5501640,
-            "h": 411480
+            "h": 1097281
           },
-          "text_content": "Thin margins",
+          "text_content": "Thin margins and a small team",
           "lines": [
             {
-              "text": "Thin margins",
-              "width_emu": 1835082,
-              "height_emu": 381000,
+              "text": "Thin margins and a small",
+              "width_emu": 4823805,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "team",
+              "width_emu": 959954,
+              "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 25.0,
+          "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "is_caption": true,
           "group_id": "swot_head_1"
         },
         {
-          "node_id": "swot1_item_399",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 3081527,
-            "w": 5501640,
-            "h": 411480
-          },
-          "text_content": "Small team",
-          "lines": [
-            {
-              "text": "Small team",
-              "width_emu": 1587965,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": false,
-          "italic": false,
-          "is_caption": true,
-          "group_id": "swot_head_1"
-        },
-        {
-          "node_id": "swot_head_400",
+          "node_id": "swot_head_397",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -231,7 +191,7 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot_rule_401",
+          "node_id": "swot_rule_398",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -243,57 +203,37 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot2_item_402",
+          "node_id": "swot2_item_399",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 4663439,
             "w": 5501640,
-            "h": 411480
+            "h": 1097281
           },
-          "text_content": "New markets",
+          "text_content": "New markets through partnerships",
           "lines": [
             {
-              "text": "New markets",
-              "width_emu": 1852445,
-              "height_emu": 381000,
+              "text": "New markets through",
+              "width_emu": 4103787,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "partnerships",
+              "width_emu": 2376165,
+              "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 25.0,
+          "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "is_caption": true,
           "group_id": "swot_head_2"
         },
         {
-          "node_id": "swot2_item_403",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5349239,
-            "w": 5501640,
-            "h": 411480
-          },
-          "text_content": "Partnerships",
-          "lines": [
-            {
-              "text": "Partnerships",
-              "width_emu": 1782372,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": false,
-          "italic": false,
-          "is_caption": true,
-          "group_id": "swot_head_2"
-        },
-        {
-          "node_id": "swot_head_404",
+          "node_id": "swot_head_400",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -318,7 +258,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "swot_rule_405",
+          "node_id": "swot_rule_401",
           "node_type": "box",
           "rect": {
             "x": 6233160,
@@ -330,59 +270,39 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot3_item_406",
+          "node_id": "swot3_item_402",
           "node_type": "text",
           "rect": {
             "x": 6233160,
             "y": 4663439,
             "w": 5501640,
-            "h": 411480
+            "h": 1097281
           },
-          "text_content": "New entrants",
+          "text_content": "New entrants driving price pressure",
           "lines": [
             {
-              "text": "New entrants",
-              "width_emu": 1870583,
-              "height_emu": 381000,
+              "text": "New entrants driving price",
+              "width_emu": 4991844,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "pressure",
+              "width_emu": 1679972,
+              "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 25.0,
+          "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "is_caption": true,
-          "group_id": "swot_head_3"
-        },
-        {
-          "node_id": "swot3_item_407",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 5349239,
-            "w": 5501640,
-            "h": 411480
-          },
-          "text_content": "Price pressure",
-          "lines": [
-            {
-              "text": "Price pressure",
-              "width_emu": 2046852,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": false,
-          "italic": false,
-          "is_caption": true,
           "group_id": "swot_head_3"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_408",
+          "node_id": "chrome_pagenum_403",
           "node_type": "text",
           "rect": {
             "x": 10363200,

@@ -4,6 +4,7 @@ _Generated from `manifest.json` by `scripts/build_combined_pdf.py` — do not ha
 
 | Snapshot | Pages | Layout fingerprint |
 |---|---|---|
+| `all-examples_2026-07-04.pdf` | 60 | `eb415347730e` |
 | `all-examples_2026-07-03.pdf` | 63 | `c181d9140dfc` |
 | `all-examples_2026-07-02.pdf` | 64 | `a87ce9675de6` |
 | `all-examples_2026-06-20.pdf` | 68 | `48621e86bfa4` |

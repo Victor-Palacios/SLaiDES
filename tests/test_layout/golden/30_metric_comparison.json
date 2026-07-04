@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_384",
+          "node_id": "title_314",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "metric_val_385",
+          "node_id": "metric_val_315",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -53,10 +53,11 @@
           "size_pt": 60.0,
           "bold": true,
           "italic": false,
-          "text_color": "#2A9D8F"
+          "text_color": "#2A9D8F",
+          "align": "center"
         },
         {
-          "node_id": "metric_label_386",
+          "node_id": "metric_label_316",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -82,13 +83,14 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "align": "center"
         },
         {
-          "node_id": "metric_chip_387",
+          "node_id": "metric_chip_317",
           "node_type": "box",
           "rect": {
-            "x": 457200,
+            "x": 1522569,
             "y": 4666488,
             "w": 1445581,
             "h": 518159
@@ -97,10 +99,10 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_388",
+          "node_id": "metric_delta_318",
           "node_type": "text",
           "rect": {
-            "x": 457200,
+            "x": 1522569,
             "y": 4666488,
             "w": 1445581,
             "h": 518159
@@ -119,14 +121,15 @@
           "bold": true,
           "italic": false,
           "group_id": "metric_0",
-          "text_color": "#FFFFFF"
+          "text_color": "#FFFFFF",
+          "align": "center"
         },
         {
-          "node_id": "metric_val_389",
+          "node_id": "metric_val_319",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 2334768,
+            "y": 2075688,
             "w": 3576320,
             "h": 914400
           },
@@ -143,16 +146,17 @@
           "size_pt": 60.0,
           "bold": true,
           "italic": false,
-          "text_color": "#2A9D8F"
+          "text_color": "#2A9D8F",
+          "align": "center"
         },
         {
-          "node_id": "metric_label_390",
+          "node_id": "metric_label_320",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 3523488,
+            "y": 3264408,
             "w": 3576320,
-            "h": 609600
+            "h": 1127760
           },
           "text_content": "Monthly churn",
           "lines": [
@@ -166,14 +170,15 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "align": "center"
         },
         {
-          "node_id": "metric_chip_391",
+          "node_id": "metric_chip_321",
           "node_type": "box",
           "rect": {
-            "x": 4307840,
-            "y": 4407408,
+            "x": 5175547,
+            "y": 4666488,
             "w": 1840906,
             "h": 518159
           },
@@ -181,11 +186,11 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_392",
+          "node_id": "metric_delta_322",
           "node_type": "text",
           "rect": {
-            "x": 4307840,
-            "y": 4407408,
+            "x": 5175547,
+            "y": 4666488,
             "w": 1840906,
             "h": 518159
           },
@@ -203,10 +208,11 @@
           "bold": true,
           "italic": false,
           "group_id": "metric_1",
-          "text_color": "#FFFFFF"
+          "text_color": "#FFFFFF",
+          "align": "center"
         },
         {
-          "node_id": "metric_val_393",
+          "node_id": "metric_val_323",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -227,10 +233,11 @@
           "size_pt": 60.0,
           "bold": true,
           "italic": false,
-          "text_color": "#2A9D8F"
+          "text_color": "#2A9D8F",
+          "align": "center"
         },
         {
-          "node_id": "metric_label_394",
+          "node_id": "metric_label_324",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -256,13 +263,14 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "align": "center"
         },
         {
-          "node_id": "metric_chip_395",
+          "node_id": "metric_chip_325",
           "node_type": "box",
           "rect": {
-            "x": 8158480,
+            "x": 9427731,
             "y": 4666488,
             "w": 1037817,
             "h": 518159
@@ -271,10 +279,10 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_396",
+          "node_id": "metric_delta_326",
           "node_type": "text",
           "rect": {
-            "x": 8158480,
+            "x": 9427731,
             "y": 4666488,
             "w": 1037817,
             "h": 518159
@@ -293,12 +301,13 @@
           "bold": true,
           "italic": false,
           "group_id": "metric_2",
-          "text_color": "#FFFFFF"
+          "text_color": "#FFFFFF",
+          "align": "center"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_397",
+          "node_id": "chrome_pagenum_327",
           "node_type": "text",
           "rect": {
             "x": 10363200,

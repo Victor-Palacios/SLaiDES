@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_254",
+          "node_id": "title_253",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,12 +32,12 @@
           "text_color": "#0D47A1"
         },
         {
-          "node_id": "vs_value_255",
+          "node_id": "vs_value_254",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2776728,
-            "w": 5021580,
+            "w": 4907280,
             "h": 914400
           },
           "text_content": "3 wks",
@@ -56,12 +56,12 @@
           "align": "center"
         },
         {
-          "node_id": "vs_label_256",
+          "node_id": "vs_label_255",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3965448,
-            "w": 5021580,
+            "w": 4907280,
             "h": 518159
           },
           "text_content": "Cloud time-to-launch",
@@ -80,12 +80,12 @@
           "align": "center"
         },
         {
-          "node_id": "vs_value_257",
+          "node_id": "vs_value_256",
           "node_type": "text",
           "rect": {
-            "x": 6713220,
+            "x": 6827520,
             "y": 2776728,
-            "w": 5021580,
+            "w": 4907280,
             "h": 914400
           },
           "text_content": "6 mo",
@@ -104,12 +104,12 @@
           "align": "center"
         },
         {
-          "node_id": "vs_label_258",
+          "node_id": "vs_label_257",
           "node_type": "text",
           "rect": {
-            "x": 6713220,
+            "x": 6827520,
             "y": 3965448,
-            "w": 5021580,
+            "w": 4907280,
             "h": 518159
           },
           "text_content": "On-prem time-to-launch",
@@ -128,25 +128,25 @@
           "align": "center"
         },
         {
-          "node_id": "vs_text_259",
+          "node_id": "vs_text_258",
           "node_type": "text",
           "rect": {
-            "x": 5753100,
-            "y": 3439667,
-            "w": 685800,
-            "h": 381000
+            "x": 5638800,
+            "y": 3371088,
+            "w": 914400,
+            "h": 518159
           },
           "text_content": "VS",
           "lines": [
             {
               "text": "VS",
-              "width_emu": 423540,
-              "height_emu": 381000,
+              "width_emu": 576014,
+              "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 25.0,
+          "size_pt": 34.0,
           "bold": true,
           "italic": false,
           "is_caption": true,
@@ -155,7 +155,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_260",
+          "node_id": "chrome_pagenum_259",
           "node_type": "text",
           "rect": {
             "x": 10363200,
