@@ -1493,7 +1493,11 @@ def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, 
         label_pt, label_is_caption = label_tiers[i]
         value_h = int(value_pt * LINE_SPACING_SINGLE * EMU_PER_PT)
         label_h = int(label_pt * LINE_SPACING_SINGLE * EMU_PER_PT)
-        block_h = value_h + _RULE_GAP_EMU + label_h
+        # Label stacks DIRECTLY under the value's line box (operator 2026-07-05:
+        # "the text and numbers are too far apart") — the leading inside the line
+        # boxes is all the optical separation the pair needs. Same group, so the
+        # zero gap is lint-exempt.
+        block_h = value_h + label_h
         band_top = tops[i]
         band_bottom = tops[i + 1] if i + 1 < n else bottom
         block_top = band_top + max(0, (band_bottom - band_top - block_h) // 2)
@@ -1502,7 +1506,7 @@ def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, 
         _row("nc_value", stage.value, value_pt, True, False,
              block_top, value_h, r, circle_cy)
         _row("nc_label", stage.label, label_pt, False, label_is_caption,
-             block_top + value_h + _RULE_GAP_EMU, label_h, r, circle_cy)
+             block_top + value_h, label_h, r, circle_cy)
     return nodes
 
 

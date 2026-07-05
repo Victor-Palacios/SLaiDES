@@ -322,3 +322,6 @@ def test_nested_circles_nest_and_share_a_bottom_tangent():
     assert [v.size_pt for v in values] == [ts.title, ts.header, ts.body]
     for v, l in zip(values, labels):
         assert v.size_pt > l.size_pt
+        # value and label stack with NO extra gap (operator: "too far apart") —
+        # the line boxes' own leading is the separation.
+        assert l.rect.y == v.rect.bottom()

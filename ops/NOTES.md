@@ -761,3 +761,6 @@ layout like it. First NEW skeleton since the review era began; first with a curv
   STEPS DOWN with the circle (values title→header→body, labels body→caption→caption),
   pinned in the intent test. Rule of thumb: when a mark scales per stage, its text should
   scale with it.
+- Second follow-up: "the text and numbers are too far apart" — the value→label gap
+  inside each circle is now ZERO; the line boxes' own leading is the separation
+  (same group, lint-exempt). Pinned: label.rect.y == value.rect.bottom().
