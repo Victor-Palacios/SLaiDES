@@ -2,7 +2,16 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 0 · **done** 41 · **wontfix** 1 · _last change 2026-07-04_
+**open** 4 · **done** 41 · **wontfix** 1 · _last change 2026-07-05_
+
+## Open (4)
+
+| ID | Layout | Sev | Comment | Notes |
+|---|---|---|---|---|
+| FB-043 | this-vs-that | med | 👎 The VS a little bigger |  |
+| FB-044 | matrix-2x2 | med | 👎 delete this slide |  |
+| FB-045 | comparison-matrix | med | 👎 too many colors just stick with the red and black |  |
+| FB-046 | logo-wall | med | 📝 delete this slide layout |  |
 
 ## Done (41)
 

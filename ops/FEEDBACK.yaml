@@ -299,8 +299,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    Dropped the accent rule under the title (engine); bullet-list is now pure typography (title + flush-left items) and is W_TEXT_ONLY-exempt in the linter. Intent test updated.
+  notes: Dropped the accent rule under the title (engine); bullet-list is now pure typography (title + flush-left items) and is W_TEXT_ONLY-exempt in the linter. Intent test updated.
 - id: FB-031
   component: code
   family: code-block
@@ -310,8 +309,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    _CODE_BG returned to the original deep-teal #0C1A1C (pre-FB-027 panel); VS Code Dark+ token colours kept unchanged. Pinned by test_code_background_is_the_original_deep_teal.
+  notes: '_CODE_BG returned to the original deep-teal #0C1A1C (pre-FB-027 panel); VS Code Dark+ token colours kept unchanged. Pinned by test_code_background_is_the_original_deep_teal.'
 - id: FB-032
   component: this-vs-that
   family: vs-badge
@@ -321,8 +319,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    Bare VS stepped up from caption tier (25pt) to body tier (34pt), still muted/bold; middle gutter widened 0.75"->1.0" so it fits with standard insets.
+  notes: Bare VS stepped up from caption tier (25pt) to body tier (34pt), still muted/bold; middle gutter widened 0.75"->1.0" so it fits with standard insets.
 - id: FB-033
   component: table-slide
   family: table
@@ -332,8 +329,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    Header row now sits a tight 0.12" above the accent rule (was the full 0.3" gap); headers+rule share group_id table_head so the linter treats the pair as intentional.
+  notes: Header row now sits a tight 0.12" above the accent rule (was the full 0.3" gap); headers+rule share group_id table_head so the linter treats the pair as intentional.
 - id: FB-034
   component: metric-comparison
   family: stat-callout
@@ -343,8 +339,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    Root cause: each column vertically centred itself on its OWN wrapped-label height, so the big values drifted to different heights. Now all columns share one rhythm (common value/label/chip rows sized to the tallest label) and value/label/chip are centred within each column.
+  notes: 'Root cause: each column vertically centred itself on its OWN wrapped-label height, so the big values drifted to different heights. Now all columns share one rhythm (common value/label/chip rows sized to the tallest label) and value/label/chip are centred within each column.'
 - id: FB-035
   component: process-steps
   family: process-flow
@@ -354,8 +349,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    Reimagined: filled chip badges replaced by large accent numerals (01/02/03) over thin accent rules, then bold label + body — the typographic motif from the approved agenda/kpi-grid layouts.
+  notes: 'Reimagined: filled chip badges replaced by large accent numerals (01/02/03) over thin accent rules, then bold label + body — the typographic motif from the approved agenda/kpi-grid layouts.'
 - id: FB-036
   component: roadmap
   family: roadmap
@@ -365,8 +359,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    Items now PACK at the minimum 0.3" rhythm under each phase band instead of being distributed across the full lane height (the distribution read as disconnected floating lines).
+  notes: Items now PACK at the minimum 0.3" rhythm under each phase band instead of being distributed across the full lane height (the distribution read as disconnected floating lines).
 - id: FB-037
   component: matrix-2x2
   family: matrix-2x2
@@ -376,8 +369,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    Reimagined: hairline MUTED cross (was heavy accent rules), quadrant labels bold and centred both ways in their cells, axis captions centred; new optional highlight: <idx> field puts the accent on at most ONE quadrant (per the FB-039 rule that matrices highlight items, not scaffolding).
+  notes: 'Reimagined: hairline MUTED cross (was heavy accent rules), quadrant labels bold and centred both ways in their cells, axis captions centred; new optional highlight: <idx> field puts the accent on at most ONE quadrant (per the FB-039 rule that matrices highlight items, not scaffolding).'
 - id: FB-038
   component: swot
   family: swot
@@ -387,8 +379,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    IR now enforces exactly one statement per category (max_length=1 on all four quadrant lists); the single item renders at full body tier (caption-tier density compromise retired). Specimen updated.
+  notes: IR now enforces exactly one statement per category (max_length=1 on all four quadrant lists); the single item renders at full body tier (caption-tier density compromise retired). Specimen updated.
 - id: FB-039
   component: comparison-matrix
   family: comparison-matrix
@@ -398,8 +389,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    Reimagined: coloured header/criteria boxes removed — options are plain bold primary text over a thin accent rule (table-slide motif), criteria plain bold text, cells plain text. New highlights: [[row, col], ...] field (max 2) renders the winning cell(s) as accent chips — the only colour in the matrix body.
+  notes: 'Reimagined: coloured header/criteria boxes removed — options are plain bold primary text over a thin accent rule (table-slide motif), criteria plain bold text, cells plain text. New highlights: [[row, col], ...] field (max 2) renders the winning cell(s) as accent chips — the only colour in the matrix body.'
 - id: FB-040
   component: logo-wall
   family: labeled-image-grid
@@ -409,8 +399,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    team-grid DELETED per operator (model, layout, registry, specimen, golden, recommender). logo-wall is now the labeled-image-grid anchor; people intros fall back to card-grid. (Item retargeted to logo-wall because the validator requires a catalog component.)
+  notes: team-grid DELETED per operator (model, layout, registry, specimen, golden, recommender). logo-wall is now the labeled-image-grid anchor; people intros fall back to card-grid. (Item retargeted to logo-wall because the validator requires a catalog component.)
 - id: FB-041
   component: image-half-bleed
   family: image-full-bleed
@@ -420,8 +409,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    image-full-bleed DELETED per operator; image-half-bleed is the surviving image layout and the recommender routes single images there. (Retargeted for validator.)
+  notes: image-full-bleed DELETED per operator; image-half-bleed is the surviving image layout and the recommender routes single images there. (Retargeted for validator.)
 - id: FB-042
   component: image-half-bleed
   family: image-grid
@@ -431,5 +419,44 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: >-
-    image-grid DELETED per operator; multi-image content routes to image-half-bleed. (Retargeted for validator.)
+  notes: image-grid DELETED per operator; multi-image content routes to image-half-bleed. (Retargeted for validator.)
+- id: FB-043
+  component: this-vs-that
+  family: vs-badge
+  status: open
+  severity: med
+  comment: 👎 The VS a little bigger
+  created: '2026-07-05'
+  updated: '2026-07-05'
+  source: web 2026-07-05T15:52:58.945Z
+  notes: ''
+- id: FB-044
+  component: matrix-2x2
+  family: matrix-2x2
+  status: open
+  severity: med
+  comment: 👎 delete this slide
+  created: '2026-07-05'
+  updated: '2026-07-05'
+  source: web 2026-07-05T15:52:58.945Z
+  notes: ''
+- id: FB-045
+  component: comparison-matrix
+  family: comparison-matrix
+  status: open
+  severity: med
+  comment: 👎 too many colors just stick with the red and black
+  created: '2026-07-05'
+  updated: '2026-07-05'
+  source: web 2026-07-05T15:52:58.945Z
+  notes: ''
+- id: FB-046
+  component: logo-wall
+  family: labeled-image-grid
+  status: open
+  severity: med
+  comment: 📝 delete this slide layout
+  created: '2026-07-05'
+  updated: '2026-07-05'
+  source: web 2026-07-05T15:52:58.945Z
+  notes: ''
