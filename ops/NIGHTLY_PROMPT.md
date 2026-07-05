@@ -203,7 +203,7 @@ math/geometry, where an LLM (no vision) picks which layout per slide for a given
 An audit found two gaps the recent advisory/meta work (aesthetics, research, board,
 brainstorm, dated PDF archive) did NOT serve; both are now BUILT and are the spine of the
 product — keep them first-class and do not let meta-work crowd them out:
-  - Honest taxonomy: 28 components = 20 distinct layout skeletons + styled variants.
+  - Honest taxonomy: 29 components = 21 distinct layout skeletons + styled variants.
     Source of truth `src/slidekit/catalog/registry.py` → `docs/LAYOUT_TAXONOMY.md`. Do NOT
     re-pad "40 distinct"; every new component declares its family/role in the registry.
   - Selection pipeline (vision-free): `slidekit catalog`/`docs/LAYOUT_SELECTION_GUIDE.md`

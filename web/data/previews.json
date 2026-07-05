@@ -4,7 +4,7 @@
     "w": 1280.0,
     "h": 720.0
   },
-  "count": 28,
+  "count": 29,
   "components": [
     {
       "component": "title-slide",
@@ -355,6 +355,20 @@
       "height_px": 720.0,
       "background": "#FFFFFF",
       "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#2D3142;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Sales Pipeline</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:157.44px;width:1184.00px;height:90.24px;background:#4F8A8B;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:1184.00px;height:90.24px;color:#FFFFFF;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Visitors · 50,000</div>\n    <div class=\"node node-box\" style=\"left:156.53px;top:276.48px;width:966.93px;height:90.24px;background:#4F8A8B;\"></div>\n    <div class=\"node node-text\" style=\"left:156.53px;top:276.48px;width:966.93px;height:90.24px;color:#FFFFFF;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Signups · 8,000</div>\n    <div class=\"node node-box\" style=\"left:265.07px;top:395.52px;width:749.87px;height:90.24px;background:#4F8A8B;\"></div>\n    <div class=\"node node-text\" style=\"left:265.07px;top:395.52px;width:749.87px;height:90.24px;color:#FFFFFF;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Trials · 2,400</div>\n    <div class=\"node node-box\" style=\"left:373.60px;top:514.56px;width:532.80px;height:90.24px;background:#4F8A8B;\"></div>\n    <div class=\"node node-text\" style=\"left:373.60px;top:514.56px;width:532.80px;height:90.24px;color:#FFFFFF;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Customers · 600</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
+    },
+    {
+      "component": "nested-circles",
+      "family": "nested-circles",
+      "role": "anchor",
+      "variant_of": null,
+      "differs_by": null,
+      "purpose": "Nested circles, each stage inside the last (operator-requested 2026-07-05).",
+      "use_when": "A narrowing sequence where each stage is a SUBSET of the previous (applications → interviews → offers).",
+      "example": "43_nested_circles.yaml",
+      "width_px": 1280.0,
+      "height_px": 720.0,
+      "background": "#FFFFFF",
+      "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0B3D2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Job Search Funnel (2021)</div>\n    <div class=\"node node-box\" style=\"left:416.32px;top:157.44px;width:447.36px;height:447.36px;background:#9A9A9A;border-radius:50%;\"></div>\n    <div class=\"node node-box\" style=\"left:490.88px;top:306.56px;width:298.24px;height:298.24px;background:#F2B705;border-radius:50%;\"></div>\n    <div class=\"node node-box\" style=\"left:565.44px;top:455.68px;width:149.12px;height:149.12px;background:#0B3D2E;border-radius:50%;\"></div>\n    <div class=\"node node-text\" style=\"left:497.00px;top:175.52px;width:286.00px;height:67.20px;color:#FFFFFF;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">>700</div>\n    <div class=\"node node-text\" style=\"left:446.75px;top:248.48px;width:386.50px;height:40.00px;color:#FFFFFF;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Applications</div>\n    <div class=\"node node-text\" style=\"left:527.12px;top:324.64px;width:225.76px;height:67.20px;color:#FFFFFF;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">6</div>\n    <div class=\"node node-text\" style=\"left:495.82px;top:397.60px;width:288.35px;height:40.00px;color:#FFFFFF;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Interviews</div>\n    <div class=\"node node-text\" style=\"left:569.04px;top:473.76px;width:141.93px;height:67.20px;color:#FFFFFF;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">1.5</div>\n    <div class=\"node node-text\" style=\"left:574.97px;top:546.72px;width:130.05px;height:40.00px;color:#FFFFFF;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Offers</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#9A9A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
     },
     {
       "component": "pyramid",

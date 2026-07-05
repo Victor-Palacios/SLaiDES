@@ -103,6 +103,15 @@ def _node_html(node: "ResolvedNode", palette) -> str:
         )
         return f'    <div class="node node-box{chrome_cls}" style="{style}"></div>'
 
+    if node.node_type == "ellipse":
+        # A circle/ellipse inscribed in the node rect (nested-circles funnel) —
+        # same fill contract as boxes, rounded by CSS.
+        style = (
+            f"left:{left};top:{top};width:{width};height:{height};"
+            f"background:{node.fill_color or palette.primary};border-radius:50%;"
+        )
+        return f'    <div class="node node-box{chrome_cls}" style="{style}"></div>'
+
     if node.node_type == "text":
         if node.text_color:
             # Explicit per-node color (code syntax roles, accent values, labels on

@@ -1,10 +1,10 @@
-# slidekit slide-design catalog — 28 components (20 distinct layouts)
+# slidekit slide-design catalog — 29 components (21 distinct layouts)
 
 Target: **40 slide components** (up from the 8 shipped in v1). Each component is a
 slidekit unit: one Pydantic model + one layout handler + golden test + example
 + SKILL gallery row. This file is the build blueprint for Phase 9.
 
-Honesty note: the 28 components implement **20 genuinely distinct layout skeletons** —
+Honesty note: the 29 components implement **21 genuinely distinct layout skeletons** —
 the rest are styled variants of a family anchor (same geometry, different marker / colour /
 orientation / fields). The authoritative mapping is generated in
 [LAYOUT_TAXONOMY.md](LAYOUT_TAXONOMY.md) from `src/slidekit/catalog/registry.py`.
@@ -95,6 +95,7 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 | 27 | ✓ `timeline` | `events[]` = {date,title,description?} | dated milestones |
 | 28 | `roadmap` | `phases[]` = {title,items[]} | phased plan across lanes |
 | 29 | `funnel` | `stages[]` = {label,value?} | narrowing stages |
+| 29b | `nested-circles` | `stages[]` = {value,label} (2–4) | subset funnel as nested circles |
 | 30 | `pyramid` | `layers[]` = {label} | layered hierarchy |
 | 32 | `swot` | `strengths[]`,`weaknesses[]`,`opportunities[]`,`threats[]` (1 each) | 4-quadrant analysis |
 

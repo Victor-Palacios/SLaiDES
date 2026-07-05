@@ -10,6 +10,7 @@ Pass 2 (assign):  distribute available space top-down and record rects.
 from __future__ import annotations
 
 import itertools
+import math
 import re
 from dataclasses import dataclass, field
 from typing import Optional
@@ -27,6 +28,7 @@ from slidekit.ir.models import (
     DeckIR,
     DefinitionSlide,
     FunnelSlide,
+    NestedCirclesSlide,
     IconTextRowsSlide,
     ImageHalfBleedSlide,
     KpiGridSlide,
@@ -200,6 +202,8 @@ def _resolve_slide(
         nodes = _layout_roadmap(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "funnel":
         nodes = _layout_funnel(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+    elif comp == "nested-circles":
+        nodes = _layout_nested_circles(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "pyramid":
         nodes = _layout_pyramid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "swot":
@@ -1433,6 +1437,64 @@ def _layout_funnel(slide: FunnelSlide, cx, cy, cw, ch, font, ts, palette):
         nodes.append(_make_text_node(_nid("fn_label"), text, font, ts.body, bold=True,
                                      italic=False, rect=Rect(bx, by, bw, band_h),
                                      group_id=gid, color=palette.surface))
+    return nodes
+
+
+def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, palette):
+    """Nested-circle funnel (operator-requested 2026-07-05, modelled on their own
+    job-search slide): each stage is a circle INSIDE the previous one, all tangent
+    at the same bottom point, so every stage reads as a subset of the stage before
+    (>700 applications ⊃ 6 interviews ⊃ 1.5 offers). Circles are measured ellipse
+    nodes; diameters step down evenly (D·(n-i)/n); fills cycle muted → accent →
+    primary; each stage's value+label sits centred in the visible band between its
+    circle's top and the next circle's top (the innermost gets its whole circle),
+    with the text box width set to the circle's chord at the band — so the linter
+    can still prove every line fits. One shared group_id: the nesting is the point."""
+    nodes: list[ResolvedNode] = []
+    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
+    gid = "nested"
+
+    avail_h = cy + ch - y
+    D = min(avail_h, cw)
+    centre_x = cx + cw // 2
+    top0 = y + (avail_h - D) // 2
+    bottom = top0 + D
+
+    n = len(slide.stages)
+    fills = [palette.muted, palette.accent, palette.primary, palette.muted]
+    diams = [max(1, D * (n - i) // n) for i in range(n)]
+    tops = [bottom - d for d in diams]
+
+    for i, d in enumerate(diams):
+        nodes.append(ResolvedNode(_nid("nc_circle"), "ellipse",
+                                  Rect(centre_x - d // 2, tops[i], d, d),
+                                  fill_color=fills[i], group_id=gid))
+
+    value_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
+    label_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
+    block_h = value_h + _RULE_GAP_EMU + label_h
+
+    def _row(prefix, text, size, bold, is_caption, ry, rh, r, circle_cy):
+        # Text box width = the circle's chord at the row's vertical centre; the
+        # centred text is what must fit, and E_OVERFLOW proves it does.
+        dy = abs(ry + rh // 2 - circle_cy)
+        w = max(1, 2 * math.isqrt(max(0, r * r - dy * dy)))
+        nodes.append(_make_text_node(_nid(prefix), text, font, size,
+                                     bold=bold, italic=False,
+                                     rect=Rect(centre_x - w // 2, ry, w, rh),
+                                     is_caption=is_caption, color=palette.surface,
+                                     group_id=gid, align="center"))
+
+    for i, stage in enumerate(slide.stages):
+        band_top = tops[i]
+        band_bottom = tops[i + 1] if i + 1 < n else bottom
+        block_top = band_top + max(0, (band_bottom - band_top - block_h) // 2)
+        r = diams[i] // 2
+        circle_cy = bottom - r
+        _row("nc_value", stage.value, ts.header, True, False,
+             block_top, value_h, r, circle_cy)
+        _row("nc_label", stage.label, ts.caption, False, True,
+             block_top + value_h + _RULE_GAP_EMU, label_h, r, circle_cy)
     return nodes
 
 

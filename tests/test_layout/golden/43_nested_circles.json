@@ -1,0 +1,258 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": 1,
+      "component": "nested-circles",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_396",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Job Search Funnel (2021)",
+          "lines": [
+            {
+              "text": "Job Search Funnel (2021)",
+              "width_emu": 6462006,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0B3D2E"
+        },
+        {
+          "node_id": "nc_circle_397",
+          "node_type": "ellipse",
+          "rect": {
+            "x": 3965448,
+            "y": 1499616,
+            "w": 4261104,
+            "h": 4261104
+          },
+          "group_id": "nested",
+          "fill_color": "#9A9A9A"
+        },
+        {
+          "node_id": "nc_circle_398",
+          "node_type": "ellipse",
+          "rect": {
+            "x": 4675632,
+            "y": 2919984,
+            "w": 2840736,
+            "h": 2840736
+          },
+          "group_id": "nested",
+          "fill_color": "#F2B705"
+        },
+        {
+          "node_id": "nc_circle_399",
+          "node_type": "ellipse",
+          "rect": {
+            "x": 5385816,
+            "y": 4340352,
+            "w": 1420368,
+            "h": 1420368
+          },
+          "group_id": "nested",
+          "fill_color": "#0B3D2E"
+        },
+        {
+          "node_id": "nc_value_400",
+          "node_type": "text",
+          "rect": {
+            "x": 4733934,
+            "y": 1671828,
+            "w": 2724132,
+            "h": 640080
+          },
+          "text_content": ">700",
+          "lines": [
+            {
+              "text": ">700",
+              "width_emu": 1201452,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "nested",
+          "text_color": "#FFFFFF",
+          "align": "center"
+        },
+        {
+          "node_id": "nc_label_401",
+          "node_type": "text",
+          "rect": {
+            "x": 4255309,
+            "y": 2366772,
+            "w": 3681382,
+            "h": 381000
+          },
+          "text_content": "Applications",
+          "lines": [
+            {
+              "text": "Applications",
+              "width_emu": 1711989,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "nested",
+          "text_color": "#FFFFFF",
+          "align": "center"
+        },
+        {
+          "node_id": "nc_value_402",
+          "node_type": "text",
+          "rect": {
+            "x": 5020805,
+            "y": 3092196,
+            "w": 2150390,
+            "h": 640080
+          },
+          "text_content": "6",
+          "lines": [
+            {
+              "text": "6",
+              "width_emu": 296652,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "nested",
+          "text_color": "#FFFFFF",
+          "align": "center"
+        },
+        {
+          "node_id": "nc_label_403",
+          "node_type": "text",
+          "rect": {
+            "x": 4722725,
+            "y": 3787140,
+            "w": 2746550,
+            "h": 381000
+          },
+          "text_content": "Interviews",
+          "lines": [
+            {
+              "text": "Interviews",
+              "width_emu": 1429215,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "nested",
+          "text_color": "#FFFFFF",
+          "align": "center"
+        },
+        {
+          "node_id": "nc_value_404",
+          "node_type": "text",
+          "rect": {
+            "x": 5420081,
+            "y": 4512564,
+            "w": 1351838,
+            "h": 640080
+          },
+          "text_content": "1.5",
+          "lines": [
+            {
+              "text": "1.5",
+              "width_emu": 741499,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "nested",
+          "text_color": "#FFFFFF",
+          "align": "center"
+        },
+        {
+          "node_id": "nc_label_405",
+          "node_type": "text",
+          "rect": {
+            "x": 5476626,
+            "y": 5207508,
+            "w": 1238748,
+            "h": 381000
+          },
+          "text_content": "Offers",
+          "lines": [
+            {
+              "text": "Offers",
+              "width_emu": 858707,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "nested",
+          "text_color": "#FFFFFF",
+          "align": "center"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_406",
+          "node_type": "text",
+          "rect": {
+            "x": 10363200,
+            "y": 6035040,
+            "w": 1371600,
+            "h": 365760
+          },
+          "text_content": "1",
+          "lines": [
+            {
+              "text": "1",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true
+        }
+      ]
+    }
+  ]
+}

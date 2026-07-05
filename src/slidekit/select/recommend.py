@@ -107,6 +107,7 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
     # ordered sequences
     if f.ordered and f.trend == "narrowing":
         add("funnel", 0.95, "tiers that narrow")
+        add("nested-circles", 0.85, "stages that narrow as subsets of the previous")
     elif f.ordered and f.trend == "widening":
         add("pyramid", 0.95, "tiers that widen")
     elif f.ordered:

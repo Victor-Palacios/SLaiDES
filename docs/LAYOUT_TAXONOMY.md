@@ -2,9 +2,9 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxonomy.py` — do not hand-edit. A test (`tests/test_catalog`) fails if it drifts._
 
-**28 components** implement **20 distinct layout skeletons** (families); **8** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **20 distinct layouts**.
+**29 components** implement **21 distinct layout skeletons** (families); **8** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **21 distinct layouts**.
 
-## Distinct layout families (20)
+## Distinct layout families (21)
 
 | Family | Anchor component | What the skeleton is |
 |---|---|---|
@@ -17,6 +17,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `icon-text-rows` | `icon-text-rows` | Rows of icon + text. |
 | `kpi-grid` | `kpi-grid` | A grid of KPIs (value + rule + label). |
 | `marker-list` | `bullet-list` | A simple list of points (no bullet glyphs — operator style rule FB-026). |
+| `nested-circles` | `nested-circles` | Nested circles, each stage inside the last (operator-requested 2026-07-05). |
 | `process-flow` | `process-steps` | Horizontal numbered process. |
 | `pyramid` | `pyramid` | Widening pyramid tiers. |
 | `roadmap` | `roadmap` | Phased lanes with header bands. |
@@ -47,6 +48,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `image-half-bleed` | `two-column` | variant | one column is a half-bleed image |
 | `kpi-grid` | `kpi-grid` | **anchor** | — |
 | `metric-comparison` | `stat-callout` | variant | adds a delta chip per metric |
+| `nested-circles` | `nested-circles` | **anchor** | — |
 | `numbered-steps` | `marker-list` | variant | numbered chips (vertical) |
 | `process-steps` | `process-flow` | **anchor** | — |
 | `pull-quote` | `emphasis-stack` | variant | bold quote + attribution |

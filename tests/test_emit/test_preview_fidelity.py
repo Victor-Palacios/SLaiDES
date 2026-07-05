@@ -67,3 +67,21 @@ def test_pptx_alignment_follows_node_align():
     _emit_text(slide, left, _PALETTE)
     aligns = [sh.text_frame.paragraphs[0].alignment for sh in slide.shapes]
     assert aligns == [PP_ALIGN.CENTER, PP_ALIGN.LEFT]
+
+
+def test_ellipse_nodes_render_in_all_emitters():
+    """The nested-circles layout introduced ellipse nodes (2026-07-05) — they must
+    reach the HTML preview as border-radius circles and pptx as OVAL shapes, with
+    the same fill contract as boxes."""
+    node = ResolvedNode("e1", "ellipse", Rect(0, 0, 914400, 914400), fill_color="#123456")
+    html = _node_html(node, _PALETTE)
+    assert "border-radius:50%" in html and "background:#123456" in html
+
+    from pptx import Presentation
+    from pptx.enum.shapes import MSO_SHAPE
+    from slidekit.emit.pptx_emitter import _emit_node
+    prs = Presentation()
+    slide = prs.slides.add_slide(prs.slide_layouts[6])
+    _emit_node(slide, node, _PALETTE)
+    (shape,) = slide.shapes
+    assert shape.auto_shape_type == MSO_SHAPE.OVAL

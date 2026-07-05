@@ -230,7 +230,7 @@ def _content_nodes(rs: "ResolvedSlide") -> list:
     return [
         n
         for n in rs.nodes
-        if not n.is_chrome and n.node_type in ("text", "box", "icon", "image")
+        if not n.is_chrome and n.node_type in ("text", "box", "ellipse", "icon", "image")
     ]
 
 
@@ -363,7 +363,7 @@ def _text_background(tnode, nodes, surface: str):
     """
     bg = surface
     for n in nodes:
-        if n is tnode or n.node_type not in ("box", "image"):
+        if n is tnode or n.node_type not in ("box", "ellipse", "image"):
             continue
         if _contains(n.rect, tnode.rect):
             if n.node_type == "image":
@@ -383,9 +383,9 @@ def _non_overlap(nodes) -> float:
     for i in range(len(nodes)):
         for j in range(i + 1, len(nodes)):
             a, b = nodes[i], nodes[j]
-            if a.node_type == "text" and b.node_type in ("box", "image") and _contains(b.rect, a.rect):
+            if a.node_type == "text" and b.node_type in ("box", "ellipse", "image") and _contains(b.rect, a.rect):
                 continue
-            if b.node_type == "text" and a.node_type in ("box", "image") and _contains(a.rect, b.rect):
+            if b.node_type == "text" and a.node_type in ("box", "ellipse", "image") and _contains(a.rect, b.rect):
                 continue
             inter += _intersect_area(a.rect, b.rect)
     return max(0.0, 1 - inter / tot)
@@ -447,7 +447,7 @@ def _richness(nodes, deck: "DeckIR") -> float:
     has_emphasis = False
     has_structure = False
     for n in nodes:
-        if n.node_type in ("box", "icon", "image"):
+        if n.node_type in ("box", "ellipse", "icon", "image"):
             has_structure = True
         for c in (n.fill_color, n.text_color):
             if c:

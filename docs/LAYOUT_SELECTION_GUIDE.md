@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_selection_guide.py` — do not hand-edit. The machine-readable form is `slidekit catalog --json`. A test (`tests/test_catalog`) fails if it drifts._
 
-Pick a component per slide from its **content shape** — no rendering or vision needed. There are **28 components** across **20 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
+Pick a component per slide from its **content shape** — no rendering or vision needed. There are **29 components** across **21 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
 
 ## agenda — Numbered agenda / table of contents.
 
@@ -86,6 +86,13 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - use when: Sequential steps, read top-down.
   - content shape: ordered {title, body} steps
   - required fields: `steps`
+
+## nested-circles — Nested circles, each stage inside the last (operator-requested 2026-07-05).
+
+- **`nested-circles`** · capacity 2–4
+  - use when: A narrowing sequence where each stage is a SUBSET of the previous (applications → interviews → offers).
+  - content shape: ordered {value, label} stages, each a subset of the last
+  - required fields: `stages`
 
 ## process-flow — Horizontal numbered process.
 

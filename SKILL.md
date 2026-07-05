@@ -92,7 +92,7 @@ Each component compiles to a row/column tree; you fill typed slots.
 **Choosing a layout (no vision).** Pick a component per slide from its *content shape*, not
 by rendering anything: [docs/LAYOUT_SELECTION_GUIDE.md](docs/LAYOUT_SELECTION_GUIDE.md)
 lists every component's purpose, when-to-use, capacity, and required fields, grouped by the
-~20 distinct layout families (see [docs/LAYOUT_TAXONOMY.md](docs/LAYOUT_TAXONOMY.md)). The
+~21 distinct layout families (see [docs/LAYOUT_TAXONOMY.md](docs/LAYOUT_TAXONOMY.md)). The
 same data is machine-readable via `slidekit catalog --json`.
 
 **Authoring from an outline.** `slidekit author outline.yaml [--pdf]` builds a deck from a
@@ -128,6 +128,7 @@ lean outline — a `slides:` list where each slide is a chosen `component` + its
 | `process-steps` | `steps[]` = `{label, body}` (≤4 keeps ≥32pt) | `title` |
 | `roadmap` | `phases[]` = `{title, items[]}` (≤4 lanes) | `title` |
 | `funnel` | `stages[]` = `{label, value?}` (narrowing bars) | `title` |
+| `nested-circles` | `stages[]` = `{value, label}` (2–4, each a subset of the last) | `title` |
 | `pyramid` | `layers[]` = `{label}` (widening bars) | `title` |
 | `swot` | `strengths[]`, `weaknesses[]`, `opportunities[]`, `threats[]` (exactly 1 each, FB-038) | `title` |
 | `comparison-matrix` | `options[]`, `criteria[]`, `cells[][]` | `title`, `highlights` (≤2 `[row, col]`) |

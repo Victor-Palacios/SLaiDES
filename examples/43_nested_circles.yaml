@@ -1,0 +1,21 @@
+version: 1
+theme:
+  palette:
+    primary: "#0B3D2E"
+    surface: "#FFFFFF"
+    accent: "#F2B705"
+    text: "#1A1A2E"
+    muted: "#9A9A9A"
+  font: arial
+page_numbers:
+  enabled: true
+slides:
+  - component: nested-circles
+    title: "Job Search Funnel (2021)"
+    stages:
+      - value: ">700"
+        label: "Applications"
+      - value: "6"
+        label: "Interviews"
+      - value: "1.5"
+        label: "Offers"

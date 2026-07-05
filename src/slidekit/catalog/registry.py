@@ -157,10 +157,15 @@ _META: dict[str, dict] = {
         purpose="Phased lanes with header bands.", use_when="A roadmap of phases each with items.",
         capacity=(2, 5), content_shape="phases, each a titled list of items"),
 
-    # funnel / pyramid
+    # funnel / pyramid / nested circles
     "funnel": dict(family="funnel", role="anchor",
         purpose="Narrowing funnel tiers.", use_when="A converging/narrowing sequence (e.g. a funnel).",
         capacity=(3, 6), content_shape="ordered tiers that narrow"),
+    "nested-circles": dict(family="nested-circles", role="anchor",
+        purpose="Nested circles, each stage inside the last (operator-requested 2026-07-05).",
+        use_when="A narrowing sequence where each stage is a SUBSET of the previous "
+                 "(applications → interviews → offers).",
+        capacity=(2, 4), content_shape="ordered {value, label} stages, each a subset of the last"),
     "pyramid": dict(family="pyramid", role="anchor",
         purpose="Widening pyramid tiers.", use_when="A hierarchy built on a broad base.",
         capacity=(3, 6), content_shape="ordered tiers that widen"),

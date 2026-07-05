@@ -402,6 +402,20 @@ class FunnelSlide(BaseModel):
     stages: list[FunnelStage] = Field(min_length=1)
 
 
+class NestedStage(BaseModel):
+    value: str
+    label: str
+
+
+class NestedCirclesSlide(BaseModel):
+    """Nested-circle funnel (operator-requested 2026-07-05): each stage is a circle
+    INSIDE the previous, all tangent at the bottom — a subset-of-the-previous read
+    (e.g. >700 applications ⊃ 6 interviews ⊃ 1.5 offers). Order stages large→small."""
+    component: Literal["nested-circles"]
+    title: Optional[str] = None
+    stages: list[NestedStage] = Field(min_length=2, max_length=4)
+
+
 class PyramidLayer(BaseModel):
     label: str
 
@@ -469,6 +483,7 @@ Slide = Annotated[
         ProcessStepsSlide,
         RoadmapSlide,
         FunnelSlide,
+        NestedCirclesSlide,
         PyramidSlide,
         SwotSlide,
         ComparisonMatrixSlide,

@@ -92,6 +92,8 @@ def _emit_node(slide, node: "ResolvedNode", palette) -> None:
     rect = node.rect
     if node.node_type == "box":
         _emit_box(slide, node, palette)
+    elif node.node_type == "ellipse":
+        _emit_box(slide, node, palette, shape=MSO_SHAPE.OVAL)
     elif node.node_type == "text":
         _emit_text(slide, node, palette)
     elif node.node_type == "icon":
@@ -101,13 +103,14 @@ def _emit_node(slide, node: "ResolvedNode", palette) -> None:
     # spacer: no visual output
 
 
-def _emit_box(slide, node: "ResolvedNode", palette) -> None:
-    """Emit a filled rectangle for deterministic shape designs (funnel, pyramid,
-    matrix, swot, etc.). Fill comes from node.fill_color (a literal hex resolved
-    from a palette role at layout time); falls back to the theme primary."""
+def _emit_box(slide, node: "ResolvedNode", palette, shape=None) -> None:
+    """Emit a filled shape for deterministic designs (funnel, pyramid, swot rules,
+    nested circles, etc.) — a rectangle by default, or the MSO shape passed in
+    (ellipse nodes pass OVAL). Fill comes from node.fill_color (a literal hex
+    resolved from a palette role at layout time); falls back to the theme primary."""
     rect = node.rect
     shape = slide.shapes.add_shape(
-        MSO_SHAPE.RECTANGLE, Emu(rect.x), Emu(rect.y), Emu(rect.w), Emu(rect.h)
+        shape or MSO_SHAPE.RECTANGLE, Emu(rect.x), Emu(rect.y), Emu(rect.w), Emu(rect.h)
     )
     hex_color = node.fill_color or palette.primary
     r, g, b = _hex_to_rgb(hex_color)

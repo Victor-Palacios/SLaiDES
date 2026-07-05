@@ -161,7 +161,7 @@ def _check_slide(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
     # W_TEXT_ONLY — text-only slide (no image/chart/icon/shape).
     slot_types = {n.slot_type for n in slide.nodes if n.slot_type}
     has_media = bool(slot_types & {"image", "chart", "icon"}) or any(
-        n.node_type == "box" for n in slide.nodes
+        n.node_type in ("box", "ellipse") for n in slide.nodes
     )
     # this-vs-that is deliberately text-only: the operator rejected the boxed VS
     # badge and accent colours (FB-028) — a bare typographic face-off is the design.

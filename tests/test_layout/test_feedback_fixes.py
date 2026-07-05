@@ -292,3 +292,27 @@ def test_rules_hug_their_text():
             nearest = max(above, key=lambda n: n.rect.bottom())
             gap = r.rect.y - nearest.rect.bottom()
             assert gap == _RULE_GAP_EMU, f"{name}: {r.node_id} gap {gap} EMU"
+
+
+def test_nested_circles_nest_and_share_a_bottom_tangent():
+    """Operator-requested layout (2026-07-05, from their own job-search slide):
+    circles nest strictly (each inside the previous), all tangent at one bottom
+    point, fills cycling muted → accent → primary, white text per stage."""
+    deck, s = _slide("43_nested_circles")
+    circles = [n for n in s.nodes if n.node_type == "ellipse"]
+    assert len(circles) == 3
+    pal = deck.theme.palette
+    assert [c.fill_color for c in circles] == [pal.muted, pal.accent, pal.primary]
+    bottoms = {c.rect.bottom() for c in circles}
+    assert len(bottoms) == 1  # shared bottom tangent
+    centres = {c.rect.x + c.rect.w // 2 for c in circles}
+    assert len(centres) == 1  # concentric on the vertical axis
+    for outer, inner in zip(circles, circles[1:]):
+        assert inner.rect.w < outer.rect.w  # strictly narrowing
+        assert inner.rect.x > outer.rect.x and inner.rect.right() < outer.rect.right()
+        assert inner.rect.y > outer.rect.y  # fully inside (given shared tangent)
+    values = _by_prefix(s, "nc_value")
+    labels = _by_prefix(s, "nc_label")
+    assert len(values) == len(labels) == 3
+    for n in values + labels:
+        assert n.align == "center" and n.text_color == pal.surface

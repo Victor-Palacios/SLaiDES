@@ -113,6 +113,11 @@ def _draw_node(c, node: "ResolvedNode", palette, page_h: float) -> None:
         c.setFillColorRGB(*_rgb(node.fill_color or palette.primary))
         c.rect(x, top - h, w, h, stroke=0, fill=1)
 
+    elif node.node_type == "ellipse":
+        # Filled ellipse inscribed in the node rect (nested-circles funnel).
+        c.setFillColorRGB(*_rgb(node.fill_color or palette.primary))
+        c.ellipse(x, top - h, x + w, top, stroke=0, fill=1)
+
     elif node.node_type == "icon":
         d = min(w, h)
         icx = x + (w - d) / 2

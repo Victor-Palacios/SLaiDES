@@ -739,3 +739,20 @@ Approved: kpi-grid (clears its FB-024 flag), chart-with-insight, funnel, pyramid
 - Historical FB items re-pointed off deleted components again (FB-005→icon-text-rows,
   FB-016→pull-quote). Gotcha: appending prose after a single-quoted YAML scalar breaks
   parsing — fold the addition INSIDE the quotes.
+
+## New layout: nested-circles (2026-07-05, operator screenshot request)
+
+The operator shared a slide from their own deck — a job-search funnel drawn as
+concentric circles (>700 applications ⊃ 6 interviews ⊃ 1.5 offers) — and asked for a
+layout like it. First NEW skeleton since the review era began; first with a curved mark.
+- New first-class node type **ellipse** (bounding-rect contract unchanged): pptx emits
+  MSO_SHAPE.OVAL, pdf c.ellipse, html border-radius:50%; lint counts it as media and the
+  aesthetics scorer treats it like box everywhere.
+- Geometry: circles bottom-tangent at one point, diameters D·(n-i)/n, fills cycling
+  muted→accent→primary; each stage's value+label centres in the band between its top and
+  the next circle's top; each text row's width is the circle's CHORD at the row's centre
+  (math.isqrt — deterministic), so E_OVERFLOW proves the centred text fits the circle.
+  First cut used the chord at the block's outermost edge — too strict (labels near a rim
+  always overflowed); the row-centre chord is the honest fit for centred text.
+- Specimen 43_nested_circles.yaml mirrors the operator's own slide. Catalog:
+  **29 components / 21 distinct families**; it enters the review queue as pending.
