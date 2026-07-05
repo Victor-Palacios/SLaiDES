@@ -1470,9 +1470,12 @@ def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, 
                                   Rect(centre_x - d // 2, tops[i], d, d),
                                   fill_color=fills[i], group_id=gid))
 
-    value_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
-    label_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
-    block_h = value_h + _RULE_GAP_EMU + label_h
+    # Graduated type tiers (operator 2026-07-05: "the font sizes feel imbalanced"):
+    # uniform text across shrinking circles read as lost in the outer stage and
+    # crowded in the inner — each stage's value/label now steps DOWN the type scale
+    # with its circle (title→header→body values; body→caption labels).
+    value_tiers = [ts.title, ts.header, ts.body, ts.body][:n]
+    label_tiers = ([(ts.body, False)] + [(ts.caption, True)] * 3)[:n]
 
     def _row(prefix, text, size, bold, is_caption, ry, rh, r, circle_cy):
         # Text box width = the circle's chord at the row's vertical centre; the
@@ -1486,14 +1489,19 @@ def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, 
                                      group_id=gid, align="center"))
 
     for i, stage in enumerate(slide.stages):
+        value_pt = value_tiers[i]
+        label_pt, label_is_caption = label_tiers[i]
+        value_h = int(value_pt * LINE_SPACING_SINGLE * EMU_PER_PT)
+        label_h = int(label_pt * LINE_SPACING_SINGLE * EMU_PER_PT)
+        block_h = value_h + _RULE_GAP_EMU + label_h
         band_top = tops[i]
         band_bottom = tops[i + 1] if i + 1 < n else bottom
         block_top = band_top + max(0, (band_bottom - band_top - block_h) // 2)
         r = diams[i] // 2
         circle_cy = bottom - r
-        _row("nc_value", stage.value, ts.header, True, False,
+        _row("nc_value", stage.value, value_pt, True, False,
              block_top, value_h, r, circle_cy)
-        _row("nc_label", stage.label, ts.caption, False, True,
+        _row("nc_label", stage.label, label_pt, False, label_is_caption,
              block_top + value_h + _RULE_GAP_EMU, label_h, r, circle_cy)
     return nodes
 

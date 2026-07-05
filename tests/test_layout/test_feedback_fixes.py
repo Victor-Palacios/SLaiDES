@@ -316,3 +316,9 @@ def test_nested_circles_nest_and_share_a_bottom_tangent():
     assert len(values) == len(labels) == 3
     for n in values + labels:
         assert n.align == "center" and n.text_color == pal.surface
+    # Graduated tiers (operator: "the font sizes feel imbalanced"): each stage's
+    # value steps down the type scale with its circle, and outranks its label.
+    ts = deck.theme.type_scale
+    assert [v.size_pt for v in values] == [ts.title, ts.header, ts.body]
+    for v, l in zip(values, labels):
+        assert v.size_pt > l.size_pt

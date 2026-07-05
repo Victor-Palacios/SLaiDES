@@ -71,22 +71,22 @@
           "node_id": "nc_value_400",
           "node_type": "text",
           "rect": {
-            "x": 4733934,
-            "y": 1671828,
-            "w": 2724132,
-            "h": 640080
+            "x": 4777234,
+            "y": 1499616,
+            "w": 2637532,
+            "h": 914400
           },
           "text_content": ">700",
           "lines": [
             {
               "text": ">700",
-              "width_emu": 1201452,
-              "height_emu": 640080,
+              "width_emu": 1716360,
+              "height_emu": 914400,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 42.0,
+          "size_pt": 60.0,
           "bold": true,
           "italic": false,
           "group_id": "nested",
@@ -97,25 +97,24 @@
           "node_id": "nc_label_401",
           "node_type": "text",
           "rect": {
-            "x": 4255309,
-            "y": 2366772,
-            "w": 3681382,
-            "h": 381000
+            "x": 4165904,
+            "y": 2468880,
+            "w": 3860192,
+            "h": 518159
           },
           "text_content": "Applications",
           "lines": [
             {
               "text": "Applications",
-              "width_emu": 1711989,
-              "height_emu": 381000,
+              "width_emu": 2328304,
+              "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 25.0,
+          "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "is_caption": true,
           "group_id": "nested",
           "text_color": "#FFFFFF",
           "align": "center"
@@ -178,21 +177,21 @@
           "node_type": "text",
           "rect": {
             "x": 5420081,
-            "y": 4512564,
+            "y": 4573524,
             "w": 1351838,
-            "h": 640080
+            "h": 518159
           },
           "text_content": "1.5",
           "lines": [
             {
               "text": "1.5",
-              "width_emu": 741499,
-              "height_emu": 640080,
+              "width_emu": 600261,
+              "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 42.0,
+          "size_pt": 34.0,
           "bold": true,
           "italic": false,
           "group_id": "nested",
@@ -203,9 +202,9 @@
           "node_id": "nc_label_405",
           "node_type": "text",
           "rect": {
-            "x": 5476626,
-            "y": 5207508,
-            "w": 1238748,
+            "x": 5446175,
+            "y": 5146547,
+            "w": 1299650,
             "h": 381000
           },
           "text_content": "Offers",

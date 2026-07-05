@@ -756,3 +756,8 @@ layout like it. First NEW skeleton since the review era began; first with a curv
   always overflowed); the row-centre chord is the honest fit for centred text.
 - Specimen 43_nested_circles.yaml mirrors the operator's own slide. Catalog:
   **29 components / 21 distinct families**; it enters the review queue as pending.
+- Follow-up (same day): "the font sizes feel imbalanced" — uniform 42/25pt text across
+  shrinking circles was lost in the outer stage and crowded in the inner. Stage type now
+  STEPS DOWN with the circle (values title→header→body, labels body→caption→caption),
+  pinned in the intent test. Rule of thumb: when a mark scales per stage, its text should
+  scale with it.
