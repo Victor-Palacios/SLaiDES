@@ -112,14 +112,11 @@ lean outline — a `slides:` list where each slide is a chosen `component` + its
 | `card-grid` | `cards[]` = `{title, body, icon?}` | `title` |
 | `section-divider` | `number`, `title` | — |
 | `agenda` | `items[]` (text) | `title` (default `Agenda`) |
-| `quote-opener` | `quote`, `attribution` | — |
 | `big-number` | `value`, `label` | `context` |
 | `pull-quote` | `quote`, `attribution` | — |
-| `statement` | `text` | — |
 | `definition` | `term`, `definition` | — |
 | `question` | `question` | — |
 | `bullet-list` | `title`, `items[]` (text) | — |
-| `feature-list` | `features[]` = `{icon, heading, body}` (≤3 keeps ≥32pt) | `title` |
 | `checklist` | `title`, `items[]` = `{text, checked?}` | — |
 | `numbered-steps` | `title`?, `steps[]` = `{title, body}` (≤3) | `title` |
 | `two-panel-list` | `left`/`right` = `{title, items[]}` (≤3 each; right panel is the accented state) | `title` |

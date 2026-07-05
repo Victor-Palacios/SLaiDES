@@ -28,7 +28,7 @@ def test_demo_outline_builds_lint_clean():
 
 
 def test_defaults_applied_without_theme_or_version():
-    deck, _ = build_deck({"slides": [{"component": "statement", "text": "Hello."}]})
+    deck, _ = build_deck({"slides": [{"component": "question", "question": "Hello?"}]})
     assert deck.version == 1
     assert deck.theme is not None  # default theme applied
 

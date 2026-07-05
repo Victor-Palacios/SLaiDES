@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_259",
+          "node_id": "title_242",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,11 +32,11 @@
           "text_color": "#1F2A44"
         },
         {
-          "node_id": "kpi_val_260",
+          "node_id": "kpi_val_243",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1734312,
+            "y": 1789176,
             "w": 3576320,
             "h": 640080
           },
@@ -58,7 +58,7 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_rule_261",
+          "node_id": "kpi_rule_244",
           "node_type": "box",
           "rect": {
             "x": 1708912,
@@ -70,11 +70,11 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_262",
+          "node_id": "kpi_label_245",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2648712,
+            "y": 2593848,
             "w": 3576320,
             "h": 609600
           },
@@ -95,11 +95,11 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_val_263",
+          "node_id": "kpi_val_246",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 1734312,
+            "y": 1789176,
             "w": 3576320,
             "h": 640080
           },
@@ -121,7 +121,7 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_rule_264",
+          "node_id": "kpi_rule_247",
           "node_type": "box",
           "rect": {
             "x": 5559552,
@@ -133,11 +133,11 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_265",
+          "node_id": "kpi_label_248",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 2648712,
+            "y": 2593848,
             "w": 3576320,
             "h": 609600
           },
@@ -158,11 +158,11 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_val_266",
+          "node_id": "kpi_val_249",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 1734312,
+            "y": 1789176,
             "w": 3576320,
             "h": 640080
           },
@@ -184,7 +184,7 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_rule_267",
+          "node_id": "kpi_rule_250",
           "node_type": "box",
           "rect": {
             "x": 9410192,
@@ -196,11 +196,11 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_268",
+          "node_id": "kpi_label_251",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 2648712,
+            "y": 2593848,
             "w": 3576320,
             "h": 609600
           },
@@ -221,11 +221,11 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_val_269",
+          "node_id": "kpi_val_252",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4002024,
+            "y": 4056888,
             "w": 3576320,
             "h": 640080
           },
@@ -247,7 +247,7 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_rule_270",
+          "node_id": "kpi_rule_253",
           "node_type": "box",
           "rect": {
             "x": 1708912,
@@ -259,11 +259,11 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_271",
+          "node_id": "kpi_label_254",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4916424,
+            "y": 4861560,
             "w": 3576320,
             "h": 609600
           },
@@ -284,11 +284,11 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_val_272",
+          "node_id": "kpi_val_255",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 3767328,
+            "y": 3797808,
             "w": 3576320,
             "h": 640080
           },
@@ -310,11 +310,11 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_rule_273",
+          "node_id": "kpi_rule_256",
           "node_type": "box",
           "rect": {
             "x": 5559552,
-            "y": 4517136,
+            "y": 4492752,
             "w": 1072896,
             "h": 54864
           },
@@ -322,11 +322,11 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_274",
+          "node_id": "kpi_label_257",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 4681728,
+            "y": 4602480,
             "w": 3576320,
             "h": 1127760
           },
@@ -353,11 +353,11 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_val_275",
+          "node_id": "kpi_val_258",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 4002024,
+            "y": 4056888,
             "w": 3576320,
             "h": 640080
           },
@@ -379,7 +379,7 @@
           "align": "center"
         },
         {
-          "node_id": "kpi_rule_276",
+          "node_id": "kpi_rule_259",
           "node_type": "box",
           "rect": {
             "x": 9410192,
@@ -391,11 +391,11 @@
           "fill_color": "#2DA8A0"
         },
         {
-          "node_id": "kpi_label_277",
+          "node_id": "kpi_label_260",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 4916424,
+            "y": 4861560,
             "w": 3576320,
             "h": 609600
           },
@@ -418,7 +418,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_278",
+          "node_id": "chrome_pagenum_261",
           "node_type": "text",
           "rect": {
             "x": 10363200,

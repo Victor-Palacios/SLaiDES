@@ -26,7 +26,6 @@ from slidekit.ir.models import (
     ComparisonMatrixSlide,
     DeckIR,
     DefinitionSlide,
-    FeatureListSlide,
     FunnelSlide,
     IconTextRowsSlide,
     ImageHalfBleedSlide,
@@ -37,11 +36,9 @@ from slidekit.ir.models import (
     PullQuoteSlide,
     PyramidSlide,
     QuestionSlide,
-    QuoteOpenerSlide,
     RoadmapSlide,
     SectionDividerSlide,
     StatCalloutSlide,
-    StatementSlide,
     SwotSlide,
     TableSlide,
     ThisVsThatSlide,
@@ -170,22 +167,16 @@ def _resolve_slide(
         nodes = _layout_section_divider(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "agenda":
         nodes = _layout_agenda(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "quote-opener":
-        nodes = _layout_quote_opener(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "big-number":
         nodes = _layout_big_number(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "pull-quote":
         nodes = _layout_pull_quote(slide, cx, cy, cw, ch, font, ts, palette)
-    elif comp == "statement":
-        nodes = _layout_statement(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "definition":
         nodes = _layout_definition(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "question":
         nodes = _layout_question(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "bullet-list":
         nodes = _layout_bullet_list(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "feature-list":
-        nodes = _layout_feature_list(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "code":
         # Full canvas height (not ch_with_pn): the dark panel bleeds edge-to-edge.
         nodes = _layout_code(slide, cx, cy, cw, ch, font, ts, palette)
@@ -243,6 +234,13 @@ def _resolve_slide(
         chrome=chrome,
         background=_COMPONENT_BACKGROUNDS.get(comp),
     )
+
+
+# Operator style rule (2026-07-05): text and its underline rule HUG — a slim 0.06"
+# air gap between a text row and the rule beneath it (the text box's own bottom
+# inset supplies the rest of the optical space). Every layout that draws a rule
+# under text uses this; the pair shares a group_id so the tight gap is lint-exempt.
+_RULE_GAP_EMU = int(0.06 * EMU_PER_INCH)
 
 
 # ── component layout functions ────────────────────────────────────────────────
@@ -615,13 +613,8 @@ def _layout_section_divider(slide: SectionDividerSlide, cx, cy, cw, ch, font, ts
     ], cx, cy, cw, ch, font, palette, center_on=1)
 
 
-def _layout_quote_opener(slide: QuoteOpenerSlide, cx, cy, cw, ch, font, ts, palette):
-    return _emphasis_stack([
-        {"prefix": "quote", "text": f'"{slide.quote}"', "size": ts.header,
-         "bold": False, "italic": True},
-        {"prefix": "attrib", "text": f"- {slide.attribution}", "size": ts.body,
-         "bold": False, "color": palette.muted},
-    ], cx, cy, cw, ch, font, palette)
+# quote-opener was retired 2026-07-05 per operator request (FB-048) — pull-quote
+# (below) is the surviving quote layout.
 
 
 # Operator feedback FB-019: the hero value should DOMINATE — 1.75× the title tier
@@ -650,21 +643,23 @@ def _layout_big_number(slide: BigNumberSlide, cx, cy, cw, ch, font, ts, palette)
         h = max(1, total_text_height_emu(lines))
         measured.append((prefix, text, size, bold, color, lines, h))
 
-    rule_slot = _BIG_NUMBER_RULE_H_EMU + 2 * gap  # rule sits between value and label
+    # The value HUGS its rule (operator style rule 2026-07-05); a full gap follows.
+    rule_slot = _RULE_GAP_EMU + _BIG_NUMBER_RULE_H_EMU + gap
     total_h = sum(h for *_, h in measured) + rule_slot + gap * max(0, len(measured) - 2)
     y = cy + max(0, (ch - total_h) // 2)
 
     for i, (prefix, text, size, bold, color, lines, h) in enumerate(measured):
         nodes.append(_make_text_node(_nid(prefix), text, font, size, bold=bold,
                                      italic=False, rect=Rect(cx, y, cw, h), lines=lines,
-                                     color=color, align="center"))
+                                     color=color, align="center",
+                                     group_id="bn_value" if i == 0 else None))
         y += h
         if i == 0:  # centred accent rule right under the value
             nodes.append(ResolvedNode(
                 _nid("rule"), "box",
-                Rect(cx + (cw - _BIG_NUMBER_RULE_W_EMU) // 2, y + gap,
+                Rect(cx + (cw - _BIG_NUMBER_RULE_W_EMU) // 2, y + _RULE_GAP_EMU,
                      _BIG_NUMBER_RULE_W_EMU, _BIG_NUMBER_RULE_H_EMU),
-                fill_color=palette.accent,
+                fill_color=palette.accent, group_id="bn_value",
             ))
             y += rule_slot
         else:
@@ -680,10 +675,9 @@ def _layout_pull_quote(slide: PullQuoteSlide, cx, cy, cw, ch, font, ts, palette)
     ], cx, cy, cw, ch, font, palette)
 
 
-def _layout_statement(slide: StatementSlide, cx, cy, cw, ch, font, ts, palette):
-    return _emphasis_stack([
-        {"prefix": "statement", "text": slide.text, "size": ts.title, "bold": True},
-    ], cx, cy, cw, ch, font, palette)
+# statement was retired 2026-07-05 per operator request (FB-047); section-divider
+# is the emphasis-stack family's anchor now. A one-line manifesto/closing slide is
+# covered by title-slide or big-number.
 
 
 def _layout_definition(slide: DefinitionSlide, cx, cy, cw, ch, font, ts, palette):
@@ -708,13 +702,15 @@ def _layout_agenda(slide: AgendaSlide, cx, cy, cw, ch, font, ts, palette):
 
     title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                 bold=True, italic=False, rect=Rect(cx, y, cw, title_h)))
-    y += title_h + gap
+                                 bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
+                                 group_id="agenda_head"))
+    y += title_h + _RULE_GAP_EMU  # title hugs its rule (operator style rule)
 
     # Thin accent rule under the title (the non-text media for this slide).
     rule_h = int(0.07 * EMU_PER_INCH)
     nodes.append(ResolvedNode(_nid("agenda_rule"), "box",
-                              Rect(cx, y, cw, rule_h), fill_color=palette.accent))
+                              Rect(cx, y, cw, rule_h), fill_color=palette.accent,
+                              group_id="agenda_head"))
     y += rule_h + gap
 
     n = len(slide.items)
@@ -919,35 +915,8 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
     return nodes
 
 
-def _layout_feature_list(slide: FeatureListSlide, cx, cy, cw, ch, font, ts, palette):
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    y = cy
-    if slide.title:
-        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
-        nodes.append(title_node)
-
-    n = len(slide.features)
-    avail = cy + ch - y
-    slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
-    # Operator feedback (issue #13): drop the filled accent "bubble" disc; each feature is
-    # heading + body spanning the full width.
-    text_x = cx
-    text_w = cw
-    heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    inner = int(0.1 * EMU_PER_INCH)
-    for i, feat in enumerate(slide.features):
-        gid = f"feat_{i}"
-        nodes.append(_make_text_node(_nid("feat_head"), feat.heading, font, ts.body,
-                                     bold=True, italic=False,
-                                     rect=Rect(text_x, y, text_w, heading_h), group_id=gid))
-        body_h = max(1, slot_h - heading_h - inner)
-        nodes.append(_make_text_node(_nid("feat_body"), feat.body, font, ts.body,
-                                     bold=False, italic=False,
-                                     rect=Rect(text_x, y + heading_h + inner, text_w, body_h),
-                                     group_id=gid))
-        y += slot_h + gap
-    return nodes
+# feature-list was retired 2026-07-05 per operator request (FB-049) — icon-text-rows
+# (its family anchor) covers icon + heading + body rows.
 
 
 def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, palette):
@@ -958,27 +927,30 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
         title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
         nodes.append(title_node)
 
+    # Reimagined (operator 2026-07-05, "reimagine numbered-steps"): the filled chip
+    # badges are gone. Each step is a large accent numeral ("01") in a left rail with
+    # a bold heading + body beside it — the same pure-typography motif as the
+    # reimagined process-steps (FB-035) and the approved agenda numerals.
     n = len(slide.steps)
     avail = cy + ch - y
     slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
-    chip = int(0.6 * EMU_PER_INCH)
-    text_x = cx + chip + int(0.25 * EMU_PER_INCH)
-    text_w = cw - chip - int(0.25 * EMU_PER_INCH)
+    num_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
+    num_w = measure_text("00", font, ts.header, bold=True) \
+        + INSET_LEFT_EMU + INSET_RIGHT_EMU
+    text_x = cx + num_w + int(0.25 * EMU_PER_INCH)
+    text_w = cw - num_w - int(0.25 * EMU_PER_INCH)
     heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     inner = int(0.1 * EMU_PER_INCH)
     for i, step in enumerate(slide.steps):
         gid = f"step_{i}"
-        # Numbered chip: accent box with the step number on top (same group, so the
-        # intentional text-on-box stack is exempt from E_OVERLAP).
-        nodes.append(ResolvedNode(_nid("step_chip"), "box", Rect(cx, y, chip, chip),
-                                  fill_color=palette.accent, group_id=gid))
-        nodes.append(_make_text_node(_nid("step_num"), str(i + 1), font, ts.body,
+        nodes.append(_make_text_node(_nid("step_num"), f"{i + 1:02d}", font, ts.header,
                                      bold=True, italic=False,
-                                     rect=Rect(cx, y, chip, chip), group_id=gid,
-                                     color=palette.surface))
+                                     rect=Rect(cx, y, num_w, num_h), group_id=gid,
+                                     color=palette.accent))
         nodes.append(_make_text_node(_nid("step_head"), step.title, font, ts.body,
                                      bold=True, italic=False,
-                                     rect=Rect(text_x, y, text_w, heading_h), group_id=gid))
+                                     rect=Rect(text_x, y, text_w, heading_h), group_id=gid,
+                                     color=palette.primary))
         body_h = max(1, slot_h - heading_h - inner)
         nodes.append(_make_text_node(_nid("step_body"), step.body, font, ts.body,
                                      bold=False, italic=False,
@@ -1045,7 +1017,7 @@ def _two_panel_list(title, left_head, left_items, left_color,
     right_x = cx + col_w + gap
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     rule_h = int(0.06 * EMU_PER_INCH)
-    inner = int(0.12 * EMU_PER_INCH)
+    inner = _RULE_GAP_EMU  # heading hugs its rule (operator style rule)
     for px, head, color, prefix in ((cx, left_head, left_color, "lp"),
                                     (right_x, right_head, right_color, "rp")):
         gid = f"{prefix}_head"
@@ -1224,10 +1196,9 @@ def _layout_kpi_grid(slide: KpiGridSlide, cx, cy, cw, ch, font, ts, palette):
 
     # Operator feedback FB-024: full 0.3" sibling gaps INSIDE a tile pulled the
     # value / rule / label apart until the grid read as loose scatter. A tile is one
-    # intentional group (shared group_id, so tight gaps are lint-exempt): use a 0.12"
-    # inner gap, centre the rule under the value, and centre the tile's text so each
-    # cell reads as a compact dashboard tile.
-    inner = int(0.12 * EMU_PER_INCH)
+    # intentional group (shared group_id, so tight gaps are lint-exempt); the
+    # value/rule/label hug at the global rule gap (operator style rule 2026-07-05).
+    inner = _RULE_GAP_EMU
     value_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
     rule_h = int(0.06 * EMU_PER_INCH)
     rule_w = max(1, int(cell_w * 0.3))
@@ -1286,10 +1257,10 @@ def _layout_table_slide(slide: TableSlide, cx, cy, cw, ch, font, ts, palette):
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     rule_h = int(0.06 * EMU_PER_INCH)
 
-    # Headers sit tight above the rule (FB-033: "headers should be a little bit
-    # closer to the line") — the rule rides at a 0.12" inner gap, sharing a group
-    # with the header cells so the intentionally tight spacing is E_GAP-exempt.
-    inner = int(0.12 * EMU_PER_INCH)
+    # Headers HUG the rule (FB-033, then the 2026-07-05 global style rule) — the
+    # rule rides at the slim global rule gap, sharing a group with the header cells
+    # so the intentionally tight spacing is E_GAP-exempt.
+    inner = _RULE_GAP_EMU
     for c, htext in enumerate(slide.headers):
         hx = cx + c * (col_w + gap)
         nodes.append(_make_text_node(_nid("th"), htext, font, ts.body, bold=True,
@@ -1394,7 +1365,7 @@ def _layout_process_steps(slide: ProcessStepsSlide, cx, cy, cw, ch, font, ts, pa
                                      rect=Rect(sx, y, col_w, num_h),
                                      color=palette.accent, group_id=gid))
         nodes.append(ResolvedNode(_nid("ps_rule"), "box",
-                                  Rect(sx, y + num_h + inner,
+                                  Rect(sx, y + num_h + _RULE_GAP_EMU,
                                        max(1, int(col_w * 0.3)), rule_h),
                                   fill_color=palette.accent, group_id=gid))
         ly = y + num_h + gap
@@ -1518,7 +1489,7 @@ def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
     ]
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     rule_h = int(0.06 * EMU_PER_INCH)
-    inner = int(0.12 * EMU_PER_INCH)
+    inner = _RULE_GAP_EMU  # heading hugs its rule (operator style rule)
     for idx, (head, items, color, qx, qy) in enumerate(quads):
         gid = f"swot_head_{idx}"
         nodes.append(_make_text_node(_nid("swot_head"), head, font, ts.body, bold=True,
@@ -1567,7 +1538,7 @@ def _layout_comparison_matrix(slide: ComparisonMatrixSlide, cx, cy, cw, ch, font
     cell_w = max(1, (cw - label_w - gap * n_options) // n_options) if n_options else cw - label_w
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     rule_h = int(0.06 * EMU_PER_INCH)
-    inner = int(0.12 * EMU_PER_INCH)
+    inner = _RULE_GAP_EMU  # headers hug the rule (operator style rule)
     chip_pad = int(0.18 * EMU_PER_INCH)
 
     # Header row: bold option names in the DEFAULT text colour (FB-045: "too many

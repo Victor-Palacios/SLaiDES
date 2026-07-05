@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_261",
+          "node_id": "title_212",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -31,49 +31,37 @@
           "italic": false
         },
         {
-          "node_id": "step_chip_262",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 548640,
-            "h": 548640
-          },
-          "group_id": "step_0",
-          "fill_color": "#7C4DFF"
-        },
-        {
-          "node_id": "step_num_263",
+          "node_id": "step_num_213",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 548640,
-            "h": 548640
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "1",
+          "text_content": "01",
           "lines": [
             {
-              "text": "1",
-              "width_emu": 240147,
-              "height_emu": 518160,
+              "text": "01",
+              "width_emu": 593303,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "group_id": "step_0",
-          "text_color": "#FFFFFF"
+          "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_head_264",
+          "node_id": "step_head_214",
           "node_type": "text",
           "rect": {
-            "x": 1234440,
+            "x": 1461983,
             "y": 1499616,
-            "w": 10500360,
+            "w": 10272817,
             "h": 518159
           },
           "text_content": "Connect your data",
@@ -89,15 +77,16 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "group_id": "step_0"
+          "group_id": "step_0",
+          "text_color": "#2A1B4A"
         },
         {
-          "node_id": "step_body_265",
+          "node_id": "step_body_215",
           "node_type": "text",
           "rect": {
-            "x": 1234440,
+            "x": 1461983,
             "y": 2109215,
-            "w": 10500360,
+            "w": 10272817,
             "h": 627889
           },
           "text_content": "Link a source in minutes with a guided wizard.",
@@ -116,49 +105,37 @@
           "group_id": "step_0"
         },
         {
-          "node_id": "step_chip_266",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 3011424,
-            "w": 548640,
-            "h": 548640
-          },
-          "group_id": "step_1",
-          "fill_color": "#7C4DFF"
-        },
-        {
-          "node_id": "step_num_267",
+          "node_id": "step_num_216",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3011424,
-            "w": 548640,
-            "h": 548640
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "2",
+          "text_content": "02",
           "lines": [
             {
-              "text": "2",
-              "width_emu": 240147,
-              "height_emu": 518160,
+              "text": "02",
+              "width_emu": 593303,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "group_id": "step_1",
-          "text_color": "#FFFFFF"
+          "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_head_268",
+          "node_id": "step_head_217",
           "node_type": "text",
           "rect": {
-            "x": 1234440,
+            "x": 1461983,
             "y": 3011424,
-            "w": 10500360,
+            "w": 10272817,
             "h": 518159
           },
           "text_content": "Pick a template",
@@ -174,15 +151,16 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "group_id": "step_1"
+          "group_id": "step_1",
+          "text_color": "#2A1B4A"
         },
         {
-          "node_id": "step_body_269",
+          "node_id": "step_body_218",
           "node_type": "text",
           "rect": {
-            "x": 1234440,
+            "x": 1461983,
             "y": 3621023,
-            "w": 10500360,
+            "w": 10272817,
             "h": 627889
           },
           "text_content": "Start from a proven layout, then tailor it.",
@@ -201,49 +179,37 @@
           "group_id": "step_1"
         },
         {
-          "node_id": "step_chip_270",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 4523232,
-            "w": 548640,
-            "h": 548640
-          },
-          "group_id": "step_2",
-          "fill_color": "#7C4DFF"
-        },
-        {
-          "node_id": "step_num_271",
+          "node_id": "step_num_219",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 4523232,
-            "w": 548640,
-            "h": 548640
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "3",
+          "text_content": "03",
           "lines": [
             {
-              "text": "3",
-              "width_emu": 240147,
-              "height_emu": 518160,
+              "text": "03",
+              "width_emu": 593303,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "group_id": "step_2",
-          "text_color": "#FFFFFF"
+          "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_head_272",
+          "node_id": "step_head_220",
           "node_type": "text",
           "rect": {
-            "x": 1234440,
+            "x": 1461983,
             "y": 4523232,
-            "w": 10500360,
+            "w": 10272817,
             "h": 518159
           },
           "text_content": "Share the result",
@@ -259,15 +225,16 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "group_id": "step_2"
+          "group_id": "step_2",
+          "text_color": "#2A1B4A"
         },
         {
-          "node_id": "step_body_273",
+          "node_id": "step_body_221",
           "node_type": "text",
           "rect": {
-            "x": 1234440,
+            "x": 1461983,
             "y": 5132831,
-            "w": 10500360,
+            "w": 10272817,
             "h": 627889
           },
           "text_content": "Publish to your team and gather feedback fast.",
@@ -288,7 +255,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_274",
+          "node_id": "chrome_pagenum_222",
           "node_type": "text",
           "rect": {
             "x": 10363200,

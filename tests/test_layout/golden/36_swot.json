@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_390",
+          "node_id": "title_362",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#14213D"
         },
         {
-          "node_id": "swot_head_391",
+          "node_id": "swot_head_363",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -57,11 +57,11 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot_rule_392",
+          "node_id": "swot_rule_364",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2231135,
+            "y": 2176271,
             "w": 1650492,
             "h": 54864
           },
@@ -69,7 +69,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot0_item_393",
+          "node_id": "swot0_item_365",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -99,7 +99,7 @@
           "group_id": "swot_head_0"
         },
         {
-          "node_id": "swot_head_394",
+          "node_id": "swot_head_366",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -124,11 +124,11 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "swot_rule_395",
+          "node_id": "swot_rule_367",
           "node_type": "box",
           "rect": {
             "x": 6233160,
-            "y": 2231135,
+            "y": 2176271,
             "w": 1650492,
             "h": 54864
           },
@@ -136,7 +136,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot1_item_396",
+          "node_id": "swot1_item_368",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -166,7 +166,7 @@
           "group_id": "swot_head_1"
         },
         {
-          "node_id": "swot_head_397",
+          "node_id": "swot_head_369",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -191,11 +191,11 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot_rule_398",
+          "node_id": "swot_rule_370",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 4498847,
+            "y": 4443983,
             "w": 1650492,
             "h": 54864
           },
@@ -203,7 +203,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot2_item_399",
+          "node_id": "swot2_item_371",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -233,7 +233,7 @@
           "group_id": "swot_head_2"
         },
         {
-          "node_id": "swot_head_400",
+          "node_id": "swot_head_372",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -258,11 +258,11 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "swot_rule_401",
+          "node_id": "swot_rule_373",
           "node_type": "box",
           "rect": {
             "x": 6233160,
-            "y": 4498847,
+            "y": 4443983,
             "w": 1650492,
             "h": 54864
           },
@@ -270,7 +270,7 @@
           "fill_color": "#8A8A9A"
         },
         {
-          "node_id": "swot3_item_402",
+          "node_id": "swot3_item_374",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -302,7 +302,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_403",
+          "node_id": "chrome_pagenum_375",
           "node_type": "text",
           "rect": {
             "x": 10363200,

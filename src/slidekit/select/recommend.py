@@ -70,8 +70,8 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
     # (testimonial was retired 2026-07-03 per FB-029 — pull-quote covers quotes,
     # with or without a portrait)
     if f.quote:
+        # (quote-opener retired 2026-07-05, FB-048 — pull-quote is THE quote layout)
         add("pull-quote", 0.8, "a quote with attribution")
-        add("quote-opener", 0.7, "a quote opening a section")
 
     # single hero number
     if f.single_value:
@@ -136,8 +136,8 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
 
     # rows with icons
     if f.icons and f.items:
+        # (feature-list retired 2026-07-05, FB-049 — icon-text-rows covers it)
         add("icon-text-rows", 0.75, "labelled points each with an icon")
-        add("feature-list", 0.7, "feature highlights with icons")
 
     # code / terminal
     if f.code:

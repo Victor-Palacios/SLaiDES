@@ -232,10 +232,8 @@ class AgendaSlide(BaseModel):
     items: list[str] = Field(min_length=1)
 
 
-class QuoteOpenerSlide(BaseModel):
-    component: Literal["quote-opener"]
-    quote: str
-    attribution: str
+# QuoteOpenerSlide was retired 2026-07-05 per operator request (FB-048);
+# PullQuoteSlide is the surviving quote layout.
 
 
 class BigNumberSlide(BaseModel):
@@ -251,9 +249,7 @@ class PullQuoteSlide(BaseModel):
     attribution: str
 
 
-class StatementSlide(BaseModel):
-    component: Literal["statement"]
-    text: str
+# StatementSlide was retired 2026-07-05 per operator request (FB-047).
 
 
 class DefinitionSlide(BaseModel):
@@ -276,16 +272,8 @@ class BulletListSlide(BaseModel):
     items: list[str] = Field(min_length=1)
 
 
-class Feature(BaseModel):
-    icon: str
-    heading: str
-    body: str
-
-
-class FeatureListSlide(BaseModel):
-    component: Literal["feature-list"]
-    title: Optional[str] = None
-    features: list[Feature] = Field(min_length=1)
+# Feature/FeatureListSlide were retired 2026-07-05 per operator request (FB-049);
+# IconTextRowsSlide covers icon + heading + body rows.
 
 
 class CodeSlide(BaseModel):
@@ -465,14 +453,11 @@ Slide = Annotated[
         CardGridSlide,
         SectionDividerSlide,
         AgendaSlide,
-        QuoteOpenerSlide,
         BigNumberSlide,
         PullQuoteSlide,
-        StatementSlide,
         DefinitionSlide,
         QuestionSlide,
         BulletListSlide,
-        FeatureListSlide,
         CodeSlide,
         NumberedStepsSlide,
         TwoPanelListSlide,

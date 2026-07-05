@@ -44,10 +44,6 @@
       "status": "approved",
       "date": "2026-07-02"
     },
-    "feature-list": {
-      "status": "approved",
-      "date": "2026-07-02"
-    },
     "funnel": {
       "status": "approved",
       "date": "2026-07-04"
@@ -88,10 +84,6 @@
       "status": "approved",
       "date": "2026-07-02"
     },
-    "quote-opener": {
-      "status": "approved",
-      "date": "2026-07-02"
-    },
     "roadmap": {
       "status": "approved",
       "date": "2026-07-05"
@@ -101,10 +93,6 @@
       "date": "2026-07-02"
     },
     "stat-callout": {
-      "status": "approved",
-      "date": "2026-07-02"
-    },
-    "statement": {
       "status": "approved",
       "date": "2026-07-02"
     },

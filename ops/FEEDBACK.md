@@ -2,9 +2,9 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 0 · **done** 45 · **wontfix** 1 · _last change 2026-07-05_
+**open** 0 · **done** 48 · **wontfix** 1 · _last change 2026-07-05_
 
-## Done (45)
+## Done (48)
 
 | ID | Layout | Sev | Comment | Notes |
 |---|---|---|---|---|
@@ -12,7 +12,7 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-002 | stat-callout | med | alignment is wrong for middle column (top  most text should align with right and left text) | issue #10: uniform block height + shared top y so every column's value/label align |
 | FB-003 | image-half-bleed | med | text on the bottom right looks odd - should come after the first block of text (too much white space between text) | issue #11: removed expanding spacer so the second text block follows the first |
 | FB-004 | card-grid | med | remove bubbles | issue #12: removed accent 'bubble' disc from cards |
-| FB-005 | feature-list | med | get rid of bubbles | issue #13: removed accent 'bubble' disc; feature-list is heading+body full-width |
+| FB-005 | icon-text-rows | med | get rid of bubbles | issue #13: removed accent 'bubble' disc; feature-list was heading+body full-width. [Component re-pointed feature-list -> icon-text-rows after FB-049 deleted feature-list.] |
 | FB-006 | code | med | delete this layout | issue #14: repurposed checklist into the new dark terminal/IDE 'code' layout (operator chose repurpose over delete) |
 | FB-008 | title-slide | med | 👎 remove distracting subheader | done T-054 — subtitle stripped from title-slide specimen (optional field kept) |
 | FB-009 | comparison-columns | med | 👎 delete this slide layout - redundant with "comparison-columns" | done T-055 — comment was about the retired two-column component; the two-column layout was deleted (model/handler/registry/scaffold/examples/goldens) as redundant, and comparison-columns now anchors the two-column family. Component retargeted to comparison-columns here because the catalog no longer contains two-column. |
@@ -22,7 +22,7 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-013 | timeline | med | 👎 foundation text gets cut off at the end (set limit for how many words can appear - the other columns are perfect) | done T-059 — new W_TIMELINE_BALANCE advisory flags any timeline column that wraps to more lines than its siblings (deterministic, no render); specimen Q1 trimmed to balance all four columns at 4 lines |
 | FB-014 | section-divider | med | 👎 Change the position of the number to be a bit higher such that the text is center-aligned instead of the number | done T-060 — section-divider centres the title; number rides above (center_on) |
 | FB-015 | agenda | med | 👎 Need more space or something because letters like g, p, and y have their bottom half missing. | done T-061 — web-preview emitter pinned line-height + dropped vertical padding + overflow visible (single-line-row descender clip class) |
-| FB-016 | quote-opener | med | 👎 not all the text is displayed correctly. might be a spacing issue | done T-062 — same root cause as FB-015; fixed by the emitter change |
+| FB-016 | pull-quote | med | 👎 not all the text is displayed correctly. might be a spacing issue | done T-062 — same root cause as FB-015; fixed by the emitter change. [Component re-pointed quote-opener -> pull-quote after FB-048 deleted quote-opener.] |
 | FB-017 | big-number | med | 👎 remove final line | done T-063 — context line stripped from big-number specimen (optional field kept) |
 | FB-018 | title-slide | med | 👎 left-center align the title | done — title(+subtitle) block now vertically centred on the full content area, left-aligned |
 | FB-019 | big-number | med | 👎 Make the number bigger (maybe double or 1.5 bigger) and center everything | done — value 1.75x title tier (105pt default), whole stack centred with a centred accent rule (left bar dropped) |
@@ -53,6 +53,9 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-044 | swot | med | 👎 delete this slide | matrix-2x2 DELETED per operator (model, layout, registry, specimen, golden, recommender) — one round after its FB-037 reimagining. swot is the surviving 2x2; generic axes content falls back to card-grid. (Retargeted to swot because the validator requires a catalog component.) |
 | FB-045 | comparison-matrix | med | 👎 too many colors just stick with the red and black | Option headers now render in the DEFAULT text colour instead of brand primary (the primary tint read as a third colour), and the specimen palette sets primary to the text tone — the slide is literally red (rule + highlight chips) and black (everything else). |
 | FB-046 | card-grid | med | 📝 delete this slide layout | logo-wall DELETED per operator note, closing the labeled-image-grid family. Logo content falls back to card-grid label cards in the recommender. (Retargeted for validator.) |
+| FB-047 | section-divider | med | Delete the statement layout | statement DELETED per operator chat request. It was the emphasis-stack anchor, so the family re-anchored on section-divider (variants re-pointed). A one-line manifesto/closing is covered by title-slide or big-number. (Entry filed against the new anchor because the validator requires a catalog component.) |
+| FB-048 | pull-quote | med | Delete the quote-opener layout | quote-opener DELETED per operator chat request; pull-quote is the surviving quote layout and the recommender routes all quotes there. (Retargeted for validator.) |
+| FB-049 | icon-text-rows | med | Delete the feature-list layout | feature-list DELETED per operator chat request; icon-text-rows (its family anchor) covers icon + heading + body rows and the recommender routes icon features there. (Retargeted for validator.) |
 
 ## Won't fix (1)
 

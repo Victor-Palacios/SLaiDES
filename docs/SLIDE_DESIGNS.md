@@ -1,10 +1,10 @@
-# slidekit slide-design catalog — 31 components (20 distinct layouts)
+# slidekit slide-design catalog — 28 components (20 distinct layouts)
 
 Target: **40 slide components** (up from the 8 shipped in v1). Each component is a
 slidekit unit: one Pydantic model + one layout handler + golden test + example
 + SKILL gallery row. This file is the build blueprint for Phase 9.
 
-Honesty note: the 31 components implement **20 genuinely distinct layout skeletons** —
+Honesty note: the 28 components implement **20 genuinely distinct layout skeletons** —
 the rest are styled variants of a family anchor (same geometry, different marker / colour /
 orientation / fields). The authoritative mapping is generated in
 [LAYOUT_TAXONOMY.md](LAYOUT_TAXONOMY.md) from `src/slidekit/catalog/registry.py`.
@@ -54,14 +54,12 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 | 1 | ✓ `title-slide` | `title` (+`subtitle`,`logo`) | deck cover |
 | 2 | `section-divider` | `number`, `title` | chapter break between sections |
 | 3 | `agenda` | `items[]` (text) | table of contents / what's ahead |
-| 4 | `quote-opener` | `quote`, `attribution` | open on a strong quotation |
 
 ### B. Single-message & emphasis
 | # | key | required keys | use |
 |---|---|---|---|
 | 5 | `big-number` | `value`, `label` (+`context`) | one hero metric, full slide |
 | 6 | `pull-quote` | `quote`, `attribution` | mid-deck emphasis quote |
-| 7 | `statement` | `text` | one bold thesis sentence, centered |
 | 8 | `definition` | `term`, `definition` | define a key concept |
 | 9 | `question` | `question` | a single framing question |
 
@@ -71,7 +69,6 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 | 10 | ~~`two-column`~~ | _(retired 2026-07-02, FB-009)_ | redundant with `comparison-columns`, which now anchors the two-column family |
 | 11 | `bullet-list` | `title`, `items[]` | a single titled list |
 | 12 | ✓ `icon-text-rows` | `rows[]` = {icon,heading,body} | ~3 labelled points |
-| 13 | `feature-list` | `features[]` = {icon,heading,body} | 3–5 features, denser |
 | 14 | `checklist` | `items[]` = {text, checked?} | requirements / done-list |
 | 15 | `numbered-steps` | `steps[]` = {title,body} | ordered vertical steps |
 
@@ -113,7 +110,7 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 | 36 | ✓ `image-half-bleed` | `image`, `content[]` (+`image_side`) | image beside text |
 
 ### Closing (reuse openers)
-A closing / call-to-action slide is covered by `statement` (#7), `big-number` (#5),
+A closing / call-to-action slide is covered by `big-number` (#5)
 or `title-slide` (#1) with a CTA subtitle — no separate component needed.
 
 ---

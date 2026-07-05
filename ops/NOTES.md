@@ -718,3 +718,24 @@ Approved: kpi-grid (clears its FB-024 flag), chart-with-insight, funnel, pyramid
 - Historical FEEDBACK items get re-pointed when their component dies (FB-037→swot,
   FB-040→card-grid): the validator requires catalog membership, notes record the chain.
 - Catalog now **31 components / 20 distinct families**.
+
+## Operator chat round: 3 deletions + numbered-steps reimagine + global rule-gap (2026-07-05)
+
+- DELETED per operator chat (filed as FB-047..FB-049 for the ledger): **statement**,
+  **quote-opener**, **feature-list**. statement was the emphasis-stack ANCHOR — the family
+  re-anchored on section-divider and the four surviving variants re-pointed. pull-quote is
+  the only quote layout; icon-text-rows covers icon features. A closing/manifesto line is
+  title-slide or big-number. Catalog: **28 components / 20 distinct families**.
+- numbered-steps REIMAGINED (operator: "reimagine numbered-steps"): chip badges gone —
+  large accent numerals (01/02) in a left rail + bold heading + body, the same typographic
+  motif as process-steps (FB-035) and agenda. The rail width is measured from "00" at
+  header tier, not a fixed inch value.
+- GLOBAL STYLE RULE (operator): **text and its underline rule hug.** New engine constant
+  _RULE_GAP_EMU = 0.06"; applied at every text→rule seam (agenda title, big-number value,
+  two-panel-list/swot headings, kpi tiles, table + comparison-matrix headers,
+  process-steps numerals), each pair sharing a group_id so the tight gap is lint-exempt.
+  Pinned by test_rules_hug_their_text, which sweeps every rule-bearing specimen and
+  asserts the exact gap — a future layout with a loose underline fails it.
+- Historical FB items re-pointed off deleted components again (FB-005→icon-text-rows,
+  FB-016→pull-quote). Gotcha: appending prose after a single-quoted YAML scalar breaks
+  parsing — fold the addition INSIDE the quotes.

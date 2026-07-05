@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_296",
+          "node_id": "title_278",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "th_297",
+          "node_id": "th_279",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -57,7 +57,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "th_298",
+          "node_id": "th_280",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -82,7 +82,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "th_299",
+          "node_id": "th_281",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -107,11 +107,11 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "table_rule_300",
+          "node_id": "table_rule_282",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2127503,
+            "y": 2072639,
             "w": 11277600,
             "h": 54864
           },
@@ -119,13 +119,13 @@
           "fill_color": "#C0392B"
         },
         {
-          "node_id": "td_301",
+          "node_id": "td_283",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2456687,
+            "y": 2401823,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "Starter",
           "lines": [
@@ -142,13 +142,13 @@
           "italic": false
         },
         {
-          "node_id": "td_302",
+          "node_id": "td_284",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 2456687,
+            "y": 2401823,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "Up to 5",
           "lines": [
@@ -165,13 +165,13 @@
           "italic": false
         },
         {
-          "node_id": "td_303",
+          "node_id": "td_285",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 2456687,
+            "y": 2401823,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "$0",
           "lines": [
@@ -188,13 +188,13 @@
           "italic": false
         },
         {
-          "node_id": "td_304",
+          "node_id": "td_286",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3351275,
+            "y": 3310127,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "Team",
           "lines": [
@@ -211,13 +211,13 @@
           "italic": false
         },
         {
-          "node_id": "td_305",
+          "node_id": "td_287",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 3351275,
+            "y": 3310127,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "Up to 50",
           "lines": [
@@ -234,13 +234,13 @@
           "italic": false
         },
         {
-          "node_id": "td_306",
+          "node_id": "td_288",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 3351275,
+            "y": 3310127,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "$12/seat",
           "lines": [
@@ -257,13 +257,13 @@
           "italic": false
         },
         {
-          "node_id": "td_307",
+          "node_id": "td_289",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4245863,
+            "y": 4218431,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "Business",
           "lines": [
@@ -280,13 +280,13 @@
           "italic": false
         },
         {
-          "node_id": "td_308",
+          "node_id": "td_290",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 4245863,
+            "y": 4218431,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "Up to 250",
           "lines": [
@@ -303,13 +303,13 @@
           "italic": false
         },
         {
-          "node_id": "td_309",
+          "node_id": "td_291",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 4245863,
+            "y": 4218431,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "$20/seat",
           "lines": [
@@ -326,13 +326,13 @@
           "italic": false
         },
         {
-          "node_id": "td_310",
+          "node_id": "td_292",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 5140451,
+            "y": 5126735,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "Enterprise",
           "lines": [
@@ -349,13 +349,13 @@
           "italic": false
         },
         {
-          "node_id": "td_311",
+          "node_id": "td_293",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 5140451,
+            "y": 5126735,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "Unlimited",
           "lines": [
@@ -372,13 +372,13 @@
           "italic": false
         },
         {
-          "node_id": "td_312",
+          "node_id": "td_294",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 5140451,
+            "y": 5126735,
             "w": 3576320,
-            "h": 620268
+            "h": 633984
           },
           "text_content": "Custom",
           "lines": [
@@ -397,7 +397,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_313",
+          "node_id": "chrome_pagenum_295",
           "node_type": "text",
           "rect": {
             "x": 10363200,

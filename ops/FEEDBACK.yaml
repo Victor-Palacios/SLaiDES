@@ -41,7 +41,7 @@ comments:
   source: 'issue #12'
   notes: 'issue #12: removed accent ''bubble'' disc from cards'
 - id: FB-005
-  component: feature-list
+  component: icon-text-rows
   family: icon-text-rows
   status: done
   severity: med
@@ -49,7 +49,7 @@ comments:
   created: '2026-06-19'
   updated: '2026-06-19'
   source: 'issue #13'
-  notes: 'issue #13: removed accent ''bubble'' disc; feature-list is heading+body full-width'
+  notes: 'issue #13: removed accent ''bubble'' disc; feature-list was heading+body full-width. [Component re-pointed feature-list -> icon-text-rows after FB-049 deleted feature-list.]'
 - id: FB-006
   component: code
   family: code-block
@@ -151,7 +151,7 @@ comments:
   source: web 2026-07-02T01:58:57.247Z
   notes: done T-061 — web-preview emitter pinned line-height + dropped vertical padding + overflow visible (single-line-row descender clip class)
 - id: FB-016
-  component: quote-opener
+  component: pull-quote
   family: emphasis-stack
   status: done
   severity: med
@@ -159,7 +159,7 @@ comments:
   created: '2026-07-02'
   updated: '2026-07-02'
   source: web 2026-07-02T01:58:57.247Z
-  notes: done T-062 — same root cause as FB-015; fixed by the emitter change
+  notes: done T-062 — same root cause as FB-015; fixed by the emitter change. [Component re-pointed quote-opener -> pull-quote after FB-048 deleted quote-opener.]
 - id: FB-017
   component: big-number
   family: emphasis-stack
@@ -464,3 +464,42 @@ comments:
   source: web 2026-07-05T15:52:58.945Z
   notes: >-
     logo-wall DELETED per operator note, closing the labeled-image-grid family. Logo content falls back to card-grid label cards in the recommender. (Retargeted for validator.)
+- id: FB-047
+  component: section-divider
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: Delete the statement layout
+  created: '2026-07-05'
+  updated: '2026-07-05'
+  source: operator chat 2026-07-05
+  notes: >-
+    statement DELETED per operator chat request. It was the emphasis-stack anchor, so the
+    family re-anchored on section-divider (variants re-pointed). A one-line manifesto/closing
+    is covered by title-slide or big-number. (Entry filed against the new anchor because the
+    validator requires a catalog component.)
+- id: FB-048
+  component: pull-quote
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: Delete the quote-opener layout
+  created: '2026-07-05'
+  updated: '2026-07-05'
+  source: operator chat 2026-07-05
+  notes: >-
+    quote-opener DELETED per operator chat request; pull-quote is the surviving quote layout
+    and the recommender routes all quotes there. (Retargeted for validator.)
+- id: FB-049
+  component: icon-text-rows
+  family: icon-text-rows
+  status: done
+  severity: med
+  comment: Delete the feature-list layout
+  created: '2026-07-05'
+  updated: '2026-07-05'
+  source: operator chat 2026-07-05
+  notes: >-
+    feature-list DELETED per operator chat request; icon-text-rows (its family anchor) covers
+    icon + heading + body rows and the recommender routes icon features there. (Retargeted for
+    validator.)

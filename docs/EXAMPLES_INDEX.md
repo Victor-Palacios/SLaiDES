@@ -2,7 +2,7 @@
 
 _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do not hand-edit; run the script and commit. A single-component **specimen** is one slide of just its component; a **showcase** is a multi-slide composition. A test (`tests/test_examples_index`) fails if this file drifts from the decks._
 
-**35** decks · **31** specimens · **4** showcases · **58** slides total
+**32** decks · **28** specimens · **4** showcases · **55** slides total
 
 | Example | Slides | Kind | Components |
 |---|--:|---|---|
@@ -17,14 +17,11 @@ _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do no
 | `10_all_components.yaml` | 7 | showcase | title-slide → icon-text-rows → stat-callout → comparison-columns → timeline → image-half-bleed → card-grid |
 | `11_section_divider.yaml` | 1 | specimen | section-divider |
 | `12_agenda.yaml` | 1 | specimen | agenda |
-| `13_quote_opener.yaml` | 1 | specimen | quote-opener |
 | `14_big_number.yaml` | 1 | specimen | big-number |
 | `15_pull_quote.yaml` | 1 | specimen | pull-quote |
-| `16_statement.yaml` | 1 | specimen | statement |
 | `17_definition.yaml` | 1 | specimen | definition |
 | `18_question.yaml` | 1 | specimen | question |
 | `19_bullet_list.yaml` | 1 | specimen | bullet-list |
-| `20_feature_list.yaml` | 1 | specimen | feature-list |
 | `21_code.yaml` | 1 | specimen | code |
 | `22_numbered_steps.yaml` | 1 | specimen | numbered-steps |
 | `23_two_panel_list.yaml` | 1 | specimen | two-panel-list |

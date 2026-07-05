@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxonomy.py` — do not hand-edit. A test (`tests/test_catalog`) fails if it drifts._
 
-**31 components** implement **20 distinct layout skeletons** (families); **11** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **20 distinct layouts**.
+**28 components** implement **20 distinct layout skeletons** (families); **8** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **20 distinct layouts**.
 
 ## Distinct layout families (20)
 
@@ -12,7 +12,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `card-grid` | `card-grid` | A grid of content cards. |
 | `code-block` | `code` | A dark terminal/IDE-style code block. |
 | `comparison-matrix` | `comparison-matrix` | An options × criteria grid; 1–2 winning cells highlighted (FB-039). |
-| `emphasis-stack` | `statement` | A single bold centered line — a manifesto/claim. |
+| `emphasis-stack` | `section-divider` | Section break with number + title. |
 | `funnel` | `funnel` | Narrowing funnel tiers. |
 | `icon-text-rows` | `icon-text-rows` | Rows of icon + text. |
 | `kpi-grid` | `kpi-grid` | A grid of KPIs (value + rule + label). |
@@ -42,7 +42,6 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `comparison-columns` | `two-column` | **anchor** | — |
 | `comparison-matrix` | `comparison-matrix` | **anchor** | — |
 | `definition` | `emphasis-stack` | variant | accent term + definition body |
-| `feature-list` | `icon-text-rows` | variant | icon + heading + body per feature |
 | `funnel` | `funnel` | **anchor** | — |
 | `icon-text-rows` | `icon-text-rows` | **anchor** | — |
 | `image-half-bleed` | `two-column` | variant | one column is a half-bleed image |
@@ -53,11 +52,9 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `pull-quote` | `emphasis-stack` | variant | bold quote + attribution |
 | `pyramid` | `pyramid` | **anchor** | — |
 | `question` | `emphasis-stack` | variant | single question line |
-| `quote-opener` | `emphasis-stack` | variant | italic quote + attribution |
 | `roadmap` | `roadmap` | **anchor** | — |
-| `section-divider` | `emphasis-stack` | variant | section number + title (two roles) |
+| `section-divider` | `emphasis-stack` | **anchor** | — |
 | `stat-callout` | `stat-callout` | **anchor** | — |
-| `statement` | `emphasis-stack` | **anchor** | — |
 | `swot` | `swot` | **anchor** | — |
 | `table-slide` | `table` | **anchor** | — |
 | `this-vs-that` | `vs-badge` | **anchor** | — |

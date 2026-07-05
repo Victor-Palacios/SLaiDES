@@ -139,8 +139,9 @@ def test_code_runs_tile_each_line_exactly():
 
 
 def test_kpi_grid_tiles_are_tight_and_centred():
+    from slidekit.layout.engine import _RULE_GAP_EMU
     _, s = _slide("26_kpi_grid")
-    inner = int(0.12 * EMU_PER_INCH)
+    inner = _RULE_GAP_EMU
     values = _by_prefix(s, "kpi_val")
     rules = _by_prefix(s, "kpi_rule")
     labels = _by_prefix(s, "kpi_label")
@@ -177,9 +178,10 @@ def test_vs_text_is_header_tier():
 
 
 def test_table_headers_hug_the_rule():
-    """FB-033: the header row sits a tight 0.12" above the accent rule."""
+    """FB-033 + the 2026-07-05 global style rule: headers hug the accent rule."""
+    from slidekit.layout.engine import _RULE_GAP_EMU
     _, s = _slide("29_table_slide")
-    inner = int(0.12 * EMU_PER_INCH)
+    inner = _RULE_GAP_EMU
     ths = _by_prefix(s, "th")
     rule = next(n for n in s.nodes if n.node_type == "box")
     assert ths and all(rule.rect.y - th.rect.bottom() == inner for th in ths)
@@ -256,3 +258,37 @@ def test_comparison_matrix_highlights_cells_not_categories():
     assert heads and crits
     assert all(n.node_type == "text" for n in heads + crits)
     assert all(n.text_color is None for n in heads + crits)
+
+
+# ── 2026-07-05 round 2 (operator chat: deletions, numbered-steps, rule gaps) ──
+
+
+def test_numbered_steps_are_typographic_not_chips():
+    """Reimagined numbered-steps: accent numerals in a left rail, no chip boxes."""
+    deck, s = _slide("22_numbered_steps")
+    assert not [n for n in s.nodes if n.node_type == "box"]
+    nums = _by_prefix(s, "step_num")
+    assert nums and all(n.text_content == f"{i + 1:02d}" for i, n in enumerate(nums))
+    assert all(n.size_pt == deck.theme.type_scale.header for n in nums)
+    assert all(n.text_color == deck.theme.palette.accent for n in nums)
+
+
+def test_rules_hug_their_text():
+    """Operator style rule (2026-07-05): every rule drawn under text sits exactly
+    _RULE_GAP_EMU below the text it underlines — 'make the text and line close
+    together' — across every layout that draws one."""
+    from slidekit.layout.engine import _RULE_GAP_EMU
+    for name in ("12_agenda", "14_big_number", "23_two_panel_list", "26_kpi_grid",
+                 "29_table_slide", "31_process_steps", "36_swot",
+                 "37_comparison_matrix"):
+        _, s = _slide(name)
+        rules = [n for n in s.nodes if n.node_type == "box" and n.rect.w >= 4 * n.rect.h]
+        assert rules, f"{name}: expected at least one rule"
+        for r in rules:
+            above = [n for n in s.nodes if n.node_type == "text"
+                     and n.rect.bottom() <= r.rect.y
+                     and n.rect.x < r.rect.right() and r.rect.x < n.rect.right()]
+            assert above, f"{name}: rule {r.node_id} has no text above it"
+            nearest = max(above, key=lambda n: n.rect.bottom())
+            gap = r.rect.y - nearest.rect.bottom()
+            assert gap == _RULE_GAP_EMU, f"{name}: {r.node_id} gap {gap} EMU"

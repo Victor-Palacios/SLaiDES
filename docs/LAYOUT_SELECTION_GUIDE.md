@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_selection_guide.py` — do not hand-edit. The machine-readable form is `slidekit catalog --json`. A test (`tests/test_catalog`) fails if it drifts._
 
-Pick a component per slide from its **content shape** — no rendering or vision needed. There are **31 components** across **20 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
+Pick a component per slide from its **content shape** — no rendering or vision needed. There are **28 components** across **20 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
 
 ## agenda — Numbered agenda / table of contents.
 
@@ -32,36 +32,28 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - content shape: row headers × column headers + cells (+ up to 2 highlight cells)
   - required fields: `options`, `criteria`, `cells`
 
-## emphasis-stack — A single bold centered line — a manifesto/claim.
+## emphasis-stack — Section break with number + title.
 
-- **`statement`**
-  - use when: One short, high-impact sentence should fill the slide.
-  - content shape: one short line of text
-  - required fields: `text`
-- **`big-number`** · variant of `statement` (oversized accent value + label (+ context))
-  - use when: A single number is the whole point.
-  - content shape: one dominant value + a label (+ optional context)
-  - required fields: `value`, `label`
-- **`definition`** · variant of `statement` (accent term + definition body)
-  - use when: Introducing/anchoring one key term.
-  - content shape: a term + its definition
-  - required fields: `term`, `definition`
-- **`pull-quote`** · variant of `statement` (bold quote + attribution)
-  - use when: Highlighting a testimonial-style line.
-  - content shape: a quote + an attribution
-  - required fields: `quote`, `attribution`
-- **`question`** · variant of `statement` (single question line)
-  - use when: Framing a rhetorical/discussion prompt.
-  - content shape: one question
-  - required fields: `question`
-- **`quote-opener`** · variant of `statement` (italic quote + attribution)
-  - use when: Leading a section with a quotation.
-  - content shape: a quote + an attribution
-  - required fields: `quote`, `attribution`
-- **`section-divider`** · variant of `statement` (section number + title (two roles))
+- **`section-divider`**
   - use when: Marking a new section.
   - content shape: a section number + a section title
   - required fields: `number`, `title`
+- **`big-number`** · variant of `section-divider` (oversized accent value + label (+ context))
+  - use when: A single number is the whole point.
+  - content shape: one dominant value + a label (+ optional context)
+  - required fields: `value`, `label`
+- **`definition`** · variant of `section-divider` (accent term + definition body)
+  - use when: Introducing/anchoring one key term.
+  - content shape: a term + its definition
+  - required fields: `term`, `definition`
+- **`pull-quote`** · variant of `section-divider` (bold quote + attribution)
+  - use when: Highlighting a quote/testimonial line.
+  - content shape: a quote + an attribution
+  - required fields: `quote`, `attribution`
+- **`question`** · variant of `section-divider` (single question line)
+  - use when: Framing a rhetorical/discussion prompt.
+  - content shape: one question
+  - required fields: `question`
 
 ## funnel — Narrowing funnel tiers.
 
@@ -76,10 +68,6 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - use when: A few labelled points, each with an icon.
   - content shape: rows of {icon, heading, body}
   - required fields: `rows`
-- **`feature-list`** · variant of `icon-text-rows` (icon + heading + body per feature) · capacity 2–6
-  - use when: Listing product features with icons.
-  - content shape: rows of {icon, heading, body}
-  - required fields: `features`
 
 ## kpi-grid — A grid of KPIs (value + rule + label).
 

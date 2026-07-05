@@ -8,11 +8,11 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "value_177",
+          "node_id": "value_173",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1915668,
+            "y": 2025396,
             "w": 11277600,
             "h": 1691640
           },
@@ -29,26 +29,28 @@
           "size_pt": 105.0,
           "bold": true,
           "italic": false,
+          "group_id": "bn_value",
           "text_color": "#00ACC1",
           "align": "center"
         },
         {
-          "node_id": "rule_178",
+          "node_id": "rule_174",
           "node_type": "box",
           "rect": {
             "x": 5547360,
-            "y": 3881628,
+            "y": 3771900,
             "w": 1097280,
             "h": 54864
           },
+          "group_id": "bn_value",
           "fill_color": "#00ACC1"
         },
         {
-          "node_id": "label_179",
+          "node_id": "label_175",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4210812,
+            "y": 4101084,
             "w": 11277600,
             "h": 731520
           },
@@ -70,7 +72,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_180",
+          "node_id": "chrome_pagenum_176",
           "node_type": "text",
           "rect": {
             "x": 10363200,
