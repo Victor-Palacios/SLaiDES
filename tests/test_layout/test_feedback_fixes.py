@@ -316,12 +316,13 @@ def test_nested_circles_nest_and_share_a_bottom_tangent():
     assert len(values) == len(labels) == 3
     for n in values + labels:
         assert n.align == "center" and n.text_color == pal.surface
-    # Graduated tiers (operator: "the font sizes feel imbalanced"): each stage's
-    # value steps down the type scale with its circle, and outranks its label.
-    ts = deck.theme.type_scale
-    assert [v.size_pt for v in values] == [ts.title, ts.header, ts.body]
+    # Operator-calibrated stage sizes (third round, explicit spec:
+    # "50pt, 44pts / 42pt, 36pts / 34pt, 28pts").
+    from slidekit.metrics.constants import INSET_BOTTOM_EMU, INSET_TOP_EMU
+    assert [v.size_pt for v in values] == [50.0, 42.0, 34.0]
+    assert [l.size_pt for l in labels] == [44.0, 36.0, 28.0]
+    snug = INSET_BOTTOM_EMU + INSET_TOP_EMU
     for v, l in zip(values, labels):
-        assert v.size_pt > l.size_pt
-        # value and label stack with NO extra gap (operator: "too far apart") —
-        # the line boxes' own leading is the separation.
-        assert l.rect.y == v.rect.bottom()
+        # label rides INSIDE the emitters' dead-air insets (operator, twice:
+        # "too far apart") — boxes overlap by exactly the two insets.
+        assert l.rect.y == v.rect.bottom() - snug

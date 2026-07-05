@@ -203,7 +203,10 @@ def _resolve_slide(
     elif comp == "funnel":
         nodes = _layout_funnel(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "nested-circles":
-        nodes = _layout_nested_circles(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
+        # Full content height (not ch_with_pn): the operator wants the bubbles as
+        # big as the canvas allows, and the centred circles never reach the
+        # page-number corner.
+        nodes = _layout_nested_circles(slide, cx, cy, cw, ch, font, ts, palette)
     elif comp == "pyramid":
         nodes = _layout_pyramid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "swot":
@@ -1470,12 +1473,12 @@ def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, 
                                   Rect(centre_x - d // 2, tops[i], d, d),
                                   fill_color=fills[i], group_id=gid))
 
-    # Graduated type tiers (operator 2026-07-05: "the font sizes feel imbalanced"):
-    # uniform text across shrinking circles read as lost in the outer stage and
-    # crowded in the inner — each stage's value/label now steps DOWN the type scale
-    # with its circle (title→header→body values; body→caption labels).
-    value_tiers = [ts.title, ts.header, ts.body, ts.body][:n]
-    label_tiers = ([(ts.body, False)] + [(ts.caption, True)] * 3)[:n]
+    # Stage type sizes are OPERATOR-SPECIFIED (2026-07-05, third calibration round:
+    # "50pt, 44pts / 42pt, 36pts / 34pt, 28pts"): each stage's value/label pair
+    # steps down with its circle, labels riding close behind their values. Sizes
+    # below the 32pt body floor are caption-tier for the linter.
+    value_pts = (50.0, 42.0, 34.0, 28.0)[:n]
+    label_pts = (44.0, 36.0, 28.0, 24.0)[:n]
 
     def _row(prefix, text, size, bold, is_caption, ry, rh, r, circle_cy):
         # Text box width = the circle's chord at the row's vertical centre; the
@@ -1488,16 +1491,16 @@ def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, 
                                      is_caption=is_caption, color=palette.surface,
                                      group_id=gid, align="center"))
 
+    # The label OVERLAPS the value's line box by the two text insets the emitters
+    # pad with (operator, twice: "too far apart") — glyphs never touch, the dead
+    # air does. Same group, so the intentional overlap is lint-exempt.
+    snug = INSET_BOTTOM_EMU + INSET_TOP_EMU
     for i, stage in enumerate(slide.stages):
-        value_pt = value_tiers[i]
-        label_pt, label_is_caption = label_tiers[i]
+        value_pt = value_pts[i]
+        label_pt = label_pts[i]
         value_h = int(value_pt * LINE_SPACING_SINGLE * EMU_PER_PT)
         label_h = int(label_pt * LINE_SPACING_SINGLE * EMU_PER_PT)
-        # Label stacks DIRECTLY under the value's line box (operator 2026-07-05:
-        # "the text and numbers are too far apart") — the leading inside the line
-        # boxes is all the optical separation the pair needs. Same group, so the
-        # zero gap is lint-exempt.
-        block_h = value_h + label_h
+        block_h = value_h + label_h - snug
         band_top = tops[i]
         band_bottom = tops[i + 1] if i + 1 < n else bottom
         block_top = band_top + max(0, (band_bottom - band_top - block_h) // 2)
@@ -1505,8 +1508,9 @@ def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, 
         circle_cy = bottom - r
         _row("nc_value", stage.value, value_pt, True, False,
              block_top, value_h, r, circle_cy)
-        _row("nc_label", stage.label, label_pt, False, label_is_caption,
-             block_top + value_h, label_h, r, circle_cy)
+        _row("nc_label", stage.label, label_pt, False,
+             label_pt < BODY_FONT_FLOOR_PT,
+             block_top + value_h - snug, label_h, r, circle_cy)
     return nodes
 
 

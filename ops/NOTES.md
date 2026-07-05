@@ -764,3 +764,10 @@ layout like it. First NEW skeleton since the review era began; first with a curv
 - Second follow-up: "the text and numbers are too far apart" — the value→label gap
   inside each circle is now ZERO; the line boxes' own leading is the separation
   (same group, lint-exempt). Pinned: label.rect.y == value.rect.bottom().
+- Third calibration (operator gave EXPLICIT numbers — "50pt, 44pts / 42pt, 36pts /
+  34pt, 28pts" + "make the bubbles bigger"): stage sizes are now those literals (28pt
+  labels ride caption-tier for the linter); the layout uses the FULL content height
+  (page number is corner chrome the centred circles never reach); and the label box
+  overlaps the value box by exactly the emitters' two text insets — the perceived gap
+  was dead inset air, not geometry. When the operator supplies numbers, use the
+  numbers; stop translating taste into type-scale tiers.

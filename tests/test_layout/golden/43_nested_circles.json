@@ -35,10 +35,10 @@
           "node_id": "nc_circle_397",
           "node_type": "ellipse",
           "rect": {
-            "x": 3965448,
+            "x": 3645408,
             "y": 1499616,
-            "w": 4261104,
-            "h": 4261104
+            "w": 4901184,
+            "h": 4901184
           },
           "group_id": "nested",
           "fill_color": "#9A9A9A"
@@ -47,10 +47,10 @@
           "node_id": "nc_circle_398",
           "node_type": "ellipse",
           "rect": {
-            "x": 4675632,
-            "y": 2919984,
-            "w": 2840736,
-            "h": 2840736
+            "x": 4462272,
+            "y": 3133344,
+            "w": 3267456,
+            "h": 3267456
           },
           "group_id": "nested",
           "fill_color": "#F2B705"
@@ -59,10 +59,10 @@
           "node_id": "nc_circle_399",
           "node_type": "ellipse",
           "rect": {
-            "x": 5385816,
-            "y": 4340352,
-            "w": 1420368,
-            "h": 1420368
+            "x": 5279136,
+            "y": 4767072,
+            "w": 1633728,
+            "h": 1633728
           },
           "group_id": "nested",
           "fill_color": "#0B3D2E"
@@ -71,22 +71,22 @@
           "node_id": "nc_value_400",
           "node_type": "text",
           "rect": {
-            "x": 4777234,
-            "y": 1499616,
-            "w": 2637532,
-            "h": 914400
+            "x": 4577329,
+            "y": 1645920,
+            "w": 3037342,
+            "h": 762000
           },
           "text_content": ">700",
           "lines": [
             {
               "text": ">700",
-              "width_emu": 1716360,
-              "height_emu": 914400,
+              "width_emu": 1430300,
+              "height_emu": 762000,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 60.0,
+          "size_pt": 50.0,
           "bold": true,
           "italic": false,
           "group_id": "nested",
@@ -97,22 +97,22 @@
           "node_id": "nc_label_401",
           "node_type": "text",
           "rect": {
-            "x": 4192513,
-            "y": 2414016,
-            "w": 3806974,
-            "h": 518159
+            "x": 4017676,
+            "y": 2316480,
+            "w": 4156648,
+            "h": 670560
           },
           "text_content": "Applications",
           "lines": [
             {
               "text": "Applications",
-              "width_emu": 2328304,
-              "height_emu": 518160,
+              "width_emu": 3013100,
+              "height_emu": 670560,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 44.0,
           "bold": false,
           "italic": false,
           "group_id": "nested",
@@ -123,9 +123,9 @@
           "node_id": "nc_value_402",
           "node_type": "text",
           "rect": {
-            "x": 4997723,
-            "y": 3119628,
-            "w": 2196554,
+            "x": 4840583,
+            "y": 3401568,
+            "w": 2510834,
             "h": 640080
           },
           "text_content": "6",
@@ -149,25 +149,24 @@
           "node_id": "nc_label_403",
           "node_type": "text",
           "rect": {
-            "x": 4730265,
-            "y": 3759708,
-            "w": 2731470,
-            "h": 381000
+            "x": 4554990,
+            "y": 3950208,
+            "w": 3082020,
+            "h": 548640
           },
           "text_content": "Interviews",
           "lines": [
             {
               "text": "Interviews",
-              "width_emu": 1429215,
-              "height_emu": 381000,
+              "width_emu": 2058070,
+              "height_emu": 548640,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 25.0,
+          "size_pt": 36.0,
           "bold": false,
           "italic": false,
-          "is_caption": true,
           "group_id": "nested",
           "text_color": "#FFFFFF",
           "align": "center"
@@ -176,9 +175,9 @@
           "node_id": "nc_value_404",
           "node_type": "text",
           "rect": {
-            "x": 5411844,
-            "y": 4600956,
-            "w": 1368312,
+            "x": 5296524,
+            "y": 5157216,
+            "w": 1598952,
             "h": 518159
           },
           "text_content": "1.5",
@@ -202,22 +201,22 @@
           "node_id": "nc_label_405",
           "node_type": "text",
           "rect": {
-            "x": 5434760,
-            "y": 5119115,
-            "w": 1322480,
-            "h": 381000
+            "x": 5307493,
+            "y": 5583935,
+            "w": 1577014,
+            "h": 426720
           },
           "text_content": "Offers",
           "lines": [
             {
               "text": "Offers",
-              "width_emu": 858707,
-              "height_emu": 381000,
+              "width_emu": 961752,
+              "height_emu": 426720,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 25.0,
+          "size_pt": 28.0,
           "bold": false,
           "italic": false,
           "is_caption": true,
