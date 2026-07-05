@@ -30,15 +30,8 @@
       "date": "2026-07-02"
     },
     "comparison-matrix": {
-      "status": "flagged",
-      "date": "2026-07-05",
-      "comment": "too many colors just stick with the red and black",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#FFFFFF",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1B4F8A;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Evaluation Matrix</div>\n    <div class=\"node node-text\" style=\"left:408.32px;top:157.44px;width:255.36px;height:54.40px;color:#1B4F8A;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Platform A</div>\n    <div class=\"node node-text\" style=\"left:692.48px;top:157.44px;width:255.36px;height:54.40px;color:#1B4F8A;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Platform B</div>\n    <div class=\"node node-text\" style=\"left:976.64px;top:157.44px;width:255.36px;height:54.40px;color:#1B4F8A;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Platform C</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:223.36px;width:1184.00px;height:5.76px;background:#E84545;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:257.92px;width:331.52px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Security</div>\n    <div class=\"node node-box\" style=\"left:445.70px;top:257.92px;width:180.61px;height:54.40px;background:#E84545;\"></div>\n    <div class=\"node node-text\" style=\"left:445.70px;top:257.92px;width:180.61px;height:54.40px;color:#FFFFFF;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Strong</div>\n    <div class=\"node node-text\" style=\"left:692.48px;top:257.92px;width:255.36px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Medium</div>\n    <div class=\"node node-text\" style=\"left:976.64px;top:257.92px;width:255.36px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Strong</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:383.15px;width:331.52px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Workflow</div>\n    <div class=\"node node-text\" style=\"left:408.32px;top:383.15px;width:255.36px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Medium</div>\n    <div class=\"node node-text\" style=\"left:692.48px;top:383.15px;width:255.36px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Strong</div>\n    <div class=\"node node-text\" style=\"left:976.64px;top:383.15px;width:255.36px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Medium</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:508.37px;width:331.52px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;\">Support</div>\n    <div class=\"node node-box\" style=\"left:445.70px;top:508.37px;width:180.61px;height:54.40px;background:#E84545;\"></div>\n    <div class=\"node node-text\" style=\"left:445.70px;top:508.37px;width:180.61px;height:54.40px;color:#FFFFFF;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Strong</div>\n    <div class=\"node node-text\" style=\"left:692.48px;top:508.37px;width:255.36px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Strong</div>\n    <div class=\"node node-text\" style=\"left:976.64px;top:508.37px;width:255.36px;height:96.43px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Medium</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
-      }
+      "status": "approved",
+      "date": "2026-07-05"
     },
     "definition": {
       "status": "approved",
@@ -105,15 +98,8 @@
       "date": "2026-07-05"
     },
     "this-vs-that": {
-      "status": "flagged",
-      "date": "2026-07-05",
-      "comment": "The VS a little bigger",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#FFFFFF",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0D47A1;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Cloud or On-Prem</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:291.52px;width:515.20px;height:96.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">3 wks</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:416.32px;width:515.20px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Cloud time-to-launch</div>\n    <div class=\"node node-text\" style=\"left:716.80px;top:291.52px;width:515.20px;height:96.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">6 mo</div>\n    <div class=\"node node-text\" style=\"left:716.80px;top:416.32px;width:515.20px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">On-prem time-to-launch</div>\n    <div class=\"node node-text\" style=\"left:592.00px;top:353.92px;width:96.00px;height:54.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">VS</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
-      }
+      "status": "approved",
+      "date": "2026-07-05"
     },
     "timeline": {
       "status": "approved",

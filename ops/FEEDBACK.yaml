@@ -429,8 +429,7 @@ comments:
   created: '2026-07-05'
   updated: '2026-07-05'
   source: web 2026-07-05T15:52:58.945Z
-  notes: >-
-    VS stepped up again: body tier (34pt) -> header tier (42pt), still muted/bold; middle gutter widened 1.0"->1.25" so it clears the overflow check with standard insets.
+  notes: 'VS stepped up again: body tier (34pt) -> header tier (42pt), still muted/bold; middle gutter widened 1.0"->1.25" so it clears the overflow check with standard insets.'
 - id: FB-044
   component: swot
   family: matrix-2x2
@@ -440,8 +439,7 @@ comments:
   created: '2026-07-05'
   updated: '2026-07-05'
   source: web 2026-07-05T15:52:58.945Z
-  notes: >-
-    matrix-2x2 DELETED per operator (model, layout, registry, specimen, golden, recommender) — one round after its FB-037 reimagining. swot is the surviving 2x2; generic axes content falls back to card-grid. (Retargeted to swot because the validator requires a catalog component.)
+  notes: matrix-2x2 DELETED per operator (model, layout, registry, specimen, golden, recommender) — one round after its FB-037 reimagining. swot is the surviving 2x2; generic axes content falls back to card-grid. (Retargeted to swot because the validator requires a catalog component.)
 - id: FB-045
   component: comparison-matrix
   family: comparison-matrix
@@ -451,8 +449,7 @@ comments:
   created: '2026-07-05'
   updated: '2026-07-05'
   source: web 2026-07-05T15:52:58.945Z
-  notes: >-
-    Option headers now render in the DEFAULT text colour instead of brand primary (the primary tint read as a third colour), and the specimen palette sets primary to the text tone — the slide is literally red (rule + highlight chips) and black (everything else).
+  notes: Option headers now render in the DEFAULT text colour instead of brand primary (the primary tint read as a third colour), and the specimen palette sets primary to the text tone — the slide is literally red (rule + highlight chips) and black (everything else).
 - id: FB-046
   component: card-grid
   family: labeled-image-grid
@@ -462,8 +459,7 @@ comments:
   created: '2026-07-05'
   updated: '2026-07-05'
   source: web 2026-07-05T15:52:58.945Z
-  notes: >-
-    logo-wall DELETED per operator note, closing the labeled-image-grid family. Logo content falls back to card-grid label cards in the recommender. (Retargeted for validator.)
+  notes: logo-wall DELETED per operator note, closing the labeled-image-grid family. Logo content falls back to card-grid label cards in the recommender. (Retargeted for validator.)
 - id: FB-047
   component: section-divider
   family: emphasis-stack
@@ -473,11 +469,7 @@ comments:
   created: '2026-07-05'
   updated: '2026-07-05'
   source: operator chat 2026-07-05
-  notes: >-
-    statement DELETED per operator chat request. It was the emphasis-stack anchor, so the
-    family re-anchored on section-divider (variants re-pointed). A one-line manifesto/closing
-    is covered by title-slide or big-number. (Entry filed against the new anchor because the
-    validator requires a catalog component.)
+  notes: statement DELETED per operator chat request. It was the emphasis-stack anchor, so the family re-anchored on section-divider (variants re-pointed). A one-line manifesto/closing is covered by title-slide or big-number. (Entry filed against the new anchor because the validator requires a catalog component.)
 - id: FB-048
   component: pull-quote
   family: emphasis-stack
@@ -487,9 +479,7 @@ comments:
   created: '2026-07-05'
   updated: '2026-07-05'
   source: operator chat 2026-07-05
-  notes: >-
-    quote-opener DELETED per operator chat request; pull-quote is the surviving quote layout
-    and the recommender routes all quotes there. (Retargeted for validator.)
+  notes: quote-opener DELETED per operator chat request; pull-quote is the surviving quote layout and the recommender routes all quotes there. (Retargeted for validator.)
 - id: FB-049
   component: icon-text-rows
   family: icon-text-rows
@@ -499,7 +489,4 @@ comments:
   created: '2026-07-05'
   updated: '2026-07-05'
   source: operator chat 2026-07-05
-  notes: >-
-    feature-list DELETED per operator chat request; icon-text-rows (its family anchor) covers
-    icon + heading + body rows and the recommender routes icon features there. (Retargeted for
-    validator.)
+  notes: feature-list DELETED per operator chat request; icon-text-rows (its family anchor) covers icon + heading + body rows and the recommender routes icon features there. (Retargeted for validator.)
