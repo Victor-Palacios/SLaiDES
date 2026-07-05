@@ -31,8 +31,6 @@ from slidekit.ir.models import (
     IconTextRowsSlide,
     ImageHalfBleedSlide,
     KpiGridSlide,
-    LogoWallSlide,
-    Matrix2x2Slide,
     MetricComparisonSlide,
     NumberedStepsSlide,
     ProcessStepsSlide,
@@ -213,14 +211,10 @@ def _resolve_slide(
         nodes = _layout_funnel(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "pyramid":
         nodes = _layout_pyramid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "matrix-2x2":
-        nodes = _layout_matrix_2x2(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "swot":
         nodes = _layout_swot(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "comparison-matrix":
         nodes = _layout_comparison_matrix(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "logo-wall":
-        nodes = _layout_logo_wall(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     else:
         nodes = []
 
@@ -1104,9 +1098,9 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
     # default text colour, and "VS" is a bare muted caption centred between the columns
     # on the value+label block midline — no box, no fills. The slide is deliberately
     # text-only (exempted from W_TEXT_ONLY in the linter).
-    # 1.0": breathing room between the columns, sized so the body-tier bold "VS"
-    # (FB-032) fits its box with the standard text insets.
-    mid_w = int(1.0 * EMU_PER_INCH)
+    # 1.25": breathing room between the columns, sized so the header-tier bold "VS"
+    # (FB-032 then FB-043: "a little bigger" twice) fits with the standard insets.
+    mid_w = int(1.25 * EMU_PER_INCH)
     col_w = (cw - mid_w - 2 * gap) // 2
     left_x = cx
     right_x = cx + col_w + gap + mid_w + gap
@@ -1126,12 +1120,12 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
                                      rect=Rect(px, inner_y + value_h + gap, col_w, label_h),
                                      align="center"))
 
-    # Bare "VS", centred between the columns on the block midline. Body-tier size
-    # (FB-032: "make the VS a little larger"), still muted so the numbers dominate.
-    vs_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    # Bare "VS", centred between the columns on the block midline. Header-tier size
+    # (FB-032 then FB-043 asked for bigger twice), still muted so the numbers dominate.
+    vs_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
     vs_x = cx + (cw - mid_w) // 2
     vs_y = inner_y + max(0, (block_h - vs_h) // 2)
-    nodes.append(_make_text_node(_nid("vs_text"), "VS", font, ts.body, bold=True,
+    nodes.append(_make_text_node(_nid("vs_text"), "VS", font, ts.header, bold=True,
                                  italic=False, rect=Rect(vs_x, vs_y, mid_w, vs_h),
                                  is_caption=True, align="center"))
     return nodes
@@ -1499,60 +1493,9 @@ def _layout_pyramid(slide: PyramidSlide, cx, cy, cw, ch, font, ts, palette):
     return nodes
 
 
-def _layout_matrix_2x2(slide: Matrix2x2Slide, cx, cy, cw, ch, font, ts, palette):
-    """Quadrant positioning, reimagined per FB-037 ("reimagine this slide"): a
-    HAIRLINE muted cross replaces the heavy accent rules, quadrant labels are bold
-    and optically centred in their cells, and colour is reserved for at most one
-    highlighted quadrant (accent) — matrices spotlight items, not scaffolding
-    (the operator's FB-039 rule). Axis names are centred muted captions."""
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
-
-    cap_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
-    field_y = y + cap_h + gap
-    field_bottom = cy + ch - cap_h - gap
-    field_h = max(1, field_bottom - field_y)
-
-    # Axis captions: y-axis name across the top, x-axis name across the bottom.
-    nodes.append(_make_text_node(_nid("mx_y"), slide.y_label, font, ts.caption, bold=True,
-                                 italic=False, rect=Rect(cx, y, cw, cap_h),
-                                 is_caption=True, color=palette.muted, align="center"))
-    nodes.append(_make_text_node(_nid("mx_x"), slide.x_label, font, ts.caption, bold=False,
-                                 italic=False, rect=Rect(cx, field_bottom + gap, cw, cap_h),
-                                 is_caption=True, color=palette.muted, align="center"))
-
-    rule = int(0.03 * EMU_PER_INCH)  # hairline, quiet scaffolding
-    midx = cx + cw // 2
-    midy = field_y + field_h // 2
-    nodes.append(ResolvedNode(_nid("mx_vrule"), "box",
-                              Rect(midx - rule // 2, field_y, rule, field_h),
-                              fill_color=palette.muted, group_id="mx_cross"))
-    nodes.append(ResolvedNode(_nid("mx_hrule"), "box",
-                              Rect(cx, midy - rule // 2, cw, rule),
-                              fill_color=palette.muted, group_id="mx_cross"))
-
-    # Quadrant cells, inset from the cross by >= gap so neither E_GAP nor E_OVERLAP
-    # trips against the rules. Labels are bold, wrapped, and centred both ways.
-    cell_w = cw // 2 - gap - rule
-    cell_h = field_h // 2 - gap - rule
-    positions = [
-        (cx, field_y),                            # top-left
-        (midx + rule + gap, field_y),             # top-right
-        (cx, midy + rule + gap),                  # bottom-left
-        (midx + rule + gap, midy + rule + gap),   # bottom-right
-    ]
-    line_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    for i, q in enumerate(slide.quadrants):
-        qx, qy = positions[i]
-        lines = wrap(q, font, ts.body, cell_w, bold=True)
-        text_h = min(cell_h, max(line_h, total_text_height_emu(lines)))
-        ty = qy + max(0, (cell_h - text_h) // 2)
-        color = palette.accent if slide.highlight == i else None
-        nodes.append(_make_text_node(_nid("mx_q"), q, font, ts.body, bold=True,
-                                     italic=False, rect=Rect(qx, ty, cell_w, text_h),
-                                     lines=lines, color=color, align="center"))
-    return nodes
+# matrix-2x2 was retired 2026-07-05 per operator feedback FB-044 ("delete this
+# slide") — one review round after its FB-037 reimagining. swot remains the only
+# 2×2 layout; generic axes content falls back to card-grid in the recommender.
 
 
 def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
@@ -1627,15 +1570,16 @@ def _layout_comparison_matrix(slide: ComparisonMatrixSlide, cx, cy, cw, ch, font
     inner = int(0.12 * EMU_PER_INCH)
     chip_pad = int(0.18 * EMU_PER_INCH)
 
-    # Header row: bold primary option names (corner over the criteria column stays
-    # empty); a full-width accent rule rides tight beneath (shared group, FB-033
-    # spacing) — the slide's only structural colour.
+    # Header row: bold option names in the DEFAULT text colour (FB-045: "too many
+    # colors — just stick with the red and black"; primary-tinted headers read as a
+    # third colour). The corner over the criteria column stays empty; a full-width
+    # accent rule rides tight beneath (shared group, FB-033 spacing) — together with
+    # the highlight chips it is the slide's only colour.
     for c, opt in enumerate(slide.options):
         x = cx + label_w + gap + c * (cell_w + gap)
         nodes.append(_make_text_node(_nid("cm_head"), opt, font, ts.body, bold=True,
                                      italic=False, rect=Rect(x, y, cell_w, head_h),
-                                     color=palette.primary, group_id="cm_head",
-                                     align="center"))
+                                     group_id="cm_head", align="center"))
     ry = y + head_h + inner
     nodes.append(ResolvedNode(_nid("cm_rule"), "box", Rect(cx, ry, cw, rule_h),
                               fill_color=palette.accent, group_id="cm_head"))
@@ -1676,39 +1620,9 @@ def _layout_comparison_matrix(slide: ComparisonMatrixSlide, cx, cy, cw, ch, font
 
 
 # team-grid, image-full-bleed and image-grid were retired 2026-07-04 per operator
-# feedback FB-040/FB-041/FB-042 ("delete this one" ×3). logo-wall (below) survives
-# as the sole labeled-image-grid layout; image-half-bleed remains the image layout.
-
-
-def _layout_logo_wall(slide: LogoWallSlide, cx, cy, cw, ch, font, ts, palette):
-    """Partner/client logo wall: a restrained grid of labelled or image logo tiles."""
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
-
-    n = len(slide.logos)
-    cols = min(4, n) if n else 1
-    rows = (n + cols - 1) // cols
-    cell_w = max(1, (cw - gap * (cols - 1)) // cols)
-    cell_h = max(1, (cy + ch - y - gap * (rows - 1)) // rows) if rows else cy + ch - y
-    for i, logo in enumerate(slide.logos):
-        r, c = divmod(i, cols)
-        x = cx + c * (cell_w + gap)
-        yy = y + r * (cell_h + gap)
-        gid = f"logo_{i}"
-        nodes.append(ResolvedNode(_nid("logo_tile"), "box", Rect(x, yy, cell_w, cell_h),
-                                  fill_color="#F4F6F8", group_id=gid))
-        if logo.image:
-            inset = int(0.18 * EMU_PER_INCH)
-            nodes.append(ResolvedNode(_nid("logo_img"), "image",
-                                      Rect(x + inset, yy + inset, cell_w - 2 * inset, cell_h - 2 * inset),
-                                      slot_type="image", text_content=logo.image.path, group_id=gid))
-        else:
-            label = logo.label or "Logo"
-            nodes.append(_make_text_node(_nid("logo_label"), label, font, ts.body, bold=True,
-                                         italic=False, rect=Rect(x, yy, cell_w, cell_h),
-                                         color=palette.primary, group_id=gid))
-    return nodes
+# feedback FB-040/FB-041/FB-042 ("delete this one" ×3); logo-wall followed on
+# 2026-07-05 (FB-046), closing the labeled-image-grid family. image-half-bleed is
+# the remaining image layout; logo/people content falls back to card-grid.
 
 
 def _layout_content_list(slots, prefix: str, x, y, w, h, font, ts, palette=None) -> list[ResolvedNode]:

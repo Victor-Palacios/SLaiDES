@@ -2,18 +2,9 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 4 · **done** 41 · **wontfix** 1 · _last change 2026-07-05_
+**open** 0 · **done** 45 · **wontfix** 1 · _last change 2026-07-05_
 
-## Open (4)
-
-| ID | Layout | Sev | Comment | Notes |
-|---|---|---|---|---|
-| FB-043 | this-vs-that | med | 👎 The VS a little bigger |  |
-| FB-044 | matrix-2x2 | med | 👎 delete this slide |  |
-| FB-045 | comparison-matrix | med | 👎 too many colors just stick with the red and black |  |
-| FB-046 | logo-wall | med | 📝 delete this slide layout |  |
-
-## Done (41)
+## Done (45)
 
 | ID | Layout | Sev | Comment | Notes |
 |---|---|---|---|---|
@@ -52,12 +43,16 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-034 | metric-comparison | med | 👎 The alignment is wrong | Root cause: each column vertically centred itself on its OWN wrapped-label height, so the big values drifted to different heights. Now all columns share one rhythm (common value/label/chip rows sized to the tallest label) and value/label/chip are centred within each column. |
 | FB-035 | process-steps | med | 👎 reimagine this slide | Reimagined: filled chip badges replaced by large accent numerals (01/02/03) over thin accent rules, then bold label + body — the typographic motif from the approved agenda/kpi-grid layouts. |
 | FB-036 | roadmap | med | 👎 The black texts have too much white space between them | Items now PACK at the minimum 0.3" rhythm under each phase band instead of being distributed across the full lane height (the distribution read as disconnected floating lines). |
-| FB-037 | matrix-2x2 | med | 👎 reimagine this slide | Reimagined: hairline MUTED cross (was heavy accent rules), quadrant labels bold and centred both ways in their cells, axis captions centred; new optional highlight: <idx> field puts the accent on at most ONE quadrant (per the FB-039 rule that matrices highlight items, not scaffolding). |
+| FB-037 | swot | med | 👎 reimagine this slide | Reimagined: hairline MUTED cross (was heavy accent rules), quadrant labels bold and centred both ways in their cells, axis captions centred; new optional highlight: <idx> field puts the accent on at most ONE quadrant (per the FB-039 rule that matrices highlight items, not scaffolding). [Component re-pointed matrix-2x2 -> swot after FB-044 deleted matrix-2x2.] |
 | FB-038 | swot | med | 👎 One item per category | IR now enforces exactly one statement per category (max_length=1 on all four quadrant lists); the single item renders at full body tier (caption-tier density compromise retired). Specimen updated. |
 | FB-039 | comparison-matrix | med | 👎 any matrix should always only highlight one or two items within the matrix not the categories so the coloring is off | Reimagined: coloured header/criteria boxes removed — options are plain bold primary text over a thin accent rule (table-slide motif), criteria plain bold text, cells plain text. New highlights: [[row, col], ...] field (max 2) renders the winning cell(s) as accent chips — the only colour in the matrix body. |
-| FB-040 | logo-wall | med | 👎 delete this one | team-grid DELETED per operator (model, layout, registry, specimen, golden, recommender). logo-wall is now the labeled-image-grid anchor; people intros fall back to card-grid. (Item retargeted to logo-wall because the validator requires a catalog component.) |
+| FB-040 | card-grid | med | 👎 delete this one | team-grid DELETED per operator (model, layout, registry, specimen, golden, recommender). logo-wall is now the labeled-image-grid anchor; people intros fall back to card-grid. (Item retargeted to logo-wall, then to card-grid after FB-046 deleted logo-wall too.) |
 | FB-041 | image-half-bleed | med | 👎 delete this one | image-full-bleed DELETED per operator; image-half-bleed is the surviving image layout and the recommender routes single images there. (Retargeted for validator.) |
 | FB-042 | image-half-bleed | med | 👎 delete this one | image-grid DELETED per operator; multi-image content routes to image-half-bleed. (Retargeted for validator.) |
+| FB-043 | this-vs-that | med | 👎 The VS a little bigger | VS stepped up again: body tier (34pt) -> header tier (42pt), still muted/bold; middle gutter widened 1.0"->1.25" so it clears the overflow check with standard insets. |
+| FB-044 | swot | med | 👎 delete this slide | matrix-2x2 DELETED per operator (model, layout, registry, specimen, golden, recommender) — one round after its FB-037 reimagining. swot is the surviving 2x2; generic axes content falls back to card-grid. (Retargeted to swot because the validator requires a catalog component.) |
+| FB-045 | comparison-matrix | med | 👎 too many colors just stick with the red and black | Option headers now render in the DEFAULT text colour instead of brand primary (the primary tint read as a third colour), and the specimen palette sets primary to the text tone — the slide is literally red (rule + highlight chips) and black (everything else). |
+| FB-046 | card-grid | med | 📝 delete this slide layout | logo-wall DELETED per operator note, closing the labeled-image-grid family. Logo content falls back to card-grid label cards in the recommender. (Retargeted for validator.) |
 
 ## Won't fix (1)
 

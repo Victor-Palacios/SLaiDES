@@ -361,7 +361,7 @@ comments:
   source: web 2026-07-04T16:13:11.736Z
   notes: Items now PACK at the minimum 0.3" rhythm under each phase band instead of being distributed across the full lane height (the distribution read as disconnected floating lines).
 - id: FB-037
-  component: matrix-2x2
+  component: swot
   family: matrix-2x2
   status: done
   severity: med
@@ -369,7 +369,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: 'Reimagined: hairline MUTED cross (was heavy accent rules), quadrant labels bold and centred both ways in their cells, axis captions centred; new optional highlight: <idx> field puts the accent on at most ONE quadrant (per the FB-039 rule that matrices highlight items, not scaffolding).'
+  notes: 'Reimagined: hairline MUTED cross (was heavy accent rules), quadrant labels bold and centred both ways in their cells, axis captions centred; new optional highlight: <idx> field puts the accent on at most ONE quadrant (per the FB-039 rule that matrices highlight items, not scaffolding). [Component re-pointed matrix-2x2 -> swot after FB-044 deleted matrix-2x2.]'
 - id: FB-038
   component: swot
   family: swot
@@ -391,7 +391,7 @@ comments:
   source: web 2026-07-04T16:13:11.736Z
   notes: 'Reimagined: coloured header/criteria boxes removed — options are plain bold primary text over a thin accent rule (table-slide motif), criteria plain bold text, cells plain text. New highlights: [[row, col], ...] field (max 2) renders the winning cell(s) as accent chips — the only colour in the matrix body.'
 - id: FB-040
-  component: logo-wall
+  component: card-grid
   family: labeled-image-grid
   status: done
   severity: med
@@ -399,7 +399,7 @@ comments:
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: team-grid DELETED per operator (model, layout, registry, specimen, golden, recommender). logo-wall is now the labeled-image-grid anchor; people intros fall back to card-grid. (Item retargeted to logo-wall because the validator requires a catalog component.)
+  notes: team-grid DELETED per operator (model, layout, registry, specimen, golden, recommender). logo-wall is now the labeled-image-grid anchor; people intros fall back to card-grid. (Item retargeted to logo-wall, then to card-grid after FB-046 deleted logo-wall too.)
 - id: FB-041
   component: image-half-bleed
   family: image-full-bleed
@@ -423,40 +423,44 @@ comments:
 - id: FB-043
   component: this-vs-that
   family: vs-badge
-  status: open
+  status: done
   severity: med
   comment: 👎 The VS a little bigger
   created: '2026-07-05'
   updated: '2026-07-05'
   source: web 2026-07-05T15:52:58.945Z
-  notes: ''
+  notes: >-
+    VS stepped up again: body tier (34pt) -> header tier (42pt), still muted/bold; middle gutter widened 1.0"->1.25" so it clears the overflow check with standard insets.
 - id: FB-044
-  component: matrix-2x2
+  component: swot
   family: matrix-2x2
-  status: open
+  status: done
   severity: med
   comment: 👎 delete this slide
   created: '2026-07-05'
   updated: '2026-07-05'
   source: web 2026-07-05T15:52:58.945Z
-  notes: ''
+  notes: >-
+    matrix-2x2 DELETED per operator (model, layout, registry, specimen, golden, recommender) — one round after its FB-037 reimagining. swot is the surviving 2x2; generic axes content falls back to card-grid. (Retargeted to swot because the validator requires a catalog component.)
 - id: FB-045
   component: comparison-matrix
   family: comparison-matrix
-  status: open
+  status: done
   severity: med
   comment: 👎 too many colors just stick with the red and black
   created: '2026-07-05'
   updated: '2026-07-05'
   source: web 2026-07-05T15:52:58.945Z
-  notes: ''
+  notes: >-
+    Option headers now render in the DEFAULT text colour instead of brand primary (the primary tint read as a third colour), and the specimen palette sets primary to the text tone — the slide is literally red (rule + highlight chips) and black (everything else).
 - id: FB-046
-  component: logo-wall
+  component: card-grid
   family: labeled-image-grid
-  status: open
+  status: done
   severity: med
   comment: 📝 delete this slide layout
   created: '2026-07-05'
   updated: '2026-07-05'
   source: web 2026-07-05T15:52:58.945Z
-  notes: ''
+  notes: >-
+    logo-wall DELETED per operator note, closing the labeled-image-grid family. Logo content falls back to card-grid label cards in the recommender. (Retargeted for validator.)

@@ -1,10 +1,10 @@
-# slidekit slide-design catalog — 33 components (22 distinct layouts)
+# slidekit slide-design catalog — 31 components (20 distinct layouts)
 
 Target: **40 slide components** (up from the 8 shipped in v1). Each component is a
 slidekit unit: one Pydantic model + one layout handler + golden test + example
 + SKILL gallery row. This file is the build blueprint for Phase 9.
 
-Honesty note: the 33 components implement **22 genuinely distinct layout skeletons** —
+Honesty note: the 31 components implement **20 genuinely distinct layout skeletons** —
 the rest are styled variants of a family anchor (same geometry, different marker / colour /
 orientation / fields). The authoritative mapping is generated in
 [LAYOUT_TAXONOMY.md](LAYOUT_TAXONOMY.md) from `src/slidekit/catalog/registry.py`.
@@ -99,7 +99,6 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 | 28 | `roadmap` | `phases[]` = {title,items[]} | phased plan across lanes |
 | 29 | `funnel` | `stages[]` = {label,value?} | narrowing stages |
 | 30 | `pyramid` | `layers[]` = {label} | layered hierarchy |
-| 31 | `matrix-2x2` | `x_label`,`y_label`,`quadrants[4]` (+`highlight`) | quadrant positioning |
 | 32 | `swot` | `strengths[]`,`weaknesses[]`,`opportunities[]`,`threats[]` (1 each) | 4-quadrant analysis |
 
 ### G. Structured relationships
@@ -112,7 +111,6 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 | # | key | required keys | use |
 |---|---|---|---|
 | 36 | ✓ `image-half-bleed` | `image`, `content[]` (+`image_side`) | image beside text |
-| 39 | ✓ `logo-wall` | `logos[]` = {image|label} | client / partner logos |
 
 ### Closing (reuse openers)
 A closing / call-to-action slide is covered by `statement` (#7), `big-number` (#5),

@@ -2,9 +2,9 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxonomy.py` — do not hand-edit. A test (`tests/test_catalog`) fails if it drifts._
 
-**33 components** implement **22 distinct layout skeletons** (families); **11** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **22 distinct layouts**.
+**31 components** implement **20 distinct layout skeletons** (families); **11** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **20 distinct layouts**.
 
-## Distinct layout families (22)
+## Distinct layout families (20)
 
 | Family | Anchor component | What the skeleton is |
 |---|---|---|
@@ -16,9 +16,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `funnel` | `funnel` | Narrowing funnel tiers. |
 | `icon-text-rows` | `icon-text-rows` | Rows of icon + text. |
 | `kpi-grid` | `kpi-grid` | A grid of KPIs (value + rule + label). |
-| `labeled-image-grid` | `logo-wall` | A wall of logos. |
 | `marker-list` | `bullet-list` | A simple list of points (no bullet glyphs — operator style rule FB-026). |
-| `matrix-2x2` | `matrix-2x2` | A 2×2 axes matrix. |
 | `process-flow` | `process-steps` | Horizontal numbered process. |
 | `pyramid` | `pyramid` | Widening pyramid tiers. |
 | `roadmap` | `roadmap` | Phased lanes with header bands. |
@@ -49,8 +47,6 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `icon-text-rows` | `icon-text-rows` | **anchor** | — |
 | `image-half-bleed` | `two-column` | variant | one column is a half-bleed image |
 | `kpi-grid` | `kpi-grid` | **anchor** | — |
-| `logo-wall` | `labeled-image-grid` | **anchor** | — |
-| `matrix-2x2` | `matrix-2x2` | **anchor** | — |
 | `metric-comparison` | `stat-callout` | variant | adds a delta chip per metric |
 | `numbered-steps` | `marker-list` | variant | numbered chips (vertical) |
 | `process-steps` | `process-flow` | **anchor** | — |

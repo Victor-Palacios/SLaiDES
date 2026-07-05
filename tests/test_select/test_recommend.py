@@ -45,7 +45,7 @@ def test_metrics_shapes():
 
 def test_matrices_and_tables():
     assert _top(swot=True) == "swot"
-    assert _top(axes=True) == "matrix-2x2"
+    assert _top(axes=True) == "card-grid"  # matrix-2x2 retired (FB-044)
     assert _top(options_criteria=True) == "comparison-matrix"
     assert _top(table=True) == "table-slide"
 
@@ -54,7 +54,7 @@ def test_image_and_people():
     # team-grid / image-full-bleed / image-grid retired (FB-040..FB-042): people
     # fall back to card-grid cards; any image count routes to image-half-bleed.
     assert _top(people=4) == "card-grid"
-    assert _top(logos=6) == "logo-wall"
+    assert _top(logos=6) == "card-grid"  # logo-wall retired (FB-046)
     assert _top(images=1) == "image-half-bleed"
     assert _top(images=4) == "image-half-bleed"
 

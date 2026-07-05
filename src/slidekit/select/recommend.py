@@ -101,7 +101,8 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
     if f.swot:
         add("swot", 0.95, "a SWOT analysis")
     elif f.axes:
-        add("matrix-2x2", 0.9, "items placed against two axes")
+        # matrix-2x2 retired (FB-044): quadrant labels fall back to peer cards.
+        add("card-grid", 0.6, "quadrant labels as peer cards (matrix-2x2 retired)")
 
     # ordered sequences
     if f.ordered and f.trend == "narrowing":
@@ -124,12 +125,12 @@ def _rules(f: ContentFeatures) -> list[Suggestion]:
         add("comparison-columns", 0.7, "two parallel content groups")
 
     # image-led (team-grid, image-full-bleed and image-grid were retired 2026-07-04
-    # per FB-040..FB-042 — image-half-bleed is the surviving image layout, and a
-    # people/team intro falls back to card-grid text cards)
+    # per FB-040..FB-042, logo-wall 2026-07-05 per FB-046 — image-half-bleed is the
+    # surviving image layout; people/logo content falls back to card-grid cards)
     if f.people >= 1:
         add("card-grid", 0.7, "people as name+role cards (team-grid retired)")
     if f.logos >= 1:
-        add("logo-wall", 0.9, "a wall of logos")
+        add("card-grid", 0.65, "logos as label cards (logo-wall retired)")
     if f.images >= 1 and not f.quote:
         add("image-half-bleed", 0.8, "an image beside supporting text")
 

@@ -702,3 +702,19 @@ Approved: kpi-grid (clears its FB-024 flag), chart-with-insight, funnel, pyramid
   images→image-half-bleed. Catalog now **33 components / 22 distinct families**.
 - Golden regen restored 21 files whose diff was node_id churn only; the 12 kept diffs are
   exactly the changed layouts + the two showcase decks that embed them.
+
+## Web feedback round 5: FB-043..FB-046 (2026-07-05, 11 marks: 7 approvals + 4 asks)
+
+- FB-043 this-vs-that: VS body→header tier (second "a little bigger" in a row — when a
+  size request repeats, take the bigger step); gutter 1.0"→1.25".
+- FB-044 matrix-2x2 DELETED — one round after its reimagining. A reimagining is a
+  pitch, not a save; the operator may still prefer zero. swot is the only 2×2 left;
+  axes-shaped content falls back to card-grid.
+- FB-045 comparison-matrix: option headers de-tinted to the default text colour and the
+  specimen palette's primary set to the text tone — the slide is literally red (rule +
+  chips) and black. Lesson: brand-primary headers count as "a colour" to the operator.
+- FB-046 logo-wall DELETED (submitted as a 📝 note, not a 👎 — read the text, not just
+  the verdict). Closes the labeled-image-grid family; logos → card-grid label cards.
+- Historical FEEDBACK items get re-pointed when their component dies (FB-037→swot,
+  FB-040→card-grid): the validator requires catalog membership, notes record the chain.
+- Catalog now **31 components / 20 distinct families**.

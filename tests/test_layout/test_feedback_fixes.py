@@ -167,11 +167,12 @@ def test_code_background_is_the_original_deep_teal():
     assert s.background == _CODE_BG
 
 
-def test_vs_text_is_body_tier():
-    """FB-032: the bare VS steps up from caption to body tier (still muted)."""
+def test_vs_text_is_header_tier():
+    """FB-032 then FB-043 ("a little bigger" twice): the bare VS lands on the
+    header tier (still muted so the numbers dominate)."""
     deck, s = _slide("25_this_vs_that")
     vs = next(n for n in s.nodes if n.text_content == "VS")
-    assert vs.size_pt == deck.theme.type_scale.body
+    assert vs.size_pt == deck.theme.type_scale.header
     assert vs.is_caption  # muted colour keeps the numbers dominant
 
 
@@ -223,18 +224,7 @@ def test_roadmap_items_pack_tight():
             assert b.rect.y - a.rect.bottom() == GAP_MIN_EMU
 
 
-def test_matrix_2x2_hairline_cross_and_single_highlight():
-    """FB-037/FB-039: muted hairline cross; colour only on the highlighted item."""
-    deck, s = _slide("35_matrix_2x2")
-    muted = deck.theme.palette.muted
-    accent = deck.theme.palette.accent
-    boxes = [n for n in s.nodes if n.node_type == "box"]
-    assert boxes and all(b.fill_color == muted for b in boxes)  # cross is quiet
-    quads = _by_prefix(s, "mx_q")
-    assert all(n.align == "center" for n in quads)
-    highlighted = [n for n in quads if n.text_color == accent]
-    assert len(highlighted) == 1  # exactly the specimen's highlight: 0
-    assert highlighted[0].text_content == "Quick wins"
+# (the FB-037 matrix-2x2 test was removed with the layout itself — FB-044)
 
 
 def test_swot_rejects_multiple_items_per_category():
@@ -261,6 +251,8 @@ def test_comparison_matrix_highlights_cells_not_categories():
     assert all(b.fill_color == accent for b in boxes)
     heads = _by_prefix(s, "cm_head")
     crits = _by_prefix(s, "cm_crit")
-    # category text is plain (primary headers / default criteria) — never boxed
+    # category text is plain DEFAULT-colour text — never boxed, never tinted
+    # (FB-045: "too many colors — just stick with the red and black")
     assert heads and crits
     assert all(n.node_type == "text" for n in heads + crits)
+    assert all(n.text_color is None for n in heads + crits)

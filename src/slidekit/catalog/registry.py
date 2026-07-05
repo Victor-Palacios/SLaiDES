@@ -172,10 +172,8 @@ _META: dict[str, dict] = {
         purpose="Widening pyramid tiers.", use_when="A hierarchy built on a broad base.",
         capacity=(3, 6), content_shape="ordered tiers that widen"),
 
-    # matrices
-    "matrix-2x2": dict(family="matrix-2x2", role="anchor",
-        purpose="A 2×2 axes matrix.", use_when="Plotting items against two axes / four quadrants.",
-        content_shape="four quadrants (+ axis labels)"),
+    # matrices (matrix-2x2 was retired 2026-07-05 per operator feedback FB-044;
+    # swot is the surviving 2×2 and generic axes content falls back to card-grid)
     "swot": dict(family="swot", role="anchor",
         purpose="A SWOT 2×2 — one defining statement per quadrant (FB-038).",
         use_when="A SWOT analysis specifically.",
@@ -185,13 +183,11 @@ _META: dict[str, dict] = {
         use_when="Comparing many options across criteria.",
         content_shape="row headers × column headers + cells (+ up to 2 highlight cells)"),
 
-    # labeled image grid (team-grid was retired 2026-07-04 per operator feedback
-    # FB-040; logo-wall is the family's surviving layout. image-full-bleed and
-    # image-grid were retired the same day per FB-041/FB-042 — image-half-bleed in
-    # the two-column family is the remaining image layout.)
-    "logo-wall": dict(family="labeled-image-grid", role="anchor",
-        purpose="A wall of logos.", use_when="Showing customer/partner logos.",
-        capacity=(3, 12), content_shape="logo tiles {image|label}"),
+    # (The labeled-image-grid family is closed: team-grid retired 2026-07-04 per
+    # FB-040 and logo-wall 2026-07-05 per FB-046. image-full-bleed and image-grid
+    # were retired 2026-07-04 per FB-041/FB-042 — image-half-bleed in the
+    # two-column family is the remaining image layout; logo/people content falls
+    # back to card-grid.)
 
 }
 

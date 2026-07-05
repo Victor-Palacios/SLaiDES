@@ -1,7 +1,9 @@
 version: 1
+# Two-colour palette (FB-045: "too many colors just stick with the red and black"):
+# primary matches the text tone so the whole slide reads red + black.
 theme:
   palette:
-    primary: "#1B4F8A"
+    primary: "#1A1A2E"
     surface: "#FFFFFF"
     accent: "#E84545"
     text: "#1A1A2E"

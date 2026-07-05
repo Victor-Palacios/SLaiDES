@@ -64,17 +64,6 @@
       "status": "approved",
       "date": "2026-07-04"
     },
-    "matrix-2x2": {
-      "status": "flagged",
-      "date": "2026-07-05",
-      "comment": "delete this slide",
-      "before": {
-        "width_px": 1280.0,
-        "height_px": 720.0,
-        "background": "#FFFFFF",
-        "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#22223B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">Effort vs Impact</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:1184.00px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Impact →</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:564.80px;width:1184.00px;height:40.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0 9px;text-align:center;\">Effort →</div>\n    <div class=\"node node-box\" style=\"left:638.56px;top:226.24px;width:2.88px;height:309.76px;background:#8A8A9A;\"></div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:379.68px;width:1184.00px;height:2.88px;background:#8A8A9A;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:255.84px;width:560.32px;height:64.00px;color:#4A7C59;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Quick wins</div>\n    <div class=\"node node-text\" style=\"left:671.68px;top:255.84px;width:560.32px;height:64.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Major projects</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:442.40px;width:560.32px;height:64.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Fill-ins</div>\n    <div class=\"node node-text\" style=\"left:671.68px;top:442.40px;width:560.32px;height:64.00px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0 9px;text-align:center;\">Thankless tasks</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
-      }
-    },
     "metric-comparison": {
       "status": "approved",
       "date": "2026-07-05"

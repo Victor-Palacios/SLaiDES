@@ -424,15 +424,7 @@ class PyramidSlide(BaseModel):
     layers: list[PyramidLayer] = Field(min_length=1)
 
 
-class Matrix2x2Slide(BaseModel):
-    component: Literal["matrix-2x2"]
-    title: Optional[str] = None
-    x_label: str
-    y_label: str
-    quadrants: list[str] = Field(min_length=4, max_length=4)
-    # At most ONE quadrant may carry the accent colour (FB-037/FB-039: matrices
-    # highlight items, never scaffolding/categories). Index into `quadrants`.
-    highlight: Optional[int] = Field(default=None, ge=0, le=3)
+# Matrix2x2Slide was retired 2026-07-05 per operator feedback FB-044.
 
 
 class SwotSlide(BaseModel):
@@ -448,7 +440,7 @@ class SwotSlide(BaseModel):
 
 # ── Phase 9: structured relationships & visual (catalog #33, #35, #37–40) ────
 # (team-grid, image-full-bleed and image-grid were retired 2026-07-04 per operator
-# feedback FB-040..FB-042.)
+# feedback FB-040..FB-042; logo-wall followed 2026-07-05 per FB-046.)
 
 
 class ComparisonMatrixSlide(BaseModel):
@@ -460,17 +452,6 @@ class ComparisonMatrixSlide(BaseModel):
     # Up to two [row, col] cells rendered as accent chips — the ONLY colour in the
     # matrix body (FB-039: highlight one or two items, never the categories).
     highlights: list[tuple[int, int]] = Field(default_factory=list, max_length=2)
-
-
-class LogoMark(BaseModel):
-    label: Optional[str] = None
-    image: Optional[ImageSlot] = None
-
-
-class LogoWallSlide(BaseModel):
-    component: Literal["logo-wall"]
-    title: Optional[str] = None
-    logos: list[LogoMark] = Field(min_length=1)
 
 
 Slide = Annotated[
@@ -504,10 +485,8 @@ Slide = Annotated[
         RoadmapSlide,
         FunnelSlide,
         PyramidSlide,
-        Matrix2x2Slide,
         SwotSlide,
         ComparisonMatrixSlide,
-        LogoWallSlide,
     ],
     Field(discriminator="component"),
 ]

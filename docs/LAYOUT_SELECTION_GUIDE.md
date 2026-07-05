@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_selection_guide.py` — do not hand-edit. The machine-readable form is `slidekit catalog --json`. A test (`tests/test_catalog`) fails if it drifts._
 
-Pick a component per slide from its **content shape** — no rendering or vision needed. There are **33 components** across **22 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
+Pick a component per slide from its **content shape** — no rendering or vision needed. There are **31 components** across **20 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
 
 ## agenda — Numbered agenda / table of contents.
 
@@ -88,13 +88,6 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - content shape: several {value, label} KPIs in a grid
   - required fields: `kpis`
 
-## labeled-image-grid — A wall of logos.
-
-- **`logo-wall`** · capacity 3–12
-  - use when: Showing customer/partner logos.
-  - content shape: logo tiles {image|label}
-  - required fields: `logos`
-
 ## marker-list — A simple list of points (no bullet glyphs — operator style rule FB-026).
 
 - **`bullet-list`** · capacity 2–8
@@ -105,13 +98,6 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - use when: Sequential steps, read top-down.
   - content shape: ordered {title, body} steps
   - required fields: `steps`
-
-## matrix-2x2 — A 2×2 axes matrix.
-
-- **`matrix-2x2`**
-  - use when: Plotting items against two axes / four quadrants.
-  - content shape: four quadrants (+ axis labels)
-  - required fields: `x_label`, `y_label`, `quadrants`
 
 ## process-flow — Horizontal numbered process.
 

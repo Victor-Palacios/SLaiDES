@@ -2,7 +2,7 @@
 
 _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do not hand-edit; run the script and commit. A single-component **specimen** is one slide of just its component; a **showcase** is a multi-slide composition. A test (`tests/test_examples_index`) fails if this file drifts from the decks._
 
-**37** decks · **33** specimens · **4** showcases · **60** slides total
+**35** decks · **31** specimens · **4** showcases · **58** slides total
 
 | Example | Slides | Kind | Components |
 |---|--:|---|---|
@@ -37,10 +37,8 @@ _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do no
 | `32_roadmap.yaml` | 1 | specimen | roadmap |
 | `33_funnel.yaml` | 1 | specimen | funnel |
 | `34_pyramid.yaml` | 1 | specimen | pyramid |
-| `35_matrix_2x2.yaml` | 1 | specimen | matrix-2x2 |
 | `36_swot.yaml` | 1 | specimen | swot |
 | `37_comparison_matrix.yaml` | 1 | specimen | comparison-matrix |
-| `41_logo_wall.yaml` | 1 | specimen | logo-wall |
 | `agents-in-ai.yaml` | 10 | showcase | title-slide → icon-text-rows → comparison-columns → card-grid → stat-callout → timeline → card-grid → bullet-list → comparison-columns → title-slide |
 | `demo-5.yaml` | 5 | showcase | title-slide → bullet-list → stat-callout → icon-text-rows → comparison-columns |
 

@@ -37,7 +37,7 @@
           "rect": {
             "x": 457200,
             "y": 2776728,
-            "w": 4907280,
+            "w": 4792980,
             "h": 914400
           },
           "text_content": "3 wks",
@@ -61,7 +61,7 @@
           "rect": {
             "x": 457200,
             "y": 3965448,
-            "w": 4907280,
+            "w": 4792980,
             "h": 518159
           },
           "text_content": "Cloud time-to-launch",
@@ -83,9 +83,9 @@
           "node_id": "vs_value_256",
           "node_type": "text",
           "rect": {
-            "x": 6827520,
+            "x": 6941820,
             "y": 2776728,
-            "w": 4907280,
+            "w": 4792980,
             "h": 914400
           },
           "text_content": "6 mo",
@@ -107,9 +107,9 @@
           "node_id": "vs_label_257",
           "node_type": "text",
           "rect": {
-            "x": 6827520,
+            "x": 6941820,
             "y": 3965448,
-            "w": 4907280,
+            "w": 4792980,
             "h": 518159
           },
           "text_content": "On-prem time-to-launch",
@@ -131,22 +131,22 @@
           "node_id": "vs_text_258",
           "node_type": "text",
           "rect": {
-            "x": 5638800,
-            "y": 3371088,
-            "w": 914400,
-            "h": 518159
+            "x": 5524500,
+            "y": 3310127,
+            "w": 1143000,
+            "h": 640080
           },
           "text_content": "VS",
           "lines": [
             {
               "text": "VS",
-              "width_emu": 576014,
-              "height_emu": 518160,
+              "width_emu": 711547,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "is_caption": true,
