@@ -1,0 +1,158 @@
+version: 1
+theme:
+  palette:
+    primary: "#19323C"
+    surface: "#FFFFFF"
+    accent: "#CC785C"
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  type_scale:
+    title: 60
+    header: 42
+    body: 34
+    caption: 25
+  font: arial
+  motif: minimal
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "Claude Code"
+    subtitle: "A field guide for data scientists"
+
+  - component: agenda
+    title: "What We Will Cover"
+    items:
+      - "What Claude Code is"
+      - "How it differs from chat"
+      - "Getting set up"
+      - "Everyday data science workflows"
+      - "Habits that make it shine"
+
+  - component: definition
+    term: "Claude Code"
+    definition: "A terminal-based AI agent that reads your project, writes and runs code, inspects the results, and iterates until the job is done."
+
+  - component: this-vs-that
+    title: "Chat vs Agent"
+    left:
+      value: "Chat"
+      label: "You ferry code around"
+    right:
+      value: "Agent"
+      label: "It works in your repo"
+
+  - component: icon-text-rows
+    title: "What It Can Do in Your Project"
+    rows:
+      - icon: eye
+        heading: "Explore"
+        body: "Read files, schemas, and notebooks."
+      - icon: bolt
+        heading: "Execute"
+        body: "Run scripts, queries, and tests."
+      - icon: loop
+        heading: "Iterate"
+        body: "Check outputs and fix its own errors."
+
+  - component: numbered-steps
+    title: "Set Up in Three Steps"
+    steps:
+      - title: "Install"
+        body: "npm install -g @anthropic-ai/claude-code"
+      - title: "Open your project"
+        body: "cd into the repo and run claude."
+      - title: "Ask for an analysis"
+        body: "Describe the outcome; it plans the code."
+
+  - component: code
+    title: "a first session"
+    chrome: true
+    code: |
+      $ cd sales-analysis && claude
+
+      > Profile sales.csv: nulls, dtypes,
+        outliers. Save it to profile.md.
+
+      Reading sales.csv (1.2M rows)...
+      Running profiling script...
+      Wrote profile.md: 3 findings.
+
+  - component: card-grid
+    title: "Everyday Workflows"
+    cards:
+      - icon: chart-up
+        title: "EDA"
+        body: "Profile new data in minutes."
+      - icon: wrench
+        title: "Cleaning"
+        body: "Fix types, nulls, duplicates."
+      - icon: target
+        title: "Modeling"
+        body: "Fast first baselines."
+      - icon: star
+        title: "Reporting"
+        body: "Plots and write-ups."
+
+  - component: process-steps
+    title: "How It Works on a Task"
+    steps:
+      - label: "Explore"
+        body: "Scans the data and code."
+      - label: "Plan"
+        body: "Proposes an approach."
+      - label: "Execute"
+        body: "Writes and runs the code."
+      - label: "Verify"
+        body: "Checks results, then iterates."
+
+  - component: nested-circles
+    title: "One Prompt, a Whole Pipeline"
+    stages:
+      - value: ">10M"
+        label: "Raw rows"
+      - value: "1.2M"
+        label: "Clean rows"
+      - value: "100K"
+        label: "Sample"
+
+  - component: two-panel-list
+    title: "A Typical Day, Reworked"
+    left:
+      title: "Before"
+      items:
+        - "Boilerplate pandas by hand"
+        - "Stack Overflow detours"
+        - "Stale, undocumented notebooks"
+    right:
+      title: "With Claude Code"
+      items:
+        - "Describe the outcome instead"
+        - "Errors debugged in place"
+        - "Analysis committed with notes"
+
+  - component: table-slide
+    title: "Commands Worth Knowing"
+    headers: ["Command", "What it does"]
+    rows:
+      - ["claude", "Start a session"]
+      - ["/init", "Write CLAUDE.md"]
+      - ["/compact", "Trim the context"]
+      - ["claude -p", "One-shot mode"]
+
+  - component: bullet-list
+    title: "Habits That Make It Shine"
+    items:
+      - "Keep a CLAUDE.md with data caveats."
+      - "Ask for a plan before a big analysis."
+      - "Have it verify outputs, not just run."
+      - "Commit small, reviewable steps."
+
+  - component: question
+    question: "What would you analyze if the boilerplate wrote itself?"
+
+  - component: title-slide
+    title: "Start Today"
+    subtitle: "Open a terminal and ask"

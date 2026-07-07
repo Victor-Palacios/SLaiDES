@@ -771,3 +771,17 @@ layout like it. First NEW skeleton since the review era began; first with a curv
   overlaps the value box by exactly the emitters' two text insets — the perceived gap
   was dead inset air, not geometry. When the operator supplies numbers, use the
   numbers; stop translating taste into type-scale tiers.
+
+## 2026-07-07 — First commissioned deck: "Claude Code for Data Scientists"
+- Operator asked for a 15-page Claude Code guide for data scientists, as a PDF in the
+  repo. Authored `examples/claude-code-for-data-scientists.yaml` (15 slides spanning 14
+  distinct components — title, agenda, definition, this-vs-that, icon-text-rows,
+  numbered-steps, code, card-grid, process-steps, nested-circles, two-panel-list,
+  table-slide, bullet-list, question) → `examples/pdf/claude-code-for-data-scientists.pdf`.
+- The deterministic loop earned its keep: the first draft had 11 E_OVERFLOW/E_MARGIN
+  errors; every fix was a copy tightening (shorter labels, narrower code lines, one-word
+  circle label), zero geometry changes. Lint → shorten → re-lint until 0 errors, then a
+  full-deck HTML screenshot pass confirmed all 15 pages visually.
+- Convention reaffirmed: full decks live as `examples/<stem>.yaml` +
+  `examples/pdf/<stem>.pdf` (the page-count guard test enforces the pairing), and any
+  example change requires `build_examples_index.py` + `build_combined_pdf.py` regens.
