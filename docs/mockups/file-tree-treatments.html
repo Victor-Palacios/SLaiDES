@@ -1,0 +1,184 @@
+<title>File-tree slide — 3 treatments</title>
+<style>
+  :root {
+    --page-bg: #f3f4f6;
+    --page-fg: #1a1a2e;
+    --page-muted: #6b7280;
+    --card-shadow: 0 10px 30px rgba(0,0,0,.18);
+    --hairline: #e2e5ea;
+
+    /* slidekit deck palette (examples/04) */
+    --primary: #1A237E;
+    --surface: #FFFFFF;
+    --accent:  #00BCD4;   /* cyan accent (used on dark grounds) */
+    --accent-ink: #00838F; /* darkened accent for legibility on white */
+    --text:    #212121;
+    --muted:   #9E9E9E;
+
+    /* code-panel tokens */
+    --panel:   #0C1A1C;   /* deep-teal near-black panel */
+    --panel-fg:#D4D4D4;   /* file / default foreground */
+    --guide:   #55707A;   /* dimmed tree connectors on dark */
+    --guide-lite:#B4C2C7; /* dimmed connectors on light */
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --page-bg:#15171c; --page-fg:#e8eaed; --page-muted:#9aa0a6; --hairline:#2a2d34; }
+  }
+  :root[data-theme="dark"]  { --page-bg:#15171c; --page-fg:#e8eaed; --page-muted:#9aa0a6; --hairline:#2a2d34; }
+  :root[data-theme="light"] { --page-bg:#f3f4f6; --page-fg:#1a1a2e; --page-muted:#6b7280; --hairline:#e2e5ea; }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 24px 64px;
+    background: var(--page-bg); color: var(--page-fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+  header.intro { margin-bottom: 36px; }
+  header.intro h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: -.01em; }
+  header.intro p { margin: 0; color: var(--page-muted); max-width: 60ch; }
+  header.intro code { font-family: ui-monospace, "SF Mono", "Courier New", monospace; font-size: .92em;
+    background: color-mix(in srgb, var(--page-fg) 8%, transparent); padding: 1px 5px; border-radius: 4px; }
+
+  .variant { margin-bottom: 44px; }
+  .variant-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+  .badge { flex: none; width: 26px; height: 26px; border-radius: 7px; display: grid; place-items: center;
+    background: var(--primary); color: #fff; font-weight: 700; font-size: 14px; }
+  .variant-head h2 { font-size: 18px; margin: 0; letter-spacing: -.01em; }
+  .variant-head .note { color: var(--page-muted); font-size: 14px; margin: 0; }
+
+  /* the slide canvas: fixed 16:9, its look is intrinsic (not theme-reactive) */
+  .slide {
+    aspect-ratio: 16 / 9; width: 100%; border-radius: 12px; overflow: hidden;
+    box-shadow: var(--card-shadow); position: relative;
+    padding: 5.2% 6%;
+    display: flex; flex-direction: column;
+  }
+  .slide .s-title { font-weight: 800; letter-spacing: -.015em; line-height: 1.05;
+    font-size: clamp(20px, 3.4vw, 40px); }
+
+  /* the monospace tree */
+  .tree { font-family: ui-monospace, "SF Mono", "Courier New", Courier, monospace;
+    font-size: clamp(12px, 1.85vw, 22px); line-height: 1.7; white-space: pre; }
+  .tree .g  { color: var(--guide); }          /* connectors on dark */
+  .tree .gl { color: var(--guide-lite); }     /* connectors on light */
+  .tree .dir  { font-weight: 700; }
+  .tree .file { }
+
+  /* ── A: rounded dark card ─────────────────────────── */
+  .slide.a { background: var(--surface); }
+  .slide.a .s-title { color: var(--primary); margin-bottom: 3.2%; }
+  .slide.a .panel { flex: 1; background: var(--panel); border-radius: 16px;
+    padding: 3% 3.4%; display: flex; align-items: center; }
+  .slide.a .tree .dir  { color: var(--accent); }
+  .slide.a .tree .file { color: var(--panel-fg); }
+
+  /* ── B: full-bleed dark ───────────────────────────── */
+  .slide.b { background: var(--panel); }
+  .slide.b .s-title { color: #F0F3F4; margin-bottom: 4%; }
+  .slide.b .tree .dir  { color: var(--accent); }
+  .slide.b .tree .file { color: var(--panel-fg); }
+
+  /* ── C: light / minimal ───────────────────────────── */
+  .slide.c { background: var(--surface); }
+  .slide.c .s-title { color: var(--text); margin-bottom: 4%; }
+  .slide.c .tree .dir  { color: var(--accent-ink); }
+  .slide.c .tree .file { color: var(--text); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 12px; font-size: 13px; color: var(--page-muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+</style>
+
+<div class="wrap">
+  <header class="intro">
+    <h1>New <code>file-tree</code> slide type — three treatments</h1>
+    <p>Same content, rendered the way slidekit would. Connectors (<code>├─ └─ │</code>) are drawn
+    automatically and always aligned; folders and files are color-coded; the grey subtitle is gone.
+    Pick the one you like and I'll build it.</p>
+  </header>
+
+  <!-- A -->
+  <section class="variant">
+    <div class="variant-head">
+      <span class="badge">A</span>
+      <div>
+        <h2>Rounded dark card</h2>
+        <p class="note">Title on white; tree in a rounded near-black card. Closest to your screenshot, cleaner.</p>
+      </div>
+    </div>
+    <div class="slide a">
+      <div class="s-title">Final folder shape</div>
+      <div class="panel">
+        <div class="tree"><span class="dir">simple-eda-project/</span>
+<span class="g">├─ </span><span class="dir">src/</span>
+<span class="g">│  └─ </span><span class="dir">simple_eda/</span>
+<span class="g">│     ├─ </span><span class="file">__init__.py</span>
+<span class="g">│     └─ </span><span class="file">core.py</span>
+<span class="g">├─ </span><span class="file">README.md</span>
+<span class="g">├─ </span><span class="file">pyproject.toml</span>
+<span class="g">└─ </span><span class="file">LICENSE</span></div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i class="sw" style="background:#00BCD4"></i> folders — accent + bold</span>
+      <span><i class="sw" style="background:#D4D4D4"></i> files — light</span>
+      <span><i class="sw" style="background:#55707A"></i> connectors — dimmed</span>
+    </div>
+  </section>
+
+  <!-- B -->
+  <section class="variant">
+    <div class="variant-head">
+      <span class="badge">B</span>
+      <div>
+        <h2>Full-bleed dark</h2>
+        <p class="note">Edge-to-edge near-black, like the existing <code>code</code> slide. No emitter changes needed.</p>
+      </div>
+    </div>
+    <div class="slide b">
+      <div class="s-title">Final folder shape</div>
+      <div class="tree"><span class="dir">simple-eda-project/</span>
+<span class="g">├─ </span><span class="dir">src/</span>
+<span class="g">│  └─ </span><span class="dir">simple_eda/</span>
+<span class="g">│     ├─ </span><span class="file">__init__.py</span>
+<span class="g">│     └─ </span><span class="file">core.py</span>
+<span class="g">├─ </span><span class="file">README.md</span>
+<span class="g">├─ </span><span class="file">pyproject.toml</span>
+<span class="g">└─ </span><span class="file">LICENSE</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="sw" style="background:#00BCD4"></i> folders — accent + bold</span>
+      <span><i class="sw" style="background:#D4D4D4"></i> files — light</span>
+      <span><i class="sw" style="background:#55707A"></i> connectors — dimmed</span>
+    </div>
+  </section>
+
+  <!-- C -->
+  <section class="variant">
+    <div class="variant-head">
+      <span class="badge">C</span>
+      <div>
+        <h2>Light / minimal</h2>
+        <p class="note">Tree on the normal white surface — most "presentation-clean", furthest from the screenshot.</p>
+      </div>
+    </div>
+    <div class="slide c">
+      <div class="s-title">Final folder shape</div>
+      <div class="tree"><span class="dir">simple-eda-project/</span>
+<span class="gl">├─ </span><span class="dir">src/</span>
+<span class="gl">│  └─ </span><span class="dir">simple_eda/</span>
+<span class="gl">│     ├─ </span><span class="file">__init__.py</span>
+<span class="gl">│     └─ </span><span class="file">core.py</span>
+<span class="gl">├─ </span><span class="file">README.md</span>
+<span class="gl">├─ </span><span class="file">pyproject.toml</span>
+<span class="gl">└─ </span><span class="file">LICENSE</span></div>
+    </div>
+    <div class="legend">
+      <span><i class="sw" style="background:#00838F"></i> folders — deep teal + bold</span>
+      <span><i class="sw" style="background:#212121"></i> files — dark text</span>
+      <span><i class="sw" style="background:#B4C2C7"></i> connectors — thin guides</span>
+    </div>
+  </section>
+</div>
