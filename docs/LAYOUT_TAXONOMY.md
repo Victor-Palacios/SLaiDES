@@ -2,9 +2,9 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxonomy.py` — do not hand-edit. A test (`tests/test_catalog`) fails if it drifts._
 
-**29 components** implement **21 distinct layout skeletons** (families); **8** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **21 distinct layouts**.
+**30 components** implement **22 distinct layout skeletons** (families); **8** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **22 distinct layouts**.
 
-## Distinct layout families (21)
+## Distinct layout families (22)
 
 | Family | Anchor component | What the skeleton is |
 |---|---|---|
@@ -13,6 +13,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `code-block` | `code` | A dark terminal/IDE-style code block. |
 | `comparison-matrix` | `comparison-matrix` | An options × criteria grid; 1–2 winning cells highlighted (FB-039). |
 | `emphasis-stack` | `section-divider` | Section break with number + title. |
+| `file-tree` | `file-tree` | A directory/file tree in a rounded dark panel (folders vs files colour-coded). |
 | `funnel` | `funnel` | Narrowing funnel tiers. |
 | `icon-text-rows` | `icon-text-rows` | Rows of icon + text. |
 | `kpi-grid` | `kpi-grid` | A grid of KPIs (value + rule + label). |
@@ -43,6 +44,7 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `comparison-columns` | `two-column` | **anchor** | — |
 | `comparison-matrix` | `comparison-matrix` | **anchor** | — |
 | `definition` | `emphasis-stack` | variant | accent term + definition body |
+| `file-tree` | `file-tree` | **anchor** | — |
 | `funnel` | `funnel` | **anchor** | — |
 | `icon-text-rows` | `icon-text-rows` | **anchor** | — |
 | `image-half-bleed` | `two-column` | variant | one column is a half-bleed image |

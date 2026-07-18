@@ -97,9 +97,10 @@ def _node_html(node: "ResolvedNode", palette) -> str:
         # Boxes are first-class content (accent bars, markers, bar-chart bars, the VS
         # badge, code window dots). Dropping them made the preview lie about the slide
         # — operator feedback FB-021/FB-023 traced back to exactly that.
+        radius = f"border-radius:{_px(node.corner_radius)};" if node.corner_radius else ""
         style = (
             f"left:{left};top:{top};width:{width};height:{height};"
-            f"background:{node.fill_color or palette.primary};"
+            f"background:{node.fill_color or palette.primary};{radius}"
         )
         return f'    <div class="node node-box{chrome_cls}" style="{style}"></div>'
 

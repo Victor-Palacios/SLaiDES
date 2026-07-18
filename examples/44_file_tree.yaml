@@ -1,0 +1,23 @@
+version: 1
+theme:
+  palette:
+    primary: "#1A237E"
+    surface: "#FFFFFF"
+    accent: "#00BCD4"
+    text: "#212121"
+    muted: "#9E9E9E"
+  font: arial
+page_numbers:
+  enabled: false
+slides:
+  - component: file-tree
+    title: "Final folder shape"
+    root: "simple-eda-project/"
+    entries:
+      - {name: "src/", depth: 0}
+      - {name: "simple_eda/", depth: 1}
+      - {name: "__init__.py", depth: 2}
+      - {name: "core.py", depth: 2}
+      - {name: "README.md", depth: 0}
+      - {name: "pyproject.toml", depth: 0}
+      - {name: "LICENSE", depth: 0}

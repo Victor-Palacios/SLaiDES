@@ -283,6 +283,20 @@ class CodeSlide(BaseModel):
     chrome: bool = True  # show the window traffic-light dots
 
 
+class FileTreeEntry(BaseModel):
+    name: str  # e.g. "src/", "core.py" — a trailing "/" marks a directory
+    depth: int = Field(default=0, ge=0)  # 0 = direct child of root; nesting level
+    # None → inferred from the name (trailing "/" = dir, else file).
+    kind: Optional[Literal["dir", "file"]] = None
+
+
+class FileTreeSlide(BaseModel):
+    component: Literal["file-tree"]
+    title: Optional[str] = None  # e.g. "Final folder shape" (on the light surface)
+    root: str  # the top folder line, drawn with no connector, e.g. "simple-eda-project/"
+    entries: list[FileTreeEntry] = Field(min_length=1)
+
+
 class Step(BaseModel):
     title: str
     body: str
@@ -473,6 +487,7 @@ Slide = Annotated[
         QuestionSlide,
         BulletListSlide,
         CodeSlide,
+        FileTreeSlide,
         NumberedStepsSlide,
         TwoPanelListSlide,
         ThisVsThatSlide,

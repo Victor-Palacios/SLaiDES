@@ -111,7 +111,11 @@ def _draw_node(c, node: "ResolvedNode", palette, page_h: float) -> None:
 
     if node.node_type == "box":
         c.setFillColorRGB(*_rgb(node.fill_color or palette.primary))
-        c.rect(x, top - h, w, h, stroke=0, fill=1)
+        if node.corner_radius:
+            radius = min(node.corner_radius / _EMU_PER_PT, w / 2, h / 2)
+            c.roundRect(x, top - h, w, h, radius, stroke=0, fill=1)
+        else:
+            c.rect(x, top - h, w, h, stroke=0, fill=1)
 
     elif node.node_type == "ellipse":
         # Filled ellipse inscribed in the node rect (nested-circles funnel).

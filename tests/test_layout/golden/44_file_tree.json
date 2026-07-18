@@ -1,0 +1,441 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": null,
+      "component": "file-tree",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_1",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Final folder shape",
+          "lines": [
+            {
+              "text": "Final folder shape",
+              "width_emu": 4564373,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#1A237E"
+        },
+        {
+          "node_id": "tree_card_2",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 11277600,
+            "h": 4261104
+          },
+          "group_id": "filetree",
+          "fill_color": "#0C1A1C",
+          "corner_radius": 128016
+        },
+        {
+          "node_id": "tree_name_3",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 1819656,
+            "w": 3947773,
+            "h": 396240
+          },
+          "text_content": "simple-eda-project/",
+          "lines": [
+            {
+              "text": "simple-eda-project/",
+              "width_emu": 3764893,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#00BCD4"
+        },
+        {
+          "node_id": "tree_pfx_4",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 2215896,
+            "w": 777337,
+            "h": 396240
+          },
+          "text_content": "\u251c\u2500 ",
+          "lines": [
+            {
+              "text": "\u251c\u2500 ",
+              "width_emu": 594457,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_5",
+          "node_type": "text",
+          "rect": {
+            "x": 1417417,
+            "y": 2215896,
+            "w": 975489,
+            "h": 396240
+          },
+          "text_content": "src/",
+          "lines": [
+            {
+              "text": "src/",
+              "width_emu": 792609,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#00BCD4"
+        },
+        {
+          "node_id": "tree_pfx_6",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 2612136,
+            "w": 1371793,
+            "h": 396240
+          },
+          "text_content": "\u2502  \u2514\u2500 ",
+          "lines": [
+            {
+              "text": "\u2502  \u2514\u2500 ",
+              "width_emu": 1188913,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_7",
+          "node_type": "text",
+          "rect": {
+            "x": 2011873,
+            "y": 2612136,
+            "w": 2362555,
+            "h": 396240
+          },
+          "text_content": "simple_eda/",
+          "lines": [
+            {
+              "text": "simple_eda/",
+              "width_emu": 2179675,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#00BCD4"
+        },
+        {
+          "node_id": "tree_pfx_8",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 3008376,
+            "w": 1966250,
+            "h": 396240
+          },
+          "text_content": "\u2502     \u251c\u2500 ",
+          "lines": [
+            {
+              "text": "\u2502     \u251c\u2500 ",
+              "width_emu": 1783370,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_9",
+          "node_type": "text",
+          "rect": {
+            "x": 2606330,
+            "y": 3008376,
+            "w": 2362555,
+            "h": 396240
+          },
+          "text_content": "__init__.py",
+          "lines": [
+            {
+              "text": "__init__.py",
+              "width_emu": 2179675,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "tree_pfx_10",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 3404616,
+            "w": 1966250,
+            "h": 396240
+          },
+          "text_content": "\u2502     \u2514\u2500 ",
+          "lines": [
+            {
+              "text": "\u2502     \u2514\u2500 ",
+              "width_emu": 1783370,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_11",
+          "node_type": "text",
+          "rect": {
+            "x": 2606330,
+            "y": 3404616,
+            "w": 1569946,
+            "h": 396240
+          },
+          "text_content": "core.py",
+          "lines": [
+            {
+              "text": "core.py",
+              "width_emu": 1387066,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "tree_pfx_12",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 3800856,
+            "w": 777337,
+            "h": 396240
+          },
+          "text_content": "\u251c\u2500 ",
+          "lines": [
+            {
+              "text": "\u251c\u2500 ",
+              "width_emu": 594457,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_13",
+          "node_type": "text",
+          "rect": {
+            "x": 1417417,
+            "y": 3800856,
+            "w": 1966250,
+            "h": 396240
+          },
+          "text_content": "README.md",
+          "lines": [
+            {
+              "text": "README.md",
+              "width_emu": 1783370,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "tree_pfx_14",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 4197096,
+            "w": 777337,
+            "h": 396240
+          },
+          "text_content": "\u251c\u2500 ",
+          "lines": [
+            {
+              "text": "\u251c\u2500 ",
+              "width_emu": 594457,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_15",
+          "node_type": "text",
+          "rect": {
+            "x": 1417417,
+            "y": 4197096,
+            "w": 2957011,
+            "h": 396240
+          },
+          "text_content": "pyproject.toml",
+          "lines": [
+            {
+              "text": "pyproject.toml",
+              "width_emu": 2774131,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "tree_pfx_16",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 4593336,
+            "w": 777337,
+            "h": 396240
+          },
+          "text_content": "\u2514\u2500 ",
+          "lines": [
+            {
+              "text": "\u2514\u2500 ",
+              "width_emu": 594457,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_17",
+          "node_type": "text",
+          "rect": {
+            "x": 1417417,
+            "y": 4593336,
+            "w": 1569946,
+            "h": 396240
+          },
+          "text_content": "LICENSE",
+          "lines": [
+            {
+              "text": "LICENSE",
+              "width_emu": 1387066,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#D4D4D4"
+        }
+      ],
+      "chrome": []
+    }
+  ]
+}

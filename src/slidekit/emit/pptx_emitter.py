@@ -109,9 +109,18 @@ def _emit_box(slide, node: "ResolvedNode", palette, shape=None) -> None:
     (ellipse nodes pass OVAL). Fill comes from node.fill_color (a literal hex
     resolved from a palette role at layout time); falls back to the theme primary."""
     rect = node.rect
+    # A box with a corner_radius becomes a rounded rectangle (e.g. the file-tree
+    # panel). The ellipse path passes its own shape and ignores the radius.
+    if shape is None and node.corner_radius:
+        shape = MSO_SHAPE.ROUNDED_RECTANGLE
     shape = slide.shapes.add_shape(
         shape or MSO_SHAPE.RECTANGLE, Emu(rect.x), Emu(rect.y), Emu(rect.w), Emu(rect.h)
     )
+    if node.corner_radius and shape.adjustments:
+        # PowerPoint's rounded-rect adjustment is the radius as a fraction of the
+        # shorter side (0–0.5).
+        short = min(rect.w, rect.h) or 1
+        shape.adjustments[0] = min(0.5, node.corner_radius / short)
     hex_color = node.fill_color or palette.primary
     r, g, b = _hex_to_rgb(hex_color)
     shape.fill.solid()

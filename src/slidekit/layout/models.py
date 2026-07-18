@@ -67,6 +67,10 @@ class ResolvedNode:
     # The rect stays the geometry contract; align only affects glyph placement
     # within it, identically in every emitter.
     align: Optional[str] = None
+    # Box nodes only: corner radius in EMU for a rounded rectangle (e.g. the
+    # file-tree panel). None = square corners. Purely cosmetic — the rect is
+    # still the geometry contract, so lint/measurement are unaffected.
+    corner_radius: Optional[int] = None
 
     def to_dict(self) -> dict:
         d: dict = {
@@ -107,6 +111,8 @@ class ResolvedNode:
             d["text_color"] = self.text_color
         if self.align:
             d["align"] = self.align
+        if self.corner_radius:
+            d["corner_radius"] = self.corner_radius
         if self.children:
             d["children"] = [c.to_dict() for c in self.children]
         return d

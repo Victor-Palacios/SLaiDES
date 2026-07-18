@@ -27,6 +27,7 @@ from slidekit.ir.models import (
     ComparisonMatrixSlide,
     DeckIR,
     DefinitionSlide,
+    FileTreeSlide,
     FunnelSlide,
     NestedCirclesSlide,
     IconTextRowsSlide,
@@ -55,6 +56,7 @@ from slidekit.ir.models import (
 from slidekit.layout.models import Rect, ResolvedDeck, ResolvedNode, ResolvedSlide
 from slidekit.metrics.constants import (
     BODY_FONT_FLOOR_PT,
+    CAPTION_FONT_RANGE,
     EMU_PER_INCH,
     EMU_PER_PT,
     GAP_MIN_EMU,
@@ -182,6 +184,10 @@ def _resolve_slide(
     elif comp == "code":
         # Full canvas height (not ch_with_pn): the dark panel bleeds edge-to-edge.
         nodes = _layout_code(slide, cx, cy, cw, ch, font, ts, palette)
+    elif comp == "file-tree":
+        # ch_with_pn: the rounded dark panel is a contained card on the light
+        # surface, so it must clear the bottom-right page number.
+        nodes = _layout_file_tree(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "numbered-steps":
         nodes = _layout_numbered_steps(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "two-panel-list":
@@ -919,6 +925,128 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
                     lines=[line], color=color, group_id=gid))
                 prefix += text
         y += line_h
+    return nodes
+
+
+# ── file-tree (directory structure in a rounded dark card) ────────────────────
+# Treatment A: the title sits on the light surface; the tree lives in a rounded
+# near-black card below it. Connectors (├─ └─ │) are COMPUTED from each entry's
+# depth (classic tree-drawing algorithm), so they are always aligned — unlike a
+# hand-drawn ASCII block in the generic `code` layout. Folders (name ending "/",
+# or kind="dir") are the deck accent + bold; files are the light foreground;
+# connectors are dimmed. Monospace (Courier New) so columns line up. Each line is
+# a measured text node so the linter still proves every line fits; the card box
+# and all line nodes share one group_id so the text-over-panel overlaps and the
+# tight line stacking are lint-exempt (same discipline as the code/card layouts).
+_TREE_BG = "#0C1A1C"      # deep-teal near-black panel (matches the code layout)
+_TREE_FILE = "#D4D4D4"    # file names / default foreground
+_TREE_GUIDE = "#55707A"   # dimmed tree connectors
+_TREE_FONT = "courier new"
+
+
+def _tree_prefix(entries, i: int) -> str:
+    """Classic tree connector prefix for entry i in the flat depth list."""
+    d = entries[i].depth
+    # Branch glyph: is this the last sibling at its own depth?
+    is_last = True
+    for j in range(i + 1, len(entries)):
+        if entries[j].depth < d:
+            break
+        if entries[j].depth == d:
+            is_last = False
+            break
+    # Ancestor rails: for each level a < d, draw a vertical rail iff a later
+    # sibling exists at depth a before the tree pops above a.
+    segs = []
+    for a in range(d):
+        more = False
+        for j in range(i + 1, len(entries)):
+            if entries[j].depth < a:
+                break
+            if entries[j].depth == a:
+                more = True
+                break
+        segs.append("│  " if more else "   ")
+    segs.append("└─ " if is_last else "├─ ")
+    return "".join(segs)
+
+
+def _entry_is_dir(entry) -> bool:
+    if entry.kind is not None:
+        return entry.kind == "dir"
+    return entry.name.rstrip().endswith("/")
+
+
+def _layout_file_tree(slide: FileTreeSlide, cx, cy, cw, ch, font, ts, palette):
+    nodes: list[ResolvedNode] = []
+    gid = "filetree"
+    y = cy
+
+    # Title on the light surface (header tier, bold), tinted with the deck primary.
+    if slide.title:
+        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
+        title_node.text_color = palette.primary
+        nodes.append(title_node)
+
+    # Rounded dark card fills the remaining content height.
+    card_y = y
+    card_h = cy + ch - card_y
+    nodes.append(ResolvedNode(_nid("tree_card"), "box",
+                              Rect(cx, card_y, cw, card_h),
+                              fill_color=_TREE_BG,
+                              corner_radius=int(0.14 * EMU_PER_INCH),
+                              group_id=gid))
+
+    # Full line list: the root (no connector) then every entry.
+    rows = [("", slide.root, True)]  # (prefix, name, is_dir)
+    for i, entry in enumerate(slide.entries):
+        rows.append((_tree_prefix(slide.entries, i), entry.name, _entry_is_dir(entry)))
+    n = len(rows)
+
+    pad_x = int(0.4 * EMU_PER_INCH)
+    pad_y = int(0.35 * EMU_PER_INCH)
+    inner_x = cx + pad_x
+    inner_w = cw - 2 * pad_x
+
+    # Pick the largest legal type size whose n lines + padding fit the card. Sizes
+    # stay on allowed tiers (body 32-36, else caption 24-26) so the size never lands
+    # in the illegal 27-31 gap; caption-tier lines are marked is_caption so they are
+    # exempt from the 32pt body floor. If nothing fits, the smallest is used and the
+    # linter surfaces the overflow to the author (fewer entries needed).
+    ladder = [ts.body, BODY_FONT_FLOOR_PT, CAPTION_FONT_RANGE[1], CAPTION_FONT_RANGE[0]]
+    size = ladder[-1]
+    for cand in ladder:
+        lh = int(cand * LINE_SPACING_SINGLE * EMU_PER_PT)
+        if 2 * pad_y + n * lh <= card_h:
+            size = cand
+            break
+    is_caption = size < BODY_FONT_FLOOR_PT
+    line_h = int(size * LINE_SPACING_SINGLE * EMU_PER_PT)
+
+    ty = card_y + pad_y
+    for prefix, name, is_dir in rows:
+        # Connector prefix (dimmed) as its own node placed at the row's left edge;
+        # the name node follows at the measured prefix width so glyphs line up
+        # exactly (mirrors the code layout's coloured-run placement).
+        if prefix:
+            pfx_w = measure_text(prefix, _TREE_FONT, size)
+            nodes.append(_make_text_node(
+                _nid("tree_pfx"), prefix, _TREE_FONT, size, bold=False, italic=False,
+                rect=Rect(inner_x, ty, pfx_w + INSET_LEFT_EMU + INSET_RIGHT_EMU, line_h),
+                lines=[Line(text=prefix, width_emu=pfx_w, height_emu=line_h, overflows=False)],
+                is_caption=is_caption, color=_TREE_GUIDE, group_id=gid))
+            name_x = inner_x + pfx_w
+        else:
+            name_x = inner_x
+        name_w = measure_text(name, _TREE_FONT, size, bold=is_dir)
+        overflows = (name_x - inner_x) + name_w > inner_w
+        color = palette.accent if is_dir else _TREE_FILE
+        nodes.append(_make_text_node(
+            _nid("tree_name"), name, _TREE_FONT, size, bold=is_dir, italic=False,
+            rect=Rect(name_x, ty, name_w + INSET_LEFT_EMU + INSET_RIGHT_EMU, line_h),
+            lines=[Line(text=name, width_emu=name_w, height_emu=line_h, overflows=overflows)],
+            is_caption=is_caption, color=color, group_id=gid))
+        ty += line_h
     return nodes
 
 
