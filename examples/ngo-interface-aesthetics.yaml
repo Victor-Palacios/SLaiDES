@@ -1,0 +1,179 @@
+# Deck: Ngo, Teo & Byrne — "Modelling interface aesthetics"
+# Information Sciences 152:25–46 (2003); DOI 10.1016/S0020-0255(02)00404-8
+# Content sourced from this repo: docs/REFERENCES.md (#4), docs/AESTHETICS.md,
+# docs/RESEARCH_TRACE.md, and docs/research/summary/research-paper-summaries.pdf.
+version: 1
+theme:
+  palette:
+    primary: "#1F3A5F"   # deep slate blue
+    surface: "#FFFFFF"
+    accent: "#E0873C"     # warm amber (≈complementary to the blue → good harmony)
+    text: "#1A1A2E"
+    muted: "#8A8A9A"
+  type_scale:
+    title: 60
+    header: 42
+    body: 34
+    caption: 25
+  font: arial
+  motif: minimal
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "Interface Aesthetics"
+    subtitle: "Ngo, Teo & Byrne · Information Sciences (2003)"
+
+  - component: question
+    question: "Is a layout's beauty subjective — or can it be computed?"
+
+  - component: definition
+    term: "Interface aesthetics"
+    definition: "The visual quality of a layout, written as numbers from where each element sits and how big it is."
+
+  - component: big-number
+    value: "14"
+    label: "Aesthetic measures"
+    context: "Closed-form functions of element bounding boxes"
+
+  - component: bullet-list
+    title: "The core claim"
+    items:
+      - "Layout quality is not purely subjective."
+      - "Balance and spacing become numbers."
+      - "Each number is a formula over boxes."
+      - "Measured, optimised, checked vs people."
+
+  - component: section-divider
+    number: "01"
+    title: "The fourteen measures"
+
+  - component: bullet-list
+    title: "The measures (1–5)"
+    items:
+      - "Balance — even visual weight"
+      - "Equilibrium — mass near the centre"
+      - "Symmetry — mirrored about the axes"
+      - "Sequence — a clear reading flow"
+      - "Cohesion — aspect ratios agree"
+
+  - component: definition
+    term: "Bounding box"
+    definition: "Every measure reads only position and size — x, y, width, height. No pixels."
+
+  - component: bullet-list
+    title: "The measures (6–10)"
+    items:
+      - "Unity — parts read as one"
+      - "Proportion — pleasing ratios"
+      - "Simplicity — few alignment points"
+      - "Density — comfortable coverage"
+      - "Regularity — elements snap to a grid"
+
+  - component: bullet-list
+    title: "The measures (11–14)"
+    items:
+      - "Economy — few sizes, reused"
+      - "Homogeneity — evenly distributed"
+      - "Rhythm — regular, repeating change"
+      - "Order & complexity — structure wins"
+
+  - component: code
+    title: "regularity — Ngo (2003)"
+    chrome: false
+    code: |
+      # Ngo regularity (alignment term)
+      regularity = 1 - (n_vap + n_hap) / (2n)
+
+      # a tidy 5-bullet column:
+      # n = 5, n_vap = 1, n_hap = 5
+      regularity = 1 - (1 + 5) / 10   # 0.40
+
+      # slidekit: left edges only
+      regularity = 1 - 1 / 5          # 0.80
+
+  - component: this-vs-that
+    title: "Same clean column, two scores"
+    left:
+      value: "0.40"
+      label: "Ngo x + y regularity"
+    right:
+      value: "0.80"
+      label: "Left-edge alignment"
+
+  - component: bullet-list
+    title: "Why slidekit fits this paper"
+    items:
+      - "Every element already has an exact rect."
+      - "Measures are arithmetic over geometry."
+      - "Deterministic — same deck, same score."
+      - "Zero rendering, zero vision."
+
+  - component: section-divider
+    number: "02"
+    title: "From paper to slidekit"
+
+  - component: two-panel-list
+    title: "What slidekit adopted"
+    left:
+      title: "Declined"
+      items:
+        - "Regularity"
+        - "Rhythm"
+        - "Proportion"
+        - "Economy"
+        - "Spacing-regularity"
+    right:
+      title: "Adopted"
+      items:
+        - "Balance"
+        - "Density"
+
+  - component: table-slide
+    title: "Adoption decisions"
+    headers: ["Measure", "Verdict", "Reason"]
+    rows:
+      - ["Balance", "Adopted", "Axis moment"]
+      - ["Density", "Adopted", "Coverage"]
+      - ["Regularity", "Declined", "Halves cols"]
+      - ["Proportion", "Declined", "Ratio noise"]
+
+  - component: timeline
+    title: "A measured-aesthetics lineage"
+    events:
+      - date: "1933"
+        title: "Birkhoff"
+        description: "A beauty ratio"
+      - date: "2003"
+        title: "Ngo"
+        description: "Fourteen measures"
+      - date: "2004"
+        title: "Lok"
+        description: "Visual balance"
+      - date: "2026"
+        title: "Zhang"
+        description: "Moment model"
+
+  - component: bullet-list
+    title: "Honest scope"
+    items:
+      - "The journal paper is paywalled."
+      - "Public copies reproduce only alignment."
+      - "Constants are not copied blindly."
+      - "No universal beauty equation is claimed."
+
+  - component: numbered-steps
+    title: "From measure to code"
+    steps:
+      - title: "Read geometry"
+        body: "Take each element's rect."
+      - title: "Define a formula"
+        body: "Write an open, closed-form score."
+      - title: "Verify & ship"
+        body: "Check the source, then report."
+
+  - component: pull-quote
+    quote: "Turn design quality into explicit, auditable measures."
+    attribution: "Ngo, Teo & Byrne (2003)"
