@@ -2,7 +2,7 @@
 
 _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do not hand-edit; run the script and commit. A single-component **specimen** is one slide of just its component; a **showcase** is a multi-slide composition. A test (`tests/test_examples_index`) fails if this file drifts from the decks._
 
-**36** decks · **30** specimens · **6** showcases · **92** slides total
+**37** decks · **30** specimens · **7** showcases · **151** slides total
 
 | Example | Slides | Kind | Components |
 |---|--:|---|---|
@@ -41,5 +41,6 @@ _Generated from `examples/*.yaml` by `scripts/build_examples_index.py` — do no
 | `agents-in-ai.yaml` | 10 | showcase | title-slide → icon-text-rows → comparison-columns → card-grid → stat-callout → timeline → card-grid → bullet-list → comparison-columns → title-slide |
 | `claude-code-for-data-scientists.yaml` | 15 | showcase | title-slide → agenda → definition → this-vs-that → icon-text-rows → numbered-steps → code → card-grid → process-steps → nested-circles → two-panel-list → table-slide → bullet-list → question → title-slide |
 | `demo-5.yaml` | 5 | showcase | title-slide → bullet-list → stat-callout → icon-text-rows → comparison-columns |
+| `designing-your-own-eda-library.yaml` | 59 | showcase | title-slide → process-steps → numbered-steps → pull-quote → code → two-panel-list → section-divider → comparison-columns → definition → bullet-list → bullet-list → section-divider → code → two-panel-list → bullet-list → code → two-panel-list → bullet-list → section-divider → file-tree → two-panel-list → code → definition → bullet-list → bullet-list → section-divider → code → bullet-list → code → code → code → code → two-panel-list → section-divider → bullet-list → code → table-slide → code → bullet-list → section-divider → code → bullet-list → code → two-panel-list → section-divider → code → code → two-panel-list → bullet-list → section-divider → bullet-list → numbered-steps → code → bullet-list → section-divider → two-panel-list → code → bullet-list → big-number |
 | `ngo-interface-aesthetics.yaml` | 20 | showcase | title-slide → question → definition → big-number → bullet-list → section-divider → bullet-list → definition → bullet-list → bullet-list → code → this-vs-that → bullet-list → section-divider → two-panel-list → table-slide → timeline → bullet-list → numbered-steps → pull-quote |
 
