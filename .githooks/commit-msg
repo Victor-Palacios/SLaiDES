@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Repo hook: enforce this project's commit-footer rule.
+# The only attribution trailer allowed is the Claude-Session link. No
+# Co-Authored-By trailers, no "Generated with" lines, and no AI model
+# identifiers (marketing names or model IDs) anywhere in the message.
+# "Claude Code" as a plain topic (e.g. a deck about the tool) is fine.
+# Armed by `git config core.hooksPath .githooks` (Claude Code sessions arm it
+# automatically via the SessionStart hook in .claude/settings.json).
+
+set -euo pipefail
+msg_file="$1"
+
+fail() {
+    echo "commit-msg: $1" >&2
+    echo "Repo rule: the only attribution footer allowed is the 'Claude-Session:' line." >&2
+    exit 1
+}
+
+if grep -qiE '^co-authored-by:' "$msg_file"; then
+    fail "Co-Authored-By trailers are not allowed."
+fi
+
+if grep -qiE 'generated with.*claude' "$msg_file"; then
+    fail "'Generated with ...' attribution lines are not allowed."
+fi
+
+# Model identifiers: "Claude Opus 4.8", "claude-sonnet-5", "Opus 4.8", etc.
+if grep -qiE 'claude[- ](fable|opus|sonnet|haiku|mythos)|(fable|opus|sonnet|haiku|mythos)[- ][0-9]' "$msg_file"; then
+    fail "AI model identifiers are not allowed in commit messages."
+fi

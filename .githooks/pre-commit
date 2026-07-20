@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Repo hook: block environment/cache junk from ever being staged again.
+# The .venv tree was accidentally committed once (48a19db, removed in ade1113);
+# this makes that class of mistake impossible even via `git add -A` or -f.
+# Armed by `git config core.hooksPath .githooks` (Claude Code sessions arm it
+# automatically via the SessionStart hook in .claude/settings.json).
+
+set -euo pipefail
+
+BLOCKED='^(\.venv/|\.hypothesis/|\.pytest_cache/|node_modules/|.*__pycache__/|.*\.py[cod]$|.*\.egg-info/)'
+
+bad=$(git diff --cached --name-only --diff-filter=A | grep -E "$BLOCKED" || true)
+if [ -n "$bad" ]; then
+    echo "pre-commit: refusing to commit environment/cache files:" >&2
+    echo "$bad" | head -10 >&2
+    n=$(echo "$bad" | wc -l)
+    [ "$n" -gt 10 ] && echo "  ... and $((n - 10)) more" >&2
+    echo "Unstage them (git restore --staged <path>) and stage explicit paths instead of 'git add -A'." >&2
+    exit 1
+fi
