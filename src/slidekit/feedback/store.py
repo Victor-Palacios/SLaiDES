@@ -28,6 +28,10 @@ FEEDBACK_MD = ROOT / "ops" / "FEEDBACK.md"
 
 _STATUSES = ("open", "done", "wontfix")
 _SEVERITIES = ("low", "med", "high")
+# A comment is scoped either to a reusable layout/theme (the default — actionable for
+# EVERY future deck) or to a single slide of one deck (a deck-specific fix). Deck-review
+# submissions from the website carry scope="slide" plus the deck stem + 1-based slide index.
+_SCOPES = ("layout", "slide")
 _STATUS_RANK = {s: i for i, s in enumerate(_STATUSES)}
 
 
@@ -39,6 +43,11 @@ def known_components() -> set[str]:
 class Comment(BaseModel):
     id: str
     component: str
+    # "layout" = fix the reusable component/theme (applies to all future decks — the
+    # historical default); "slide" = fix one specific slide of one deck (deck + slide set).
+    scope: str = "layout"
+    deck: Optional[str] = None  # deck stem, e.g. "designing-your-own-eda-library" (scope=slide)
+    slide: Optional[int] = None  # 1-based slide index within that deck (scope=slide)
     family: Optional[str] = None
     status: str = "open"
     severity: str = "med"
@@ -68,6 +77,16 @@ class Comment(BaseModel):
             raise ValueError(
                 f"comment {self.id}: component '{self.component}' is not a known layout"
             )
+        if self.scope not in _SCOPES:
+            raise ValueError(
+                f"comment {self.id}: scope '{self.scope}' must be one of {list(_SCOPES)}"
+            )
+        if self.scope == "slide" and (not self.deck or self.slide is None):
+            raise ValueError(
+                f"comment {self.id}: scope 'slide' requires both a deck and a slide index"
+            )
+        if self.slide is not None and self.slide < 1:
+            raise ValueError(f"comment {self.id}: slide index must be 1-based (>= 1)")
         return self
 
 
@@ -98,11 +117,18 @@ _FIELD_ORDER = (
     "id", "component", "family", "status", "severity",
     "comment", "created", "updated", "source", "notes",
 )
+# Deck-scope keys are inserted right after `component` only when a comment actually
+# carries them, so ordinary layout feedback serialises byte-for-byte as it always has.
+_SCOPE_FIELDS = ("scope", "deck", "slide")
 
 
 def _ordered(c: Comment) -> dict:
     d = c.model_dump()
-    return {k: d[k] for k in _FIELD_ORDER}
+    keys = list(_FIELD_ORDER)
+    if c.scope != "layout" or c.deck is not None or c.slide is not None:
+        i = keys.index("component") + 1
+        keys[i:i] = list(_SCOPE_FIELDS)
+    return {k: d[k] for k in keys}
 
 
 def dumps(fb: Feedback) -> str:
@@ -140,6 +166,9 @@ def merge(fb: Feedback, new_items: list[dict], *, today: str) -> Feedback:
         c = Comment(
             id=fid,
             component=comp,
+            scope=item.get("scope") or "layout",
+            deck=item.get("deck"),
+            slide=item.get("slide"),
             family=lo.family if lo else None,
             status="open",
             severity=item.get("severity") or "med",
@@ -195,11 +224,12 @@ def render_markdown(fb: Feedback) -> str:
             continue
         lines.append(f"## {headings[s]} ({len(rows)})")
         lines.append("")
-        lines.append("| ID | Layout | Sev | Comment | Notes |")
-        lines.append("|---|---|---|---|---|")
+        lines.append("| ID | Layout | Where | Sev | Comment | Notes |")
+        lines.append("|---|---|---|---|---|---|")
         for c in rows:
+            where = f"{c.deck} #{c.slide}" if c.scope == "slide" else "layout / theme"
             lines.append(
-                f"| {c.id} | {_cell(c.component)} | {_cell(c.severity)} | "
+                f"| {c.id} | {_cell(c.component)} | {_cell(where)} | {_cell(c.severity)} | "
                 f"{_cell(c.comment)} | {_cell(c.notes)} |"
             )
         lines.append("")

@@ -107,3 +107,56 @@ def test_dumps_roundtrips():
                      today="2026-06-19")
     again = store.Feedback.model_validate(yaml.safe_load(store.dumps(fb)))
     assert again.comments[0].component == "pyramid"
+
+
+# ── scope: layout (default) vs slide (deck-review) ──────────────────────────────────
+
+def test_scope_defaults_to_layout_and_serialises_without_scope_keys():
+    """A plain layout comment must be byte-identical to the pre-scope format."""
+    c = _comment()
+    assert c.scope == "layout" and c.deck is None and c.slide is None
+    ordered = store._ordered(c)
+    assert "scope" not in ordered and "deck" not in ordered and "slide" not in ordered
+    # ... and appears right after `component` only when present:
+    sc = _comment(scope="slide", deck="demo-5", slide=3)
+    keys = list(store._ordered(sc).keys())
+    assert keys[:5] == ["id", "component", "scope", "deck", "slide"]
+
+
+def test_slide_scope_requires_deck_and_slide():
+    with pytest.raises(Exception):
+        _comment(scope="slide")                       # no deck/slide
+    with pytest.raises(Exception):
+        _comment(scope="slide", deck="demo-5")        # no slide
+    with pytest.raises(Exception):
+        _comment(scope="slide", deck="demo-5", slide=0)  # 1-based only
+
+
+def test_bad_scope_rejected():
+    with pytest.raises(Exception):
+        _comment(scope="theme")
+
+
+def test_merge_carries_scope_deck_slide():
+    fb = store.merge(store.Feedback(), [
+        {"component": "code", "comment": "tighten", "scope": "slide",
+         "deck": "designing-your-own-eda-library", "slide": 27},
+        {"component": "bullet-list", "comment": "more accent"},   # scope omitted → layout
+    ], today="2026-07-21")
+    a, b = fb.comments
+    assert (a.scope, a.deck, a.slide) == ("slide", "designing-your-own-eda-library", 27)
+    assert (b.scope, b.deck, b.slide) == ("layout", None, None)
+    # round-trips through YAML
+    again = store.Feedback.model_validate(yaml.safe_load(store.dumps(fb)))
+    assert again.comments[0].slide == 27
+
+
+def test_markdown_shows_where_column():
+    fb = store.merge(store.Feedback(), [
+        {"component": "code", "comment": "x", "scope": "slide", "deck": "demo-5", "slide": 2},
+        {"component": "agenda", "comment": "y"},
+    ], today="2026-07-21")
+    md = store.render_markdown(fb)
+    assert "| Where |" in md
+    assert "demo-5 #2" in md
+    assert "layout / theme" in md

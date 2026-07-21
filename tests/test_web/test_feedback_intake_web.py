@@ -170,6 +170,61 @@ def test_inbox_consumed_and_ids_sequential(tmp_path):
     assert ids == ["FB-001", "FB-002"]
 
 
+# ── scope routing: deck-review (slide) vs layout ────────────────────────────────────
+
+def test_slide_scope_records_deck_and_slide_but_not_layout_state(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "bad", "comment": "tighten indent",
+         "severity": "med", "scope": "slide", "deck": "demo-5", "slide": 3},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 1
+    c = store.load(p["feedback_yaml"]).comments[0]
+    assert (c.scope, c.deck, c.slide) == ("slide", "demo-5", 3)
+    assert c.comment == "👎 tighten indent"
+    # A slide-scoped mark must NOT flag/approve the reusable layout.
+    assert summary["flagged"] == [] and summary["approved"] == []
+    state = json.loads(p["state_json"].read_text())["components"]
+    assert "code" not in state
+
+
+def test_layout_scope_from_deck_page_still_flags_layout(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "bad", "comment": "too dark everywhere",
+         "severity": "med", "scope": "layout"},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["flagged"] == ["code"]
+    c = store.load(p["feedback_yaml"]).comments[0]
+    assert c.scope == "layout" and c.deck is None
+
+
+def test_malformed_slide_scope_degrades_to_layout(tmp_path):
+    """Missing deck coordinates must not crash the batch — they fall back to layout."""
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "note", "comment": "hmm",
+         "scope": "slide"},                       # no deck/slide
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 1
+    c = store.load(p["feedback_yaml"]).comments[0]
+    assert c.scope == "layout" and c.deck is None and c.slide is None
+
+
+def test_slide_scope_bare_good_is_positive_only(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "good", "comment": "",
+         "scope": "slide", "deck": "demo-5", "slide": 1},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 0 and summary["positive_only"] == 1
+    assert json.loads(p["state_json"].read_text())["components"] == {}
+
+
 def test_dry_run_leaves_everything(tmp_path):
     p = _setup(tmp_path)
     _write(p["inbox"], "a.json", _record(

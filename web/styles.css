@@ -92,6 +92,24 @@ body {
 .sev select { font: inherit; font-size: 13px; padding: 4px 6px; border-radius: 8px;
   border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
 
+/* ── scope selector (deck-review page) ───────────────────────
+   Per-slide radio: does this note fix THIS slide, or the reusable layout/theme? */
+.scope {
+  border: 1px solid var(--line); border-radius: 10px; margin: 0; padding: 8px 10px 9px;
+  display: grid; gap: 5px;
+}
+.scope legend { font-size: 12px; color: var(--muted); padding: 0 4px; }
+.scope label { display: flex; align-items: baseline; gap: 7px; font-size: 13.5px; cursor: pointer; }
+.scope input { margin: 0; accent-color: var(--accent); }
+.scope-hint { color: var(--muted); font-size: 12px; }
+
+/* deck picker (deck-review page) */
+.deckpick-label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.deckpick {
+  font: inherit; font-size: 14px; padding: 7px 10px; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--card); color: var(--ink); max-width: 100%;
+}
+
 /* ── submit bar ──────────────────────────────────────────── */
 .submitbar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 20;

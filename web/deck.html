@@ -4,24 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>slidekit · layout feedback</title>
+<title>slidekit · deck review</title>
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <header class="topbar">
   <div class="topbar-inner">
     <div>
-      <h1>Review queue</h1>
-      <p class="sub">👍 approves a layout (it leaves this page) · 👎 flags it for a fix,
-        then shows before/after here. <a href="/gallery.html">All layouts →</a> ·
-        <a href="/deck.html">Deck review →</a></p>
+      <h1>Deck review</h1>
+      <p class="sub">Comment on any slide. Choose whether a note fixes <b>this slide</b>
+        or the reusable <b>layout &amp; theme</b> (every future deck).
+        <a href="/">Review queue →</a> · <a href="/gallery.html">All layouts →</a></p>
     </div>
     <div class="counts" id="counts" aria-live="polite"></div>
   </div>
 </header>
 
-<main id="gallery" class="gallery" aria-busy="true">
-  <p class="loading">Loading layouts…</p>
+<div class="gridbar">
+  <label class="deckpick-label">Deck
+    <select id="deckpick" class="deckpick"></select>
+  </label>
+</div>
+
+<main id="deck" class="gallery" aria-busy="true">
+  <p class="loading">Loading decks…</p>
 </main>
 
 <footer class="submitbar">
@@ -33,6 +39,6 @@
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-<script src="/app.js"></script>
+<script src="/deck.js"></script>
 </body>
 </html>

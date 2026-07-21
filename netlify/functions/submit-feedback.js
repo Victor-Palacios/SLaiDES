@@ -18,8 +18,10 @@ const COOKIE = "sk_session";
 const MSG = "slaides-v1";
 const VERDICTS = new Set(["good", "bad", "note"]);
 const SEVERITIES = new Set(["low", "med", "high"]);
-const MAX_ITEMS = 60; // there are 40 components; a little headroom
+const SCOPES = new Set(["layout", "slide"]);
+const MAX_ITEMS = 200; // deck review can mark many slides of a large deck in one batch
 const MAX_COMMENT = 2000;
+const MAX_DECK = 120;
 
 function sessionToken(secret) {
   return crypto
@@ -82,7 +84,22 @@ exports.handler = async function (event) {
     const severity = SEVERITIES.has(it.severity) ? it.severity : "med";
     const comment = typeof it.comment === "string" ? it.comment.slice(0, MAX_COMMENT) : "";
     if (!component) continue;
-    items.push({ component, verdict, comment, severity });
+    // Scope: "layout" (default) vs "slide" (a deck-review mark). Slide-scoped marks carry
+    // the deck stem + a 1-based slide index; anything malformed falls back to layout scope
+    // so a bad payload can never smuggle deck coordinates onto a layout comment.
+    let scope = SCOPES.has(it.scope) ? it.scope : "layout";
+    const item = { component, verdict, comment, severity, scope };
+    if (scope === "slide") {
+      const deck = typeof it.deck === "string" ? it.deck.slice(0, MAX_DECK) : "";
+      const slide = Number.isInteger(it.slide) ? it.slide : parseInt(it.slide, 10);
+      if (deck && Number.isInteger(slide) && slide >= 1) {
+        item.deck = deck;
+        item.slide = slide;
+      } else {
+        item.scope = "layout"; // missing/invalid coordinates → treat as layout feedback
+      }
+    }
+    items.push(item);
   }
   if (!items.length) return json(400, { error: "no valid items" });
 
