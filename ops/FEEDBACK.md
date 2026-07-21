@@ -2,7 +2,17 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 0 · **done** 67 · **wontfix** 1 · _last change 2026-07-21_
+**open** 5 · **done** 67 · **wontfix** 1 · _last change 2026-07-21_
+
+## Open (5)
+
+| ID | Layout | Where | Sev | Comment | Notes |
+|---|---|---|---|---|---|
+| FB-069 | two-panel-list | designing-your-own-eda-library #6 | med | 👎 "build now" on left, "skip for now" on right |  |
+| FB-070 | definition | designing-your-own-eda-library #8 | med | 👎 delete "— not a file you run top-to-bottom. Ours inspects a dataset; it does not clean it." |  |
+| FB-071 | bullet-list | designing-your-own-eda-library #11 | med | 👎 remove (Module 5) |  |
+| FB-072 | definition | designing-your-own-eda-library #13 | med | 👎 remove: — the surface you design on purpose. Keep it small; it is what people remember. then I want you to add one line of 1 or 2 examples. |  |
+| FB-073 | definition | designing-your-own-eda-library #14 | med | 👎 delete: Ship it, then grow. |  |
 
 ## Done (67)
 
