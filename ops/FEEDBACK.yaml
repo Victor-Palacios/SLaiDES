@@ -634,13 +634,13 @@ comments:
 - id: FB-062
   component: bullet-list
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: '👎 for layout: spacing seems odd. for slide in deck, not layout: title should say "MVP Input: Pandas dataframe only".)'
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T15:52:45.717Z
-  notes: 'slide retitled "MVP Input: Pandas dataframe only"; bullet-list spacing left open for review'
+  notes: slide retitled; bullet-list packing fixed so few items no longer float (engine _layout_bullet_list)
 - id: FB-063
   component: code
   scope: slide

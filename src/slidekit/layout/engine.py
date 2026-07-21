@@ -766,21 +766,37 @@ def _list_title(slide_title, cx, y, cw, font, ts):
 # a bullet-list is now pure typography (title + items), exempt from W_TEXT_ONLY.
 
 
+_BULLET_ITEM_GAP_EMU = int(0.5 * EMU_PER_INCH)  # comfortable air between packed items
+
+
 def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palette):
     nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
     title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
     nodes.append(title_node)
 
     n = len(slide.items)
     avail = cy + ch - y
-    slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
-    item_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    for item in slide.items:
+    line_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    # Each item box is its wrapped height (long items may wrap), floored at one line.
+    heights = [max(1, len(wrap(it, font, ts.body, cw))) * line_h for it in slide.items]
+
+    # FB-062: with only a few items, distributing them across the FULL height left
+    # big disconnected gaps and a bottom-heavy void. Instead PACK the items at a fixed
+    # comfortable gap and CENTRE the block; only fall back to even distribution when the
+    # items genuinely need the whole height (many/long items). Same intent as the
+    # roadmap/panel pack fix (FB-036).
+    packed_h = sum(heights) + _BULLET_ITEM_GAP_EMU * max(0, n - 1)
+    if packed_h <= avail:
+        gap = _BULLET_ITEM_GAP_EMU
+        cur = y + max(0, (avail - packed_h) // 2)
+    else:
+        gap = max(GAP_MIN_EMU, (avail - sum(heights)) // max(1, n - 1))
+        cur = y
+    for item, h in zip(slide.items, heights):
         nodes.append(_make_text_node(_nid("bl_item"), item, font, ts.body,
                                      bold=False, italic=False,
-                                     rect=Rect(cx, y, cw, item_h)))
-        y += slot_h + gap
+                                     rect=Rect(cx, cur, cw, h)))
+        cur += h + gap
     return nodes
 
 

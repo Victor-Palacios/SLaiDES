@@ -2,15 +2,9 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 1 · **done** 66 · **wontfix** 1 · _last change 2026-07-21_
+**open** 0 · **done** 67 · **wontfix** 1 · _last change 2026-07-21_
 
-## Open (1)
-
-| ID | Layout | Where | Sev | Comment | Notes |
-|---|---|---|---|---|---|
-| FB-062 | bullet-list | layout / theme | med | 👎 for layout: spacing seems odd. for slide in deck, not layout: title should say "MVP Input: Pandas dataframe only".) | slide retitled "MVP Input: Pandas dataframe only"; bullet-list spacing left open for review |
-
-## Done (66)
+## Done (67)
 
 | ID | Layout | Where | Sev | Comment | Notes |
 |---|---|---|---|---|---|
@@ -74,6 +68,7 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-059 | section-divider | designing-your-own-eda-library #12 | med | 👍 add a slide after this defining "API" and then another defining slide with "MVP" - minimum viable product | applied 2026-07-21 (deck content + reusable layout update) |
 | FB-060 | code | designing-your-own-eda-library #13 | med | 👎 the grey words need to be "the simplest API" | applied 2026-07-21 (deck content + reusable layout update) |
 | FB-061 | two-panel-list | designing-your-own-eda-library #14 | med | 👎 move boring to the left and reduce to 3 items for both columns | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-062 | bullet-list | layout / theme | med | 👎 for layout: spacing seems odd. for slide in deck, not layout: title should say "MVP Input: Pandas dataframe only".) | slide retitled; bullet-list packing fixed so few items no longer float (engine _layout_bullet_list) |
 | FB-063 | code | designing-your-own-eda-library #16 | med | 👎 Grey text should say "MVP Output: Plain objects only" | applied 2026-07-21 (deck content + reusable layout update) |
 | FB-064 | two-panel-list | designing-your-own-eda-library #17 | med | 👎 remove this slide from deck | applied 2026-07-21 (deck content + reusable layout update) |
 | FB-065 | file-tree | layout / theme | med | 👎 I don't like the coloring (make it look more like the usual coloring for this topic) | applied 2026-07-21 (deck content + reusable layout update) |

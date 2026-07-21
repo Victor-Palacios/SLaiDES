@@ -6,7 +6,7 @@
 # Not a 1:1 replica of the 122-slide source: repeated module taglines are folded
 # into one pull-quote, the nine per-module checkpoints into one final checklist,
 # and short single-line code slides are combined. Beginner-logic fixes: the
-# function count is stated consistently (four core + one optional `stats`),
+# function count is stated consistently (the core EDA functions, no optional extras),
 # __init__.py is explained exactly once (in Module 3), the install-vs-import
 # naming rule is stated up front, and "metadata" points forward to pyproject.
 version: 1
@@ -298,7 +298,6 @@ slides:
           missing,
           numeric_columns,
           categorical_columns,
-          stats,
       )
       # __all__ = [...] lists the public names
 
