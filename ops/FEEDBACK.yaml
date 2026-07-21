@@ -787,212 +787,212 @@ comments:
   deck: designing-your-own-eda-library
   slide: 1
   family: title
-  status: open
+  status: done
   severity: med
   comment: 👍 Build Your First Library has a nice color - make sure that my font is primarily this color throughout the whole deck (sometimes it's black which I don't like if that's the only color on the screen).
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: 'applied 2026-07-21 (deck theme: text colour set to the python blue)'
 - id: FB-075
   component: process-steps
   scope: slide
   deck: designing-your-own-eda-library
   slide: 2
   family: process-flow
-  status: open
+  status: done
   severity: med
   comment: 👎 change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style)
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: 'applied 2026-07-21 (process-steps: numeral+rule now primary, matching the label)'
 - id: FB-076
   component: numbered-steps
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👎 change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style)
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: 'applied 2026-07-21 (numbered-steps: numeral now primary, matching the heading)'
 - id: FB-077
   component: code
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 the grey font is hard to read - choose a different font style or play with unbolding, etc.; just make it easier to read.
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (code title colour brightened to the light foreground)
 - id: FB-078
   component: two-panel-list
   scope: slide
   deck: designing-your-own-eda-library
   slide: 6
   family: two-panel-list
-  status: open
+  status: done
   severity: med
   comment: 👎 Build now grey font should be the same blue font as header - make gold this grey color
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: 'applied 2026-07-21 (two-panel-list: left=primary, right=muted; gold dropped)'
 - id: FB-079
   component: definition
   scope: slide
   deck: designing-your-own-eda-library
   slide: 13
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: '👎 Change to: Application Programming Interface - The public interface of the library. The functions, classes, and their signatures that users call. For example: eda.summarize(df), eda.missing(df).'
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (API definition expanded per operator text)
 - id: FB-080
   component: code
   scope: slide
   deck: designing-your-own-eda-library
   slide: 18
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 Change slide layout to just give examples of plain objects (dictionary, int, string, etc.). I don't need to see an actual dictionary.
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (slide now names plain object types, no literal dict)
 - id: FB-081
   component: file-tree
   scope: slide
   deck: designing-your-own-eda-library
   slide: 21
   family: file-tree
-  status: open
+  status: done
   severity: med
   comment: 👎 remove (src layout)
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (removed '(src layout)' from the title)
 - id: FB-082
   component: two-panel-list
   scope: slide
   deck: designing-your-own-eda-library
   slide: 22
   family: two-panel-list
-  status: open
+  status: done
   severity: med
   comment: 👍 add a slide after this reasoning why hyphens and underscores (what value? what importance?)
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (added 'Why the names differ' slide)
 - id: FB-083
   component: bullet-list
   scope: slide
   deck: designing-your-own-eda-library
   slide: 25
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👍 add a slide after that states what happens when these mistakes are made.
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (added 'What each mistake causes' table)
 - id: FB-084
   component: code
   scope: slide
   deck: designing-your-own-eda-library
   slide: 27
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 no need for the grey title
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (removed the grey title from the summarize() slide)
 - id: FB-085
   component: code
   scope: slide
   deck: designing-your-own-eda-library
   slide: 29
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 show a simple output example
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (added a simple output example under missing())
 - id: FB-086
   component: code
   scope: slide
   deck: designing-your-own-eda-library
   slide: 31
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👍 add a slide explaining this slide
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (added 'What that file does' explainer slide)
 - id: FB-087
   component: two-panel-list
   scope: slide
   deck: designing-your-own-eda-library
   slide: 33
   family: two-panel-list
-  status: open
+  status: done
   severity: med
   comment: 👍 add a slide for the final row to compare those 2 concepts. also add a slide for "signatures".
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (added one-job-vs-everything compare + Signature definition)
 - id: FB-088
   component: bullet-list
   scope: slide
   deck: designing-your-own-eda-library
   slide: 35
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: '👎 remove: Replaces old setup.py workflows.'
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (removed 'Replaces old setup.py workflows.')
 - id: FB-089
   component: code
   scope: slide
   deck: designing-your-own-eda-library
   slide: 36
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 A minimal pyproject.toml --> Minimal pyproject.toml
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (title 'A minimal pyproject.toml' -> 'Minimal pyproject.toml')
 - id: FB-090
   component: table-slide
   scope: slide
   deck: designing-your-own-eda-library
   slide: 37
   family: table
-  status: open
+  status: done
   severity: med
   comment: 👎 Bring Means column and examples closer to the Version column (too much white space between them)
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T21:01:13.235Z
-  notes: ''
+  notes: applied 2026-07-21 (table-slide columns now content-width, packed left)

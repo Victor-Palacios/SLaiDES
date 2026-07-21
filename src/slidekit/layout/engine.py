@@ -854,7 +854,8 @@ _CODE_STRING = "#CE9178"   # string literals
 _CODE_NUMBER = "#B5CEA8"   # numeric literals
 _CODE_FUNC = "#DCDCAA"     # function names at def sites and call sites
 _CODE_PROMPT = "#4EC9B0"   # the "$" sigil on terminal lines
-_CODE_TITLE = "#858585"    # filename tab (Dark+ line-number gray)
+_CODE_TITLE = "#D4D4D4"    # filename tab — the light foreground (FB-077: the old dim
+                           # #858585 grey was hard to read on the near-black panel)
 _CODE_DOTS = ("#FF5F56", "#FFBD2E", "#27C93F")  # macOS window traffic lights
 _CODE_FONT = "courier new"
 
@@ -1134,10 +1135,12 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
     inner = int(0.05 * EMU_PER_INCH)
     for i, step in enumerate(slide.steps):
         gid = f"step_{i}"
+        # FB-076: the numeral matches the heading colour (both primary) — the two paired
+        # items read as one blue unit instead of a gold number beside a blue word.
         nodes.append(_make_text_node(_nid("step_num"), f"{i + 1:02d}", font, ts.header,
                                      bold=True, italic=False,
                                      rect=Rect(cx, y, num_w, num_h), group_id=gid,
-                                     color=palette.accent))
+                                     color=palette.primary))
         nodes.append(_make_text_node(_nid("step_head"), step.title, font, ts.header,
                                      bold=True, italic=False,
                                      rect=Rect(text_x, y, text_w, heading_h), group_id=gid,
@@ -1236,12 +1239,16 @@ def _two_panel_list(title, left_head, left_items, left_color,
 
 
 def _layout_two_panel_list(slide: TwoPanelListSlide, cx, cy, cw, ch, font, ts, palette):
-    """Two contrasting states head-to-head (before/after, pros/cons, old/new):
-    left panel muted, right panel accent — a deterministic left→right contrast read."""
+    """Two contrasting states head-to-head (before/after, pros/cons, old/new).
+
+    FB-078: the left panel carries the brand primary (blue) and the right panel is
+    muted (grey) — the left ("build now" / "do" / "prefer") reads as the emphasised
+    state, the right as the de-emphasised one. Gold is dropped from this layout: the
+    operator wants the primary blue used, not the accent, on these headings."""
     return _two_panel_list(
         slide.title,
-        slide.left.title, slide.left.items, palette.muted,
-        slide.right.title, slide.right.items, palette.accent,
+        slide.left.title, slide.left.items, palette.primary,
+        slide.right.title, slide.right.items, palette.muted,
         cx, cy, cw, ch, font, ts, palette,
     )
 
@@ -1447,21 +1454,49 @@ def _layout_table_slide(slide: TableSlide, cx, cy, cw, ch, font, ts, palette):
     y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
 
     ncols = len(slide.headers)
-    col_w = (cw - gap * (ncols - 1)) // ncols if ncols else cw
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     rule_h = int(0.06 * EMU_PER_INCH)
+
+    # FB-090: size each column to its widest cell (header or body) instead of
+    # stretching columns across the whole slide — that left a wide, disconnected gap
+    # between a short first column ("Version") and the next. Columns are packed left
+    # with one comfortable inter-column gap, and the header rule spans only the table.
+    # If the natural widths would exceed the content box (very wide tables) they scale
+    # down proportionally so text still wraps within the margins.
+    col_gap = int(0.6 * EMU_PER_INCH)
+    # Column width = widest cell + insets + a small cushion. The cushion matters:
+    # wrap() accumulates per-token widths, so a column sized to a cell's EXACT
+    # measured width can still wrap that cell by a rounding/kerning hair. The cushion
+    # guarantees single-line cells stay single-line and adds a little breathing room.
+    pad = INSET_LEFT_EMU + INSET_RIGHT_EMU + int(0.2 * EMU_PER_INCH)
+    nat = []
+    for c in range(ncols):
+        w = measure_text(slide.headers[c] or "", font, ts.body, bold=True)
+        for row in slide.rows:
+            if c < len(row):
+                w = max(w, measure_text(row[c], font, ts.body))
+        nat.append(w + pad)
+    span = col_gap * max(0, ncols - 1)
+    if sum(nat) + span > cw:
+        scale = (cw - span) / max(1, sum(nat))
+        nat = [max(1, int(w * scale)) for w in nat]
+    col_x = []
+    xacc = cx
+    for w in nat:
+        col_x.append(xacc)
+        xacc += w + col_gap
+    table_w = xacc - col_gap - cx  # right edge of the last column, measured from cx
 
     # Headers HUG the rule (FB-033, then the 2026-07-05 global style rule) — the
     # rule rides at the slim global rule gap, sharing a group with the header cells
     # so the intentionally tight spacing is E_GAP-exempt.
     inner = _RULE_GAP_EMU
     for c, htext in enumerate(slide.headers):
-        hx = cx + c * (col_w + gap)
         nodes.append(_make_text_node(_nid("th"), htext, font, ts.body, bold=True,
-                                     italic=False, rect=Rect(hx, y, col_w, head_h),
+                                     italic=False, rect=Rect(col_x[c], y, nat[c], head_h),
                                      color=palette.primary, group_id="table_head"))
     ry = y + head_h + inner
-    nodes.append(ResolvedNode(_nid("table_rule"), "box", Rect(cx, ry, cw, rule_h),
+    nodes.append(ResolvedNode(_nid("table_rule"), "box", Rect(cx, ry, table_w, rule_h),
                               fill_color=palette.accent, group_id="table_head"))
     yy = ry + rule_h + gap
 
@@ -1471,9 +1506,8 @@ def _layout_table_slide(slide: TableSlide, cx, cy, cw, ch, font, ts, palette):
     for r, row in enumerate(slide.rows):
         for c in range(ncols):
             cell = row[c] if c < len(row) else ""
-            cxx = cx + c * (col_w + gap)
             nodes.append(_make_text_node(_nid("td"), cell, font, ts.body, bold=False,
-                                         italic=False, rect=Rect(cxx, yy, col_w, row_h)))
+                                         italic=False, rect=Rect(col_x[c], yy, nat[c], row_h)))
         yy += row_h + gap
     return nodes
 
@@ -1554,14 +1588,16 @@ def _layout_process_steps(slide: ProcessStepsSlide, cx, cy, cw, ch, font, ts, pa
     for i, step in enumerate(slide.steps):
         gid = f"pstep_{i}"
         sx = cx + i * (col_w + gap)
+        # FB-075: the numeral (and its rule) match the label colour — one blue, not a
+        # gold numeral over a blue label. "Make these 2 items match in color."
         nodes.append(_make_text_node(_nid("ps_num"), f"{i + 1:02d}", font, ts.header,
                                      bold=True, italic=False,
                                      rect=Rect(sx, y, col_w, num_h),
-                                     color=palette.accent, group_id=gid))
+                                     color=palette.primary, group_id=gid))
         nodes.append(ResolvedNode(_nid("ps_rule"), "box",
                                   Rect(sx, y + num_h + _RULE_GAP_EMU,
                                        max(1, int(col_w * 0.3)), rule_h),
-                                  fill_color=palette.accent, group_id=gid))
+                                  fill_color=palette.primary, group_id=gid))
         ly = y + num_h + gap
         nodes.append(_make_text_node(_nid("ps_label"), step.label, font, ts.body, bold=True,
                                      italic=False, rect=Rect(sx, ly, col_w, label_h),

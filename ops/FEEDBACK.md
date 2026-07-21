@@ -2,31 +2,9 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 17 · **done** 72 · **wontfix** 1 · _last change 2026-07-21_
+**open** 0 · **done** 89 · **wontfix** 1 · _last change 2026-07-21_
 
-## Open (17)
-
-| ID | Layout | Where | Sev | Comment | Notes |
-|---|---|---|---|---|---|
-| FB-074 | title-slide | designing-your-own-eda-library #1 | med | 👍 Build Your First Library has a nice color - make sure that my font is primarily this color throughout the whole deck (sometimes it's black which I don't like if that's the only color on the screen). |  |
-| FB-075 | process-steps | designing-your-own-eda-library #2 | med | 👎 change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style) |  |
-| FB-076 | numbered-steps | layout / theme | med | 👎 change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style) |  |
-| FB-077 | code | layout / theme | med | 👎 the grey font is hard to read - choose a different font style or play with unbolding, etc.; just make it easier to read. |  |
-| FB-078 | two-panel-list | designing-your-own-eda-library #6 | med | 👎 Build now grey font should be the same blue font as header - make gold this grey color |  |
-| FB-079 | definition | designing-your-own-eda-library #13 | med | 👎 Change to: Application Programming Interface - The public interface of the library. The functions, classes, and their signatures that users call. For example: eda.summarize(df), eda.missing(df). |  |
-| FB-080 | code | designing-your-own-eda-library #18 | med | 👎 Change slide layout to just give examples of plain objects (dictionary, int, string, etc.). I don't need to see an actual dictionary. |  |
-| FB-081 | file-tree | designing-your-own-eda-library #21 | med | 👎 remove (src layout) |  |
-| FB-082 | two-panel-list | designing-your-own-eda-library #22 | med | 👍 add a slide after this reasoning why hyphens and underscores (what value? what importance?) |  |
-| FB-083 | bullet-list | designing-your-own-eda-library #25 | med | 👍 add a slide after that states what happens when these mistakes are made. |  |
-| FB-084 | code | designing-your-own-eda-library #27 | med | 👎 no need for the grey title |  |
-| FB-085 | code | designing-your-own-eda-library #29 | med | 👎 show a simple output example |  |
-| FB-086 | code | designing-your-own-eda-library #31 | med | 👍 add a slide explaining this slide |  |
-| FB-087 | two-panel-list | designing-your-own-eda-library #33 | med | 👍 add a slide for the final row to compare those 2 concepts. also add a slide for "signatures". |  |
-| FB-088 | bullet-list | designing-your-own-eda-library #35 | med | 👎 remove: Replaces old setup.py workflows. |  |
-| FB-089 | code | designing-your-own-eda-library #36 | med | 👎 A minimal pyproject.toml --> Minimal pyproject.toml |  |
-| FB-090 | table-slide | designing-your-own-eda-library #37 | med | 👎 Bring Means column and examples closer to the Version column (too much white space between them) |  |
-
-## Done (72)
+## Done (89)
 
 | ID | Layout | Where | Sev | Comment | Notes |
 |---|---|---|---|---|---|
@@ -102,6 +80,23 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-071 | bullet-list | designing-your-own-eda-library #11 | med | 👎 remove (Module 5) | applied 2026-07-21 (deck edit) |
 | FB-072 | definition | designing-your-own-eda-library #13 | med | 👎 remove: — the surface you design on purpose. Keep it small; it is what people remember. then I want you to add one line of 1 or 2 examples. | applied 2026-07-21 (deck edit) |
 | FB-073 | definition | designing-your-own-eda-library #14 | med | 👎 delete: Ship it, then grow. | applied 2026-07-21 (deck edit) |
+| FB-074 | title-slide | designing-your-own-eda-library #1 | med | 👍 Build Your First Library has a nice color - make sure that my font is primarily this color throughout the whole deck (sometimes it's black which I don't like if that's the only color on the screen). | applied 2026-07-21 (deck theme: text colour set to the python blue) |
+| FB-075 | process-steps | designing-your-own-eda-library #2 | med | 👎 change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style) | applied 2026-07-21 (process-steps: numeral+rule now primary, matching the label) |
+| FB-076 | numbered-steps | layout / theme | med | 👎 change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style) | applied 2026-07-21 (numbered-steps: numeral now primary, matching the heading) |
+| FB-077 | code | layout / theme | med | 👎 the grey font is hard to read - choose a different font style or play with unbolding, etc.; just make it easier to read. | applied 2026-07-21 (code title colour brightened to the light foreground) |
+| FB-078 | two-panel-list | designing-your-own-eda-library #6 | med | 👎 Build now grey font should be the same blue font as header - make gold this grey color | applied 2026-07-21 (two-panel-list: left=primary, right=muted; gold dropped) |
+| FB-079 | definition | designing-your-own-eda-library #13 | med | 👎 Change to: Application Programming Interface - The public interface of the library. The functions, classes, and their signatures that users call. For example: eda.summarize(df), eda.missing(df). | applied 2026-07-21 (API definition expanded per operator text) |
+| FB-080 | code | designing-your-own-eda-library #18 | med | 👎 Change slide layout to just give examples of plain objects (dictionary, int, string, etc.). I don't need to see an actual dictionary. | applied 2026-07-21 (slide now names plain object types, no literal dict) |
+| FB-081 | file-tree | designing-your-own-eda-library #21 | med | 👎 remove (src layout) | applied 2026-07-21 (removed '(src layout)' from the title) |
+| FB-082 | two-panel-list | designing-your-own-eda-library #22 | med | 👍 add a slide after this reasoning why hyphens and underscores (what value? what importance?) | applied 2026-07-21 (added 'Why the names differ' slide) |
+| FB-083 | bullet-list | designing-your-own-eda-library #25 | med | 👍 add a slide after that states what happens when these mistakes are made. | applied 2026-07-21 (added 'What each mistake causes' table) |
+| FB-084 | code | designing-your-own-eda-library #27 | med | 👎 no need for the grey title | applied 2026-07-21 (removed the grey title from the summarize() slide) |
+| FB-085 | code | designing-your-own-eda-library #29 | med | 👎 show a simple output example | applied 2026-07-21 (added a simple output example under missing()) |
+| FB-086 | code | designing-your-own-eda-library #31 | med | 👍 add a slide explaining this slide | applied 2026-07-21 (added 'What that file does' explainer slide) |
+| FB-087 | two-panel-list | designing-your-own-eda-library #33 | med | 👍 add a slide for the final row to compare those 2 concepts. also add a slide for "signatures". | applied 2026-07-21 (added one-job-vs-everything compare + Signature definition) |
+| FB-088 | bullet-list | designing-your-own-eda-library #35 | med | 👎 remove: Replaces old setup.py workflows. | applied 2026-07-21 (removed 'Replaces old setup.py workflows.') |
+| FB-089 | code | designing-your-own-eda-library #36 | med | 👎 A minimal pyproject.toml --> Minimal pyproject.toml | applied 2026-07-21 (title 'A minimal pyproject.toml' -> 'Minimal pyproject.toml') |
+| FB-090 | table-slide | designing-your-own-eda-library #37 | med | 👎 Bring Means column and examples closer to the Version column (too much white space between them) | applied 2026-07-21 (table-slide columns now content-width, packed left) |
 
 ## Won't fix (1)
 

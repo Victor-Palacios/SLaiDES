@@ -15,7 +15,9 @@ theme:
     primary: "#306998"    # python blue
     surface: "#FFFFFF"
     accent: "#F0A202"      # warm amber (≈complementary to the blue)
-    text: "#1A1A2E"
+    # FB-074: body text is the python blue, not near-black — the operator wants this
+    # colour used primarily throughout, especially on text-only slides.
+    text: "#306998"
     muted: "#8A8A9A"
   type_scale:
     title: 60
@@ -135,7 +137,7 @@ slides:
   # FB-059: define "API", then "MVP", right after this divider.
   - component: definition
     term: "API"
-    definition: "The set of functions users call. For example: eda.summarize(df), eda.missing(df)."
+    definition: "Application Programming Interface — the public interface of the library: the functions, classes, and their signatures that users call. For example: eda.summarize(df), eda.missing(df)."
 
   - component: definition
     term: "MVP"
@@ -172,15 +174,20 @@ slides:
       - "Not Polars, Spark, Dask, or Arrow yet."
       - "Fewer choices means fewer bugs."
 
-  # FB-063: the caption should read "MVP Output: Plain objects only".
-  - component: code
+  # FB-063: caption "MVP Output: Plain objects only".
+  # FB-080: name the plain object types rather than showing an actual dictionary.
+  - component: icon-text-rows
     title: "MVP Output: Plain objects only"
-    code: |
-      {
-          "rows": 100,
-          "columns": 5,
-          "column_names": ["city", "sales"],
-      }
+    rows:
+      - icon: braces
+        heading: "Dictionaries & lists"
+        body: "Simple built-in containers."
+      - icon: hash
+        heading: "Ints & strings"
+        body: "Plain scalar values."
+      - icon: table
+        heading: "pandas Series"
+        body: "No custom classes to learn."
 
   # FB-064: "Never mutate the user's data" removed from the deck.
 
@@ -197,7 +204,7 @@ slides:
     title: "Create the package folder"
 
   - component: file-tree
-    title: "Final folder shape (src layout)"
+    title: "Final folder shape"
     root: "simple-eda-project/"
     entries:
       - { name: "src/", depth: 0 }
@@ -223,6 +230,15 @@ slides:
         - "underscores"
         - "used in Python code"
 
+  # FB-082: why the two names differ — the value/importance behind the rule.
+  - component: bullet-list
+    title: "Why the names differ"
+    items:
+      - "import needs a valid Python name."
+      - "Python names cannot contain hyphens."
+      - "So the import name uses underscores."
+      - "PyPI treats - and _ as the same name."
+
   # FB-066: "Make it in the terminal" removed from the deck.
 
   - component: definition
@@ -244,13 +260,23 @@ slides:
       - "Folder named simple-eda, not simple_eda."
       - "Installing from the wrong directory."
 
+  # FB-083: what actually goes wrong when each mistake is made.
+  - component: table-slide
+    title: "What each mistake causes"
+    headers: ["Mistake", "What happens"]
+    rows:
+      - ["No __init__.py", "import cannot find it"]
+      - ["Hyphen in folder", "invalid module name"]
+      - ["pyproject misplaced", "build finds nothing"]
+      - ["Wrong directory", "ModuleNotFoundError"]
+
   # ── Module 4 ────────────────────────────────────────────────────────────
   - component: section-divider
     number: "04"
     title: "Write the EDA functions"
 
+  # FB-084: no grey title on this slide — the code speaks for itself.
   - component: code
-    title: "summarize()"
     code: |
       def summarize(df):
           return {
@@ -267,6 +293,7 @@ slides:
       - "missing — nulls per column"
       - "numeric_columns / categorical_columns"
 
+  # FB-085: show a simple output example beneath the function.
   - component: code
     title: "missing()"
     code: |
@@ -274,6 +301,10 @@ slides:
           counts = df.isna().sum()
           return counts.sort_values(
               ascending=False)
+
+      # missing(df) ->
+      # age     2
+      # name    1
 
   - component: code
     title: "numeric & categorical columns"
@@ -301,6 +332,15 @@ slides:
           categorical_columns,
       )
       # __all__ = [...] lists the public names
+
+  # FB-086: explain what the __init__.py above is doing.
+  - component: bullet-list
+    title: "What that file does"
+    items:
+      - "Pulls the functions out of core.py."
+      - "Lifts them to the top level: eda.summarize."
+      - "__all__ names the public functions."
+      - "Keeps internal helpers out of the API."
 
   - component: code
     title: "Try it on a tiny DataFrame"
@@ -332,6 +372,27 @@ slides:
         - "Add many optional args"
         - "One function for everything"
 
+  # FB-087: compare the final row's two concepts — one job vs one big function.
+  - component: two-panel-list
+    title: "One job vs everything"
+    left:
+      title: "One job each"
+      items:
+        - "Small and focused"
+        - "Easy to test"
+        - "Easy to reuse"
+    right:
+      title: "One big function"
+      items:
+        - "Hard to follow"
+        - "Hard to test"
+        - "Breaks more often"
+
+  # FB-087: also define "signature", referenced in the API and the do's.
+  - component: definition
+    term: "Signature"
+    definition: "A function's name plus the parameters it takes — what you call and what you pass in, like summarize(df)."
+
   # ── Module 5 ────────────────────────────────────────────────────────────
   - component: section-divider
     number: "05"
@@ -343,10 +404,9 @@ slides:
       - "Names your package and version."
       - "Lists dependencies."
       - "Tells build tools how to build."
-      - "Replaces old setup.py workflows."
 
   - component: code
-    title: "A minimal pyproject.toml"
+    title: "Minimal pyproject.toml"
     chrome: false
     code: |
       [build-system]
