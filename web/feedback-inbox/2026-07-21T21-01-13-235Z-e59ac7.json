@@ -1,0 +1,155 @@
+{
+  "submitted_at": "2026-07-21T21:01:13.235Z",
+  "source": "web",
+  "items": [
+    {
+      "component": "title-slide",
+      "verdict": "good",
+      "comment": "Build Your First Library has a nice color - make sure that my font is primarily this color throughout the whole deck (sometimes it's black which I don't like if that's the only color on the screen).",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 1
+    },
+    {
+      "component": "process-steps",
+      "verdict": "bad",
+      "comment": "change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style)",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 2
+    },
+    {
+      "component": "numbered-steps",
+      "verdict": "bad",
+      "comment": "change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style)",
+      "severity": "med",
+      "scope": "layout"
+    },
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "the grey font is hard to read - choose a different font style or play with unbolding, etc.; just make it easier to read.",
+      "severity": "med",
+      "scope": "layout"
+    },
+    {
+      "component": "two-panel-list",
+      "verdict": "bad",
+      "comment": "Build now grey font should be the same blue font as header - make gold this grey color",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 6
+    },
+    {
+      "component": "definition",
+      "verdict": "bad",
+      "comment": "Change to: Application Programming Interface - The public interface of the library. The functions, classes, and their signatures that users call. For example: eda.summarize(df), eda.missing(df).",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 13
+    },
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "Change slide layout to just give examples of plain objects (dictionary, int, string, etc.). I don't need to see an actual dictionary.",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 18
+    },
+    {
+      "component": "file-tree",
+      "verdict": "bad",
+      "comment": "remove (src layout)",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 21
+    },
+    {
+      "component": "two-panel-list",
+      "verdict": "good",
+      "comment": "add a slide after this reasoning why hyphens and underscores (what value? what importance?)",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 22
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "good",
+      "comment": "add a slide after that states what happens when these mistakes are made.",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 25
+    },
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "no need for the grey title",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 27
+    },
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "show a simple output example",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 29
+    },
+    {
+      "component": "code",
+      "verdict": "good",
+      "comment": "add a slide explaining this slide",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 31
+    },
+    {
+      "component": "two-panel-list",
+      "verdict": "good",
+      "comment": "add a slide for the final row to compare those 2 concepts. also add a slide for \"signatures\".",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 33
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "bad",
+      "comment": "remove: Replaces old setup.py workflows.",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 35
+    },
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "A minimal pyproject.toml --> Minimal pyproject.toml",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 36
+    },
+    {
+      "component": "table-slide",
+      "verdict": "bad",
+      "comment": "Bring Means column and examples closer to the Version column (too much white space between them)",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 37
+    }
+  ]
+}
