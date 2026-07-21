@@ -62,19 +62,19 @@
             "x": 1461983,
             "y": 1499616,
             "w": 10272817,
-            "h": 518159
+            "h": 640080
           },
           "text_content": "Connect your data",
           "lines": [
             {
               "text": "Connect your data",
-              "width_emu": 3790690,
-              "height_emu": 518160,
+              "width_emu": 4682617,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "group_id": "step_0",
@@ -85,9 +85,9 @@
           "node_type": "text",
           "rect": {
             "x": 1461983,
-            "y": 2109215,
+            "y": 2185416,
             "w": 10272817,
-            "h": 627889
+            "h": 551688
           },
           "text_content": "Link a source in minutes with a guided wizard.",
           "lines": [
@@ -136,19 +136,19 @@
             "x": 1461983,
             "y": 3011424,
             "w": 10272817,
-            "h": 518159
+            "h": 640080
           },
           "text_content": "Pick a template",
           "lines": [
             {
               "text": "Pick a template",
-              "width_emu": 3144044,
-              "height_emu": 518160,
+              "width_emu": 3883819,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "group_id": "step_1",
@@ -159,9 +159,9 @@
           "node_type": "text",
           "rect": {
             "x": 1461983,
-            "y": 3621023,
+            "y": 3697224,
             "w": 10272817,
-            "h": 627889
+            "h": 551688
           },
           "text_content": "Start from a proven layout, then tailor it.",
           "lines": [
@@ -210,19 +210,19 @@
             "x": 1461983,
             "y": 4523232,
             "w": 10272817,
-            "h": 518159
+            "h": 640080
           },
           "text_content": "Share the result",
           "lines": [
             {
               "text": "Share the result",
-              "width_emu": 3263590,
-              "height_emu": 518160,
+              "width_emu": 4031493,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "group_id": "step_2",
@@ -233,9 +233,9 @@
           "node_type": "text",
           "rect": {
             "x": 1461983,
-            "y": 5132831,
+            "y": 5209032,
             "w": 10272817,
-            "h": 627889
+            "h": 551688
           },
           "text_content": "Publish to your team and gather feedback fast.",
           "lines": [

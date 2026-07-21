@@ -890,10 +890,11 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
                                       fill_color=color, group_id=gid))
         y += dot + int(0.35 * EMU_PER_INCH)
 
-    # Optional filename / caption.
+    # Optional filename / caption. FB-054: the caption sits at the header tier — ABOVE
+    # the code body size — so it reads as the slide's title rather than a tiny tab.
     if slide.title:
-        cap_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
-        nodes.append(_make_text_node(_nid("code_title"), slide.title, _CODE_FONT, ts.caption,
+        cap_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
+        nodes.append(_make_text_node(_nid("code_title"), slide.title, _CODE_FONT, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, cap_h),
                                      is_caption=True, color=_CODE_TITLE, group_id=gid))
         y += cap_h + GAP_MIN_EMU
@@ -941,6 +942,10 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
 _TREE_BG = "#0C1A1C"      # deep-teal near-black panel (matches the code layout)
 _TREE_FILE = "#D4D4D4"    # file names / default foreground
 _TREE_GUIDE = "#55707A"   # dimmed tree connectors
+# FB-065: directories use the conventional editor "folder blue" (the same blue the code
+# layout uses for declarations) rather than the deck accent — the familiar file-explorer
+# look for a folder tree, and legible on the dark panel regardless of the deck's accent.
+_TREE_DIR = "#569CD6"     # directory names (VS Code-style folder blue)
 _TREE_FONT = "courier new"
 
 
@@ -1040,7 +1045,7 @@ def _layout_file_tree(slide: FileTreeSlide, cx, cy, cw, ch, font, ts, palette):
             name_x = inner_x
         name_w = measure_text(name, _TREE_FONT, size, bold=is_dir)
         overflows = (name_x - inner_x) + name_w > inner_w
-        color = palette.accent if is_dir else _TREE_FILE
+        color = _TREE_DIR if is_dir else _TREE_FILE
         nodes.append(_make_text_node(
             _nid("tree_name"), name, _TREE_FONT, size, bold=is_dir, italic=False,
             rect=Rect(name_x, ty, name_w + INSET_LEFT_EMU + INSET_RIGHT_EMU, line_h),
@@ -1074,15 +1079,20 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
         + INSET_LEFT_EMU + INSET_RIGHT_EMU
     text_x = cx + num_w + int(0.25 * EMU_PER_INCH)
     text_w = cw - num_w - int(0.25 * EMU_PER_INCH)
-    heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    inner = int(0.1 * EMU_PER_INCH)
+    # FB-052: the blue heading is set at the SAME tier as the accent numeral (header),
+    # so the number and the word it labels read at one size instead of the number
+    # towering over a smaller heading.
+    heading_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
+    # Tighter heading→body gap: the header-tier heading (FB-052) is taller than the old
+    # body-tier one, so trim this gap to keep a full body line inside each step's slot.
+    inner = int(0.05 * EMU_PER_INCH)
     for i, step in enumerate(slide.steps):
         gid = f"step_{i}"
         nodes.append(_make_text_node(_nid("step_num"), f"{i + 1:02d}", font, ts.header,
                                      bold=True, italic=False,
                                      rect=Rect(cx, y, num_w, num_h), group_id=gid,
                                      color=palette.accent))
-        nodes.append(_make_text_node(_nid("step_head"), step.title, font, ts.body,
+        nodes.append(_make_text_node(_nid("step_head"), step.title, font, ts.header,
                                      bold=True, italic=False,
                                      rect=Rect(text_x, y, text_w, heading_h), group_id=gid,
                                      color=palette.primary))
@@ -1163,8 +1173,11 @@ def _two_panel_list(title, left_head, left_items, left_color,
         # without bullet markers (FB-026) and is the panel's non-text mark. It rides
         # INSIDE the existing heading->items gap (panel-wide group_id makes the tight
         # spacing intentional), so the items keep every EMU of space they had.
+        # FB-055: the rule's left edge lines up with the heading's first GLYPH, not the
+        # box edge — text carries a left inset, boxes don't, so shift the rule right by
+        # that inset. Now the grey/gold word sits flush above its coloured bar.
         nodes.append(ResolvedNode(_nid(f"{prefix}_rule"), "box",
-                                  Rect(px, y + head_h + inner,
+                                  Rect(px + INSET_LEFT_EMU, y + head_h + inner,
                                        max(1, int(col_w * 0.3)), rule_h),
                                   fill_color=color, group_id=gid))
     items_y = y + head_h + gap

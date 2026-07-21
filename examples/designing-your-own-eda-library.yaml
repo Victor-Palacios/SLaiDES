@@ -32,7 +32,6 @@ slides:
   # ── Intro ───────────────────────────────────────────────────────────────
   - component: title-slide
     title: "Build Your First Library"
-    subtitle: "From four functions to a package on PyPI"
 
   - component: process-steps
     title: "The path to PyPI"
@@ -41,11 +40,9 @@ slides:
         body: "pandas code"
       - label: "Package"
         body: "one folder"
-      - label: "Wheel"
-        body: "build a file"
-      - label: "PyPI"
-        body: "twine upload"
-      - label: "Install"
+      - label: "Build"
+        body: "make a wheel"
+      - label: "Publish"
         body: "pip install"
 
   - component: numbered-steps
@@ -58,9 +55,10 @@ slides:
       - title: "Install"
         body: "pip install your own package."
 
-  - component: pull-quote
-    quote: "Build tiny. Install locally. Publish safely."
-    attribution: "The workshop mantra"
+  # FB-053: operator wants just the line, no attribution — the question layout is the
+  # emphasis-stack single-statement variant (centred, bold, no second line).
+  - component: question
+    question: "Build tiny. Install locally. Publish safely."
 
   - component: code
     title: "What we're building"
@@ -92,29 +90,31 @@ slides:
     number: "01"
     title: "What is a Python library?"
 
+  # FB-057: define "library" first, then compare it to a script (slides 8 and 9 swapped).
+  - component: definition
+    term: "Library"
+    definition: "Reusable code you install once and import anywhere — not a file you run top-to-bottom. Ours inspects a dataset; it does not clean it."
+
+  # FB-056: drop the "Run:" / "Use:" prefixes.
   - component: comparison-columns
     title: "Script vs library"
     left_title: "Script"
     right_title: "Library"
     left_items:
-      - text: "Run: python analyze.py"
+      - text: "python analyze.py"
       - text: "Less convenient"
       - text: "Limited scope"
     right_items:
-      - text: "Use: import simple_eda"
+      - text: "import simple_eda"
       - text: "More convenient"
       - text: "Broad scope"
 
-  - component: definition
-    term: "Exploratory data analysis"
-    definition: "Getting to know a dataset — its rows, columns, types, missing values, and basic stats. Our library inspects data; it does not clean it."
-
+  # FB-058: three items, not four.
   - component: bullet-list
     title: "A tiny library is still real"
     items:
       - "No web app required."
       - "No dashboard required."
-      - "No dozens of dependencies."
       - "Just useful, installable, importable."
 
   - component: bullet-list
@@ -131,38 +131,49 @@ slides:
     number: "02"
     title: "Design the smallest API"
 
+  # FB-059: define "API", then "MVP", right after this divider.
+  - component: definition
+    term: "API"
+    definition: "The set of functions users call — the surface you design on purpose. Keep it small; it is what people remember."
+
+  - component: definition
+    term: "MVP"
+    definition: "Minimum viable product — the smallest version that is genuinely useful, installable, and importable. Ship it, then grow."
+
+  # FB-060: the caption should read "the simplest API".
   - component: code
-    title: "Start from the user's first line"
+    title: "the simplest API"
     code: |
       import simple_eda as eda
       eda.summarize(df)
 
+  # FB-061: boring names on the LEFT; three per column.
   - component: two-panel-list
     title: "Pick boring function names"
     left:
-      title: "Avoid (clever)"
-      items:
-        - "hyper_profile_engine"
-        - "magic_diagnose"
-        - "auto_ai_report"
-        - "mega_summary"
-    right:
       title: "Prefer (boring)"
       items:
         - "summarize"
         - "missing"
         - "numeric_columns"
-        - "categorical_columns"
+    right:
+      title: "Avoid (clever)"
+      items:
+        - "hyper_profile_engine"
+        - "magic_diagnose"
+        - "mega_summary"
 
+  # FB-062: retitle to name the MVP input.
   - component: bullet-list
-    title: "One input type at first"
+    title: "MVP Input: Pandas dataframe only"
     items:
       - "Support pandas DataFrames first."
       - "Not Polars, Spark, Dask, or Arrow yet."
       - "Fewer choices means fewer bugs."
 
+  # FB-063: the caption should read "MVP Output: Plain objects only".
   - component: code
-    title: "Return plain objects"
+    title: "MVP Output: Plain objects only"
     code: |
       {
           "rows": 100,
@@ -170,20 +181,7 @@ slides:
           "column_names": ["city", "sales"],
       }
 
-  - component: two-panel-list
-    title: "Never mutate the user's data"
-    left:
-      title: "Avoid"
-      items:
-        - "df.dropna(inplace=True)"
-        - "df[\"x\"] = ..."
-        - "Silent type conversion"
-    right:
-      title: "Do this"
-      items:
-        - "df.isna().sum()"
-        - "df.describe()"
-        - "list(df.columns)"
+  # FB-064: "Never mutate the user's data" removed from the deck.
 
   - component: bullet-list
     title: "The 0.1.0 mindset"
@@ -224,16 +222,7 @@ slides:
         - "underscores"
         - "used in Python code"
 
-  - component: code
-    title: "Make it in the terminal"
-    chrome: false
-    code: |
-      mkdir simple-eda-project
-      cd simple-eda-project
-      mkdir -p src/simple_eda
-      touch src/simple_eda/__init__.py
-      touch src/simple_eda/core.py
-      touch README.md pyproject.toml LICENSE
+  # FB-066: "Make it in the terminal" removed from the deck.
 
   - component: definition
     term: "__init__.py"
@@ -269,13 +258,13 @@ slides:
               "names": list(df.columns),
           }
 
+  # FB-067: drop to three functions (removed the optional `stats`).
   - component: bullet-list
-    title: "Four core functions (+ one optional)"
+    title: "The core functions"
     items:
       - "summarize — shape, columns, types"
       - "missing — nulls per column"
       - "numeric_columns / categorical_columns"
-      - "stats — optional; pandas already does it"
 
   - component: code
     title: "missing()"
@@ -327,20 +316,21 @@ slides:
 
   - component: two-panel-list
     title: "Function do's and don'ts"
+    # FB-068: "Do" first (left), "Don't" second (right).
     left:
-      title: "Don't"
-      items:
-        - "Change df in place"
-        - "Print instead of return"
-        - "Add many optional args"
-        - "One function for everything"
-    right:
       title: "Do"
       items:
         - "Return data"
         - "Use plain dicts / Series"
         - "Keep signatures small"
         - "One job per function"
+    right:
+      title: "Don't"
+      items:
+        - "Change df in place"
+        - "Print instead of return"
+        - "Add many optional args"
+        - "One function for everything"
 
   # ── Module 5 ────────────────────────────────────────────────────────────
   - component: section-divider

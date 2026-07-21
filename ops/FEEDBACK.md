@@ -2,33 +2,15 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 19 · **done** 48 · **wontfix** 1 · _last change 2026-07-21_
+**open** 1 · **done** 66 · **wontfix** 1 · _last change 2026-07-21_
 
-## Open (19)
+## Open (1)
 
 | ID | Layout | Where | Sev | Comment | Notes |
 |---|---|---|---|---|---|
-| FB-050 | title-slide | layout / theme | med | 👎 Remove the black text |  |
-| FB-051 | process-steps | layout / theme | med | 👎 Make it 4 items instead of 5 |  |
-| FB-052 | numbered-steps | layout / theme | med | 👎 The number size needs to align with the blue text size. Make the blue text size bigger to match the number. |  |
-| FB-053 | pull-quote | designing-your-own-eda-library #4 | med | 👎 I only want the quote - I think there is a different slide layout we can use to remove "mantra" part |  |
-| FB-054 | code | layout / theme | med | 👎 "What we're building" need to be bigger font size (exceed the code font size) |  |
-| FB-055 | two-panel-list | layout / theme | med | 👎 The grey / gold words to align with their colored bar underneath them (left-aligned) |  |
-| FB-056 | comparison-columns | designing-your-own-eda-library #8 | med | 👎 Remove "run:" and "use:" |  |
-| FB-057 | definition | designing-your-own-eda-library #9 | med | 👎 This should be "library" and it's definition and needs to be slide 8 (swap slide 8 with slide 9) |  |
-| FB-058 | bullet-list | designing-your-own-eda-library #10 | med | 👎 3 items - not 4 |  |
-| FB-059 | section-divider | designing-your-own-eda-library #12 | med | 👍 add a slide after this defining "API" and then another defining slide with "MVP" - minimum viable product |  |
-| FB-060 | code | designing-your-own-eda-library #13 | med | 👎 the grey words need to be "the simplest API" |  |
-| FB-061 | two-panel-list | designing-your-own-eda-library #14 | med | 👎 move boring to the left and reduce to 3 items for both columns |  |
-| FB-062 | bullet-list | layout / theme | med | 👎 for layout: spacing seems odd. for slide in deck, not layout: title should say "MVP Input: Pandas dataframe only".) |  |
-| FB-063 | code | designing-your-own-eda-library #16 | med | 👎 Grey text should say "MVP Output: Plain objects only" |  |
-| FB-064 | two-panel-list | designing-your-own-eda-library #17 | med | 👎 remove this slide from deck |  |
-| FB-065 | file-tree | layout / theme | med | 👎 I don't like the coloring (make it look more like the usual coloring for this topic) |  |
-| FB-066 | code | designing-your-own-eda-library #22 | med | 👎 remove this slide from the deck |  |
-| FB-067 | bullet-list | designing-your-own-eda-library #28 | med | 👎 drop to 3 functions instead (remove the last one) |  |
-| FB-068 | two-panel-list | designing-your-own-eda-library #33 | med | 👎 do needs to be the first column and then don't |  |
+| FB-062 | bullet-list | layout / theme | med | 👎 for layout: spacing seems odd. for slide in deck, not layout: title should say "MVP Input: Pandas dataframe only".) | slide retitled "MVP Input: Pandas dataframe only"; bullet-list spacing left open for review |
 
-## Done (48)
+## Done (66)
 
 | ID | Layout | Where | Sev | Comment | Notes |
 |---|---|---|---|---|---|
@@ -80,6 +62,24 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-047 | section-divider | layout / theme | med | Delete the statement layout | statement DELETED per operator chat request. It was the emphasis-stack anchor, so the family re-anchored on section-divider (variants re-pointed). A one-line manifesto/closing is covered by title-slide or big-number. (Entry filed against the new anchor because the validator requires a catalog component.) |
 | FB-048 | pull-quote | layout / theme | med | Delete the quote-opener layout | quote-opener DELETED per operator chat request; pull-quote is the surviving quote layout and the recommender routes all quotes there. (Retargeted for validator.) |
 | FB-049 | icon-text-rows | layout / theme | med | Delete the feature-list layout | feature-list DELETED per operator chat request; icon-text-rows (its family anchor) covers icon + heading + body rows and the recommender routes icon features there. (Retargeted for validator.) |
+| FB-050 | title-slide | layout / theme | med | 👎 Remove the black text | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-051 | process-steps | layout / theme | med | 👎 Make it 4 items instead of 5 | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-052 | numbered-steps | layout / theme | med | 👎 The number size needs to align with the blue text size. Make the blue text size bigger to match the number. | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-053 | pull-quote | designing-your-own-eda-library #4 | med | 👎 I only want the quote - I think there is a different slide layout we can use to remove "mantra" part | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-054 | code | layout / theme | med | 👎 "What we're building" need to be bigger font size (exceed the code font size) | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-055 | two-panel-list | layout / theme | med | 👎 The grey / gold words to align with their colored bar underneath them (left-aligned) | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-056 | comparison-columns | designing-your-own-eda-library #8 | med | 👎 Remove "run:" and "use:" | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-057 | definition | designing-your-own-eda-library #9 | med | 👎 This should be "library" and it's definition and needs to be slide 8 (swap slide 8 with slide 9) | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-058 | bullet-list | designing-your-own-eda-library #10 | med | 👎 3 items - not 4 | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-059 | section-divider | designing-your-own-eda-library #12 | med | 👍 add a slide after this defining "API" and then another defining slide with "MVP" - minimum viable product | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-060 | code | designing-your-own-eda-library #13 | med | 👎 the grey words need to be "the simplest API" | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-061 | two-panel-list | designing-your-own-eda-library #14 | med | 👎 move boring to the left and reduce to 3 items for both columns | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-063 | code | designing-your-own-eda-library #16 | med | 👎 Grey text should say "MVP Output: Plain objects only" | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-064 | two-panel-list | designing-your-own-eda-library #17 | med | 👎 remove this slide from deck | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-065 | file-tree | layout / theme | med | 👎 I don't like the coloring (make it look more like the usual coloring for this topic) | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-066 | code | designing-your-own-eda-library #22 | med | 👎 remove this slide from the deck | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-067 | bullet-list | designing-your-own-eda-library #28 | med | 👎 drop to 3 functions instead (remove the last one) | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-068 | two-panel-list | designing-your-own-eda-library #33 | med | 👎 do needs to be the first column and then don't | applied 2026-07-21 (deck content + reusable layout update) |
 
 ## Won't fix (1)
 
