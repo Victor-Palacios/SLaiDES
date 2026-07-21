@@ -490,3 +490,229 @@ comments:
   updated: '2026-07-05'
   source: operator chat 2026-07-05
   notes: feature-list DELETED per operator chat request; icon-text-rows (its family anchor) covers icon + heading + body rows and the recommender routes icon features there. (Retargeted for validator.)
+- id: FB-050
+  component: title-slide
+  family: title
+  status: open
+  severity: med
+  comment: 👎 Remove the black text
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-051
+  component: process-steps
+  family: process-flow
+  status: open
+  severity: med
+  comment: 👎 Make it 4 items instead of 5
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-052
+  component: numbered-steps
+  family: marker-list
+  status: open
+  severity: med
+  comment: 👎 The number size needs to align with the blue text size. Make the blue text size bigger to match the number.
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-053
+  component: pull-quote
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 4
+  family: emphasis-stack
+  status: open
+  severity: med
+  comment: 👎 I only want the quote - I think there is a different slide layout we can use to remove "mantra" part
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-054
+  component: code
+  family: code-block
+  status: open
+  severity: med
+  comment: 👎 "What we're building" need to be bigger font size (exceed the code font size)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-055
+  component: two-panel-list
+  family: two-panel-list
+  status: open
+  severity: med
+  comment: 👎 The grey / gold words to align with their colored bar underneath them (left-aligned)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-056
+  component: comparison-columns
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 8
+  family: two-column
+  status: open
+  severity: med
+  comment: 👎 Remove "run:" and "use:"
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-057
+  component: definition
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 9
+  family: emphasis-stack
+  status: open
+  severity: med
+  comment: 👎 This should be "library" and it's definition and needs to be slide 8 (swap slide 8 with slide 9)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-058
+  component: bullet-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 10
+  family: marker-list
+  status: open
+  severity: med
+  comment: 👎 3 items - not 4
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-059
+  component: section-divider
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 12
+  family: emphasis-stack
+  status: open
+  severity: med
+  comment: 👍 add a slide after this defining "API" and then another defining slide with "MVP" - minimum viable product
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-060
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 13
+  family: code-block
+  status: open
+  severity: med
+  comment: 👎 the grey words need to be "the simplest API"
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-061
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 14
+  family: two-panel-list
+  status: open
+  severity: med
+  comment: 👎 move boring to the left and reduce to 3 items for both columns
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-062
+  component: bullet-list
+  family: marker-list
+  status: open
+  severity: med
+  comment: '👎 for layout: spacing seems odd. for slide in deck, not layout: title should say "MVP Input: Pandas dataframe only".)'
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-063
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 16
+  family: code-block
+  status: open
+  severity: med
+  comment: '👎 Grey text should say "MVP Output: Plain objects only"'
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-064
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 17
+  family: two-panel-list
+  status: open
+  severity: med
+  comment: 👎 remove this slide from deck
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-065
+  component: file-tree
+  family: file-tree
+  status: open
+  severity: med
+  comment: 👎 I don't like the coloring (make it look more like the usual coloring for this topic)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-066
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 22
+  family: code-block
+  status: open
+  severity: med
+  comment: 👎 remove this slide from the deck
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-067
+  component: bullet-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 28
+  family: marker-list
+  status: open
+  severity: med
+  comment: 👎 drop to 3 functions instead (remove the last one)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''
+- id: FB-068
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 33
+  family: two-panel-list
+  status: open
+  severity: med
+  comment: 👎 do needs to be the first column and then don't
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: ''

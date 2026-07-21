@@ -2,7 +2,31 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 0 · **done** 48 · **wontfix** 1 · _last change 2026-07-05_
+**open** 19 · **done** 48 · **wontfix** 1 · _last change 2026-07-21_
+
+## Open (19)
+
+| ID | Layout | Where | Sev | Comment | Notes |
+|---|---|---|---|---|---|
+| FB-050 | title-slide | layout / theme | med | 👎 Remove the black text |  |
+| FB-051 | process-steps | layout / theme | med | 👎 Make it 4 items instead of 5 |  |
+| FB-052 | numbered-steps | layout / theme | med | 👎 The number size needs to align with the blue text size. Make the blue text size bigger to match the number. |  |
+| FB-053 | pull-quote | designing-your-own-eda-library #4 | med | 👎 I only want the quote - I think there is a different slide layout we can use to remove "mantra" part |  |
+| FB-054 | code | layout / theme | med | 👎 "What we're building" need to be bigger font size (exceed the code font size) |  |
+| FB-055 | two-panel-list | layout / theme | med | 👎 The grey / gold words to align with their colored bar underneath them (left-aligned) |  |
+| FB-056 | comparison-columns | designing-your-own-eda-library #8 | med | 👎 Remove "run:" and "use:" |  |
+| FB-057 | definition | designing-your-own-eda-library #9 | med | 👎 This should be "library" and it's definition and needs to be slide 8 (swap slide 8 with slide 9) |  |
+| FB-058 | bullet-list | designing-your-own-eda-library #10 | med | 👎 3 items - not 4 |  |
+| FB-059 | section-divider | designing-your-own-eda-library #12 | med | 👍 add a slide after this defining "API" and then another defining slide with "MVP" - minimum viable product |  |
+| FB-060 | code | designing-your-own-eda-library #13 | med | 👎 the grey words need to be "the simplest API" |  |
+| FB-061 | two-panel-list | designing-your-own-eda-library #14 | med | 👎 move boring to the left and reduce to 3 items for both columns |  |
+| FB-062 | bullet-list | layout / theme | med | 👎 for layout: spacing seems odd. for slide in deck, not layout: title should say "MVP Input: Pandas dataframe only".) |  |
+| FB-063 | code | designing-your-own-eda-library #16 | med | 👎 Grey text should say "MVP Output: Plain objects only" |  |
+| FB-064 | two-panel-list | designing-your-own-eda-library #17 | med | 👎 remove this slide from deck |  |
+| FB-065 | file-tree | layout / theme | med | 👎 I don't like the coloring (make it look more like the usual coloring for this topic) |  |
+| FB-066 | code | designing-your-own-eda-library #22 | med | 👎 remove this slide from the deck |  |
+| FB-067 | bullet-list | designing-your-own-eda-library #28 | med | 👎 drop to 3 functions instead (remove the last one) |  |
+| FB-068 | two-panel-list | designing-your-own-eda-library #33 | med | 👎 do needs to be the first column and then don't |  |
 
 ## Done (48)
 
