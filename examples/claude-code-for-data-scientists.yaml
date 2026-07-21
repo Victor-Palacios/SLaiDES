@@ -150,6 +150,177 @@ slides:
       - "Have it verify outputs, not just run."
       - "Commit small, reviewable steps."
 
+  # ── Section 1: surfaces ──────────────────────────────────────────────────
+  - component: section-divider
+    number: "01"
+    title: "One Claude, Many Surfaces"
+
+  - component: bullet-list
+    title: "Same Engine, Everywhere"
+    items:
+      - "One engine drives the terminal, IDE, desktop, and web."
+      - "Your CLAUDE.md, settings, and MCP servers come along."
+      - "Start on your laptop, pick it up on your phone."
+    source: "https://code.claude.com/docs/en/overview"
+
+  - component: comparison-matrix
+    title: "Three Ways to Run It"
+    options: ["Terminal", "Web", "Desktop"]
+    criteria: ["Runs on", "Setup", "Best for"]
+    cells:
+      - ["Your machine", "The cloud", "Your machine"]
+      - ["Install CLI", "None", "Install app"]
+      - ["Full control", "On the go", "Visual diffs"]
+    highlights:
+      - [1, 1]
+    source: "https://code.claude.com/docs/en/overview"
+
+  - component: bullet-list
+    title: "In the Terminal"
+    items:
+      - "The full CLI — edit files and run commands."
+      - "Runs locally with direct access to your tools."
+      - "Install with one script, then just run claude."
+    source: "https://code.claude.com/docs/en/overview"
+
+  - component: icon-text-rows
+    title: "On the Internet"
+    rows:
+      - icon: cloud
+        heading: "Cloud-run"
+        body: "Runs at claude.ai/code on Anthropic's cloud."
+      - icon: lock
+        heading: "Isolated"
+        body: "Each task gets its own sandbox VM."
+      - icon: loop
+        heading: "Persistent"
+        body: "Keeps running after you close the tab."
+    source: "https://code.claude.com/docs/en/claude-code-on-the-web"
+
+  - component: bullet-list
+    title: "Claude Desktop"
+    items:
+      - "A standalone app outside your IDE or terminal."
+      - "Review diffs and run sessions side by side."
+      - "Schedule repeat tasks and start cloud runs."
+    source: "https://code.claude.com/docs/en/desktop"
+
+  # ── Section 2: phone + GitHub ────────────────────────────────────────────
+  - component: section-divider
+    number: "02"
+    title: "Drive It From Your Phone"
+
+  - component: numbered-steps
+    title: "Connect GitHub"
+    steps:
+      - title: "Sign in"
+        body: "Open claude.ai/code and log in."
+      - title: "Link GitHub"
+        body: "Grant access to the repos you choose."
+      - title: "Pick a repo"
+        body: "Claude clones it into a cloud sandbox."
+    source: "https://code.claude.com/docs/en/web-quickstart"
+
+  - component: numbered-steps
+    title: "Start a Task Anywhere"
+    steps:
+      - title: "Describe it"
+        body: "Type the task in the Claude mobile app."
+      - title: "Let it run"
+        body: "Work continues in the background."
+      - title: "Review"
+        body: "Approve the branch Claude pushes."
+    source: "https://code.claude.com/docs/en/mobile"
+
+  - component: bullet-list
+    title: "Remote Control"
+    items:
+      - "Step away and keep working from your phone."
+      - "Continue a live session from any browser."
+      - "Pull a cloud task back with claude --teleport."
+    source: "https://code.claude.com/docs/en/remote-control"
+
+  - component: code
+    title: "move between surfaces"
+    chrome: true
+    code: |
+      $ claude --cloud
+        Runs this task in the cloud.
+
+      > Pick it up later, anywhere:
+      $ claude --teleport
+
+        One session follows you across
+        laptop, phone, and browser.
+
+  # ── Section 3: MCP ───────────────────────────────────────────────────────
+  - component: section-divider
+    number: "03"
+    title: "MCP: Plug In Your Tools"
+
+  - component: definition
+    term: "MCP"
+    definition: "An open standard that connects AI tools to your data sources and other systems."
+    source: "https://www.anthropic.com/news/model-context-protocol"
+
+  - component: bullet-list
+    title: "What MCP Unlocks"
+    items:
+      - "Read design docs straight from Google Drive."
+      - "Update tickets in Jira, pull data from Slack."
+      - "Query your own database and internal APIs."
+    source: "https://code.claude.com/docs/en/mcp"
+
+  - component: table-slide
+    title: "Servers You Can Connect"
+    headers: ["Server", "What Claude can do"]
+    rows:
+      - ["Drive", "Read design docs"]
+      - ["Jira", "Update tickets"]
+      - ["Slack", "Pull conversations"]
+      - ["Postgres", "Query your data"]
+    source: "https://code.claude.com/docs/en/mcp"
+
+  # ── Section 4: CLAUDE.md + Skills ────────────────────────────────────────
+  - component: section-divider
+    number: "04"
+    title: "Make Claude Yours"
+
+  - component: definition
+    term: "CLAUDE.md"
+    definition: "A file in your project root that Claude reads at the start of every session."
+    source: "https://code.claude.com/docs/en/memory"
+
+  - component: bullet-list
+    title: "What Goes in CLAUDE.md"
+    items:
+      - "Coding standards and preferred libraries."
+      - "Architecture decisions and key commands."
+      - "Review checklists and data caveats."
+    source: "https://code.claude.com/docs/en/memory"
+
+  - component: definition
+    term: "Skills"
+    definition: "Reusable folders of instructions, each a SKILL.md, that Claude loads on demand."
+    source: "https://code.claude.com/docs/en/skills"
+
+  - component: two-panel-list
+    title: "CLAUDE.md vs Skills"
+    left:
+      title: "CLAUDE.md"
+      items:
+        - "Always in context"
+        - "Project-wide rules"
+        - "One file at the root"
+    right:
+      title: "Skills"
+      items:
+        - "Loaded on demand"
+        - "A packaged workflow"
+        - "Shared across projects"
+    source: "https://code.claude.com/docs/en/skills"
+
+  # ── Close ────────────────────────────────────────────────────────────────
   - component: question
     question: "What would you analyze if the boilerplate wrote itself?"
 

@@ -140,7 +140,27 @@ ContentSlot = Annotated[
 # ── slide components ──────────────────────────────────────────────────────────
 
 
-class TitleSlide(BaseModel):
+class _SlideBase(BaseModel):
+    """Shared base for every slide component.
+
+    Carries fields common to all slides. `source` is an optional http(s) URL
+    rendered as a clickable "Source" citation in the bottom-right chrome (next
+    to the page number) — for attributing a slide's content to its origin.
+    """
+
+    source: Optional[str] = None
+
+    @field_validator("source", check_fields=False)
+    @classmethod
+    def _source_is_url(cls, v: Optional[str]) -> Optional[str]:
+        if v is not None and not v.startswith(("http://", "https://")):
+            raise ValueError(
+                f"source '{v}' must be an http:// or https:// URL"
+            )
+        return v
+
+
+class TitleSlide(_SlideBase):
     component: Literal["title-slide"]
     title: str
     subtitle: Optional[str] = None
@@ -153,7 +173,7 @@ class IconTextRow(BaseModel):
     body: str
 
 
-class IconTextRowsSlide(BaseModel):
+class IconTextRowsSlide(_SlideBase):
     component: Literal["icon-text-rows"]
     title: Optional[str] = None
     rows: list[IconTextRow] = Field(min_length=1)
@@ -165,7 +185,7 @@ class Stat(BaseModel):
     subtext: Optional[str] = None
 
 
-class StatCalloutSlide(BaseModel):
+class StatCalloutSlide(_SlideBase):
     component: Literal["stat-callout"]
     title: Optional[str] = None
     stats: list[Stat] = Field(min_length=1)
@@ -176,7 +196,7 @@ class ComparisonItem(BaseModel):
     icon: Optional[str] = None
 
 
-class ComparisonColumnsSlide(BaseModel):
+class ComparisonColumnsSlide(_SlideBase):
     component: Literal["comparison-columns"]
     title: Optional[str] = None
     left_title: str
@@ -191,13 +211,13 @@ class TimelineEvent(BaseModel):
     description: Optional[str] = None
 
 
-class TimelineSlide(BaseModel):
+class TimelineSlide(_SlideBase):
     component: Literal["timeline"]
     title: Optional[str] = None
     events: list[TimelineEvent] = Field(min_length=1)
 
 
-class ImageHalfBleedSlide(BaseModel):
+class ImageHalfBleedSlide(_SlideBase):
     component: Literal["image-half-bleed"]
     title: Optional[str] = None
     image_side: Literal["left", "right"] = "left"
@@ -211,7 +231,7 @@ class Card(BaseModel):
     body: str
 
 
-class CardGridSlide(BaseModel):
+class CardGridSlide(_SlideBase):
     component: Literal["card-grid"]
     title: Optional[str] = None
     cards: list[Card] = Field(min_length=1)
@@ -220,13 +240,13 @@ class CardGridSlide(BaseModel):
 # ── Phase 9: openers & emphasis (catalog #2–9) ────────────────────────────────
 
 
-class SectionDividerSlide(BaseModel):
+class SectionDividerSlide(_SlideBase):
     component: Literal["section-divider"]
     number: str
     title: str
 
 
-class AgendaSlide(BaseModel):
+class AgendaSlide(_SlideBase):
     component: Literal["agenda"]
     title: str = "Agenda"
     items: list[str] = Field(min_length=1)
@@ -236,14 +256,14 @@ class AgendaSlide(BaseModel):
 # PullQuoteSlide is the surviving quote layout.
 
 
-class BigNumberSlide(BaseModel):
+class BigNumberSlide(_SlideBase):
     component: Literal["big-number"]
     value: str
     label: str
     context: Optional[str] = None
 
 
-class PullQuoteSlide(BaseModel):
+class PullQuoteSlide(_SlideBase):
     component: Literal["pull-quote"]
     quote: str
     attribution: str
@@ -252,13 +272,13 @@ class PullQuoteSlide(BaseModel):
 # StatementSlide was retired 2026-07-05 per operator request (FB-047).
 
 
-class DefinitionSlide(BaseModel):
+class DefinitionSlide(_SlideBase):
     component: Literal["definition"]
     term: str
     definition: str
 
 
-class QuestionSlide(BaseModel):
+class QuestionSlide(_SlideBase):
     component: Literal["question"]
     question: str
 
@@ -266,7 +286,7 @@ class QuestionSlide(BaseModel):
 # ── Phase 9: lists & text (catalog #11, #13–15) ───────────────────────────────
 
 
-class BulletListSlide(BaseModel):
+class BulletListSlide(_SlideBase):
     component: Literal["bullet-list"]
     title: str
     items: list[str] = Field(min_length=1)
@@ -276,7 +296,7 @@ class BulletListSlide(BaseModel):
 # IconTextRowsSlide covers icon + heading + body rows.
 
 
-class CodeSlide(BaseModel):
+class CodeSlide(_SlideBase):
     component: Literal["code"]
     title: Optional[str] = None  # optional filename / caption shown above the block
     code: str  # the code or terminal block; newlines are hard line breaks (no wrapping)
@@ -290,7 +310,7 @@ class FileTreeEntry(BaseModel):
     kind: Optional[Literal["dir", "file"]] = None
 
 
-class FileTreeSlide(BaseModel):
+class FileTreeSlide(_SlideBase):
     component: Literal["file-tree"]
     title: Optional[str] = None  # e.g. "Final folder shape" (on the light surface)
     root: str  # the top folder line, drawn with no connector, e.g. "simple-eda-project/"
@@ -302,7 +322,7 @@ class Step(BaseModel):
     body: str
 
 
-class NumberedStepsSlide(BaseModel):
+class NumberedStepsSlide(_SlideBase):
     component: Literal["numbered-steps"]
     title: Optional[str] = None
     steps: list[Step] = Field(min_length=1)
@@ -316,7 +336,7 @@ class ListPanel(BaseModel):
     items: list[str] = Field(min_length=1)
 
 
-class TwoPanelListSlide(BaseModel):
+class TwoPanelListSlide(_SlideBase):
     """Two contrasting titled bullet panels. The generalised successor of the old
     before-after / pros-cons pair (operator FB-022): one layout, any two-state
     contrast — before/after, pros/cons, old/new, problem/solution. The right panel
@@ -333,7 +353,7 @@ class VersusSide(BaseModel):
     label: str
 
 
-class ThisVsThatSlide(BaseModel):
+class ThisVsThatSlide(_SlideBase):
     component: Literal["this-vs-that"]
     title: Optional[str] = None
     left: VersusSide
@@ -348,20 +368,20 @@ class Kpi(BaseModel):
     label: str
 
 
-class KpiGridSlide(BaseModel):
+class KpiGridSlide(_SlideBase):
     component: Literal["kpi-grid"]
     title: Optional[str] = None
     kpis: list[Kpi] = Field(min_length=1)
 
 
-class ChartWithInsightSlide(BaseModel):
+class ChartWithInsightSlide(_SlideBase):
     component: Literal["chart-with-insight"]
     title: Optional[str] = None
     chart: ChartSlot
     insight: str
 
 
-class TableSlide(BaseModel):
+class TableSlide(_SlideBase):
     component: Literal["table-slide"]
     title: Optional[str] = None
     headers: list[str] = Field(min_length=1)
@@ -374,7 +394,7 @@ class Metric(BaseModel):
     delta: Optional[str] = None
 
 
-class MetricComparisonSlide(BaseModel):
+class MetricComparisonSlide(_SlideBase):
     component: Literal["metric-comparison"]
     title: Optional[str] = None
     metrics: list[Metric] = Field(min_length=1)
@@ -388,7 +408,7 @@ class ProcessStep(BaseModel):
     body: str
 
 
-class ProcessStepsSlide(BaseModel):
+class ProcessStepsSlide(_SlideBase):
     component: Literal["process-steps"]
     title: Optional[str] = None
     steps: list[ProcessStep] = Field(min_length=1)
@@ -399,7 +419,7 @@ class RoadmapPhase(BaseModel):
     items: list[str] = Field(min_length=1)
 
 
-class RoadmapSlide(BaseModel):
+class RoadmapSlide(_SlideBase):
     component: Literal["roadmap"]
     title: Optional[str] = None
     phases: list[RoadmapPhase] = Field(min_length=1)
@@ -410,7 +430,7 @@ class FunnelStage(BaseModel):
     value: Optional[str] = None
 
 
-class FunnelSlide(BaseModel):
+class FunnelSlide(_SlideBase):
     component: Literal["funnel"]
     title: Optional[str] = None
     stages: list[FunnelStage] = Field(min_length=1)
@@ -421,7 +441,7 @@ class NestedStage(BaseModel):
     label: str
 
 
-class NestedCirclesSlide(BaseModel):
+class NestedCirclesSlide(_SlideBase):
     """Nested-circle funnel (operator-requested 2026-07-05): each stage is a circle
     INSIDE the previous, all tangent at the bottom — a subset-of-the-previous read
     (e.g. >700 applications ⊃ 6 interviews ⊃ 1.5 offers). Order stages large→small."""
@@ -434,7 +454,7 @@ class PyramidLayer(BaseModel):
     label: str
 
 
-class PyramidSlide(BaseModel):
+class PyramidSlide(_SlideBase):
     component: Literal["pyramid"]
     title: Optional[str] = None
     layers: list[PyramidLayer] = Field(min_length=1)
@@ -443,7 +463,7 @@ class PyramidSlide(BaseModel):
 # Matrix2x2Slide was retired 2026-07-05 per operator feedback FB-044.
 
 
-class SwotSlide(BaseModel):
+class SwotSlide(_SlideBase):
     component: Literal["swot"]
     title: Optional[str] = None
     # Exactly one statement per category (operator feedback FB-038): a SWOT slide
@@ -459,7 +479,7 @@ class SwotSlide(BaseModel):
 # feedback FB-040..FB-042; logo-wall followed 2026-07-05 per FB-046.)
 
 
-class ComparisonMatrixSlide(BaseModel):
+class ComparisonMatrixSlide(_SlideBase):
     component: Literal["comparison-matrix"]
     title: Optional[str] = None
     options: list[str] = Field(min_length=1)

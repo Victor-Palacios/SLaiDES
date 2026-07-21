@@ -237,6 +237,36 @@ def _resolve_slide(
         )
         chrome.append(pn_node)
 
+    # Chrome: optional source citation — a clickable "Source" link sitting on the
+    # bottom edge, just left of the page-number box (right-aligned into that
+    # corner). Rendered in the accent colour with an underline so it reads as a
+    # link. Chrome is exempt from margin/overlap lint, but the box is measured to
+    # fit "Source" exactly so the overflow check still passes. The page-number
+    # system is left completely untouched.
+    src_url = getattr(slide, "source", None)
+    if src_url:
+        src_label = "Source"
+        src_text_w = measure_text(src_label, font, PAGE_NUMBER_PT)
+        src_box_w = src_text_w + INSET_LEFT_EMU + INSET_RIGHT_EMU
+        # Right edge sits a 0.3" gap to the left of the page-number box when page
+        # numbers are on; otherwise it hugs the right margin (bottom-right corner).
+        src_right = (pn_x - GAP_MIN_EMU) if (page_num is not None and deck.page_numbers.enabled) \
+            else (canvas_w - MARGIN_MIN_EMU)
+        src_x = src_right - src_box_w
+        src_node = _make_text_node(
+            node_id=_nid("chrome_source"),
+            text=src_label,
+            font=font,
+            size_pt=PAGE_NUMBER_PT,
+            bold=False,
+            italic=False,
+            rect=Rect(src_x, pn_y, src_box_w, pn_box_h),
+            is_chrome=True,
+            color=palette.accent,
+            href=src_url,
+        )
+        chrome.append(src_node)
+
     return ResolvedSlide(
         slide_index=slide_index,
         page_number=page_num,
@@ -1925,6 +1955,7 @@ def _make_text_node(
     group_id: Optional[str] = None,
     color: Optional[str] = None,
     align: Optional[str] = None,
+    href: Optional[str] = None,
 ) -> ResolvedNode:
     if lines is None:
         lines = wrap(text, font, size_pt, rect.w, bold=bold, italic=italic)
@@ -1943,4 +1974,5 @@ def _make_text_node(
         group_id=group_id,
         text_color=color,
         align=align,
+        href=href,
     )

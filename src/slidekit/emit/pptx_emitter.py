@@ -164,6 +164,12 @@ def _emit_text(slide, node: "ResolvedNode", palette) -> None:
     run.font.bold = node.bold
     run.font.italic = node.italic
     run.font.color.rgb = RGBColor(r, g, b)
+    # A hyperlinked text node (e.g. the bottom-right "Source" citation) becomes a
+    # clickable run; underline gives the usual link affordance. The node's own
+    # text_color is preserved (set above) rather than PowerPoint's default link blue.
+    if node.href:
+        run.hyperlink.address = node.href
+        run.font.underline = True
 
 
 def _emit_icon(slide, node: "ResolvedNode", palette) -> None:

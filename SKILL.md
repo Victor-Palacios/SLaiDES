@@ -72,6 +72,10 @@ page_numbers:                  # built-in chrome, bottom-right, on by default
   skip_title_slide: true
 slides:
   - component: ...             # one of the 8 components below
+    source: "https://..."      # OPTIONAL, any slide: renders a clickable "Source"
+                               # link in the bottom-right chrome (left of the page
+                               # number). http(s) only. Use it to cite a slide's
+                               # origin — prefer first-party/official sources.
 ```
 
 **Metric-safe fonts (the only allowed set):** Arial, Calibri, Cambria,

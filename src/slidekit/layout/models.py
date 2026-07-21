@@ -71,6 +71,10 @@ class ResolvedNode:
     # file-tree panel). None = square corners. Purely cosmetic — the rect is
     # still the geometry contract, so lint/measurement are unaffected.
     corner_radius: Optional[int] = None
+    # Text nodes only: an http(s) URL making the text a clickable hyperlink
+    # (e.g. the bottom-right "Source" citation chrome). Purely a render-time
+    # attribute — geometry/lint are unaffected.
+    href: Optional[str] = None
 
     def to_dict(self) -> dict:
         d: dict = {
@@ -113,6 +117,8 @@ class ResolvedNode:
             d["align"] = self.align
         if self.corner_radius:
             d["corner_radius"] = self.corner_radius
+        if self.href:
+            d["href"] = self.href
         if self.children:
             d["children"] = [c.to_dict() for c in self.children]
         return d
