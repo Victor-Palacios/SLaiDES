@@ -72,18 +72,19 @@ slides:
 
   - component: two-panel-list
     title: "What we build now — and skip"
+    # FB: "build now" on the left, "skip for now" on the right.
     left:
-      title: "Skip for now"
-      items:
-        - "CI/CD"
-        - "Testing"
-        - "Many dependencies"
-    right:
       title: "Build now"
       items:
         - "One dependency: pandas"
         - "Plain Python functions"
         - "A clear README"
+    right:
+      title: "Skip for now"
+      items:
+        - "CI/CD"
+        - "Testing"
+        - "Many dependencies"
 
   # ── Module 1 ────────────────────────────────────────────────────────────
   - component: section-divider
@@ -93,7 +94,7 @@ slides:
   # FB-057: define "library" first, then compare it to a script (slides 8 and 9 swapped).
   - component: definition
     term: "Library"
-    definition: "Reusable code you install once and import anywhere — not a file you run top-to-bottom. Ours inspects a dataset; it does not clean it."
+    definition: "Reusable code you install once and import anywhere."
 
   # FB-056: drop the "Run:" / "Use:" prefixes.
   - component: comparison-columns
@@ -124,7 +125,7 @@ slides:
       - "A project folder"
       - "An __init__.py file"
       - "Your functions"
-      - "Metadata — pyproject.toml (Module 5)"
+      - "Metadata — pyproject.toml"
 
   # ── Module 2 ────────────────────────────────────────────────────────────
   - component: section-divider
@@ -134,11 +135,11 @@ slides:
   # FB-059: define "API", then "MVP", right after this divider.
   - component: definition
     term: "API"
-    definition: "The set of functions users call — the surface you design on purpose. Keep it small; it is what people remember."
+    definition: "The set of functions users call. For example: eda.summarize(df), eda.missing(df)."
 
   - component: definition
     term: "MVP"
-    definition: "Minimum viable product — the smallest version that is genuinely useful, installable, and importable. Ship it, then grow."
+    definition: "Minimum viable product — the smallest version that is genuinely useful, installable, and importable."
 
   # FB-060: the caption should read "the simplest API".
   - component: code

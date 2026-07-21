@@ -2,19 +2,9 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 5 · **done** 67 · **wontfix** 1 · _last change 2026-07-21_
+**open** 0 · **done** 72 · **wontfix** 1 · _last change 2026-07-21_
 
-## Open (5)
-
-| ID | Layout | Where | Sev | Comment | Notes |
-|---|---|---|---|---|---|
-| FB-069 | two-panel-list | designing-your-own-eda-library #6 | med | 👎 "build now" on left, "skip for now" on right |  |
-| FB-070 | definition | designing-your-own-eda-library #8 | med | 👎 delete "— not a file you run top-to-bottom. Ours inspects a dataset; it does not clean it." |  |
-| FB-071 | bullet-list | designing-your-own-eda-library #11 | med | 👎 remove (Module 5) |  |
-| FB-072 | definition | designing-your-own-eda-library #13 | med | 👎 remove: — the surface you design on purpose. Keep it small; it is what people remember. then I want you to add one line of 1 or 2 examples. |  |
-| FB-073 | definition | designing-your-own-eda-library #14 | med | 👎 delete: Ship it, then grow. |  |
-
-## Done (67)
+## Done (72)
 
 | ID | Layout | Where | Sev | Comment | Notes |
 |---|---|---|---|---|---|
@@ -85,6 +75,11 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-066 | code | designing-your-own-eda-library #22 | med | 👎 remove this slide from the deck | applied 2026-07-21 (deck content + reusable layout update) |
 | FB-067 | bullet-list | designing-your-own-eda-library #28 | med | 👎 drop to 3 functions instead (remove the last one) | applied 2026-07-21 (deck content + reusable layout update) |
 | FB-068 | two-panel-list | designing-your-own-eda-library #33 | med | 👎 do needs to be the first column and then don't | applied 2026-07-21 (deck content + reusable layout update) |
+| FB-069 | two-panel-list | designing-your-own-eda-library #6 | med | 👎 "build now" on left, "skip for now" on right | applied 2026-07-21 (deck edit) |
+| FB-070 | definition | designing-your-own-eda-library #8 | med | 👎 delete "— not a file you run top-to-bottom. Ours inspects a dataset; it does not clean it." | applied 2026-07-21 (deck edit) |
+| FB-071 | bullet-list | designing-your-own-eda-library #11 | med | 👎 remove (Module 5) | applied 2026-07-21 (deck edit) |
+| FB-072 | definition | designing-your-own-eda-library #13 | med | 👎 remove: — the surface you design on purpose. Keep it small; it is what people remember. then I want you to add one line of 1 or 2 examples. | applied 2026-07-21 (deck edit) |
+| FB-073 | definition | designing-your-own-eda-library #14 | med | 👎 delete: Ship it, then grow. | applied 2026-07-21 (deck edit) |
 
 ## Won't fix (1)
 

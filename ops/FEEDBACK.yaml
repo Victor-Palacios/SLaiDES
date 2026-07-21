@@ -722,62 +722,62 @@ comments:
   deck: designing-your-own-eda-library
   slide: 6
   family: two-panel-list
-  status: open
+  status: done
   severity: med
   comment: 👎 "build now" on left, "skip for now" on right
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T18:34:45.720Z
-  notes: ''
+  notes: applied 2026-07-21 (deck edit)
 - id: FB-070
   component: definition
   scope: slide
   deck: designing-your-own-eda-library
   slide: 8
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: 👎 delete "— not a file you run top-to-bottom. Ours inspects a dataset; it does not clean it."
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T18:34:45.720Z
-  notes: ''
+  notes: applied 2026-07-21 (deck edit)
 - id: FB-071
   component: bullet-list
   scope: slide
   deck: designing-your-own-eda-library
   slide: 11
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👎 remove (Module 5)
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T18:34:45.720Z
-  notes: ''
+  notes: applied 2026-07-21 (deck edit)
 - id: FB-072
   component: definition
   scope: slide
   deck: designing-your-own-eda-library
   slide: 13
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: '👎 remove: — the surface you design on purpose. Keep it small; it is what people remember. then I want you to add one line of 1 or 2 examples.'
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T18:34:45.720Z
-  notes: ''
+  notes: applied 2026-07-21 (deck edit)
 - id: FB-073
   component: definition
   scope: slide
   deck: designing-your-own-eda-library
   slide: 14
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: '👎 delete: Ship it, then grow.'
   created: '2026-07-21'
   updated: '2026-07-21'
   source: web 2026-07-21T18:34:45.720Z
-  notes: ''
+  notes: applied 2026-07-21 (deck edit)
