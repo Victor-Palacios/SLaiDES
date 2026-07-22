@@ -2,7 +2,31 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 0 · **done** 89 · **wontfix** 1 · _last change 2026-07-21_
+**open** 19 · **done** 89 · **wontfix** 1 · _last change 2026-07-22_
+
+## Open (19)
+
+| ID | Layout | Where | Sev | Comment | Notes |
+|---|---|---|---|---|---|
+| FB-091 | title-slide | claude-code-for-data-scientists #1 | med | 👎 Make the Claude Code font much bigger. Let's use the 3rd slide's beige color for all slide titles/headlines if there is no other color present. Then remove the subheader. |  |
+| FB-092 | agenda | claude-code-for-data-scientists #2 | med | 👎 remove this slide from this deck |  |
+| FB-093 | numbered-steps | claude-code-for-data-scientists #6 | med | 👎 remove this slide from this deck |  |
+| FB-094 | code | claude-code-for-data-scientists #7 | med | 👎 a first session --> Terminal Use |  |
+| FB-095 | nested-circles | claude-code-for-data-scientists #10 | med | 👎 remove this slide from this deck |  |
+| FB-096 | two-panel-list | claude-code-for-data-scientists #11 | med | 👎 Use the beige color (slide 3) for Claude not grey |  |
+| FB-097 | table-slide | claude-code-for-data-scientists #12 | med | 👍 add a slide that explains init and claude -p |  |
+| FB-098 | bullet-list | layout / theme | med | 👎 don't have any lines with text that overflows to the next line. |  |
+| FB-099 | comparison-matrix | claude-code-for-data-scientists #16 | med | 👎 remove the Best for row and it's associated items |  |
+| FB-100 | bullet-list | claude-code-for-data-scientists #17 | med | 👎 remove slide from deck |  |
+| FB-101 | bullet-list | claude-code-for-data-scientists #23 | med | 👎 remove the last line |  |
+| FB-102 | code | layout / theme | med | 👎 The grey title must be title capitalized and easier to read - this bold font looks awkward. |  |
+| FB-103 | bullet-list | claude-code-for-data-scientists #27 | med | 👍 add a slide of concrete examples after this and how MCP is better than no MCP. |  |
+| FB-104 | table-slide | claude-code-for-data-scientists #28 | med | 👎 Servers You Can (normally) Connect to |  |
+| FB-105 | section-divider | claude-code-for-data-scientists #29 | med | 👎 Make Claude Yours --> Customize Claude |  |
+| FB-106 | bullet-list | claude-code-for-data-scientists #31 | med | 👍 next slide should be an example of what things to put in the md and then another slide of "beware" or common problems when using a Claude.md file |  |
+| FB-107 | two-panel-list | claude-code-for-data-scientists #33 | med | 👎 CLAUDE.md vs Skills --> CLAUDE.md vs Skills.md (same for column 2: Skills.md) |  |
+| FB-108 | question | claude-code-for-data-scientists #34 | med | 👎 What would you analyze if the boilerplate wrote itself? --> Let's build our visualization library with Claude + Github using our phones! |  |
+| FB-109 | title-slide | claude-code-for-data-scientists #35 | med | 👎 remove this slide and add 2 slides about Claude Cowork and 1 slide on Claude Artifacts and 1 slide on  Memory > Search and reference chats. |  |
 
 ## Done (89)
 
