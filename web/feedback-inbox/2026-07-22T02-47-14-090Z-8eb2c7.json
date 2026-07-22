@@ -1,0 +1,173 @@
+{
+  "submitted_at": "2026-07-22T02:47:14.090Z",
+  "source": "web",
+  "items": [
+    {
+      "component": "title-slide",
+      "verdict": "bad",
+      "comment": "Make the Claude Code font much bigger. Let's use the 3rd slide's beige color for all slide titles/headlines if there is no other color present. Then remove the subheader.",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 1
+    },
+    {
+      "component": "agenda",
+      "verdict": "bad",
+      "comment": "remove this slide from this deck",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 2
+    },
+    {
+      "component": "numbered-steps",
+      "verdict": "bad",
+      "comment": "remove this slide from this deck",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 6
+    },
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "a first session --> Terminal Use",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 7
+    },
+    {
+      "component": "nested-circles",
+      "verdict": "bad",
+      "comment": "remove this slide from this deck",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 10
+    },
+    {
+      "component": "two-panel-list",
+      "verdict": "bad",
+      "comment": "Use the beige color (slide 3) for Claude not grey",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 11
+    },
+    {
+      "component": "table-slide",
+      "verdict": "good",
+      "comment": "add a slide that explains init and claude -p",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 12
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "bad",
+      "comment": "don't have any lines with text that overflows to the next line.",
+      "severity": "med",
+      "scope": "layout"
+    },
+    {
+      "component": "comparison-matrix",
+      "verdict": "bad",
+      "comment": "remove the Best for row and it's associated items",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 16
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "bad",
+      "comment": "remove slide from deck",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 17
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "bad",
+      "comment": "remove the last line",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 23
+    },
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "The grey title must be title capitalized and easier to read - this bold font looks awkward.",
+      "severity": "med",
+      "scope": "layout"
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "good",
+      "comment": "add a slide of concrete examples after this and how MCP is better than no MCP.",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 27
+    },
+    {
+      "component": "table-slide",
+      "verdict": "bad",
+      "comment": "Servers You Can (normally) Connect to",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 28
+    },
+    {
+      "component": "section-divider",
+      "verdict": "bad",
+      "comment": "Make Claude Yours --> Customize Claude",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 29
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "good",
+      "comment": "next slide should be an example of what things to put in the md and then another slide of \"beware\" or common problems when using a Claude.md file",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 31
+    },
+    {
+      "component": "two-panel-list",
+      "verdict": "bad",
+      "comment": "CLAUDE.md vs Skills --> CLAUDE.md vs Skills.md (same for column 2: Skills.md)",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 33
+    },
+    {
+      "component": "question",
+      "verdict": "bad",
+      "comment": "What would you analyze if the boilerplate wrote itself? --> Let's build our visualization library with Claude + Github using our phones!",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 34
+    },
+    {
+      "component": "title-slide",
+      "verdict": "bad",
+      "comment": "remove this slide and add 2 slides about Claude Cowork and 1 slide on Claude Artifacts and 1 slide on \nMemory > Search and reference chats.",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "claude-code-for-data-scientists",
+      "slide": 35
+    }
+  ]
+}
