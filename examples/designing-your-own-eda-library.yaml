@@ -244,7 +244,7 @@ slides:
 
   - component: definition
     term: "__init__.py"
-    definition: "The file that marks a folder as an importable package and sets its top-level API — it is what lets users write `import simple_eda`."
+    definition: "The file that marks a folder as an importable package and sets its top-level API."
 
   - component: bullet-list
     title: "Why the src/ layout?"
@@ -321,28 +321,8 @@ slides:
               include=["object", "category"])
           return list(sel.columns)
 
-  - component: code
-    title: "Expose the public API"
-    chrome: false
-    code: |
-      # src/simple_eda/__init__.py
-      from .core import (
-          summarize,
-          missing,
-          numeric_columns,
-          categorical_columns,
-      )
-      # __all__ = [...] lists the public names
-
-  # FB-086: explain what the __init__.py above is doing.
-  - component: bullet-list
-    title: "What that file does"
-    items:
-      - "Pulls the functions out of core.py."
-      - "Lifts them to the top level: eda.summarize."
-      - "__all__ names the public functions."
-      - "Keeps internal helpers out of the API."
-
+  # FB-112/113: the "Expose the public API" code slide and its explainer were
+  # removed at the operator's request.
   - component: code
     title: "Try it on a tiny DataFrame"
     code: |
@@ -406,6 +386,11 @@ slides:
       - "Lists dependencies."
       - "Tells build tools how to build."
 
+  # FB-114: define "build tools".
+  - component: definition
+    term: "Build tools"
+    definition: "Programs like setuptools and build that turn your source folder into an installable package."
+
   - component: code
     title: "Minimal pyproject.toml"
     chrome: false
@@ -420,6 +405,11 @@ slides:
       description = "Tiny EDA helper"
       dependencies = ["pandas>=1.5"]
 
+  # FB-115: name the language pyproject.toml is written in.
+  - component: definition
+    term: "TOML"
+    definition: "Tom's Obvious Minimal Language — the simple key = value format pyproject.toml is written in."
+
   - component: table-slide
     title: "Version numbers"
     headers: ["Version", "Means"]
@@ -428,6 +418,11 @@ slides:
       - ["0.1.1", "A small fix"]
       - ["0.2.0", "A new feature"]
       - ["1.0.0", "Stable and public"]
+
+  # FB-116: explain semantic versioning (operator's wording, verbatim).
+  - component: definition
+    term: "MAJOR.MINOR.PATCH"
+    definition: "Under semantic versioning, each of the three numbers just has to be a non-negative integer, so 0.0.1 means major 0, minor 0, patch 1."
 
   - component: code
     title: "README: install & use"

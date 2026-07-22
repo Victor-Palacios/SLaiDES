@@ -2,7 +2,7 @@
 %“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/F1 2 0 R /F2 3 0 R /F3 8 0 R
+/F1 2 0 R /F2 3 0 R
 >>
 endobj
 2 0 obj
@@ -17,7 +17,7 @@ endobj
 endobj
 4 0 obj
 <<
-/Contents 68 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 67 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -27,7 +27,7 @@ endobj
 endobj
 5 0 obj
 <<
-/Contents 69 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 68 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -37,7 +37,7 @@ endobj
 endobj
 6 0 obj
 <<
-/Contents 70 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 69 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -47,7 +47,7 @@ endobj
 endobj
 7 0 obj
 <<
-/Contents 71 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 70 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -57,12 +57,17 @@ endobj
 endobj
 8 0 obj
 <<
-/BaseFont /Courier /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+/Contents 71 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
 endobj
 9 0 obj
 <<
-/Contents 72 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 72 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -72,7 +77,7 @@ endobj
 endobj
 10 0 obj
 <<
-/Contents 73 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 73 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -82,7 +87,7 @@ endobj
 endobj
 11 0 obj
 <<
-/Contents 74 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 74 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -92,7 +97,7 @@ endobj
 endobj
 12 0 obj
 <<
-/Contents 75 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 75 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -102,24 +107,14 @@ endobj
 endobj
 13 0 obj
 <<
-/Contents 76 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
-endobj
-14 0 obj
-<<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/cli-reference)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-15 0 obj
+14 0 obj
 <<
-/Annots [ 14 0 R ] /Contents 77 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 13 0 R ] /Contents 76 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -127,9 +122,19 @@ endobj
 >> /Type /Page
 >>
 endobj
+15 0 obj
+<<
+/Contents 77 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
 16 0 obj
 <<
-/Contents 78 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 78 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -139,41 +144,31 @@ endobj
 endobj
 17 0 obj
 <<
-/Contents 79 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/A <<
+/S /URI /Type /Action /URI (https://code.claude.com/docs/en/overview)
+>> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
 18 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://code.claude.com/docs/en/overview)
->> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
+/Annots [ 17 0 R ] /Contents 79 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
 >>
 endobj
 19 0 obj
 <<
-/Annots [ 18 0 R ] /Contents 80 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
->>
-endobj
-20 0 obj
-<<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/overview)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-21 0 obj
+20 0 obj
 <<
-/Annots [ 20 0 R ] /Contents 81 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 19 0 R ] /Contents 80 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -181,16 +176,16 @@ endobj
 >> /Type /Page
 >>
 endobj
-22 0 obj
+21 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/claude-code-on-the-web)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-23 0 obj
+22 0 obj
 <<
-/Annots [ 22 0 R ] /Contents 82 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 21 0 R ] /Contents 81 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -198,16 +193,16 @@ endobj
 >> /Type /Page
 >>
 endobj
-24 0 obj
+23 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/desktop)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-25 0 obj
+24 0 obj
 <<
-/Annots [ 24 0 R ] /Contents 83 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 23 0 R ] /Contents 82 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -215,9 +210,9 @@ endobj
 >> /Type /Page
 >>
 endobj
-26 0 obj
+25 0 obj
 <<
-/Contents 84 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 83 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -225,16 +220,16 @@ endobj
   /Type /Page
 >>
 endobj
-27 0 obj
+26 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/web-quickstart)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-28 0 obj
+27 0 obj
 <<
-/Annots [ 27 0 R ] /Contents 85 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 26 0 R ] /Contents 84 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -242,16 +237,16 @@ endobj
 >> /Type /Page
 >>
 endobj
-29 0 obj
+28 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/mobile)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-30 0 obj
+29 0 obj
 <<
-/Annots [ 29 0 R ] /Contents 86 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 28 0 R ] /Contents 85 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -259,16 +254,16 @@ endobj
 >> /Type /Page
 >>
 endobj
-31 0 obj
+30 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/remote-control)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-32 0 obj
+31 0 obj
 <<
-/Annots [ 31 0 R ] /Contents 87 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 30 0 R ] /Contents 86 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -276,9 +271,19 @@ endobj
 >> /Type /Page
 >>
 endobj
+32 0 obj
+<<
+/Contents 87 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
 33 0 obj
 <<
-/Contents 88 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 88 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -288,129 +293,119 @@ endobj
 endobj
 34 0 obj
 <<
-/Contents 89 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
->>
-endobj
-35 0 obj
-<<
 /A <<
 /S /URI /Type /Action /URI (https://www.anthropic.com/news/model-context-protocol)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-36 0 obj
+35 0 obj
 <<
-/Annots [ 35 0 R ] /Contents 90 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 34 0 R ] /Contents 89 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
 
 >> /Type /Page
+>>
+endobj
+36 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://code.claude.com/docs/en/mcp)
+>> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
 37 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://code.claude.com/docs/en/mcp)
->> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
+/Annots [ 36 0 R ] /Contents 90 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
 >>
 endobj
 38 0 obj
 <<
-/Annots [ 37 0 R ] /Contents 91 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
+/A <<
+/S /URI /Type /Action /URI (https://code.claude.com/docs/en/mcp)
+>> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
 39 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://code.claude.com/docs/en/mcp)
->> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
+/Annots [ 38 0 R ] /Contents 91 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
 >>
 endobj
 40 0 obj
 <<
-/Annots [ 39 0 R ] /Contents 92 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
->>
-endobj
-41 0 obj
-<<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/mcp)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-42 0 obj
+41 0 obj
 <<
-/Annots [ 41 0 R ] /Contents 93 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 40 0 R ] /Contents 92 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
 
 >> /Type /Page
+>>
+endobj
+42 0 obj
+<<
+/Contents 93 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
 >>
 endobj
 43 0 obj
 <<
-/Contents 94 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 /Trans <<
-
->> 
-  /Type /Page
+/A <<
+/S /URI /Type /Action /URI (https://code.claude.com/docs/en/memory)
+>> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
 44 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://code.claude.com/docs/en/memory)
->> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
+/Annots [ 43 0 R ] /Contents 94 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
 >>
 endobj
 45 0 obj
 <<
-/Annots [ 44 0 R ] /Contents 95 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
+/A <<
+/S /URI /Type /Action /URI (https://code.claude.com/docs/en/memory)
+>> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
 46 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://code.claude.com/docs/en/memory)
->> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
+/Annots [ 45 0 R ] /Contents 95 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
 >>
 endobj
 47 0 obj
 <<
-/Annots [ 46 0 R ] /Contents 96 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
->>
-endobj
-48 0 obj
-<<
-/Contents 97 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 96 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -418,50 +413,50 @@ endobj
   /Type /Page
 >>
 endobj
-49 0 obj
+48 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/memory)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-50 0 obj
+49 0 obj
 <<
-/Annots [ 49 0 R ] /Contents 98 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 48 0 R ] /Contents 97 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
 
 >> /Type /Page
+>>
+endobj
+50 0 obj
+<<
+/A <<
+/S /URI /Type /Action /URI (https://code.claude.com/docs/en/skills)
+>> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
 51 0 obj
 <<
-/A <<
-/S /URI /Type /Action /URI (https://code.claude.com/docs/en/skills)
->> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
+/Annots [ 50 0 R ] /Contents 98 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
 >>
 endobj
 52 0 obj
 <<
-/Annots [ 51 0 R ] /Contents 99 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
->>
-endobj
-53 0 obj
-<<
 /A <<
 /S /URI /Type /Action /URI (https://code.claude.com/docs/en/skills)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-54 0 obj
+53 0 obj
 <<
-/Annots [ 53 0 R ] /Contents 100 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 52 0 R ] /Contents 99 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -469,9 +464,9 @@ endobj
 >> /Type /Page
 >>
 endobj
-55 0 obj
+54 0 obj
 <<
-/Contents 101 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 100 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -479,33 +474,33 @@ endobj
   /Type /Page
 >>
 endobj
-56 0 obj
+55 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://www.anthropic.com/product/claude-cowork)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
+>>
+endobj
+56 0 obj
+<<
+/Annots [ 55 0 R ] /Contents 101 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 
+  /Trans <<
+
+>> /Type /Page
 >>
 endobj
 57 0 obj
 <<
-/Annots [ 56 0 R ] /Contents 102 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
-/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
->> /Rotate 0 
-  /Trans <<
-
->> /Type /Page
->>
-endobj
-58 0 obj
-<<
 /A <<
 /S /URI /Type /Action /URI (https://www.anthropic.com/product/claude-cowork)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-59 0 obj
+58 0 obj
 <<
-/Annots [ 58 0 R ] /Contents 103 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 57 0 R ] /Contents 102 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -513,16 +508,16 @@ endobj
 >> /Type /Page
 >>
 endobj
-60 0 obj
+59 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-61 0 obj
+60 0 obj
 <<
-/Annots [ 60 0 R ] /Contents 104 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 59 0 R ] /Contents 103 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -530,16 +525,16 @@ endobj
 >> /Type /Page
 >>
 endobj
-62 0 obj
+61 0 obj
 <<
 /A <<
 /S /URI /Type /Action /URI (https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context)
 >> /Border [ 0 0 0 ] /Rect [ 729.3047 36 794.4 64.8 ] /Subtype /Link /Type /Annot
 >>
 endobj
-63 0 obj
+62 0 obj
 <<
-/Annots [ 62 0 R ] /Contents 105 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Annots [ 61 0 R ] /Contents 104 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 
   /Trans <<
@@ -547,9 +542,9 @@ endobj
 >> /Type /Page
 >>
 endobj
-64 0 obj
+63 0 obj
 <<
-/Contents 106 0 R /MediaBox [ 0 0 960 540 ] /Parent 67 0 R /Resources <<
+/Contents 105 0 R /MediaBox [ 0 0 960 540 ] /Parent 66 0 R /Resources <<
 /Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
 >> /Rotate 0 /Trans <<
 
@@ -557,292 +552,292 @@ endobj
   /Type /Page
 >>
 endobj
+64 0 obj
+<<
+/PageMode /UseNone /Pages 66 0 R /Type /Catalog
+>>
+endobj
 65 0 obj
 <<
-/PageMode /UseNone /Pages 67 0 R /Type /Catalog
+/Author (anonymous) /CreationDate (D:20260722032844+00'00') /Creator (anonymous) /Keywords () /ModDate (D:20260722032844+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
 >>
 endobj
 66 0 obj
 <<
-/Author (anonymous) /CreationDate (D:20260722032052+00'00') /Creator (anonymous) /Keywords () /ModDate (D:20260722032052+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
-  /Subject (unspecified) /Title (untitled) /Trapped /False
+/Count 39 /Kids [ 4 0 R 5 0 R 6 0 R 7 0 R 8 0 R 9 0 R 10 0 R 11 0 R 12 0 R 14 0 R 
+  15 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R 25 0 R 27 0 R 29 0 R 31 0 R 
+  32 0 R 33 0 R 35 0 R 37 0 R 39 0 R 41 0 R 42 0 R 44 0 R 46 0 R 47 0 R 
+  49 0 R 51 0 R 53 0 R 54 0 R 56 0 R 58 0 R 60 0 R 62 0 R 63 0 R ] /Type /Pages
 >>
 endobj
 67 0 obj
-<<
-/Count 39 /Kids [ 4 0 R 5 0 R 6 0 R 7 0 R 9 0 R 10 0 R 11 0 R 12 0 R 13 0 R 15 0 R 
-  16 0 R 17 0 R 19 0 R 21 0 R 23 0 R 25 0 R 26 0 R 28 0 R 30 0 R 32 0 R 
-  33 0 R 34 0 R 36 0 R 38 0 R 40 0 R 42 0 R 43 0 R 45 0 R 47 0 R 48 0 R 
-  50 0 R 52 0 R 54 0 R 55 0 R 57 0 R 59 0 R 61 0 R 63 0 R 64 0 R ] /Type /Pages
->>
-endobj
-68 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 164
 >>
 stream
 Gap@FbmM<A&;9LtME,D^0cRUt\[L_Dj1^&r<"N9-i;7^3b.oQUI*<4nL0D>-?k?T2"S.Wl`0MPWgr(VhCi?X<2$\o.*O^R11H*'iFFDSa%5'!1At/>sTh`RCr@t.=Nj"Fgc8J$*SAt$h58B-lWLP+R86:5,*=uC!C]~>endstream
 endobj
-69 0 obj
+68 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 394
 >>
 stream
 Gas2Ehb(d?'ZTV9']5aI)0:rt9eY[+&A7?;A8=(b\o]2LinKr71(3@QjM9_9^[M(DnFS./]+a[5j7.gg!qdV1QpUb+kB`7gl%R$lB5+2&$H3Ssp<*Uq@&i:A8Ps5/)KenL%4[/?&80c`aHGeW-.uQhlcHiA;WYk\jlsBS;_W&27E#Q*$$VlaNfCrRDqmM@,O4Ai^kbpc#sZgV=c'0a6)r$on^PWE*^U_kZc<u:$`DS1mU9n+CTr8A4ZGZ6Gdg&/a>OX&r>9J`rR("eeZ>%n>[F][F$DuQ\-VC>K[E<VdL[q95+WE4-Fc_83-IYoAPl>1Rjr='8S_@=qWN^CbE-5K72sYHhQcm>$:Rp/>bdm61g^mW6dX_G&2L*4FOJ9*beR>.!FhFXU]~>endstream
 endobj
-70 0 obj
+69 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 365
 >>
 stream
 Gatn!:J1dE&B4,8.GdpKLmdU?OrRI9"E+L\@qg/Q+1`t:X7Y/99r0IAcpA%L@$pjuhTQOQ5#gt''"Eh/\0[5&CdG->nK'Wob,Kd:U?Y?b&.Qf$WBiVFP_W_GXj=6fm5toE"_GIQAb@+0oCT0-[E8ZiarrBWG5XO/j(!ed7FSBb&RQ+t_[Ao%Je3C*f6&bl&WoAtKoA))+\ShY$mSdjfaAh:-e(9J=_FW;Hn3?S!t(i7LO\SJBUb6pR.^%Te'r<Iq8rO?PO_+O5K>\K%n#2%_dVoqDN2t+]rgeP@G>]u*rL@L(:6cr"T'U"T)%gnj9YuC0_mq:1_n-QLElS>b,&V?CWF(:Hfii'9K`HPq?"$uW/(~>endstream
 endobj
-71 0 obj
+70 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 420
 >>
 stream
 Gatn"9hWDY&;KZP(%5!9M4$:#]"5&Ki'F.]*c!]W]-#:dVRSkJBrL?T*Yca^-4Ifhj>hl9\]CDn*k3Y<I7KqA71E-]Tt&.;#^F:!?\?q5k(uL-,cjHu$Ub2m;Aj-&UI:uI)E*"C#j%gjH&CTANDpW!?:^;O;=&;mZn<Ab%eI!FX[1Fqg%6$jenfHi/l?F]b_?BhP4F:qeMA*)i>FLN"'%pAg@*N>bJis-`\*:,S[&#5q=KGi7@Z$Q'-;;,6J_!MGD32'l[?mAZ<a.]:;7XPmDQAT@4F^1NHVnuh8FJF(ioVR?/MrQD%;T.hKj#X4mG&`\Z++--8@&+Gj2ReVcG#[EW2mp?gDG7e%8!93j2LA7l5TPmk(oS`d[Z?'iCFXe<9o_cDSV\XIMjHpfZh\6Ri]Z=(f>T4oeR,fRE~>endstream
 endobj
-72 0 obj
+71 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 622
 >>
 stream
-Gatn$9lJKG&;KZL'luW?>ErW0^YJts,WL@.^kbW:<kPDj*'<^P7K)u)Y1(l$OnN0cnj^(FH"Pp(SIc(@.,WW\J.Es=qa<[^apjG%%HV6t=KYJ6-VOP3JdP.b/\KFagon:?0!#&J"UkDif.6hc3GC;X<;L%#&![<(8CS]:d)a-'-uk]s=cVm'.c_j0(?pbbaiHdrXnP^25WRqo[EbM0B=)!-EXMeP=ds8)TX,(s*,XWsFDso(jOhmhiM#&DAJp5>doA!tLuA]`?Vk'Aj-26fg2hkS8.Nof8gfE1kl1`^<jFbRhTR4ZR/XY;<hU7#d6'IkCPYt0inK=uH&PINM[NXre\2NOJTFE2;qbfNZ1$Z;cu5@29Q47WLKj!9D&[Dd*ZoSLhCM@`GNt"pd-o#`#t%,U?9JF)7MpL)9e#&0`b"+>4T!An-c*QOWc#EFkJH3GEfP4i.75bYf8R&8Qh7=ur7LQUT-.jYEX\YK<hIB%q#uNPGJ(OS>hV52VbNQ#\p`0Vl_]Za-E`,92_IjJ0"%^IW'?&d%(#*+L#ob$Gg7.t-7;'d?nmF[3/J08VFrKX:L#]28c5sL1m$f2`%>Ql+%3sEqubq=QU[`;RgE[B(fl+d9rW%k~>endstream
+Gatn$:N+`:&B4,8.HZ/\[OQpMs4mb^,WL@.+G`ZD;<"^0ZIr6J/aBfXS8?p_`53[T'X*\4pTrc0ZNPk5)Xl2di*?A%4qNg/@LJu/6h(cF(E4(B#nm;1:p?2)i.ZpbIaa;9?j.B!TT?=jhXCcm8Y]F]nddO)W%@-T;0sEP,>\&HM:4l<ZF:W"a@ThldMWd_O[3W^pJMko3R)Wp3f?V%d<\7(.JS=%m3r6&`aH`+%/cVjM.q\1/KG$+`==MYf^G93CuJTU=&AgFid)#.$,]\gR@k!L_&5Z*%+,.T?QdK`<f`>DF6A$Js-tllEX=&:h4^hlQ#03u94#\LC(acV5h21@3j&Z.QR"`U.a&G$(-_KiD:?K2N`CD8L$mU%km$G3nIX0ob&i*1T'-1Oj3T]h:C(=NLBu-)_]B<:P]0^a\o9EroB)g3iEp%s2r4GU_Vsp'NcWYu6SFt]N3dd_l2S[N(!q;CQ:P1r3@`bfj-KZm5=*'aRI73hf8bm^BbP*9mauYB\uAM9LfN=PL=N9KjfN8ElM#`l`7a:_L%WSWr7H(K>QE<#jcY2<-2l76[S<*t?s9@<:7_/o[(.@')2NW[rdtKHcQ=:tF1F.hZm3E2N+);c<\SGe~>endstream
 endobj
-73 0 obj
+72 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 476
 >>
 stream
 Gatm8>>N-Z'RnrC301X!!i8.(]kgK5(t6E9>j5-t[->Q?IkP@LWQn_rO?c.Xq/5.V!4t\t^/tD@V/S.:5U`Eg&;D$t[kLH&m`MYX3O-:Ti>?$YU"5<$-V+;J!lr`[&][5D^=#AG?lgf;#:OdlG-!5]Y(/;R+C2h*lrDZ,9Pr^mXC$!HY+&?\T-9d!D2;S_Duq,Z`)/i'VMOn=$p-JiR3J&l?;=:=F86>_nd"MP+A"<XkkB4f(Ij&-l[\)<$V^c@qj'p`$4?Z/H-?lVQ`gbN[CSZ!"[iM`4A=tmBOqR`*%e$.6^Z?8G_:0<l/q?Bmqp5j-efO196ln'elASLW)9=!M%#$J.l2%^%*IT@@T#o.Gu6Nf2p]B!$po8<9eU3Sdt5SWJcja<\gm#h9]%ph_'#/OD*Ze@\FFFV_"tVp>(,7-6gHHO6uY,U]U'Au,2@ZmM4:h)\g6t+P]1QABA`eE9\of&E%@=~>endstream
 endobj
-74 0 obj
+73 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 602
 >>
 stream
 Gau1,6'%Kh&;BTK'm"1mQ0Y[[)m3C^eOi!+<7F'8`+aCYKuah5rV%<GP$k-.V@jIH9BaWiB0HM2,TkZGX&jiK&jCb65R$6NO9@lF%3EY0hr5mYSCP<[0G6.(&3MN3Ag.IG<b=@qg.7]3<;'?"W40q1_2@^Ad$:tGJK\HqI"ccORU>QlK;U&t>%hYi:qCiC*m,9Imp`8X74r]`!fP\8K[Q8<ri;O6Pq]4V-h07`)RSI%$/V:?@0oJ<[GUkNOYk$J,l&m[M1epV0%.Z+c+441S-pW),95=f:*'9&D1?,ui/lT8pg1MBKl/p=EDiHGCpPXZ]?Yu.k83cX)km$&WgS2g))Gj#0F9RY/Mq#q45P_H&F0ViEUE&5W9r@RClb:C1p(]r9joFe@nYgO8/#HMZO)VlQIA^+,#=TjCRJ$3+39FR/VY1)R]j0UKVQQ\$*pJuh"gZ\ker'-ZEV#%R4Q,3TNRQ!Bc043CS=nTj&bRod"YXmCd3;l?Mp4Mg<MqAp1`cleX8]Bj9[^$DV&1kiDMtYN<u5Fbs>$kaS'(lKnA@:-iokNU,?ml:#,5_a(Y>,GJRBVG+>W4Vec)Y&0'8a1!KUukh<am~>endstream
 endobj
-75 0 obj
+74 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 499
 >>
 stream
 Gatn#btd:Q'SZ:0MR*G=N:"-8Z\/B1Ulh$8XOH7=%8Gj)EN/g.@qVg)C(TZdb#3+dg#kFWrXn(^M;_UG^dF-oB)s0<0-Cs-aC"G$:I8,rDE6s9Tpb&1.LnsNge=(9;^n?-:_V)PUZ0?\8jWtb;gsr<rSg(B#n$jB@O^j`=80f1S%:-h4;Rfu][G*:2-&8LhiZg7\SS:!82ZE-o-BN?KM,:_.3:U"NCusbU8PeRTS7N1SpYaL*R#jna+Q46BuI2r;Y\gDB#_"1C;7We.CKt"AucSp?R!(r$K!fV>\%$rZ^UYr7sj6Se:_7"#PB6!>;tV$:#QDJU8s.mo0$.5D=$rY:am'DVuu\$0?Q/$I?7YiG)(sfh7ETk5Ts'<j<q/TFOnprg@YV@EO!N'5#Pb!H;<r[K&-:O[WGC#8WHTl=kAH,k1f!\.b#KU8sYeiSch'[D-M?/=M))NA"rpOSE[8Qol(j]@>4]S)*-Iq.FSCBN.`q]"'bO?UA~>endstream
 endobj
-76 0 obj
+75 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 480
 >>
 stream
 Gau1+:J:%.'ZKh<.F(fpYIR5n-;4AV'].jB1$d8e:;nR.7eG`1o]]$S>s*@s5VIf_r6@<U0LT),I@D:fW,Qpt@#=.iX@]1u_f`@Z>A4NW.mG%s7\J*06]:i*'j6VN7:FYE7[-s:PEV5aStl^uP=k`M6.Lk@!McV^e`5jKoR6*c,M$:Z>MT)EgA-M6<0*tQnuj=/(!;*[AIM,06Fo0OktKPM=o+_eXJ9TGO'>:b=sg@RcPc%c*RR;l69EIYh_sVj$reZI>J[:G8#:@-+B%d:Bbnf/@m@;,\MM>,:]O]t=[1YVT'DY:4#ck?J:.N@aR<4A&N.RO*4t,FUJ5a(2It&;l)aJ^>X$C5@m+q=`T>qOT;ubm2p8)WZ65u.dkmbJY+$L=FF^?FY".9UBS)<4gN'g=M1d''&$?jHT78!3SFaq5VrK['o\o:_(RhlkfM.Q,Eu(80iH*-:(RC?8F&eBk+DrNbeN<AG.R3~>endstream
 endobj
-77 0 obj
+76 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 441
 >>
 stream
 Gatn"btc/1&;9LtME+"'N&PbCKGtUb+`V1?J1,O`<V%HU<T3>uR&Vat7j(ftZAQ!fAgZ1B,VKMVWW?uE>i$,B7^3(FThml0Y)%=\Q[=bHd$ea,<(T'-jWkHVKJG=-\0bCJ9T>SD'gi.(.eb@JVk'h["?1!?%#P7%`O<[cCRVP7$r]:]R'"!:StfD]R#FN=8]ipL:c"O#nW@"L7PuLFde@KJQAa-'b?`\9mJfJM5L:-">uKV,X0Nc8enlCQf<&lNVqAT7gArT)?TN*GAe3Kh[s+QLLstLFM4a%jUKX"RKuHK1g8q)[<nLu3D!f42dePE':!<&dE78mbhUS``J$IpUZ*eHVqc`km=]7b"2"jq17ZO%$%`=[?jqfCJ*(J#*O/O=baZkjJmnf3]O\00pgc9l&lI.#Uf^cdrkgX9R1*\3._qc7&#gk`WF2^]~>endstream
 endobj
-78 0 obj
+77 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 417
 >>
 stream
 Gatn!cYgTR%*%aaMXS%uPf7L.[R\?)2N=9Y4[=N3$N6k\/`Q/aAr&0Y7q='7/a*#aQ3l=b\T_<\O!u-A$03>U5_9<<9.WueVQ@10YB$Irj9PoZX-$+=(5%I"LU$N'jA@JJ8gi^f32r!HUhlXJ<"Ufg+9d[bQFM9=X5%efGKSiL*Ah(35'D4Jmud%#:<)1M3$jaWj's,UrWPgu`!@(4G4e'R#UAJe8aMg_=uT9F05$nQ$W_.abfpV:AJE^1d)pIs[WFaBWsFp-d:_89=l%d9RR1"VBcC_)Xn"&CV2A3<hji!p-KTO1K19`4kVga^W-d"cVOO<[%JG3_d.Z"Ll/YJQ92:L3YKPAR]2BB_eDAW8l_@Vu)P,:#n$teO'M2QB*5U6;P3ucmbP4GbI<T<9q];6j8f?J%&(.gV~>endstream
 endobj
-79 0 obj
+78 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 266
 >>
 stream
 Gas2D5t_;G%#+0I/)F-]N(G@[RCuYnUj-kX^f#@[Z$Y-OKE'eM.SE&VJI.!rpZ2j:]XYYe4g;&uIq#XT:1+NgqM`JKq8d@IkiO5ZNKBC/N0lM/-jZ7j(%9Nu(Hj:D6'R"P.8U%L$?gQgd04,0HL?4Q9_URI*a7?o+DMCF]#P9M/a=_Kk+oWSW\%/D2:EXK8UX.SolV>Gn223Ca#gpBo/GNdb;AS*_^-i_F#L,U./"i8d6F_oi;[jhoWcH@#%Y8`7e[!Q>$!0~>endstream
 endobj
-80 0 obj
+79 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 440
 >>
 stream
 Gatn!b>,r/&4Q?hMS"PA17lFh'6__,$)n3+L'>cI\kSi;.OS'cmr;U^LNomM9-/@8^@uk7"R['$I9$HZ3NhcU'I$n7";Aj(aR[-Cgp5,=psN,^`.GmA/-Z,J^kC]eiaO1D8jm%NV*YG@(%],'bL<r$LmT]SJgob</uD(>OdTcloFT]R[bFNUXhI4&L4%A*A]-$_KL8FXP_ONH66pk=_&_"nFqH#OM:9s94rOmt%Bn/n>?@\(%<4VXL7%<#]kc1dD"K5>01%'R`h`obBg+(;PFL`T`p,Pk1WRDs$*CZ(q(63<lU]VaB*KIrZVY\rFhK;ALW5u;2-.]M5C-1pW\+,7[O5=HNR9*bYolpWq^?fG@gJ6HKMlIW"!S'Ma"+T6!_(/PIh1$.U+2<Wk!C)1V[e,u1-RENDLrCa&iEX_(o<ojXY:1qHiXHs\$5~>endstream
 endobj
-81 0 obj
+80 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 571
 >>
 stream
 Gatn#9lJc?%#46M'g-@sE2#a_d^ArP!Yd^I#)XGMb\are,B+V2qtH;6-F)03o2*>T"j?Q8OEtURQup_phc9a/3P>5W5Sip;+@_+`#!V0Pg.GHDOOZ^3'Eap9Zj#5lAJbDMN=T`G@Pi$G3Cm<26->\'<8+5t.Q^<)_PiPtn0[&#700le?O,d5pi<HEe\-\7460KALId/o&7!do>dP`Aj.=4:-1m/X*$I%h$PE9+H=#!"O7fATN8ZXgF`,F5/aaC<=%O^:+3T-^%R7O:5=W;!7L`,.WC7;O+Jb?_cCXr\<E=a/NWQdu\kae9GCZRiO1OTEeqp&V151*mNpVWVEEZ5QJlP6h$ElABh.'_AQ;d)JFNeWk;nabi>;jN?Md\GGFDc9d.Los9Fm1[j:OS%ZT*XbW478HAgBo]i.:Q:!\kQ>EqjZ,pB(nK`#`pGQ2CVicR.uN90ud/LT82.%?e_=Q;>00b_1pAp,1Z;.<H%Spj7Q*A!p<R0c58r)bjRBJSqDV8VQQX%#i^?*k6t41K&3_<FP!K`\!,kBn2"3gM%lmRK-E`G4I*.r+SuW!F)7<~>endstream
 endobj
-82 0 obj
+81 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 490
 >>
 stream
 Gatn"h.k_!&;BTO'^)VnTSc4)-2Xu"$&#1_1oC#)Xke-3.gJ]ol.^D5QL'A*OME&V@<m77F79T(ntLO#G//kK(KU`;BNH<.1timR[KRcCRaspKV2^V9[)D%13\Nl1TrkD2hFf)1Xd@0]V4b.o-(h".SG#of$8+#9=L:0&r=Y2M*nMS2.JS">p'9=CjVpLK)FHLN[4E8>KIQSGd?;3@*E1OK=M-?Nj*$siGLIO<6(f#*1bh9oApg(8KM1O;DXP2W_aQNX*b3"_O>bR45BLff^L\ePZpBtBU9(\XlSrcfo)39D.]!udc["cd%?cW6Z1]VUi+m]GLbA=Dj!29f5&iW`81[2grp$C@`8ngO3opP@8=#4ekPO?=I0B::(r@2/`N=u(j1P<#k]=?_GP<XuV2;:idr#s#YlQV*\/Ij8@A$YH,ci\f:=ZW?^W5^@U:)nQP1gt!Do[.gr%lrLi7U:n)XLjI/#Z>@BoC^I`G`L<p%8~>endstream
 endobj
-83 0 obj
+82 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 417
 >>
 stream
 Gatn!b>,r/&4Q?hMS"PA1*4K@SL)Ss/".OcN<=aMM;j2G^W/(-/`O%8/:$=(pn$gA&9q:kpMC.?'tCauO?cZq,a0YEEEa\3("W/E\6,1MN_FJP(A0.c##&d'R1N<9[?4*nPS0'T.cYlTOJab39N`c?P%bUNcE>oBXt4IlJ"?Gp*5r;CeT-?UVd'fDdI8t/HO:p]$UsVoj`a<hL7'U=,Nobh.U?&_]sB,B@1CguZ=DLrZA#WnZ5#GQ?V&#CMY%/Nf%;"CVQTk9j6Y^+pJ(*=HkYB:p`AIP%?S`":n486c1]gkF)/Yu%^qli68t4%N"`X:5?Eans33eUM6t,`WeGq=J5dMV4J7-?0HttQAtKMTFfbN8nGFr>;oLLEog*fNcf<T*F,aImfL)K%#Al;m>f9R!9nMF.VW"mn~>endstream
 endobj
-84 0 obj
+83 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 264
 >>
 stream
 Gas2Dc"[>8%#"*H'Q\)3E$\YQ^"8DO$9e%>9@%1u+4r-3VU&Vg.8-<[#V6O^q(u]F(\dZH#4=#0Fpo/94]m?252i1F54WH,_kB^n,:"SB$2_sY$A)k^`HsGa7F0+i&EP$B$<4g,JmD[HFFi,%Sk%[#ds]NVLDKV4LmeF@cF>%.7K#X1S9.h<[:`+=B):O;BaguQDVN5+KZ>b4g+q]"3As"708JeTQ'=9Jenu0lOVR*[eRS+K0dQVJ;cr4&^2V*]"6&0=f)~>endstream
 endobj
-85 0 obj
+84 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 509
 >>
 stream
 Gatn#_.qaZ&;KY&MZ;>i0[WFs,[VM=oFP\Dr;r!\fso_#_V-@$gIIRQY!^r/_$E/J)#rLgf.[Vq%d.JO!5@$oqSlp"q@Tf#UV=W??)1F\a'B9tBk7E>/TC?,]I_-TZk]E1;&Nf5Sgq(2K[*Jl3(]r/s/'O"WPE2QW"8ZD*CK>`JD4u:5!E5Ere^JlqLh8uKW7:B:%BF+8m2*/76*q/ArPZuUfg;fCtqp;e*R4JY[jt/lATeSORg=t-p9;l85=WN:aP@on`.Rn[/4IjH>:$l2Jt[HYf/fo&t7CZ:)ZQtS#qn?>IT^/lb`7#DLW](,TBW;kP!P]!DV>F^;gd>4S^hV0<rR$321hYZ1fc<aBDNAB+rhl-8+BJ]Cm+:rh&jXX=U=gF.K3^%:K[Z7lR6S927BD@bd\Re+aL35+#GeAnu@CAnk`,!Lp`EWas^'*B9I2KdDrIm$>fohERWj>%OWHg7EFGEBL]/6e?QW9CH,"E.E'hh3Z?(HYa$'n&U>;GQ~>endstream
 endobj
-86 0 obj
+85 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 504
 >>
 stream
 Gatn#c#0%*'LqgZ`OBZhE..]21/46<<Z.^7)<,2jbQ'D[;;T%,1c%Ns,?7&G>d,j<OUfqgn@0n&X!@,/_"Tnl#o(].`>"2Vr$o"^'j#Y%RadcF%]q^Ba7FGn*14$:]3(ogeu>W)71#n,V>3,$maGOCOt8L.`@Qlk^28T[$n+u;r>moBgM,i'^I%H0`V&jLj142*#GZ[@J-i2Dra.AD">_7L33<rj682!N/`V?W^'aPaUE5^@ifQL9e-RYN*.h-'8+A##$]`_1c(*dqo,)Z@R]P%6HG2P,j-.Ngh:;glZKp/S)MO;I]31n2?fN@0h@J!V_Utr.;354,`]U\<O/d&O\f#qrY&RZHqj5Zic-si781CFdlqaeQD\<$-?Yb-phd(,fS-_,[(Y[L:$uSGc<4hnbf8]aSpE.n!7:ZkQeP,<US4oA6H'Iq-mR3K[QC.lQI$sp$)>&'MQ%j"Ulm6l)NhQ;'G;N'7n6J'aNj-gK^Eh7^!LjMN+5V#l"9~>endstream
 endobj
-87 0 obj
+86 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 370
 >>
 stream
 Gatn!b>,r/&4Q?hMS"NoN5or9fRdMMMY[QEED)t0/#O]YhrD5F&+NbqOZ`2JI.+>\"J17g]'+]LLRSMM$+M9P1(!]2HWT<,NjPfQBsihnOW;JQ3NJMJPF=EWk?;kBjO@>."D!X0pe`Nml-!)X/2o!!1gH*B-f;tHa'B,.'\CrUDfE&I#U<)F&Ph$Kg5;X5TpCn#j;I&l(L]'b@r3rhDuBn-f^@.A(Q:)^A!peeIG?,b?=WKkTA=e;PUbP=mCKOnBX-th49e"Y>mpsg2XKt(i]-^T6-r.HX`2L!!]VPM<<d'Af/EaUatmgV!"f'5q=i;8/ZNU*)D:\SGFfmpi@h,ak5TJe<9U$8An4?`XYI"UI0(X=PR.~>endstream
 endobj
-88 0 obj
+87 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 617
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 619
 >>
 stream
-Gau0AbAQ&g&A7ljk0QI73%UClZ%jA%[&4Zk>5`uOd'4KX1A%N-^Fr/=Ng1f+%LN=i"cBY(*=c-R*ZdqY]E><W]`1YJJU@Pt9HjFf:\flfA[utl`5rmSUW^/6GI)#sfGP1$3'*,F`@<F#<bN3J1;;sdTeoS@0U73FBlSr!LfHjoK\RH3:.u49(nErId__u>bq^G"R$dT8YgtKWc<rG"dRlVB"#e7DToohQ+(Y`LFAPY&(30f+>_`.dDni`14KeUdpV+JiZ.fthn)#;gNVjtL.(Kh7I,(]@;9BP1W?Rhk/:3+G)A1>QmEKA-s420BZ]WIN.HrZNb.8Fn4YAD2\fIsjj-ltZ'K"i,1#^1*oGG#:#Xs6$R:;A&R#/8uOin&WWFF:q`cZgVpo7rB@`#L/_T`E+[N8!t[]F9hI$5EaM<,tr=62$6!TOZ41&,XGU:K0"IHNgGCH?Krl#7eQbBC5iO2`,dm<<D+/1Y0`;EQFWnD:XoU\B1D[1,$2?+9\Pp[*d2m+T0\QJ1'FfCT/f?0m;h\&N=?2LbT3[\*()c%;9a',/Ba-PcUFJpP/#\R$?rqSQuU?Pc5(E;1dYB3`gH+.clmfO6?fM*TEZAutt5NlZP(~>endstream
+Gau0A9omaW'YO0Ab^fkt]#N(Rk.kCO3.X>V57kCY/XoJ7Hr04Fk;hep[RCl?6':L^aisO>a"IS;(QIJ?*k3ZgqE9BDMD`H\KAm!i'al1EQSq0lV!'5Q0h?rjqk>.Jd7IFbd3bru(AraWar1KJHt0&b[=a<.QiJ==eR<iWGXLO4EsJ\>RNU/f\ptE(<AYR4K$kE$:$We(h?g;:@"Tfn29ojS*c*O*%9>[G^sD9'R*gMrPnu0J\AudRc-M'4eF->9nTANsjXPDV;#ERu2*.\4jY]6*eAZ7cOd\12bt&HGTVe8hoVhKCR/*q.>[h;?hFg;Xlr[9LE1:fp]rIO[FuHJ%$:X<LUe(l"L:Taeg%%s_G;sSYMN2X9(,fsu3rd_b's*KLSEXnVfo"0;9:F/kkr/pDBjtE#'Yi*_W_qk05&XMHf_-/*W6.<399f+eIZrLXB&:a/N5G.2r*QEbiIB-YT;o86g4!?A3Ce@qllg\Il@^d4h6s;fDQ9_iGBdd*PcM7W\p:-ccY^oj8lt,WDg"e?2GKa.F/If8lIjGr]s=6u$u7K9#9V8AqUVs!WBEhd4nS?dg#]ZFNc_e4r0rQ0cYkiaf\BlJE2.rX,A&KU!QLFOQ2~>endstream
 endobj
-89 0 obj
+88 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 262
 >>
 stream
 Gas2D6#-Nf%#+0I/)J["(m@W?1[D<BKn=o3\Tf`,&9VE>s1`P)MboPO"N&@ZnqKG:gto4Jn63*l@'H<l^`!o0L%j<saD9RTk9fSUOH_GJ@lNjC6-r<)G`P>)kY2p(U)X;0JI:%-Ybs"2/hjocF75SW]$L3@d,H)M;0--p'4qqc:_0MrX6usf[S2OT9`J?DocZ3Ep"O)8c1/*[k8E%51858rn`LsYPW9\[DA7G[M<EdH;Xi]\&q0*iXPlS8SC.9:72T&3~>endstream
 endobj
-90 0 obj
+89 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 379
 >>
 stream
 Gas2E@8"Kl&;Iso=1fVt+(?ioPP!lL"[PFVr]o_Z%9ZnL,-l^e23+f5)hC(k]QrAG$UO?W*1IGJ&%Hs1O@%TMN%bMjGRObBpl*t%cdKs.PX]+uYuqdX6Pq1DcWOK:]_PE>$Z[LP8g-?rZE1_4,eGR/41VsqW1uH+l.DpfL%Wg@$]!*fk4R^#(?$9B0aS"TFs3B^Qb$'B2F3ghD'V&ZJZY.M<G!n2$m0>IR-K-+O)(OsS^7dnh_lomq2@-=qoBA)iH)rK:A(]V5@j=[:aS\u2f/\=0r/):+s(3.]-ugZP_R7^S?e\tR1DZ1;=sm_Pif8k]`-#MkrJS1p9-iS[\B#+S[kd`afhl;`IEA<>'+`4jH[ls4]V`DDhi"f5Q~>endstream
 endobj
-91 0 obj
+90 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 412
 >>
 stream
 Gatn!8Pd5X&;BTK(%2DC1*4K@SKka3+;L?&ZUrqMR\`V[Wr@?M(Ng>5WNtU4N1Soc,7fA&6fH<@i%i4G/V+&1&P+[6lk)0Zj@fKZj/<I9<,j1HUNIFH,%eWdk)&U_<a6TS<X(&T)6=Ib[ISJ:VTP9OJW`\OX)RY+DWc8Ul=3q_9g7r>OaSA<XWK:WPUaO&)BPecb9=fEc&pd?o/e<H_b?5j!VPGgJ\lPnEK-^74,hmj_HkWL98DhVo'+eHks>`s<F?>MKq1:f9NldtfqL%VF1^[E:tg;CA2L9=$,n@/T,4Y9@FZo41s7qAhe_I`lN.n$qsK!*80Y1?NG=I0B9N[LP'Y7][LqJB2;:eVjM(6C)tUhDNYP3se2uQ=+!l+9?"<-NFJi*:TT*QJMNF)?7#8PW_3hCD~>endstream
 endobj
-92 0 obj
+91 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 520
 >>
 stream
 Gatn#997OU'SZ;W'k[iZ0Rh!%,r5WRO@D&>lSNTQTM:.-0^?Enp/HGKUS3Ld;XA1)TC:k;_*Cq/jkFX&gBR+11,+`#"X]'oo*HM-.SZc%^K"3([>L]E']*8@;\9*U26BU<Kqd;BS6;XIA<EnV5q:-c4]MiP&sOX[bm&+#NcE^s&YJM5n1,W:H2JH&G;M7(/ZC%+>2dgY.P0a13$C(QdcBY(S1p7>:ZoC6(t2e83>S.I10J'$Ecal%?M.pTF)0*M]dQ$,XaJ)"UWb3B@rLr<*,Mkf9#_8o.]I&n%rI+4I2cCL':(]gmF7c^r-odNJdApM/NW@U'S^HucnI#[Xma/MH&QNJpmu]u6KcCc_eqP_KPkaup3O6]=/XT]>IS\Bn8ic%F9-B#\A,^,m];d_>h_J?in43K&Ru5e]t,]_XIAV0O6nQmS%X#E/B?lpY&cYMW]W[-mF!(1_oqYFM(0o[s7N[&+KC,>23n$:]1D+XF(_ZGR-rcb;dfcF1gu]:BT5H7l8Q\\2&6~>endstream
 endobj
-93 0 obj
+92 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 550
 >>
 stream
 Gatn#c#0%*'SZ;Q'PEhEEU/+DD("_FlD!ZB<KXRQi(Rf$W'$/VhS(n:%%p()U`q'8XNUFb\_tZIil/rbGlZ^aGk[>Q$fhiVMA5X-plKFR<kQ:uduL8m@F0lTGWabtaFTReg;R&1At;PZUQg9IV)5eT`I334.S6n\.'go)\D$cJm)'EZh10@iir5tF_P(Y3e,;/4?/,4]8)ISss,$Y#BbAN.P8T0hM$jqoMenE?.cD,#*acr\QVm<uiNFR]<(><Uf4Tm]O%#+H;[ep])'`1?1p?VXKf"llOE-:Il\q?td6("jdXTQ:6&oYRY/S@,ImY$^,FS1fakKWVqmip1d\#5IB70;>KutM'I;2)o>R`X3&^$1kB@Nh?'^MZ"+MRlUMVb,3b9u2NS:t0A;Op+cVC8(f&$oYk)4Cb@f;>lVoQAcg*Jd:-iW[mRqgIu"+f7qSbh'[d'2I?p&AQ`SGL24gCN*ENK$A#bN5I?-f)MI)0odq\B#FuHcf=p-;(E)iVX1+jMoNrZOjs.H-c8ntE.E'h:+@t^2:ucMq#g?\:=f~>endstream
 endobj
-94 0 obj
+93 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 256
 >>
 stream
 Gas2Dc"[>8%#"*H'Q\)2E$\YQ^"7r2e>$BD[%!/=D';-14FIpA/:j$.Y[ERT)jruugto4H=B)rI1K[IT?k&"iJ[a@DjL&?=5Adbd6;k[L^hV_[JtSN0nK*[1dG&1gLiO%\"Y*nQ_4Ied]"mZ)cb48RkcXMad,H)M;0--p&MKq9e1Kt`3qq-(gJ*O%RiYf\ocZ3Ejlpa^*B3-^bMD@GHam]6A^6%0)oZ,o!r5'gq##VhM(X.$CE1H?cKHnZD,ci~>endstream
 endobj
-95 0 obj
+94 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 384
 >>
 stream
 Gas1Z6#OOn&A70@F)3kH?JD`U,Gk%N%JKl83#"bOjb-\4^:&qB<=;uE='gl!G'40S#3EL4JS0b9<rr]<#,IW<>@?lVfSU8!`?@T!bu#sNi6b4*B#0_jV2\JiDQN\#8e!Po@ciVR:o,E-hNt;rTQO-k'bb6QfVe>6[Ue)YEm"krMhftpqXu[WmJ7E4#<,4n7QbDtY17PqM2MF$Whc;4*92d*&;F1f@>\[/pXgO+lAbleU"fCnJC&E@LA-#0CgS:94rUKR4mLPhk_D2-UQPQFP;S:SJ(MJcqJ\diqgR9?f[rcpLlB?Ml==GlK^u;0s'5pKgWIGB,U$U:bdS+%T@?EV9!6C'G8]#<o"V'A=$6KtWR8R._j/<H4dH8/D^E&XOo~>endstream
 endobj
-96 0 obj
+95 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 409
 >>
 stream
 Gatn!9lIm&%#46L(%6/&OMtq&1e5R</t>D/S[1.<#;&hX5l::K_ZW[13$Cq7@QEme-RS=j'N\?<pBBt+#p`=u5a"\Q1JE]PKS$VTUku'?EFb6-oiR.cQ@hcRZTS"^ELk8r1J.tp.$a=d</B!><Mh;m.*4<')E4iMgZ*#64&cY9Zgl5VPh"kIMK]c0i@6'I7M3p0kG]%@)Bk@J:%D-/n$J="Q=n3*i+-%mbn=<#S'n`VLZ#G:hHJZ7^15b@$RlooOZRI:Wp7:`GMrQ-k1Y=#D<j7LYDjin0qgQqn?_"RrW'FuDS<$\rn)4)HOFK\hY,jkR3^2f-a*aL-(S#*',*>ikdcMaX4aaj@4miFSs]OHFfJQ`V*=4j\%C5eDcPg/`q5e#:daE7OV.,j_)t$S#rZ7s!W~>endstream
 endobj
-97 0 obj
+96 0 obj
 <<
-/Filter [ /ASCII85Decode /FlateDecode ] /Length 510
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 514
 >>
 stream
-Gatn#95i<6'SZ;Q.uqQ&<fDD(NnLgO=B,Vmb21@PO=DpCW%e5ma,H`d&Lr\a;6FKLrd7K-_a3PLq7U]sRhAfk3Oh?M!3V\UH&#\9@AGGg#KDT^_l)c,;Ad,bg-""*Jl[OJi8J^o$H]-0G[Ak^R381Y6.8LurVX#>-(09=MHQ/Q?LN@=VQU)>n#l-:m9"G>5l$6,19X>jD$gB2*gs286`Q!:L_]qt8EZAcN)thL%WUf=?QWbmd1>&CfT/\TMjdu7l%3%^Srm74a+3$U#9Vi2$'N^DXck*WXjIg'$#]_U,XoNVQ%kjGg29&&dLd`&S:J>Sr=IZ)NcE5^OZ5ApaoB;qNuiH:']P"Ic'"C*Wa/Iql8Fft"1"5nPq<[#VUIP0p)uPP!W0$6WY+:cFGrD5=o0iYBp^0/-Y++S(uM&PNi@TsO*+mdBr3=jcQCf[\sm)e+8aQfX0:a@qKO>`X(b@;Y(kB]&2Q,]S]Pm7dd2H<$^&oZVM(@fOqoi`o,EsH.Am~>endstream
+Gatnc95i<6&-q_%IYtnY"Y/)onMB=I@l[Np6-A$MVN<8\ii'*=*lk?_fcjB*8YXjp*</,7B,Hk.cM)_p]I@k!T"u'$*EW]/ncl^H,=jmO*eK6^jgk$fBoLq-?%1I2K$f7V_VNa3'T//SGhf1T-UDC]criocq6V!@KS6d;30Z"dms]t6BI^[.H%#R--ecHGPkQT0o"$Xs>?H]'WI-6*V.W/Z./mX'mtJm'1W7X>E>uL9*+L!DN;\14T9duj0g4ol69$17j;,50_@X:GLbH#dP]G3>'GIgZAqms/qk&sDGuJN$@9pWS.#M/pK)DHqTl7db`QB'.-TmMRAaE@jM*mX3Rei_8.jiMV@9B!lYO9ubR3^`s)L__J=KY_#R<1([S`c5cW#hrNqn?q5$.JY@)h%^kp/dF"$:UacA6Hl#^;=iZ;?tqulXK4?0U-=u+7*LdcWD-`+n_<#/,HD/?3Fs6]I.Z9/Z$-((M;AKF1LmVp:ng<k%`sTKpb4qMj^jG%6Qp*Mu~>endstream
 endobj
-98 0 obj
+97 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 434
 >>
 stream
 Gatn"bAP3?&4Q?mMS!]2TT"j20AA<hAPjmopPqr\=2[WfC"g<T-<2,P@hg.A@W].n"q:\V(<*uD!Y6UFSd:RT>_*"k.-Ht_8P"QcYELS2$d"M=No"/$8XK\qMW[%=9QHuKW/Ob+7't,4d445ARjp0/"B$q-Ef6FOr;Pet`jQ>J>JI2>*H"`gTq%(n(i_#Ni=n/qMY'F`A7?ej*m4;LPi[e!H(cIaF:QlECXg&P2ZrutTQZkb+.caSS*J@J?5+!`n<GlpGLd1ig1o4V%)0+bDJ;:iCQj%`Ul=*\C:uF%ReO6KBKbX\l^UIFHarLd=@smgP1-+5;tn9BBH0M"d_nZ5R,2(EF$ZTIN_th`F"59kP""m?6.KZh,fL8,Ap!J=pMg+MW\V\:0%A!eiHBWd/uloTr.pP7@LK"IUEY[FMa`6Y$_FcI&H~>endstream
 endobj
-99 0 obj
+98 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 387
 >>
 stream
 Gas2Ebtc/1&;9LtME+"')6`G[c4pHpU*nq:#`1nV:*Sdi]KT)hg)t'?afDKihopBQ4<@\oZ2sA6m[a\0i+e?_$>tVhQc)oerHlsFdS+_XMPKpE2[Qfub4*p#.Q'.cr@"KH).N-uN*B,UU[m+lMn=MjZb+>H34d-o*J<(1Ba`$71N3e@o$9Z/__'XKgh,+mimER$Y*R7)SF?Z\B"[+X_Zd[aL1LblePAR&(1QDY<5'I$eMsqRfMCURkh9GQ?^,mOaBtN_44[Bc<Ko^QZA-cD*V[O/LJU[08*Gg[Jm23g.GBZ]LIi5Cd5Y,hca"UHQFEUghb(uB<[M]lp69#\^:]!^:a7hj\M@f8hG&F_J#1.d>lRs+dD3u4B4CZDa:fiVICtZ=~>endstream
 endobj
-100 0 obj
+99 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 530
 >>
 stream
 Gatn#bAQ&g&4Q?iMS![,PiYPc/DW3i)/'&O+!=*ri`Hfq8ZCFYmne"5)0s"_%0@eG%.C__PX^2P&G'/7^m>+p^C(=(@LJlt7^9sUOjOc#r[-sn:iA=6c-Zc4Y;57U[,nin<>f\F:6DlIKV##\r[^M$i]u%O;1R'<U1j)Ul[&6igGNb^r#W)qn![j]bsrIl.'Cuu`kCETK*e/(?rH+7054$+Rc\/FFdd?B,tgndH%bT.5^&FRWCEJ)K=$!*6`u-I#1'=n.4NTNkM=SBX80L>kT93-@nq!c8`7+U7$$KK)7:-<3CE)Rhl<*e^B8X"Wn<<ica`WCs"#T6;u4<+fuL^$NM!(R*RI#-@CRj^8B[Mc^j^B)Y?_f<NYl\k(ZP[?996G2j#WKKW"D,@Te3nQU83tsY&I`KqsoJT;sa85-;GA2SJ6'b>P81LX$.!qmN:>)3:Bdpl9T%M6(Zrr"jb<$F'*$dRSlf?\%C&bU/i.tF)?uLS+t?3iP[T#qULUg"tcp_e1TgpCTtpBr<%DC0qe~>endstream
 endobj
-101 0 obj
+100 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 249
 >>
 stream
 Gas2DbmFM,%#"*H'Q[4a2/1OHHWB^6\%[Cf#NE>!i;4Io/:o's#)6[&8Ju'Xp"ai-U0t]IYX^^)`<jZkX4!AG24U.?*Gq&QKeOKdRPc_88YVTS#Gm[H2&R*7fQf/2b$^3(s/o>4L[((p>2+GP:$6`IC`XH[P%0^d'8f_Q$d.frpX`F19p*Gb^0H)&?*(3`hI<XC^;KNQ]-!'*N$unA0m9D?H9[#JT5&cQ*T%*c/\P1[O:Pt\&&s<&)?~>endstream
 endobj
-102 0 obj
+101 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 402
 >>
 stream
 Gas1[_,A/n&A@6WhG*AcZ9Wqb[-Gb;F7bVedMgjC-Y]L=hn,[))b8XkL5"aZhV/3cj?_g2[_QC5q\K;_j@bRH#5Kd@o7U%)qGkt'd*,+X7\[)kS0c$>(ai8.;-W:t3?Y^53>+GI+[%6[N4a7D<*-:^Wk1s'UH7T&B[irsH>)Ps6f-gK*ql:7h]Vqa5)WN/P(a1>kbZSS%m<4J88fc#3('m6'A7qc;s^M&o2*t=",^+7D:*Gm'6Ar(Vg;H`_^F=9&sf5`=S]j-h?b*G]?oB!Tk_.RUAkI9b>9"'q0n6r.lLa%1W3:I.[7Q2<<k7\0f;AEi[<G^ij;/n>=ee':h`ZD`t&ick]Fspr`q.?3c.;8NB?Y__QGQX?`pZs?ZAD9ZuE8rR2U8g/.s5c]uuf/~>endstream
 endobj
-103 0 obj
+102 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 420
 >>
 stream
 Gatn!b>,r/&4Q?hMS"NKN$iW3A.,5M=OB[@UXX-SP8M7k'n;;1U-?M*<E\n6U[^Kkllkl&..0e?gfM"T&L^)U":6DO4l`e>67T'VPmjq)PT76l(c@VCKG@l]n[o,^P?\i3<uIi4La\P[K2fq@2cXB>'M-%SWZG6FD=-k$[ru"dC:1ZConI4e]>TM(.1+$sn>o:o*'tuq*5R8qh`2PhXN8R?U0_rTE2\NqoYPj.V<PA)Vqn"[X`^(<QCWntEOg!CF;N$CBV!&RX.+7=nRV$ee!Q0Xj3hn03D1ZrLnC*O\2O!5D`VfSS_*?"[9L6^ClNA\(ghW"#Bsc((IUmT&EV3TW<n`-@*4#s@A6<Q2_2=dJ4uOas#iFCMlKIVS-sJhS_MEAkVLiCL3Yp_9(Yr6@T95pe7"pkq#Ye1Z`j~>endstream
 endobj
-104 0 obj
+103 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 411
 >>
 stream
 Gas2F0i,\@&;BlVMDmk%).2a_c3O\&[Us&iPEZ:"Ue2W#rd-8pC5[VbP#"8)htQPTK&f@?06b3!J\,OrV'n5E/Mr>$4;A1#GR\R_(T"[)aL&l^A$\^ZK@!Y2Nh\AX3rQ0[#%U<p/qnD?gp$A'Pt4\ZbY5LV8<7l<e'Y,;KQ0i:$&`8JS,4?c)de?i(<&@m`@MfNR70)*-WQb0#R$u:JsL65+$uE"O[m8<poa1)hpj.P0%=1BA*^%m`d2CRC;d\))a8s-$ar7WQ1&%hq,NlR'bj<-I8qptp#W[d6f@_9&Vkg%kr[Bp'4Q.?H61f:J@=]+`+>R/-F*iRB]_3+qkQ2CqKnC)ij?/l5-l&Jl1rKn>VBiW&Xh/B>^+^o6WsG.NDKNnB;NESG+M9s``%dqK&d:pAt'8~>endstream
 endobj
-105 0 obj
+104 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 509
 >>
 stream
 Gatn#btd:Q'SZ:,MR/g]iUL:QZ^JcT=Fh<gH%@BR;kQ]33sb]V>^K(9"dDVYQ=AOY52Wp&c5#7o7/;!hn>F++9*$3`bTSglBWc=%<4#(=ri:bdl4$7c3F]f%XC;Z5>@'C[Q/U<Y**K'_FHNU!<f6UiL8ku`!2GrNe)SJkkf:3QDk&K7$+&!uDXeCb4dr^)n/t3bN7"/I5/o#6=n]/_I&T5E%['%&GqOtehB9".'<eeTemLQYY.U">g@F[6X-.RNQh9HsiP351H\)WD"Eq,pLUZuq&QKL)3CE)bi>%b"'%Z)Q6oPTSGb3bQrB<qJ`K]6+re?g.dZi+%ED-ZZeL-oR-_t<KDKrLlC1B=/X?siTNq]5/@=%aHp1cUJ%ge:IN6BsSVadc$9&:!"24bRlaB+-T4e*4o=2^RO?qI=p@e?*n9QtnEmPVb&*`G+\VqZJeF0bEGb=l=nG?f2K/8CGY2:m#L4/;Q+mCU@OrGB/;K-&TH-G1n1-"[ml(K`CH$3~>endstream
 endobj
-106 0 obj
+105 0 obj
 <<
 /Filter [ /ASCII85Decode /FlateDecode ] /Length 325
 >>
@@ -850,124 +845,123 @@ stream
 Gas2Db>&-o$q9p^'mBlsAE"ku9XZ&bM_=T';`[9uk(2XqK!-O8$LORf/DH?Lj(hqTLr$()[(r6Qm3@60Hk"Z&iR`>D=WGBt?F)8d3[9`%JY>EDb,>;S/+Om-AV;Z-n"qjJ;8f84Q.1<L/D(i[Tbg$U\M-T]_O*dK3g+jc39U7<78>19Z]Z#MMp$6#?&[F[U"Q04LF`-Ypshr,3^oR3O"ejj'>DX=oGsC))9UnGT4-HEj]R^=r-_MhgBuPW$IeUZ\NrCNm5^Dr-C`BW,MmWm=,h;):p-4g_1+D%,mR5?qoKL8m>4e^X=]hcU"n%,A3X?cDX7~>endstream
 endobj
 xref
-0 107
+0 106
 0000000000 65535 f 
 0000000061 00000 n 
-0000000112 00000 n 
-0000000219 00000 n 
-0000000331 00000 n 
-0000000526 00000 n 
-0000000721 00000 n 
-0000000916 00000 n 
-0000001111 00000 n 
-0000001216 00000 n 
-0000001411 00000 n 
-0000001607 00000 n 
-0000001803 00000 n 
-0000001999 00000 n 
-0000002195 00000 n 
-0000002380 00000 n 
-0000002595 00000 n 
-0000002791 00000 n 
-0000002987 00000 n 
-0000003167 00000 n 
-0000003382 00000 n 
-0000003562 00000 n 
-0000003777 00000 n 
-0000003971 00000 n 
-0000004186 00000 n 
-0000004365 00000 n 
-0000004580 00000 n 
-0000004776 00000 n 
-0000004962 00000 n 
-0000005177 00000 n 
-0000005355 00000 n 
-0000005570 00000 n 
-0000005756 00000 n 
-0000005971 00000 n 
-0000006167 00000 n 
-0000006363 00000 n 
-0000006556 00000 n 
-0000006771 00000 n 
-0000006946 00000 n 
-0000007161 00000 n 
-0000007336 00000 n 
-0000007551 00000 n 
-0000007726 00000 n 
-0000007941 00000 n 
-0000008137 00000 n 
-0000008315 00000 n 
-0000008530 00000 n 
-0000008708 00000 n 
-0000008923 00000 n 
-0000009119 00000 n 
-0000009297 00000 n 
-0000009512 00000 n 
-0000009690 00000 n 
-0000009905 00000 n 
-0000010083 00000 n 
-0000010299 00000 n 
-0000010496 00000 n 
-0000010683 00000 n 
-0000010899 00000 n 
-0000011086 00000 n 
-0000011302 00000 n 
-0000011529 00000 n 
-0000011745 00000 n 
-0000011997 00000 n 
-0000012213 00000 n 
-0000012410 00000 n 
-0000012480 00000 n 
-0000012742 00000 n 
-0000013074 00000 n 
-0000013329 00000 n 
-0000013814 00000 n 
-0000014270 00000 n 
-0000014781 00000 n 
-0000015494 00000 n 
-0000016061 00000 n 
-0000016754 00000 n 
-0000017344 00000 n 
-0000017915 00000 n 
-0000018447 00000 n 
-0000018955 00000 n 
-0000019312 00000 n 
-0000019843 00000 n 
-0000020505 00000 n 
-0000021086 00000 n 
-0000021594 00000 n 
-0000021949 00000 n 
-0000022549 00000 n 
-0000023144 00000 n 
-0000023605 00000 n 
-0000024313 00000 n 
-0000024666 00000 n 
-0000025136 00000 n 
-0000025639 00000 n 
-0000026250 00000 n 
-0000026891 00000 n 
-0000027238 00000 n 
-0000027713 00000 n 
-0000028213 00000 n 
-0000028814 00000 n 
-0000029339 00000 n 
-0000029817 00000 n 
-0000030439 00000 n 
-0000030780 00000 n 
-0000031274 00000 n 
-0000031786 00000 n 
-0000032289 00000 n 
-0000032890 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000516 00000 n 
+0000000711 00000 n 
+0000000906 00000 n 
+0000001101 00000 n 
+0000001296 00000 n 
+0000001491 00000 n 
+0000001687 00000 n 
+0000001883 00000 n 
+0000002079 00000 n 
+0000002264 00000 n 
+0000002479 00000 n 
+0000002675 00000 n 
+0000002871 00000 n 
+0000003051 00000 n 
+0000003266 00000 n 
+0000003446 00000 n 
+0000003661 00000 n 
+0000003855 00000 n 
+0000004070 00000 n 
+0000004249 00000 n 
+0000004464 00000 n 
+0000004660 00000 n 
+0000004846 00000 n 
+0000005061 00000 n 
+0000005239 00000 n 
+0000005454 00000 n 
+0000005640 00000 n 
+0000005855 00000 n 
+0000006051 00000 n 
+0000006247 00000 n 
+0000006440 00000 n 
+0000006655 00000 n 
+0000006830 00000 n 
+0000007045 00000 n 
+0000007220 00000 n 
+0000007435 00000 n 
+0000007610 00000 n 
+0000007825 00000 n 
+0000008021 00000 n 
+0000008199 00000 n 
+0000008414 00000 n 
+0000008592 00000 n 
+0000008807 00000 n 
+0000009003 00000 n 
+0000009181 00000 n 
+0000009396 00000 n 
+0000009574 00000 n 
+0000009789 00000 n 
+0000009967 00000 n 
+0000010182 00000 n 
+0000010379 00000 n 
+0000010566 00000 n 
+0000010782 00000 n 
+0000010969 00000 n 
+0000011185 00000 n 
+0000011412 00000 n 
+0000011628 00000 n 
+0000011880 00000 n 
+0000012096 00000 n 
+0000012293 00000 n 
+0000012363 00000 n 
+0000012625 00000 n 
+0000012956 00000 n 
+0000013211 00000 n 
+0000013696 00000 n 
+0000014152 00000 n 
+0000014663 00000 n 
+0000015376 00000 n 
+0000015943 00000 n 
+0000016636 00000 n 
+0000017226 00000 n 
+0000017797 00000 n 
+0000018329 00000 n 
+0000018837 00000 n 
+0000019194 00000 n 
+0000019725 00000 n 
+0000020387 00000 n 
+0000020968 00000 n 
+0000021476 00000 n 
+0000021831 00000 n 
+0000022431 00000 n 
+0000023026 00000 n 
+0000023487 00000 n 
+0000024197 00000 n 
+0000024550 00000 n 
+0000025020 00000 n 
+0000025523 00000 n 
+0000026134 00000 n 
+0000026775 00000 n 
+0000027122 00000 n 
+0000027597 00000 n 
+0000028097 00000 n 
+0000028702 00000 n 
+0000029227 00000 n 
+0000029705 00000 n 
+0000030326 00000 n 
+0000030667 00000 n 
+0000031161 00000 n 
+0000031673 00000 n 
+0000032176 00000 n 
+0000032777 00000 n 
 trailer
 <<
 /ID 
-[<3762519c6dc3f7c59f5af1bc84637a5e><3762519c6dc3f7c59f5af1bc84637a5e>]
+[<722baaf428e9659dd65237fb31029d73><722baaf428e9659dd65237fb31029d73>]
 % ReportLab generated PDF document -- digest (opensource)
 
-/Info 66 0 R
-/Root 65 0 R
-/Size 107
+/Info 65 0 R
+/Root 64 0 R
+/Size 106
 >>
 startxref
-33307
+33194
 %%EOF

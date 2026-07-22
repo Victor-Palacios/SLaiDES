@@ -1240,88 +1240,88 @@ comments:
 - id: FB-110
   component: code
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 The "What we're building" font is still terrible. Use the font and style of the 4th slide (not the size nor color though).
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T03:21:01.730Z
-  notes: ''
+  notes: applied 2026-07-22 (code layout now renders in the deck font, not Courier New — colours/size kept)
 - id: FB-111
   component: definition
   scope: slide
   deck: designing-your-own-eda-library
   slide: 24
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: '👎 delete:  — it is what lets users write `import simple_eda`.'
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T03:21:01.730Z
-  notes: ''
+  notes: applied 2026-07-22 (trimmed the __init__.py definition's trailing clause)
 - id: FB-112
   component: code
   scope: slide
   deck: designing-your-own-eda-library
   slide: 33
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 delete slide
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T03:21:01.730Z
-  notes: ''
+  notes: applied 2026-07-22 (deleted the 'Expose the public API' code slide)
 - id: FB-113
   component: bullet-list
   scope: slide
   deck: designing-your-own-eda-library
   slide: 34
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👎 delete slide
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T03:21:01.730Z
-  notes: ''
+  notes: applied 2026-07-22 (deleted the 'What that file does' slide)
 - id: FB-114
   component: bullet-list
   scope: slide
   deck: designing-your-own-eda-library
   slide: 40
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👍 add a slide defining build tools after this slide
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T03:21:01.730Z
-  notes: ''
+  notes: applied 2026-07-22 (added a 'Build tools' definition)
 - id: FB-115
   component: code
   scope: slide
   deck: designing-your-own-eda-library
   slide: 41
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👍 add a slide on the language this is written in after this
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T03:21:01.730Z
-  notes: ''
+  notes: applied 2026-07-22 (added a 'TOML' definition after the pyproject slide)
 - id: FB-116
   component: table-slide
   scope: slide
   deck: designing-your-own-eda-library
   slide: 42
   family: table
-  status: open
+  status: done
   severity: med
   comment: '👍 add a slide after this: Under semantic versioning (MAJOR.MINOR.PATCH), each of the three numbers just has to be a non-negative integer, so 0.0.1 means major 0, minor 0, patch 1.'
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T03:21:01.730Z
-  notes: ''
+  notes: applied 2026-07-22 (added a MAJOR.MINOR.PATCH semantic-versioning slide)

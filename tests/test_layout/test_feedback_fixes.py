@@ -118,11 +118,12 @@ def test_code_runs_carry_ide_token_colours():
 
 def test_code_runs_tile_each_line_exactly():
     """Per-run nodes must reproduce the original line: concatenated run text equals
-    the source line, and each run's glyph x-offset equals the measured prefix width."""
-    from slidekit.layout.engine import _CODE_FONT
+    the source line, and each run's glyph x-offset equals the measured prefix width.
+    Code renders in the deck font (FB-110), so the prefix is measured in that font."""
     from slidekit.metrics.measure import measure_text
     deck, s = _slide("21_code")
     size = deck.theme.type_scale.body
+    code_font = deck.theme.font
     by_y = {}
     for n in s.nodes:
         if n.node_id.startswith("code_run"):
@@ -133,7 +134,8 @@ def test_code_runs_tile_each_line_exactly():
         x0 = row[0].rect.x
         prefix = ""
         for n in row:
-            assert n.rect.x == x0 + measure_text(prefix, _CODE_FONT, size)
+            assert n.rect.x == x0 + measure_text(prefix, code_font, size)
+            assert n.font == code_font
             prefix += n.text_content
 # ── FB-024: kpi-grid tiles are compact and centred ───────────────────────────────
 

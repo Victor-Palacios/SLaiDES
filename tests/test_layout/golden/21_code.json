@@ -56,12 +56,12 @@
           "lines": [
             {
               "text": "hello.py",
-              "width_emu": 2560737,
+              "width_emu": 2103388,
               "height_emu": 640080,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 42.0,
           "bold": false,
           "italic": false,
@@ -75,19 +75,19 @@
           "rect": {
             "x": 457200,
             "y": 1837944,
-            "w": 6660934,
+            "w": 5660921,
             "h": 518159
           },
           "text_content": "# The classic, end to end",
           "lines": [
             {
               "text": "# The classic, end to end",
-              "width_emu": 6478054,
+              "width_emu": 5478041,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -100,19 +100,19 @@
           "rect": {
             "x": 457200,
             "y": 2356103,
-            "w": 960247,
+            "w": 874646,
             "h": 518159
           },
           "text_content": "def",
           "lines": [
             {
               "text": "def",
-              "width_emu": 777367,
+              "width_emu": 691766,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -123,21 +123,21 @@
           "node_id": "code_run_199",
           "node_type": "text",
           "rect": {
-            "x": 1234567,
+            "x": 1148966,
             "y": 2356103,
-            "w": 442002,
+            "w": 320137,
             "h": 518159
           },
           "text_content": " ",
           "lines": [
             {
               "text": " ",
-              "width_emu": 259122,
+              "width_emu": 137257,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -148,21 +148,21 @@
           "node_id": "code_run_200",
           "node_type": "text",
           "rect": {
-            "x": 1493689,
+            "x": 1286222,
             "y": 2356103,
-            "w": 1219369,
+            "w": 1261747,
             "h": 518159
           },
           "text_content": "main",
           "lines": [
             {
               "text": "main",
-              "width_emu": 1036489,
+              "width_emu": 1078867,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -173,21 +173,21 @@
           "node_id": "code_run_201",
           "node_type": "text",
           "rect": {
-            "x": 2530177,
+            "x": 2365090,
             "y": 2356103,
-            "w": 960247,
+            "w": 665282,
             "h": 518159
           },
           "text_content": "():",
           "lines": [
             {
               "text": "():",
-              "width_emu": 777367,
+              "width_emu": 482402,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -200,19 +200,19 @@
           "rect": {
             "x": 457200,
             "y": 2874262,
-            "w": 1219369,
+            "w": 731907,
             "h": 518159
           },
           "text_content": "    ",
           "lines": [
             {
               "text": "    ",
-              "width_emu": 1036489,
+              "width_emu": 549027,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -223,21 +223,21 @@
           "node_id": "code_run_203",
           "node_type": "text",
           "rect": {
-            "x": 1493689,
+            "x": 1006227,
             "y": 2874262,
-            "w": 1478491,
+            "w": 1197441,
             "h": 518159
           },
           "text_content": "print",
           "lines": [
             {
               "text": "print",
-              "width_emu": 1295611,
+              "width_emu": 1014561,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -248,21 +248,21 @@
           "node_id": "code_run_204",
           "node_type": "text",
           "rect": {
-            "x": 2789300,
+            "x": 2020788,
             "y": 2874262,
-            "w": 442002,
+            "w": 351341,
             "h": 518159
           },
           "text_content": "(",
           "lines": [
             {
               "text": "(",
-              "width_emu": 259122,
+              "width_emu": 168461,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -273,21 +273,21 @@
           "node_id": "code_run_205",
           "node_type": "text",
           "rect": {
-            "x": 3048422,
+            "x": 2189249,
             "y": 2874262,
-            "w": 4069713,
+            "w": 3311111,
             "h": 518159
           },
           "text_content": "\"Hello, world!\"",
           "lines": [
             {
               "text": "\"Hello, world!\"",
-              "width_emu": 3886833,
+              "width_emu": 3128231,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -298,21 +298,21 @@
           "node_id": "code_run_206",
           "node_type": "text",
           "rect": {
-            "x": 6935254,
+            "x": 5317480,
             "y": 2874262,
-            "w": 442002,
+            "w": 351341,
             "h": 518159
           },
           "text_content": ")",
           "lines": [
             {
               "text": ")",
-              "width_emu": 259122,
+              "width_emu": 168461,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -325,19 +325,19 @@
           "rect": {
             "x": 457200,
             "y": 3910580,
-            "w": 1219369,
+            "w": 1261747,
             "h": 518159
           },
           "text_content": "main",
           "lines": [
             {
               "text": "main",
-              "width_emu": 1036489,
+              "width_emu": 1078867,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -348,21 +348,21 @@
           "node_id": "code_run_208",
           "node_type": "text",
           "rect": {
-            "x": 1493689,
+            "x": 1536067,
             "y": 3910580,
-            "w": 701124,
+            "w": 519802,
             "h": 518159
           },
           "text_content": "()",
           "lines": [
             {
               "text": "()",
-              "width_emu": 518244,
+              "width_emu": 336922,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -375,19 +375,19 @@
           "rect": {
             "x": 457200,
             "y": 4946898,
-            "w": 442002,
+            "w": 457604,
             "h": 518159
           },
           "text_content": "$",
           "lines": [
             {
               "text": "$",
-              "width_emu": 259122,
+              "width_emu": 274724,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -398,21 +398,21 @@
           "node_id": "code_run_210",
           "node_type": "text",
           "rect": {
-            "x": 716322,
+            "x": 731924,
             "y": 4946898,
-            "w": 4328835,
+            "w": 3670593,
             "h": 518159
           },
           "text_content": " python hello.py",
           "lines": [
             {
               "text": " python hello.py",
-              "width_emu": 4145955,
+              "width_emu": 3487713,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -425,19 +425,19 @@
           "rect": {
             "x": 457200,
             "y": 5465057,
-            "w": 3551468,
+            "w": 2913888,
             "h": 518159
           },
           "text_content": "Hello, world!",
           "lines": [
             {
               "text": "Hello, world!",
-              "width_emu": 3368588,
+              "width_emu": 2731008,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "calibri",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,

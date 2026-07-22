@@ -877,7 +877,7 @@ _CODE_PROMPT = "#4EC9B0"   # the "$" sigil on terminal lines
 _CODE_TITLE = "#D4D4D4"    # filename tab — the light foreground (FB-077: the old dim
                            # #858585 grey was hard to read on the near-black panel)
 _CODE_DOTS = ("#FF5F56", "#FFBD2E", "#27C93F")  # macOS window traffic lights
-_CODE_FONT = "courier new"
+_CODE_FONT = "courier new"  # (retained; code now uses the deck font per FB-110)
 
 _PY_CONTROL = frozenset("if elif else for while try except finally with return yield "
                         "break continue pass raise assert del match case".split())
@@ -963,7 +963,7 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
         # FB-102: the filename title is NOT bold — the bold monospace title read as
         # awkward. Title-case the text in the deck YAML; here we just set the weight.
         cap_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
-        nodes.append(_make_text_node(_nid("code_title"), slide.title, _CODE_FONT, ts.header,
+        nodes.append(_make_text_node(_nid("code_title"), slide.title, font, ts.header,
                                      bold=False, italic=False, rect=Rect(cx, y, cw, cap_h),
                                      is_caption=True, color=_CODE_TITLE, group_id=gid))
         y += cap_h + GAP_MIN_EMU
@@ -980,17 +980,17 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
     line_h = int(size * LINE_SPACING_SINGLE * EMU_PER_PT)
     for raw in slide.code.split("\n"):
         if raw.strip():
-            line_w = measure_text(raw, _CODE_FONT, size)
+            line_w = measure_text(raw, font, size)
             prefix = ""
             for text, color in _code_line_runs(raw):
-                run_w = measure_text(text, _CODE_FONT, size)
+                run_w = measure_text(text, font, size)
                 line = Line(text=text, width_emu=run_w, height_emu=line_h,
                             overflows=line_w > cw)
                 # x from measuring the ACTUAL prefix substring (not accumulated run
                 # widths) so per-call rounding can never drift across a line.
                 nodes.append(_make_text_node(
-                    _nid("code_run"), text, _CODE_FONT, size, bold=False, italic=False,
-                    rect=Rect(cx + measure_text(prefix, _CODE_FONT, size), y,
+                    _nid("code_run"), text, font, size, bold=False, italic=False,
+                    rect=Rect(cx + measure_text(prefix, font, size), y,
                               run_w + INSET_LEFT_EMU + INSET_RIGHT_EMU, line_h),
                     lines=[line], color=color, group_id=gid))
                 prefix += text

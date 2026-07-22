@@ -578,12 +578,12 @@
           "lines": [
             {
               "text": "Terminal Use",
-              "width_emu": 3841105,
+              "width_emu": 3112368,
               "height_emu": 640080,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 42.0,
           "bold": false,
           "italic": false,
@@ -597,19 +597,19 @@
           "rect": {
             "x": 457200,
             "y": 1837944,
-            "w": 442002,
+            "w": 423027,
             "h": 518159
           },
           "text_content": "$",
           "lines": [
             {
               "text": "$",
-              "width_emu": 259122,
+              "width_emu": 240147,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -620,21 +620,21 @@
           "node_id": "code_run_530",
           "node_type": "text",
           "rect": {
-            "x": 716322,
+            "x": 697347,
             "y": 1837944,
-            "w": 7438301,
+            "w": 5679053,
             "h": 518159
           },
           "text_content": " cd sales-analysis && claude",
           "lines": [
             {
               "text": " cd sales-analysis && claude",
-              "width_emu": 7255421,
+              "width_emu": 5496173,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -647,19 +647,19 @@
           "rect": {
             "x": 457200,
             "y": 2874262,
-            "w": 9252156,
+            "w": 6434703,
             "h": 518159
           },
           "text_content": "> Profile sales.csv: nulls, dtypes,",
           "lines": [
             {
               "text": "> Profile sales.csv: nulls, dtypes,",
-              "width_emu": 9069276,
+              "width_emu": 6251823,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -672,19 +672,19 @@
           "rect": {
             "x": 457200,
             "y": 3392421,
-            "w": 8993034,
+            "w": 5990674,
             "h": 518159
           },
           "text_content": "  outliers. Save it to profile.md.",
           "lines": [
             {
               "text": "  outliers. Save it to profile.md.",
-              "width_emu": 8810154,
+              "width_emu": 5807794,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -697,19 +697,19 @@
           "rect": {
             "x": 457200,
             "y": 4428739,
-            "w": 5106201,
+            "w": 3950799,
             "h": 518159
           },
           "text_content": "Reading sales.csv (",
           "lines": [
             {
               "text": "Reading sales.csv (",
-              "width_emu": 4923321,
+              "width_emu": 3767919,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -720,21 +720,21 @@
           "node_id": "code_run_534",
           "node_type": "text",
           "rect": {
-            "x": 5380521,
+            "x": 4225119,
             "y": 4428739,
-            "w": 442002,
+            "w": 423027,
             "h": 518159
           },
           "text_content": "1",
           "lines": [
             {
               "text": "1",
-              "width_emu": 259122,
+              "width_emu": 240147,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -745,21 +745,21 @@
           "node_id": "code_run_535",
           "node_type": "text",
           "rect": {
-            "x": 5639643,
+            "x": 4465265,
             "y": 4428739,
-            "w": 3292346,
+            "w": 2438023,
             "h": 518159
           },
           "text_content": ".2M rows)...",
           "lines": [
             {
               "text": ".2M rows)...",
-              "width_emu": 3109466,
+              "width_emu": 2255143,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -772,19 +772,19 @@
           "rect": {
             "x": 457200,
             "y": 4946898,
-            "w": 7179179,
+            "w": 4934999,
             "h": 518159
           },
           "text_content": "Running profiling script...",
           "lines": [
             {
               "text": "Running profiling script...",
-              "width_emu": 6996299,
+              "width_emu": 4752119,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -797,19 +797,19 @@
           "rect": {
             "x": 457200,
             "y": 5465057,
-            "w": 4847079,
+            "w": 3582462,
             "h": 518159
           },
           "text_content": "Wrote profile.md: ",
           "lines": [
             {
               "text": "Wrote profile.md: ",
-              "width_emu": 4664199,
+              "width_emu": 3399582,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -820,21 +820,21 @@
           "node_id": "code_run_538",
           "node_type": "text",
           "rect": {
-            "x": 5121399,
+            "x": 3856782,
             "y": 5465057,
-            "w": 442002,
+            "w": 423027,
             "h": 518159
           },
           "text_content": "3",
           "lines": [
             {
               "text": "3",
-              "width_emu": 259122,
+              "width_emu": 240147,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -845,21 +845,21 @@
           "node_id": "code_run_539",
           "node_type": "text",
           "rect": {
-            "x": 5380521,
+            "x": 4096928,
             "y": 5465057,
-            "w": 2774102,
+            "w": 1911134,
             "h": 518159
           },
           "text_content": " findings.",
           "lines": [
             {
               "text": " findings.",
-              "width_emu": 2591222,
+              "width_emu": 1728254,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4472,12 +4472,12 @@
           "lines": [
             {
               "text": "Move Between Surfaces",
-              "width_emu": 6721934,
+              "width_emu": 5781452,
               "height_emu": 640080,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 42.0,
           "bold": false,
           "italic": false,
@@ -4491,19 +4491,19 @@
           "rect": {
             "x": 457200,
             "y": 1837944,
-            "w": 442002,
+            "w": 423027,
             "h": 518159
           },
           "text_content": "$",
           "lines": [
             {
               "text": "$",
-              "width_emu": 259122,
+              "width_emu": 240147,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4514,21 +4514,21 @@
           "node_id": "code_run_686",
           "node_type": "text",
           "rect": {
-            "x": 716322,
+            "x": 697347,
             "y": 1837944,
-            "w": 4069713,
+            "w": 3015092,
             "h": 518159
           },
           "text_content": " claude --cloud",
           "lines": [
             {
               "text": " claude --cloud",
-              "width_emu": 3886833,
+              "width_emu": 2832212,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4541,19 +4541,19 @@
           "rect": {
             "x": 457200,
             "y": 2356103,
-            "w": 4587957,
+            "w": 3254606,
             "h": 518159
           },
           "text_content": "  Runs this task ",
           "lines": [
             {
               "text": "  Runs this task ",
-              "width_emu": 4405077,
+              "width_emu": 3071726,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4564,21 +4564,21 @@
           "node_id": "code_run_688",
           "node_type": "text",
           "rect": {
-            "x": 4862277,
+            "x": 3528926,
             "y": 2356103,
-            "w": 701124,
+            "w": 518959,
             "h": 518159
           },
           "text_content": "in",
           "lines": [
             {
               "text": "in",
-              "width_emu": 518244,
+              "width_emu": 336079,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4589,21 +4589,21 @@
           "node_id": "code_run_689",
           "node_type": "text",
           "rect": {
-            "x": 5380521,
+            "x": 3865004,
             "y": 2356103,
-            "w": 3033224,
+            "w": 2175317,
             "h": 518159
           },
           "text_content": " the cloud.",
           "lines": [
             {
               "text": " the cloud.",
-              "width_emu": 2850344,
+              "width_emu": 1992437,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4616,19 +4616,19 @@
           "rect": {
             "x": 457200,
             "y": 3392421,
-            "w": 7697423,
+            "w": 5475171,
             "h": 518159
           },
           "text_content": "> Pick it up later, anywhere:",
           "lines": [
             {
               "text": "> Pick it up later, anywhere:",
-              "width_emu": 7514543,
+              "width_emu": 5292291,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4641,19 +4641,19 @@
           "rect": {
             "x": 457200,
             "y": 3910580,
-            "w": 442002,
+            "w": 423027,
             "h": 518159
           },
           "text_content": "$",
           "lines": [
             {
               "text": "$",
-              "width_emu": 259122,
+              "width_emu": 240147,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4664,21 +4664,21 @@
           "node_id": "code_run_692",
           "node_type": "text",
           "rect": {
-            "x": 716322,
+            "x": 697347,
             "y": 3910580,
-            "w": 4847079,
+            "w": 3423067,
             "h": 518159
           },
           "text_content": " claude --teleport",
           "lines": [
             {
               "text": " claude --teleport",
-              "width_emu": 4664199,
+              "width_emu": 3240187,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4691,19 +4691,19 @@
           "rect": {
             "x": 457200,
             "y": 4946898,
-            "w": 8474789,
+            "w": 6470757,
             "h": 518159
           },
           "text_content": "  One session follows you across",
           "lines": [
             {
               "text": "  One session follows you across",
-              "width_emu": 8291909,
+              "width_emu": 6287877,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4716,19 +4716,19 @@
           "rect": {
             "x": 457200,
             "y": 5465057,
-            "w": 4587957,
+            "w": 3279906,
             "h": 518159
           },
           "text_content": "  laptop, phone, ",
           "lines": [
             {
               "text": "  laptop, phone, ",
-              "width_emu": 4405077,
+              "width_emu": 3097026,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4739,21 +4739,21 @@
           "node_id": "code_run_695",
           "node_type": "text",
           "rect": {
-            "x": 4862277,
+            "x": 3554226,
             "y": 5465057,
-            "w": 960247,
+            "w": 903320,
             "h": 518159
           },
           "text_content": "and",
           "lines": [
             {
               "text": "and",
-              "width_emu": 777367,
+              "width_emu": 720440,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -4764,21 +4764,21 @@
           "node_id": "code_run_696",
           "node_type": "text",
           "rect": {
-            "x": 5639643,
+            "x": 4274666,
             "y": 5465057,
-            "w": 2514980,
+            "w": 1934748,
             "h": 518159
           },
           "text_content": " browser.",
           "lines": [
             {
               "text": " browser.",
-              "width_emu": 2332100,
+              "width_emu": 1751868,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6214,12 +6214,12 @@
           "lines": [
             {
               "text": "Example CLAUDE.md",
-              "width_emu": 5441566,
+              "width_emu": 5276441,
               "height_emu": 640080,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 42.0,
           "bold": false,
           "italic": false,
@@ -6233,19 +6233,19 @@
           "rect": {
             "x": 457200,
             "y": 1371600,
-            "w": 6401812,
+            "w": 4670817,
             "h": 518159
           },
           "text_content": "# sales-analysis project",
           "lines": [
             {
               "text": "# sales-analysis project",
-              "width_emu": 6218932,
+              "width_emu": 4487937,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6258,19 +6258,19 @@
           "rect": {
             "x": 457200,
             "y": 1889759,
-            "w": 3810590,
+            "w": 2991056,
             "h": 518159
           },
           "text_content": "- Use pandas, ",
           "lines": [
             {
               "text": "- Use pandas, ",
-              "width_emu": 3627710,
+              "width_emu": 2808176,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6281,21 +6281,21 @@
           "node_id": "code_run_758",
           "node_type": "text",
           "rect": {
-            "x": 4084910,
+            "x": 3265376,
             "y": 1889759,
-            "w": 960247,
+            "w": 783141,
             "h": 518159
           },
           "text_content": "not",
           "lines": [
             {
               "text": "not",
-              "width_emu": 777367,
+              "width_emu": 600261,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6306,21 +6306,21 @@
           "node_id": "code_run_759",
           "node_type": "text",
           "rect": {
-            "x": 4862277,
+            "x": 3865637,
             "y": 1889759,
-            "w": 2255857,
+            "w": 1598880,
             "h": 518159
           },
           "text_content": " polars.",
           "lines": [
             {
               "text": " polars.",
-              "width_emu": 2072977,
+              "width_emu": 1416000,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6333,19 +6333,19 @@
           "rect": {
             "x": 457200,
             "y": 2407918,
-            "w": 4587957,
+            "w": 3374574,
             "h": 518159
           },
           "text_content": "- Raw data lives ",
           "lines": [
             {
               "text": "- Raw data lives ",
-              "width_emu": 4405077,
+              "width_emu": 3191694,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6356,21 +6356,21 @@
           "node_id": "code_run_761",
           "node_type": "text",
           "rect": {
-            "x": 4862277,
+            "x": 3648894,
             "y": 2407918,
-            "w": 701124,
+            "w": 518959,
             "h": 518159
           },
           "text_content": "in",
           "lines": [
             {
               "text": "in",
-              "width_emu": 518244,
+              "width_emu": 336079,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6381,21 +6381,21 @@
           "node_id": "code_run_762",
           "node_type": "text",
           "rect": {
-            "x": 5380521,
+            "x": 3984972,
             "y": 2407918,
-            "w": 1996735,
+            "w": 1383191,
             "h": 518159
           },
           "text_content": " data/.",
           "lines": [
             {
               "text": " data/.",
-              "width_emu": 1813855,
+              "width_emu": 1200311,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6408,19 +6408,19 @@
           "rect": {
             "x": 457200,
             "y": 2926077,
-            "w": 6401812,
+            "w": 5173670,
             "h": 518159
           },
           "text_content": "- Never commit the CSVs.",
           "lines": [
             {
               "text": "- Never commit the CSVs.",
-              "width_emu": 6218932,
+              "width_emu": 4990790,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6433,19 +6433,19 @@
           "rect": {
             "x": 457200,
             "y": 3444236,
-            "w": 4847079,
+            "w": 3342526,
             "h": 518159
           },
           "text_content": "- Tests: pytest -q",
           "lines": [
             {
               "text": "- Tests: pytest -q",
-              "width_emu": 4664199,
+              "width_emu": 3159646,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
@@ -6458,19 +6458,19 @@
           "rect": {
             "x": 457200,
             "y": 3962395,
-            "w": 6660934,
+            "w": 4494555,
             "h": 518159
           },
           "text_content": "- Plots: matplotlib only.",
           "lines": [
             {
               "text": "- Plots: matplotlib only.",
-              "width_emu": 6478054,
+              "width_emu": 4311675,
               "height_emu": 518159,
               "overflows": false
             }
           ],
-          "font": "courier new",
+          "font": "arial",
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
