@@ -11,14 +11,15 @@
 # naming rule is stated up front, and "metadata" points forward to pyproject.
 version: 1
 theme:
+  # "Midnight" dark scheme (operator-approved 2026-07-22, replacing the jarring
+  # all-blue-on-white of FB-074): a dark navy ground with light body text, bright-blue
+  # headlines and an amber accent — pairs naturally with the dark code panels.
   palette:
-    primary: "#306998"    # python blue
-    surface: "#FFFFFF"
-    accent: "#F0A202"      # warm amber (≈complementary to the blue)
-    # FB-074: body text is the python blue, not near-black — the operator wants this
-    # colour used primarily throughout, especially on text-only slides.
-    text: "#306998"
-    muted: "#8A8A9A"
+    primary: "#8FC1F0"    # bright python-blue — headlines pop on the dark ground
+    surface: "#0F1F2E"    # dark navy ground
+    accent: "#F0A202"     # warm amber accent
+    text: "#E7EDF3"       # near-white body text
+    muted: "#9DB0C0"      # cool grey for de-emphasis / chrome
   type_scale:
     title: 60
     header: 42
