@@ -123,3 +123,47 @@ def test_html_embeds_anchor(tmp_path):
     html = out.read_text()
     assert f'href="{URL}"' in html
     assert ">Source</a>" in html
+
+
+# ── word-wrap only for genuinely multi-line nodes (Google Slides re-wrap fix) ──
+
+_WRAP_YAML = """
+version: 1
+slides:
+  - component: numbered-steps
+    title: "Connect GitHub"
+    steps:
+      - title: "Sign in"
+        body: "Open claude.ai/code and log in."
+    source: "https://code.claude.com/docs/en/web-quickstart"
+  - component: bullet-list
+    title: "A bullet that is deliberately long enough to wrap across two lines in this box"
+    items:
+      - "This single bullet item is written to be long enough that the layout engine wraps it onto more than one visual line inside its measured box width."
+"""
+
+
+def test_single_line_nodes_have_word_wrap_off_multiline_on(tmp_path):
+    """Single-line text boxes (step numerals, the 'Source' citation, short bodies)
+    must have word_wrap OFF so Google Slides cannot re-wrap a box sized to our exact
+    metrics; a genuinely wrapped node keeps word_wrap ON."""
+    from pptx import Presentation
+
+    deck, rd = _resolve(_WRAP_YAML)
+    out = tmp_path / "deck.pptx"
+    emit_pptx(deck, rd, out)
+
+    prs = Presentation(str(out))
+    # Map every text box's trimmed text -> its word_wrap flag, across all slides.
+    wrap_by_text: dict[str, bool] = {}
+    for s in prs.slides:
+        for shp in s.shapes:
+            if shp.has_text_frame:
+                wrap_by_text[shp.text_frame.text.strip()] = shp.text_frame.word_wrap
+
+    # The two-digit step numeral and the "Source" chrome are single-line -> wrap off.
+    assert wrap_by_text.get("01") is False
+    assert wrap_by_text.get("Source") is False
+    # The deliberately long bullet wrapped into >1 line -> wrap stays on.
+    long_bullets = [w for t, w in wrap_by_text.items() if t.startswith("This single bullet")]
+    assert long_bullets and all(w is True for w in long_bullets)

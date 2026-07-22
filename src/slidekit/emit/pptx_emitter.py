@@ -1,8 +1,10 @@
 """PPTX emitter — places every resolved node at its EMU rect.
 
 Auto-fit is disabled (our layout already did the fitting). Word-wrap is enabled
-to match the wrap() assumptions. Theme colors are written as literal RGB — no
-reliance on the pptx theme part.
+only for nodes we genuinely wrapped into multiple lines; single-line nodes have
+wrap OFF so a foreign renderer (e.g. Google Slides) can't re-wrap a box sized to
+our exact metrics. Theme colors are written as literal RGB — no reliance on the
+pptx theme part.
 """
 from __future__ import annotations
 
@@ -135,7 +137,15 @@ def _emit_text(slide, node: "ResolvedNode", palette) -> None:
         Emu(rect.x), Emu(rect.y), Emu(rect.w), Emu(rect.h)
     )
     tf = txBox.text_frame
-    tf.word_wrap = True
+    # Word-wrap ONLY when our layout genuinely wrapped this node into >1 line.
+    # A single-line node's box is sized to the exact glyph width we measured with
+    # our bundled Arial metrics; a foreign renderer (Google Slides) whose Arial is
+    # a hair wider would otherwise re-wrap that one line, and because the box is
+    # only one line tall the overflow collides with whatever sits below it — the
+    # garbled code slides, the "Sourc / e" citation, and the split "0 1" step
+    # numerals all came from exactly this. Disabling wrap lets a single line run a
+    # touch past its box edge (harmless, boxes don't clip) instead of wrapping.
+    tf.word_wrap = len(node.lines) > 1
     tf.auto_size = MSO_AUTO_SIZE.NONE
     tf.margin_left = Emu(INSET_LEFT_EMU)
     tf.margin_right = Emu(INSET_RIGHT_EMU)
