@@ -1,0 +1,67 @@
+{
+  "submitted_at": "2026-07-22T03:21:01.730Z",
+  "source": "web",
+  "items": [
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "The \"What we're building\" font is still terrible. Use the font and style of the 4th slide (not the size nor color though).",
+      "severity": "med",
+      "scope": "layout"
+    },
+    {
+      "component": "definition",
+      "verdict": "bad",
+      "comment": "delete:  — it is what lets users write `import simple_eda`.",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 24
+    },
+    {
+      "component": "code",
+      "verdict": "bad",
+      "comment": "delete slide",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 33
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "bad",
+      "comment": "delete slide",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 34
+    },
+    {
+      "component": "bullet-list",
+      "verdict": "good",
+      "comment": "add a slide defining build tools after this slide",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 40
+    },
+    {
+      "component": "code",
+      "verdict": "good",
+      "comment": "add a slide on the language this is written in after this",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 41
+    },
+    {
+      "component": "table-slide",
+      "verdict": "good",
+      "comment": "add a slide after this: Under semantic versioning (MAJOR.MINOR.PATCH), each of the three numbers just has to be a non-negative integer, so 0.0.1 means major 0, minor 0, patch 1.",
+      "severity": "med",
+      "scope": "slide",
+      "deck": "designing-your-own-eda-library",
+      "slide": 42
+    }
+  ]
+}
