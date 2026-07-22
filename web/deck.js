@@ -86,6 +86,8 @@
       '<div class="verdict">' +
         '<button type="button" class="vbtn good" data-v="good">👍 Good</button>' +
         '<button type="button" class="vbtn bad" data-v="bad">👎 Needs work</button>' +
+        '<button type="button" class="vbtn add" data-v="add-before">➕ Add slide before ↑</button>' +
+        '<button type="button" class="vbtn add" data-v="add-after">➕ Add slide after ↓</button>' +
       '</div>' +
       '<textarea class="comment" placeholder="What to change on this slide…"></textarea>' +
       '<fieldset class="scope">' +
@@ -100,15 +102,32 @@
         '<option value="high">high</option></select></label>';
     card.appendChild(controls);
 
+    var commentEl = controls.querySelector(".comment");
+    var scopeInputs = controls.querySelectorAll('input[type="radio"]');
+
+    function isAddVerdict(v) { return v === "add-before" || v === "add-after"; }
+
     var vbtns = controls.querySelectorAll(".vbtn");
     vbtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
         var v = btn.dataset.v;
         var st = state[k];
         st.verdict = st.verdict === v ? null : v;
+        var adding = isAddVerdict(st.verdict);
+        // Adding a slide is inherently deck-specific — force slide scope and lock the
+        // scope selector so an "add slide" request can never be filed as layout feedback.
+        if (adding) {
+          st.scope = "slide";
+          scopeInputs.forEach(function (r) { r.checked = r.value === "slide"; });
+        }
+        scopeInputs.forEach(function (r) { r.disabled = adding; });
+        commentEl.placeholder = adding
+          ? "Describe the new slide you want here…"
+          : "What to change on this slide…";
         vbtns.forEach(function (b) { b.classList.toggle("on", b.dataset.v === st.verdict); });
         card.classList.toggle("marked-good", st.verdict === "good");
         card.classList.toggle("marked-bad", st.verdict === "bad");
+        card.classList.toggle("marked-add", adding);
         refreshFooter();
       });
     });
@@ -157,15 +176,18 @@
       var parts = k.split("::");
       var stem = parts[0], idx = parseInt(parts[1], 10);
       var slide = current.slides[idx - 1];
+      // "Add slide before/after" is always deck-specific, regardless of the scope radio.
+      var adding = s.verdict === "add-before" || s.verdict === "add-after";
+      var scope = adding ? "slide" : s.scope;
       var item = {
         component: slide.component,
         verdict: s.verdict || "note",
         comment: comment,
         severity: s.severity,
-        scope: s.scope
+        scope: scope
       };
       // Only slide-scoped marks carry the deck coordinates; layout marks stay clean.
-      if (s.scope === "slide") { item.deck = stem; item.slide = idx; }
+      if (scope === "slide") { item.deck = stem; item.slide = idx; }
       return item;
     }).filter(Boolean);
   }
@@ -190,10 +212,14 @@
       deckEl.querySelectorAll(".card").forEach(function (card) {
         var k = card.dataset.key;
         state[k] = { verdict: null, comment: "", severity: "med", scope: "slide" };
-        card.classList.remove("marked-good", "marked-bad");
+        card.classList.remove("marked-good", "marked-bad", "marked-add");
         card.querySelectorAll(".vbtn").forEach(function (b) { b.classList.remove("on"); });
-        var cm = card.querySelector(".comment"); if (cm) cm.value = "";
-        var slideRadio = card.querySelector('input[value="slide"]'); if (slideRadio) slideRadio.checked = true;
+        var cm = card.querySelector(".comment");
+        if (cm) { cm.value = ""; cm.placeholder = "What to change on this slide…"; }
+        card.querySelectorAll('input[type="radio"]').forEach(function (r) {
+          r.disabled = false;
+          if (r.value === "slide") r.checked = true;
+        });
       });
       toast("Saved " + items.length + " mark" + (items.length === 1 ? "" : "s") + ".");
       refreshFooter();

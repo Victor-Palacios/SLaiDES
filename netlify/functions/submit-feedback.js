@@ -16,7 +16,10 @@ const crypto = require("node:crypto");
 
 const COOKIE = "sk_session";
 const MSG = "slaides-v1";
-const VERDICTS = new Set(["good", "bad", "note"]);
+// "add-before" / "add-after" are deck-review requests to insert a NEW slide at that
+// position; the comment describes the wanted slide. They are inherently slide-scoped.
+const VERDICTS = new Set(["good", "bad", "note", "add-before", "add-after"]);
+const ADD_VERDICTS = new Set(["add-before", "add-after"]);
 const SEVERITIES = new Set(["low", "med", "high"]);
 const SCOPES = new Set(["layout", "slide"]);
 const MAX_ITEMS = 200; // deck review can mark many slides of a large deck in one batch
@@ -87,7 +90,9 @@ exports.handler = async function (event) {
     // Scope: "layout" (default) vs "slide" (a deck-review mark). Slide-scoped marks carry
     // the deck stem + a 1-based slide index; anything malformed falls back to layout scope
     // so a bad payload can never smuggle deck coordinates onto a layout comment.
-    let scope = SCOPES.has(it.scope) ? it.scope : "layout";
+    // "add-before"/"add-after" reference a position in a specific deck, so they are
+    // always slide-scoped regardless of the submitted scope.
+    let scope = ADD_VERDICTS.has(verdict) ? "slide" : (SCOPES.has(it.scope) ? it.scope : "layout");
     const item = { component, verdict, comment, severity, scope };
     if (scope === "slide") {
       const deck = typeof it.deck === "string" ? it.deck.slice(0, MAX_DECK) : "";
@@ -96,7 +101,10 @@ exports.handler = async function (event) {
         item.deck = deck;
         item.slide = slide;
       } else {
-        item.scope = "layout"; // missing/invalid coordinates → treat as layout feedback
+        // Missing/invalid coordinates → treat as layout feedback. An "add slide"
+        // request with no position is meaningless, so downgrade it to a plain note.
+        item.scope = "layout";
+        if (ADD_VERDICTS.has(verdict)) item.verdict = "note";
       }
     }
     items.push(item);

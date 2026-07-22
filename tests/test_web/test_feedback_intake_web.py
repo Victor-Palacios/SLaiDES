@@ -225,6 +225,43 @@ def test_slide_scope_bare_good_is_positive_only(tmp_path):
     assert json.loads(p["state_json"].read_text())["components"] == {}
 
 
+# ── add-slide verdicts (deck review) ────────────────────────────────────────────────
+
+def test_add_before_after_record_positioned_open_comments(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "add-before",
+         "comment": "a slide defining the CLI flags", "severity": "med",
+         "scope": "slide", "deck": "demo-5", "slide": 4},
+        {"component": "timeline", "verdict": "add-after",
+         "comment": "a recap of the milestones", "severity": "low",
+         "scope": "slide", "deck": "demo-5", "slide": 4},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 2
+    before = next(c for c in store.load(p["feedback_yaml"]).comments if c.component == "code")
+    after = next(c for c in store.load(p["feedback_yaml"]).comments if c.component == "timeline")
+    assert before.comment == "➕⬆ a slide defining the CLI flags"
+    assert (before.scope, before.deck, before.slide) == ("slide", "demo-5", 4)
+    assert after.comment == "➕⬇ a recap of the milestones"
+    assert (after.scope, after.deck, after.slide) == ("slide", "demo-5", 4)
+    # Add requests never approve/flag the reusable layout.
+    assert summary["flagged"] == [] and summary["approved"] == []
+    assert json.loads(p["state_json"].read_text())["components"] == {}
+
+
+def test_add_verdict_without_comment_uses_default_text(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "add-after", "comment": "",
+         "scope": "slide", "deck": "demo-5", "slide": 2},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 1  # actionable even with no comment
+    c = store.load(p["feedback_yaml"]).comments[0]
+    assert c.comment == "➕⬇ add a new slide after this one"
+
+
 def test_dry_run_leaves_everything(tmp_path):
     p = _setup(tmp_path)
     _write(p["inbox"], "a.json", _record(

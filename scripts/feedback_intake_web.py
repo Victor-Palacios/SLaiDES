@@ -11,6 +11,9 @@ processed inbox files.
 Verdict handling — FEEDBACK.yaml (the build sessions' work queue):
   * bad / note, or any non-empty comment  -> an actionable `open` comment in FEEDBACK.yaml
     (the comment text is prefixed with 👍/👎/📝 so the verdict survives)
+  * add-before / add-after (deck review)   -> an actionable `open` comment prefixed with
+    ➕⬆/➕⬇; a request to insert a NEW slide before/after the marked slide, with the
+    comment describing the wanted slide. Always slide-scoped (carries deck + slide index).
   * a bare 👍 with no comment              -> positive signal only; not recorded as an open
     task (it would only add non-actionable noise)
 
@@ -48,8 +51,14 @@ INBOX = ROOT / "web" / "feedback-inbox"
 STATE_JSON = ROOT / "web" / "data" / "state.json"
 PREVIEWS_JSON = ROOT / "web" / "data" / "previews.json"
 
-_PREFIX = {"good": "👍", "bad": "👎", "note": "📝"}
-_DEFAULT_TEXT = {"good": "looks good", "bad": "needs work", "note": "note"}
+# "add-before"/"add-after" are deck-review requests to insert a NEW slide at that
+# position; the comment describes the wanted slide. The prefix keeps the direction
+# visible in FEEDBACK.yaml so a build session knows where to insert.
+_PREFIX = {"good": "👍", "bad": "👎", "note": "📝",
+           "add-before": "➕⬆", "add-after": "➕⬇"}
+_DEFAULT_TEXT = {"good": "looks good", "bad": "needs work", "note": "note",
+                 "add-before": "add a new slide before this one",
+                 "add-after": "add a new slide after this one"}
 _FRAGMENT_KEYS = ("width_px", "height_px", "background", "nodes_html")
 _SCOPES = ("layout", "slide")
 
