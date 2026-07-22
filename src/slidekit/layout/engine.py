@@ -252,6 +252,12 @@ def _resolve_slide(
             rect=Rect(pn_x, pn_y, pn_box_w, pn_box_h),
             is_chrome=True,
         )
+        # Emit as an auto-updating slide-number field in PPTX (see the emitter):
+        # slidekit's page number already equals the physical slide position, so a
+        # native <a:fld type="slidenum"> shows the same value AND renumbers when
+        # slides are moved or added in PowerPoint/Google Slides. str(page_num) is
+        # the static fallback for PDF/HTML.
+        pn_node.field = "slidenum"
         chrome.append(pn_node)
 
     # Chrome: optional source citation — a clickable "Source" link sitting on the

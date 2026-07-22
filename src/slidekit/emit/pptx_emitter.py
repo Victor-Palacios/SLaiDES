@@ -81,6 +81,13 @@ def emit_pptx(
     prs.slide_width = Emu(canvas_w)
     prs.slide_height = Emu(canvas_h)
 
+    # Align the deck-wide slide-number origin with the deck's `start_at` so the
+    # auto-updating page-number fields (emitted below) display slidekit's numbers.
+    # slidekit's page number for physical slide P is P-1 + start_at, and the field
+    # shows P-1 + firstSlideNum, so firstSlideNum == start_at makes them equal.
+    if deck.page_numbers.enabled and deck.page_numbers.start_at != 1:
+        prs.part._element.set("firstSlideNum", str(deck.page_numbers.start_at))
+
     layout = _blank_layout(prs)
     palette = deck.theme.palette
 
@@ -214,6 +221,28 @@ def _emit_text(slide, node: "ResolvedNode", palette, canvas_w: int = 12192000) -
     if node.href:
         run.hyperlink.address = node.href
         run.font.underline = True
+    # An auto-updating presentation field (the page number): turn the run element
+    # into <a:fld type="slidenum">, keeping the run's formatting (rPr) and its text
+    # as the initial value. PowerPoint and Google Slides both recognise this field
+    # and renumber it live when slides are moved or added — unlike a static run.
+    if node.field == "slidenum":
+        _make_slidenum_field(run)
+
+
+# A fixed GUID is fine for slide-number fields — PowerPoint/Google key off the
+# `type`, not per-field uniqueness, and reuse one id across slide-number fields.
+_SLIDENUM_FLD_ID = "{4B0E1F8A-6C1D-4E2A-9F3B-7A5C8D2E1F60}"
+
+
+def _make_slidenum_field(run) -> None:
+    """Rewrite a built run's <a:r> element as an <a:fld type="slidenum"> in place,
+    preserving its <a:rPr> formatting and <a:t> text (the field's initial value)."""
+    from pptx.oxml.ns import qn
+
+    r = run._r
+    r.tag = qn("a:fld")
+    r.set("id", _SLIDENUM_FLD_ID)
+    r.set("type", "slidenum")
 
 
 def _emit_icon(slide, node: "ResolvedNode", palette) -> None:

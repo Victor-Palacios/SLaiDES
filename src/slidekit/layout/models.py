@@ -75,6 +75,12 @@ class ResolvedNode:
     # (e.g. the bottom-right "Source" citation chrome). Purely a render-time
     # attribute — geometry/lint are unaffected.
     href: Optional[str] = None
+    # Text nodes only: names an auto-updating presentation field this run should
+    # become in the PPTX emitter (currently "slidenum" for the page number). The
+    # text_content is the fallback shown by static formats (PDF/HTML preview) and
+    # the initial value in the field. Emit-only — deliberately NOT serialized in
+    # to_dict (it affects no geometry) so layout goldens don't churn.
+    field: Optional[str] = None
 
     def to_dict(self) -> dict:
         d: dict = {
