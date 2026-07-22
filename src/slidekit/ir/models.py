@@ -61,6 +61,20 @@ class Theme(BaseModel):
     spacing_unit: float = Field(default=12.0, gt=0.0)
     motif: str = "minimal"
     font: str = Field(default="arial")
+    # Optional: the palette ROLE used to colour slide titles/headlines (e.g. "accent"
+    # to make every headline the deck accent). None keeps each layout's existing title
+    # colour, so decks that don't set it are unaffected.
+    headline: Optional[str] = None
+
+    @field_validator("headline")
+    @classmethod
+    def _headline_is_role(cls, v: Optional[str]) -> Optional[str]:
+        roles = {"primary", "surface", "accent", "text", "muted"}
+        if v is not None and v not in roles:
+            raise ValueError(
+                f"headline '{v}' must be a palette role name ({', '.join(sorted(roles))})"
+            )
+        return v
 
     @field_validator("font")
     @classmethod
@@ -346,6 +360,9 @@ class TwoPanelListSlide(_SlideBase):
     title: Optional[str] = None
     left: ListPanel
     right: ListPanel
+    # Optional per-slide emphasis: name the side to carry the accent colour (the other
+    # goes muted). None keeps the default (left = primary, right = muted).
+    accent_side: Optional[Literal["left", "right"]] = None
 
 
 class VersusSide(BaseModel):

@@ -1002,241 +1002,241 @@ comments:
   deck: claude-code-for-data-scientists
   slide: 1
   family: title
-  status: open
+  status: done
   severity: med
   comment: 👎 Make the Claude Code font much bigger. Let's use the 3rd slide's beige color for all slide titles/headlines if there is no other color present. Then remove the subheader.
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (title-slide bigger+beige, no subheader; headline role=accent deck-wide)
 - id: FB-092
   component: agenda
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 2
   family: agenda
-  status: open
+  status: done
   severity: med
   comment: 👎 remove this slide from this deck
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (removed the agenda slide)
 - id: FB-093
   component: numbered-steps
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 6
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👎 remove this slide from this deck
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (removed the 'Set Up in Three Steps' slide)
 - id: FB-094
   component: code
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 7
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 a first session --> Terminal Use
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (code title 'a first session' -> 'Terminal Use')
 - id: FB-095
   component: nested-circles
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 10
   family: nested-circles
-  status: open
+  status: done
   severity: med
   comment: 👎 remove this slide from this deck
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (removed the nested-circles slide)
 - id: FB-096
   component: two-panel-list
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 11
   family: two-panel-list
-  status: open
+  status: done
   severity: med
   comment: 👎 Use the beige color (slide 3) for Claude not grey
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: 'applied 2026-07-22 (two-panel accent_side=right: ''With Claude Code'' now beige)'
 - id: FB-097
   component: table-slide
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 12
   family: table
-  status: open
+  status: done
   severity: med
   comment: 👍 add a slide that explains init and claude -p
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (added a slide explaining /init and claude -p)
 - id: FB-098
   component: bullet-list
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👎 don't have any lines with text that overflows to the next line.
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (bullet items shortened to one line; standing rule added to CLAUDE.md)
 - id: FB-099
   component: comparison-matrix
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 16
   family: comparison-matrix
-  status: open
+  status: done
   severity: med
   comment: 👎 remove the Best for row and it's associated items
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (removed the 'Best for' matrix row)
 - id: FB-100
   component: bullet-list
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 17
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👎 remove slide from deck
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (removed the 'In the Terminal' slide)
 - id: FB-101
   component: bullet-list
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 23
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👎 remove the last line
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (removed the trailing --teleport line from Remote Control)
 - id: FB-102
   component: code
   family: code-block
-  status: open
+  status: done
   severity: med
   comment: 👎 The grey title must be title capitalized and easier to read - this bold font looks awkward.
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (code title un-bolded + light foreground; titles title-cased)
 - id: FB-103
   component: bullet-list
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 27
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👍 add a slide of concrete examples after this and how MCP is better than no MCP.
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (added a Without-MCP vs With-MCP comparison)
 - id: FB-104
   component: table-slide
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 28
   family: table
-  status: open
+  status: done
   severity: med
   comment: 👎 Servers You Can (normally) Connect to
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (table title -> 'Servers You Can (normally) Connect to')
 - id: FB-105
   component: section-divider
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 29
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: 👎 Make Claude Yours --> Customize Claude
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (divider 'Make Claude Yours' -> 'Customize Claude')
 - id: FB-106
   component: bullet-list
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 31
   family: marker-list
-  status: open
+  status: done
   severity: med
   comment: 👍 next slide should be an example of what things to put in the md and then another slide of "beware" or common problems when using a Claude.md file
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (added Example CLAUDE.md slide + CLAUDE.md Pitfalls slide)
 - id: FB-107
   component: two-panel-list
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 33
   family: two-panel-list
-  status: open
+  status: done
   severity: med
   comment: '👎 CLAUDE.md vs Skills --> CLAUDE.md vs Skills.md (same for column 2: Skills.md)'
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (title + right column -> 'Skills.md')
 - id: FB-108
   component: question
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 34
   family: emphasis-stack
-  status: open
+  status: done
   severity: med
   comment: 👎 What would you analyze if the boilerplate wrote itself? --> Let's build our visualization library with Claude + Github using our phones!
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (question -> build-with-Claude+GitHub-from-phones CTA)
 - id: FB-109
   component: title-slide
   scope: slide
   deck: claude-code-for-data-scientists
   slide: 35
   family: title
-  status: open
+  status: done
   severity: med
   comment: "\U0001F44E remove this slide and add 2 slides about Claude Cowork and 1 slide on Claude Artifacts and 1 slide on \nMemory > Search and reference chats."
   created: '2026-07-22'
   updated: '2026-07-22'
   source: web 2026-07-22T02:47:14.090Z
-  notes: ''
+  notes: applied 2026-07-22 (removed closer; added Cowork x2, Artifacts, Memory-vs-chat-search)
 - id: FB-110
   component: code
   family: code-block

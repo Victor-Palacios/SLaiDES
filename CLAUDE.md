@@ -54,4 +54,5 @@ Operator feedback lands in `ops/FEEDBACK.yaml` (via the review site and
 `web/data/state.json`). Standing style rules from past feedback: no bullet
 glyphs; text hugs its underline rule; matrix layouts highlight 1–2 items,
 never whole categories; when the operator supplies explicit numbers, use
-their literals verbatim.
+their literals verbatim; bullet-list items fit on ONE line — keep each short
+enough that it never wraps (FB-098).

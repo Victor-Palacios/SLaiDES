@@ -63,7 +63,7 @@
           ],
           "font": "courier new",
           "size_pt": 42.0,
-          "bold": true,
+          "bold": false,
           "italic": false,
           "is_caption": true,
           "group_id": "code",

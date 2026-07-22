@@ -13,6 +13,7 @@ import itertools
 import math
 import re
 from dataclasses import dataclass, field
+from types import SimpleNamespace
 from typing import Optional
 
 from slidekit.ir.models import (
@@ -82,6 +83,13 @@ def _nid(prefix: str = "node") -> str:
     return f"{prefix}_{next(_counter)}"
 
 
+def _hl(palette, default):
+    """The headline colour for a slide title: the deck's optional headline override
+    (theme.headline resolved to a hex and stashed on the palette namespace) if set,
+    else the layout's own default title colour. Keeps non-headline decks unchanged."""
+    return getattr(palette, "headline", None) or default
+
+
 # ── public entry point ────────────────────────────────────────────────────────
 
 
@@ -131,6 +139,15 @@ def _resolve_slide(
     font = theme.font
     ts = theme.type_scale
     palette = theme.palette
+    # Resolve an optional headline colour (theme.headline names a palette role) and
+    # carry it on a lightweight palette proxy so title sites can pick it up via _hl().
+    # When theme.headline is unset the proxy's .headline is None and every title keeps
+    # its existing colour — so decks that don't opt in are byte-identical.
+    _hl_hex = getattr(palette, theme.headline) if theme.headline else None
+    palette = SimpleNamespace(
+        primary=palette.primary, surface=palette.surface, accent=palette.accent,
+        text=palette.text, muted=palette.muted, headline=_hl_hex,
+    )
 
     # Content area: slide canvas minus the minimum margins on all sides.
     cx = MARGIN_MIN_EMU
@@ -304,7 +321,7 @@ def _layout_title_slide(slide: TitleSlide, cx, cy, cw, ch, font, ts, palette) ->
     title_rect = Rect(cx + pad, title_y, cw - 2 * pad, title_h)
     nodes.append(
         _make_text_node(_nid("title"), slide.title, font, ts.title, bold=True,
-                        italic=False, rect=title_rect, color=palette.primary)
+                        italic=False, rect=title_rect, color=_hl(palette, palette.primary))
     )
 
     if slide.subtitle:
@@ -327,7 +344,7 @@ def _layout_icon_text_rows(slide: IconTextRowsSlide, cx, cy, cw, ch, font, ts, p
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     if not slide.rows:
@@ -374,7 +391,7 @@ def _layout_stat_callout(slide: StatCalloutSlide, cx, cy, cw, ch, font, ts, pale
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     n_stats = len(slide.stats)
@@ -419,7 +436,7 @@ def _layout_comparison_columns(slide: ComparisonColumnsSlide, cx, cy, cw, ch, fo
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     col_w = (cw - gap) // 2
@@ -467,7 +484,7 @@ def _layout_timeline(slide: TimelineSlide, cx, cy, cw, ch, font, ts, palette) ->
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     if not slide.events:
@@ -511,7 +528,7 @@ def _layout_image_half_bleed(slide: ImageHalfBleedSlide, cx, cy, cw, ch, font, t
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     col_h = cy + ch - y
@@ -542,7 +559,7 @@ def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     n_cards = len(slide.cards)
@@ -652,7 +669,8 @@ def _layout_section_divider(slide: SectionDividerSlide, cx, cy, cw, ch, font, ts
     return _emphasis_stack([
         {"prefix": "sec_num", "text": slide.number, "size": ts.title, "bold": True,
          "color": palette.accent},
-        {"prefix": "sec_title", "text": slide.title, "size": ts.header, "bold": True},
+        {"prefix": "sec_title", "text": slide.title, "size": ts.header, "bold": True,
+         "color": _hl(palette, None)},
     ], cx, cy, cw, ch, font, palette, center_on=1)
 
 
@@ -746,7 +764,7 @@ def _layout_agenda(slide: AgendaSlide, cx, cy, cw, ch, font, ts, palette):
     title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                  bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                 group_id="agenda_head"))
+                                 group_id="agenda_head", color=_hl(palette, None)))
     y += title_h + _RULE_GAP_EMU  # title hugs its rule (operator style rule)
 
     # Thin accent rule under the title (the non-text media for this slide).
@@ -782,11 +800,13 @@ def _layout_agenda(slide: AgendaSlide, cx, cy, cw, ch, font, ts, palette):
 # ── Phase 9: lists & text (catalog #11, #13–15) ───────────────────────────────
 
 
-def _list_title(slide_title, cx, y, cw, font, ts):
-    """Emit a header-tier title node; return (node, new_y)."""
+def _list_title(slide_title, cx, y, cw, font, ts, palette=None):
+    """Emit a header-tier title node; return (node, new_y). Honours the deck headline
+    colour when one is set (else the default text colour, as before)."""
     title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     node = _make_text_node(_nid("title"), slide_title, font, ts.header,
-                           bold=True, italic=False, rect=Rect(cx, y, cw, title_h))
+                           bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
+                           color=_hl(palette, None) if palette is not None else None)
     return node, y + title_h + GAP_MIN_EMU
 
 
@@ -801,7 +821,7 @@ _BULLET_ITEM_GAP_EMU = int(0.5 * EMU_PER_INCH)  # comfortable air between packed
 
 def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palette):
     nodes: list[ResolvedNode] = []
-    title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
+    title_node, y = _list_title(slide.title, cx, cy, cw, font, ts, palette)
     nodes.append(title_node)
 
     n = len(slide.items)
@@ -940,9 +960,11 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
     # Optional filename / caption. FB-054: the caption sits at the header tier — ABOVE
     # the code body size — so it reads as the slide's title rather than a tiny tab.
     if slide.title:
+        # FB-102: the filename title is NOT bold — the bold monospace title read as
+        # awkward. Title-case the text in the deck YAML; here we just set the weight.
         cap_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
         nodes.append(_make_text_node(_nid("code_title"), slide.title, _CODE_FONT, ts.header,
-                                     bold=True, italic=False, rect=Rect(cx, y, cw, cap_h),
+                                     bold=False, italic=False, rect=Rect(cx, y, cw, cap_h),
                                      is_caption=True, color=_CODE_TITLE, group_id=gid))
         y += cap_h + GAP_MIN_EMU
 
@@ -1036,8 +1058,8 @@ def _layout_file_tree(slide: FileTreeSlide, cx, cy, cw, ch, font, ts, palette):
 
     # Title on the light surface (header tier, bold), tinted with the deck primary.
     if slide.title:
-        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
-        title_node.text_color = palette.primary
+        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts, palette)
+        title_node.text_color = _hl(palette, palette.primary)
         nodes.append(title_node)
 
     # Rounded dark card fills the remaining content height.
@@ -1111,7 +1133,7 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
     gap = GAP_MIN_EMU
     y = cy
     if slide.title:
-        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
+        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts, palette)
         nodes.append(title_node)
 
     # Reimagined (operator 2026-07-05, "reimagine numbered-steps"): the filled chip
@@ -1204,7 +1226,7 @@ def _two_panel_list(title, left_head, left_items, left_color,
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), title, font, ts.header, bold=True,
                                      italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     col_w = (cw - gap) // 2
@@ -1241,14 +1263,21 @@ def _two_panel_list(title, left_head, left_items, left_color,
 def _layout_two_panel_list(slide: TwoPanelListSlide, cx, cy, cw, ch, font, ts, palette):
     """Two contrasting states head-to-head (before/after, pros/cons, old/new).
 
-    FB-078: the left panel carries the brand primary (blue) and the right panel is
-    muted (grey) — the left ("build now" / "do" / "prefer") reads as the emphasised
-    state, the right as the de-emphasised one. Gold is dropped from this layout: the
-    operator wants the primary blue used, not the accent, on these headings."""
+    FB-078: by default the left panel carries the brand primary (blue) and the right
+    panel is muted (grey) — the left ("build now" / "do" / "prefer") reads as the
+    emphasised state. FB-096: an explicit ``accent_side`` overrides this to put the
+    deck accent on the named side (the other goes muted) — e.g. to colour a "with
+    Claude Code" panel in the accent rather than grey."""
+    if slide.accent_side == "left":
+        left_c, right_c = palette.accent, palette.muted
+    elif slide.accent_side == "right":
+        left_c, right_c = palette.muted, palette.accent
+    else:
+        left_c, right_c = palette.primary, palette.muted
     return _two_panel_list(
         slide.title,
-        slide.left.title, slide.left.items, palette.primary,
-        slide.right.title, slide.right.items, palette.muted,
+        slide.left.title, slide.left.items, left_c,
+        slide.right.title, slide.right.items, right_c,
         cx, cy, cw, ch, font, ts, palette,
     )
 
@@ -1263,7 +1292,7 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header, bold=True,
                                      italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     # Operator feedback FB-028 (supersedes the FB-023 badge rework): the accent/primary
@@ -1319,7 +1348,7 @@ def _slide_title(nodes, title, cx, y, cw, font, ts, palette):
     title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     nodes.append(_make_text_node(_nid("title"), title, font, ts.header, bold=True,
                                  italic=False, rect=Rect(cx, y, cw, title_h),
-                                 color=palette.primary))
+                                 color=_hl(palette, palette.primary)))
     return y + title_h + GAP_MIN_EMU
 
 
