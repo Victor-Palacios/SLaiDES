@@ -31,7 +31,7 @@
     "code": {
       "status": "flagged",
       "date": "2026-07-22",
-      "comment": "The grey title must be title capitalized and easier to read - this bold font looks awkward.",
+      "comment": "The \"What we're building\" font is still terrible. Use the font and style of the 4th slide (not the size nor color though).",
       "before": {
         "width_px": 1280.0,
         "height_px": 720.0,

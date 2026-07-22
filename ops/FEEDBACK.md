@@ -2,9 +2,9 @@
 
 _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-edit. `FEEDBACK.yaml` is the source of truth; file new comments via the feedback website (see web/README.md). The nightly reads `open` items, queues them on the board, and marks them `done`._
 
-**open** 19 · **done** 89 · **wontfix** 1 · _last change 2026-07-22_
+**open** 26 · **done** 89 · **wontfix** 1 · _last change 2026-07-22_
 
-## Open (19)
+## Open (26)
 
 | ID | Layout | Where | Sev | Comment | Notes |
 |---|---|---|---|---|---|
@@ -27,6 +27,13 @@ _Generated from `FEEDBACK.yaml` by `scripts/render_feedback.py` — do not hand-
 | FB-107 | two-panel-list | claude-code-for-data-scientists #33 | med | 👎 CLAUDE.md vs Skills --> CLAUDE.md vs Skills.md (same for column 2: Skills.md) |  |
 | FB-108 | question | claude-code-for-data-scientists #34 | med | 👎 What would you analyze if the boilerplate wrote itself? --> Let's build our visualization library with Claude + Github using our phones! |  |
 | FB-109 | title-slide | claude-code-for-data-scientists #35 | med | 👎 remove this slide and add 2 slides about Claude Cowork and 1 slide on Claude Artifacts and 1 slide on  Memory > Search and reference chats. |  |
+| FB-110 | code | layout / theme | med | 👎 The "What we're building" font is still terrible. Use the font and style of the 4th slide (not the size nor color though). |  |
+| FB-111 | definition | designing-your-own-eda-library #24 | med | 👎 delete:  — it is what lets users write `import simple_eda`. |  |
+| FB-112 | code | designing-your-own-eda-library #33 | med | 👎 delete slide |  |
+| FB-113 | bullet-list | designing-your-own-eda-library #34 | med | 👎 delete slide |  |
+| FB-114 | bullet-list | designing-your-own-eda-library #40 | med | 👍 add a slide defining build tools after this slide |  |
+| FB-115 | code | designing-your-own-eda-library #41 | med | 👍 add a slide on the language this is written in after this |  |
+| FB-116 | table-slide | designing-your-own-eda-library #42 | med | 👍 add a slide after this: Under semantic versioning (MAJOR.MINOR.PATCH), each of the three numbers just has to be a non-negative integer, so 0.0.1 means major 0, minor 0, patch 1. |  |
 
 ## Done (89)
 
