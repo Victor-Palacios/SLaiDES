@@ -143,27 +143,37 @@ slides:
 """
 
 
-def test_single_line_nodes_have_word_wrap_off_multiline_on(tmp_path):
-    """Single-line text boxes (step numerals, the 'Source' citation, short bodies)
-    must have word_wrap OFF so Google Slides cannot re-wrap a box sized to our exact
-    metrics; a genuinely wrapped node keeps word_wrap ON."""
+def test_single_line_boxes_get_width_slack_and_wrap_off(tmp_path):
+    """Google Slides ignores the PPTX wrap="none" flag and re-lays text with its own
+    (wider) Arial, so a single-line box sized to our exact metrics wraps — even
+    mid-word ("Sourc"/"e") — and collides with the line below. The emitter defends
+    against this two ways: word_wrap OFF for single-line nodes, AND a generous width
+    cushion so a snug box has room to spare. A genuinely wrapped node keeps wrap ON."""
     from pptx import Presentation
+    from pptx.util import Emu
+    from slidekit.metrics.measure import measure_text
 
     deck, rd = _resolve(_WRAP_YAML)
     out = tmp_path / "deck.pptx"
     emit_pptx(deck, rd, out)
 
     prs = Presentation(str(out))
-    # Map every text box's trimmed text -> its word_wrap flag, across all slides.
-    wrap_by_text: dict[str, bool] = {}
+    boxes: dict[str, object] = {}
     for s in prs.slides:
         for shp in s.shapes:
             if shp.has_text_frame:
-                wrap_by_text[shp.text_frame.text.strip()] = shp.text_frame.word_wrap
+                boxes[shp.text_frame.text.strip()] = shp
 
-    # The two-digit step numeral and the "Source" chrome are single-line -> wrap off.
-    assert wrap_by_text.get("01") is False
-    assert wrap_by_text.get("Source") is False
+    # The two-digit numeral and the "Source" chrome are single-line -> wrap off ...
+    assert boxes["01"].text_frame.word_wrap is False
+    assert boxes["Source"].text_frame.word_wrap is False
+    # ... and their box is comfortably wider than the glyphs (≥ ~1.4× text width),
+    # so a slightly-wider foreign renderer still fits the line on one row.
+    numeral_w = measure_text("01", "arial", deck.theme.type_scale.header, True, False)
+    assert Emu(boxes["01"].width).emu >= numeral_w * 1.4
+    source_w = measure_text("Source", "arial", 16, False, False)
+    assert Emu(boxes["Source"].width).emu >= source_w * 1.4
+
     # The deliberately long bullet wrapped into >1 line -> wrap stays on.
-    long_bullets = [w for t, w in wrap_by_text.items() if t.startswith("This single bullet")]
-    assert long_bullets and all(w is True for w in long_bullets)
+    long_bullets = [shp for t, shp in boxes.items() if t.startswith("This single bullet")]
+    assert long_bullets and all(shp.text_frame.word_wrap is True for shp in long_bullets)

@@ -40,6 +40,31 @@ def _expected_text_rects(resolved_slide) -> set[tuple[int, int, int, int]]:
     }
 
 
+def _assert_text_boxes_cover_nodes(resolved_slide, pptx_path: Path, slide_idx: int):
+    """Every resolved text node must map to an emitted box that preserves its anchor.
+
+    The emitter widens single-line boxes so Google Slides (which ignores wrap="none")
+    can't re-wrap a box sized to our exact metrics. That means box width — and, for
+    centred text, box x — may grow, so byte-exact rect equality is not the invariant.
+    The real guarantee is: the emitted box sits on the same baseline (y, height
+    identical) and horizontally COVERS the node's original span (left ≤ node.left and
+    right ≥ node.right), so the glyphs still land where the layout placed them.
+    """
+    boxes = _text_box_rects(pptx_path, slide_idx)
+    for n in resolved_slide.nodes + resolved_slide.chrome:
+        if n.node_type != "text":
+            continue
+        nx, ny, nw, nh = n.rect.x, n.rect.y, n.rect.w, n.rect.h
+        covering = [
+            (bx, bw) for (bx, by, bw, bh) in boxes
+            if by == ny and bh == nh and bx <= nx and bx + bw >= nx + nw
+        ]
+        assert covering, (
+            f"Slide {slide_idx}: no emitted box covers text node at "
+            f"(x={nx}, y={ny}, w={nw}, h={nh}); boxes={sorted(boxes)}"
+        )
+
+
 @pytest.fixture
 def tmp_output(tmp_path):
     return tmp_path
@@ -62,18 +87,14 @@ class TestRoundTrip:
         assert prs.slide_height == rd.slides[0].canvas_h
 
     def test_text_positions_exact(self, tmp_output):
-        """Every text node in every slide must appear at exact EMU rect."""
+        """Every text node must map to an emitted box that preserves its anchor
+        (same baseline, covering its horizontal span — see the helper's docstring)."""
         deck = load(EXAMPLES_DIR / "01_title_slide.yaml")
         rd = resolve(deck)
         out = emit_pptx(deck, rd, tmp_output / "rt.pptx")
 
         for i, rs in enumerate(rd.slides):
-            expected = _expected_text_rects(rs)
-            actual = _text_box_rects(out, i)
-            missing = expected - actual
-            assert not missing, (
-                f"Slide {i}: text boxes missing from pptx: {missing}"
-            )
+            _assert_text_boxes_cover_nodes(rs, out, i)
 
     def test_multi_slide_deck_positions(self, tmp_output):
         """Full deck round-trip: all 10 examples combined are clean."""
@@ -83,12 +104,7 @@ class TestRoundTrip:
         out = emit_pptx(deck, rd, tmp_output / "full.pptx")
 
         for i, rs in enumerate(rd.slides):
-            expected = _expected_text_rects(rs)
-            actual = _text_box_rects(out, i)
-            missing = expected - actual
-            assert not missing, (
-                f"Slide {i} of full deck: text boxes missing: {missing}"
-            )
+            _assert_text_boxes_cover_nodes(rs, out, i)
 
     def test_output_file_created(self, tmp_output):
         deck = load(EXAMPLES_DIR / "04_stat_callout.yaml")

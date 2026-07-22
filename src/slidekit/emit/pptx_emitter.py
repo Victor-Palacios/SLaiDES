@@ -22,11 +22,22 @@ if TYPE_CHECKING:
     from slidekit.layout.models import ResolvedDeck, ResolvedNode
 
 from slidekit.metrics.constants import (
+    EMU_PER_INCH,
     INSET_LEFT_EMU,
     INSET_RIGHT_EMU,
     INSET_TOP_EMU,
     INSET_BOTTOM_EMU,
 )
+from slidekit.metrics.measure import measure_text
+
+# A single line's textbox is sized to the exact glyph width we measured with our
+# bundled metrics. Google Slides ignores the PPTX `wrap="none"` flag and re-lays
+# text with its own (slightly wider) Arial, so a snug box wraps — even mid-word
+# ("Sourc"/"e"). Give every single-line box this much horizontal head-room so a
+# foreign renderer still keeps the line intact. 1.6× comfortably clears the ~1–20%
+# metric drift we observed; the extra width is invisible (boxes have no fill and
+# text stays anchored by its alignment).
+_SINGLE_LINE_SLACK = 1.6
 
 # Map lowercase internal font names → PowerPoint display names.
 _PPTX_FONT_NAME: dict[str, str] = {
@@ -84,20 +95,20 @@ def emit_pptx(
         fill.fore_color.rgb = RGBColor(r, g, b)
 
         for node in rs.nodes + rs.chrome:
-            _emit_node(slide, node, palette)
+            _emit_node(slide, node, palette, canvas_w)
 
     prs.save(str(output_path))
     return output_path
 
 
-def _emit_node(slide, node: "ResolvedNode", palette) -> None:
+def _emit_node(slide, node: "ResolvedNode", palette, canvas_w: int = 12192000) -> None:
     rect = node.rect
     if node.node_type == "box":
         _emit_box(slide, node, palette)
     elif node.node_type == "ellipse":
         _emit_box(slide, node, palette, shape=MSO_SHAPE.OVAL)
     elif node.node_type == "text":
-        _emit_text(slide, node, palette)
+        _emit_text(slide, node, palette, canvas_w)
     elif node.node_type == "icon":
         _emit_icon(slide, node, palette)
     elif node.node_type == "image":
@@ -131,21 +142,44 @@ def _emit_box(slide, node: "ResolvedNode", palette, shape=None) -> None:
     shape.shadow.inherit = False
 
 
-def _emit_text(slide, node: "ResolvedNode", palette) -> None:
+def _emit_text(slide, node: "ResolvedNode", palette, canvas_w: int = 12192000) -> None:
     rect = node.rect
-    txBox = slide.shapes.add_textbox(
-        Emu(rect.x), Emu(rect.y), Emu(rect.w), Emu(rect.h)
-    )
+    single_line = len(node.lines) <= 1
+
+    # Box geometry. For a single-line node, widen the frame so a renderer that
+    # ignores wrap="none" (Google Slides) and re-lays text with slightly-wider
+    # metrics still keeps the line intact rather than wrapping it — the garbled
+    # code slides, the "Sourc / e" citation, and the split "0 1" step numerals all
+    # came from Google wrapping a box sized to our exact metrics. The text stays
+    # anchored by its alignment, so the extra width is invisible; we only add
+    # head-room when the box is snug (already-wide boxes are left untouched) and
+    # clamp to the canvas so nothing runs off-slide.
+    x, w = rect.x, rect.w
+    if single_line and (node.text_content or "").strip():
+        size_pt_meas = node.size_pt or 32.0
+        try:
+            text_w = measure_text(node.text_content, node.font or "arial",
+                                  size_pt_meas, node.bold, node.italic)
+        except Exception:
+            text_w = None
+        if text_w:
+            want = int(text_w * _SINGLE_LINE_SLACK) + INSET_LEFT_EMU + INSET_RIGHT_EMU
+            if want > w:
+                if node.align == "center":
+                    # Grow symmetrically so the text stays centred; clamp on-canvas.
+                    x = max(0, x - (want - w) // 2)
+                    w = min(want, canvas_w - x)
+                else:
+                    # Left-anchored (incl. code runs at an exact x): never move x,
+                    # only extend rightward, up to the canvas edge.
+                    w = min(want, canvas_w - x)
+
+    txBox = slide.shapes.add_textbox(Emu(x), Emu(rect.y), Emu(w), Emu(rect.h))
     tf = txBox.text_frame
-    # Word-wrap ONLY when our layout genuinely wrapped this node into >1 line.
-    # A single-line node's box is sized to the exact glyph width we measured with
-    # our bundled Arial metrics; a foreign renderer (Google Slides) whose Arial is
-    # a hair wider would otherwise re-wrap that one line, and because the box is
-    # only one line tall the overflow collides with whatever sits below it — the
-    # garbled code slides, the "Sourc / e" citation, and the split "0 1" step
-    # numerals all came from exactly this. Disabling wrap lets a single line run a
-    # touch past its box edge (harmless, boxes don't clip) instead of wrapping.
-    tf.word_wrap = len(node.lines) > 1
+    # Word-wrap only for nodes our layout genuinely wrapped into >1 line; single
+    # lines keep wrap off (belt-and-braces with the width slack above, and correct
+    # for renderers that DO honour wrap="none").
+    tf.word_wrap = not single_line
     tf.auto_size = MSO_AUTO_SIZE.NONE
     tf.margin_left = Emu(INSET_LEFT_EMU)
     tf.margin_right = Emu(INSET_RIGHT_EMU)
