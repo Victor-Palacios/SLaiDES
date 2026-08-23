@@ -214,3 +214,52 @@ class TestLayoutsAreEditable:
         assert len(placeholders) >= 2, "a picked design must expose editable slots"
         placeholders[1].text_frame.text = "edited"
         assert placeholders[1].text_frame.text == "edited"
+
+
+class TestShapesAreSelectable:
+    """The design's shapes must be editable too, not just its text.
+
+    A plain shape on a layout renders on the slide but cannot be selected, so its
+    color and size cannot be changed. Promoting it to a placeholder makes the
+    clone on the slide a real, selectable shape.
+    """
+
+    def test_shape_bearing_designs_promote_their_shapes(self, emitted):
+        """nested-circles is three ellipses plus text — all must be placeholders."""
+        by_name = {_cSld_name(emitted, p): p for p in _layout_parts(emitted)}
+        xml = emitted.read(by_name[_layout_name("nested-circles")]).decode()
+        n_ph = len(re.findall(r"<p:ph\b[^>]*/>", xml))
+        n_sp = xml.count("<p:sp>")
+        assert n_ph == n_sp, (
+            f"{n_sp - n_ph} shape(s) left as unselectable decoration"
+        )
+
+    def test_no_theme_style_overrides_design_colors(self, emitted):
+        """<p:style> points at theme accent1 and would beat our literal fill on the
+        cloned shape, turning the design stock-Office blue."""
+        for part in _layout_parts(emitted):
+            if _cSld_name(emitted, part).startswith("slidekit"):
+                assert "<p:style>" not in emitted.read(part).decode()
+
+    def test_shapes_keep_a_text_body(self, emitted):
+        """Dropping the empty <p:txBody> renders stray glyph marks at shape edges."""
+        by_name = {_cSld_name(emitted, p): p for p in _layout_parts(emitted)}
+        xml = emitted.read(by_name[_layout_name("nested-circles")]).decode()
+        assert xml.count("<p:txBody>") == xml.count("<p:sp>")
+
+    def test_new_slide_exposes_selectable_shapes(self, tmp_path):
+        """End to end: pick nested-circles, get shapes you can recolor and resize."""
+        deck = load(EXAMPLES_DIR / "09_full_deck.yaml")
+        out = emit_pptx(deck, resolve(deck), tmp_path / "d.pptx")
+
+        prs = Presentation(str(out))
+        layout = prs.slide_layouts.get_by_name(_layout_name("nested-circles"))
+        slide = prs.slides.add_slide(layout)
+
+        # Three circles + title + three value/label pairs.
+        assert len(list(slide.placeholders)) == len(
+            [s for s in layout.shapes if s.shape_type is not None]
+        )
+        shape = list(slide.placeholders)[-1]
+        shape.width, shape.height = 1234567, 1234567
+        assert shape.width == 1234567, "a picked design's shape must be resizable"

@@ -84,6 +84,10 @@ _LAYOUT_NAME_OVERRIDES: dict[str, str] = {
 # text placeholder must not reuse them.
 _RESERVED_PH_IDX = {10, 11, 12}
 
+# Node types promoted to placeholders in a layout, so a slide built from the
+# design can edit them. Images are excluded: a picture is a <p:pic>, not a shape.
+_PROMOTABLE = ("text", "box", "ellipse", "icon")
+
 # Placeholders inherited from the stock Blank layout. slidekit binds no content to
 # placeholders and their geometry is sized for the template's 4:3 canvas, so they
 # would render as stray boxes in the theme editor. Drop them from our layouts.
@@ -138,11 +142,12 @@ def _strip_inherited_placeholders(layout_el) -> None:
 
 
 def _promote_to_placeholder(sp, ph_type: str, idx: Optional[int]) -> None:
-    """Turn a drawn text box on a layout into a real placeholder.
+    """Turn a drawn shape on a layout into a real placeholder.
 
     A plain shape on a layout is decoration: it renders on any slide using the
-    layout, but it cannot be selected or edited there. Only placeholders get
-    instantiated as editable content when a slide picks up the layout — which is
+    layout, but it cannot be selected there, so its color and size cannot be
+    changed. Only placeholders are cloned onto a slide as real, selectable shapes
+    — and the clone inherits this shape's geometry, position and fill — which is
     what makes a design usable as a template rather than a picture.
     """
     nvSpPr = sp.find(qn("p:nvSpPr"))
@@ -160,20 +165,35 @@ def _promote_to_placeholder(sp, ph_type: str, idx: Optional[int]) -> None:
     if cNvSpPr is not None:
         cNvSpPr.attrib.pop("txBox", None)
 
+    # python-pptx gives autoshapes a <p:style> pointing at theme accent1. The clone
+    # on the slide carries an empty spPr and inherits from here, and that style
+    # would win over our literal fill — the design's colors would come out as the
+    # stock Office blue. The explicit solidFill stays; the style has to go.
+    style = sp.find(qn("p:style"))
+    if style is not None:
+        sp.remove(style)
 
-def _placeholder_plan(text_nodes: list) -> list:
-    """Assign a placeholder role to each text node, in draw order.
+    # Note: the empty <p:txBody> is deliberately kept even on shapes that hold no
+    # text. Dropping it renders stray glyph marks at the shape edge.
+
+
+def _placeholder_plan(nodes: list) -> list:
+    """Assign a placeholder role to each promotable node, in draw order.
 
     Exactly one node may be the title (OOXML allows a single title per layout);
-    the rest become body placeholders with unique indices.
+    everything else becomes a body placeholder with a unique index.
     """
     title_at = next(
-        (i for i, n in enumerate(text_nodes) if str(n.node_id).startswith("title")),
+        (
+            i
+            for i, n in enumerate(nodes)
+            if n.node_type == "text" and str(n.node_id).startswith("title")
+        ),
         None,
     )
 
     plan, idx = [], 1
-    for i, _node in enumerate(text_nodes):
+    for i, _node in enumerate(nodes):
         if i == title_at:
             plan.append(("title", None))
             continue
@@ -253,17 +273,18 @@ def _build_component_layouts(prs: Presentation, deck: "Deck") -> dict:
         fill.fore_color.rgb = RGBColor(r, g, b)
 
         canvas = _LayoutCanvas(layout)
-        text_shapes = []
+        drawn = []
         for node in rs.nodes + rs.chrome:
             before = len(canvas.shapes._spTree)
             _emit_node(canvas, node, palette)
-            # Text nodes become editable placeholders; boxes/icons/images stay as
-            # the design's fixed structure.
-            if node.node_type == "text" and len(canvas.shapes._spTree) > before:
-                text_shapes.append((node, canvas.shapes._spTree[-1]))
+            # Text, boxes, ellipses and icons all become placeholders, so a slide
+            # using this design can retype the copy and recolor/resize the shapes.
+            # Pictures are left alone: a <p:pic> is not a shape placeholder.
+            if node.node_type in _PROMOTABLE and len(canvas.shapes._spTree) > before:
+                drawn.append((node, canvas.shapes._spTree[-1]))
 
-        nodes = [n for n, _sp in text_shapes]
-        for (_node, sp), (ph_type, idx) in zip(text_shapes, _placeholder_plan(nodes)):
+        plan = _placeholder_plan([n for n, _sp in drawn])
+        for (_node, sp), (ph_type, idx) in zip(drawn, plan):
             _promote_to_placeholder(sp, ph_type, idx)
 
         layouts[rs.component] = layout
