@@ -158,6 +158,23 @@ component (no cover slide); copy and adapt. The `09_full_deck`, `10_all_componen
 The system has a hard 32pt body floor by design: the correct fix is fewer words or an
 extra slide, not a smaller font.
 
+## Slide layouts in PowerPoint / Google Slides
+
+The emitted `.pptx` carries one named slide layout per slidekit design — `slidekit
+· Stat Callout`, `slidekit · SWOT`, and so on for all 30 — alongside the 11 stock
+Office layouts. Each slide is attached to the layout for its own component, so
+opening the deck in Google Slides and choosing **Slide > Edit theme** lists every
+design and lets you apply one to a new slide.
+
+Those layouts are labels and previews, not the rendering path: slides still carry
+all of their own geometry, and each slide sets `showMasterSp="0"` so layout art
+never paints onto it. Restyling a layout in the theme editor therefore will not
+change existing slides — edit the YAML and rebuild instead.
+
+The layout art comes from `src/slidekit/emit/prototypes.py`, generated from the
+example specimens. After adding a component, run `python scripts/build_prototypes.py`;
+a test fails if any component lacks prototype art.
+
 ## What slidekit will not do
 
 - Shrink body text below 32pt (hard floor, everywhere except the 16pt page-number chrome).

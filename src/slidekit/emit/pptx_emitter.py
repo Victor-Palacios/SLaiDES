@@ -3,9 +3,21 @@
 Auto-fit is disabled (our layout already did the fitting). Word-wrap is enabled
 to match the wrap() assumptions. Theme colors are written as literal RGB — no
 reliance on the pptx theme part.
+
+Slide layouts: python-pptx's default template ships 11 stock Office layouts, and
+we keep them. On top we clone one layout per slidekit component, named after the
+design and carrying that design's art, and attach every slide to the layout for
+its component. That is what makes the designs show up (and be selectable) under
+Google Slides' Slide > Edit theme — previously every slide pointed at "Blank",
+so the theme editor listed only the stock Office layouts.
+
+The layout art is decoration for the theme editor only: slides still draw all of
+their own content, so slides carry showMasterSp="0" to suppress inherited layout
+graphics and keep the rendered slide byte-for-byte what it was before.
 """
 from __future__ import annotations
 
+import copy
 from pathlib import Path
 from typing import TYPE_CHECKING, Union
 
@@ -13,6 +25,13 @@ from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.text import PP_ALIGN, MSO_AUTO_SIZE
+from pptx.opc.constants import CONTENT_TYPE as CT
+from pptx.opc.constants import RELATIONSHIP_TYPE as RT
+from pptx.opc.packuri import PackURI
+from pptx.oxml.ns import qn
+from pptx.parts.slide import SlideLayoutPart
+from pptx.shapes.shapetree import SlideShapes
+from pptx.slide import SlideLayout
 from pptx.util import Emu, Pt
 
 if TYPE_CHECKING:
@@ -39,6 +58,36 @@ _PPTX_FONT_NAME: dict[str, str] = {
 
 _BLANK_LAYOUT_IDX = 6  # index in default python-pptx template
 
+# Layout ids must be unique and >= 2147483648; the stock 11 occupy ...649-...659.
+_LAYOUT_ID_BASE = 2147483700
+
+# Our layouts sit alongside the 11 stock Office ones, so they carry a prefix: it
+# groups them together in the theme editor's list and keeps our "Title Slide" from
+# colliding with the stock layout of the same name.
+_LAYOUT_NAME_PREFIX = "slidekit \u00b7 "
+
+# Component key -> the label Google Slides shows in Edit Theme. Anything not listed
+# is title-cased from its key ("stat-callout" -> "Stat Callout").
+_LAYOUT_NAME_OVERRIDES: dict[str, str] = {
+    "swot": "SWOT",
+    "kpi-grid": "KPI Grid",
+    "this-vs-that": "This vs That",
+    "table-slide": "Table",
+    "code": "Code Block",
+}
+
+# Placeholders inherited from the stock Blank layout. slidekit binds no content to
+# placeholders and their geometry is sized for the template's 4:3 canvas, so they
+# would render as stray boxes in the theme editor. Drop them from our layouts.
+_INHERITED_PH_TAGS = ("dt", "ftr", "sldNum")
+
+
+def _layout_name(component: str) -> str:
+    """Human-readable layout label for a component key."""
+    override = _LAYOUT_NAME_OVERRIDES.get(component)
+    stem = override or " ".join(w.capitalize() for w in component.split("-"))
+    return _LAYOUT_NAME_PREFIX + stem
+
 
 def _hex_to_rgb(hex_color: str) -> tuple[int, int, int]:
     """Parse #RRGGBB → (r, g, b) integers."""
@@ -54,6 +103,95 @@ def _blank_layout(prs: Presentation):
     return prs.slide_layouts[_BLANK_LAYOUT_IDX]
 
 
+class _LayoutCanvas:
+    """Adapter that lets the slide-drawing helpers paint into a slide *layout*.
+
+    ``_emit_node`` and friends only need a ``.shapes`` that speaks the SlideShapes
+    API. python-pptx's ``LayoutShapes`` is read-only (no ``add_shape``/``add_textbox``),
+    so bind a real ``SlideShapes`` to the layout's own spTree instead — that reuses
+    every existing draw path rather than growing a second one for layouts.
+    """
+
+    def __init__(self, layout: SlideLayout):
+        self._layout = layout
+        self.shapes = SlideShapes(layout._element.spTree, layout)
+
+    @property
+    def part(self):
+        return self._layout.part
+
+
+def _strip_inherited_placeholders(layout_el) -> None:
+    """Remove the stock Blank layout's date/footer/slide-number placeholders."""
+    for sp in list(layout_el.spTree.iter(qn("p:sp"))):
+        ph = sp.find(qn("p:nvSpPr") + "/" + qn("p:nvPr") + "/" + qn("p:ph"))
+        if ph is not None and ph.get("type") in _INHERITED_PH_TAGS:
+            sp.getparent().remove(sp)
+
+
+def _add_layout(prs: Presentation, blank: SlideLayout, name: str, index: int) -> SlideLayout:
+    """Clone the Blank layout into a new, named layout part wired to the master.
+
+    python-pptx has no public API for adding a layout, so this assembles the part
+    by hand: clone the XML, register it in the package, relate it both ways with
+    the master, and append a ``<p:sldLayoutId>``. Content-type overrides are derived
+    from the part list at save time, so ``[Content_Types].xml`` needs no edit.
+    """
+    master_part = prs.slide_masters[0].part
+
+    layout_el = copy.deepcopy(blank._element)
+    layout_el.set("type", "blank")
+    layout_el.set("preserve", "1")  # keep it even when unused by any slide
+    layout_el.cSld.set("name", name)
+    _strip_inherited_placeholders(layout_el)
+
+    partname = PackURI("/ppt/slideLayouts/slideLayout%d.xml" % index)
+    part = SlideLayoutPart(partname, CT.PML_SLIDE_LAYOUT, prs.part.package, layout_el)
+    part.relate_to(master_part, RT.SLIDE_MASTER)
+    rId = master_part.relate_to(part, RT.SLIDE_LAYOUT)
+
+    sldLayoutIdLst = master_part._element.find(qn("p:sldLayoutIdLst"))
+    entry = sldLayoutIdLst.makeelement(qn("p:sldLayoutId"), {})
+    entry.set("id", str(_LAYOUT_ID_BASE + index))
+    entry.set(qn("r:id"), rId)
+    sldLayoutIdLst.append(entry)
+
+    return SlideLayout(layout_el, part)
+
+
+def _build_component_layouts(prs: Presentation, deck: "Deck") -> dict:
+    """One named, art-carrying layout per slidekit component.
+
+    Returns ``{component: SlideLayout}``. The art comes from resolving a canonical
+    prototype slide per component with *this deck's* theme, so the layouts in the
+    theme editor match the palette and font of the deck they ship in.
+    """
+    from slidekit.emit.prototypes import resolved_prototypes
+
+    palette = deck.theme.palette
+    blank = _blank_layout(prs)
+    first_index = len(prs.slide_layouts) + 1
+
+    layouts: dict = {}
+    for offset, rs in enumerate(resolved_prototypes(deck.theme).slides):
+        layout = _add_layout(
+            prs, blank, _layout_name(rs.component), first_index + offset
+        )
+
+        fill = layout.background.fill
+        fill.solid()
+        r, g, b = _hex_to_rgb(rs.background or palette.surface)
+        fill.fore_color.rgb = RGBColor(r, g, b)
+
+        canvas = _LayoutCanvas(layout)
+        for node in rs.nodes + rs.chrome:
+            _emit_node(canvas, node, palette)
+
+        layouts[rs.component] = layout
+
+    return layouts
+
+
 def emit_pptx(
     deck: "Deck",
     resolved: "ResolvedDeck",
@@ -67,12 +205,20 @@ def emit_pptx(
     canvas_h = resolved.slides[0].canvas_h if resolved.slides else 6858000
     prs.slide_width = Emu(canvas_w)
     prs.slide_height = Emu(canvas_h)
+    # The default template is 4:3 and python-pptx leaves the type attribute alone
+    # when the size is overridden, so the package claimed "On-screen Show (4:3)"
+    # while measuring 16:9. Say what we actually are.
+    prs.part._element.sldSz.set("type", "screen16x9")
 
-    layout = _blank_layout(prs)
+    component_layouts = _build_component_layouts(prs, deck)
+    blank = _blank_layout(prs)
     palette = deck.theme.palette
 
     for rs in resolved.slides:
-        slide = prs.slides.add_slide(layout)
+        slide = prs.slides.add_slide(component_layouts.get(rs.component, blank))
+        # Slides draw all of their own content, so suppress inherited master/layout
+        # graphics — the layout art exists for the theme editor, not the slide.
+        slide._element.set("showMasterSp", "0")
 
         # Solid slide background: the slide's own backdrop if set, else the theme surface.
         bg = slide.background

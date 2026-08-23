@@ -1,0 +1,47 @@
+# Three slides, three different slidekit designs — the deck to import into Google
+# Slides to check Slide > Edit theme. Each slide is attached to its own named
+# layout, and all 30 slidekit designs appear in the theme editor as
+# "slidekit · <Design>" alongside the 11 stock Office layouts.
+version: 1
+theme:
+  palette:
+    primary: "#1B3A5C"
+    surface: "#FFFFFF"
+    accent: "#D97706"
+    text: "#1A1A2E"
+    muted: "#7A8590"
+  font: arial
+page_numbers:
+  enabled: true
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "Slide Themes"
+    subtitle: "Every design, in Edit theme"
+
+  - component: timeline
+    title: "How a Design Reaches the Theme Editor"
+    events:
+      - date: "1"
+        title: "Author"
+        description: "A slide declares its component in YAML."
+      - date: "2"
+        title: "Resolve"
+        description: "Font metrics fix every box to exact EMU."
+      - date: "3"
+        title: "Layout"
+        description: "The design becomes a named pptx layout."
+      - date: "4"
+        title: "Import"
+        description: "Google Slides lists it in Edit theme."
+
+  - component: swot
+    title: "Naming Layouts After Designs"
+    strengths:
+      - "Designs are selectable, not just baked in"
+    weaknesses:
+      - "Adds 30 layouts to every deck file"
+    opportunities:
+      - "Apply a design to brand-new slides"
+    threats:
+      - "Edited layouts can drift from the YAML"
