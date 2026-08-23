@@ -4,6 +4,10 @@ Auto-fit is disabled (our layout already did the fitting). Word-wrap is enabled
 to match the wrap() assumptions. Theme colors are written as literal RGB — no
 reliance on the pptx theme part.
 
+Text in a layout is emitted as a real placeholder, so a slide that picks the
+layout up in PowerPoint or Google Slides gets editable text slots rather than a
+flat picture; the boxes and icons stay as the design's fixed structure.
+
 Slide layouts: python-pptx's default template ships 11 stock Office layouts, and
 we keep them. On top we clone one layout per slidekit component, named after the
 design and carrying that design's art, and attach every slide to the layout for
@@ -19,7 +23,7 @@ from __future__ import annotations
 
 import copy
 from pathlib import Path
-from typing import TYPE_CHECKING, Union
+from typing import TYPE_CHECKING, Optional, Union
 
 from pptx import Presentation
 from pptx.dml.color import RGBColor
@@ -76,6 +80,10 @@ _LAYOUT_NAME_OVERRIDES: dict[str, str] = {
     "code": "Code Block",
 }
 
+# Slide-number/date/footer placeholder indices in the stock template — a promoted
+# text placeholder must not reuse them.
+_RESERVED_PH_IDX = {10, 11, 12}
+
 # Placeholders inherited from the stock Blank layout. slidekit binds no content to
 # placeholders and their geometry is sized for the template's 4:3 canvas, so they
 # would render as stray boxes in the theme editor. Drop them from our layouts.
@@ -126,6 +134,67 @@ def _strip_inherited_placeholders(layout_el) -> None:
     for sp in list(layout_el.spTree.iter(qn("p:sp"))):
         ph = sp.find(qn("p:nvSpPr") + "/" + qn("p:nvPr") + "/" + qn("p:ph"))
         if ph is not None and ph.get("type") in _INHERITED_PH_TAGS:
+            sp.getparent().remove(sp)
+
+
+def _promote_to_placeholder(sp, ph_type: str, idx: Optional[int]) -> None:
+    """Turn a drawn text box on a layout into a real placeholder.
+
+    A plain shape on a layout is decoration: it renders on any slide using the
+    layout, but it cannot be selected or edited there. Only placeholders get
+    instantiated as editable content when a slide picks up the layout — which is
+    what makes a design usable as a template rather than a picture.
+    """
+    nvSpPr = sp.find(qn("p:nvSpPr"))
+    nvPr = nvSpPr.find(qn("p:nvPr"))
+
+    ph = nvPr.makeelement(qn("p:ph"), {})
+    ph.set("type", ph_type)
+    if idx is not None:
+        ph.set("idx", str(idx))
+    nvPr.insert(0, ph)  # p:ph must lead p:nvPr
+
+    # A placeholder is not a free-floating text box; drop the marker so renderers
+    # treat it as the placeholder it now is.
+    cNvSpPr = nvSpPr.find(qn("p:cNvSpPr"))
+    if cNvSpPr is not None:
+        cNvSpPr.attrib.pop("txBox", None)
+
+
+def _placeholder_plan(text_nodes: list) -> list:
+    """Assign a placeholder role to each text node, in draw order.
+
+    Exactly one node may be the title (OOXML allows a single title per layout);
+    the rest become body placeholders with unique indices.
+    """
+    title_at = next(
+        (i for i, n in enumerate(text_nodes) if str(n.node_id).startswith("title")),
+        None,
+    )
+
+    plan, idx = [], 1
+    for i, _node in enumerate(text_nodes):
+        if i == title_at:
+            plan.append(("title", None))
+            continue
+        while idx in _RESERVED_PH_IDX:
+            idx += 1
+        plan.append(("body", idx))
+        idx += 1
+    return plan
+
+
+def _strip_cloned_placeholders(slide) -> None:
+    """Drop the empty placeholders add_slide() clones from the layout.
+
+    Now that layouts carry real placeholders, python-pptx copies them onto every
+    new slide. Our slides draw all of their own content, so those clones are empty
+    strays that would sit on the slide (and can surface as prompt text). The
+    placeholders belong to the layout, for slides the user creates from it.
+    """
+    spTree = slide.shapes._spTree
+    for sp in list(spTree.iter(qn("p:sp"))):
+        if sp.find(qn("p:nvSpPr") + "/" + qn("p:nvPr") + "/" + qn("p:ph")) is not None:
             sp.getparent().remove(sp)
 
 
@@ -184,8 +253,18 @@ def _build_component_layouts(prs: Presentation, deck: "Deck") -> dict:
         fill.fore_color.rgb = RGBColor(r, g, b)
 
         canvas = _LayoutCanvas(layout)
+        text_shapes = []
         for node in rs.nodes + rs.chrome:
+            before = len(canvas.shapes._spTree)
             _emit_node(canvas, node, palette)
+            # Text nodes become editable placeholders; boxes/icons/images stay as
+            # the design's fixed structure.
+            if node.node_type == "text" and len(canvas.shapes._spTree) > before:
+                text_shapes.append((node, canvas.shapes._spTree[-1]))
+
+        nodes = [n for n, _sp in text_shapes]
+        for (_node, sp), (ph_type, idx) in zip(text_shapes, _placeholder_plan(nodes)):
+            _promote_to_placeholder(sp, ph_type, idx)
 
         layouts[rs.component] = layout
 
@@ -219,6 +298,7 @@ def emit_pptx(
         # Slides draw all of their own content, so suppress inherited master/layout
         # graphics — the layout art exists for the theme editor, not the slide.
         slide._element.set("showMasterSp", "0")
+        _strip_cloned_placeholders(slide)
 
         # Solid slide background: the slide's own backdrop if set, else the theme surface.
         bg = slide.background

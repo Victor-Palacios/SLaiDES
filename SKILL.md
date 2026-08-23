@@ -166,10 +166,17 @@ Office layouts. Each slide is attached to the layout for its own component, so
 opening the deck in Google Slides and choosing **Slide > Edit theme** lists every
 design and lets you apply one to a new slide.
 
-Those layouts are labels and previews, not the rendering path: slides still carry
-all of their own geometry, and each slide sets `showMasterSp="0"` so layout art
-never paints onto it. Restyling a layout in the theme editor therefore will not
-change existing slides — edit the YAML and rebuild instead.
+Picking a design's layout for a new slide gives you **editable text**: each text
+slot in the design is emitted as a real placeholder, so you can click and type
+into it. The boxes, bars and circles are the design's fixed structure and stay
+decoration — a plain shape on a layout renders but cannot be selected on the
+slide, which is why the text has to be a placeholder for the design to be usable
+as a template at all.
+
+Layouts do not drive slidekit's own output: emitted slides carry all of their own
+geometry, set `showMasterSp="0"` so layout art never paints onto them, and drop
+the placeholders `add_slide` clones. So restyling a layout in the theme editor
+will not change existing slides — edit the YAML and rebuild instead.
 
 The layout art comes from `src/slidekit/emit/prototypes.py`, generated from the
 example specimens. After adding a component, run `python scripts/build_prototypes.py`;

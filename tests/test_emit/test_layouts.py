@@ -14,6 +14,7 @@ import zipfile
 from pathlib import Path
 
 import pytest
+from pptx import Presentation
 
 from slidekit.emit.prototypes import PROTOTYPES
 from slidekit.emit.pptx_emitter import _layout_name, emit_pptx
@@ -152,3 +153,64 @@ class TestPresentationMetadata:
         xml = emitted.read("ppt/presentation.xml").decode()
         sldSz = re.search(r"<p:sldSz[^>]*/>", xml).group(0)
         assert 'cx="12192000"' in sldSz and 'type="screen16x9"' in sldSz
+
+
+class TestLayoutsAreEditable:
+    """A layout you can pick but not type into is a picture, not a template.
+
+    Plain shapes on a layout are decoration: they render on a slide using the
+    layout but cannot be selected or edited there. Only placeholders get
+    instantiated as editable content, so every design's text must be one.
+    """
+
+    def _slidekit_layouts(self, z):
+        return {
+            _cSld_name(z, p): z.read(p).decode()
+            for p in _layout_parts(z)
+            if _cSld_name(z, p).startswith("slidekit")
+        }
+
+    def test_every_design_exposes_editable_text(self, emitted):
+        for name, xml in self._slidekit_layouts(emitted).items():
+            assert re.findall(r"<p:ph\b[^>]*/>", xml), (
+                f"{name}: no placeholders — a slide using it could not be edited"
+            )
+
+    def test_at_most_one_title_per_layout(self, emitted):
+        """OOXML allows a single title placeholder per layout."""
+        for name, xml in self._slidekit_layouts(emitted).items():
+            titles = re.findall(r'<p:ph\b[^>]*type="title"', xml)
+            assert len(titles) <= 1, f"{name}: {len(titles)} title placeholders"
+
+    def test_placeholder_indices_are_unique(self, emitted):
+        for name, xml in self._slidekit_layouts(emitted).items():
+            idxs = re.findall(r'<p:ph\b[^>]*\bidx="(\d+)"', xml)
+            assert len(idxs) == len(set(idxs)), f"{name}: duplicate placeholder idx"
+
+    def test_placeholders_avoid_reserved_indices(self, emitted):
+        """10/11/12 belong to the date, footer and slide-number placeholders."""
+        for name, xml in self._slidekit_layouts(emitted).items():
+            idxs = {int(i) for i in re.findall(r'<p:ph\b[^>]*\bidx="(\d+)"', xml)}
+            assert not (idxs & {10, 11, 12}), f"{name}: reuses a reserved idx"
+
+    def test_emitted_slides_carry_no_placeholders(self, emitted):
+        """add_slide clones layout placeholders; our slides draw their own content,
+        so those clones would be empty strays."""
+        deck = load(EXAMPLES_DIR / "09_full_deck.yaml")
+        for i in range(1, len(resolve(deck).slides) + 1):
+            xml = emitted.read(f"ppt/slides/slide{i}.xml").decode()
+            assert not re.findall(r"<p:ph\b[^>]*/>", xml), f"slide{i}: stray placeholder"
+
+    def test_new_slide_from_design_is_editable(self, tmp_path):
+        """End to end: pick a design's layout, get editable text slots."""
+        deck = load(EXAMPLES_DIR / "09_full_deck.yaml")
+        out = emit_pptx(deck, resolve(deck), tmp_path / "d.pptx")
+
+        prs = Presentation(str(out))
+        layout = prs.slide_layouts.get_by_name(_layout_name("pyramid"))
+        slide = prs.slides.add_slide(layout)
+
+        placeholders = list(slide.placeholders)
+        assert len(placeholders) >= 2, "a picked design must expose editable slots"
+        placeholders[1].text_frame.text = "edited"
+        assert placeholders[1].text_frame.text == "edited"
