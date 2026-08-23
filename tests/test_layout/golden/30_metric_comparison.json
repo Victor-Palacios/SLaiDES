@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_314",
+          "node_id": "title_296",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,11 +32,11 @@
           "text_color": "#0D3B66"
         },
         {
-          "node_id": "metric_val_315",
+          "node_id": "metric_val_297",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2075688,
+            "y": 2334768,
             "w": 3576320,
             "h": 914400
           },
@@ -57,25 +57,19 @@
           "align": "center"
         },
         {
-          "node_id": "metric_label_316",
+          "node_id": "metric_label_298",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3264408,
+            "y": 3523488,
             "w": 3576320,
-            "h": 1127760
+            "h": 609600
           },
-          "text_content": "Annual recurring revenue",
+          "text_content": "Revenue",
           "lines": [
             {
-              "text": "Annual recurring",
-              "width_emu": 3168290,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "revenue",
-              "width_emu": 1560426,
+              "text": "Revenue",
+              "width_emu": 1728465,
               "height_emu": 518160,
               "overflows": false
             }
@@ -87,11 +81,11 @@
           "align": "center"
         },
         {
-          "node_id": "metric_chip_317",
+          "node_id": "metric_chip_299",
           "node_type": "box",
           "rect": {
             "x": 1522569,
-            "y": 4666488,
+            "y": 4407408,
             "w": 1445581,
             "h": 518159
           },
@@ -99,11 +93,11 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_318",
+          "node_id": "metric_delta_300",
           "node_type": "text",
           "rect": {
             "x": 1522569,
-            "y": 4666488,
+            "y": 4407408,
             "w": 1445581,
             "h": 518159
           },
@@ -125,11 +119,11 @@
           "align": "center"
         },
         {
-          "node_id": "metric_val_319",
+          "node_id": "metric_val_301",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 2075688,
+            "y": 2334768,
             "w": 3576320,
             "h": 914400
           },
@@ -150,13 +144,13 @@
           "align": "center"
         },
         {
-          "node_id": "metric_label_320",
+          "node_id": "metric_label_302",
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 3264408,
+            "y": 3523488,
             "w": 3576320,
-            "h": 1127760
+            "h": 609600
           },
           "text_content": "Monthly churn",
           "lines": [
@@ -174,11 +168,11 @@
           "align": "center"
         },
         {
-          "node_id": "metric_chip_321",
+          "node_id": "metric_chip_303",
           "node_type": "box",
           "rect": {
             "x": 5175547,
-            "y": 4666488,
+            "y": 4407408,
             "w": 1840906,
             "h": 518159
           },
@@ -186,11 +180,11 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_322",
+          "node_id": "metric_delta_304",
           "node_type": "text",
           "rect": {
             "x": 5175547,
-            "y": 4666488,
+            "y": 4407408,
             "w": 1840906,
             "h": 518159
           },
@@ -212,11 +206,11 @@
           "align": "center"
         },
         {
-          "node_id": "metric_val_323",
+          "node_id": "metric_val_305",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 2075688,
+            "y": 2334768,
             "w": 3576320,
             "h": 914400
           },
@@ -237,25 +231,19 @@
           "align": "center"
         },
         {
-          "node_id": "metric_label_324",
+          "node_id": "metric_label_306",
           "node_type": "text",
           "rect": {
             "x": 8158480,
-            "y": 3264408,
+            "y": 3523488,
             "w": 3576320,
-            "h": 1127760
+            "h": 609600
           },
-          "text_content": "Net promoter score",
+          "text_content": "Promoter score",
           "lines": [
             {
-              "text": "Net promoter",
-              "width_emu": 2519747,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "score",
-              "width_emu": 1055886,
+              "text": "Promoter score",
+              "width_emu": 2951547,
               "height_emu": 518160,
               "overflows": false
             }
@@ -267,11 +255,11 @@
           "align": "center"
         },
         {
-          "node_id": "metric_chip_325",
+          "node_id": "metric_chip_307",
           "node_type": "box",
           "rect": {
             "x": 9427731,
-            "y": 4666488,
+            "y": 4407408,
             "w": 1037817,
             "h": 518159
           },
@@ -279,11 +267,11 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_326",
+          "node_id": "metric_delta_308",
           "node_type": "text",
           "rect": {
             "x": 9427731,
-            "y": 4666488,
+            "y": 4407408,
             "w": 1037817,
             "h": 518159
           },
@@ -307,7 +295,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_327",
+          "node_id": "chrome_pagenum_309",
           "node_type": "text",
           "rect": {
             "x": 10363200,

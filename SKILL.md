@@ -154,6 +154,14 @@ component (no cover slide); copy and adapt. The `09_full_deck`, `10_all_componen
 | `E_FONT` | font outside the metric-safe set | switch `theme.font` to an allowed font |
 | `E_CONTRAST` | text vs background contrast too low | pick palette roles with more contrast |
 
+| `E_WRAP` | text wraps onto a second line | shorten the copy to the character budget in the message |
+
+`E_WRAP` enforces one line per text slot: if copy wraps, it is too long. The
+message quotes how many characters the slot holds, so write to that budget.
+Shrinking the font is **not** an available fix. Slots narrower than ~15
+characters a line (the timeline, card-grid and process-steps columns) cannot hold
+one-line copy at all, so they report `W_WRAP` and do not block the build.
+
 `E_OVERFLOW` and `E_MIN_BODY_SIZE` almost always mean **too much text on the slide**.
 The system has a hard 32pt body floor by design: the correct fix is fewer words or an
 extra slide, not a smaller font.

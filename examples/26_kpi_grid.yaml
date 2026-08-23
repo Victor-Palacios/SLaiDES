@@ -22,6 +22,6 @@ slides:
       - value: "$2.1M"
         label: "Net new revenue"
       - value: "12 days"
-        label: "Avg. time to value"
+        label: "Time to value"
       - value: "31%"
         label: "Expansion rate"

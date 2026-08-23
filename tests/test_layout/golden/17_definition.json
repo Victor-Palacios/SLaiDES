@@ -8,22 +8,22 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_225",
+          "node_id": "accent_bar_183",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 1965960,
+            "y": 2484120,
             "w": 128016,
-            "h": 2926080
+            "h": 1889760
           },
           "fill_color": "#3949AB"
         },
         {
-          "node_id": "term_223",
+          "node_id": "term_181",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 1965960,
+            "y": 2484120,
             "w": 10738104,
             "h": 1005840
           },
@@ -43,31 +43,19 @@
           "text_color": "#3949AB"
         },
         {
-          "node_id": "def_224",
+          "node_id": "def_182",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 3246120,
+            "y": 3764280,
             "w": 10738104,
-            "h": 1645920
+            "h": 609600
           },
-          "text_content": "The percentage of recurring revenue retained from existing customers over a period, including expansion and after churn.",
+          "text_content": "Revenue kept from existing customers.",
           "lines": [
             {
-              "text": "The percentage of recurring revenue retained",
-              "width_emu": 9892605,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "from existing customers over a period,",
-              "width_emu": 8385311,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "including expansion and after churn.",
-              "width_emu": 7923783,
+              "text": "Revenue kept from existing customers.",
+              "width_emu": 8469226,
               "height_emu": 518160,
               "overflows": false
             }
@@ -80,7 +68,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_226",
+          "node_id": "chrome_pagenum_184",
           "node_type": "text",
           "rect": {
             "x": 10363200,

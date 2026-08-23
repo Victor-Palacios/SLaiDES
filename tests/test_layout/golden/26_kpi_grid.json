@@ -288,7 +288,7 @@
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 3797808,
+            "y": 4056888,
             "w": 3576320,
             "h": 640080
           },
@@ -314,7 +314,7 @@
           "node_type": "box",
           "rect": {
             "x": 5559552,
-            "y": 4492752,
+            "y": 4751832,
             "w": 1072896,
             "h": 54864
           },
@@ -326,21 +326,15 @@
           "node_type": "text",
           "rect": {
             "x": 4307840,
-            "y": 4602480,
+            "y": 4861560,
             "w": 3576320,
-            "h": 1127760
+            "h": 609600
           },
-          "text_content": "Avg. time to value",
+          "text_content": "Time to value",
           "lines": [
             {
-              "text": "Avg. time to",
-              "width_emu": 2272010,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "value",
-              "width_emu": 1032272,
+              "text": "Time to value",
+              "width_emu": 2575830,
               "height_emu": 518160,
               "overflows": false
             }

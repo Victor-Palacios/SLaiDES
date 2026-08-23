@@ -38,10 +38,10 @@ slides:
   - component: swot
     title: "Naming Layouts After Designs"
     strengths:
-      - "Designs are selectable, not just baked in"
+      - "All designs are selectable"
     weaknesses:
-      - "Adds 30 layouts to every deck file"
+      - "Adds 30 layouts per deck"
     opportunities:
-      - "Apply a design to brand-new slides"
+      - "Apply designs to new slides"
     threats:
-      - "Edited layouts can drift from the YAML"
+      - "Edited layouts can drift"

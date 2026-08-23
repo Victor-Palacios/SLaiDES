@@ -11,4 +11,4 @@ page_numbers:
   enabled: true
 slides:
   - component: question
-    question: "What would we build if we trusted our customers completely?"
+    question: "What if we trusted users?"

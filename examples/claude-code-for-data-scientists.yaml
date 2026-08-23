@@ -33,7 +33,7 @@ slides:
 
   - component: definition
     term: "Claude Code"
-    definition: "A terminal-based AI agent that reads your project, writes and runs code, inspects the results, and iterates until the job is done."
+    definition: "An AI agent that writes and runs your code."
 
   - component: this-vs-that
     title: "Chat vs Agent"
@@ -125,13 +125,13 @@ slides:
       items:
         - "Boilerplate pandas by hand"
         - "Stack Overflow detours"
-        - "Stale, undocumented notebooks"
+        - "Stale, undocumented notes"
     right:
       title: "With Claude Code"
       items:
-        - "Describe the outcome instead"
+        - "Describe the outcome"
         - "Errors debugged in place"
-        - "Analysis committed with notes"
+        - "Analysis committed"
 
   - component: table-slide
     title: "Commands Worth Knowing"
@@ -151,7 +151,7 @@ slides:
       - "Commit small, reviewable steps."
 
   - component: question
-    question: "What would you analyze if the boilerplate wrote itself?"
+    question: "What if setup vanished?"
 
   - component: title-slide
     title: "Start Today"

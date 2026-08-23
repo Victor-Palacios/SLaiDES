@@ -20,6 +20,6 @@ slides:
       alt: "Engineering team at a customer site"
     content:
       - type: text
-        content: "Built with customers, not just for them."
+        content: "Built with customers."
       - type: text
-        content: "60% faster rollout; 50% fewer tickets."
+        content: "60% faster; 50% fewer tickets"

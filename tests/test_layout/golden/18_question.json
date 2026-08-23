@@ -8,42 +8,30 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_228",
+          "node_id": "accent_bar_186",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2011680,
+            "y": 2926080,
             "w": 128016,
-            "h": 2834640
+            "h": 1005840
           },
           "fill_color": "#00897B"
         },
         {
-          "node_id": "question_227",
+          "node_id": "question_185",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 2011680,
+            "y": 2926080,
             "w": 10738104,
-            "h": 2834640
+            "h": 1005840
           },
-          "text_content": "What would we build if we trusted our customers completely?",
+          "text_content": "What if we trusted users?",
           "lines": [
             {
-              "text": "What would we build if we",
-              "width_emu": 9439796,
-              "height_emu": 914400,
-              "overflows": false
-            },
-            {
-              "text": "trusted our customers",
-              "width_emu": 8087320,
-              "height_emu": 914400,
-              "overflows": false
-            },
-            {
-              "text": "completely?",
-              "width_emu": 4446240,
+              "text": "What if we trusted users?",
+              "width_emu": 9272364,
               "height_emu": 914400,
               "overflows": false
             }
@@ -56,7 +44,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_229",
+          "node_id": "chrome_pagenum_187",
           "node_type": "text",
           "rect": {
             "x": 10363200,

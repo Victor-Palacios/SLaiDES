@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_442",
+          "node_id": "title_424",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -32,7 +32,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "subtitle_443",
+          "node_id": "subtitle_425",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -65,7 +65,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_444",
+          "node_id": "title_426",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -89,7 +89,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "heading_445",
+          "node_id": "heading_427",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -113,7 +113,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "body_446",
+          "node_id": "body_428",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -137,7 +137,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "heading_447",
+          "node_id": "heading_429",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -161,7 +161,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "body_448",
+          "node_id": "body_430",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -185,7 +185,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "heading_449",
+          "node_id": "heading_431",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -209,7 +209,7 @@
           "group_id": "itr_2"
         },
         {
-          "node_id": "body_450",
+          "node_id": "body_432",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -235,7 +235,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_451",
+          "node_id": "chrome_pagenum_433",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -268,7 +268,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_452",
+          "node_id": "title_434",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -292,7 +292,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "left_head_453",
+          "node_id": "left_head_435",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -316,7 +316,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "right_head_454",
+          "node_id": "right_head_436",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -340,7 +340,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "left_item_455",
+          "node_id": "left_item_437",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -363,7 +363,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_456",
+          "node_id": "right_item_438",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -386,7 +386,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_457",
+          "node_id": "left_item_439",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -409,7 +409,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_458",
+          "node_id": "right_item_440",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -432,7 +432,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_459",
+          "node_id": "left_item_441",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -455,7 +455,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_460",
+          "node_id": "right_item_442",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -480,7 +480,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_461",
+          "node_id": "chrome_pagenum_443",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -513,7 +513,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_462",
+          "node_id": "title_444",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -537,7 +537,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "card_title_463",
+          "node_id": "card_title_445",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -561,7 +561,7 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_body_464",
+          "node_id": "card_body_446",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -591,7 +591,7 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_title_465",
+          "node_id": "card_title_447",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -615,7 +615,7 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_body_466",
+          "node_id": "card_body_448",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -645,7 +645,7 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_title_467",
+          "node_id": "card_title_449",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -669,7 +669,7 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_body_468",
+          "node_id": "card_body_450",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -699,7 +699,7 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_title_469",
+          "node_id": "card_title_451",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -723,7 +723,7 @@
           "group_id": "card_3"
         },
         {
-          "node_id": "card_body_470",
+          "node_id": "card_body_452",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -755,7 +755,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_471",
+          "node_id": "chrome_pagenum_453",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -788,7 +788,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_472",
+          "node_id": "title_454",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -812,7 +812,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "stat_value_473",
+          "node_id": "stat_value_455",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -836,7 +836,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_474",
+          "node_id": "stat_label_456",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -859,7 +859,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_475",
+          "node_id": "stat_sub_457",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -883,7 +883,7 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_476",
+          "node_id": "stat_value_458",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -907,7 +907,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_477",
+          "node_id": "stat_label_459",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -930,7 +930,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_478",
+          "node_id": "stat_sub_460",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -954,7 +954,7 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_479",
+          "node_id": "stat_value_461",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -978,7 +978,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_480",
+          "node_id": "stat_label_462",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -1001,7 +1001,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_481",
+          "node_id": "stat_sub_463",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -1027,7 +1027,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_482",
+          "node_id": "chrome_pagenum_464",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -1060,7 +1060,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_483",
+          "node_id": "title_465",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1084,7 +1084,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "ev_date_484",
+          "node_id": "ev_date_466",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1109,7 +1109,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_485",
+          "node_id": "ev_title_467",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1132,7 +1132,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_486",
+          "node_id": "ev_desc_468",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1140,17 +1140,11 @@
             "w": 3576320,
             "h": 2813305
           },
-          "text_content": "Hand-coded logic.",
+          "text_content": "Hand-coded.",
           "lines": [
             {
-              "text": "Hand-coded",
-              "width_emu": 2352551,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "logic.",
-              "width_emu": 1008025,
+              "text": "Hand-coded.",
+              "width_emu": 2472519,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1161,7 +1155,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_487",
+          "node_id": "ev_date_469",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -1186,7 +1180,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_488",
+          "node_id": "ev_title_470",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -1209,7 +1203,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_489",
+          "node_id": "ev_desc_471",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -1232,7 +1226,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_490",
+          "node_id": "ev_date_472",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -1257,7 +1251,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_491",
+          "node_id": "ev_title_473",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -1280,7 +1274,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_492",
+          "node_id": "ev_desc_474",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -1305,7 +1299,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_493",
+          "node_id": "chrome_pagenum_475",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -1338,7 +1332,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_494",
+          "node_id": "title_476",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1362,7 +1356,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "card_title_495",
+          "node_id": "card_title_477",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1386,7 +1380,7 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_body_496",
+          "node_id": "card_body_478",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1416,7 +1410,7 @@
           "group_id": "card_0"
         },
         {
-          "node_id": "card_title_497",
+          "node_id": "card_title_479",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -1440,7 +1434,7 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_body_498",
+          "node_id": "card_body_480",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -1470,7 +1464,7 @@
           "group_id": "card_1"
         },
         {
-          "node_id": "card_title_499",
+          "node_id": "card_title_481",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1494,7 +1488,7 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_body_500",
+          "node_id": "card_body_482",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1524,7 +1518,7 @@
           "group_id": "card_2"
         },
         {
-          "node_id": "card_title_501",
+          "node_id": "card_title_483",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1548,7 +1542,7 @@
           "group_id": "card_3"
         },
         {
-          "node_id": "card_body_502",
+          "node_id": "card_body_484",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1580,7 +1574,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_503",
+          "node_id": "chrome_pagenum_485",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -1613,7 +1607,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_504",
+          "node_id": "title_486",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1636,7 +1630,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_505",
+          "node_id": "bl_item_487",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1659,7 +1653,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_506",
+          "node_id": "bl_item_488",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1682,7 +1676,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_507",
+          "node_id": "bl_item_489",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1705,7 +1699,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_508",
+          "node_id": "bl_item_490",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1730,7 +1724,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_509",
+          "node_id": "chrome_pagenum_491",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -1763,7 +1757,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_510",
+          "node_id": "title_492",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1787,7 +1781,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "left_head_511",
+          "node_id": "left_head_493",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1811,7 +1805,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "right_head_512",
+          "node_id": "right_head_494",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1835,7 +1829,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "left_item_513",
+          "node_id": "left_item_495",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1858,7 +1852,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_514",
+          "node_id": "right_item_496",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1881,7 +1875,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_515",
+          "node_id": "left_item_497",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1904,7 +1898,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_516",
+          "node_id": "right_item_498",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1927,7 +1921,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_517",
+          "node_id": "left_item_499",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1950,7 +1944,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_518",
+          "node_id": "right_item_500",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1975,7 +1969,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_519",
+          "node_id": "chrome_pagenum_501",
           "node_type": "text",
           "rect": {
             "x": 10363200,
@@ -2008,7 +2002,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_520",
+          "node_id": "title_502",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -2032,7 +2026,7 @@
           "text_color": "#1B4F8A"
         },
         {
-          "node_id": "subtitle_521",
+          "node_id": "subtitle_503",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -2057,7 +2051,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_522",
+          "node_id": "chrome_pagenum_504",
           "node_type": "text",
           "rect": {
             "x": 10363200,

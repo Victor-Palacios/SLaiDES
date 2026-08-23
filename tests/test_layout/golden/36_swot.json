@@ -75,19 +75,13 @@
             "x": 457200,
             "y": 2395727,
             "w": 5501640,
-            "h": 1097281
+            "h": 609600
           },
-          "text_content": "A strong brand with loyal users",
+          "text_content": "Strong brand, loyal users",
           "lines": [
             {
-              "text": "A strong brand with loyal",
-              "width_emu": 4704469,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "users",
-              "width_emu": 1055886,
+              "text": "Strong brand, loyal users",
+              "width_emu": 4800402,
               "height_emu": 518160,
               "overflows": false
             }
@@ -142,19 +136,13 @@
             "x": 6233160,
             "y": 2395727,
             "w": 5501640,
-            "h": 1097281
+            "h": 609600
           },
-          "text_content": "Thin margins and a small team",
+          "text_content": "Thin margins, small team",
           "lines": [
             {
-              "text": "Thin margins and a small",
-              "width_emu": 4823805,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "team",
-              "width_emu": 959954,
+              "text": "Thin margins, small team",
+              "width_emu": 4823172,
               "height_emu": 518160,
               "overflows": false
             }
@@ -209,19 +197,13 @@
             "x": 457200,
             "y": 4663439,
             "w": 5501640,
-            "h": 1097281
+            "h": 609600
           },
-          "text_content": "New markets through partnerships",
+          "text_content": "New markets via partners",
           "lines": [
             {
-              "text": "New markets through",
-              "width_emu": 4103787,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "partnerships",
-              "width_emu": 2376165,
+              "text": "New markets via partners",
+              "width_emu": 4895279,
               "height_emu": 518160,
               "overflows": false
             }
@@ -276,19 +258,13 @@
             "x": 6233160,
             "y": 4663439,
             "w": 5501640,
-            "h": 1097281
+            "h": 609600
           },
-          "text_content": "New entrants driving price pressure",
+          "text_content": "New entrants cut prices",
           "lines": [
             {
-              "text": "New entrants driving price",
-              "width_emu": 4991844,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "pressure",
-              "width_emu": 1679972,
+              "text": "New entrants cut prices",
+              "width_emu": 4511762,
               "height_emu": 518160,
               "overflows": false
             }

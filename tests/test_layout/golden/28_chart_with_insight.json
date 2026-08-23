@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_350",
+          "node_id": "title_262",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#2B2D42"
         },
         {
-          "node_id": "chart_val_351",
+          "node_id": "chart_val_263",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -58,7 +58,7 @@
           "text_color": "#1B998B"
         },
         {
-          "node_id": "chart_barbox_352",
+          "node_id": "chart_barbox_264",
           "node_type": "box",
           "rect": {
             "x": 680085,
@@ -70,7 +70,7 @@
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "chart_cat_353",
+          "node_id": "chart_cat_265",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -96,7 +96,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "chart_val_354",
+          "node_id": "chart_val_266",
           "node_type": "text",
           "rect": {
             "x": 2217420,
@@ -122,7 +122,7 @@
           "text_color": "#1B998B"
         },
         {
-          "node_id": "chart_barbox_355",
+          "node_id": "chart_barbox_267",
           "node_type": "box",
           "rect": {
             "x": 2440305,
@@ -134,7 +134,7 @@
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "chart_cat_356",
+          "node_id": "chart_cat_268",
           "node_type": "text",
           "rect": {
             "x": 2217420,
@@ -160,7 +160,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "chart_val_357",
+          "node_id": "chart_val_269",
           "node_type": "text",
           "rect": {
             "x": 3977640,
@@ -186,7 +186,7 @@
           "text_color": "#1B998B"
         },
         {
-          "node_id": "chart_barbox_358",
+          "node_id": "chart_barbox_270",
           "node_type": "box",
           "rect": {
             "x": 4200525,
@@ -198,7 +198,7 @@
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "chart_cat_359",
+          "node_id": "chart_cat_271",
           "node_type": "text",
           "rect": {
             "x": 3977640,
@@ -224,7 +224,7 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "chart_val_360",
+          "node_id": "chart_val_272",
           "node_type": "text",
           "rect": {
             "x": 5737860,
@@ -250,7 +250,7 @@
           "text_color": "#1B998B"
         },
         {
-          "node_id": "chart_barbox_361",
+          "node_id": "chart_barbox_273",
           "node_type": "box",
           "rect": {
             "x": 5960745,
@@ -262,7 +262,7 @@
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "chart_cat_362",
+          "node_id": "chart_cat_274",
           "node_type": "text",
           "rect": {
             "x": 5737860,
@@ -288,66 +288,30 @@
           "text_color": "#8A8A9A"
         },
         {
-          "node_id": "accent_bar_364",
+          "node_id": "accent_bar_276",
           "node_type": "box",
           "rect": {
             "x": 7498080,
-            "y": 1770888,
+            "y": 3325368,
             "w": 128016,
-            "h": 3718560
+            "h": 609600
           },
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "insight_363",
+          "node_id": "insight_275",
           "node_type": "text",
           "rect": {
             "x": 8037576,
-            "y": 1770888,
+            "y": 3325368,
             "w": 3697224,
-            "h": 3718560
+            "h": 609600
           },
-          "text_content": "Activations nearly quadrupled once self-serve onboarding shipped in February.",
+          "text_content": "Activations 4x.",
           "lines": [
             {
-              "text": "Activations",
-              "width_emu": 2327461,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "nearly",
-              "width_emu": 1272208,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "quadrupled",
-              "width_emu": 2350864,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "once self-serve",
-              "width_emu": 3144255,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "onboarding",
-              "width_emu": 2374478,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "shipped in",
-              "width_emu": 2159000,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "February.",
-              "width_emu": 1935721,
+              "text": "Activations 4x.",
+              "width_emu": 3047690,
               "height_emu": 518160,
               "overflows": false
             }
@@ -360,7 +324,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_365",
+          "node_id": "chrome_pagenum_277",
           "node_type": "text",
           "rect": {
             "x": 10363200,

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_19",
+          "node_id": "title_42",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#880E4F"
         },
         {
-          "node_id": "image_20",
+          "node_id": "image_43",
           "node_type": "image",
           "rect": {
             "x": 457200,
@@ -44,25 +44,19 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_21",
+          "node_id": "content_text_44",
           "node_type": "text",
           "rect": {
             "x": 6233160,
             "y": 1499616,
             "w": 5501640,
-            "h": 1127760
+            "h": 609600
           },
-          "text_content": "Built with customers, not just for them.",
+          "text_content": "Built with customers.",
           "lines": [
             {
-              "text": "Built with customers, not just",
-              "width_emu": 5097686,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "for them.",
-              "width_emu": 1582775,
+              "text": "Built with customers.",
+              "width_emu": 3706143,
               "height_emu": 518160,
               "overflows": false
             }
@@ -73,25 +67,19 @@
           "italic": false
         },
         {
-          "node_id": "content_text_22",
+          "node_id": "content_text_45",
           "node_type": "text",
           "rect": {
             "x": 6233160,
-            "y": 2901696,
+            "y": 2383536,
             "w": 5501640,
-            "h": 1127760
+            "h": 609600
           },
-          "text_content": "60% faster rollout; 50% fewer tickets.",
+          "text_content": "60% faster; 50% fewer tickets",
           "lines": [
             {
-              "text": "60% faster rollout; 50%",
-              "width_emu": 4137099,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "fewer tickets.",
-              "width_emu": 2325774,
+              "text": "60% faster; 50% fewer tickets",
+              "width_emu": 5203527,
               "height_emu": 518160,
               "overflows": false
             }
@@ -104,7 +92,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_23",
+          "node_id": "chrome_pagenum_46",
           "node_type": "text",
           "rect": {
             "x": 10363200,

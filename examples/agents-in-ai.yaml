@@ -82,7 +82,7 @@ slides:
     events:
       - date: "1980s"
         title: "Rules"
-        description: "Hand-coded logic."
+        description: "Hand-coded."
       - date: "2010s"
         title: "ML"
         description: "Learned patterns."

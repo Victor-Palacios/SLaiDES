@@ -36,6 +36,39 @@ Severity = Literal["error", "warning"]
 # held to uniform column heights: any spread beyond this many lines warns.
 TIMELINE_BALANCE_LINE_SLACK = 0
 
+# E_WRAP — text must fit on one line. Wrapped copy reads as "too long"; the fix is
+# fewer words, never a smaller font (the 32pt floor is not negotiable).
+#
+# Some slots are physically too narrow to hold a readable single line: the
+# timeline/card-grid/process-steps columns are under 3 inches wide, where one line
+# is roughly ten characters. Holding those to one line would cap a description at
+# a single word, and widening the box is not an option — copy is fitted to proven
+# geometry, not the reverse. So a slot whose one-line capacity falls below this
+# many characters warns (W_WRAP) instead of failing the build.
+MIN_SINGLE_LINE_CAPACITY = 15
+
+# Representative mixed-case English used to derive an average glyph width. Fixed
+# so the capacity figure is deterministic and reproducible across runs.
+_CAPACITY_SAMPLE = "the quick brown fox jumps over a lazy dog"
+
+
+def single_line_capacity(node: ResolvedNode) -> int:
+    """Roughly how many characters of average English fit on one line of this box.
+
+    Character-based and derived from real font metrics — no rendering involved —
+    so it can be asserted on directly in tests and quoted in the lint message as a
+    budget the author can write to.
+    """
+    from slidekit.metrics.measure import measure_text
+
+    font = node.font or "arial"
+    size = node.size_pt or BODY_FONT_FLOOR_PT
+    sample_w = measure_text(_CAPACITY_SAMPLE, font, size, node.bold)
+    if sample_w <= 0:
+        return 0
+    avg_char_w = sample_w / len(_CAPACITY_SAMPLE)
+    return int(node.rect.w // avg_char_w)
+
 
 @dataclass
 class LintIssue:
@@ -89,6 +122,11 @@ def _check_slide(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
     for node in all_nodes:
         if node.node_type == "text":
             issues.extend(_check_overflow(node, slide))
+
+    # E_WRAP — text wrapped onto a second line, i.e. the copy is too long.
+    for node in all_nodes:
+        if node.node_type == "text" and not node.is_chrome:
+            issues.extend(_check_wrap(node, slide))
 
     # E_OVERLAP — non-chrome nodes intersect.
     content_nodes = [n for n in slide.nodes if not n.is_chrome]
@@ -313,6 +351,40 @@ def _check_overflow(node: ResolvedNode, slide: ResolvedSlide) -> list[LintIssue]
             ))
 
     return issues
+
+
+def _check_wrap(node: ResolvedNode, slide: ResolvedSlide) -> list[LintIssue]:
+    """Flag text that wraps onto a second line.
+
+    Wrapping means the copy outran its slot. The remedy is always fewer words:
+    shrinking the font is explicitly not allowed, and the box geometry is proven,
+    so the sentence is what gives.
+    """
+    lines = node.lines or []
+    if len(lines) <= 1:
+        return []
+
+    capacity = single_line_capacity(node)
+    text = node.text_content or ""
+    narrow = capacity < MIN_SINGLE_LINE_CAPACITY
+
+    return [LintIssue(
+        code="W_WRAP" if narrow else "E_WRAP",
+        severity="warning" if narrow else "error",
+        slide=slide.slide_index,
+        node_path=node.node_id,
+        message=(
+            f"Text node '{node.node_id}' wraps onto {len(lines)} lines: "
+            f"{len(text)} characters in a slot that fits about {capacity}."
+        ),
+        suggested_fix=(
+            f"Shorten the text to about {capacity} characters so it fits on one "
+            f"line. Do not reduce the font size."
+            if not narrow else
+            f"This slot fits only about {capacity} characters per line, too few "
+            f"for one-line copy. Keep it as short as the design allows."
+        ),
+    )]
 
 
 def _check_overlaps(nodes: list[ResolvedNode], slide: ResolvedSlide) -> list[LintIssue]:

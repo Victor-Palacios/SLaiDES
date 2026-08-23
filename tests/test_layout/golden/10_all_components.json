@@ -1060,19 +1060,13 @@
             "x": 457200,
             "y": 1463040,
             "w": 5501640,
-            "h": 1066800
+            "h": 579120
           },
-          "text_content": "Full-bleed image with text side.",
+          "text_content": "Image with text side.",
           "lines": [
             {
-              "text": "Full-bleed image",
-              "width_emu": 3902075,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "with text side.",
-              "width_emu": 3658195,
+              "text": "Image with text side.",
+              "width_emu": 5121473,
               "height_emu": 487680,
               "overflows": false
             }

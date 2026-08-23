@@ -11,5 +11,5 @@ page_numbers:
   enabled: true
 slides:
   - component: pull-quote
-    quote: "We stopped buying tools and started buying outcomes."
+    quote: "We buy outcomes, not tools."
     attribution: "VP of Engineering, enterprise customer"

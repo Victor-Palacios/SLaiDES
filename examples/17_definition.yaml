@@ -12,4 +12,4 @@ page_numbers:
 slides:
   - component: definition
     term: "Net Revenue Retention"
-    definition: "The percentage of recurring revenue retained from existing customers over a period, including expansion and after churn."
+    definition: "Revenue kept from existing customers."

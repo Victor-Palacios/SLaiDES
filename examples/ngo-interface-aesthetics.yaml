@@ -27,11 +27,11 @@ slides:
     subtitle: "Ngo, Teo & Byrne · Information Sciences (2003)"
 
   - component: question
-    question: "Is a layout's beauty subjective — or can it be computed?"
+    question: "Is beauty computable?"
 
   - component: definition
     term: "Interface aesthetics"
-    definition: "The visual quality of a layout, written as numbers from where each element sits and how big it is."
+    definition: "Layout quality, written as numbers."
 
   - component: big-number
     value: "14"
@@ -61,7 +61,7 @@ slides:
 
   - component: definition
     term: "Bounding box"
-    definition: "Every measure reads only position and size — x, y, width, height. No pixels."
+    definition: "Every measure reads position and size."
 
   - component: bullet-list
     title: "The measures (6–10)"
@@ -175,5 +175,5 @@ slides:
         body: "Check the source, then report."
 
   - component: pull-quote
-    quote: "Turn design quality into explicit, auditable measures."
+    quote: "Make design quality auditable."
     attribution: "Ngo, Teo & Byrne (2003)"

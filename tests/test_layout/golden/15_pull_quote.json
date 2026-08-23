@@ -8,36 +8,30 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_218",
+          "node_id": "accent_bar_179",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2301240,
+            "y": 2621280,
             "w": 128016,
-            "h": 2255520
+            "h": 1615440
           },
           "fill_color": "#C2571A"
         },
         {
-          "node_id": "quote_216",
+          "node_id": "quote_177",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 2301240,
+            "y": 2621280,
             "w": 10738104,
-            "h": 1371600
+            "h": 731520
           },
-          "text_content": "\"We stopped buying tools and started buying outcomes.\"",
+          "text_content": "\"We buy outcomes, not tools.\"",
           "lines": [
             {
-              "text": "\"We stopped buying tools and",
-              "width_emu": 8877672,
-              "height_emu": 640080,
-              "overflows": false
-            },
-            {
-              "text": "started buying outcomes.\"",
-              "width_emu": 7875724,
+              "text": "\"We buy outcomes, not tools.\"",
+              "width_emu": 8961016,
               "height_emu": 640080,
               "overflows": false
             }
@@ -48,11 +42,11 @@
           "italic": false
         },
         {
-          "node_id": "attrib_217",
+          "node_id": "attrib_178",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 3947160,
+            "y": 3627120,
             "w": 10738104,
             "h": 609600
           },
@@ -74,7 +68,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_219",
+          "node_id": "chrome_pagenum_180",
           "node_type": "text",
           "rect": {
             "x": 10363200,

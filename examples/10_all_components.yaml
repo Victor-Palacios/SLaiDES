@@ -81,7 +81,7 @@ slides:
       alt: "Placeholder image"
     content:
       - type: text
-        content: "Full-bleed image with text side."
+        content: "Image with text side."
 
   - component: card-grid
     title: "Card Grid"
