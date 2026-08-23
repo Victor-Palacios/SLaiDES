@@ -138,7 +138,7 @@ def _node_html(node: "ResolvedNode", palette) -> str:
             f"left:{left};top:{top};width:{width};height:{height};"
             f"color:{color};font-family:'{font_name}',Arial;font-size:{size_px:.1f}px;"
             f"line-height:{LINE_SPACING_SINGLE};font-weight:{weight};"
-            f"padding:0 9px"  # horizontal INSET only; vertical baked into rect.h
+            f"padding:0"  # glyphs start at rect.x, as in the pptx/pdf emitters
             f"{centered};"
         )
         text = (node.text_content or "").replace("&", "&amp;").replace("<", "&lt;")

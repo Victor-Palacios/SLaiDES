@@ -186,6 +186,18 @@ geometry, set `showMasterSp="0"` so layout art never paints onto them, and drop
 the placeholders `add_slide` clones. So restyling a layout in the theme editor
 will not change existing slides — edit the YAML and rebuild instead.
 
+**Page numbers are live fields.** Every numbered slide carries a slide-number
+placeholder holding an `<a:fld type="slidenum">` in the bottom-right corner, so
+PowerPoint and Google Slides renumber it when slides are reordered, added or
+deleted. The digits in the file are only what a renderer shows before it
+evaluates the field.
+
+**Glyphs start at exactly `rect.x`.** All three emitters use zero horizontal text
+insets, because the layout engine measures every run from `rect.x` and puts rules
+and boxes at that same x. A left inset would push a heading off the rule beneath
+it, and a right inset would hand PowerPoint less usable width than the linter
+measured, letting it re-wrap copy that was proven to fit.
+
 The layout art comes from `src/slidekit/emit/prototypes.py`, generated from the
 example specimens. After adding a component, run `python scripts/build_prototypes.py`;
 a test fails if any component lacks prototype art.

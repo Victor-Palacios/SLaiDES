@@ -43,8 +43,6 @@ if TYPE_CHECKING:
     from slidekit.layout.models import ResolvedDeck, ResolvedNode
 
 from slidekit.metrics.constants import (
-    INSET_LEFT_EMU,
-    INSET_RIGHT_EMU,
     INSET_TOP_EMU,
     INSET_BOTTOM_EMU,
 )
@@ -88,10 +86,19 @@ _RESERVED_PH_IDX = {10, 11, 12}
 # design can edit them. Images are excluded: a picture is a <p:pic>, not a shape.
 _PROMOTABLE = ("text", "box", "ellipse", "icon")
 
+# The page-number chrome node, emitted as a live <a:fld> slide-number field rather
+# than baked-in digits so it renumbers when slides move, or are added or deleted.
+_PAGENUM_NODE_PREFIX = "chrome_pagenum"
+_SLDNUM_PH_IDX = 12  # the stock template's slide-number placeholder index
+
 # Placeholders inherited from the stock Blank layout. slidekit binds no content to
 # placeholders and their geometry is sized for the template's 4:3 canvas, so they
 # would render as stray boxes in the theme editor. Drop them from our layouts.
-_INHERITED_PH_TAGS = ("dt", "ftr", "sldNum")
+# The date and footer placeholders are dropped: slidekit binds nothing to them and
+# their geometry is sized for the template's 4:3 canvas, so they would show up as
+# stray boxes in the theme editor. sldNum is KEPT — the slide-number field on each
+# slide inherits from it, and a template is expected to carry one.
+_INHERITED_PH_TAGS = ("dt", "ftr")
 
 
 def _layout_name(component: str) -> str:
@@ -133,12 +140,57 @@ class _LayoutCanvas:
         return self._layout.part
 
 
-def _strip_inherited_placeholders(layout_el) -> None:
-    """Remove the stock Blank layout's date/footer/slide-number placeholders."""
+def _strip_inherited_placeholders(layout_el, canvas_w: int, canvas_h: int) -> None:
+    """Drop the stock date/footer placeholders; re-home the slide-number one.
+
+    The inherited placeholders carry no geometry of their own — they inherit from
+    a master sized for the template's 4:3 canvas, so on a 16:9 slide the
+    slide-number box lands mid-bottom. Give it the same rect the layout engine
+    uses for page-number chrome so the theme editor shows it where it actually is.
+    """
+    from slidekit.layout.engine import page_number_rect
+
+    rect = page_number_rect(canvas_w, canvas_h)
     for sp in list(layout_el.spTree.iter(qn("p:sp"))):
         ph = sp.find(qn("p:nvSpPr") + "/" + qn("p:nvPr") + "/" + qn("p:ph"))
-        if ph is not None and ph.get("type") in _INHERITED_PH_TAGS:
+        if ph is None:
+            continue
+        if ph.get("type") in _INHERITED_PH_TAGS:
             sp.getparent().remove(sp)
+        elif ph.get("type") == "sldNum":
+            spPr = sp.find(qn("p:spPr"))
+            xfrm = spPr.get_or_add_xfrm()
+            xfrm.get_or_add_off().x, xfrm.get_or_add_off().y = rect.x, rect.y
+            xfrm.get_or_add_ext().cx, xfrm.get_or_add_ext().cy = rect.w, rect.h
+
+
+def _make_slide_number_field(sp, text: str) -> None:
+    """Rewrite a drawn text box into a live slide-number placeholder.
+
+    Literal digits are wrong the moment a slide moves or another is inserted, so
+    the run becomes an <a:fld type="slidenum"> inside a sldNum placeholder — the
+    structure PowerPoint and Google Slides both recognise as *the* slide number
+    and renumber automatically. The <a:t> is only what a renderer shows before it
+    evaluates the field; the field itself is the source of truth.
+    """
+    _promote_to_placeholder(sp, "sldNum", _SLDNUM_PH_IDX)
+
+    # Swap the run element for a field carrying the same run properties, so the
+    # chrome keeps its font, size and muted colour.
+    for para in sp.findall(qn("p:txBody") + "/" + qn("a:p")):
+        run = para.find(qn("a:r"))
+        if run is None:
+            continue
+        fld = para.makeelement(qn("a:fld"), {})
+        fld.set("id", "{1F2E3D4C-5B6A-4978-8765-43210FEDCBA9}")
+        fld.set("type", "slidenum")
+        rPr = run.find(qn("a:rPr"))
+        if rPr is not None:
+            fld.append(rPr)
+        t = fld.makeelement(qn("a:t"), {})
+        t.text = text
+        fld.append(t)
+        para.replace(run, fld)
 
 
 def _promote_to_placeholder(sp, ph_type: str, idx: Optional[int]) -> None:
@@ -232,7 +284,9 @@ def _add_layout(prs: Presentation, blank: SlideLayout, name: str, index: int) ->
     layout_el.set("type", "blank")
     layout_el.set("preserve", "1")  # keep it even when unused by any slide
     layout_el.cSld.set("name", name)
-    _strip_inherited_placeholders(layout_el)
+    _strip_inherited_placeholders(
+        layout_el, prs.slide_width, prs.slide_height
+    )
 
     partname = PackURI("/ppt/slideLayouts/slideLayout%d.xml" % index)
     part = SlideLayoutPart(partname, CT.PML_SLIDE_LAYOUT, prs.part.package, layout_el)
@@ -329,7 +383,15 @@ def emit_pptx(
         fill.fore_color.rgb = RGBColor(r, g, b)
 
         for node in rs.nodes + rs.chrome:
+            before = len(slide.shapes._spTree)
             _emit_node(slide, node, palette)
+            if (
+                str(node.node_id).startswith(_PAGENUM_NODE_PREFIX)
+                and len(slide.shapes._spTree) > before
+            ):
+                _make_slide_number_field(
+                    slide.shapes._spTree[-1], node.text_content or ""
+                )
 
     prs.save(str(output_path))
     return output_path
@@ -384,8 +446,13 @@ def _emit_text(slide, node: "ResolvedNode", palette) -> None:
     tf = txBox.text_frame
     tf.word_wrap = True
     tf.auto_size = MSO_AUTO_SIZE.NONE
-    tf.margin_left = Emu(INSET_LEFT_EMU)
-    tf.margin_right = Emu(INSET_RIGHT_EMU)
+    # Horizontal insets are zero so glyphs start at exactly rect.x. The layout
+    # engine measures every run from rect.x and draws boxes there too, so a left
+    # inset would push text right of the rule beneath it — the underline stopped
+    # hugging its heading — and would also hand PowerPoint 0.2" less usable width
+    # than we measured, letting it re-wrap copy the linter proved fits.
+    tf.margin_left = 0
+    tf.margin_right = 0
     tf.margin_top = Emu(INSET_TOP_EMU)
     tf.margin_bottom = Emu(INSET_BOTTOM_EMU)
 

@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from slidekit.ir.models import Deck
     from slidekit.layout.models import ResolvedDeck, ResolvedNode
 
-from slidekit.metrics.constants import INSET_LEFT_EMU, INSET_TOP_EMU
+from slidekit.metrics.constants import INSET_TOP_EMU
 
 _EMU_PER_PT = 12700.0
 
@@ -157,7 +157,9 @@ def _draw_text(c, node: "ResolvedNode", palette, page_h: float) -> None:
     font = _pdf_font(node.font, node.bold, node.italic)
     c.setFont(font, size)
 
-    x = _pt(node.rect.x) + _pt(INSET_LEFT_EMU)
+    # Glyphs start at exactly rect.x — no left inset — so text lines up with the
+    # rules and boxes the engine places at the same x. Matches the pptx emitter.
+    x = _pt(node.rect.x)
     top = page_h - _pt(node.rect.y) - _pt(INSET_TOP_EMU)
     centered = node.align == "center"
 

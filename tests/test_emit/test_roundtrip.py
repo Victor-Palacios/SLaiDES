@@ -20,13 +20,18 @@ EXAMPLES_DIR = Path(__file__).parent.parent.parent / "examples"
 
 
 def _text_box_rects(pptx_path: Path, slide_idx: int) -> set[tuple[int, int, int, int]]:
-    """Return set of (left, top, width, height) for all text boxes on a slide."""
+    """Return set of (left, top, width, height) for text-bearing shapes on a slide.
+
+    Placeholders count too: the page number is emitted as a slide-number
+    placeholder (so it renumbers), not a plain text box, but it is still a
+    resolved text node that must land at its exact rect.
+    """
     prs = Presentation(str(pptx_path))
     slide = prs.slides[slide_idx]
     return {
         (s.left, s.top, s.width, s.height)
         for s in slide.shapes
-        if s.shape_type == MSO_SHAPE_TYPE.TEXT_BOX
+        if s.shape_type in (MSO_SHAPE_TYPE.TEXT_BOX, MSO_SHAPE_TYPE.PLACEHOLDER)
     }
 
 

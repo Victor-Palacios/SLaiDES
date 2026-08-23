@@ -119,6 +119,18 @@ def resolve(deck: DeckIR, aspect: str = "16:9") -> ResolvedDeck:
 # ── slide resolver ────────────────────────────────────────────────────────────
 
 
+def page_number_rect(canvas_w: int, canvas_h: int) -> Rect:
+    """Where page-number chrome sits: the bottom-right corner, inside the margin.
+
+    Shared with the pptx emitter, which gives the slide-number placeholder this
+    same rect — one source of truth so the layout's placeholder and the slide's
+    chrome can never drift apart.
+    """
+    w = int(1.5 * EMU_PER_INCH)
+    h = int(0.4 * EMU_PER_INCH)
+    return Rect(canvas_w - MARGIN_MIN_EMU - w, canvas_h - MARGIN_MIN_EMU - h, w, h)
+
+
 def _resolve_slide(
     slide,
     slide_index: int,
@@ -139,10 +151,9 @@ def _resolve_slide(
     ch = canvas_h - 2 * MARGIN_MIN_EMU
 
     # Reserve bottom-right corner for page numbers (chrome).
-    pn_box_w = int(1.5 * EMU_PER_INCH)
-    pn_box_h = int(0.4 * EMU_PER_INCH)
-    pn_x = canvas_w - MARGIN_MIN_EMU - pn_box_w
-    pn_y = canvas_h - MARGIN_MIN_EMU - pn_box_h
+    pn_rect = page_number_rect(canvas_w, canvas_h)
+    pn_box_w, pn_box_h = pn_rect.w, pn_rect.h
+    pn_x, pn_y = pn_rect.x, pn_rect.y
     # Shrink content area height to avoid chrome overlap.
     ch_with_pn = ch - pn_box_h - GAP_MIN_EMU
 
