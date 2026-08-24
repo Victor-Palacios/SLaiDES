@@ -1,0 +1,128 @@
+# The nine Must-have user stories, one slide each, plus framing.
+# 15 slides, 15 different layouts, in Anthropic's brand palette.
+version: 1
+theme:
+  palette:
+    primary: "#262625"   # near-black, for solid marks
+    surface: "#F0EEE6"   # bone / cream page
+    accent: "#D97757"    # Claude coral
+    text: "#191919"      # ink
+    muted: "#6C6A64"     # warm grey
+  font: arial
+page_numbers:
+  enabled: true
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "The Must-Haves"
+    subtitle: "Nine stories slidekit had to deliver"
+
+  - component: agenda
+    title: "The Nine"
+    items:
+      - "Provable layout from font metrics"
+      - "Declarative authoring, no geometry"
+      - "One command to PowerPoint and PDF"
+      - "A linter that blocks broken slides"
+
+  - component: definition
+    term: "Must"
+    definition: "Ship it or the product has no point."
+
+  - component: big-number
+    value: "9"
+    label: "Must-have stories"
+    context: "All nine delivered across three sprints"
+
+  - component: stat-callout
+    title: "US-14 · Metric-Safe Fonts"
+    stats:
+      - {value: "7", label: "Safe fonts"}
+      - {value: "0.076%", label: "Max drift"}
+      - {value: "2%", label: "Hard gate"}
+
+  - component: bullet-list
+    title: "US-02 · Declarative Authoring"
+    items:
+      - "A slide is a component plus content"
+      - "No author ever positions a box"
+      - "The engine resolves every rect"
+      - "Font metrics decide, not guesses"
+
+  - component: card-grid
+    title: "US-01 · Start From Valid"
+    cards:
+      - {icon: "file", title: "Scaffold", body: "One command"}
+      - {icon: "palette", title: "On theme", body: "Real palette"}
+      - {icon: "check", title: "Clean", body: "Builds green"}
+
+  - component: numbered-steps
+    title: "US-03 · One Command"
+    steps:
+      - {title: "Resolve", body: "Geometry from metrics"}
+      - {title: "Lint", body: "Block any defect"}
+      - {title: "Emit", body: "Write the .pptx"}
+
+  - component: icon-text-rows
+    title: "US-12 · Nothing Broken Ships"
+    rows:
+      - {icon: "alert", heading: "Overflow", body: "Text outgrew its box"}
+      - {icon: "grid", heading: "Overlap", body: "Two nodes collide"}
+      - {icon: "ruler", heading: "Margin", body: "Content off the edge"}
+
+  - component: process-steps
+    title: "US-04 · Repair From JSON"
+    steps:
+      - {label: "Build", body: "Exit non-zero"}
+      - {label: "Read", body: "Codes, paths"}
+      - {label: "Edit", body: "Fix the copy"}
+      - {label: "Rebuild", body: "Exit zero"}
+
+  - component: two-panel-list
+    title: "US-06 · Theme Once"
+    left:
+      title: "Per slide"
+      items:
+        - "Colours repeat"
+        - "Sizes drift apart"
+        - "Restyling means edits"
+    right:
+      title: "Theme block"
+      items:
+        - "Slides name a role"
+        - "One type scale holds"
+        - "Rebuild restyles all"
+
+  - component: comparison-columns
+    title: "US-09 · Two Outputs"
+    left_title: "PowerPoint"
+    right_title: "PDF"
+    left_items:
+      - {text: "Editable in Slides"}
+      - {text: "Live slide numbers"}
+      - {text: "Named layouts"}
+    right_items:
+      - {text: "Fixed layout"}
+      - {text: "Prints as shown"}
+      - {text: "Page per slide"}
+
+  - component: table-slide
+    title: "US-20 · Artifacts Stay Honest"
+    headers: ["Artifact", "Guard"]
+    rows:
+      - ["Resolved geometry", "Golden files"]
+      - ["Generated docs", "Sync test"]
+      - ["Combined PDF", "Layout hash"]
+      - ["Web previews", "Sync test"]
+
+  - component: kpi-grid
+    title: "What The Nine Bought"
+    kpis:
+      - {value: "485", label: "Tests green"}
+      - {value: "30", label: "Layouts"}
+      - {value: "0", label: "Screenshots"}
+      - {value: "1s", label: "Per deck"}
+
+  - component: pull-quote
+    quote: "Prove it, don't look at it."
+    attribution: "The rule behind all nine"
