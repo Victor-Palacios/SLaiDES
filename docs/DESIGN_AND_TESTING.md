@@ -166,6 +166,9 @@ PATH="$PWD/.venv/bin:$PATH" .venv/bin/python -m pytest -q
 
 ### 5.3 Continuous integration
 
+- [`.github/workflows/tests.yml`](../.github/workflows/tests.yml) — the **full test
+  suite**: runs `pytest -q` on Python 3.11 and 3.12 for every push to `main` and
+  every pull request, so the green-suite gate is visible in the Actions tab.
 - [`.github/workflows/verify.yml`](../.github/workflows/verify.yml) — the
   **render-drift harness**: on changes to layout/metrics/emit/verify/examples it
   renders the example decks through LibreOffice + poppler and checks cheap pixel
@@ -180,8 +183,9 @@ PATH="$PWD/.venv/bin:$PATH" .venv/bin/python -m pytest -q
 (project rule; versioned git hooks in `.githooks/` also block unhygienic commits). The
 render-drift harness runs in CI because it needs system renderers; if it ever disagrees
 with the linter, the fix goes into the metrics/layout constants — never into a per-deck
-visual loop. _Recommended enhancement for the capstone: add a CI job that runs the full
-`pytest -q` suite on every push/PR to make the green-suite gate visible to graders._
+visual loop. The full `pytest -q` suite runs in CI on every push/PR
+([`tests.yml`](../.github/workflows/tests.yml)); versioned git hooks in `.githooks/`
+additionally block unhygienic commits locally.
 
 ### 5.4 Why this testing approach
 
