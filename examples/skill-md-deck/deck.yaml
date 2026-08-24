@@ -1,0 +1,262 @@
+# A 30-slide deck about SKILL.md — one slide per slidekit layout.
+# The worked example throughout is this repo's own SKILL.md.
+version: 1
+theme:
+  palette:
+    primary: "#1F3A5F"
+    surface: "#FFFFFF"
+    accent: "#C1642B"
+    text: "#1A1A24"
+    muted: "#7C8794"
+  font: arial
+page_numbers:
+  enabled: true
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "SKILL.md"
+    subtitle: "Teaching Claude a capability"
+
+  - component: agenda
+    title: "What We Cover"
+    items:
+      - "What a SKILL.md is"
+      - "Anatomy of the file"
+      - "A worked example"
+      - "What it costs to load"
+      - "Design principles"
+
+  - component: question
+    question: "What should Claude read?"
+
+  - component: definition
+    term: "SKILL.md"
+    definition: "Instructions Claude loads on demand."
+
+  - component: big-number
+    value: "2,654"
+    label: "Tokens to load"
+    context: "The size of this repo's SKILL.md"
+
+  - component: section-divider
+    number: "01"
+    title: "Anatomy"
+
+  - component: file-tree
+    title: "Where it lives"
+    root: "slidekit/"
+    entries:
+      - {name: "SKILL.md", depth: 0}
+      - {name: "src/", depth: 0}
+      - {name: "slidekit/", depth: 1}
+      - {name: "layout/", depth: 2}
+      - {name: "examples/", depth: 0}
+      - {name: "docs/", depth: 0}
+
+  - component: code
+    title: "SKILL.md"
+    chrome: true
+    code: |
+      ---
+      name: slidekit
+      description: Build .pptx from YAML.
+      ---
+
+      ## Build loop
+      1. slidekit build deck.yaml
+      2. fix the JSON lint errors
+
+  - component: bullet-list
+    title: "What the File Carries"
+    items:
+      - "A name and a description"
+      - "When to use it"
+      - "The workflow to follow"
+      - "The rules that must hold"
+      - "What the tool will not do"
+
+  - component: numbered-steps
+    title: "How Claude Loads It"
+    steps:
+      - {title: "Match", body: "Description fits the task"}
+      - {title: "Load", body: "File enters the context"}
+      - {title: "Follow", body: "Claude works the steps"}
+
+  - component: icon-text-rows
+    title: "Three Jobs of a Skill"
+    rows:
+      - {icon: "target", heading: "Trigger", body: "Say when to use it"}
+      - {icon: "map", heading: "Direct", body: "Give the workflow"}
+      - {icon: "shield", heading: "Constrain", body: "State the hard rules"}
+
+  - component: card-grid
+    title: "Sections That Earn Space"
+    cards:
+      - {icon: "bolt", title: "Build loop", body: "Four steps"}
+      - {icon: "list", title: "Gallery", body: "30 layouts"}
+      - {icon: "flag", title: "Lint codes", body: "Nine codes"}
+
+  - component: two-panel-list
+    title: "Writing the Description"
+    left:
+      title: "Vague"
+      items:
+        - "Helps with slides"
+        - "A presentation tool"
+        - "Useful for decks"
+    right:
+      title: "Triggerable"
+      items:
+        - "Builds .pptx from YAML"
+        - "Names the file types"
+        - "Says when NOT to use"
+
+  - component: pull-quote
+    quote: "Never render to check work."
+    attribution: "slidekit SKILL.md"
+
+  - component: stat-callout
+    title: "This Skill in Numbers"
+    stats:
+      - {value: "2.6k", label: "Tokens"}
+      - {value: "30", label: "Layouts"}
+      - {value: "9", label: "Lint codes"}
+
+  - component: process-steps
+    title: "The Build Loop"
+    steps:
+      - {label: "Scaffold", body: "Start valid"}
+      - {label: "Author", body: "Edit YAML"}
+      - {label: "Build", body: "Run lint"}
+      - {label: "Fix", body: "Read JSON"}
+
+  - component: timeline
+    title: "How the Skill Grew"
+    events:
+      - {date: "S1", title: "First draft", description: "Build loop only"}
+      - {date: "S2", title: "Gallery", description: "30 layouts"}
+      - {date: "S3", title: "Slide rules", description: "Google Slides"}
+      - {date: "Now", title: "One line", description: "Wrap rule"}
+
+  - component: table-slide
+    title: "Errors the Skill Documents"
+    headers: ["Code", "Meaning"]
+    rows:
+      - ["E_OVERFLOW", "Text exceeds its box"]
+      - ["E_WRAP", "Text needs two lines"]
+      - ["E_MARGIN", "Too close to the edge"]
+      - ["E_FONT", "Font is not metric-safe"]
+
+  - component: comparison-columns
+    title: "With and Without"
+    left_title: "No skill"
+    right_title: "With SKILL.md"
+    left_items:
+      - {text: "Guesses the API"}
+      - {text: "Renders to check"}
+      - {text: "Rediscovers rules"}
+    right_items:
+      - {text: "Knows the schema"}
+      - {text: "Reads lint JSON"}
+      - {text: "Rules stated once"}
+
+  - component: this-vs-that
+    title: "Cost of One Deck"
+    left:
+      value: "3.4k"
+      label: "Tokens with the skill"
+    right:
+      value: "29k"
+      label: "Tokens by screenshot"
+
+  - component: metric-comparison
+    title: "Measured on This Repo"
+    metrics:
+      - {value: "81", label: "Tokens/slide", delta: "YAML"}
+      - {value: "142", label: "Lint payload", delta: "JSON"}
+      - {value: "1,844", label: "One screenshot", delta: "image"}
+
+  - component: kpi-grid
+    title: "What Good Looks Like"
+    kpis:
+      - {value: "1", label: "Fix round"}
+      - {value: "0", label: "Screenshots"}
+      - {value: "100%", label: "Lint clean"}
+      - {value: "32pt", label: "Body floor"}
+
+  - component: chart-with-insight
+    title: "Tokens per Deck"
+    chart:
+      type: chart
+      chart_type: bar
+      labels: ["Skill", "Vision"]
+      series:
+        - name: "Tokens"
+          values: [3400, 29000]
+    insight: "Lint beats eyes."
+
+  - component: pyramid
+    title: "Order of the File"
+    layers:
+      - {label: "Trigger"}
+      - {label: "Workflow"}
+      - {label: "Reference"}
+      - {label: "Edge cases"}
+
+  - component: funnel
+    title: "From File to Action"
+    stages:
+      - {label: "Skills on disk", value: "many"}
+      - {label: "Description matches", value: "one"}
+      - {label: "Loaded", value: "2.6k"}
+      - {label: "Deck built", value: "1"}
+
+  - component: nested-circles
+    title: "What a Skill Wraps"
+    stages:
+      - {value: "Repo", label: "Everything"}
+      - {value: "Skill", label: "Agent needs"}
+      - {value: "Loop", label: "Build, fix"}
+
+  - component: roadmap
+    title: "Keeping It Current"
+    phases:
+      - title: "Add"
+        items: ["New layout", "New lint code"]
+      - title: "Prune"
+        items: ["Retired layouts", "Stale advice"]
+      - title: "Prove"
+        items: ["Tests guard it", "Docs regenerate"]
+
+  - component: swot
+    title: "Skills as an Approach"
+    strengths:
+      - "Rules stated once"
+    weaknesses:
+      - "Drifts if unmaintained"
+    opportunities:
+      - "Any repeatable workflow"
+    threats:
+      - "Too long to load"
+
+  - component: comparison-matrix
+    title: "Ways to Teach a Tool"
+    options: ["SKILL.md", "Prompt", "Docs only"]
+    criteria: ["On demand", "Current", "Cheap"]
+    cells:
+      - ["Yes", "No", "No"]
+      - ["Yes", "No", "Partly"]
+      - ["Yes", "No", "Yes"]
+    highlights: [[0, 0], [2, 0]]
+
+  - component: image-half-bleed
+    title: "One Rule Above All"
+    image_side: "left"
+    image:
+      type: image
+      path: "assets/skill.jpg"
+      fit: cover
+      alt: "A skill file open in an editor"
+    content:
+      - {type: text, content: "Prove fit with math."}
+      - {type: text, content: "Never with a screenshot."}
