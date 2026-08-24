@@ -1,0 +1,113 @@
+# Quantic's Master of Science in Software Engineering — 15 slides, 15 layouts.
+version: 1
+theme:
+  palette:
+    surface: "#FFFFFF"   # clean page
+    text: "#0A2240"      # deep navy ink
+    primary: "#123A6B"   # navy, solid marks
+    accent: "#0072CE"    # bright blue highlight
+    muted: "#5B6B82"     # cool grey secondary
+  font: arial
+page_numbers:
+  enabled: true
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "MS in Software Engineering"
+    subtitle: "Quantic School of Business and Technology"
+
+  - component: agenda
+    title: "What We Will Cover"
+    items:
+      - "The shape of the degree"
+      - "What the curriculum covers"
+      - "The five-month capstone"
+      - "Who the program is built for"
+
+  - component: big-number
+    value: "13"
+    label: "Months"
+    context: "Fully online, start to degree"
+
+  - component: definition
+    term: "MSSE"
+    definition: "Quantic's online master's in software engineering."
+
+  - component: section-divider
+    number: "01"
+    title: "The Program"
+
+  - component: kpi-grid
+    title: "The Degree by the Numbers"
+    kpis:
+      - {value: "8", label: "Concentrations"}
+      - {value: "2", label: "Specializations"}
+      - {value: "1", label: "Capstone"}
+      - {value: "13", label: "Months"}
+
+  - component: numbered-steps
+    title: "How It Is Structured"
+    steps:
+      - {title: "Core", body: "Eight required concentrations"}
+      - {title: "Choose", body: "Two of four specializations"}
+      - {title: "Build", body: "One capstone project"}
+
+  - component: bullet-list
+    title: "What the Curriculum Targets"
+    items:
+      - "Machine learning integration"
+      - "AI software engineering"
+      - "Cloud architecture"
+      - "Microservices"
+
+  - component: icon-text-rows
+    title: "Inside the Core"
+    rows:
+      - {icon: "zap", heading: "Machine Learning", body: "Predictive models, decision trees"}
+      - {icon: "grid", heading: "Cloud Architectures", body: "Scalable cloud-based solutions"}
+      - {icon: "check", heading: "AI Engineering", body: "LLM apps, fine-tuned models"}
+
+  - component: card-grid
+    title: "How You Learn"
+    cards:
+      - {icon: "file", title: "Async", body: "On your clock"}
+      - {icon: "users", title: "Team", body: "Agile peers"}
+      - {icon: "check", title: "Applied", body: "Real projects"}
+
+  - component: timeline
+    title: "The Arc of the Degree"
+    events:
+      - {date: "Month 1", title: "Core opens", description: "Eight tracks"}
+      - {date: "Month 6", title: "Specialize", description: "Pick two tracks"}
+      - {date: "Month 9", title: "Capstone", description: "Team forms"}
+      - {date: "Month 13", title: "Ship", description: "Public repo"}
+
+  - component: question
+    question: "What do you ship?"
+
+  - component: process-steps
+    title: "Five Months, One Artifact"
+    steps:
+      - {label: "Design", body: "Scope the build"}
+      - {label: "Develop", body: "Write the code"}
+      - {label: "Test", body: "Prove it works"}
+      - {label: "Deploy", body: "Ship it live"}
+
+  - component: two-panel-list
+    title: "Who It Is Built For"
+    left:
+      title: "Recent graduates"
+      items:
+        - "Turning a degree into a role"
+        - "No senior title required"
+        - "Any technical background"
+    right:
+      title: "Career shifters"
+      items:
+        - "Moving into engineering"
+        - "Keeping a full-time job"
+        - "Any technical background"
+
+  - component: pull-quote
+    quote: "The capstone ends in a public repo."
+    attribution: "Your work, visible to employers"
