@@ -194,10 +194,24 @@ pixel harness ensuring a real renderer agrees.
 
 ---
 
-## 6. Team process notes (fill in per submission)
+## 6. Sprints and process
 
-- **Sprints:** _list the ≥3 sprints, dates, and goals; link the board columns/history._
-- **Roles:** _Product Owner, Scrum Master, Code Owner(s)._
-- **Collaborative tools:** GitHub (repo, Actions/CI, reviews), the `ops/` board and
-  feedback queue.
-- **Proposal / Group Project Agreement:** _link or note where submitted._
+The project ran as **three completed agile sprints**, tracked in
+[`ops/board.yaml`](../ops/board.yaml) (rendered to [`ops/BOARD.md`](../ops/BOARD.md))
+as **sprints → user stories → constituent tasks** — each story's status is
+cross-checked against its own task cards by the board renderer.
+
+| Sprint | Focus | Dates | User stories | Status |
+|---|---|---|---|---|
+| **S1 — Provable layout core** | YAML → PowerPoint with every rectangle proven from real font metrics; defects caught by the linter, not by screenshots | 2026-06-01 → 06-13 | US-01, 02, 03, 04, 06, 11, 12, 14 | ✅ complete |
+| **S2 — Design library and measured quality** | grow 8 components into a ~30-component library selectable without vision; add the PDF path; a research-grounded aesthetics score | 2026-06-14 → 07-02 | US-05, 09, 13, 18, 20 | ✅ complete |
+| **S3 — Review loop and shareable output** | a private per-slide review site whose feedback becomes work automatically; decks that survive Google Slides import as editable, correctly numbered slides | 2026-07-03 → 08-24 | US-07, 08, 10, 15, 16, 17, 19 | ✅ complete |
+
+The full per-sprint task breakdown and completion status live in the board; the user
+stories themselves are in [`docs/USER_STORIES.md`](USER_STORIES.md).
+
+**Still team-specific (fill in per submission):**
+- **Roles:** Product Owner, Scrum Master, Code Owner(s).
+- **Collaborative tools:** GitHub (repo, Actions/CI, code review), the `ops/` board
+  and feedback queue.
+- **Proposal / Group Project Agreement:** link or note where submitted.

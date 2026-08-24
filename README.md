@@ -30,10 +30,14 @@
 > **password-gated** — if you cite it for grading, give the grader access or a
 > read-only view, otherwise leave this line marked N/A.
 
+**Sprints:** the three completed sprints (S1–S3), their user stories, and the
+constituent tasks are tracked in [`ops/board.yaml`](ops/board.yaml) → rendered to
+[`ops/BOARD.md`](ops/BOARD.md); see also the sprint table in
+[the Design & Testing doc](docs/DESIGN_AND_TESTING.md#6-sprints-and-process).
+
 **Submission-side (not repo files, keep handy):** the signed final page of the
-**Group Project Agreement**; evidence of **at least three sprints** (commit history
-+ the board); the presentation must show a **government-issued ID** on camera and
-be a single `.mp4`/`.mov` on Google Drive (Anyone-with-link).
+**Group Project Agreement**; the presentation must show a **government-issued ID** on
+camera and be a single `.mp4`/`.mov` on Google Drive (Anyone-with-link).
 
 ---
 
