@@ -24,7 +24,7 @@ version: 1
 slides:
   - component: definition
     term: "MCP"
-    definition: "An open standard for connecting AI tools to external data."
+    definition: "A standard linking AI tools to data."
     source: "{URL}"
   - component: title-slide
     title: "No source here"
