@@ -214,8 +214,14 @@ cross-checked against its own task cards by the board renderer.
 The full per-sprint task breakdown and completion status live in the board; the user
 stories themselves are in [`docs/USER_STORIES.md`](USER_STORIES.md).
 
-**Still team-specific (fill in per submission):**
-- **Roles:** Product Owner, Scrum Master, Code Owner(s).
-- **Collaborative tools:** GitHub (repo, Actions/CI, code review), the `ops/` board
-  and feedback queue.
-- **Proposal / Group Project Agreement:** link or note where submitted.
+**Roles.** This is an **individual (solo) capstone** — the handbook permits working
+individually. **Victor Palacios** holds every role: **Product Owner** (owns the
+backlog and user stories), **Scrum Master** (runs the sprint cadence), and **Code
+Owner** (authors and approves all changes).
+
+**Collaborative tools.** GitHub (repository, Actions/CI, version control and review),
+the `ops/` agile board (`board.yaml` → `BOARD.md`), and the feedback queue
+(`ops/FEEDBACK.yaml`) fed by the mobile review site.
+
+**Proposal / Group Project Agreement:** _link or note where submitted (the Agreement's
+signed final page is uploaded at submission)._
