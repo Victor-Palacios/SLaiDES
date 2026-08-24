@@ -1,0 +1,127 @@
+# AGENT.md for Claude Code — 15 slides, a different layout on every one.
+version: 1
+theme:
+  palette:
+    surface: "#FFFFFF"   # clean page
+    text: "#03256C"      # deep navy ink
+    primary: "#1768AC"   # mid blue, solid marks
+    accent: "#06BEE1"    # bright cyan highlight
+    muted: "#2541B2"     # indigo, secondary text
+  font: arial
+page_numbers:
+  enabled: true
+  skip_title_slide: true
+slides:
+  - component: title-slide
+    title: "AGENT.md"
+    subtitle: "One file that teaches Claude Code your repo"
+
+  - component: question
+    question: "What does Claude read first?"
+
+  - component: definition
+    term: "AGENT.md"
+    definition: "A Markdown brief the agent reads before it codes."
+
+  - component: big-number
+    value: "1"
+    label: "File per repo"
+    context: "Written once, read by every session"
+
+  - component: section-divider
+    number: "01"
+    title: "Anatomy"
+
+  - component: file-tree
+    title: "Where It Lives"
+    root: "your-repo/"
+    entries:
+      - {name: "AGENT.md", depth: 0}
+      - {name: "CLAUDE.md", depth: 0}
+      - {name: "src/", depth: 0}
+      - {name: "api/", depth: 1}
+      - {name: "tests/", depth: 0}
+      - {name: "docs/", depth: 0}
+
+  - component: code
+    title: "A Working Skeleton"
+    chrome: true
+    code: |
+      ## Setup
+      npm install && npm run build
+
+      ## Tests
+      npm test -- --run
+
+      ## Rules
+      - Never edit generated/
+
+  - component: bullet-list
+    title: "What Belongs In It"
+    items:
+      - "Setup commands that actually work"
+      - "How to run and scope the tests"
+      - "Directories that are off limits"
+      - "House style the linter misses"
+
+  - component: numbered-steps
+    title: "Writing Your First One"
+    steps:
+      - {title: "Draft", body: "Run /init in the repo"}
+      - {title: "Correct", body: "Fix what it guessed wrong"}
+      - {title: "Commit", body: "It ships with the code"}
+
+  - component: card-grid
+    title: "Why It Pays Off"
+    cards:
+      - {icon: "check", title: "Consistent", body: "Same rules"}
+      - {icon: "zap", title: "Faster", body: "No discovery"}
+      - {icon: "users", title: "Shared", body: "Whole team"}
+
+  - component: icon-text-rows
+    title: "Rules Worth Writing Down"
+    rows:
+      - {icon: "alert", heading: "Never", body: "Bulk-add files to a commit"}
+      - {icon: "check", heading: "Always", body: "Run the suite before push"}
+      - {icon: "file", heading: "Regenerate", body: "Derived files after edits"}
+
+  - component: two-panel-list
+    title: "Vague Versus Usable"
+    left:
+      title: "Vague"
+      items:
+        - "Write clean code"
+        - "Follow best practices"
+        - "Test your changes"
+    right:
+      title: "Usable"
+      items:
+        - "Match the file you are in"
+        - "Ask before adding a dep"
+        - "pytest -q must be green"
+
+  - component: this-vs-that
+    title: "Cost of Skipping It"
+    left:
+      value: "Every"
+      label: "Session relearns it"
+    right:
+      value: "Once"
+      label: "You write it down"
+
+  - component: comparison-columns
+    title: "AGENT.md and CLAUDE.md"
+    left_title: "AGENT.md"
+    right_title: "CLAUDE.md"
+    left_items:
+      - {text: "Vendor-neutral name"}
+      - {text: "Shared across tools"}
+      - {text: "One source of truth"}
+    right_items:
+      - {text: "What Claude Code loads"}
+      - {text: "Can import with @path"}
+      - {text: "Or symlink to AGENT.md"}
+
+  - component: pull-quote
+    quote: "Explained it twice? Write it down."
+    attribution: "The test for what goes in"
