@@ -170,6 +170,98 @@ def test_inbox_consumed_and_ids_sequential(tmp_path):
     assert ids == ["FB-001", "FB-002"]
 
 
+# ── scope routing: deck-review (slide) vs layout ────────────────────────────────────
+
+def test_slide_scope_records_deck_and_slide_but_not_layout_state(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "bad", "comment": "tighten indent",
+         "severity": "med", "scope": "slide", "deck": "demo-5", "slide": 3},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 1
+    c = store.load(p["feedback_yaml"]).comments[0]
+    assert (c.scope, c.deck, c.slide) == ("slide", "demo-5", 3)
+    assert c.comment == "👎 tighten indent"
+    # A slide-scoped mark must NOT flag/approve the reusable layout.
+    assert summary["flagged"] == [] and summary["approved"] == []
+    state = json.loads(p["state_json"].read_text())["components"]
+    assert "code" not in state
+
+
+def test_layout_scope_from_deck_page_still_flags_layout(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "bad", "comment": "too dark everywhere",
+         "severity": "med", "scope": "layout"},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["flagged"] == ["code"]
+    c = store.load(p["feedback_yaml"]).comments[0]
+    assert c.scope == "layout" and c.deck is None
+
+
+def test_malformed_slide_scope_degrades_to_layout(tmp_path):
+    """Missing deck coordinates must not crash the batch — they fall back to layout."""
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "note", "comment": "hmm",
+         "scope": "slide"},                       # no deck/slide
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 1
+    c = store.load(p["feedback_yaml"]).comments[0]
+    assert c.scope == "layout" and c.deck is None and c.slide is None
+
+
+def test_slide_scope_bare_good_is_positive_only(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "good", "comment": "",
+         "scope": "slide", "deck": "demo-5", "slide": 1},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 0 and summary["positive_only"] == 1
+    assert json.loads(p["state_json"].read_text())["components"] == {}
+
+
+# ── add-slide verdicts (deck review) ────────────────────────────────────────────────
+
+def test_add_before_after_record_positioned_open_comments(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "add-before",
+         "comment": "a slide defining the CLI flags", "severity": "med",
+         "scope": "slide", "deck": "demo-5", "slide": 4},
+        {"component": "timeline", "verdict": "add-after",
+         "comment": "a recap of the milestones", "severity": "low",
+         "scope": "slide", "deck": "demo-5", "slide": 4},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 2
+    before = next(c for c in store.load(p["feedback_yaml"]).comments if c.component == "code")
+    after = next(c for c in store.load(p["feedback_yaml"]).comments if c.component == "timeline")
+    assert before.comment == "➕⬆ a slide defining the CLI flags"
+    assert (before.scope, before.deck, before.slide) == ("slide", "demo-5", 4)
+    assert after.comment == "➕⬇ a recap of the milestones"
+    assert (after.scope, after.deck, after.slide) == ("slide", "demo-5", 4)
+    # Add requests never approve/flag the reusable layout.
+    assert summary["flagged"] == [] and summary["approved"] == []
+    assert json.loads(p["state_json"].read_text())["components"] == {}
+
+
+def test_add_verdict_without_comment_uses_default_text(tmp_path):
+    p = _setup(tmp_path)
+    _write(p["inbox"], "a.json", _record([
+        {"component": "code", "verdict": "add-after", "comment": "",
+         "scope": "slide", "deck": "demo-5", "slide": 2},
+    ]))
+    summary = fiw.fold(**p, write=True)
+    assert summary["added"] == 1  # actionable even with no comment
+    c = store.load(p["feedback_yaml"]).comments[0]
+    assert c.comment == "➕⬇ add a new slide after this one"
+
+
 def test_dry_run_leaves_everything(tmp_path):
     p = _setup(tmp_path)
     _write(p["inbox"], "a.json", _record(

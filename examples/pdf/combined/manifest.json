@@ -50,8 +50,23 @@
     "layout_hash": "ec29e1546d4810c5ca156198d79cb54df2f822681856668bd5f123abdfee2d15"
   },
   {
-    "date": "2026-08-23",
-    "pages": 92,
-    "layout_hash": "d176221ab8a5dce3a50f417494ffc12e4789f7aad1d1cf75dbbe5ef73be75e58"
+    "date": "2026-07-20",
+    "pages": 151,
+    "layout_hash": "ec3cc7e95d1c97f0c1738ec5505e0e569ef1d34f6120c028440e78ab3a41b217"
+  },
+  {
+    "date": "2026-07-21",
+    "pages": 176,
+    "layout_hash": "2a2f30751b996397a83e1d53aefc7be67a2a06f67b9f28c46ea375e7cdc4e44c"
+  },
+  {
+    "date": "2026-07-22",
+    "pages": 181,
+    "layout_hash": "5ef2331d0c52d36e161e60b273758e670c5df7566cb5bfce8096d171124dbe33"
+  },
+  {
+    "date": "2026-08-24",
+    "pages": 181,
+    "layout_hash": "6f912da0d4e3473d748e676137da8a2e4a3f96b3f3787c5b4be26db7ba569272"
   }
 ]

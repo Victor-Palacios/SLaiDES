@@ -1,7 +1,8 @@
 # Netlify config for the slidekit layout-feedback site (web/).
 #
-# The site is fully static: web/data/previews.json is generated and committed by
-# scripts/build_web_previews.py (a test keeps it in sync), so Netlify does not run a build.
+# The site is fully static: web/data/previews.json and web/data/decks.json are generated
+# and committed by scripts/build_web_previews.py and scripts/build_web_decks.py (tests keep
+# them in sync), so Netlify does not run a build.
 # Access is gated by netlify/edge-functions/auth.js (single SITE_PASSWORD); writes go through
 # netlify/functions/submit-feedback.js. The edge function declares its own path via an
 # in-source `export const config`, so it is not repeated here.
@@ -15,7 +16,7 @@
 [build]
   publish = "web"
   functions = "netlify/functions"
-  command = "echo 'static site — web/data/previews.json is prebuilt & committed'"
+  command = "echo 'static site — web/data/*.json is prebuilt & committed'"
   # Deploy ONLY when the served site can actually change: anything under web/ or
   # netlify/ (or this file), EXCEPT web/feedback-inbox — submissions landing there
   # are inputs to CI, not site content, so they shouldn't burn a deploy. (The CI

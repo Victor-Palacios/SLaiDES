@@ -54,19 +54,19 @@
           "bold": true,
           "italic": false,
           "group_id": "lp_head",
-          "text_color": "#8A8A9A"
+          "text_color": "#243A5E"
         },
         {
           "node_id": "lp_rule_225",
           "node_type": "box",
           "rect": {
-            "x": 457200,
+            "x": 548640,
             "y": 2176271,
             "w": 1650492,
             "h": 54864
           },
           "group_id": "lp_head",
-          "fill_color": "#8A8A9A"
+          "fill_color": "#243A5E"
         },
         {
           "node_id": "rp_head_226",
@@ -91,19 +91,19 @@
           "bold": true,
           "italic": false,
           "group_id": "rp_head",
-          "text_color": "#2E8B57"
+          "text_color": "#8A8A9A"
         },
         {
           "node_id": "rp_rule_227",
           "node_type": "box",
           "rect": {
-            "x": 6233160,
+            "x": 6324600,
             "y": 2176271,
             "w": 1650492,
             "h": 54864
           },
           "group_id": "rp_head",
-          "fill_color": "#2E8B57"
+          "fill_color": "#8A8A9A"
         },
         {
           "node_id": "lp_item_228",

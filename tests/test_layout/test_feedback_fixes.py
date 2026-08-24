@@ -118,11 +118,12 @@ def test_code_runs_carry_ide_token_colours():
 
 def test_code_runs_tile_each_line_exactly():
     """Per-run nodes must reproduce the original line: concatenated run text equals
-    the source line, and each run's glyph x-offset equals the measured prefix width."""
-    from slidekit.layout.engine import _CODE_FONT
+    the source line, and each run's glyph x-offset equals the measured prefix width.
+    Code renders in the deck font (FB-110), so the prefix is measured in that font."""
     from slidekit.metrics.measure import measure_text
     deck, s = _slide("21_code")
     size = deck.theme.type_scale.body
+    code_font = deck.theme.font
     by_y = {}
     for n in s.nodes:
         if n.node_id.startswith("code_run"):
@@ -133,7 +134,8 @@ def test_code_runs_tile_each_line_exactly():
         x0 = row[0].rect.x
         prefix = ""
         for n in row:
-            assert n.rect.x == x0 + measure_text(prefix, _CODE_FONT, size)
+            assert n.rect.x == x0 + measure_text(prefix, code_font, size)
+            assert n.font == code_font
             prefix += n.text_content
 # ── FB-024: kpi-grid tiles are compact and centred ───────────────────────────────
 
@@ -264,13 +266,59 @@ def test_comparison_matrix_highlights_cells_not_categories():
 
 
 def test_numbered_steps_are_typographic_not_chips():
-    """Reimagined numbered-steps: accent numerals in a left rail, no chip boxes."""
+    """Reimagined numbered-steps: numerals in a left rail, no chip boxes. FB-076:
+    the numeral matches the heading colour (both primary) so the number and the word
+    it labels read as one blue unit — no gold numeral over a blue heading."""
     deck, s = _slide("22_numbered_steps")
     assert not [n for n in s.nodes if n.node_type == "box"]
     nums = _by_prefix(s, "step_num")
+    heads = _by_prefix(s, "step_head")
     assert nums and all(n.text_content == f"{i + 1:02d}" for i, n in enumerate(nums))
     assert all(n.size_pt == deck.theme.type_scale.header for n in nums)
-    assert all(n.text_color == deck.theme.palette.accent for n in nums)
+    assert all(n.text_color == deck.theme.palette.primary for n in nums)
+    # numeral and heading share one colour
+    assert heads and all(h.text_color == deck.theme.palette.primary for h in heads)
+
+
+def test_process_steps_numeral_matches_label_colour():
+    """FB-075: the process-steps numeral and its rule are primary (blue), matching
+    the label — not a gold numeral over a blue label."""
+    deck, s = _slide("31_process_steps")
+    pal = deck.theme.palette
+    nums = _by_prefix(s, "ps_num")
+    labels = _by_prefix(s, "ps_label")
+    rules = [n for n in s.nodes if n.node_id.startswith("ps_rule")]
+    assert nums and labels and rules
+    assert all(n.text_color == pal.primary for n in nums)
+    assert all(l.text_color == pal.primary for l in labels)
+    assert all(r.fill_color == pal.primary for r in rules)
+
+
+def test_two_panel_list_left_primary_right_muted():
+    """FB-078: two-panel-list emphasises the LEFT panel in the brand primary (blue)
+    and de-emphasises the right in muted grey — gold is dropped from this layout."""
+    deck, s = _slide("23_two_panel_list")
+    pal = deck.theme.palette
+    lp = _by_prefix(s, "lp_head")
+    rp = _by_prefix(s, "rp_head")
+    assert lp and rp
+    assert all(n.text_color == pal.primary for n in lp if n.node_type == "text")
+    assert all(n.fill_color == pal.primary for n in lp if n.node_type == "box")
+    assert all(n.text_color == pal.muted for n in rp if n.node_type == "text")
+    assert all(n.fill_color == pal.muted for n in rp if n.node_type == "box")
+
+
+def test_table_columns_are_content_width_not_full_bleed():
+    """FB-090: table columns are sized to their content and packed left with one
+    gap, so a short first column sits next to the next — the table no longer
+    stretches edge to edge, leaving a wide gap between columns."""
+    _, s = _slide("29_table_slide")
+    cells = [n for n in s.nodes if n.node_id.startswith(("th", "td"))]
+    assert cells
+    table_right = max(n.rect.right() for n in cells)
+    content_right = s.canvas_w - int(0.5 * 914400)  # right margin
+    # The packed table ends well short of the right content edge.
+    assert table_right < content_right - 914400  # at least 1" of slack remains
 
 
 def test_rules_hug_their_text():

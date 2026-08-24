@@ -490,3 +490,838 @@ comments:
   updated: '2026-07-05'
   source: operator chat 2026-07-05
   notes: feature-list DELETED per operator chat request; icon-text-rows (its family anchor) covers icon + heading + body rows and the recommender routes icon features there. (Retargeted for validator.)
+- id: FB-050
+  component: title-slide
+  family: title
+  status: done
+  severity: med
+  comment: 👎 Remove the black text
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-051
+  component: process-steps
+  family: process-flow
+  status: done
+  severity: med
+  comment: 👎 Make it 4 items instead of 5
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-052
+  component: numbered-steps
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 The number size needs to align with the blue text size. Make the blue text size bigger to match the number.
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-053
+  component: pull-quote
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 4
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: 👎 I only want the quote - I think there is a different slide layout we can use to remove "mantra" part
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-054
+  component: code
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 "What we're building" need to be bigger font size (exceed the code font size)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-055
+  component: two-panel-list
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: 👎 The grey / gold words to align with their colored bar underneath them (left-aligned)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-056
+  component: comparison-columns
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 8
+  family: two-column
+  status: done
+  severity: med
+  comment: 👎 Remove "run:" and "use:"
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-057
+  component: definition
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 9
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: 👎 This should be "library" and it's definition and needs to be slide 8 (swap slide 8 with slide 9)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-058
+  component: bullet-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 10
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 3 items - not 4
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-059
+  component: section-divider
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 12
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: 👍 add a slide after this defining "API" and then another defining slide with "MVP" - minimum viable product
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-060
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 13
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 the grey words need to be "the simplest API"
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-061
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 14
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: 👎 move boring to the left and reduce to 3 items for both columns
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-062
+  component: bullet-list
+  family: marker-list
+  status: done
+  severity: med
+  comment: '👎 for layout: spacing seems odd. for slide in deck, not layout: title should say "MVP Input: Pandas dataframe only".)'
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: slide retitled; bullet-list packing fixed so few items no longer float (engine _layout_bullet_list)
+- id: FB-063
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 16
+  family: code-block
+  status: done
+  severity: med
+  comment: '👎 Grey text should say "MVP Output: Plain objects only"'
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-064
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 17
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: 👎 remove this slide from deck
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-065
+  component: file-tree
+  family: file-tree
+  status: done
+  severity: med
+  comment: 👎 I don't like the coloring (make it look more like the usual coloring for this topic)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-066
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 22
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 remove this slide from the deck
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-067
+  component: bullet-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 28
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 drop to 3 functions instead (remove the last one)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-068
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 33
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: 👎 do needs to be the first column and then don't
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T15:52:45.717Z
+  notes: applied 2026-07-21 (deck content + reusable layout update)
+- id: FB-069
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 6
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: 👎 "build now" on left, "skip for now" on right
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T18:34:45.720Z
+  notes: applied 2026-07-21 (deck edit)
+- id: FB-070
+  component: definition
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 8
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: 👎 delete "— not a file you run top-to-bottom. Ours inspects a dataset; it does not clean it."
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T18:34:45.720Z
+  notes: applied 2026-07-21 (deck edit)
+- id: FB-071
+  component: bullet-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 11
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 remove (Module 5)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T18:34:45.720Z
+  notes: applied 2026-07-21 (deck edit)
+- id: FB-072
+  component: definition
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 13
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: '👎 remove: — the surface you design on purpose. Keep it small; it is what people remember. then I want you to add one line of 1 or 2 examples.'
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T18:34:45.720Z
+  notes: applied 2026-07-21 (deck edit)
+- id: FB-073
+  component: definition
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 14
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: '👎 delete: Ship it, then grow.'
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T18:34:45.720Z
+  notes: applied 2026-07-21 (deck edit)
+- id: FB-074
+  component: title-slide
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 1
+  family: title
+  status: done
+  severity: med
+  comment: 👍 Build Your First Library has a nice color - make sure that my font is primarily this color throughout the whole deck (sometimes it's black which I don't like if that's the only color on the screen).
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: 'applied 2026-07-21 (deck theme: text colour set to the python blue)'
+- id: FB-075
+  component: process-steps
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 2
+  family: process-flow
+  status: done
+  severity: med
+  comment: 👎 change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: 'applied 2026-07-21 (process-steps: numeral+rule now primary, matching the label)'
+- id: FB-076
+  component: numbered-steps
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 change the gold to match the blue font seen here. (in general make sure these 2 items match in color when using this layout style)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: 'applied 2026-07-21 (numbered-steps: numeral now primary, matching the heading)'
+- id: FB-077
+  component: code
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 the grey font is hard to read - choose a different font style or play with unbolding, etc.; just make it easier to read.
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (code title colour brightened to the light foreground)
+- id: FB-078
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 6
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: 👎 Build now grey font should be the same blue font as header - make gold this grey color
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: 'applied 2026-07-21 (two-panel-list: left=primary, right=muted; gold dropped)'
+- id: FB-079
+  component: definition
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 13
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: '👎 Change to: Application Programming Interface - The public interface of the library. The functions, classes, and their signatures that users call. For example: eda.summarize(df), eda.missing(df).'
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (API definition expanded per operator text)
+- id: FB-080
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 18
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 Change slide layout to just give examples of plain objects (dictionary, int, string, etc.). I don't need to see an actual dictionary.
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (slide now names plain object types, no literal dict)
+- id: FB-081
+  component: file-tree
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 21
+  family: file-tree
+  status: done
+  severity: med
+  comment: 👎 remove (src layout)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (removed '(src layout)' from the title)
+- id: FB-082
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 22
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: 👍 add a slide after this reasoning why hyphens and underscores (what value? what importance?)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (added 'Why the names differ' slide)
+- id: FB-083
+  component: bullet-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 25
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👍 add a slide after that states what happens when these mistakes are made.
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (added 'What each mistake causes' table)
+- id: FB-084
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 27
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 no need for the grey title
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (removed the grey title from the summarize() slide)
+- id: FB-085
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 29
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 show a simple output example
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (added a simple output example under missing())
+- id: FB-086
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 31
+  family: code-block
+  status: done
+  severity: med
+  comment: 👍 add a slide explaining this slide
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (added 'What that file does' explainer slide)
+- id: FB-087
+  component: two-panel-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 33
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: 👍 add a slide for the final row to compare those 2 concepts. also add a slide for "signatures".
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (added one-job-vs-everything compare + Signature definition)
+- id: FB-088
+  component: bullet-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 35
+  family: marker-list
+  status: done
+  severity: med
+  comment: '👎 remove: Replaces old setup.py workflows.'
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (removed 'Replaces old setup.py workflows.')
+- id: FB-089
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 36
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 A minimal pyproject.toml --> Minimal pyproject.toml
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (title 'A minimal pyproject.toml' -> 'Minimal pyproject.toml')
+- id: FB-090
+  component: table-slide
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 37
+  family: table
+  status: done
+  severity: med
+  comment: 👎 Bring Means column and examples closer to the Version column (too much white space between them)
+  created: '2026-07-21'
+  updated: '2026-07-21'
+  source: web 2026-07-21T21:01:13.235Z
+  notes: applied 2026-07-21 (table-slide columns now content-width, packed left)
+- id: FB-091
+  component: title-slide
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 1
+  family: title
+  status: done
+  severity: med
+  comment: 👎 Make the Claude Code font much bigger. Let's use the 3rd slide's beige color for all slide titles/headlines if there is no other color present. Then remove the subheader.
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (title-slide bigger+beige, no subheader; headline role=accent deck-wide)
+- id: FB-092
+  component: agenda
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 2
+  family: agenda
+  status: done
+  severity: med
+  comment: 👎 remove this slide from this deck
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (removed the agenda slide)
+- id: FB-093
+  component: numbered-steps
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 6
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 remove this slide from this deck
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (removed the 'Set Up in Three Steps' slide)
+- id: FB-094
+  component: code
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 7
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 a first session --> Terminal Use
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (code title 'a first session' -> 'Terminal Use')
+- id: FB-095
+  component: nested-circles
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 10
+  family: nested-circles
+  status: done
+  severity: med
+  comment: 👎 remove this slide from this deck
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (removed the nested-circles slide)
+- id: FB-096
+  component: two-panel-list
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 11
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: 👎 Use the beige color (slide 3) for Claude not grey
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: 'applied 2026-07-22 (two-panel accent_side=right: ''With Claude Code'' now beige)'
+- id: FB-097
+  component: table-slide
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 12
+  family: table
+  status: done
+  severity: med
+  comment: 👍 add a slide that explains init and claude -p
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (added a slide explaining /init and claude -p)
+- id: FB-098
+  component: bullet-list
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 don't have any lines with text that overflows to the next line.
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (bullet items shortened to one line; standing rule added to CLAUDE.md)
+- id: FB-099
+  component: comparison-matrix
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 16
+  family: comparison-matrix
+  status: done
+  severity: med
+  comment: 👎 remove the Best for row and it's associated items
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (removed the 'Best for' matrix row)
+- id: FB-100
+  component: bullet-list
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 17
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 remove slide from deck
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (removed the 'In the Terminal' slide)
+- id: FB-101
+  component: bullet-list
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 23
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 remove the last line
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (removed the trailing --teleport line from Remote Control)
+- id: FB-102
+  component: code
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 The grey title must be title capitalized and easier to read - this bold font looks awkward.
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (code title un-bolded + light foreground; titles title-cased)
+- id: FB-103
+  component: bullet-list
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 27
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👍 add a slide of concrete examples after this and how MCP is better than no MCP.
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (added a Without-MCP vs With-MCP comparison)
+- id: FB-104
+  component: table-slide
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 28
+  family: table
+  status: done
+  severity: med
+  comment: 👎 Servers You Can (normally) Connect to
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (table title -> 'Servers You Can (normally) Connect to')
+- id: FB-105
+  component: section-divider
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 29
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: 👎 Make Claude Yours --> Customize Claude
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (divider 'Make Claude Yours' -> 'Customize Claude')
+- id: FB-106
+  component: bullet-list
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 31
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👍 next slide should be an example of what things to put in the md and then another slide of "beware" or common problems when using a Claude.md file
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (added Example CLAUDE.md slide + CLAUDE.md Pitfalls slide)
+- id: FB-107
+  component: two-panel-list
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 33
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: '👎 CLAUDE.md vs Skills --> CLAUDE.md vs Skills.md (same for column 2: Skills.md)'
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (title + right column -> 'Skills.md')
+- id: FB-108
+  component: question
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 34
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: 👎 What would you analyze if the boilerplate wrote itself? --> Let's build our visualization library with Claude + Github using our phones!
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (question -> build-with-Claude+GitHub-from-phones CTA)
+- id: FB-109
+  component: title-slide
+  scope: slide
+  deck: claude-code-for-data-scientists
+  slide: 35
+  family: title
+  status: done
+  severity: med
+  comment: "\U0001F44E remove this slide and add 2 slides about Claude Cowork and 1 slide on Claude Artifacts and 1 slide on \nMemory > Search and reference chats."
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T02:47:14.090Z
+  notes: applied 2026-07-22 (removed closer; added Cowork x2, Artifacts, Memory-vs-chat-search)
+- id: FB-110
+  component: code
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 The "What we're building" font is still terrible. Use the font and style of the 4th slide (not the size nor color though).
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T03:21:01.730Z
+  notes: applied 2026-07-22 (code layout now renders in the deck font, not Courier New — colours/size kept)
+- id: FB-111
+  component: definition
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 24
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: '👎 delete:  — it is what lets users write `import simple_eda`.'
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T03:21:01.730Z
+  notes: applied 2026-07-22 (trimmed the __init__.py definition's trailing clause)
+- id: FB-112
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 33
+  family: code-block
+  status: done
+  severity: med
+  comment: 👎 delete slide
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T03:21:01.730Z
+  notes: applied 2026-07-22 (deleted the 'Expose the public API' code slide)
+- id: FB-113
+  component: bullet-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 34
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👎 delete slide
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T03:21:01.730Z
+  notes: applied 2026-07-22 (deleted the 'What that file does' slide)
+- id: FB-114
+  component: bullet-list
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 40
+  family: marker-list
+  status: done
+  severity: med
+  comment: 👍 add a slide defining build tools after this slide
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T03:21:01.730Z
+  notes: applied 2026-07-22 (added a 'Build tools' definition)
+- id: FB-115
+  component: code
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 41
+  family: code-block
+  status: done
+  severity: med
+  comment: 👍 add a slide on the language this is written in after this
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T03:21:01.730Z
+  notes: applied 2026-07-22 (added a 'TOML' definition after the pyproject slide)
+- id: FB-116
+  component: table-slide
+  scope: slide
+  deck: designing-your-own-eda-library
+  slide: 42
+  family: table
+  status: done
+  severity: med
+  comment: '👍 add a slide after this: Under semantic versioning (MAJOR.MINOR.PATCH), each of the three numbers just has to be a non-negative integer, so 0.0.1 means major 0, minor 0, patch 1.'
+  created: '2026-07-22'
+  updated: '2026-07-22'
+  source: web 2026-07-22T03:21:01.730Z
+  notes: applied 2026-07-22 (added a MAJOR.MINOR.PATCH semantic-versioning slide)

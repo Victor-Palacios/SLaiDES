@@ -66,12 +66,19 @@ theme:
     caption: 25                # 24-26
   font: arial                  # metric-safe set ONLY (see below)
   motif: minimal
+  headline: accent             # OPTIONAL palette role for ALL slide titles/headlines
+                               # (primary|surface|accent|text|muted). Omit to keep each
+                               # layout's default title colour.
 page_numbers:                  # built-in chrome, bottom-right, on by default
   enabled: true
   start_at: 1
   skip_title_slide: true
 slides:
   - component: ...             # one of the 8 components below
+    source: "https://..."      # OPTIONAL, any slide: renders a clickable "Source"
+                               # link in the bottom-right chrome (left of the page
+                               # number). http(s) only. Use it to cite a slide's
+                               # origin — prefer first-party/official sources.
 ```
 
 **Metric-safe fonts (the only allowed set):** Arial, Calibri, Cambria,
@@ -119,7 +126,7 @@ lean outline — a `slides:` list where each slide is a chosen `component` + its
 | `bullet-list` | `title`, `items[]` (text) | — |
 | `checklist` | `title`, `items[]` = `{text, checked?}` | — |
 | `numbered-steps` | `title`?, `steps[]` = `{title, body}` (≤3) | `title` |
-| `two-panel-list` | `left`/`right` = `{title, items[]}` (≤3 each; right panel is the accented state) | `title` |
+| `two-panel-list` | `left`/`right` = `{title, items[]}` (≤3 each; default left=primary, right=muted; optional `accent_side: left\|right` puts the accent on that panel) | `title` |
 | `this-vs-that` | `left`/`right` = `{value, label}` | `title` |
 | `kpi-grid` | `kpis[]` = `{value, label}` (4–6) | `title` |
 | `chart-with-insight` | `chart`, `insight` | `title` |

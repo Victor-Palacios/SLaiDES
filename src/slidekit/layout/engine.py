@@ -13,6 +13,7 @@ import itertools
 import math
 import re
 from dataclasses import dataclass, field
+from types import SimpleNamespace
 from typing import Optional
 
 from slidekit.ir.models import (
@@ -82,6 +83,13 @@ def _nid(prefix: str = "node") -> str:
     return f"{prefix}_{next(_counter)}"
 
 
+def _hl(palette, default):
+    """The headline colour for a slide title: the deck's optional headline override
+    (theme.headline resolved to a hex and stashed on the palette namespace) if set,
+    else the layout's own default title colour. Keeps non-headline decks unchanged."""
+    return getattr(palette, "headline", None) or default
+
+
 # ── public entry point ────────────────────────────────────────────────────────
 
 
@@ -143,6 +151,15 @@ def _resolve_slide(
     font = theme.font
     ts = theme.type_scale
     palette = theme.palette
+    # Resolve an optional headline colour (theme.headline names a palette role) and
+    # carry it on a lightweight palette proxy so title sites can pick it up via _hl().
+    # When theme.headline is unset the proxy's .headline is None and every title keeps
+    # its existing colour — so decks that don't opt in are byte-identical.
+    _hl_hex = getattr(palette, theme.headline) if theme.headline else None
+    palette = SimpleNamespace(
+        primary=palette.primary, surface=palette.surface, accent=palette.accent,
+        text=palette.text, muted=palette.muted, headline=_hl_hex,
+    )
 
     # Content area: slide canvas minus the minimum margins on all sides.
     cx = MARGIN_MIN_EMU
@@ -246,7 +263,43 @@ def _resolve_slide(
             rect=Rect(pn_x, pn_y, pn_box_w, pn_box_h),
             is_chrome=True,
         )
+        # Emit as an auto-updating slide-number field in PPTX (see the emitter):
+        # slidekit's page number already equals the physical slide position, so a
+        # native <a:fld type="slidenum"> shows the same value AND renumbers when
+        # slides are moved or added in PowerPoint/Google Slides. str(page_num) is
+        # the static fallback for PDF/HTML.
+        pn_node.field = "slidenum"
         chrome.append(pn_node)
+
+    # Chrome: optional source citation — a clickable "Source" link sitting on the
+    # bottom edge, just left of the page-number box (right-aligned into that
+    # corner). Rendered in the accent colour with an underline so it reads as a
+    # link. Chrome is exempt from margin/overlap lint, but the box is measured to
+    # fit "Source" exactly so the overflow check still passes. The page-number
+    # system is left completely untouched.
+    src_url = getattr(slide, "source", None)
+    if src_url:
+        src_label = "Source"
+        src_text_w = measure_text(src_label, font, PAGE_NUMBER_PT)
+        src_box_w = src_text_w + INSET_LEFT_EMU + INSET_RIGHT_EMU
+        # Right edge sits a 0.3" gap to the left of the page-number box when page
+        # numbers are on; otherwise it hugs the right margin (bottom-right corner).
+        src_right = (pn_x - GAP_MIN_EMU) if (page_num is not None and deck.page_numbers.enabled) \
+            else (canvas_w - MARGIN_MIN_EMU)
+        src_x = src_right - src_box_w
+        src_node = _make_text_node(
+            node_id=_nid("chrome_source"),
+            text=src_label,
+            font=font,
+            size_pt=PAGE_NUMBER_PT,
+            bold=False,
+            italic=False,
+            rect=Rect(src_x, pn_y, src_box_w, pn_box_h),
+            is_chrome=True,
+            color=palette.accent,
+            href=src_url,
+        )
+        chrome.append(src_node)
 
     return ResolvedSlide(
         slide_index=slide_index,
@@ -285,7 +338,7 @@ def _layout_title_slide(slide: TitleSlide, cx, cy, cw, ch, font, ts, palette) ->
     title_rect = Rect(cx + pad, title_y, cw - 2 * pad, title_h)
     nodes.append(
         _make_text_node(_nid("title"), slide.title, font, ts.title, bold=True,
-                        italic=False, rect=title_rect, color=palette.primary)
+                        italic=False, rect=title_rect, color=_hl(palette, palette.primary))
     )
 
     if slide.subtitle:
@@ -308,7 +361,7 @@ def _layout_icon_text_rows(slide: IconTextRowsSlide, cx, cy, cw, ch, font, ts, p
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     if not slide.rows:
@@ -355,7 +408,7 @@ def _layout_stat_callout(slide: StatCalloutSlide, cx, cy, cw, ch, font, ts, pale
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     n_stats = len(slide.stats)
@@ -400,7 +453,7 @@ def _layout_comparison_columns(slide: ComparisonColumnsSlide, cx, cy, cw, ch, fo
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     col_w = (cw - gap) // 2
@@ -448,7 +501,7 @@ def _layout_timeline(slide: TimelineSlide, cx, cy, cw, ch, font, ts, palette) ->
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     if not slide.events:
@@ -492,7 +545,7 @@ def _layout_image_half_bleed(slide: ImageHalfBleedSlide, cx, cy, cw, ch, font, t
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     col_h = cy + ch - y
@@ -523,7 +576,7 @@ def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                      bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     n_cards = len(slide.cards)
@@ -633,7 +686,8 @@ def _layout_section_divider(slide: SectionDividerSlide, cx, cy, cw, ch, font, ts
     return _emphasis_stack([
         {"prefix": "sec_num", "text": slide.number, "size": ts.title, "bold": True,
          "color": palette.accent},
-        {"prefix": "sec_title", "text": slide.title, "size": ts.header, "bold": True},
+        {"prefix": "sec_title", "text": slide.title, "size": ts.header, "bold": True,
+         "color": _hl(palette, None)},
     ], cx, cy, cw, ch, font, palette, center_on=1)
 
 
@@ -727,7 +781,7 @@ def _layout_agenda(slide: AgendaSlide, cx, cy, cw, ch, font, ts, palette):
     title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
                                  bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                 group_id="agenda_head"))
+                                 group_id="agenda_head", color=_hl(palette, None)))
     y += title_h + _RULE_GAP_EMU  # title hugs its rule (operator style rule)
 
     # Thin accent rule under the title (the non-text media for this slide).
@@ -763,11 +817,13 @@ def _layout_agenda(slide: AgendaSlide, cx, cy, cw, ch, font, ts, palette):
 # ── Phase 9: lists & text (catalog #11, #13–15) ───────────────────────────────
 
 
-def _list_title(slide_title, cx, y, cw, font, ts):
-    """Emit a header-tier title node; return (node, new_y)."""
+def _list_title(slide_title, cx, y, cw, font, ts, palette=None):
+    """Emit a header-tier title node; return (node, new_y). Honours the deck headline
+    colour when one is set (else the default text colour, as before)."""
     title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     node = _make_text_node(_nid("title"), slide_title, font, ts.header,
-                           bold=True, italic=False, rect=Rect(cx, y, cw, title_h))
+                           bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
+                           color=_hl(palette, None) if palette is not None else None)
     return node, y + title_h + GAP_MIN_EMU
 
 
@@ -777,21 +833,37 @@ def _list_title(slide_title, cx, y, cw, font, ts):
 # a bullet-list is now pure typography (title + items), exempt from W_TEXT_ONLY.
 
 
+_BULLET_ITEM_GAP_EMU = int(0.5 * EMU_PER_INCH)  # comfortable air between packed items
+
+
 def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palette):
     nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
+    title_node, y = _list_title(slide.title, cx, cy, cw, font, ts, palette)
     nodes.append(title_node)
 
     n = len(slide.items)
     avail = cy + ch - y
-    slot_h = max(1, (avail - gap * max(0, n - 1)) // n)
-    item_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    for item in slide.items:
+    line_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
+    # Each item box is its wrapped height (long items may wrap), floored at one line.
+    heights = [max(1, len(wrap(it, font, ts.body, cw))) * line_h for it in slide.items]
+
+    # FB-062: with only a few items, distributing them across the FULL height left
+    # big disconnected gaps and a bottom-heavy void. Instead PACK the items at a fixed
+    # comfortable gap and CENTRE the block; only fall back to even distribution when the
+    # items genuinely need the whole height (many/long items). Same intent as the
+    # roadmap/panel pack fix (FB-036).
+    packed_h = sum(heights) + _BULLET_ITEM_GAP_EMU * max(0, n - 1)
+    if packed_h <= avail:
+        gap = _BULLET_ITEM_GAP_EMU
+        cur = y + max(0, (avail - packed_h) // 2)
+    else:
+        gap = max(GAP_MIN_EMU, (avail - sum(heights)) // max(1, n - 1))
+        cur = y
+    for item, h in zip(slide.items, heights):
         nodes.append(_make_text_node(_nid("bl_item"), item, font, ts.body,
                                      bold=False, italic=False,
-                                     rect=Rect(cx, y, cw, item_h)))
-        y += slot_h + gap
+                                     rect=Rect(cx, cur, cw, h)))
+        cur += h + gap
     return nodes
 
 
@@ -819,9 +891,10 @@ _CODE_STRING = "#CE9178"   # string literals
 _CODE_NUMBER = "#B5CEA8"   # numeric literals
 _CODE_FUNC = "#DCDCAA"     # function names at def sites and call sites
 _CODE_PROMPT = "#4EC9B0"   # the "$" sigil on terminal lines
-_CODE_TITLE = "#858585"    # filename tab (Dark+ line-number gray)
+_CODE_TITLE = "#D4D4D4"    # filename tab — the light foreground (FB-077: the old dim
+                           # #858585 grey was hard to read on the near-black panel)
 _CODE_DOTS = ("#FF5F56", "#FFBD2E", "#27C93F")  # macOS window traffic lights
-_CODE_FONT = "courier new"
+_CODE_FONT = "courier new"  # (retained; code now uses the deck font per FB-110)
 
 _PY_CONTROL = frozenset("if elif else for while try except finally with return yield "
                         "break continue pass raise assert del match case".split())
@@ -901,11 +974,14 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
                                       fill_color=color, group_id=gid))
         y += dot + int(0.35 * EMU_PER_INCH)
 
-    # Optional filename / caption.
+    # Optional filename / caption. FB-054: the caption sits at the header tier — ABOVE
+    # the code body size — so it reads as the slide's title rather than a tiny tab.
     if slide.title:
-        cap_h = int(ts.caption * LINE_SPACING_SINGLE * EMU_PER_PT)
-        nodes.append(_make_text_node(_nid("code_title"), slide.title, _CODE_FONT, ts.caption,
-                                     bold=True, italic=False, rect=Rect(cx, y, cw, cap_h),
+        # FB-102: the filename title is NOT bold — the bold monospace title read as
+        # awkward. Title-case the text in the deck YAML; here we just set the weight.
+        cap_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
+        nodes.append(_make_text_node(_nid("code_title"), slide.title, font, ts.header,
+                                     bold=False, italic=False, rect=Rect(cx, y, cw, cap_h),
                                      is_caption=True, color=_CODE_TITLE, group_id=gid))
         y += cap_h + GAP_MIN_EMU
 
@@ -921,17 +997,17 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
     line_h = int(size * LINE_SPACING_SINGLE * EMU_PER_PT)
     for raw in slide.code.split("\n"):
         if raw.strip():
-            line_w = measure_text(raw, _CODE_FONT, size)
+            line_w = measure_text(raw, font, size)
             prefix = ""
             for text, color in _code_line_runs(raw):
-                run_w = measure_text(text, _CODE_FONT, size)
+                run_w = measure_text(text, font, size)
                 line = Line(text=text, width_emu=run_w, height_emu=line_h,
                             overflows=line_w > cw)
                 # x from measuring the ACTUAL prefix substring (not accumulated run
                 # widths) so per-call rounding can never drift across a line.
                 nodes.append(_make_text_node(
-                    _nid("code_run"), text, _CODE_FONT, size, bold=False, italic=False,
-                    rect=Rect(cx + measure_text(prefix, _CODE_FONT, size), y,
+                    _nid("code_run"), text, font, size, bold=False, italic=False,
+                    rect=Rect(cx + measure_text(prefix, font, size), y,
                               run_w + INSET_LEFT_EMU + INSET_RIGHT_EMU, line_h),
                     lines=[line], color=color, group_id=gid))
                 prefix += text
@@ -952,6 +1028,10 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
 _TREE_BG = "#0C1A1C"      # deep-teal near-black panel (matches the code layout)
 _TREE_FILE = "#D4D4D4"    # file names / default foreground
 _TREE_GUIDE = "#55707A"   # dimmed tree connectors
+# FB-065: directories use the conventional editor "folder blue" (the same blue the code
+# layout uses for declarations) rather than the deck accent — the familiar file-explorer
+# look for a folder tree, and legible on the dark panel regardless of the deck's accent.
+_TREE_DIR = "#569CD6"     # directory names (VS Code-style folder blue)
 _TREE_FONT = "courier new"
 
 
@@ -995,8 +1075,8 @@ def _layout_file_tree(slide: FileTreeSlide, cx, cy, cw, ch, font, ts, palette):
 
     # Title on the light surface (header tier, bold), tinted with the deck primary.
     if slide.title:
-        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
-        title_node.text_color = palette.primary
+        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts, palette)
+        title_node.text_color = _hl(palette, palette.primary)
         nodes.append(title_node)
 
     # Rounded dark card fills the remaining content height.
@@ -1051,7 +1131,7 @@ def _layout_file_tree(slide: FileTreeSlide, cx, cy, cw, ch, font, ts, palette):
             name_x = inner_x
         name_w = measure_text(name, _TREE_FONT, size, bold=is_dir)
         overflows = (name_x - inner_x) + name_w > inner_w
-        color = palette.accent if is_dir else _TREE_FILE
+        color = _TREE_DIR if is_dir else _TREE_FILE
         nodes.append(_make_text_node(
             _nid("tree_name"), name, _TREE_FONT, size, bold=is_dir, italic=False,
             rect=Rect(name_x, ty, name_w + INSET_LEFT_EMU + INSET_RIGHT_EMU, line_h),
@@ -1070,7 +1150,7 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
     gap = GAP_MIN_EMU
     y = cy
     if slide.title:
-        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts)
+        title_node, y = _list_title(slide.title, cx, cy, cw, font, ts, palette)
         nodes.append(title_node)
 
     # Reimagined (operator 2026-07-05, "reimagine numbered-steps"): the filled chip
@@ -1085,15 +1165,22 @@ def _layout_numbered_steps(slide: NumberedStepsSlide, cx, cy, cw, ch, font, ts, 
         + INSET_LEFT_EMU + INSET_RIGHT_EMU
     text_x = cx + num_w + int(0.25 * EMU_PER_INCH)
     text_w = cw - num_w - int(0.25 * EMU_PER_INCH)
-    heading_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-    inner = int(0.1 * EMU_PER_INCH)
+    # FB-052: the blue heading is set at the SAME tier as the accent numeral (header),
+    # so the number and the word it labels read at one size instead of the number
+    # towering over a smaller heading.
+    heading_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT)
+    # Tighter heading→body gap: the header-tier heading (FB-052) is taller than the old
+    # body-tier one, so trim this gap to keep a full body line inside each step's slot.
+    inner = int(0.05 * EMU_PER_INCH)
     for i, step in enumerate(slide.steps):
         gid = f"step_{i}"
+        # FB-076: the numeral matches the heading colour (both primary) — the two paired
+        # items read as one blue unit instead of a gold number beside a blue word.
         nodes.append(_make_text_node(_nid("step_num"), f"{i + 1:02d}", font, ts.header,
                                      bold=True, italic=False,
                                      rect=Rect(cx, y, num_w, num_h), group_id=gid,
-                                     color=palette.accent))
-        nodes.append(_make_text_node(_nid("step_head"), step.title, font, ts.body,
+                                     color=palette.primary))
+        nodes.append(_make_text_node(_nid("step_head"), step.title, font, ts.header,
                                      bold=True, italic=False,
                                      rect=Rect(text_x, y, text_w, heading_h), group_id=gid,
                                      color=palette.primary))
@@ -1156,7 +1243,7 @@ def _two_panel_list(title, left_head, left_items, left_color,
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), title, font, ts.header, bold=True,
                                      italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     col_w = (cw - gap) // 2
@@ -1174,8 +1261,11 @@ def _two_panel_list(title, left_head, left_items, left_color,
         # without bullet markers (FB-026) and is the panel's non-text mark. It rides
         # INSIDE the existing heading->items gap (panel-wide group_id makes the tight
         # spacing intentional), so the items keep every EMU of space they had.
+        # FB-055: the rule's left edge lines up with the heading's first GLYPH, not the
+        # box edge — text carries a left inset, boxes don't, so shift the rule right by
+        # that inset. Now the grey/gold word sits flush above its coloured bar.
         nodes.append(ResolvedNode(_nid(f"{prefix}_rule"), "box",
-                                  Rect(px, y + head_h + inner,
+                                  Rect(px + INSET_LEFT_EMU, y + head_h + inner,
                                        max(1, int(col_w * 0.3)), rule_h),
                                   fill_color=color, group_id=gid))
     items_y = y + head_h + gap
@@ -1188,12 +1278,23 @@ def _two_panel_list(title, left_head, left_items, left_color,
 
 
 def _layout_two_panel_list(slide: TwoPanelListSlide, cx, cy, cw, ch, font, ts, palette):
-    """Two contrasting states head-to-head (before/after, pros/cons, old/new):
-    left panel muted, right panel accent — a deterministic left→right contrast read."""
+    """Two contrasting states head-to-head (before/after, pros/cons, old/new).
+
+    FB-078: by default the left panel carries the brand primary (blue) and the right
+    panel is muted (grey) — the left ("build now" / "do" / "prefer") reads as the
+    emphasised state. FB-096: an explicit ``accent_side`` overrides this to put the
+    deck accent on the named side (the other goes muted) — e.g. to colour a "with
+    Claude Code" panel in the accent rather than grey."""
+    if slide.accent_side == "left":
+        left_c, right_c = palette.accent, palette.muted
+    elif slide.accent_side == "right":
+        left_c, right_c = palette.muted, palette.accent
+    else:
+        left_c, right_c = palette.primary, palette.muted
     return _two_panel_list(
         slide.title,
-        slide.left.title, slide.left.items, palette.muted,
-        slide.right.title, slide.right.items, palette.accent,
+        slide.left.title, slide.left.items, left_c,
+        slide.right.title, slide.right.items, right_c,
         cx, cy, cw, ch, font, ts, palette,
     )
 
@@ -1208,7 +1309,7 @@ def _layout_this_vs_that(slide: ThisVsThatSlide, cx, cy, cw, ch, font, ts, palet
         title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
         nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header, bold=True,
                                      italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=palette.primary))
+                                     color=_hl(palette, palette.primary)))
         y += title_h + gap
 
     # Operator feedback FB-028 (supersedes the FB-023 badge rework): the accent/primary
@@ -1264,7 +1365,7 @@ def _slide_title(nodes, title, cx, y, cw, font, ts, palette):
     title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
     nodes.append(_make_text_node(_nid("title"), title, font, ts.header, bold=True,
                                  italic=False, rect=Rect(cx, y, cw, title_h),
-                                 color=palette.primary))
+                                 color=_hl(palette, palette.primary)))
     return y + title_h + GAP_MIN_EMU
 
 
@@ -1399,21 +1500,49 @@ def _layout_table_slide(slide: TableSlide, cx, cy, cw, ch, font, ts, palette):
     y = _slide_title(nodes, slide.title, cx, cy, cw, font, ts, palette)
 
     ncols = len(slide.headers)
-    col_w = (cw - gap * (ncols - 1)) // ncols if ncols else cw
     head_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
     rule_h = int(0.06 * EMU_PER_INCH)
+
+    # FB-090: size each column to its widest cell (header or body) instead of
+    # stretching columns across the whole slide — that left a wide, disconnected gap
+    # between a short first column ("Version") and the next. Columns are packed left
+    # with one comfortable inter-column gap, and the header rule spans only the table.
+    # If the natural widths would exceed the content box (very wide tables) they scale
+    # down proportionally so text still wraps within the margins.
+    col_gap = int(0.6 * EMU_PER_INCH)
+    # Column width = widest cell + insets + a small cushion. The cushion matters:
+    # wrap() accumulates per-token widths, so a column sized to a cell's EXACT
+    # measured width can still wrap that cell by a rounding/kerning hair. The cushion
+    # guarantees single-line cells stay single-line and adds a little breathing room.
+    pad = INSET_LEFT_EMU + INSET_RIGHT_EMU + int(0.2 * EMU_PER_INCH)
+    nat = []
+    for c in range(ncols):
+        w = measure_text(slide.headers[c] or "", font, ts.body, bold=True)
+        for row in slide.rows:
+            if c < len(row):
+                w = max(w, measure_text(row[c], font, ts.body))
+        nat.append(w + pad)
+    span = col_gap * max(0, ncols - 1)
+    if sum(nat) + span > cw:
+        scale = (cw - span) / max(1, sum(nat))
+        nat = [max(1, int(w * scale)) for w in nat]
+    col_x = []
+    xacc = cx
+    for w in nat:
+        col_x.append(xacc)
+        xacc += w + col_gap
+    table_w = xacc - col_gap - cx  # right edge of the last column, measured from cx
 
     # Headers HUG the rule (FB-033, then the 2026-07-05 global style rule) — the
     # rule rides at the slim global rule gap, sharing a group with the header cells
     # so the intentionally tight spacing is E_GAP-exempt.
     inner = _RULE_GAP_EMU
     for c, htext in enumerate(slide.headers):
-        hx = cx + c * (col_w + gap)
         nodes.append(_make_text_node(_nid("th"), htext, font, ts.body, bold=True,
-                                     italic=False, rect=Rect(hx, y, col_w, head_h),
+                                     italic=False, rect=Rect(col_x[c], y, nat[c], head_h),
                                      color=palette.primary, group_id="table_head"))
     ry = y + head_h + inner
-    nodes.append(ResolvedNode(_nid("table_rule"), "box", Rect(cx, ry, cw, rule_h),
+    nodes.append(ResolvedNode(_nid("table_rule"), "box", Rect(cx, ry, table_w, rule_h),
                               fill_color=palette.accent, group_id="table_head"))
     yy = ry + rule_h + gap
 
@@ -1423,9 +1552,8 @@ def _layout_table_slide(slide: TableSlide, cx, cy, cw, ch, font, ts, palette):
     for r, row in enumerate(slide.rows):
         for c in range(ncols):
             cell = row[c] if c < len(row) else ""
-            cxx = cx + c * (col_w + gap)
             nodes.append(_make_text_node(_nid("td"), cell, font, ts.body, bold=False,
-                                         italic=False, rect=Rect(cxx, yy, col_w, row_h)))
+                                         italic=False, rect=Rect(col_x[c], yy, nat[c], row_h)))
         yy += row_h + gap
     return nodes
 
@@ -1506,14 +1634,16 @@ def _layout_process_steps(slide: ProcessStepsSlide, cx, cy, cw, ch, font, ts, pa
     for i, step in enumerate(slide.steps):
         gid = f"pstep_{i}"
         sx = cx + i * (col_w + gap)
+        # FB-075: the numeral (and its rule) match the label colour — one blue, not a
+        # gold numeral over a blue label. "Make these 2 items match in color."
         nodes.append(_make_text_node(_nid("ps_num"), f"{i + 1:02d}", font, ts.header,
                                      bold=True, italic=False,
                                      rect=Rect(sx, y, col_w, num_h),
-                                     color=palette.accent, group_id=gid))
+                                     color=palette.primary, group_id=gid))
         nodes.append(ResolvedNode(_nid("ps_rule"), "box",
                                   Rect(sx, y + num_h + _RULE_GAP_EMU,
                                        max(1, int(col_w * 0.3)), rule_h),
-                                  fill_color=palette.accent, group_id=gid))
+                                  fill_color=palette.primary, group_id=gid))
         ly = y + num_h + gap
         nodes.append(_make_text_node(_nid("ps_label"), step.label, font, ts.body, bold=True,
                                      italic=False, rect=Rect(sx, ly, col_w, label_h),
@@ -1907,6 +2037,7 @@ def _make_text_node(
     group_id: Optional[str] = None,
     color: Optional[str] = None,
     align: Optional[str] = None,
+    href: Optional[str] = None,
 ) -> ResolvedNode:
     if lines is None:
         lines = wrap(text, font, size_pt, rect.w, bold=bold, italic=italic)
@@ -1925,4 +2056,5 @@ def _make_text_node(
         group_id=group_id,
         text_color=color,
         align=align,
+        href=href,
     )

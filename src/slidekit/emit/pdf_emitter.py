@@ -183,3 +183,17 @@ def _draw_text(c, node: "ResolvedNode", palette, page_h: float) -> None:
         else:
             c.drawString(x, baseline, ln.text)
         cur -= line_h
+
+    # A hyperlinked text node (e.g. the bottom-right "Source" citation) gets a
+    # clickable link rect covering its whole box plus a thin underline for the
+    # usual affordance. The text was already drawn above in the node's colour.
+    if node.href:
+        rx0 = _pt(node.rect.x)
+        rx1 = _pt(node.rect.x + node.rect.w)
+        ry1 = page_h - _pt(node.rect.y)
+        ry0 = page_h - _pt(node.rect.y + node.rect.h)
+        c.linkURL(node.href, (rx0, ry0, rx1, ry1), relative=0, thickness=0)
+        # Underline just under the first (single) line's baseline.
+        ul_y = top - size * 0.95
+        c.setLineWidth(0.5)
+        c.line(x, ul_y, x + c.stringWidth(node.text_content or "", font, size), ul_y)

@@ -142,6 +142,14 @@ def _node_html(node: "ResolvedNode", palette) -> str:
             f"{centered};"
         )
         text = (node.text_content or "").replace("&", "&amp;").replace("<", "&lt;")
+        # A hyperlinked text node (e.g. the bottom-right "Source" citation) renders
+        # as an underlined anchor inheriting the node's colour, opening in a new tab.
+        if node.href:
+            href = node.href.replace("&", "&amp;").replace('"', "&quot;")
+            text = (
+                f'<a href="{href}" target="_blank" rel="noopener" '
+                f'style="color:inherit;text-decoration:underline">{text}</a>'
+            )
         return (
             f'    <div class="node node-text{chrome_cls}" style="{style}">'
             f'{text}</div>'

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_18",
+          "node_id": "title_10",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#1A237E"
         },
         {
-          "node_id": "stat_value_19",
+          "node_id": "stat_value_11",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -56,7 +56,7 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_20",
+          "node_id": "stat_label_12",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -79,7 +79,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_21",
+          "node_id": "stat_value_13",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -103,7 +103,7 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_22",
+          "node_id": "stat_label_14",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -126,7 +126,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_23",
+          "node_id": "stat_value_15",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -150,7 +150,7 @@
           "text_color": "#00BCD4"
         },
         {
-          "node_id": "stat_label_24",
+          "node_id": "stat_label_16",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -175,7 +175,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_25",
+          "node_id": "chrome_pagenum_17",
           "node_type": "text",
           "rect": {
             "x": 10363200,

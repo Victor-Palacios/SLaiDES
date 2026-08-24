@@ -1,0 +1,659 @@
+DESIGNING YOUR OWN EDA LIBRARY — extracted text
+================================================
+
+Source: examples/pdf/Designing your own EDA library.pdf (122 slides)
+A beginner workshop on building and publishing a tiny Python EDA package
+(`simple_eda`) — from four functions to a package on PyPI.
+
+This file is a faithful, cleaned transcription of the slide text (pypdf's
+broken line-wraps in the code blocks have been rejoined). Slide numbers match
+the PDF. A "Logic corrections for beginners" appendix at the end records the
+few places where the source logic is confusing or inconsistent, and how the
+derived deck (examples/designing-your-own-eda-library.yaml) resolves them.
+
+
+--- SLIDE 1 ---
+Build Your First Library
+Function → Package → Wheel → PyPI → pip install
+
+--- SLIDE 2 --- Today's Goals
+(1) Create a real importable Python package
+(2) Publish to TestPyPI / PyPI
+(3) Pip install your package
+
+--- SLIDE 3 --- What we are building
+    import pandas as pd
+    import simple_eda as eda
+    df = pd.read_csv("data.csv")
+    eda.summarize(df)
+    eda.missing(df)
+    eda.numeric_columns(df)
+
+--- SLIDE 4 --- What we are (not) building yet
+Building: one dependency (pandas); plain Python functions; a clear README
+Skipping (for now): CI/CD; testing; multi-dependencies
+
+--- SLIDE 5 --- The details of our journey
+Design 4 functions → create a package folder → add pyproject.toml metadata →
+install, build, check, upload, and share.
+
+--- SLIDE 6 --- Question: What is a Python library?
+
+=== MODULE 1 — What is a Python library? ===
+
+--- SLIDE 7 --- Script vs Library
+Script:  e.g. `python analyze.py` — less work, less convenient, limited scope
+Library: e.g. `import simple_eda` — more work, more convenient, broad scope
+
+--- SLIDE 8 --- Scope of our Library
+Exploratory Data Analysis helps you understand a dataset: rows, columns, data
+types, missing values, basic statistics. Our library will inspect data, not
+clean it automatically.
+
+--- SLIDE 9 --- A tiny library can still be real
+It does not need a web app; a fancy dashboard; or dozens of dependencies.
+It only needs to be useful, installable, and importable.
+
+--- SLIDE 10 --- Library bare minimums
+1. Package name  2. Folder  3. __init__.py file  4. Functions  5. Metadata
+
+--- SLIDE 11 --- Package name & folder
+You choose — the name needs to be unique.
+
+--- SLIDE 12 --- __init__.py  [header in source reads "Module 3"]
+Exists in the folder; marks the folder as a Python package; lets users write
+`import simple_eda`.
+
+--- SLIDE 13 --- The functions
+summarize(df)  missing(df)  numeric_columns(df)  categorical_columns(df)
+
+--- SLIDE 14 --- The beginner rule
+Make the first version boring. Use names people can guess. Return familiar
+pandas/Python objects. Improve only after the first version works.
+Version 0.1.0 is allowed to be tiny.
+
+--- SLIDE 15 --- What counts as success?
+A user can pip install it; import it; call one useful function; and read the
+README and understand the example.
+
+--- SLIDE 16 --- Module 1 checkpoint
+A script is run; a library is imported; a package is a folder with importable
+code; pip needs package metadata. Next: design the smallest API.
+
+=== MODULE 2 — Design the smallest EDA API ===
+
+--- SLIDE 17 --- Module 2 opener
+The API is what users remember. Build tiny. Install locally. Publish safely.
+
+--- SLIDE 18 --- Start with the user sentence
+If the first example feels simple, the library feels simple.
+    import simple_eda as eda
+    eda.summarize(df)
+
+--- SLIDE 19 --- Pick boring function names
+Good names: summarize, missing, numeric_columns, categorical_columns
+Avoid clever names: hyper_profile_engine, magic_diagnose, auto_ai_report,
+mega_summary
+
+--- SLIDE 20 --- One input type at first
+Support pandas DataFrames first. Do not support Polars, Spark, Dask, or Arrow
+yet. One clear input type reduces bugs and teaching complexity. Beginner-
+friendly means fewer choices.
+
+--- SLIDE 21 --- Return plain objects first
+Dictionaries, lists, Series, and DataFrames are enough.
+    {"rows": 100, "columns": 5, "column_names": ["city", "sales"]}
+
+--- SLIDE 22 --- Do not mutate user data
+Good: df.isna().sum(); df.describe(); list(df.columns)
+Bad:  df.dropna(inplace=True); df["x"] = ...; silent type conversion
+
+--- SLIDE 23 --- Keep dependencies small
+Use pandas only for version 0.1.0. Every dependency adds install time and risk.
+Add visualization libraries only when the core library already works. Small
+dependency lists are beginner-friendly and safer.
+
+--- SLIDE 24 --- API surface area
+Public: functions users call directly — `eda.summarize(df)`
+Internal: helper functions you may change later — `_simple_helper(df)`
+Expose only what you want to support.
+
+--- SLIDE 25 --- Good defaults
+A function should work without many arguments. Arguments should be optional
+when possible. Use sensible behavior before adding configuration.
+
+--- SLIDE 26 --- Naming checklist
+Can a beginner guess what it does? Is the name short? Is it a verb or clear
+noun phrase? Does it avoid abbreviations? Does it match the README example?
+
+--- SLIDE 27 --- Version 0.1.0 mindset
+First working version. Not feature-complete. Not perfect. Installable and
+understandable. The goal is momentum, not completeness.
+
+--- SLIDE 28 --- Design decision record
+Library name: simple_eda | Install name: simple-eda-yourname | Core dependency:
+pandas | Public functions: four EDA helpers.
+
+--- SLIDE 29 --- Module 2 checkpoint
+The API is tiny; the names are obvious; the input is pandas only; the library
+never changes the user's dataframe. Next: create the package folder.
+
+=== MODULE 3 — Create the package folder ===
+
+--- SLIDE 30 --- Module 3 opener
+Turn loose code into an importable package.
+
+--- SLIDE 31 --- Final folder shape  (modern src layout)
+    simple-eda-project/
+    ├── src/
+    │   └── simple_eda/
+    │       ├── __init__.py
+    │       └── core.py
+    ├── README.md
+    ├── pyproject.toml
+    └── LICENSE
+
+--- SLIDE 32 --- Project name vs import name
+Install name: simple-eda-yourname — hyphens are normal; used by pip and PyPI.
+Import name:  simple_eda — underscores are normal; used in Python code.
+
+--- SLIDE 33 --- Create the project root
+    mkdir simple-eda-project
+    cd simple-eda-project
+
+--- SLIDE 34 --- Create the package folder
+    mkdir -p src/simple_eda
+    touch src/simple_eda/__init__.py
+    touch src/simple_eda/core.py
+
+--- SLIDE 35 --- Create project files
+    touch README.md
+    touch pyproject.toml
+    touch LICENSE
+
+--- SLIDE 36 --- What __init__.py does
+Marks the folder as a Python package; controls the top-level import experience;
+lets users write `import simple_eda as eda`.
+    # src/simple_eda/__init__.py
+    from .core import summarize
+
+--- SLIDE 37 --- What core.py does
+Holds the first reusable functions; keeps the project easy to navigate; gives
+beginners one obvious file to edit.
+    # src/simple_eda/core.py
+    def summarize(df):
+        ...
+
+--- SLIDE 38 --- Why use src layout?
+Prevents accidental imports from the project root; matches many modern Python
+projects; makes packaging behavior clearer later.
+
+--- SLIDE 39 --- Check the tree
+    find .
+    ./src/simple_eda/__init__.py
+    ./src/simple_eda/core.py
+    ./README.md
+    ./pyproject.toml
+    ./LICENSE
+
+--- SLIDE 40 --- Common beginner mistake
+Putting pyproject.toml inside src/simple_eda; forgetting __init__.py; naming the
+folder simple-eda instead of simple_eda; running pip install from the wrong
+directory.
+
+--- SLIDE 41 --- Naming with your own suffix
+Your PyPI name must be globally unique.
+    # Package name on PyPI:  simple-eda-victor / simple-eda-ana / simple-eda-yourgithub
+    # Import name in Python:  simple_eda
+
+--- SLIDE 42 --- Module 3 checkpoint
+Project root, src/simple_eda, __init__.py, core.py, README.md, pyproject.toml,
+and LICENSE all exist.
+
+=== MODULE 4 — Write the first EDA functions ===
+
+--- SLIDE 43 --- Module 4 opener
+Start with plain pandas helpers.
+
+--- SLIDE 44 --- Write summarize()
+    def summarize(df):
+        """Return a small summary of a pandas DataFrame."""
+        return {
+            "rows": len(df),
+            "columns": len(df.columns),
+            "column_names": list(df.columns),
+            "dtypes": df.dtypes.astype(str).to_dict(),
+        }
+
+--- SLIDE 45 --- What summarize() returns
+Number of rows; number of columns; column names; data types converted to
+strings. This is simple, but immediately useful.
+
+--- SLIDE 46 --- Write missing()
+    def missing(df):
+        """Return missing-value counts for each column."""
+        return df.isna().sum().sort_values(ascending=False)
+
+--- SLIDE 47 --- Why missing values first?
+Missing values are one of the first EDA questions; pandas already has the
+building blocks; sorting makes the output easier to scan.
+
+--- SLIDE 48 --- Write numeric_columns()
+    def numeric_columns(df):
+        """Return the names of numeric columns."""
+        return list(df.select_dtypes(include="number").columns)
+
+--- SLIDE 49 --- Write categorical_columns()
+    def categorical_columns(df):
+        """Return object/category column names."""
+        return list(df.select_dtypes(include=["object", "category"]).columns)
+
+--- SLIDE 50 --- Optional stats()
+This is optional because pandas already does it well.
+    def stats(df):
+        """Return basic descriptive statistics."""
+        return df.describe()
+
+--- SLIDE 51-52 --- Complete core.py
+    def summarize(df):
+        return {
+            "rows": len(df),
+            "columns": len(df.columns),
+            "column_names": list(df.columns),
+            "dtypes": df.dtypes.astype(str).to_dict(),
+        }
+    def missing(df):
+        return df.isna().sum().sort_values(ascending=False)
+    def numeric_columns(df):
+        return list(df.select_dtypes(include="number").columns)
+    def categorical_columns(df):
+        return list(df.select_dtypes(include=["object", "category"]).columns)
+    def stats(df):
+        return df.describe()
+
+--- SLIDE 53 --- Expose functions in __init__.py
+    from .core import (
+        summarize, missing, numeric_columns, categorical_columns, stats,
+    )
+
+--- SLIDE 54 --- Add __all__
+    __all__ = [
+        "summarize", "missing", "numeric_columns",
+        "categorical_columns", "stats",
+    ]
+
+--- SLIDE 55 --- Try a tiny dataframe
+    import pandas as pd
+    import simple_eda as eda
+    df = pd.DataFrame({"name": ["Ana", "Bo", None], "age": [25, None, 31]})
+    print(eda.summarize(df))
+
+--- SLIDE 56 --- Try missing values
+    print(eda.missing(df))
+    # name  1
+    # age   1
+    # dtype: int64
+
+--- SLIDE 57 --- Try column helpers
+    print(eda.numeric_columns(df))       # ["age"]
+    print(eda.categorical_columns(df))   # ["name"]
+
+--- SLIDE 58 --- Docstrings matter
+They show up in help(); they help autocomplete tools; they explain purpose
+without a docs site. Short docstrings are enough for version 0.1.0.
+
+--- SLIDE 59 --- No custom classes yet
+Custom classes are useful later. Beginners understand dicts, lists, and pandas
+Series. Plain objects are easier to test and print. Avoid architecture until you
+feel pain.
+
+--- SLIDE 60 --- Common function mistakes
+Changing df in place; returning printed text instead of data; adding too many
+optional arguments; trying to solve every EDA problem in one function.
+
+--- SLIDE 61 --- Module 4 checkpoint
+core.py has useful functions; __init__.py imports them; users can call
+eda.summarize(df); functions return simple objects; the dataframe is not
+modified.
+
+=== MODULE 5 — Add pyproject.toml ===
+
+--- SLIDE 62 --- Module 5 opener
+Teach pip what your project is.
+
+--- SLIDE 63 --- What pyproject.toml does
+Defines the package name and version; lists dependencies; tells build tools how
+to build; replaces many old setup.py workflows. pip needs metadata, not just
+code.
+
+--- SLIDE 64 --- The build-system section
+    [build-system]
+    requires = ["setuptools>=61"]
+    build-backend = "setuptools.build_meta"
+
+--- SLIDE 65 --- The project section
+    [project]
+    name = "simple-eda-yourname"
+    version = "0.1.0"
+    description = "A tiny beginner-friendly EDA helper for pandas"
+    readme = "README.md"
+    requires-python = ">=3.9"
+
+--- SLIDE 66 --- Dependencies
+    dependencies = ["pandas>=1.5"]
+
+--- SLIDE 67 --- Setuptools src layout
+    [tool.setuptools]
+    package-dir = {"" = "src"}
+    [tool.setuptools.packages.find]
+    where = ["src"]
+
+--- SLIDE 68 --- Full minimal pyproject.toml
+    [build-system]
+    requires = ["setuptools>=61"]
+    build-backend = "setuptools.build_meta"
+    [project]
+    name = "simple-eda-yourname"
+    version = "0.1.0"
+    description = "A tiny beginner-friendly EDA helper for pandas"
+    readme = "README.md"
+    requires-python = ">=3.9"
+    dependencies = ["pandas>=1.5"]
+
+--- SLIDE 69 --- Choose a unique package name
+PyPI names are shared globally; simple-eda may already be taken. Use your name,
+handle, or project suffix, e.g. simple-eda-victor. Hyphen for install,
+underscore for import.
+
+--- SLIDE 70 --- Version numbers
+0.1.0 = first working version; 0.1.1 = small fix; 0.2.0 = new feature;
+1.0.0 = stable public version.
+
+--- SLIDE 71 --- README: why it matters
+It is the first page users read; shows the install command; shows the smallest
+working example; makes your package feel real.
+
+--- SLIDE 72 --- README install section
+    # simple-eda-yourname
+    A tiny beginner-friendly EDA helper for pandas.
+    ## Install
+    pip install simple-eda-yourname
+
+--- SLIDE 73 --- README usage section
+    ## Use
+    import pandas as pd
+    import simple_eda as eda
+    df = pd.read_csv("data.csv")
+    print(eda.summarize(df))
+    print(eda.missing(df))
+
+--- SLIDE 74 --- License basics
+A license tells others what they can do with your code. MIT is common for small
+beginner projects. Use an official template if publishing publicly. Do not
+invent your own license text.
+
+--- SLIDE 75 --- Metadata buys you distribution
+pip can install locally; build can create a wheel; twine can upload to TestPyPI;
+PyPI can show your README; other people can install it.
+
+--- SLIDE 76 --- Module 5 checkpoint
+pyproject.toml has build-system; project name is unique; version is 0.1.0;
+pandas dependency is listed; README has install and usage; LICENSE exists.
+
+=== MODULE 6 — Install locally with pip ===
+
+--- SLIDE 77 --- Module 6 opener
+Make your package work on your own machine first.
+
+--- SLIDE 78 --- Install in editable mode
+Run this from the folder that contains pyproject.toml.
+    python -m pip install -e .
+
+--- SLIDE 79 --- What -e means
+Editable install; your package is linked to your source folder; code changes
+show up without reinstalling; great for development and workshops.
+
+--- SLIDE 80 --- Import smoke test
+    python
+    >>> import simple_eda
+    >>> print(simple_eda.__all__)
+
+--- SLIDE 81 --- Test with a DataFrame
+    import pandas as pd
+    import simple_eda as eda
+    df = pd.DataFrame({"city": ["SF", "LA", None], "sales": [100, 200, None]})
+    eda.summarize(df)
+    eda.missing(df)
+
+--- SLIDE 82 --- Common error: package not found
+ModuleNotFoundError: No module named 'simple_eda'. You may not have installed it
+yet; may be in the wrong folder; or may be using the wrong Python environment.
+
+--- SLIDE 83 --- Fix: install from the project root
+    cd simple-eda-project
+    python -m pip install -e .
+
+--- SLIDE 84 --- Common error: wrong environment
+Always prefer `python -m pip` to match pip with the active Python.
+    which python
+    which pip
+    python -m pip --version
+
+--- SLIDE 85 --- Uninstall and reinstall
+    python -m pip uninstall simple-eda-yourname
+    python -m pip install -e .
+
+--- SLIDE 86 --- Use it in notebooks
+After local install, notebooks can import it — already useful before publishing.
+    import simple_eda as eda
+    eda.summarize(df)
+
+--- SLIDE 87 --- Add a tiny test file
+    # test_example.py
+    import pandas as pd
+    import simple_eda as eda
+    df = pd.DataFrame({"age": [10, 20]})
+    print(eda.numeric_columns(df))
+
+--- SLIDE 88 --- Local install is a milestone
+Your code is no longer just a script; pip knows about your project; Python can
+import it from anywhere in the environment. You built a local pip-installable
+library.
+
+--- SLIDE 89 --- Module 6 checkpoint
+`pip install -e .` works; `import simple_eda` works; test_example.py runs;
+notebook import works; you know how to debug environment issues.
+
+=== MODULE 7 — Build a real package file ===
+
+--- SLIDE 90 --- Module 7 opener
+Create the artifacts that package indexes store.
+
+--- SLIDE 91 --- Install the build tool
+    python -m pip install build
+
+--- SLIDE 92 --- Build the package
+Run from the project root.
+    python -m build
+
+--- SLIDE 93 --- The dist folder
+    dist/
+    ├── simple_eda_yourname-0.1.0.tar.gz
+    └── simple_eda_yourname-0.1.0-py3-none-any.whl
+
+--- SLIDE 94 --- Wheel vs source distribution
+Wheel: .whl file; fast install; most users get this.
+Source distribution: .tar.gz file; source archive; used when a wheel is
+unavailable.
+
+--- SLIDE 95 --- Test the wheel locally
+Never upload before testing the built file.
+    python -m pip install dist/*.whl
+    python -c "import simple_eda; print(simple_eda.__all__)"
+
+--- SLIDE 96 --- Clean rebuild
+    rm -rf build dist *.egg-info src/*.egg-info
+    python -m build
+
+--- SLIDE 97 --- Inspect what you built
+    python -m pip show simple-eda-yourname
+    # check name, version, location, dependencies
+
+--- SLIDE 98 --- Do not commit dist files at first
+dist/, build/, and *.egg-info are generated output. Add them to .gitignore for
+normal development.
+
+--- SLIDE 99 --- Version bump before rebuild
+Package indexes do not let you overwrite the same version.
+    # pyproject.toml -> version = "0.1.1"
+    rm -rf build dist *.egg-info src/*.egg-info
+    python -m build
+
+--- SLIDE 100 --- Build failure checklist
+pyproject.toml is valid TOML; package-dir points to src; src/simple_eda exists;
+README.md exists if referenced; dependencies list has valid strings.
+
+--- SLIDE 101 --- Module 7 checkpoint
+`python -m build` works; dist/ contains .whl and .tar.gz; the wheel installs
+locally; import still works after wheel install.
+
+=== MODULE 8 — Publish safely ===
+
+--- SLIDE 102 --- Module 8 opener
+Practice on TestPyPI before uploading to real PyPI.
+
+--- SLIDE 103 --- Why TestPyPI first?
+It is a practice package index; you can test upload commands; you can test
+install commands; mistakes are less painful than on real PyPI.
+
+--- SLIDE 104 --- Create accounts
+Create a TestPyPI account; create a PyPI account; enable two-factor
+authentication; create an API token; store the token safely.
+
+--- SLIDE 105 --- Install Twine
+    python -m pip install twine
+
+--- SLIDE 106 --- Check the package
+Fix errors before uploading.
+    python -m twine check dist/*
+
+--- SLIDE 107 --- Upload to TestPyPI
+Use your TestPyPI API token when prompted.
+    python -m twine upload --repository testpypi dist/*
+
+--- SLIDE 108 --- Install from TestPyPI
+    python -m pip install \
+      --index-url https://test.pypi.org/simple/ \
+      --extra-index-url https://pypi.org/simple/ \
+      simple-eda-yourname
+
+--- SLIDE 109 --- Why extra-index-url?
+TestPyPI may not have pandas; extra-index-url lets pip find dependencies on real
+PyPI; your package still comes from TestPyPI.
+
+--- SLIDE 110 --- Test the TestPyPI install
+    python -c "import simple_eda as eda; print(eda.__all__)"
+
+--- SLIDE 111 --- Upload to real PyPI
+Only do this after TestPyPI works.
+    python -m twine upload dist/*
+
+--- SLIDE 112 --- Install from real PyPI
+    pip install simple-eda-yourname
+    python -c "import simple_eda"
+
+--- SLIDE 113 --- Publishing safety
+Use API tokens, not passwords; do not upload secrets; do not commit tokens;
+review dependencies; protect your maintainer account.
+
+--- SLIDE 114 --- pip install can be risky
+Packages can execute code during build or runtime; typosquatting can trick
+users; compromised maintainer accounts can publish bad updates. Fewer
+dependencies means less attack surface. Small packages are easier to trust.
+
+--- SLIDE 115 --- Module 8 checkpoint
+twine check passes; TestPyPI upload works; TestPyPI install works; real PyPI
+upload is optional until ready; account security is enabled.
+
+=== MODULE 9 — Use, improve, and share ===
+
+--- SLIDE 116 --- Module 9 opener
+Make the tiny project useful without making it bloated.
+
+--- SLIDE 117 --- Add an example notebook
+    # examples/basic_usage.ipynb
+    import pandas as pd
+    import simple_eda as eda
+    df = pd.read_csv("data.csv")
+    eda.summarize(df)
+    eda.missing(df)
+
+--- SLIDE 118 --- Add basic tests later
+    def test_numeric_columns():
+        df = pd.DataFrame({"name": ["A", "B"], "age": [10, 20]})
+        assert eda.numeric_columns(df) == ["age"]
+
+--- SLIDE 119 --- Good next features
+    eda.quick_report(df)
+    eda.top_categories(df, column="city")
+    eda.column_summary(df, column="age")
+    eda.duplicate_rows(df)
+
+--- SLIDE 120 --- Features to avoid at first
+Full HTML reports; plugin systems; every dataframe backend; complex
+configuration; AI-generated analysis; dozens of dependencies.
+
+--- SLIDE 121 --- Final project checklist
+src/simple_eda/__init__.py exists; src/simple_eda/core.py exists;
+pyproject.toml exists; README has install and usage; `pip install -e .` works;
+`python -m build` works; `twine check dist/*` works.
+
+--- SLIDE 122 --- Capstone assignment
+Build version 0.1.0 of your own tiny EDA package; include at least three EDA
+functions; make it importable and pip-installable; publish to TestPyPI or PyPI;
+share the install command and one example.
+
+
+================================================================
+APPENDIX — Logic corrections for beginners
+================================================================
+The source is solid, but a few points are inconsistent or confusing for a
+first-timer. The derived deck (examples/designing-your-own-eda-library.yaml)
+applies these fixes:
+
+1. How many functions are there? (3 vs 4 vs 5)
+   Slide 3 demos 3 calls; slide 5 says "design 4 functions"; slide 13 lists 4;
+   slides 50-54 add `stats()`, making 5 in core.py and __all__.
+   FIX: state it consistently everywhere — FOUR core functions (summarize,
+   missing, numeric_columns, categorical_columns) PLUS one optional helper
+   (stats). The demo and journey slides say "four core functions."
+
+2. __init__.py is introduced three times, once under the wrong module label.
+   It appears on slide 10 (as bare-minimum #3), slide 12 (whose header wrongly
+   reads "Module 3" while sitting inside the Module 1 run), and slide 36 (its
+   real home in Module 3).
+   FIX: mention __init__.py once as a bare minimum in Module 1, then explain it
+   exactly once — in Module 3, where the folder is actually built. The stray
+   mislabeled slide is dropped.
+
+3. "Metadata" (bare-minimum #5) is unexplained where it first appears.
+   Slide 10 lists "Metadata" with no context; it is only defined in Module 5.
+   FIX: name it "Metadata — the pyproject.toml file" and point forward to
+   Module 5 so beginners aren't left guessing.
+
+4. Install-name vs import-name (hyphen vs underscore) is repeated three times
+   (slides 32, 41, 69) but never stated as one crisp rule up front.
+   FIX: state the rule once, prominently, when the folder is created:
+   "hyphens to install (pip/PyPI), underscores to import (Python)."
+
+5. `stats()` is called "optional" but then silently included in the complete
+   core.py and in __all__ — a small contradiction.
+   FIX: keep it clearly labelled the optional fifth function wherever it appears.
+
+Editorial (necessity) decisions — what was NOT reproduced 1:1:
+ - The nine near-identical "Module N checkpoint" slides are folded into a single
+   final checklist.
+ - The tagline "Build tiny. Install locally. Publish safely.", repeated on every
+   module-opener slide, becomes ONE pull-quote (the deck's mantra).
+ - Several one-line code slides (e.g. the two column-helper functions; the two
+   build commands) are combined onto a single slide each.

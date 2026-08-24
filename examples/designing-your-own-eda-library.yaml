@@ -1,0 +1,615 @@
+# Deck: "Designing your own EDA library"
+# Rebuilt with slidekit from examples/pdf/Designing your own EDA library.pdf.
+# The transcription + the logic corrections applied here are documented in
+# examples/pdf/designing-your-own-eda-library.txt (see the appendix).
+#
+# Not a 1:1 replica of the 122-slide source: repeated module taglines are folded
+# into one pull-quote, the nine per-module checkpoints into one final checklist,
+# and short single-line code slides are combined. Beginner-logic fixes: the
+# function count is stated consistently (the core EDA functions, no optional extras),
+# __init__.py is explained exactly once (in Module 3), the install-vs-import
+# naming rule is stated up front, and "metadata" points forward to pyproject.
+version: 1
+theme:
+  # "Midnight" dark scheme (operator-approved 2026-07-22, replacing the jarring
+  # all-blue-on-white of FB-074): a dark navy ground with light body text, bright-blue
+  # headlines and an amber accent — pairs naturally with the dark code panels.
+  palette:
+    primary: "#8FC1F0"    # bright python-blue — headlines pop on the dark ground
+    surface: "#0F1F2E"    # dark navy ground
+    accent: "#F0A202"     # warm amber accent
+    text: "#E7EDF3"       # near-white body text
+    muted: "#9DB0C0"      # cool grey for de-emphasis / chrome
+  type_scale:
+    title: 60
+    header: 42
+    body: 34
+    caption: 25
+  font: arial
+  motif: minimal
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+slides:
+  # ── Intro ───────────────────────────────────────────────────────────────
+  - component: title-slide
+    title: "Build Your First Library"
+
+  - component: process-steps
+    title: "The path to PyPI"
+    steps:
+      - label: "Function"
+        body: "pandas code"
+      - label: "Package"
+        body: "one folder"
+      - label: "Build"
+        body: "make a wheel"
+      - label: "Publish"
+        body: "pip install"
+
+  - component: numbered-steps
+    title: "Today's goals"
+    steps:
+      - title: "Package"
+        body: "Create a real, importable Python package."
+      - title: "Publish"
+        body: "Upload it to TestPyPI, then PyPI."
+      - title: "Install"
+        body: "pip install your own package."
+
+  # FB-053: operator wants just the line, no attribution — the question layout is the
+  # emphasis-stack single-statement variant (centred, bold, no second line).
+  - component: question
+    question: "Build tiny. Publish safely."
+
+  - component: code
+    title: "What we're building"
+    code: |
+      import pandas as pd
+      import simple_eda as eda
+
+      df = pd.read_csv("data.csv")
+      eda.summarize(df)
+      eda.missing(df)
+
+  - component: two-panel-list
+    title: "What we build now — and skip"
+    # FB: "build now" on the left, "skip for now" on the right.
+    left:
+      title: "Build now"
+      items:
+        - "One dependency: pandas"
+        - "Plain Python functions"
+        - "A clear README"
+    right:
+      title: "Skip for now"
+      items:
+        - "CI/CD"
+        - "Testing"
+        - "Many dependencies"
+
+  # ── Module 1 ────────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "01"
+    title: "What is a Python library?"
+
+  # FB-057: define "library" first, then compare it to a script (slides 8 and 9 swapped).
+  - component: definition
+    term: "Library"
+    definition: "Reusable code you install once and import anywhere."
+
+  # FB-056: drop the "Run:" / "Use:" prefixes.
+  - component: comparison-columns
+    title: "Script vs library"
+    left_title: "Script"
+    right_title: "Library"
+    left_items:
+      - text: "python analyze.py"
+      - text: "Less convenient"
+      - text: "Limited scope"
+    right_items:
+      - text: "import simple_eda"
+      - text: "More convenient"
+      - text: "Broad scope"
+
+  # FB-058: three items, not four.
+  - component: bullet-list
+    title: "A tiny library is still real"
+    items:
+      - "No web app required."
+      - "No dashboard required."
+      - "Just useful, installable, importable."
+
+  - component: bullet-list
+    title: "The five bare minimums"
+    items:
+      - "A unique package name"
+      - "A project folder"
+      - "An __init__.py file"
+      - "Your functions"
+      - "Metadata — pyproject.toml"
+
+  # ── Module 2 ────────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "02"
+    title: "Design the smallest API"
+
+  # FB-059: define "API", then "MVP", right after this divider.
+  - component: definition
+    term: "API"
+    definition: "The functions and classes users call."
+
+  - component: definition
+    term: "MVP"
+    definition: "The smallest version that is genuinely useful."
+
+  # FB-060: the caption should read "the simplest API".
+  - component: code
+    title: "the simplest API"
+    code: |
+      import simple_eda as eda
+      eda.summarize(df)
+
+  # FB-061: boring names on the LEFT; three per column.
+  - component: two-panel-list
+    title: "Pick boring function names"
+    left:
+      title: "Prefer (boring)"
+      items:
+        - "summarize"
+        - "missing"
+        - "numeric_columns"
+    right:
+      title: "Avoid (clever)"
+      items:
+        - "hyper_profile_engine"
+        - "magic_diagnose"
+        - "mega_summary"
+
+  # FB-062: retitle to name the MVP input.
+  - component: bullet-list
+    title: "MVP Input: Pandas dataframe only"
+    items:
+      - "Support pandas DataFrames first."
+      - "Not Polars, Spark, Dask, or Arrow yet."
+      - "Fewer choices means fewer bugs."
+
+  # FB-063: caption "MVP Output: Plain objects only".
+  # FB-080: name the plain object types rather than showing an actual dictionary.
+  - component: icon-text-rows
+    title: "MVP Output: Plain objects only"
+    rows:
+      - icon: braces
+        heading: "Dictionaries & lists"
+        body: "Simple built-in containers."
+      - icon: hash
+        heading: "Ints & strings"
+        body: "Plain scalar values."
+      - icon: table
+        heading: "pandas Series"
+        body: "No custom classes to learn."
+
+  # FB-064: "Never mutate the user's data" removed from the deck.
+
+  - component: bullet-list
+    title: "The 0.1.0 mindset"
+    items:
+      - "First working version, not perfect."
+      - "Installable and understandable."
+      - "Momentum, not completeness."
+
+  # ── Module 3 ────────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "03"
+    title: "Create the package folder"
+
+  - component: file-tree
+    title: "Final folder shape"
+    root: "simple-eda-project/"
+    entries:
+      - { name: "src/", depth: 0 }
+      - { name: "simple_eda/", depth: 1 }
+      - { name: "__init__.py", depth: 2 }
+      - { name: "core.py", depth: 2 }
+      - { name: "README.md", depth: 0 }
+      - { name: "pyproject.toml", depth: 0 }
+      - { name: "LICENSE", depth: 0 }
+
+  - component: two-panel-list
+    title: "Install name vs import name"
+    left:
+      title: "Install name"
+      items:
+        - "simple-eda-you"
+        - "hyphens"
+        - "used by pip & PyPI"
+    right:
+      title: "Import name"
+      items:
+        - "simple_eda"
+        - "underscores"
+        - "used in Python code"
+
+  # FB-082: why the two names differ — the value/importance behind the rule.
+  - component: bullet-list
+    title: "Why the names differ"
+    items:
+      - "import needs a valid Python name."
+      - "Python names cannot contain hyphens."
+      - "So the import name uses underscores."
+      - "PyPI treats - and _ as the same name."
+
+  # FB-066: "Make it in the terminal" removed from the deck.
+
+  - component: definition
+    term: "__init__.py"
+    definition: "Marks a folder as an importable package."
+
+  - component: bullet-list
+    title: "Why the src/ layout?"
+    items:
+      - "Blocks accidental root imports."
+      - "Matches modern Python projects."
+      - "Makes packaging behavior clear."
+
+  - component: bullet-list
+    title: "Common folder mistakes"
+    items:
+      - "pyproject.toml in the wrong folder."
+      - "Forgetting __init__.py."
+      - "Folder named simple-eda, not simple_eda."
+      - "Installing from the wrong directory."
+
+  # FB-083: what actually goes wrong when each mistake is made.
+  - component: table-slide
+    title: "What each mistake causes"
+    headers: ["Mistake", "What happens"]
+    rows:
+      - ["No __init__.py", "import cannot find it"]
+      - ["Hyphen in folder", "invalid module name"]
+      - ["pyproject misplaced", "build finds nothing"]
+      - ["Wrong directory", "ModuleNotFoundError"]
+
+  # ── Module 4 ────────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "04"
+    title: "Write the EDA functions"
+
+  # FB-084: no grey title on this slide — the code speaks for itself.
+  - component: code
+    code: |
+      def summarize(df):
+          return {
+              "rows": len(df),
+              "columns": len(df.columns),
+              "names": list(df.columns),
+          }
+
+  # FB-067: drop to three functions (removed the optional `stats`).
+  - component: bullet-list
+    title: "The core functions"
+    items:
+      - "summarize — shape, columns, types"
+      - "missing — nulls per column"
+      - "numeric_columns / categorical_columns"
+
+  # FB-085: show a simple output example beneath the function.
+  - component: code
+    title: "missing()"
+    code: |
+      def missing(df):
+          counts = df.isna().sum()
+          return counts.sort_values(
+              ascending=False)
+
+      # missing(df) ->
+      # age     2
+      # name    1
+
+  - component: code
+    title: "numeric & categorical columns"
+    chrome: false
+    code: |
+      def numeric_columns(df):
+          sel = df.select_dtypes(
+              include="number")
+          return list(sel.columns)
+
+      def categorical_columns(df):
+          sel = df.select_dtypes(
+              include=["object", "category"])
+          return list(sel.columns)
+
+  # FB-112/113: the "Expose the public API" code slide and its explainer were
+  # removed at the operator's request.
+  - component: code
+    title: "Try it on a tiny DataFrame"
+    code: |
+      import simple_eda as eda
+
+      df = pd.DataFrame({
+          "name": ["Ana", "Bo", None],
+          "age": [25, None, 31],
+      })
+      print(eda.summarize(df))
+      print(eda.missing(df))
+
+  - component: two-panel-list
+    title: "Function do's and don'ts"
+    # FB-068: "Do" first (left), "Don't" second (right).
+    left:
+      title: "Do"
+      items:
+        - "Return data"
+        - "Use plain dicts / Series"
+        - "Keep signatures small"
+        - "One job per function"
+    right:
+      title: "Don't"
+      items:
+        - "Change df in place"
+        - "Print instead of return"
+        - "Add many optional args"
+        - "One function for everything"
+
+  # FB-087: compare the final row's two concepts — one job vs one big function.
+  - component: two-panel-list
+    title: "One job vs everything"
+    left:
+      title: "One job each"
+      items:
+        - "Small and focused"
+        - "Easy to test"
+        - "Easy to reuse"
+    right:
+      title: "One big function"
+      items:
+        - "Hard to follow"
+        - "Hard to test"
+        - "Breaks more often"
+
+  # FB-087: also define "signature", referenced in the API and the do's.
+  - component: definition
+    term: "Signature"
+    definition: "A function name plus the parameters it takes."
+
+  # ── Module 5 ────────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "05"
+    title: "Add pyproject.toml"
+
+  - component: bullet-list
+    title: "What pyproject.toml does"
+    items:
+      - "Names your package and version."
+      - "Lists dependencies."
+      - "Tells build tools how to build."
+
+  # FB-114: define "build tools".
+  - component: definition
+    term: "Build tools"
+    definition: "Tools that turn source into installable packages."
+
+  - component: code
+    title: "Minimal pyproject.toml"
+    chrome: false
+    code: |
+      [build-system]
+      requires = ["setuptools>=61"]
+      build-backend = "setuptools.build_meta"
+
+      [project]
+      name = "simple-eda-yourname"
+      version = "0.1.0"
+      description = "Tiny EDA helper"
+      dependencies = ["pandas>=1.5"]
+
+  # FB-115: name the language pyproject.toml is written in.
+  - component: definition
+    term: "TOML"
+    definition: "The simple key = value format pyproject uses."
+
+  - component: table-slide
+    title: "Version numbers"
+    headers: ["Version", "Means"]
+    rows:
+      - ["0.1.0", "First working version"]
+      - ["0.1.1", "A small fix"]
+      - ["0.2.0", "A new feature"]
+      - ["1.0.0", "Stable and public"]
+
+  # FB-116: explain semantic versioning (operator's wording, verbatim).
+  - component: definition
+    term: "MAJOR.MINOR.PATCH"
+    definition: "Each of the three numbers is a non-negative integer."
+
+  - component: code
+    title: "README: install & use"
+    chrome: false
+    code: |
+      # simple-eda-yourname
+      Tiny EDA helper for pandas.
+
+      ## Install
+      pip install simple-eda-yourname
+
+      ## Use
+      import simple_eda as eda
+      print(eda.summarize(df))
+
+  - component: bullet-list
+    title: "License basics"
+    items:
+      - "Says what others may do with your code."
+      - "MIT is common for small projects."
+      - "Use an official template."
+      - "Never invent your own license text."
+
+  # ── Module 6 ────────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "06"
+    title: "Install locally with pip"
+
+  - component: code
+    title: "Install in editable mode"
+    chrome: false
+    code: |
+      # run from the folder with pyproject.toml
+      python -m pip install -e .
+
+  - component: bullet-list
+    title: "What -e (editable) means"
+    items:
+      - "Links pip to your source folder."
+      - "Code edits apply instantly."
+      - "No reinstall while developing."
+
+  - component: code
+    title: "Smoke-test the import"
+    chrome: false
+    code: |
+      >>> import simple_eda as eda
+      >>> eda.__all__
+      ['summarize', 'missing', ...]
+
+  - component: two-panel-list
+    title: "When the import fails"
+    left:
+      title: "Symptom"
+      items:
+        - "ModuleNotFoundError"
+        - "Wrong folder"
+        - "Wrong environment"
+    right:
+      title: "Fix"
+      items:
+        - "Run pip install -e ."
+        - "cd to the project root"
+        - "Use python -m pip"
+
+  # ── Module 7 ────────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "07"
+    title: "Build a real package file"
+
+  - component: code
+    title: "Build the artifacts"
+    chrome: false
+    code: |
+      python -m pip install build
+      python -m build
+
+  - component: code
+    title: "The dist/ folder"
+    chrome: false
+    code: |
+      dist/
+      ├── simple_eda_yourname-0.1.0.tar.gz
+      └── simple_eda_yourname-0.1.0-...whl
+
+  - component: two-panel-list
+    title: "Wheel vs source distribution"
+    left:
+      title: "Source (.tar.gz)"
+      items:
+        - "A source archive"
+        - "Used as a fallback"
+    right:
+      title: "Wheel (.whl)"
+      items:
+        - "Prebuilt, fast install"
+        - "What most users get"
+
+  - component: bullet-list
+    title: "Keep build output out of git"
+    items:
+      - "dist/, build/, *.egg-info are generated."
+      - "Add them to .gitignore."
+      - "Bump the version before rebuilding."
+
+  # ── Module 8 ────────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "08"
+    title: "Publish safely"
+
+  - component: bullet-list
+    title: "Why TestPyPI first?"
+    items:
+      - "A practice package index."
+      - "Rehearse upload and install commands."
+      - "Mistakes are cheap here."
+
+  - component: numbered-steps
+    title: "The upload flow"
+    steps:
+      - title: "Check"
+        body: "python -m twine check dist/*"
+      - title: "TestPyPI"
+        body: "twine upload --repository testpypi dist/*"
+      - title: "PyPI"
+        body: "twine upload dist/* — only after TestPyPI works."
+
+  - component: code
+    title: "Install from TestPyPI"
+    chrome: false
+    code: |
+      # install from TestPyPI
+      pip install \
+        -i https://test.pypi.org/simple/ \
+        --extra-index-url \
+          https://pypi.org/simple/ \
+        simple-eda-yourname
+
+  - component: bullet-list
+    title: "Publishing safety"
+    items:
+      - "Use API tokens, not passwords."
+      - "Never commit tokens or secrets."
+      - "Fewer deps, less attack surface."
+      - "Beware typosquatting."
+
+  # ── Module 9 ────────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "09"
+    title: "Use, improve & share"
+
+  - component: two-panel-list
+    title: "What to add — and avoid"
+    left:
+      title: "Avoid early"
+      items:
+        - "Full HTML reports"
+        - "Plugin systems"
+        - "Every dataframe backend"
+        - "AI-generated analysis"
+    right:
+      title: "Good next steps"
+      items:
+        - "quick_report()"
+        - "top_categories()"
+        - "column_summary()"
+        - "duplicate_rows()"
+
+  - component: code
+    title: "Add a tiny test"
+    code: |
+      def test_numeric_columns():
+          df = pd.DataFrame(
+              {"name": ["A"], "age": [10]})
+          cols = eda.numeric_columns(df)
+          assert cols == ["age"]
+
+  - component: bullet-list
+    title: "Final checklist"
+    items:
+      - "Package files all exist."
+      - "pip install -e . works."
+      - "python -m build works."
+      - "twine check dist/* passes."
+      - "README has install + usage."
+
+  - component: big-number
+    value: "0.1.0"
+    label: "Ship your first version"
+    context: "Four functions, importable, published."

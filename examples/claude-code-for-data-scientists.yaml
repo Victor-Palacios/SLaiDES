@@ -7,33 +7,26 @@ theme:
     text: "#1A1A2E"
     muted: "#8A8A9A"
   type_scale:
-    title: 60
+    title: 66
     header: 42
     body: 34
     caption: 25
   font: arial
   motif: minimal
+  # FB-091: slide titles/headlines use the deck beige (accent) instead of the dark teal.
+  headline: accent
 page_numbers:
   enabled: true
   start_at: 1
   skip_title_slide: true
 slides:
+  # FB-091: big beige title, no subheader.
   - component: title-slide
     title: "Claude Code"
-    subtitle: "A field guide for data scientists"
-
-  - component: agenda
-    title: "What We Will Cover"
-    items:
-      - "What Claude Code is"
-      - "How it differs from chat"
-      - "Getting set up"
-      - "Everyday data science workflows"
-      - "Habits that make it shine"
 
   - component: definition
     term: "Claude Code"
-    definition: "An AI agent that writes and runs your code."
+    definition: "A terminal AI agent that writes and runs your code."
 
   - component: this-vs-that
     title: "Chat vs Agent"
@@ -57,18 +50,9 @@ slides:
         heading: "Iterate"
         body: "Check outputs and fix its own errors."
 
-  - component: numbered-steps
-    title: "Set Up in Three Steps"
-    steps:
-      - title: "Install"
-        body: "npm install -g @anthropic-ai/claude-code"
-      - title: "Open your project"
-        body: "cd into the repo and run claude."
-      - title: "Ask for an analysis"
-        body: "Describe the outcome; it plans the code."
-
+  # FB-094: retitled "a first session" -> "Terminal Use".
   - component: code
-    title: "a first session"
+    title: "Terminal Use"
     chrome: true
     code: |
       $ cd sales-analysis && claude
@@ -108,30 +92,22 @@ slides:
       - label: "Verify"
         body: "Checks results, then iterates."
 
-  - component: nested-circles
-    title: "One Prompt, a Whole Pipeline"
-    stages:
-      - value: ">10M"
-        label: "Raw rows"
-      - value: "1.2M"
-        label: "Clean rows"
-      - value: "100K"
-        label: "Sample"
-
+  # FB-096: the "With Claude Code" panel carries the beige accent, not grey.
   - component: two-panel-list
     title: "A Typical Day, Reworked"
+    accent_side: right
     left:
       title: "Before"
       items:
         - "Boilerplate pandas by hand"
         - "Stack Overflow detours"
-        - "Stale, undocumented notes"
+        - "Stale notebooks"
     right:
       title: "With Claude Code"
       items:
         - "Describe the outcome"
         - "Errors debugged in place"
-        - "Analysis committed"
+        - "Committed with notes"
 
   - component: table-slide
     title: "Commands Worth Knowing"
@@ -142,6 +118,18 @@ slides:
       - ["/compact", "Trim the context"]
       - ["claude -p", "One-shot mode"]
 
+  # FB-097: explain the two commands that most need it.
+  - component: icon-text-rows
+    title: "Two Commands, Up Close"
+    rows:
+      - icon: doc
+        heading: "/init"
+        body: "Scans your project, writes a starter CLAUDE.md."
+      - icon: bolt
+        heading: "claude -p"
+        body: "One-shot: run a prompt, print the answer, exit."
+    source: "https://code.claude.com/docs/en/cli-reference"
+
   - component: bullet-list
     title: "Habits That Make It Shine"
     items:
@@ -150,9 +138,252 @@ slides:
       - "Have it verify outputs, not just run."
       - "Commit small, reviewable steps."
 
-  - component: question
-    question: "What if setup vanished?"
+  # ── Section 1: surfaces ──────────────────────────────────────────────────
+  - component: section-divider
+    number: "01"
+    title: "One Claude, Many Surfaces"
 
-  - component: title-slide
-    title: "Start Today"
-    subtitle: "Open a terminal and ask"
+  - component: bullet-list
+    title: "Same Engine, Everywhere"
+    items:
+      - "One engine: terminal, IDE, desktop, web."
+      - "Your CLAUDE.md and MCP servers come too."
+      - "Start on the laptop, finish on your phone."
+    source: "https://code.claude.com/docs/en/overview"
+
+  # FB-099: dropped the "Best for" row.
+  - component: comparison-matrix
+    title: "Three Ways to Run It"
+    options: ["Terminal", "Web", "Desktop"]
+    criteria: ["Runs on", "Setup"]
+    cells:
+      - ["Your machine", "The cloud", "Your machine"]
+      - ["Install CLI", "None", "Install app"]
+    highlights:
+      - [1, 1]
+    source: "https://code.claude.com/docs/en/overview"
+
+  - component: icon-text-rows
+    title: "On the Internet"
+    rows:
+      - icon: cloud
+        heading: "Cloud-run"
+        body: "Runs at claude.ai/code on Anthropic's cloud."
+      - icon: lock
+        heading: "Isolated"
+        body: "Each task gets its own sandbox VM."
+      - icon: loop
+        heading: "Persistent"
+        body: "Keeps running after you close the tab."
+    source: "https://code.claude.com/docs/en/claude-code-on-the-web"
+
+  - component: bullet-list
+    title: "Claude Desktop"
+    items:
+      - "A standalone app, no terminal needed."
+      - "Review diffs, run sessions side by side."
+      - "Schedule repeats and start cloud runs."
+    source: "https://code.claude.com/docs/en/desktop"
+
+  # ── Section 2: phone + GitHub ────────────────────────────────────────────
+  - component: section-divider
+    number: "02"
+    title: "Drive It From Your Phone"
+
+  - component: numbered-steps
+    title: "Connect GitHub"
+    steps:
+      - title: "Sign in"
+        body: "Open claude.ai/code and log in."
+      - title: "Link GitHub"
+        body: "Grant access to the repos you choose."
+      - title: "Pick a repo"
+        body: "Claude clones it into a cloud sandbox."
+    source: "https://code.claude.com/docs/en/web-quickstart"
+
+  - component: numbered-steps
+    title: "Start a Task Anywhere"
+    steps:
+      - title: "Describe it"
+        body: "Type the task in the Claude mobile app."
+      - title: "Let it run"
+        body: "Work continues in the background."
+      - title: "Review"
+        body: "Approve the branch Claude pushes."
+    source: "https://code.claude.com/docs/en/mobile"
+
+  # FB-101: removed the trailing "claude --teleport" line.
+  - component: bullet-list
+    title: "Remote Control"
+    items:
+      - "Step away and work from your phone."
+      - "Continue a live session from any browser."
+    source: "https://code.claude.com/docs/en/remote-control"
+
+  # FB-102: code title is title-cased.
+  - component: code
+    title: "Move Between Surfaces"
+    chrome: true
+    code: |
+      $ claude --cloud
+        Runs this task in the cloud.
+
+      > Pick it up later, anywhere:
+      $ claude --teleport
+
+        One session follows you across
+        laptop, phone, and browser.
+
+  # ── Section 3: MCP ───────────────────────────────────────────────────────
+  - component: section-divider
+    number: "03"
+    title: "MCP: Plug In Your Tools"
+
+  - component: definition
+    term: "MCP"
+    definition: "An open standard linking AI tools to your data."
+    source: "https://www.anthropic.com/news/model-context-protocol"
+
+  - component: bullet-list
+    title: "What MCP Unlocks"
+    items:
+      - "Read design docs from Google Drive."
+      - "Update Jira, pull data from Slack."
+      - "Query your own database and APIs."
+    source: "https://code.claude.com/docs/en/mcp"
+
+  # FB-103: concrete examples + why MCP beats no MCP.
+  - component: two-panel-list
+    title: "Without MCP vs With MCP"
+    accent_side: right
+    left:
+      title: "Without MCP"
+      items:
+        - "Paste data in by hand"
+        - "Screenshot dashboards"
+        - "Describe your schema"
+    right:
+      title: "With MCP"
+      items:
+        - "Claude queries the DB"
+        - "Reads the ticket itself"
+        - "Always current data"
+    source: "https://code.claude.com/docs/en/mcp"
+
+  # FB-104: retitled.
+  - component: table-slide
+    title: "Servers You Can (normally) Connect to"
+    headers: ["Server", "What Claude can do"]
+    rows:
+      - ["Drive", "Read design docs"]
+      - ["Jira", "Update tickets"]
+      - ["Slack", "Pull conversations"]
+      - ["Postgres", "Query your data"]
+    source: "https://code.claude.com/docs/en/mcp"
+
+  # ── Section 4: customize ─────────────────────────────────────────────────
+  # FB-105: "Make Claude Yours" -> "Customize Claude".
+  - component: section-divider
+    number: "04"
+    title: "Customize Claude"
+
+  - component: definition
+    term: "CLAUDE.md"
+    definition: "A project file Claude reads every session."
+    source: "https://code.claude.com/docs/en/memory"
+
+  - component: bullet-list
+    title: "What Goes in CLAUDE.md"
+    items:
+      - "Coding standards and libraries."
+      - "Architecture and key commands."
+      - "Review checklists and data caveats."
+    source: "https://code.claude.com/docs/en/memory"
+
+  # FB-106: an example of what to put in the file...
+  - component: code
+    title: "Example CLAUDE.md"
+    chrome: false
+    code: |
+      # sales-analysis project
+      - Use pandas, not polars.
+      - Raw data lives in data/.
+      - Never commit the CSVs.
+      - Tests: pytest -q
+      - Plots: matplotlib only.
+
+  # FB-106: ...then the common problems to beware.
+  - component: bullet-list
+    title: "CLAUDE.md Pitfalls"
+    items:
+      - "Too long crowds the context."
+      - "Stale rules Claude still obeys."
+      - "Vague advice it cannot act on."
+      - "Secrets do not belong here."
+    source: "https://code.claude.com/docs/en/memory"
+
+  - component: definition
+    term: "Skills"
+    definition: "Reusable instruction folders, loaded on demand."
+    source: "https://code.claude.com/docs/en/skills"
+
+  # FB-107: "Skills" -> "Skills.md" in the title and the right column.
+  - component: two-panel-list
+    title: "CLAUDE.md vs Skills.md"
+    left:
+      title: "CLAUDE.md"
+      items:
+        - "Always in context"
+        - "Project-wide rules"
+        - "One file at the root"
+    right:
+      title: "Skills.md"
+      items:
+        - "Loaded on demand"
+        - "A packaged workflow"
+        - "Shared across projects"
+    source: "https://code.claude.com/docs/en/skills"
+
+  # ── Section 5: more from Claude (FB-109) ─────────────────────────────────
+  - component: section-divider
+    number: "05"
+    title: "More From Claude"
+
+  - component: definition
+    term: "Cowork"
+    definition: "Claude Code in Claude Desktop, for non-code work."
+    source: "https://www.anthropic.com/product/claude-cowork"
+
+  - component: bullet-list
+    title: "What Cowork Does"
+    items:
+      - "Reads and edits files you choose."
+      - "Works across Slack and Google Drive."
+      - "Finishes multi-step tasks, with citations."
+    source: "https://www.anthropic.com/product/claude-cowork"
+
+  - component: definition
+    term: "Artifacts"
+    definition: "Shareable code, docs and apps built beside chat."
+    source: "https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them"
+
+  - component: two-panel-list
+    title: "Memory > Chat Search"
+    accent_side: left
+    left:
+      title: "Memory"
+      items:
+        - "Learns your context"
+        - "Persists across chats"
+        - "Separate per project"
+    right:
+      title: "Chat search"
+      items:
+        - "Looks up old chats"
+        - "Only when you ask"
+        - "One lookup at a time"
+    source: "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
+
+  # ── Close (FB-108: new call to action; FB-109: old title slide removed) ──
+  - component: question
+    question: "Build it from our phones."

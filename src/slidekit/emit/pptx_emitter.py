@@ -1,8 +1,10 @@
 """PPTX emitter — places every resolved node at its EMU rect.
 
 Auto-fit is disabled (our layout already did the fitting). Word-wrap is enabled
-to match the wrap() assumptions. Theme colors are written as literal RGB — no
-reliance on the pptx theme part.
+only for nodes we genuinely wrapped into multiple lines; single-line nodes have
+wrap OFF so a foreign renderer (e.g. Google Slides) can't re-wrap a box sized to
+our exact metrics. Theme colors are written as literal RGB — no reliance on the
+pptx theme part.
 
 Text in a layout is emitted as a real placeholder, so a slide that picks the
 layout up in PowerPoint or Google Slides gets editable text slots rather than a
@@ -43,9 +45,22 @@ if TYPE_CHECKING:
     from slidekit.layout.models import ResolvedDeck, ResolvedNode
 
 from slidekit.metrics.constants import (
+    EMU_PER_INCH,
+    INSET_LEFT_EMU,
+    INSET_RIGHT_EMU,
     INSET_TOP_EMU,
     INSET_BOTTOM_EMU,
 )
+from slidekit.metrics.measure import measure_text
+
+# A single line's textbox is sized to the exact glyph width we measured with our
+# bundled metrics. Google Slides ignores the PPTX `wrap="none"` flag and re-lays
+# text with its own (slightly wider) Arial, so a snug box wraps — even mid-word
+# ("Sourc"/"e"). Give every single-line box this much horizontal head-room so a
+# foreign renderer still keeps the line intact. 1.6× comfortably clears the ~1–20%
+# metric drift we observed; the extra width is invisible (boxes have no fill and
+# text stays anchored by its alignment).
+_SINGLE_LINE_SLACK = 1.6
 
 # Map lowercase internal font names → PowerPoint display names.
 _PPTX_FONT_NAME: dict[str, str] = {
@@ -86,10 +101,10 @@ _RESERVED_PH_IDX = {10, 11, 12}
 # design can edit them. Images are excluded: a picture is a <p:pic>, not a shape.
 _PROMOTABLE = ("text", "box", "ellipse", "icon")
 
-# The page-number chrome node, emitted as a live <a:fld> slide-number field rather
-# than baked-in digits so it renumbers when slides move, or are added or deleted.
-_PAGENUM_NODE_PREFIX = "chrome_pagenum"
-_SLDNUM_PH_IDX = 12  # the stock template's slide-number placeholder index
+# The stock template's slide-number placeholder index. The page-number node is
+# emitted as a live <a:fld type="slidenum"> (see _make_slidenum_field) inside a
+# placeholder with this idx, so it renumbers when slides move or are deleted.
+_SLDNUM_PH_IDX = 12
 
 # Placeholders inherited from the stock Blank layout. slidekit binds no content to
 # placeholders and their geometry is sized for the template's 4:3 canvas, so they
@@ -162,35 +177,6 @@ def _strip_inherited_placeholders(layout_el, canvas_w: int, canvas_h: int) -> No
             xfrm = spPr.get_or_add_xfrm()
             xfrm.get_or_add_off().x, xfrm.get_or_add_off().y = rect.x, rect.y
             xfrm.get_or_add_ext().cx, xfrm.get_or_add_ext().cy = rect.w, rect.h
-
-
-def _make_slide_number_field(sp, text: str) -> None:
-    """Rewrite a drawn text box into a live slide-number placeholder.
-
-    Literal digits are wrong the moment a slide moves or another is inserted, so
-    the run becomes an <a:fld type="slidenum"> inside a sldNum placeholder — the
-    structure PowerPoint and Google Slides both recognise as *the* slide number
-    and renumber automatically. The <a:t> is only what a renderer shows before it
-    evaluates the field; the field itself is the source of truth.
-    """
-    _promote_to_placeholder(sp, "sldNum", _SLDNUM_PH_IDX)
-
-    # Swap the run element for a field carrying the same run properties, so the
-    # chrome keeps its font, size and muted colour.
-    for para in sp.findall(qn("p:txBody") + "/" + qn("a:p")):
-        run = para.find(qn("a:r"))
-        if run is None:
-            continue
-        fld = para.makeelement(qn("a:fld"), {})
-        fld.set("id", "{1F2E3D4C-5B6A-4978-8765-43210FEDCBA9}")
-        fld.set("type", "slidenum")
-        rPr = run.find(qn("a:rPr"))
-        if rPr is not None:
-            fld.append(rPr)
-        t = fld.makeelement(qn("a:t"), {})
-        t.text = text
-        fld.append(t)
-        para.replace(run, fld)
 
 
 def _promote_to_placeholder(sp, ph_type: str, idx: Optional[int]) -> None:
@@ -364,6 +350,13 @@ def emit_pptx(
     # while measuring 16:9. Say what we actually are.
     prs.part._element.sldSz.set("type", "screen16x9")
 
+    # Align the deck-wide slide-number origin with the deck's `start_at` so the
+    # auto-updating page-number fields (emitted below) display slidekit's numbers.
+    # slidekit's page number for physical slide P is P-1 + start_at, and the field
+    # shows P-1 + firstSlideNum, so firstSlideNum == start_at makes them equal.
+    if deck.page_numbers.enabled and deck.page_numbers.start_at != 1:
+        prs.part._element.set("firstSlideNum", str(deck.page_numbers.start_at))
+
     component_layouts = _build_component_layouts(prs, deck)
     blank = _blank_layout(prs)
     palette = deck.theme.palette
@@ -384,27 +377,27 @@ def emit_pptx(
 
         for node in rs.nodes + rs.chrome:
             before = len(slide.shapes._spTree)
-            _emit_node(slide, node, palette)
-            if (
-                str(node.node_id).startswith(_PAGENUM_NODE_PREFIX)
-                and len(slide.shapes._spTree) > before
-            ):
-                _make_slide_number_field(
-                    slide.shapes._spTree[-1], node.text_content or ""
+            _emit_node(slide, node, palette, canvas_w)
+            # The <a:fld> alone renumbers, but wrapping it in a sldNum placeholder
+            # is what marks it as *the* slide number, so PowerPoint and Google
+            # Slides treat it as chrome rather than an ordinary text box.
+            if node.field == "slidenum" and len(slide.shapes._spTree) > before:
+                _promote_to_placeholder(
+                    slide.shapes._spTree[-1], "sldNum", _SLDNUM_PH_IDX
                 )
 
     prs.save(str(output_path))
     return output_path
 
 
-def _emit_node(slide, node: "ResolvedNode", palette) -> None:
+def _emit_node(slide, node: "ResolvedNode", palette, canvas_w: int = 12192000) -> None:
     rect = node.rect
     if node.node_type == "box":
         _emit_box(slide, node, palette)
     elif node.node_type == "ellipse":
         _emit_box(slide, node, palette, shape=MSO_SHAPE.OVAL)
     elif node.node_type == "text":
-        _emit_text(slide, node, palette)
+        _emit_text(slide, node, palette, canvas_w)
     elif node.node_type == "icon":
         _emit_icon(slide, node, palette)
     elif node.node_type == "image":
@@ -438,13 +431,44 @@ def _emit_box(slide, node: "ResolvedNode", palette, shape=None) -> None:
     shape.shadow.inherit = False
 
 
-def _emit_text(slide, node: "ResolvedNode", palette) -> None:
+def _emit_text(slide, node: "ResolvedNode", palette, canvas_w: int = 12192000) -> None:
     rect = node.rect
-    txBox = slide.shapes.add_textbox(
-        Emu(rect.x), Emu(rect.y), Emu(rect.w), Emu(rect.h)
-    )
+    single_line = len(node.lines) <= 1
+
+    # Box geometry. For a single-line node, widen the frame so a renderer that
+    # ignores wrap="none" (Google Slides) and re-lays text with slightly-wider
+    # metrics still keeps the line intact rather than wrapping it — the garbled
+    # code slides, the "Sourc / e" citation, and the split "0 1" step numerals all
+    # came from Google wrapping a box sized to our exact metrics. The text stays
+    # anchored by its alignment, so the extra width is invisible; we only add
+    # head-room when the box is snug (already-wide boxes are left untouched) and
+    # clamp to the canvas so nothing runs off-slide.
+    x, w = rect.x, rect.w
+    if single_line and (node.text_content or "").strip():
+        size_pt_meas = node.size_pt or 32.0
+        try:
+            text_w = measure_text(node.text_content, node.font or "arial",
+                                  size_pt_meas, node.bold, node.italic)
+        except Exception:
+            text_w = None
+        if text_w:
+            want = int(text_w * _SINGLE_LINE_SLACK) + INSET_LEFT_EMU + INSET_RIGHT_EMU
+            if want > w:
+                if node.align == "center":
+                    # Grow symmetrically so the text stays centred; clamp on-canvas.
+                    x = max(0, x - (want - w) // 2)
+                    w = min(want, canvas_w - x)
+                else:
+                    # Left-anchored (incl. code runs at an exact x): never move x,
+                    # only extend rightward, up to the canvas edge.
+                    w = min(want, canvas_w - x)
+
+    txBox = slide.shapes.add_textbox(Emu(x), Emu(rect.y), Emu(w), Emu(rect.h))
     tf = txBox.text_frame
-    tf.word_wrap = True
+    # Word-wrap only for nodes our layout genuinely wrapped into >1 line; single
+    # lines keep wrap off (belt-and-braces with the width slack above, and correct
+    # for renderers that DO honour wrap="none").
+    tf.word_wrap = not single_line
     tf.auto_size = MSO_AUTO_SIZE.NONE
     # Horizontal insets are zero so glyphs start at exactly rect.x. The layout
     # engine measures every run from rect.x and draws boxes there too, so a left
@@ -478,6 +502,34 @@ def _emit_text(slide, node: "ResolvedNode", palette) -> None:
     run.font.bold = node.bold
     run.font.italic = node.italic
     run.font.color.rgb = RGBColor(r, g, b)
+    # A hyperlinked text node (e.g. the bottom-right "Source" citation) becomes a
+    # clickable run; underline gives the usual link affordance. The node's own
+    # text_color is preserved (set above) rather than PowerPoint's default link blue.
+    if node.href:
+        run.hyperlink.address = node.href
+        run.font.underline = True
+    # An auto-updating presentation field (the page number): turn the run element
+    # into <a:fld type="slidenum">, keeping the run's formatting (rPr) and its text
+    # as the initial value. PowerPoint and Google Slides both recognise this field
+    # and renumber it live when slides are moved or added — unlike a static run.
+    if node.field == "slidenum":
+        _make_slidenum_field(run)
+
+
+# A fixed GUID is fine for slide-number fields — PowerPoint/Google key off the
+# `type`, not per-field uniqueness, and reuse one id across slide-number fields.
+_SLIDENUM_FLD_ID = "{4B0E1F8A-6C1D-4E2A-9F3B-7A5C8D2E1F60}"
+
+
+def _make_slidenum_field(run) -> None:
+    """Rewrite a built run's <a:r> element as an <a:fld type="slidenum"> in place,
+    preserving its <a:rPr> formatting and <a:t> text (the field's initial value)."""
+    from pptx.oxml.ns import qn
+
+    r = run._r
+    r.tag = qn("a:fld")
+    r.set("id", _SLIDENUM_FLD_ID)
+    r.set("type", "slidenum")
 
 
 def _emit_icon(slide, node: "ResolvedNode", palette) -> None:

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1",
+          "node_id": "title_18",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#4A148C"
         },
         {
-          "node_id": "left_head_2",
+          "node_id": "left_head_19",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -56,7 +56,7 @@
           "text_color": "#4A148C"
         },
         {
-          "node_id": "right_head_3",
+          "node_id": "right_head_20",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -80,7 +80,7 @@
           "text_color": "#4A148C"
         },
         {
-          "node_id": "left_item_4",
+          "node_id": "left_item_21",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -103,7 +103,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_5",
+          "node_id": "right_item_22",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -126,7 +126,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_6",
+          "node_id": "left_item_23",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -149,7 +149,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_7",
+          "node_id": "right_item_24",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -172,7 +172,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_8",
+          "node_id": "left_item_25",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -195,7 +195,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_9",
+          "node_id": "right_item_26",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -220,7 +220,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_10",
+          "node_id": "chrome_pagenum_27",
           "node_type": "text",
           "rect": {
             "x": 10363200,

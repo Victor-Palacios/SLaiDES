@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_253",
+          "node_id": "title_235",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#0D47A1"
         },
         {
-          "node_id": "vs_value_254",
+          "node_id": "vs_value_236",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -56,7 +56,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_label_255",
+          "node_id": "vs_label_237",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -80,7 +80,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_value_256",
+          "node_id": "vs_value_238",
           "node_type": "text",
           "rect": {
             "x": 6941820,
@@ -104,7 +104,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_label_257",
+          "node_id": "vs_label_239",
           "node_type": "text",
           "rect": {
             "x": 6941820,
@@ -128,7 +128,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_text_258",
+          "node_id": "vs_text_240",
           "node_type": "text",
           "rect": {
             "x": 5524500,
@@ -155,7 +155,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_259",
+          "node_id": "chrome_pagenum_241",
           "node_type": "text",
           "rect": {
             "x": 10363200,

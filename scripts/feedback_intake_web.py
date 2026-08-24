@@ -11,6 +11,9 @@ processed inbox files.
 Verdict handling — FEEDBACK.yaml (the build sessions' work queue):
   * bad / note, or any non-empty comment  -> an actionable `open` comment in FEEDBACK.yaml
     (the comment text is prefixed with 👍/👎/📝 so the verdict survives)
+  * add-before / add-after (deck review)   -> an actionable `open` comment prefixed with
+    ➕⬆/➕⬇; a request to insert a NEW slide before/after the marked slide, with the
+    comment describing the wanted slide. Always slide-scoped (carries deck + slide index).
   * a bare 👍 with no comment              -> positive signal only; not recorded as an open
     task (it would only add non-actionable noise)
 
@@ -48,9 +51,16 @@ INBOX = ROOT / "web" / "feedback-inbox"
 STATE_JSON = ROOT / "web" / "data" / "state.json"
 PREVIEWS_JSON = ROOT / "web" / "data" / "previews.json"
 
-_PREFIX = {"good": "👍", "bad": "👎", "note": "📝"}
-_DEFAULT_TEXT = {"good": "looks good", "bad": "needs work", "note": "note"}
+# "add-before"/"add-after" are deck-review requests to insert a NEW slide at that
+# position; the comment describes the wanted slide. The prefix keeps the direction
+# visible in FEEDBACK.yaml so a build session knows where to insert.
+_PREFIX = {"good": "👍", "bad": "👎", "note": "📝",
+           "add-before": "➕⬆", "add-after": "➕⬇"}
+_DEFAULT_TEXT = {"good": "looks good", "bad": "needs work", "note": "note",
+                 "add-before": "add a new slide before this one",
+                 "add-after": "add a new slide after this one"}
 _FRAGMENT_KEYS = ("width_px", "height_px", "background", "nodes_html")
+_SCOPES = ("layout", "slide")
 
 
 # ── review state (web/data/state.json) ─────────────────────────────────────────────
@@ -115,14 +125,24 @@ def actionable_items(record: dict) -> tuple[list[dict], int, list[str]]:
             continue
         text = comment or _DEFAULT_TEXT[verdict]
         severity = it.get("severity") if it.get("severity") in ("low", "med", "high") else "med"
-        items.append(
-            {
-                "component": comp,
-                "comment": f"{_PREFIX[verdict]} {text}",
-                "severity": severity,
-                "source": source,
-            }
-        )
+        # Scope routing: "slide" marks (from the deck-review page) are deck-specific and
+        # carry the deck stem + 1-based slide index; anything malformed degrades to a
+        # reusable "layout" comment so the store's validator can never reject the batch.
+        scope = it.get("scope") if it.get("scope") in _SCOPES else "layout"
+        deck, slide = it.get("deck"), it.get("slide")
+        item = {
+            "component": comp,
+            "comment": f"{_PREFIX[verdict]} {text}",
+            "severity": severity,
+            "source": source,
+            "scope": scope,
+        }
+        if scope == "slide" and deck and isinstance(slide, int) and slide >= 1:
+            item["deck"] = deck
+            item["slide"] = slide
+        else:
+            item["scope"] = "layout"
+        items.append(item)
     return items, positives, skipped
 
 
@@ -162,11 +182,16 @@ def fold(
         all_skipped += skipped
         if items:
             fb = store.merge(fb, items, today=_record_date(record))
-        # Review state: every valid verdict (including bare 👍) updates state.
+        # Review state: every valid LAYOUT verdict (including bare 👍) updates the layout
+        # review queue. Slide-scoped marks are deck-specific — they must never approve or
+        # flag the reusable layout, so they leave state.json untouched.
         date = _record_date(record)
         for it in record.get("items", []):
             comp = it.get("component")
             verdict = it.get("verdict")
+            scope = it.get("scope") if it.get("scope") in _SCOPES else "layout"
+            if scope == "slide":
+                continue
             if comp in known and verdict in ("good", "bad"):
                 apply_state(state, comp, verdict, (it.get("comment") or "").strip(),
                             date, fragments)
