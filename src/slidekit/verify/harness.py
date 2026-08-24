@@ -51,6 +51,14 @@ DEFAULT_DPI = 150
 # more than this (0-255). Absorbs JPEG-ish AA fuzz; well below any real glyph.
 INK_CHANNEL_THRESHOLD = 40
 
+# The rasteriser (soffice -> pdf -> pdftoppm) leaves a hairline of un-painted page
+# along the right and bottom edges of the canvas. On a light deck that fringe is
+# near-white and reads as surface; on a dark deck it differs from the surface by
+# far more than the ink threshold, so every slide of a dark-themed deck reported
+# stray ink that no slidekit node put there. Ignore a thin border: it is outside
+# any node's rect by construction, so nothing real is masked by dropping it.
+EDGE_ARTIFACT_PX = 2
+
 # Each resolved rect is dilated by this many inches before forming the "allowed"
 # union. Absorbs anti-alias halos and small sub-pixel renderer drift while still
 # flagging gross overflow (text spilling an inch past its computed box).
@@ -235,7 +243,21 @@ def _ink_mask(img: Image.Image, surface_rgb: tuple[int, int, int], threshold: in
     r, g, b = diff.split()
     # per-pixel max across channels, so a strong single-channel diff isn't diluted
     chan_max = ImageChops.lighter(ImageChops.lighter(r, g), b)
-    return chan_max.point(lambda v: 255 if v > threshold else 0).convert("1")
+    mask = chan_max.point(lambda v: 255 if v > threshold else 0).convert("1")
+    return _drop_edge_artifact(mask)
+
+
+def _drop_edge_artifact(mask: Image.Image) -> Image.Image:
+    """Blank the outermost EDGE_ARTIFACT_PX ring — see EDGE_ARTIFACT_PX."""
+    n = EDGE_ARTIFACT_PX
+    if n <= 0:
+        return mask
+    w, h = mask.size
+    if w <= 2 * n or h <= 2 * n:
+        return mask
+    cleaned = Image.new("1", mask.size, 0)
+    cleaned.paste(mask.crop((n, n, w - n, h - n)), (n, n))
+    return cleaned
 
 
 def _count_on(mask: Image.Image) -> int:
