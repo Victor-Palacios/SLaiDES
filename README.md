@@ -1,5 +1,42 @@
 # slidekit — agent-first slide builder
 
+<!-- ────────────────────────────────────────────────────────────────────────
+     MSSE Capstone — grader entry point. Every required deliverable is one
+     click below. Keep the links current; mark external ones when ready.
+     ──────────────────────────────────────────────────────────────────────── -->
+
+## 📚 MSSE Capstone deliverables (start here)
+
+> **Grader access:** this repository is **private** — it must be **shared with the
+> GitHub account [`quantic-grader`](https://github.com/quantic-grader)**
+> (_Settings → Collaborators and teams → Add people_). Nothing below is gradable
+> until that access is granted.
+
+| Deliverable (per the Capstone Handbook) | Link | Status |
+|---|---|---|
+| **Working code** — the software system, appropriately documented | [`src/slidekit/`](src/slidekit/) · [Quickstart](#quickstart) | ✅ in repo |
+| **User stories** — Product Owner's backlog | [`docs/USER_STORIES.md`](docs/USER_STORIES.md) | ✅ in repo |
+| **Agile task board** — all tasks + user stories, with completion status | [`ops/BOARD.md`](ops/BOARD.md) _(source: [`ops/board.yaml`](ops/board.yaml))_ | ✅ in repo |
+| **Design & Testing document** — architecture decisions, patterns + reasons, deployment options + cost, and all testing done | [`docs/DESIGN_AND_TESTING.md`](docs/DESIGN_AND_TESTING.md) | ✅ in repo |
+| **Automated tests** — the test suite | [`tests/`](tests/) · run with `pytest -q` (see [doc](docs/DESIGN_AND_TESTING.md#5-testing)) | ✅ in repo |
+| **CI/CD** — GitHub Actions | [Actions tab](https://github.com/Victor-Palacios/SLaiDES/actions) · [`.github/workflows/`](.github/workflows/) | ✅ in repo |
+| **Recorded demo/presentation** — 15–20 min, all members on camera + voiceover | _TODO: paste the Google Drive link (Anyone-with-link) here_ | ⬜ add before submission |
+| **Deployed version** — _only if a web application_ | Review site: <https://delicate-malasada-1b3d2c.netlify.app/> _(password-gated — see note)_ | ⚠️ conditional |
+
+> **On the deployed-version line:** slidekit is a **command-line tool / Python
+> library**, not a web application, so the handbook's "link to the deployed
+> version (_if a web application_)" is **N/A for the core deliverable**. The only
+> deployed web component is the internal layout-review site (Netlify), which is
+> **password-gated** — if you cite it for grading, give the grader access or a
+> read-only view, otherwise leave this line marked N/A.
+
+**Submission-side (not repo files, keep handy):** the signed final page of the
+**Group Project Agreement**; evidence of **at least three sprints** (commit history
++ the board); the presentation must show a **government-issued ID** on camera and
+be a single `.mp4`/`.mov` on Google Drive (Anyone-with-link).
+
+---
+
 **🔗 Layout feedback site: <https://delicate-malasada-1b3d2c.netlify.app/>** — the
 password-gated gallery of all layouts (👍/👎 + comment per layout, from your
 phone; see [web/README.md](web/README.md)).
@@ -33,6 +70,30 @@ flowchart TB
 ```
 
 **≈90% fewer tokens per deck.**
+
+## Quickstart
+
+```bash
+# 1. Install (Python 3.11+) into a virtualenv
+python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
+
+# 2. Scaffold a themed starter deck, edit the copy, then build to PowerPoint
+.venv/bin/slidekit new --template standard -o deck.yaml
+#   …edit deck.yaml…
+.venv/bin/slidekit build deck.yaml -o deck.pptx      # exit 0 = lint-clean .pptx
+#   exit 1 → read the JSON lint errors and apply each error's suggested_fix
+
+# 3. Other outputs
+.venv/bin/slidekit build deck.yaml --pdf -o deck.pdf # PDF export
+.venv/bin/slidekit catalog                           # list components + when to use each
+
+# 4. Run the test suite
+PATH="$PWD/.venv/bin:$PATH" .venv/bin/python -m pytest -q
+```
+
+The authoring workflow (all components, fields, and the build/fix loop) is in
+[SKILL.md](SKILL.md); architecture and testing are in
+[docs/DESIGN_AND_TESTING.md](docs/DESIGN_AND_TESTING.md).
 
 ## Repository map
 
