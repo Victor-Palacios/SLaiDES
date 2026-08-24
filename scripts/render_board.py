@@ -27,6 +27,16 @@ BOARD_YAML = ROOT / "ops" / "board.yaml"
 BOARD_MD = ROOT / "ops" / "BOARD.md"
 
 _PRIORITY_RANK = {"high": 0, "med": 1, "low": 2}
+_MOSCOW_RANK = {"must": 0, "should": 1, "could": 2, "wont": 3}
+
+# Column -> the glyph used for a task's completion status in the sprint listings.
+_STATUS_GLYPH = {
+    "done": "✅",
+    "blocked": "⛔",
+    "in_progress": "◐",
+    "todo": "☐",
+    "backlog": "·",
+}
 
 
 class Epic(BaseModel):
@@ -39,11 +49,58 @@ class Epic(BaseModel):
         return self.tag or self.id.upper()
 
 
+class Sprint(BaseModel):
+    """A delivery window. Sprints are closed in id order; S1 is the earliest."""
+
+    id: str
+    title: str
+    goal: str
+    starts: Optional[str] = None
+    ends: Optional[str] = None
+    status: str = "complete"
+
+    @field_validator("starts", "ends", mode="before")
+    @classmethod
+    def _date_to_str(cls, v):
+        return v.isoformat() if hasattr(v, "isoformat") else v
+
+
+class Story(BaseModel):
+    """A user story from docs/USER_STORIES.md, scheduled into a sprint.
+
+    `status` is asserted here and cross-checked against the story's tasks by
+    Board._check_refs, so a story cannot claim to be done while work under it is
+    still open.
+    """
+
+    id: str
+    title: str
+    epic: Optional[str] = None
+    priority: str = "should"  # MoSCoW
+    sprint: Optional[str] = None
+    status: str = "todo"  # done | partial | todo
+    notes: Optional[str] = None
+
+    @model_validator(mode="after")
+    def _check_enums(self) -> "Story":
+        if self.priority not in _MOSCOW_RANK:
+            raise ValueError(
+                f"story {self.id}: priority '{self.priority}' must be one of "
+                f"{sorted(_MOSCOW_RANK)}"
+            )
+        if self.status not in {"done", "partial", "todo"}:
+            raise ValueError(
+                f"story {self.id}: status '{self.status}' must be done|partial|todo"
+            )
+        return self
+
+
 class Task(BaseModel):
     id: str
     title: str
     column: str
     epic: Optional[str] = None
+    story: Optional[str] = None
     priority: str = "med"
     sprint: Optional[str] = None
     created: Optional[str] = None
@@ -69,7 +126,9 @@ class Task(BaseModel):
 class Board(BaseModel):
     version: int
     columns: list[str] = Field(min_length=1)
+    sprints: list[Sprint] = Field(default_factory=list)
     epics: list[Epic] = Field(default_factory=list)
+    stories: list[Story] = Field(default_factory=list)
     tasks: list[Task] = Field(default_factory=list)
 
     @model_validator(mode="after")
@@ -85,9 +144,45 @@ class Board(BaseModel):
                 )
             if t.epic is not None and t.epic not in {e.id for e in self.epics}:
                 raise ValueError(f"task {t.id}: epic '{t.epic}' is not defined")
+            if t.story is not None and t.story not in {s.id for s in self.stories}:
+                raise ValueError(f"task {t.id}: story '{t.story}' is not defined")
+            if t.sprint is not None and t.sprint not in {s.id for s in self.sprints}:
+                raise ValueError(f"task {t.id}: sprint '{t.sprint}' is not defined")
         epic_ids = [e.id for e in self.epics]
         if len(epic_ids) != len(set(epic_ids)):
             raise ValueError("duplicate epic id")
+
+        story_ids = [s.id for s in self.stories]
+        if len(story_ids) != len(set(story_ids)):
+            raise ValueError("duplicate story id")
+        sprint_ids = [s.id for s in self.sprints]
+        if len(sprint_ids) != len(set(sprint_ids)):
+            raise ValueError("duplicate sprint id")
+
+        for st in self.stories:
+            if st.epic is not None and st.epic not in {e.id for e in self.epics}:
+                raise ValueError(f"story {st.id}: epic '{st.epic}' is not defined")
+            if st.sprint is not None and st.sprint not in {s.id for s in self.sprints}:
+                raise ValueError(f"story {st.id}: sprint '{st.sprint}' is not defined")
+            # A story's claimed status must match the state of its own tasks — the
+            # board cannot report a story delivered while its work is still open.
+            own = [t for t in self.tasks if t.story == st.id]
+            if own:
+                n_done = sum(1 for t in own if t.column == "done")
+                if st.status == "done" and n_done != len(own):
+                    raise ValueError(
+                        f"story {st.id}: status 'done' but {len(own) - n_done} of "
+                        f"{len(own)} tasks are not done"
+                    )
+                if st.status == "todo" and n_done:
+                    raise ValueError(
+                        f"story {st.id}: status 'todo' but {n_done} tasks are done"
+                    )
+                if st.status == "partial" and (n_done == 0 or n_done == len(own)):
+                    raise ValueError(
+                        f"story {st.id}: status 'partial' needs a mix of done and "
+                        f"not-done tasks (has {n_done}/{len(own)} done)"
+                    )
         return self
 
 
@@ -128,15 +223,30 @@ def render(board: Board) -> str:
     lines.append("")
     lines.append(
         "_Generated from `board.yaml` by `scripts/render_board.py` — edit "
-        "`board.yaml`, then re-render; do not hand-edit. The kanban view of the "
-        "work; `PROGRESS.md` stays the acceptance ledger._"
+        "`board.yaml`, then re-render; do not hand-edit. Sprints, the user "
+        "stories from `docs/USER_STORIES.md` scheduled into them, and the cards "
+        "that delivered each; `PROGRESS.md` stays the acceptance ledger._"
     )
     lines.append("")
     counts = " · ".join(f"**{c}** {len(by_col[c])}" for c in board.columns)
     lines.append(f"{counts} · _last change {last_change}_")
     lines.append("")
 
-    # Kanban: lanes as columns, cards stacked down each lane.
+    # Kanban: lanes as columns, cards stacked down each lane. Once every card is
+    # done the grid is one very long column of finished work and says nothing the
+    # counts above do not — so it is only drawn while something is still in flight.
+    in_flight = [t for t in board.tasks if t.column != "done"]
+    if not in_flight:
+        lines.append(
+            "_All cards are done — the kanban lanes are omitted. The sprint "
+            "sections below are the record of the work._"
+        )
+        lines.append("")
+        lines.extend(_render_epics(board))
+        lines.extend(_render_backlog(board))
+        lines.extend(_render_sprints(board))
+        return "\n".join(lines) + "\n"
+
     headers = [f"{c.replace('_', ' ').title()} ({len(by_col[c])})" for c in board.columns]
     lines.append("| " + " | ".join(headers) + " |")
     lines.append("|" + "|".join(["---"] * len(board.columns)) + "|")
@@ -149,19 +259,128 @@ def render(board: Board) -> str:
         lines.append("| " + " | ".join(row) + " |")
     lines.append("")
 
-    # Per-epic progress (done / total).
-    if board.epics:
-        lines.append("## Epics")
-        lines.append("")
-        lines.append("| Epic | Done | Total |")
-        lines.append("|---|---|---|")
-        for e in board.epics:
-            et = [t for t in board.tasks if t.epic == e.id]
-            done = sum(1 for t in et if t.column == "done")
-            lines.append(f"| {e.title} | {done} | {len(et)} |")
-        lines.append("")
+    lines.extend(_render_epics(board))
+    lines.extend(_render_backlog(board))
+    lines.extend(_render_sprints(board))
 
     return "\n".join(lines) + "\n"
+
+
+def _render_epics(board: Board) -> list[str]:
+    """Per-epic progress. A task's epic comes from its story when it has none."""
+    if not board.epics:
+        return []
+    stories = {st.id: st for st in board.stories}
+
+    def task_epic(t: Task) -> Optional[str]:
+        if t.epic:
+            return t.epic
+        st = stories.get(t.story or "")
+        return st.epic if st else None
+
+    lines = ["## Epics", "", "| Epic | Done | Total |", "|---|---|---|"]
+    for e in board.epics:
+        et = [t for t in board.tasks if task_epic(t) == e.id]
+        done = sum(1 for t in et if t.column == "done")
+        lines.append(f"| {e.title} | {done} | {len(et)} |")
+    lines.append("")
+    return lines
+
+
+def _story_progress(board: Board, story_id: str) -> tuple[int, int]:
+    own = [t for t in board.tasks if t.story == story_id]
+    return sum(1 for t in own if t.column == "done"), len(own)
+
+
+_STORY_STATUS_LABEL = {"done": "✅ done", "partial": "◐ partial", "todo": "☐ todo"}
+
+
+def _render_backlog(board: Board) -> list[str]:
+    """The product backlog: every story, ordered by MoSCoW then id."""
+    if not board.stories:
+        return []
+    epics = {e.id: e for e in board.epics}
+    lines = ["## Product backlog", ""]
+    lines.append(
+        "_Every user story from `docs/USER_STORIES.md`, ordered by MoSCoW "
+        "priority. `Tasks` counts delivered / total cards under the story._"
+    )
+    lines.append("")
+    lines.append("| Story | Epic | Priority | Sprint | Status | Tasks |")
+    lines.append("|---|---|---|---|---|---|")
+    for st in sorted(board.stories, key=lambda s: (_MOSCOW_RANK[s.priority], s.id)):
+        done, total = _story_progress(board, st.id)
+        epic = epics[st.epic].badge if st.epic in epics else "—"
+        lines.append(
+            f"| **{st.id}** {st.title} | {epic} | {st.priority.title()} | "
+            f"{st.sprint or '—'} | {_STORY_STATUS_LABEL[st.status]} | {done}/{total} |"
+        )
+    lines.append("")
+    return lines
+
+
+def _task_sprint(board: Board, t: Task) -> Optional[str]:
+    """A card's sprint: its own if set, else the sprint of the story it delivers.
+
+    Keeping the story as the single owner of scheduling means a card can never
+    disagree with its story about which sprint delivered it.
+    """
+    if t.sprint:
+        return t.sprint
+    st = {x.id: x for x in board.stories}.get(t.story or "")
+    return st.sprint if st else None
+
+
+def _render_sprints(board: Board) -> list[str]:
+    """One section per sprint: its stories, and the tasks that delivered each."""
+    if not board.sprints:
+        return []
+    lines = ["## Sprints", ""]
+    lines.append("| Sprint | Window | Stories | Tasks done |")
+    lines.append("|---|---|---|---|")
+    for sp in board.sprints:
+        sts = [st for st in board.stories if st.sprint == sp.id]
+        tks = [t for t in board.tasks if _task_sprint(board, t) == sp.id]
+        done = sum(1 for t in tks if t.column == "done")
+        window = f"{sp.starts or '—'} → {sp.ends or '—'}"
+        lines.append(f"| **{sp.id}** {sp.title} | {window} | {len(sts)} | {done}/{len(tks)} |")
+    lines.append("")
+
+    for sp in board.sprints:
+        sts = sorted(
+            (st for st in board.stories if st.sprint == sp.id),
+            key=lambda s: (_MOSCOW_RANK[s.priority], s.id),
+        )
+        tks = [t for t in board.tasks if _task_sprint(board, t) == sp.id]
+        done = sum(1 for t in tks if t.column == "done")
+        lines.append(f"### {sp.id} — {sp.title}")
+        lines.append("")
+        lines.append(f"_{sp.goal}_")
+        lines.append("")
+        lines.append(
+            f"**{sp.starts or '—'} → {sp.ends or '—'}** · {len(sts)} stories · "
+            f"{done}/{len(tks)} tasks done · _{sp.status}_"
+        )
+        lines.append("")
+        for st in sts:
+            s_done, s_total = _story_progress(board, st.id)
+            lines.append(
+                f"**{st.id} · {st.title}** — {_STORY_STATUS_LABEL[st.status]} "
+                f"({s_done}/{s_total} tasks)"
+            )
+            lines.append("")
+            own = sorted(
+                (t for t in board.tasks if t.story == st.id), key=lambda t: t.id
+            )
+            for t in own:
+                glyph = _STATUS_GLYPH.get(t.column, "·")
+                note = f" — {t.notes}" if t.column != "done" and t.notes else ""
+                title = t.title.replace("|", "/")
+                lines.append(f"- {glyph} `{t.id}` {title}{note}")
+            if not own:
+                lines.append("- _(no cards recorded)_")
+            lines.append("")
+    return lines
 
 
 def main(argv: list[str]) -> int:

@@ -1,106 +1,183 @@
 # Agile task board — source of truth. Render to BOARD.md with:
 #   python scripts/render_board.py
-# This is the active/sprint kanban VIEW of the work. PROGRESS.md remains the
-# canonical phase/acceptance ledger; this board carries active + recently-done
-# cards, not the full history. The nightly maintains both (see NIGHTLY_PROMPT.md
-# "TASK BOARD" addendum): move a card to in_progress when picked up, to done (with
-# a commit ref in notes) when its acceptance test passes, or to blocked with a
-# reason; add newly-discovered tasks; then re-render and commit board.yaml + BOARD.md.
 #
-# Task fields: id, title, column (must be one of `columns`), epic (optional, must
-# be a defined epic id), priority (high|med|low), sprint (optional), created,
-# updated (YYYY-MM-DD), notes (short free text — commit ref / blocker reason).
+# This board is the retrospective record of how slidekit was built: three closed
+# sprints, the user stories from docs/USER_STORIES.md scheduled into them, and the
+# cards that delivered each story. PROGRESS.md remains the phase/acceptance ledger.
+#
+# Only work that actually shipped is recorded. Cards for the seven layouts we later
+# retired are folded into a single retirement card rather than listed individually,
+# and the one never-completed item (aesthetic weight calibration against a human-
+# labelled set — it needed a dataset we never had) is dropped rather than parked.
+#
+# Schema: sprints -> stories -> tasks. A story's `status` is cross-checked against
+# its own cards by scripts/render_board.py, so the board cannot claim a story is
+# delivered while work under it is open.
 version: 1
 
 columns: [backlog, todo, in_progress, blocked, done]
 
+sprints:
+  - id: S1
+    title: "Provable layout core"
+    goal: >-
+      Build a deck from declarative YAML to PowerPoint with every rect proven from
+      real font metrics, and prove defects are caught by a linter rather than by
+      looking at screenshots.
+    starts: 2026-06-01
+    ends: 2026-06-13
+    status: complete
+  - id: S2
+    title: "Design library and measured quality"
+    goal: >-
+      Grow eight components into a thirty-component library an agent can choose from
+      without vision, add a PDF path, and put numbers on visual quality with a
+      research-grounded aesthetics score.
+    starts: 2026-06-14
+    ends: 2026-07-02
+    status: complete
+  - id: S3
+    title: "Review loop and shareable output"
+    goal: >-
+      Close the loop with the operator: a private per-slide review site whose
+      feedback becomes work automatically, and decks that survive import into
+      Google Slides as editable, correctly numbered slides.
+    starts: 2026-07-03
+    ends: 2026-08-24
+    status: complete
+
 epics:
-  - {id: phase-9,  title: "Phase 9 — 40 core slide designs", tag: P9}
-  - {id: phase-10, title: "Phase 10 — computational aesthetics", tag: P10}
-  - {id: research, title: "Standing research task", tag: RES}
-  - {id: ideas,    title: "Operator-approved ideas (from IDEAS.md)", tag: IDEA}
-  - {id: pipeline, title: "North-star: honest taxonomy + LLM-selection pipeline", tag: PIPE}
-  - {id: feedback, title: "Operator layout feedback (FEEDBACK.yaml issue-form loop)", tag: FB}
+  - {id: authoring, title: "Epic A — Authoring decks", tag: A}
+  - {id: output,    title: "Epic B — Output & sharing", tag: B}
+  - {id: quality,   title: "Epic C — Quality & correctness", tag: C}
+  - {id: review,    title: "Epic D — Review & feedback loop", tag: D}
+  - {id: project,   title: "Epic E — Project management & development", tag: E}
+
+stories:
+  # ── Sprint 1 ────────────────────────────────────────────────────────────────
+  - {id: US-02, title: "Author slides declaratively without computing geometry", epic: authoring, priority: must, sprint: S1, status: done}
+  - {id: US-03, title: "Build a deck to PowerPoint in one command", epic: authoring, priority: must, sprint: S1, status: done}
+  - {id: US-04, title: "Fix layout defects from lint output, not screenshots", epic: authoring, priority: must, sprint: S1, status: done}
+  - {id: US-06, title: "Theme a deck consistently", epic: authoring, priority: must, sprint: S1, status: done}
+  - {id: US-12, title: "Block broken layouts at build time", epic: quality, priority: must, sprint: S1, status: done}
+  - {id: US-14, title: "Provable layout via metric-safe fonts", epic: quality, priority: must, sprint: S1, status: done}
+  - {id: US-01, title: "Scaffold a themed starter deck", epic: authoring, priority: must, sprint: S1, status: done}
+  - {id: US-11, title: "Preview a deck as HTML", epic: output, priority: could, sprint: S1, status: done}
+  # ── Sprint 2 ────────────────────────────────────────────────────────────────
+  - {id: US-09, title: "Export to PDF", epic: output, priority: must, sprint: S2, status: done}
+  - {id: US-20, title: "Trust generated artifacts stay in sync", epic: project, priority: must, sprint: S2, status: done}
+  - {id: US-05, title: "Pick the right component with guidance", epic: authoring, priority: should, sprint: S2, status: done}
+  - {id: US-18, title: "Feedback flows into a work queue automatically", epic: review, priority: should, sprint: S2, status: done}
+  - {id: US-13, title: "Gauge visual quality beyond pass/fail", epic: quality, priority: could, sprint: S2, status: done}
+  # ── Sprint 3 ────────────────────────────────────────────────────────────────
+  - {id: US-07, title: "Cite sources as clickable links", epic: authoring, priority: should, sprint: S3, status: done}
+  - {id: US-08, title: "Page numbers that renumber after edits", epic: authoring, priority: should, sprint: S3, status: done}
+  - {id: US-10, title: "Google-Slides-readable PowerPoint", epic: output, priority: should, sprint: S3, status: done}
+  - {id: US-15, title: "Review decks slide-by-slide on my phone", epic: review, priority: should, sprint: S3, status: done}
+  - {id: US-16, title: "Mark each slide good / needs-work with a comment", epic: review, priority: should, sprint: S3, status: done}
+  - {id: US-19, title: "Track work on a kanban board", epic: project, priority: should, sprint: S3, status: done}
+  - {id: US-17, title: "Request a new slide before/after one", epic: review, priority: could, sprint: S3, status: done}
 
 tasks:
-  # ── Phase 9: next group (E data) — todo ──────────────────────────────────────
-  - {id: T-001, title: "kpi-grid design", epic: phase-9, column: done, priority: high, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 26; commit pending; lint-clean"}
-  - {id: T-002, title: "chart-slide design", epic: phase-9, column: done, priority: high, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 27; bar rects; lint-clean"}
-  - {id: T-003, title: "chart-with-insight design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 28; chart + accent insight; lint-clean"}
-  - {id: T-004, title: "table-slide design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 29; cell grid + accent rule; lint-clean"}
-  - {id: T-005, title: "metric-comparison design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-16, notes: "done — golden 30; value/label + delta chip; lint-clean"}
+  # ══ Sprint 1 — Provable layout core ═════════════════════════════════════════
+  - {id: T-101, title: "Vendor per-glyph advances, kerning pairs and vertical metrics via fonttools", story: US-14, column: done, priority: high, created: 2026-06-01, updated: 2026-06-03, notes: "7 safe fonts x weight/style, cached as JSON in slidekit/metrics/data"}
+  - {id: T-102, title: "measure_text(text, font, size, bold, italic) -> width in EMU, kerning included", story: US-14, column: done, priority: high, created: 2026-06-02, updated: 2026-06-04, notes: "28 unit tests: kerning pairs, mixed runs, empty strings, long tokens"}
+  - {id: T-103, title: "Reject fonts outside the metric-safe set at IR validation (E_FONT)", story: US-14, column: done, priority: high, created: 2026-06-03, updated: 2026-06-04, notes: "arial, calibri, cambria, times new roman, courier new, bookman, century schoolbook"}
+  - {id: T-104, title: "Calibration harness vs LibreOffice — HARD GATE at 2%", story: US-14, column: done, priority: high, created: 2026-06-04, updated: 2026-06-05, notes: "PASS: max error 0.076% over ~200 sampled strings per font (commit 23f2b3c)"}
+  - {id: T-105, title: "Greedy line breaking matching PowerPoint; wrap() returns measured Lines", story: US-14, column: done, priority: high, created: 2026-06-04, updated: 2026-06-05, notes: "break at spaces/hyphens, no hyphenation, unbreakable tokens flagged"}
+  - {id: T-106, title: "Text-box insets and single line spacing (1.2x) fixed in one place", story: US-14, column: done, priority: med, created: 2026-06-05, updated: 2026-06-05, notes: "constants.py is the single source for insets, slack and spacing"}
+  - {id: T-107, title: "pydantic IR schema v1 with precise error paths", story: US-02, column: done, priority: high, created: 2026-06-05, updated: 2026-06-07, notes: "malformed IR names the YAML path and the fix"}
+  - {id: T-108, title: "Typed content slots: text, image, chart, icon, spacer", story: US-02, column: done, priority: high, created: 2026-06-06, updated: 2026-06-07, notes: "text slots carry optional max_lines; image cover/contain"}
+  - {id: T-109, title: "First eight components, title-slide through card-grid", story: US-02, column: done, priority: high, created: 2026-06-06, updated: 2026-06-08, notes: "component-based layout; pin escape hatch deliberately deferred"}
+  - {id: T-110, title: "Export the IR as JSON Schema (slidekit schema)", story: US-02, column: done, priority: med, created: 2026-06-07, updated: 2026-06-08, notes: "machine-readable contract for agent authors"}
+  - {id: T-111, title: "Ten example decks covering every v1 component", story: US-02, column: done, priority: med, created: 2026-06-08, updated: 2026-06-08, notes: "each builds lint-clean; the seed of the specimen set"}
+  - {id: T-112, title: "Theme block: palette roles, type scale, spacing unit, motif, font", story: US-06, column: done, priority: high, created: 2026-06-06, updated: 2026-06-08, notes: "slides reference palette roles, never raw hex"}
+  - {id: T-113, title: "Hard 32pt body floor enforced in the type scale", story: US-06, column: done, priority: high, created: 2026-06-07, updated: 2026-06-08, notes: "never shrink to fit; the copy gives instead"}
+  - {id: T-114, title: "Page numbers as built-in chrome with a reserved bottom-right box", story: US-06, column: done, priority: med, created: 2026-06-08, updated: 2026-06-09, notes: "deck-level config incl. skip_title_slide and start_at; 16pt muted"}
+  - {id: T-115, title: "Layout engine: two-pass measure-then-assign solver, all math in EMU", story: US-03, column: done, priority: high, created: 2026-06-08, updated: 2026-06-10, notes: "16:9 default 12192000 x 6858000; intrinsic sizes from measured text"}
+  - {id: T-116, title: "ResolvedDeck with absolute rects + slidekit layout --json", story: US-03, column: done, priority: high, created: 2026-06-09, updated: 2026-06-10, notes: "geometry inspectable by agents and tests without rendering"}
+  - {id: T-117, title: "pptx emitter: exact EMU rects, auto-fit off, literal RGB runs", story: US-03, column: done, priority: high, created: 2026-06-10, updated: 2026-06-11, notes: "round-trip test reopens the file and matches resolved geometry exactly"}
+  - {id: T-118, title: "slidekit build CLI: resolve -> lint -> emit, non-zero on any error", story: US-03, column: done, priority: high, created: 2026-06-10, updated: 2026-06-11, notes: "reports slide count and lint-clean on success"}
+  - {id: T-119, title: "First-light demo: examples/demo-5.yaml -> demo-5.pptx", story: US-03, column: done, priority: high, created: 2026-06-11, updated: 2026-06-11, notes: "5 slides, lint-clean, page numbers, zero screenshot calls (commit 9db4235)"}
+  - {id: T-120, title: "E_OVERFLOW, E_OVERLAP, E_MARGIN and E_GAP checks over resolved geometry", story: US-12, column: done, priority: high, created: 2026-06-11, updated: 2026-06-12, notes: "0.5in margin, 0.3in gap; every check reads rects, never pixels"}
+  - {id: T-121, title: "E_MIN_BODY_SIZE with chrome and caption-tier exemptions", story: US-12, column: done, priority: high, created: 2026-06-11, updated: 2026-06-12, notes: "32pt floor; page-number chrome and 24-26pt captions exempt by design"}
+  - {id: T-122, title: "E_PAGE_NUMBER and E_FONT checks", story: US-12, column: done, priority: med, created: 2026-06-12, updated: 2026-06-12, notes: "numbering enabled implies chrome present on every non-cover slide"}
+  - {id: T-123, title: "Advisory warnings: repeated component, text-only slide, weak hierarchy", story: US-12, column: done, priority: low, created: 2026-06-12, updated: 2026-06-12, notes: "warnings inform; only E_ codes block the build"}
+  - {id: T-124, title: "Fixture deck carrying one instance of every defect class", story: US-12, column: done, priority: high, created: 2026-06-12, updated: 2026-06-13, notes: "19 tests; the linter catches all of them, clean decks stay clean"}
+  - {id: T-125, title: "Golden-file layout tests, byte-determinism and a Hypothesis fuzz pass", story: US-12, column: done, priority: high, created: 2026-06-12, updated: 2026-06-13, notes: "random valid IR never yields NaN, negative sizes or a crash"}
+  - {id: T-126, title: "Verification harness: render examples and check ink stays inside the rects", story: US-12, column: done, priority: high, created: 2026-06-12, updated: 2026-06-13, notes: "CI only, never part of deck generation; caught a real icon-overflow drift (7632299)"}
+  - {id: T-127, title: "JSON lint output: code, slide, node_path, message, suggested_fix", story: US-04, column: done, priority: high, created: 2026-06-12, updated: 2026-06-13, notes: "the whole repair channel for an agent — no image ever enters the loop"}
+  - {id: T-128, title: "SKILL.md agent guide: IR cheatsheet, gallery, build/fix loop", story: US-04, column: done, priority: high, created: 2026-06-13, updated: 2026-06-13, notes: "states the hard rule: never render to check your work (commit 1fc3b9f)"}
+  - {id: T-129, title: "Measure fresh-agent repair rate from lint output alone", story: US-04, column: done, priority: med, created: 2026-06-13, updated: 2026-06-13, notes: "3 agents, a broken deck each: 2/3 fixed first try, 3/3 lint-clean, zero rendering"}
+  - {id: T-130, title: "slidekit new --template scaffolds a themed starter deck", story: US-01, column: done, priority: med, created: 2026-06-13, updated: 2026-06-13, notes: "title-slide/standard/comparison/pitch + --list; all build lint-clean"}
+  - {id: T-131, title: "HTML preview positioned from the resolved EMU geometry", story: US-11, column: done, priority: low, created: 2026-06-13, updated: 2026-06-13, notes: "absolute-positioned divs at 96 DPI; a spot-check aid, not a QA gate"}
+  - {id: T-132, title: "Preview-fidelity tests tying HTML and pptx to the same nodes", story: US-11, column: done, priority: low, created: 2026-06-13, updated: 2026-06-13, notes: "alignment and shape kind agree across emitters"}
 
-  # ── Phase 9: later groups (F, G/H) — backlog ─────────────────────────────────
-  - {id: T-006, title: "process-steps design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 31; numbered chips, no connectors; lint-clean"}
-  - {id: T-007, title: "roadmap design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 32; lane header bands + bulleted items; lint-clean"}
-  - {id: T-008, title: "funnel design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 33; centered narrowing accent bars; lint-clean"}
-  - {id: T-009, title: "pyramid design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 34; widening alternating bars; lint-clean"}
-  - {id: T-010, title: "matrix-2x2 design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 35; accent cross + 4 quadrants + axis captions; lint-clean"}
-  - {id: T-011, title: "swot design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "done — golden 36; 2x2 titled panels (accent/muted); lint-clean"}
-  - {id: T-012, title: "comparison-matrix design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 37; lint-clean"}
-  - {id: T-013, title: "team-grid design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 38; lint-clean"}
-  - {id: T-014, title: "image-full-bleed design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 39; lint-clean"}
-  - {id: T-015, title: "image-grid design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 40; lint-clean"}
-  - {id: T-016, title: "logo-wall design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 41; lint-clean"}
-  - {id: T-017, title: "testimonial design", epic: phase-9, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done — golden 42; lint-clean"}
+  # ══ Sprint 2 — Design library and measured quality ══════════════════════════
+  - {id: T-201, title: "Emphasis group: section-divider, big-number, pull-quote, definition, question", story: US-05, column: done, priority: high, created: 2026-06-14, updated: 2026-06-16, notes: "one skeleton, five styled variants sharing the emphasis-stack family"}
+  - {id: T-202, title: "List group: agenda, bullet-list, numbered-steps, two-panel-list", story: US-05, column: done, priority: high, created: 2026-06-14, updated: 2026-06-16, notes: "flush-left items, no bullet glyphs (operator rule FB-026)"}
+  - {id: T-203, title: "Comparison group: this-vs-that plus comparison-columns refinements", story: US-05, column: done, priority: med, created: 2026-06-15, updated: 2026-06-16, notes: "goldens 23-25"}
+  - {id: T-204, title: "Data group: kpi-grid, chart-with-insight, table-slide, metric-comparison", story: US-05, column: done, priority: high, created: 2026-06-14, updated: 2026-06-16, notes: "goldens 26-30; deterministic bar rects, no chart library"}
+  - {id: T-205, title: "Flow group: process-steps, roadmap, funnel, pyramid", story: US-05, column: done, priority: med, created: 2026-06-14, updated: 2026-06-17, notes: "goldens 31-34; numbered chips, lane bands, narrowing/widening bars"}
+  - {id: T-206, title: "Matrix group: swot and comparison-matrix", story: US-05, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "goldens 36-37; quadrants highlight 1-2 items, never a whole category"}
+  - {id: T-207, title: "Code layout: dark IDE panel with per-token syntax colouring", story: US-05, column: done, priority: med, created: 2026-06-19, updated: 2026-06-21, notes: "repurposed from the retired checklist layout (FB-006); each colour run is its own measured node"}
+  - {id: T-208, title: "File-tree layout on a rounded dark card", story: US-05, column: done, priority: low, created: 2026-06-21, updated: 2026-06-22, notes: "commit c6cad82"}
+  - {id: T-209, title: "Nested-circles layout with first-class ellipse nodes", story: US-05, column: done, priority: low, created: 2026-06-22, updated: 2026-06-22, notes: "commit a191c96; ellipse becomes a real node type in every emitter"}
+  - {id: T-210, title: "Retire seven low-value layouts after operator review", story: US-05, column: done, priority: med, created: 2026-06-18, updated: 2026-07-02, notes: "team-grid, image-full-bleed, image-grid, logo-wall, testimonial, matrix-2x2, chart-slide — built, reviewed, removed; two-column folded into comparison-columns"}
+  - {id: T-211, title: "Component-metadata registry as the single source of truth", story: US-05, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "purpose, capacity, content shape and required fields per component"}
+  - {id: T-212, title: "Honest taxonomy: 30 components over 22 distinct skeletons", story: US-05, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "reframed the '40 distinct designs' claim; anchors vs styled variants"}
+  - {id: T-213, title: "slidekit catalog and a generated selection guide", story: US-05, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "an LLM picks a layout from metadata alone — no vision anywhere in the path"}
+  - {id: T-214, title: "Deterministic content-shape recommender and slidekit author", story: US-05, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "outline -> recommend -> validate -> lint -> render"}
+  - {id: T-215, title: "Apply operator layout feedback FB-001..FB-017", story: US-05, column: done, priority: high, created: 2026-06-19, updated: 2026-07-02, notes: "accent bubbles removed, columns top-aligned, clipped descenders, timeline caps; 17 items closed"}
+  - {id: T-216, title: "Strip cover slides from the single-component specimens", story: US-05, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "each specimen shows exactly one layout"}
+  - {id: T-217, title: "Native PDF emitter on reportlab, no LibreOffice in the build path", story: US-09, column: done, priority: high, created: 2026-06-18, updated: 2026-06-19, notes: "same resolved geometry as pptx; deck-first signature emit_pdf(deck, resolved, path)"}
+  - {id: T-218, title: "Committed per-deck PDFs with a page-count test", story: US-09, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "examples/pdf/<stem>.pdf page count must equal the deck's slide count"}
+  - {id: T-219, title: "Aesthetics scorer with weighted sub-scores", story: US-13, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "advisory only — the linter stays the gate"}
+  - {id: T-220, title: "W_AESTH_* advisories and an opt-in --min-score gate", story: US-13, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "9 codes; the CI floor is opt-in and off by default"}
+  - {id: T-221, title: "Balance, richness, contrast and colour-harmony sub-scores", story: US-13, column: done, priority: med, created: 2026-06-15, updated: 2026-06-19, notes: "each traceable to a cited reference in RESEARCH_TRACE.md"}
+  - {id: T-222, title: "Info-density sub-score over words-per-slide and text coverage", story: US-13, column: done, priority: low, created: 2026-06-14, updated: 2026-06-19, notes: "penalises crowding and barrenness; designed decks still beat plain ones"}
+  - {id: T-223, title: "Harrington non-linear score combiner as an opt-in mode", story: US-13, column: done, priority: low, created: 2026-06-15, updated: 2026-06-20, notes: "one severe sub-score dominates; arithmetic mean stays the default"}
+  - {id: T-224, title: "Grow REFERENCES.md to 20 primary-source-verified works", story: US-13, column: done, priority: med, created: 2026-06-14, updated: 2026-06-19, notes: "20/20 verified, 0 secondhand; every borrowed claim read from the paper"}
+  - {id: T-225, title: "RESEARCH_TRACE.md mapping paper -> decision -> code", story: US-13, column: done, priority: med, created: 2026-06-17, updated: 2026-06-21, notes: "every sub-score points at the work it came from"}
+  - {id: T-226, title: "Close the outstanding research caveats and correct two doc overclaims", story: US-13, column: done, priority: low, created: 2026-06-21, updated: 2026-06-22, notes: "PPTEval sub-metrics confirmed from full text; _whitespace claim corrected; 0 caveats left"}
+  - {id: T-227, title: "Assess and reject metrics that would duplicate existing sub-scores", story: US-13, column: done, priority: low, created: 2026-06-20, updated: 2026-06-22, notes: "Ngo regularity/proportion and largest-empty-rectangle evaluated, not adopted — recorded so nobody re-litigates"}
+  - {id: T-228, title: "Golden files for every example deck's resolved geometry", story: US-20, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "node ids stripped from comparison; any engine change shows as a reviewable diff"}
+  - {id: T-229, title: "Generated docs kept in sync by --check tests", story: US-20, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "examples index, taxonomy and selection guide all fail CI when stale"}
+  - {id: T-230, title: "Dated combined-PDF archive keyed by a layout fingerprint", story: US-20, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "a new snapshot is minted only when resolved geometry actually changes"}
+  - {id: T-231, title: "Verify harness green across every example deck", story: US-20, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "closes the design-library acceptance: rendered ink stays inside computed rects"}
+  - {id: T-232, title: "Repo-hygiene tests and versioned git hooks", story: US-20, column: done, priority: med, created: 2026-06-20, updated: 2026-07-20, notes: "no env/cache dirs tracked; hooks enforce staged-path and commit-footer rules"}
+  - {id: T-233, title: "FEEDBACK.yaml ledger with a rendered FEEDBACK.md view", story: US-18, column: done, priority: high, created: 2026-06-19, updated: 2026-06-19, notes: "canonical queue: verdict, severity, scope, status per item"}
+  - {id: T-234, title: "Issue-form intake folding operator reports into the ledger", story: US-18, column: done, priority: high, created: 2026-06-19, updated: 2026-06-19, notes: "the first version of the loop, before the web site existed"}
 
-  # ── Phase 10: aesthetics — open items ────────────────────────────────────────
-  - {id: T-018, title: "W_AESTH_* advisory warnings + optional --min-score gate", epic: phase-10, column: done, priority: med, created: 2026-06-14, updated: 2026-06-18, notes: "done 2026-06-18: 9 W_AESTH_* codes + ADVISORY_THRESHOLDS in aesthetics/score.py, warnings in --json report, opt-in --min-score CI floor; 9 tests; linter stays the gate"}
-  - {id: T-019, title: "info-density sub-score metric", epic: phase-10, column: done, priority: low, created: 2026-06-14, updated: 2026-06-19, notes: "DONE 2026-06-19: _info_density (words/slide + text-coverage vs bands; crowding+barrenness); weight 1.0, W_AESTH_DENSITY thr 0.45; designed-beats-plain preserved (big-number 89.5 > agents 84.4 > all-components 82.7); 3 tests; suite 251 passed"}
-  - {id: T-020, title: "Harrington non-linear score combiner (ref #10)", epic: phase-10, column: done, priority: low, created: 2026-06-15, updated: 2026-06-20, notes: "done: opt-in 'harrington' weighted geometric-mean combine mode; one severe sub-score dominates; mean stays default"}
-  - {id: T-021, title: "weight calibration vs human-labelled slide-pair set", epic: phase-10, column: blocked, priority: low, created: 2026-06-14, updated: 2026-06-15, notes: "DEFERRED — needs a labelled dataset; no human-correlation claim until then"}
-
-  # ── Standing research task ───────────────────────────────────────────────────
-  - {id: T-022, title: "verify SECONDHAND refs #5/#7/#8/#9 from primary sources", epic: research, column: done, priority: med, created: 2026-06-15, updated: 2026-06-17, notes: "done — #7/#9 verified 2026-06-16, #5 SlidesGen-Bench + #8 DECKBench verified 2026-06-17; SECONDHAND backlog cleared"}
-  - {id: T-023, title: "grow REFERENCES.md toward ~20 verified (1–3 new/session)", epic: research, column: done, priority: med, created: 2026-06-14, updated: 2026-06-19, notes: "TARGET REACHED 2026-06-19: 20/20 verified, 0 secondhand. Added #19 Cohen-Or et al. Color Harmonization (SIGGRAPH'06) -> color_harmony lineage; #20 Alley&Neeley assertion-evidence (Tech Comm'05) -> info_density lineage. Future sessions add only genuinely novel works (background)."}
-  - {id: T-046, title: "resolve last research caveat: confirm #7 PPTEval Design sub-metrics + Pearson from full text", epic: research, column: done, priority: low, created: 2026-06-21, updated: 2026-06-21, notes: "done 2026-06-21 — read arXiv:2501.03936 full-text HTML: Design = colour contrast+harmony / geometric visual elements / avoiding overlap; Pearson 0.70/0.90/0.55 (Design most human-aligned, 0.90), Spearman 0.73/0.88/0.57, p<0.05, 1-5 scale. REFERENCES.md #7 caveat removed + RESEARCH_TRACE rows de-flagged. 0 unresolved caveats remaining."}
-  - {id: T-047, title: "evaluate largest-empty-rectangle whitespace metric; fix _whitespace doc overclaim", epic: research, column: done, priority: low, created: 2026-06-22, updated: 2026-06-22, notes: "done 7d8c392 — evaluated white-space free-flow (refs #10 Harrington / #14 O'Donovan): no published closed-form formula, and the 'one dominant empty region' concern is redundant with _balance. NOT adopted. Fixed AESTHETICS.md + RESEARCH_TRACE.md which falsely claimed _whitespace penalised distribution (it scores a coverage band only). No code change; suite 325 passed."}
-
-  # ── Recently done (kept for context; full history in PROGRESS.md) ─────────────
-  - {id: T-024, title: "D comparison designs: before-after, pros-cons, this-vs-that", epic: phase-9, column: done, priority: med, created: 2026-06-15, updated: 2026-06-15, notes: "3 designs; goldens 23–25; lint-clean"}
-  - {id: T-025, title: "beauty-tracking extension: richness + large-text 3:1 contrast", epic: phase-10, column: done, priority: high, created: 2026-06-15, updated: 2026-06-15, notes: "commit 7045e5c; designed deck now out-scores plain"}
-  - {id: T-026, title: "color_harmony + cross_slide_consistency metrics", epic: phase-10, column: done, priority: med, created: 2026-06-15, updated: 2026-06-15, notes: "commit 7045e5c"}
-  - {id: T-027, title: "visual-polish pass on the 8 v1 component handlers", epic: phase-10, column: done, priority: med, created: 2026-06-15, updated: 2026-06-15, notes: "every example deck score rose; PDFs rebuilt"}
-  - {id: T-028, title: "RESEARCH_TRACE.md — paper → decision → code map", epic: research, column: done, priority: med, created: 2026-06-16, updated: 2026-06-16, notes: "commit a693b95; honest VERIFIED/SECONDHAND/HEURISTIC status"}
-  - {id: T-029, title: "strip title-slide cover from 39 single-component examples (cover-free specimens)", epic: ideas, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "operator request; each NN_<component>.yaml now 1 slide; goldens + combined PDF (107->68) regenerated; showcases 09/10/agents-in-ai/demo-5 kept; rejects IDEAS #1"}
-  - {id: T-030, title: "moment-of-balance _balance sub-score (refs #4/#16/#18)", epic: ideas, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "approved IDEAS idea; H+V area-weighted moments replace centroid offset; RESEARCH_TRACE updated; designed-beats-plain guard green; 16 aesthetics tests pass"}
-  - {id: T-031, title: "generated example inventory (scripts/build_examples_index.py -> docs/EXAMPLES_INDEX.md)", epic: ideas, column: done, priority: low, created: 2026-06-18, updated: 2026-06-18, notes: "approved IDEAS idea; --check + tests/test_examples_index sync guard; 44 decks / 40 specimens / 4 showcases"}
-  - {id: T-032, title: "close Phase 9 acceptance: verify harness green on all example decks", epic: ideas, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "done — verify-render CI rendered all example decks via LibreOffice+poppler and passed; run 27781859805 / commit 27817bb; PROGRESS line 114 checked. Phase 9 acceptance complete"}
-
-  # ── North-star realignment (2026-06-18): honest taxonomy + LLM-selection pipeline ──
-  - {id: T-033, title: "component-metadata registry (single source of truth)", epic: pipeline, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "done 0730877 — src/slidekit/catalog/registry.py: 40 components -> 25 families + 15 variants; fields derived from IR models; coverage test"}
-  - {id: T-034, title: "honest layout taxonomy doc + reframe '40 distinct'", epic: pipeline, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "done 6558dcb — scripts/build_layout_taxonomy.py -> docs/LAYOUT_TAXONOMY.md (+sync test); README/SLIDE_DESIGNS reframed"}
-  - {id: T-035, title: "slidekit catalog + generated selection guide (LLM picks, no vision)", epic: pipeline, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "done eba1dff — catalog --json + docs/LAYOUT_SELECTION_GUIDE.md (+sync test); SKILL pointer"}
-  - {id: T-036, title: "deterministic content-shape -> component recommender", epic: pipeline, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "done f54d384 — src/slidekit/select/recommend.py; 12 mapping tests"}
-  - {id: T-037, title: "slidekit author: outline -> recommend/validate -> lint -> render", epic: pipeline, column: done, priority: high, created: 2026-06-18, updated: 2026-06-18, notes: "done e63eeca — src/slidekit/select/author.py + CLI; examples/author-demo; 7 tests; deterministic, vision-free"}
-  - {id: T-038, title: "refocus nightly + NOTES + close PR #7", epic: pipeline, column: done, priority: med, created: 2026-06-18, updated: 2026-06-18, notes: "done 922ceb1 — NIGHTLY_PROMPT NORTH-STAR PRIORITY + NOTES realignment; PR #7 closed (similarity concern absorbed by the honest taxonomy)"}
-
-  # ── Operator layout-feedback loop (2026-06-19): phone issue-form -> FEEDBACK.yaml -> nightly ──
-  - {id: T-039, title: "layout-feedback loop: issue form -> FEEDBACK.yaml -> render + nightly intake", epic: feedback, column: done, priority: high, created: 2026-06-19, updated: 2026-06-19, notes: "done — src/slidekit/feedback (store+intake), scripts/{render_feedback,build_feedback_form,feedback_intake}.py, .github/ISSUE_TEMPLATE/layout-feedback.yml (generated from catalog), .github/workflows/feedback-intake.yml (owner-gated), FEEDBACK.yaml/FEEDBACK.md; 17 tests; NIGHTLY_PROMPT FEEDBACK INTAKE addendum"}
-
-  # ── Operator feedback intake 2026-06-19 (issues #9–#14 -> FB-001..FB-006) ──
-  - {id: T-040, title: "icon-text-rows: remove accent bubble disc (FB-001 / issue #9)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — engine drops the icon node; rows are heading+body full-width; goldens+PDFs regen"}
-  - {id: T-041, title: "stat-callout: top-align columns regardless of subtext (FB-002 / issue #10)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — uniform block height + shared inner_y so values/labels align across columns"}
-  - {id: T-042, title: "image-half-bleed: pack second text block after first (FB-003 / issue #11)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — removed expanding spacer slot from the specimen so blocks top-pack"}
-  - {id: T-043, title: "card-grid: remove accent bubble disc (FB-004 / issue #12)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — engine drops the card icon node; cards are title+body from the top"}
-  - {id: T-044, title: "feature-list: remove accent bubble disc (FB-005 / issue #13)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — engine drops the icon node; full-width heading+body"}
-  - {id: T-045, title: "repurpose checklist -> 'code' dark terminal/IDE layout (FB-006 / issue #14)", epic: feedback, column: done, priority: med, created: 2026-06-19, updated: 2026-06-19, notes: "done — operator chose repurpose over delete; new CodeSlide IR + _layout_code (full-bleed dark panel, window dots, monospace, dimmed comments); registry code-block anchor; example 21_code; goldens/docs/PDFs regen; E_MARGIN exempts chrome"}
-  - {id: T-048, title: "assess Ngo #4 regularity/rhythm for a non-redundant alignment/spacing metric; fix _alignment doc overclaim", epic: research, column: done, priority: low, created: 2026-06-23, updated: 2026-06-23, notes: "done — Ngo full alignment-regularity (x+y) halves clean text columns (0.40 vs 0.80), threatens designed-beats-plain → NOT adopted; spacing-regularity/rhythm have no extractable primary closed-form → declined (heuristic). Fixed AESTHETICS.md+RESEARCH_TRACE.md overclaim (code clusters left-edge x only, not 6 edges); added alignment design note. No code change."}
-  - {id: T-049, title: "assess Ngo #4 proportion/economy for a non-redundant deterministic metric", epic: research, column: done, priority: low, created: 2026-06-24, updated: 2026-06-24, notes: "done — proportion NOT adopted: good-ratio set {1:1,1:√2,golden,1:√3,1:2} confirmed but normalization constant not extractable from any open primary/faithful source (AIM codebase is image-based, not Ngo geometry), and aspect-ratio-to-golden ill-fits slides (content+flex-driven boxes, fixed 16:9 canvas) → redundant-with-noise. Economy NOT adopted: faithfully computable (1/#sizes) but conflicts with deliberate type-scale hierarchy + regresses designed-beats-plain → redundant-and-conflicting. Closes per-measure #4 mining. No code change. See NOTES.md/REFERENCES.md/RESEARCH_TRACE.md."}
-  - {id: T-051, title: "verify color_harmony 30° tolerance against Cohen-Or (#19) exact sector widths", epic: research, column: done, priority: low, created: 2026-06-26, updated: 2026-06-26, notes: "done — extracted Cohen-Or 2006 Appendix from the primary PDF: sector widths 18° (small i/L/I/Y), 79.2° (L large), 93.6° (V/Y/X large), 180° (T); centre separations 90° (L) / 180° (I/X/Y). slidekit's 30° falloff lies WITHIN the 18°–93.6° range and 180° reward matches I/X/Y centre sep → consistent-with, but 30° is not stated by the paper (and 120°/150° reward angles are artist-wheel/Itten, not Cohen-Or centres) → tolerance stays HEURISTIC. No metric change (grounding not recalibration; big-number held 89.5). Updated REFERENCES.md (#19 + log), RESEARCH_TRACE.md (row+scoreboard), AESTHETICS.md, score.py comment, NOTES.md."}
-  - {id: T-053, title: "assess info_density words-per-slide / coverage bands against a primary source", epic: research, column: done, priority: low, created: 2026-06-28, updated: 2026-06-28, notes: "done — added ref #23 (Wecker, 'Slide presentations as speech suppressors', Computers & Education 59(2):260-273, 2012, DOI 10.1016/j.compedu.2012.01.013), verified from ERIC EJ966972 + DOI metadata: a controlled experiment (n=209; no-slides/regular/concise) finding text-dense slides suppress retention of oral info via attention misallocation, avoided by concise slides. Strengthens info_density DIRECTION (experiment vs #20 design criteria). Bands stay HEURISTIC: literature gives a minimization principle, not a numeric words-per-slide maximum → 45/130 word + 0.45/0.85 coverage cut-offs are our choice (consistent-with, not stated-by; parallel to #19/#22). No metric change (grounding; big-number held 89.5). Updated REFERENCES.md (#23 + header 23 + log), RESEARCH_TRACE.md (row/scoreboard), AESTHETICS.md, score.py comment, NOTES.md. Refs now 23/23 verified."}
-  - {id: T-052, title: "verify hierarchy 1.5× perfect-fifth modular-scale step from a primary typographic source", epic: research, column: done, priority: low, created: 2026-06-27, updated: 2026-06-27, notes: "done — added ref #22 (Brown, 'More Meaningful Typography', A List Apart 2011), verified by fetching the primary article: defines the modular-scale convention, quotes Bringhurst ('Shaping the Page'), builds a scale from a chosen harmonious ratio whose menu includes the perfect fifth (3:2 = 1.5) and golden ratio (1.618). Bounds slidekit's 1.5× step as the perfect-fifth member of that family (not arbitrary); selection of 1.5 stays HEURISTIC (source gives a menu, not a single value) → consistent-with, not stated-by, parallel to #19. No metric change (grounding; big-number held 89.5). Updated REFERENCES.md (#22 + header 22 + log), RESEARCH_TRACE.md (row/scoreboard/gap #2), AESTHETICS.md, score.py comment, NOTES.md. Refs now 22/22 verified."}
-  - {id: T-050, title: "ground hierarchy sub-score direction (RESEARCH_TRACE open gap #2); add ref #21 signaling principle", epic: research, column: done, priority: low, created: 2026-06-25, updated: 2026-06-25, notes: "done — hierarchy was the last sub-score tracing to NO primary source. Added ref #21 van Gog signaling/cueing principle (Cambridge Handbook of Multimedia Learning 2021, verified from Cambridge Core) → grounds the metric's DIRECTION (a clear title→body step is a structural cue that highlights organization). Exact 1.5× threshold stays HEURISTIC (perfect-fifth convention; Bringhurst noted as candidate but modular-scale passage only secondhand → not added as verified). No metric behaviour change — grounding not recalibration. Updated REFERENCES.md (21/21), RESEARCH_TRACE.md (gap #2 narrowed), AESTHETICS.md (hierarchy design note), score.py comment. Suite green."}
-
-  # ── Operator feedback intake 2026-07-02 (web submissions -> FB-008..FB-017) ──
-  - {id: T-054, title: "title-slide: remove distracting subheader (FB-008)", epic: feedback, column: done, priority: med, created: 2026-07-02, updated: 2026-07-02, notes: "done — stripped the subtitle from the title-slide specimen (optional IR field kept); golden 01 + preview + PDFs regen"}
-  - {id: T-055, title: "two-column: delete layout, redundant with comparison-columns (FB-009)", epic: feedback, column: done, priority: med, created: 2026-07-02, updated: 2026-07-02, notes: "done — deleted the two-column component (model/handler/registry/scaffold); comparison-columns now anchors the two-column family (image-half-bleed + chart-with-insight reparented). Specimen + PDF removed; showcases 09/10/demo-5/agents-in-ai converted; goldens/taxonomy/selection/examples-index/web-previews/PDFs regen; FB-009 retargeted to comparison-columns for validation"}
-  - {id: T-056, title: "icon-text-rows: subtext unreadable / clipped (FB-010)", epic: feedback, column: done, priority: high, created: 2026-07-02, updated: 2026-07-02, notes: "done — body box was shorter than one line (0.3\" intra-row gap starved it); paired heading+body on a 0.1\" inner gap and guaranteed >= one line. golden 03/10 regen; web-preview guard added"}
-  - {id: T-057, title: "stat-callout: remove distracting small grey subtext (FB-011)", epic: feedback, column: done, priority: med, created: 2026-07-02, updated: 2026-07-02, notes: "done — stripped the muted subtext from the stat-callout specimen (optional IR field kept); golden 04 + preview + PDFs regen"}
-  - {id: T-058, title: "comparison-columns: 3 items after headers, more space between (FB-012)", epic: feedback, column: done, priority: med, created: 2026-07-02, updated: 2026-07-02, notes: "done — specimen trimmed to 3 items/column; handler fills column so items get more space; golden regenerated"}
-  - {id: T-059, title: "timeline: word/length cap so last column text is not cut off (FB-013)", epic: feedback, column: done, priority: med, created: 2026-07-02, updated: 2026-07-02, notes: "done — W_TIMELINE_BALANCE advisory flags uneven timeline columns (deterministic); specimen Q1 trimmed to balance at 4 lines; 2 lint tests"}
-  - {id: T-060, title: "section-divider: raise number so text is center-aligned (FB-014)", epic: feedback, column: done, priority: med, created: 2026-07-02, updated: 2026-07-02, notes: "done — _emphasis_stack gained opt-in center_on; section-divider centres the title (index 1) so the number rides above. golden 11 + preview + PDFs; test_section_divider_centres_title_not_number"}
-  - {id: T-061, title: "agenda: descenders (g/p/y) clipped in web gallery (FB-015)", epic: feedback, column: done, priority: high, created: 2026-07-02, updated: 2026-07-02, notes: "done — web-preview emitter pinned line-height + dropped vertical padding + overflow visible; fixes the whole single-line-row clip class"}
-  - {id: T-062, title: "quote-opener: not all text displayed / spacing (FB-016)", epic: feedback, column: done, priority: high, created: 2026-07-02, updated: 2026-07-02, notes: "done — same root cause as FB-015 (web-preview clip); fixed by the emitter line-height/padding/overflow change"}
-  - {id: T-063, title: "big-number: remove final line (FB-017)", epic: feedback, column: done, priority: med, created: 2026-07-02, updated: 2026-07-02, notes: "done — stripped the context line from the big-number specimen (optional IR field kept); golden 14 + preview + PDFs regen"}
-  - {id: T-064, title: "swot: dense quadrant items get a box shorter than one line (discovered)", epic: feedback, column: done, priority: low, created: 2026-07-02, updated: 2026-07-02, notes: "done (commit a729aeb) — swot item text moved to the caption tier (25pt, is_caption) so each cell box honestly holds a full leaded line; no content dropped. Removed the swot exemption from the web-preview geometry guard so the one-line-fits invariant now covers swot. Golden 36 + previews + PDFs regen."}
+  # ══ Sprint 3 — Review loop and shareable output ═════════════════════════════
+  - {id: T-301, title: "Static review site served from committed geometry", story: US-15, column: done, priority: high, created: 2026-07-03, updated: 2026-07-05, notes: "web/data/previews.json is generated and committed; Netlify runs no build"}
+  - {id: T-302, title: "Single-password edge gate over the whole site", story: US-15, column: done, priority: high, created: 2026-07-03, updated: 2026-07-04, notes: "HMAC session cookie, no third-party auth service, noindex headers"}
+  - {id: T-303, title: "Slide-by-slide gallery rendered from resolved rects", story: US-15, column: done, priority: high, created: 2026-07-04, updated: 2026-07-05, notes: "every slide is real geometry in the browser, never a screenshot"}
+  - {id: T-304, title: "Deck review page with per-slide, scope-aware comments", story: US-15, column: done, priority: high, created: 2026-07-21, updated: 2026-07-21, notes: "review a whole deck in order, on a phone"}
+  - {id: T-305, title: "Deploy only when the served site can actually change", story: US-15, column: done, priority: low, created: 2026-07-05, updated: 2026-07-05, notes: "ignore rule skips builds for inbox-only commits, keeping credit use flat"}
+  - {id: T-306, title: "Thumbs-up / thumbs-down marks with a free-text comment", story: US-16, column: done, priority: high, created: 2026-07-05, updated: 2026-07-05, notes: "scoped to deck + slide index so a mark is always actionable"}
+  - {id: T-307, title: "Serverless submit function committing one JSON file per submission", story: US-16, column: done, priority: high, created: 2026-07-05, updated: 2026-07-05, notes: "writes to web/feedback-inbox via a fine-grained token"}
+  - {id: T-308, title: "Workflow folding the inbox into FEEDBACK.yaml automatically", story: US-16, column: done, priority: high, created: 2026-07-05, updated: 2026-07-05, notes: "plain Python fold-in; positive-only marks are counted, not queued as work"}
+  - {id: T-309, title: "Rebuild the EDA-library talk as a slidekit deck", story: US-16, column: done, priority: med, created: 2026-07-20, updated: 2026-07-22, notes: "65 slides; the largest real deck the system has produced"}
+  - {id: T-310, title: "Apply operator feedback FB-050..FB-116 across the review decks", story: US-16, column: done, priority: high, created: 2026-07-21, updated: 2026-07-22, notes: "67 items: deck copy plus reusable layout fixes, each folded back into the engine"}
+  - {id: T-311, title: "Midnight dark colour scheme for the EDA deck", story: US-16, column: done, priority: low, created: 2026-07-22, updated: 2026-07-22, notes: "first deck-wide dark theme; later exposed a harness edge-artifact bug"}
+  - {id: T-312, title: "Add-slide-before / add-slide-after actions on the review page", story: US-17, column: done, priority: low, created: 2026-07-22, updated: 2026-07-22, notes: "request new content in place rather than describing where it goes"}
+  - {id: T-313, title: "Record the requested position and direction with the comment", story: US-17, column: done, priority: low, created: 2026-07-22, updated: 2026-07-22, notes: "an agent knows exactly where to insert"}
+  - {id: T-314, title: "source field on a slide renders as a clickable Source link", story: US-07, column: done, priority: med, created: 2026-07-21, updated: 2026-07-21, notes: "bottom-right chrome, underlined, keeping the node's own colour"}
+  - {id: T-315, title: "Link chrome exempt from margin lint but still proven to fit", story: US-07, column: done, priority: med, created: 2026-07-21, updated: 2026-07-21, notes: "chrome sits in the reserved corner by design"}
+  - {id: T-316, title: "Sourced slides added to the Claude Code deck", story: US-07, column: done, priority: low, created: 2026-07-21, updated: 2026-07-21, notes: "claims traceable to their references"}
+  - {id: T-317, title: "Emit the page number as an <a:fld type=slidenum> field", story: US-08, column: done, priority: high, created: 2026-07-22, updated: 2026-07-22, notes: "renumbers live when slides move, are added or deleted"}
+  - {id: T-318, title: "Align firstSlideNum with the deck's page_numbers.start_at", story: US-08, column: done, priority: med, created: 2026-07-22, updated: 2026-07-22, notes: "the field shows slidekit's number, not the physical slide index"}
+  - {id: T-319, title: "Wrap the field in a sldNum placeholder in the bottom-right corner", story: US-08, column: done, priority: med, created: 2026-08-23, updated: 2026-08-24, notes: "marks it as the slide number rather than an ordinary text box; layout placeholder re-homed from the stock 4:3 geometry"}
+  - {id: T-320, title: "Emit one named slide layout per design", story: US-10, column: done, priority: high, created: 2026-08-23, updated: 2026-08-23, notes: "all 30 designs appear under Slide > Edit theme; previously every slide pointed at Blank"}
+  - {id: T-321, title: "Make layout text a real placeholder so a picked design is editable", story: US-10, column: done, priority: high, created: 2026-08-23, updated: 2026-08-23, notes: "a plain shape on a layout renders but cannot be selected"}
+  - {id: T-322, title: "Promote layout shapes to placeholders so designs can be recoloured", story: US-10, column: done, priority: high, created: 2026-08-23, updated: 2026-08-23, notes: "clone inherits geometry, position and fill; theme <p:style> stripped so it cannot override"}
+  - {id: T-323, title: "Suppress inherited layout graphics on emitted slides", story: US-10, column: done, priority: med, created: 2026-08-23, updated: 2026-08-23, notes: "showMasterSp=0 plus stripping cloned placeholders keeps slides byte-identical"}
+  - {id: T-324, title: "Turn word-wrap off for single-line nodes", story: US-10, column: done, priority: high, created: 2026-07-22, updated: 2026-07-22, notes: "stops Google Slides re-wrapping a box sized to our exact metrics"}
+  - {id: T-325, title: "Give single-line boxes width slack, with the centre held fixed", story: US-10, column: done, priority: high, created: 2026-07-22, updated: 2026-08-24, notes: "clamping after shifting x moved centred text outside its proven rect; growth is now bounded by both edges"}
+  - {id: T-326, title: "Zero horizontal text insets so glyphs start at exactly rect.x", story: US-10, column: done, priority: high, created: 2026-08-24, updated: 2026-08-24, notes: "headings sat 0.1in off the rule beneath them, and the inset stole width the linter had already measured"}
+  - {id: T-327, title: "E_WRAP: text must fit on one line", story: US-10, column: done, priority: high, created: 2026-08-23, updated: 2026-08-24, notes: "character budget from real font metrics, no renderer needed; slots too narrow for one line warn instead"}
+  - {id: T-328, title: "Ignore the rasteriser's edge fringe in the verify harness", story: US-10, column: done, priority: med, created: 2026-08-24, updated: 2026-08-24, notes: "an un-painted hairline read as ink on dark decks and failed 47 slides that were correct"}
+  - {id: T-329, title: "board.yaml as source of truth, rendered to BOARD.md", story: US-19, column: done, priority: med, created: 2026-06-20, updated: 2026-07-05, notes: "columns, epics and cards; a sync test keeps the two from drifting"}
+  - {id: T-330, title: "Write the 20 user stories in docs/USER_STORIES.md", story: US-19, column: done, priority: med, created: 2026-08-24, updated: 2026-08-24, notes: "As-a/I-want/so-that with acceptance criteria and MoSCoW priority"}
+  - {id: T-331, title: "Restructure the board into sprints, stories and constituent tasks", story: US-19, column: done, priority: med, created: 2026-08-24, updated: 2026-08-24, notes: "three closed sprints; story status cross-checked against its own cards by the renderer"}

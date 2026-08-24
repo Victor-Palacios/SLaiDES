@@ -167,5 +167,6 @@ that regressions and stale artifacts are caught in CI.
 
 ---
 
-_Backlog owner: to be assigned. Suggested next step: promote the Must-have
-stories into `ops/board.yaml` cards under the relevant epics._
+_All 20 stories are scheduled and delivered across three closed sprints — see
+`ops/BOARD.md` for the product backlog, the sprint each story landed in, and the
+cards that delivered it. A test keeps the story ids here and on the board in sync._
