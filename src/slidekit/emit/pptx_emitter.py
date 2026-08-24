@@ -455,9 +455,16 @@ def _emit_text(slide, node: "ResolvedNode", palette, canvas_w: int = 12192000) -
             want = int(text_w * _SINGLE_LINE_SLACK) + INSET_LEFT_EMU + INSET_RIGHT_EMU
             if want > w:
                 if node.align == "center":
-                    # Grow symmetrically so the text stays centred; clamp on-canvas.
-                    x = max(0, x - (want - w) // 2)
-                    w = min(want, canvas_w - x)
+                    # Grow symmetrically, and bound the growth by BOTH edges so the
+                    # visual centre cannot move. Clamping only after shifting x
+                    # (max(0, ...) on one side, canvas_w on the other) shifted the
+                    # centre whenever either clamp bit, which slid glyphs outside
+                    # the rect the layout proved — the render harness caught it as
+                    # stray ink on this_vs_that and the EDA deck.
+                    grow = min((want - w) // 2, x, canvas_w - (x + w))
+                    if grow > 0:
+                        x -= grow
+                        w += 2 * grow
                 else:
                     # Left-anchored (incl. code runs at an exact x): never move x,
                     # only extend rightward, up to the canvas edge.
