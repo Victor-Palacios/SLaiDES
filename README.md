@@ -20,24 +20,23 @@
 | **Design & Testing document** — architecture decisions, patterns + reasons, deployment options + cost, and all testing done | [`docs/DESIGN_AND_TESTING.md`](docs/DESIGN_AND_TESTING.md) | ✅ in repo |
 | **Automated tests** — the test suite | [`tests/`](tests/) · run with `pytest -q` (see [doc](docs/DESIGN_AND_TESTING.md#5-testing)) | ✅ in repo |
 | **CI/CD** — GitHub Actions | [Actions tab](https://github.com/Victor-Palacios/SLaiDES/actions) · [`.github/workflows/`](.github/workflows/) | ✅ in repo |
-| **Recorded demo/presentation** — 15–20 min, all members on camera + voiceover | _TODO: paste the Google Drive link (Anyone-with-link) here_ | ⬜ add before submission |
-| **Deployed version** — _only if a web application_ | Review site: <https://delicate-malasada-1b3d2c.netlify.app/> _(password-gated — see note)_ | ⚠️ conditional |
+| **Recorded demo/presentation** — 15–20 min, presenter on camera + voiceover + photo ID | **[▶ Watch on Google Drive](https://drive.google.com/drive/folders/1XjqfruE0fXmLyWfuqAH_bC7AhvMJrfC5)** | ✅ recorded |
+| **Deployed version** — _only if a web application_ | **N/A** — slidekit is a build/authoring harness (CLI), not a web app | ➖ N/A |
 
-> **On the deployed-version line:** slidekit is a **command-line tool / Python
-> library**, not a web application, so the handbook's "link to the deployed
-> version (_if a web application_)" is **N/A for the core deliverable**. The only
-> deployed web component is the internal layout-review site (Netlify), which is
-> **password-gated** — if you cite it for grading, give the grader access or a
-> read-only view, otherwise leave this line marked N/A.
+> **On the deployed-version line:** slidekit is a **build/authoring harness run from
+> the command line** — it produces `.pptx`/`.pdf` files — **not a web application**,
+> so the handbook's "link to the deployed version (_if a web application_)" does
+> **not apply**. There is no always-on service to deploy.
 
 **Sprints:** the three completed sprints (S1–S3), their user stories, and the
 constituent tasks are tracked in [`ops/board.yaml`](ops/board.yaml) → rendered to
 [`ops/BOARD.md`](ops/BOARD.md); see also the sprint table in
 [the Design & Testing doc](docs/DESIGN_AND_TESTING.md#6-sprints-and-process).
 
-**Submission-side (not repo files, keep handy):** the signed final page of the
-**Group Project Agreement**; the presentation must show a **government-issued ID** on
-camera and be a single `.mp4`/`.mov` on Google Drive (Anyone-with-link).
+**Submission-side (not repo files):** this is an **individual (solo) capstone — no
+Group Project Agreement applies**. Submit via the Quantic dashboard's **Submit
+Project** buttons (repo link + demo link); the demo must show a **government-issued
+ID** on camera and be a single `.mp4`/`.mov` on Google Drive (Anyone-with-link).
 
 ---
 

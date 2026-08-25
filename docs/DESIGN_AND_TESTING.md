@@ -223,5 +223,6 @@ Owner** (authors and approves all changes).
 the `ops/` agile board (`board.yaml` → `BOARD.md`), and the feedback queue
 (`ops/FEEDBACK.yaml`) fed by the mobile review site.
 
-**Proposal / Group Project Agreement:** _link or note where submitted (the Agreement's
-signed final page is uploaded at submission)._
+**Submission.** Individual (solo) capstone — **no Group Project Agreement applies**.
+The final deliverables (repository link + recorded demonstration) are submitted via
+the Quantic dashboard's "Submit Project" buttons.
