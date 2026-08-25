@@ -7,11 +7,6 @@
 
 ## 📚 MSSE Capstone deliverables (start here)
 
-> **Grader access:** this repository is **private** — it must be **shared with the
-> GitHub account [`quantic-grader`](https://github.com/quantic-grader)**
-> (_Settings → Collaborators and teams → Add people_). Nothing below is gradable
-> until that access is granted.
-
 | Deliverable (per the Capstone Handbook) | Link | Status |
 |---|---|---|
 | **Working code** — the software system, appropriately documented | [`src/slidekit/`](src/slidekit/) · [Quickstart](#quickstart) | ✅ in repo |
