@@ -16,12 +16,14 @@
 | **Automated tests** — the test suite | [`tests/`](tests/) · run with `pytest -q` (see [doc](docs/DESIGN_AND_TESTING.md#5-testing)) | ✅ in repo |
 | **CI/CD** — GitHub Actions | [Actions tab](https://github.com/Victor-Palacios/SLaiDES/actions) · [`.github/workflows/`](.github/workflows/) | ✅ in repo |
 | **Recorded demo/presentation** — 15–20 min, presenter on camera + voiceover + photo ID | **[▶ Watch on Google Drive](https://drive.google.com/drive/folders/1XjqfruE0fXmLyWfuqAH_bC7AhvMJrfC5)** | ✅ recorded |
-| **Deployed version** — _only if a web application_ | **N/A** — slidekit is a build/authoring harness (CLI), not a web app | ➖ N/A |
+| **Deployed version** — _only if a web application_ | **N/A** — slidekit is an agent harness for deck authoring (CLI), not a web app | ➖ N/A |
 
-> **On the deployed-version line:** slidekit is a **build/authoring harness run from
-> the command line** — it produces `.pptx`/`.pdf` files — **not a web application**,
-> so the handbook's "link to the deployed version (_if a web application_)" does
-> **not apply**. There is no always-on service to deploy.
+> **On the deployed-version line:** slidekit is an **agent harness for deck
+> authoring** — a command-line pipeline that constrains an agent's output and
+> mechanically verifies every slide (geometry proven from font metrics, the linter as
+> the gate) before emitting `.pptx`/`.pdf`. It is **not a web application**, so the
+> handbook's "link to the deployed version (_if a web application_)" does **not
+> apply** — there is no always-on service to deploy.
 
 **Sprints:** the three completed sprints (S1–S3), their user stories, and the
 constituent tasks are tracked in [`ops/board.yaml`](ops/board.yaml) → rendered to

@@ -102,17 +102,18 @@ correctness is a property of the geometry — checkable without opening the file
 
 ### 3.4 Recommended deployment options and relative cost
 
-slidekit's core deliverable is a **command-line tool / Python library**, not a
-long-running service, so "deployment" mainly means **distribution + CI**, not hosting.
+slidekit's core deliverable is an **agent harness for deck authoring, run from the
+command line** — not a long-running service — so "deployment" mainly means
+**distribution + CI**, not hosting.
 
 | Option | What it looks like | Relative cost |
 |---|---|---|
-| **On-premises / local (recommended for the library)** | `pip install -e .`; authors and CI generate decks on their own machines. No server. | **$0** — uses existing compute. |
+| **On-premises / local (recommended for the harness)** | `pip install -e .`; authors and CI generate decks on their own machines. No server. | **$0** — uses existing compute. |
 | **Cloud CI (recommended for automation)** | GitHub Actions runners build decks and run the test suite on push. | **≈$0** — free-tier Actions minutes (public repos free; private repos get a monthly allotment, overage ≈ $0.008/min). |
 | **Package distribution** | Publish to PyPI for `pip install slidekit`. | **$0** — PyPI hosting is free. |
 | **Optional review website** | Static `web/` + a small write path. Currently Netlify (edge-auth + serverless function). | **$0 on Netlify free tier** (bandwidth + function-call limits); GitHub Pages is a $0 static alternative if the password gate is dropped. |
 
-**Recommendation:** ship the core as a **pip-installable library/CLI run locally and
+**Recommendation:** ship the core as a **pip-installable CLI run locally and
 in GitHub Actions** — no always-on infrastructure, so **no recurring hosting cost**.
 Keep the review site on a **free PaaS tier** (Netlify today; GitHub Pages if public
 viewing is acceptable). An always-on cloud VM is **not** recommended: it would add
