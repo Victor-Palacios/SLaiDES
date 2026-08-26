@@ -57,6 +57,17 @@ never whole categories; when the operator supplies explicit numbers, use
 their literals verbatim; bullet-list items fit on ONE line — keep each short
 enough that it never wraps (FB-098).
 
+**No slide may be black and white.** Every slide must carry at least one element
+the eye reads as colour — the page number does NOT count (it is chrome). This is
+enforced by the linter as `E_MONOCHROME`, judged perceptually (a very dark navy
+"ink" reads as black and does not satisfy it; a saturated backdrop like the code
+panel does). The default `theme.headline` role is `accent`, which colours slide
+titles and satisfies the rule for free. Standing operator instruction (2026-08-26).
+
+**The page number hugs the bottom-right corner.** Its chrome box is right-aligned
+against the right margin, not parked inboard. Standing operator instruction
+(2026-08-26).
+
 **Speaker notes are mandatory.** Every slide of every deck you author carries a
 `notes:` field explaining the point of that slide and what to say. Notes render
 to the pptx notes page only — never on the slide — so they never affect layout

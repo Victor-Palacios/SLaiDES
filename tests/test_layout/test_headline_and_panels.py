@@ -48,11 +48,19 @@ def test_headline_role_colours_every_title():
     assert seen >= 4
 
 
-def test_headline_unset_keeps_default_title_colour():
-    """Without a headline role, titles keep their prior colour (primary for
-    _slide_title-based layouts, default for bullet lists) — no silent change."""
+def test_headline_defaults_to_accent():
+    """The headline role now DEFAULTS to accent (2026-08-26): every titled slide
+    must carry a chromatic element, so no slide renders pure black-and-white."""
     slides = "  - component: table-slide\n    title: T\n    headers: [A, B]\n    rows: [[A, B]]\n"
     deck, rd = _resolve(headline="", slides=slides)
+    title = _titles(rd.slides[0])[0]
+    assert title.text_color == deck.theme.palette.accent
+
+
+def test_headline_can_be_overridden_per_deck():
+    """A deck may still pin titles to another palette role."""
+    slides = "  - component: table-slide\n    title: T\n    headers: [A, B]\n    rows: [[A, B]]\n"
+    deck, rd = _resolve(headline="  headline: primary\n", slides=slides)
     title = _titles(rd.slides[0])[0]
     assert title.text_color == deck.theme.palette.primary
 

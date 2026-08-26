@@ -61,10 +61,12 @@ class Theme(BaseModel):
     spacing_unit: float = Field(default=12.0, gt=0.0)
     motif: str = "minimal"
     font: str = Field(default="arial")
-    # Optional: the palette ROLE used to colour slide titles/headlines (e.g. "accent"
-    # to make every headline the deck accent). None keeps each layout's existing title
-    # colour, so decks that don't set it are unaffected.
-    headline: Optional[str] = None
+    # The palette ROLE used to colour slide titles/headlines. Defaults to "accent"
+    # so every titled slide carries at least one chromatic element — the standing
+    # rule that no slide may render as pure black-and-white (E_MONOCHROME). Set it
+    # to another role ("primary", "text", ...) to override per deck; None restores
+    # each layout's own default title colour.
+    headline: Optional[str] = "accent"
 
     @field_validator("headline")
     @classmethod

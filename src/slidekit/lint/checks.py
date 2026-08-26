@@ -128,6 +128,9 @@ def _check_slide(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
         if node.node_type == "text" and not node.is_chrome:
             issues.extend(_check_wrap(node, slide))
 
+    # E_MONOCHROME — the slide renders with no colour at all.
+    issues.extend(_check_monochrome(slide, deck))
+
     # E_OVERLAP — non-chrome nodes intersect.
     content_nodes = [n for n in slide.nodes if not n.is_chrome]
     issues.extend(_check_overlaps(content_nodes, slide))
@@ -445,6 +448,66 @@ def _check_gaps(nodes: list[ResolvedNode], slide: ResolvedSlide) -> list[LintIss
                             suggested_fix="Increase spacing between elements.",
                         ))
     return issues
+
+
+# Operator style rule (2026-08-26): NO slide may render as pure black-and-white.
+# Every slide must carry at least one element the eye reads as coloured. The page
+# number is explicitly excluded — it is chrome, and its colour does not count.
+#
+# "Coloured" is judged perceptually, not by hex inequality: a deck's ink is often a
+# very dark navy that reads as black. A CONTENT colour must be reasonably saturated
+# AND light enough to register (s >= 0.35, v >= 0.50). A slide BACKGROUND is judged
+# on saturation alone — a deliberate dark backdrop like the code panel's #0C1A1C is
+# a colour choice, whereas pure #000000 (s = 0) is not.
+_CHROMA_MIN_SAT = 0.35
+_CHROMA_MIN_VAL = 0.50
+_BACKDROP_MIN_SAT = 0.25
+
+
+def _hsv(hex_color: str) -> tuple[float, float, float]:
+    h = hex_color.lstrip("#")
+    if len(h) == 3:
+        h = "".join(c * 2 for c in h)
+    r, g, b = (int(h[i:i + 2], 16) / 255 for i in (0, 2, 4))
+    import colorsys
+    return colorsys.rgb_to_hsv(r, g, b)
+
+
+def _is_chromatic(hex_color: str, *, backdrop: bool = False) -> bool:
+    """True if this colour reads as colour rather than as black/white/grey."""
+    try:
+        _, sat, val = _hsv(hex_color)
+    except (ValueError, IndexError):
+        return False
+    if backdrop:
+        return sat >= _BACKDROP_MIN_SAT
+    return sat >= _CHROMA_MIN_SAT and val >= _CHROMA_MIN_VAL
+
+
+def _check_monochrome(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
+    """E_MONOCHROME — the slide carries no colour the eye can see."""
+    if slide.background and _is_chromatic(slide.background, backdrop=True):
+        return []
+    for node in slide.nodes:            # chrome (the page number) deliberately excluded
+        for color in (node.text_color, node.fill_color):
+            if color and _is_chromatic(color):
+                return []
+    return [LintIssue(
+        code="E_MONOCHROME",
+        severity="error",
+        slide=slide.slide_index,
+        node_path=f"slide[{slide.slide_index}]",
+        message=(
+            f"Slide {slide.slide_index} ({slide.component}) renders in black and "
+            f"white: no element carries a colour the eye registers (the page "
+            f"number does not count)."
+        ),
+        suggested_fix=(
+            "Give the slide a chromatic element — the simplest is the deck theme's "
+            "`headline: accent`, which colours the slide title. A palette accent on "
+            "a rule, icon, or highlighted cell also satisfies this."
+        ),
+    )]
 
 
 def _check_contrast(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:

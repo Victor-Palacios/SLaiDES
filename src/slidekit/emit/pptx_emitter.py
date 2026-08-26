@@ -473,6 +473,15 @@ def _emit_text(slide, node: "ResolvedNode", palette, canvas_w: int = 12192000) -
                     if grow > 0:
                         x -= grow
                         w += 2 * grow
+                elif node.align == "right":
+                    # Right-anchored (the page number hugging the corner): the
+                    # RIGHT edge is the contract, so grow leftward only — extending
+                    # rightward would push the glyph past the margin it was placed
+                    # against.
+                    grow = min(want - w, x)
+                    if grow > 0:
+                        x -= grow
+                        w += grow
                 else:
                     # Left-anchored (incl. code runs at an exact x): never move x,
                     # only extend rightward, up to the canvas edge.
@@ -509,7 +518,10 @@ def _emit_text(slide, node: "ResolvedNode", palette, canvas_w: int = 12192000) -
     size_pt = node.size_pt or 32.0
 
     p = tf.paragraphs[0]
-    p.alignment = PP_ALIGN.CENTER if node.align == "center" else PP_ALIGN.LEFT
+    p.alignment = {
+        "center": PP_ALIGN.CENTER,
+        "right": PP_ALIGN.RIGHT,
+    }.get(node.align, PP_ALIGN.LEFT)
     run = p.add_run()
     run.text = node.text_content or ""
     run.font.name = font_name

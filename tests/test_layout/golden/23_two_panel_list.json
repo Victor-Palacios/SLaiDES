@@ -29,7 +29,7 @@
           "size_pt": 42.0,
           "bold": true,
           "italic": false,
-          "text_color": "#243A5E"
+          "text_color": "#2E8B57"
         },
         {
           "node_id": "lp_head_224",
@@ -255,9 +255,9 @@
           "node_id": "chrome_pagenum_234",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "1",
@@ -273,7 +273,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     }

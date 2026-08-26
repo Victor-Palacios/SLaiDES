@@ -29,7 +29,7 @@
           "size_pt": 42.0,
           "bold": true,
           "italic": false,
-          "text_color": "#0B3954"
+          "text_color": "#BF6B63"
         },
         {
           "node_id": "pyr_bar_353",
@@ -185,9 +185,9 @@
           "node_id": "chrome_pagenum_361",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "1",
@@ -203,7 +203,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     }

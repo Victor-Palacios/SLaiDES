@@ -134,7 +134,12 @@ def page_number_rect(canvas_w: int, canvas_h: int) -> Rect:
     same rect — one source of truth so the layout's placeholder and the slide's
     chrome can never drift apart.
     """
-    w = int(1.5 * EMU_PER_INCH)
+    # Operator style rule (2026-08-26): the page number hugs the bottom-right
+    # CORNER. The box is only wide enough for a three-digit number and the node is
+    # right-aligned, so the last glyph lands exactly on the right margin. (It used
+    # to be a 1.5" box with left-aligned text, which parked the number ~1.5"
+    # inboard of the corner.)
+    w = int(0.6 * EMU_PER_INCH)
     h = int(0.4 * EMU_PER_INCH)
     return Rect(canvas_w - MARGIN_MIN_EMU - w, canvas_h - MARGIN_MIN_EMU - h, w, h)
 
@@ -262,6 +267,7 @@ def _resolve_slide(
             italic=False,
             rect=Rect(pn_x, pn_y, pn_box_w, pn_box_h),
             is_chrome=True,
+            align="right",
         )
         # Emit as an auto-updating slide-number field in PPTX (see the emitter):
         # slidekit's page number already equals the physical slide position, so a

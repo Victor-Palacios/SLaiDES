@@ -133,7 +133,8 @@ def _node_html(node: "ResolvedNode", palette) -> str:
         # where present, are already baked into rect.h), so any top/bottom padding on
         # a border-box would steal a line's worth of space and clip. Horizontal inset
         # only.
-        centered = ";text-align:center" if node.align == "center" else ""
+        centered = {"center": ";text-align:center",
+                    "right": ";text-align:right"}.get(node.align, "")
         style = (
             f"left:{left};top:{top};width:{width};height:{height};"
             f"color:{color};font-family:'{font_name}',Arial;font-size:{size_px:.1f}px;"

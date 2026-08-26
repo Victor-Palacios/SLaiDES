@@ -162,6 +162,7 @@ def _draw_text(c, node: "ResolvedNode", palette, page_h: float) -> None:
     x = _pt(node.rect.x)
     top = page_h - _pt(node.rect.y) - _pt(INSET_TOP_EMU)
     centered = node.align == "center"
+    right = node.align == "right"
 
     lines = node.lines or []
     if not lines:
@@ -169,6 +170,9 @@ def _draw_text(c, node: "ResolvedNode", palette, page_h: float) -> None:
         if centered:
             c.drawCentredString(_pt(node.rect.x) + _pt(node.rect.w) / 2,
                                 top - size * 0.85, node.text_content or "")
+        elif right:
+            c.drawRightString(_pt(node.rect.x + node.rect.w),
+                              top - size * 0.85, node.text_content or "")
         else:
             c.drawString(x, top - size * 0.85, node.text_content or "")
         return
@@ -180,6 +184,9 @@ def _draw_text(c, node: "ResolvedNode", palette, page_h: float) -> None:
         if centered:
             # Center each measured line on the rect midline (insets cancel out).
             c.drawCentredString(_pt(node.rect.x) + _pt(node.rect.w) / 2, baseline, ln.text)
+        elif right:
+            # Right-anchored: glyphs end at the rect's right edge (insets are zero).
+            c.drawRightString(_pt(node.rect.x + node.rect.w), baseline, ln.text)
         else:
             c.drawString(x, baseline, ln.text)
         cur -= line_h

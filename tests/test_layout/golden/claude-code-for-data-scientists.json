@@ -105,9 +105,9 @@
           "node_id": "chrome_pagenum_509",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "2",
@@ -123,7 +123,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -285,9 +286,9 @@
           "node_id": "chrome_pagenum_516",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "3",
@@ -303,7 +304,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -488,9 +490,9 @@
           "node_id": "chrome_pagenum_524",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "4",
@@ -506,7 +508,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -860,9 +863,9 @@
           "node_id": "chrome_pagenum_540",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "5",
@@ -878,7 +881,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ],
       "background": "#0C1A1C"
@@ -1148,9 +1152,9 @@
           "node_id": "chrome_pagenum_550",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "6",
@@ -1166,7 +1170,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -1605,9 +1610,9 @@
           "node_id": "chrome_pagenum_568",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "7",
@@ -1623,7 +1628,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -1882,9 +1888,9 @@
           "node_id": "chrome_pagenum_580",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "8",
@@ -1900,7 +1906,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -2187,9 +2194,9 @@
           "node_id": "chrome_pagenum_593",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "9",
@@ -2205,7 +2212,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -2342,9 +2350,9 @@
           "node_id": "chrome_pagenum_599",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "10",
@@ -2360,13 +2368,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_600",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -2519,9 +2528,9 @@
           "node_id": "chrome_pagenum_606",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "11",
@@ -2537,7 +2546,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -2613,9 +2623,9 @@
           "node_id": "chrome_pagenum_610",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "12",
@@ -2631,7 +2641,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -2741,9 +2752,9 @@
           "node_id": "chrome_pagenum_615",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "13",
@@ -2759,13 +2770,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_616",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -3134,9 +3146,9 @@
           "node_id": "chrome_pagenum_631",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "14",
@@ -3152,13 +3164,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_632",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -3363,9 +3376,9 @@
           "node_id": "chrome_pagenum_640",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "15",
@@ -3381,13 +3394,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_641",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -3517,9 +3531,9 @@
           "node_id": "chrome_pagenum_646",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "16",
@@ -3535,13 +3549,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_647",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -3637,9 +3652,9 @@
           "node_id": "chrome_pagenum_651",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "17",
@@ -3655,7 +3670,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -3918,9 +3934,9 @@
           "node_id": "chrome_pagenum_662",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "18",
@@ -3936,13 +3952,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_663",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -4225,9 +4242,9 @@
           "node_id": "chrome_pagenum_674",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "19",
@@ -4243,13 +4260,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_675",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -4356,9 +4374,9 @@
           "node_id": "chrome_pagenum_679",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "20",
@@ -4374,13 +4392,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_680",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -4779,9 +4798,9 @@
           "node_id": "chrome_pagenum_697",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "21",
@@ -4797,7 +4816,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ],
       "background": "#0C1A1C"
@@ -4874,9 +4894,9 @@
           "node_id": "chrome_pagenum_701",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "22",
@@ -4892,7 +4912,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -4967,9 +4988,9 @@
           "node_id": "chrome_pagenum_705",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "23",
@@ -4985,13 +5006,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_706",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -5121,9 +5143,9 @@
           "node_id": "chrome_pagenum_711",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "24",
@@ -5139,13 +5161,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_712",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -5424,9 +5447,9 @@
           "node_id": "chrome_pagenum_724",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "25",
@@ -5442,13 +5465,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_725",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -5755,9 +5779,9 @@
           "node_id": "chrome_pagenum_738",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "26",
@@ -5773,13 +5797,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_739",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -5875,9 +5900,9 @@
           "node_id": "chrome_pagenum_743",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "27",
@@ -5893,7 +5918,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -5968,9 +5994,9 @@
           "node_id": "chrome_pagenum_747",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "28",
@@ -5986,13 +6012,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_748",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -6122,9 +6149,9 @@
           "node_id": "chrome_pagenum_753",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "29",
@@ -6140,13 +6167,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_754",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -6459,9 +6487,9 @@
           "node_id": "chrome_pagenum_766",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "30",
@@ -6477,7 +6505,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ],
       "background": "#0C1A1C"
@@ -6611,9 +6640,9 @@
           "node_id": "chrome_pagenum_772",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "31",
@@ -6629,13 +6658,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_773",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -6730,9 +6760,9 @@
           "node_id": "chrome_pagenum_777",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "32",
@@ -6748,13 +6778,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_778",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -7033,9 +7064,9 @@
           "node_id": "chrome_pagenum_790",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "33",
@@ -7051,13 +7082,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_791",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -7153,9 +7185,9 @@
           "node_id": "chrome_pagenum_795",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "34",
@@ -7171,7 +7203,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     },
@@ -7246,9 +7279,9 @@
           "node_id": "chrome_pagenum_799",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "35",
@@ -7264,13 +7297,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_800",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -7400,9 +7434,9 @@
           "node_id": "chrome_pagenum_805",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "36",
@@ -7418,13 +7452,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_806",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -7519,9 +7554,9 @@
           "node_id": "chrome_pagenum_810",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "37",
@@ -7537,13 +7572,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_811",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -7822,9 +7858,9 @@
           "node_id": "chrome_pagenum_823",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "38",
@@ -7840,13 +7876,14 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         },
         {
           "node_id": "chrome_source_824",
           "node_type": "text",
           "rect": {
-            "x": 9262170,
+            "x": 10085130,
             "y": 6035040,
             "w": 826710,
             "h": 365760
@@ -7917,9 +7954,9 @@
           "node_id": "chrome_pagenum_827",
           "node_type": "text",
           "rect": {
-            "x": 10363200,
+            "x": 11186160,
             "y": 6035040,
-            "w": 1371600,
+            "w": 548640,
             "h": 365760
           },
           "text_content": "39",
@@ -7935,7 +7972,8 @@
           "size_pt": 16,
           "bold": false,
           "italic": false,
-          "is_chrome": true
+          "is_chrome": true,
+          "align": "right"
         }
       ]
     }
