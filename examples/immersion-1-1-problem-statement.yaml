@@ -1,0 +1,614 @@
+# Immersion Week SF · Day 1 · Session 1.1
+# "From Vague Idea to Precise Problem Statement" (9:20–9:55, 35 min)
+# Source: https://github.com/UChiCareersinAI/ImmersionWeekSF
+#
+# Objectives (verbatim from the syllabus):
+#   1. Tell a problem statement apart from a solution statement, and use prompt
+#      engineering to make Claude interrogate a vague ask until it is precise
+#   2. Apply a scoping test — measurable outcome, data actually available,
+#      achievable in three days — and make Claude argue the opposite case
+#   3. Stand up a Claude Project as the team's shared brain
+#
+# No palette block: this deck rides the slidekit default colour scheme.
+version: 1
+theme:
+  font: arial
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  # ── Open ───────────────────────────────────────────────────────────────────
+  - component: title-slide
+    title: "From Vague to Precise"
+    subtitle: "Immersion Week SF · Day 1 · Session 1.1"
+    notes: >-
+      Open the session. Do not explain the agenda yet. Say the one sentence that
+      frames the whole three days: everything you build this week rests on the
+      problem statement you write in the next 35 minutes. A weak statement costs
+      you Day 2 and Day 3.
+
+  - component: big-number
+    value: "35"
+    label: "Minutes"
+    context: "You leave with one precise problem statement"
+    notes: >-
+      Set the clock and the deliverable in the same breath. This is not a lecture
+      about problem statements; it is a working session that produces one. Name the
+      artifact now so nobody treats the next half hour as background reading.
+
+  - component: agenda
+    title: "What This Session Covers"
+    items:
+      - "Problem statements versus solution statements"
+      - "Making Claude interrogate a vague ask"
+      - "The three-gate scoping test"
+      - "Standing up your Claude Project"
+    notes: >-
+      The three syllabus objectives, plus the interrogation technique that connects
+      them. Point out that items two and three are things they will actually do at
+      their laptops, not watch.
+
+  - component: question
+    question: "What are you building?"
+    notes: >-
+      Ask it cold and take two or three answers out loud. Expect tool names and
+      vague ambitions. Do not correct anyone yet — you are collecting the raw
+      material you will diagnose three slides from now. Let the vagueness sit.
+
+  - component: this-vs-that
+    title: "Two Ways to Answer That"
+    left:
+      value: "Vague"
+      label: "An AI thing for resumes"
+    right:
+      value: "Precise"
+      label: "Flags gaps in 200 files"
+    notes: >-
+      Hold up the two answers side by side. The left is what people said. The right
+      is what the same idea looks like after this session. Everything between here
+      and the break is the machinery that gets you from left to right.
+
+  - component: process-steps
+    title: "How We Get There"
+    steps:
+      - label: "Separate"
+        body: "Problem apart from solution"
+      - label: "Interrogate"
+        body: "Let Claude attack the ask"
+      - label: "Scope"
+        body: "Run the three-gate test"
+      - label: "Commit"
+        body: "Write it into the Project"
+    notes: >-
+      The arc of the session in four moves. Tell them the last step is where the
+      statement stops being a conversation and becomes a durable artifact the whole
+      team works from. Return to this slide if the room loses the thread.
+
+  # ── 01 · Problem, not solution ─────────────────────────────────────────────
+  - component: section-divider
+    number: "01"
+    title: "Problem, Not Solution"
+    notes: >-
+      First objective. The single most common failure in a three-day build is
+      starting from a solution nobody validated. Ten minutes here saves a wasted
+      Day 2.
+
+  - component: definition
+    term: "Problem statement"
+    definition: "A gap between what happens and what should."
+    notes: >-
+      Stress the last clause. The test of a problem statement is that a reader could
+      propose three different solutions to it. If only one solution fits, you have
+      smuggled the answer into the question.
+
+  - component: definition
+    term: "Solution statement"
+    definition: "A thing you plan to build, assuming the diagnosis."
+    notes: >-
+      Not a bad thing — just premature. The danger is that it feels like progress.
+      Naming a tool gives the team the sensation of having decided something while
+      the actual problem is still unexamined.
+
+  - component: two-panel-list
+    title: "How to Tell Them Apart"
+    accent_side: left
+    left:
+      title: "Problem"
+      items:
+        - "Describes a gap"
+        - "Admits several fixes"
+        - "Names who suffers"
+    right:
+      title: "Solution"
+      items:
+        - "Describes a build"
+        - "Assumes one fix"
+        - "Names a tool"
+    notes: >-
+      Three quick diagnostics. The fastest one to use live is the middle row: ask
+      how many different ways this could be solved. If the answer is one, they wrote
+      a solution.
+
+  - component: table-slide
+    title: "What They Said, What They Meant"
+    headers: ["Said (solution)", "Meant (problem)"]
+    rows:
+      - ["Build a RAG chatbot", "Staff cannot find answers"]
+      - ["Fine-tune a model", "Output misses our tone"]
+      - ["Make a dashboard", "Nobody sees the numbers"]
+      - ["Use an agent", "Review takes four hours"]
+    notes: >-
+      Work the left column to the right column out loud. Ask the room to do row
+      four before you reveal it. The pattern: strip the tool, then ask who is stuck
+      and on what.
+
+  - component: bullet-list
+    title: "Why Solution-First Hurts"
+    items:
+      - "You cannot tell if it worked"
+      - "The tool choice is already locked"
+      - "Scope creeps with no boundary"
+      - "Feedback arrives too late to use"
+    notes: >-
+      The second item is the one that bites during Immersion Week. If they commit to
+      a tool on Day 1, Day 2 becomes fighting that tool rather than solving the
+      problem. Keep the tool decision for session 2.1.
+
+  - component: icon-text-rows
+    title: "Three Tells You Wrote a Solution"
+    rows:
+      - icon: "zap"
+        heading: "A tool is named"
+        body: "RAG, agent, fine-tune, dashboard"
+      - icon: "grid"
+        heading: "Only one fix fits"
+        body: "No alternative is even thinkable"
+      - icon: "check"
+        heading: "No one is in it"
+        body: "Nobody is described as stuck"
+    notes: >-
+      Give them thirty seconds to run these three tells against their own sentence
+      from the opening question. Most rooms find that two of three fire. That
+      discomfort is the point.
+
+  - component: pull-quote
+    quote: "Names a tool? Not a problem yet."
+    attribution: "The fastest test in the room"
+    notes: >-
+      The portable version of the last slide. Repeat it when teams drift back to
+      tool talk in later sessions. It is deliberately blunt because it has to
+      survive being remembered on Day 3.
+
+  # ── Interrogation ──────────────────────────────────────────────────────────
+  - component: definition
+    term: "Interrogation"
+    definition: "Making Claude attack a vague ask until it is precise."
+    notes: >-
+      Reframe what Claude is for here. Most people use it to generate. In this
+      session they use it to subtract — to strip ambiguity. That is a different
+      prompt and a different posture.
+
+  - component: bullet-list
+    title: "What Makes Claude Interrogate"
+    items:
+      - "Give it the adversarial role"
+      - "Forbid it from proposing solutions"
+      - "Demand one question at a time"
+      - "Make it refuse to move on early"
+    notes: >-
+      These four instructions are what turn a helpful assistant into a useful
+      interrogator. The third matters most: a wall of ten questions gets skimmed,
+      one question gets answered.
+
+  - component: code
+    title: "The Interrogation Prompt"
+    chrome: true
+    code: |
+      You are a skeptical product lead.
+      My idea: "an AI thing for resumes"
+
+      Rules:
+        - Ask ONE question at a time.
+        - Never propose a solution.
+        - Reject vague answers.
+        - Stop when it is precise.
+    notes: >-
+      Have them paste this and change only the idea line. Point at the last rule:
+      it gives Claude a termination condition, which is what stops the exchange
+      from wandering. Give the room three minutes to run it.
+
+  - component: numbered-steps
+    title: "The Interrogation Loop"
+    steps:
+      - title: "Answer plainly"
+        body: "No hedging, no tool names"
+      - title: "Let it push"
+        body: "Expect the follow-up to hurt"
+      - title: "Restate"
+        body: "Ask Claude to write it back"
+    notes: >-
+      Walk the loop while they work. Step three is the one people skip — having
+      Claude restate the problem in its own words is how you catch that it
+      understood something different from what you meant.
+
+  - component: comparison-columns
+    title: "Before and After the Interrogation"
+    left_title: "Before"
+    right_title: "After"
+    left_items:
+      - text: "An AI thing for resumes"
+      - text: "Who for? Unclear"
+      - text: "Done when? Unclear"
+    right_items:
+      - text: "Recruiters miss skill gaps"
+      - text: "For 200 intern applicants"
+      - text: "Flagged in one pass"
+    notes: >-
+      A real transformation, not a tidy invention. Note that the right column is
+      barely longer than the left — precision is not verbosity. It is the same
+      length sentence carrying far more constraint.
+
+  - component: bullet-list
+    title: "Signs It Is Now Precise"
+    items:
+      - "A stranger can restate it"
+      - "You know who is stuck"
+      - "You can name a wrong answer"
+      - "Two people would agree it is solved"
+    notes: >-
+      The fourth is the strongest test and the one to leave them with. If two
+      teammates would disagree about whether the problem is solved, the statement
+      is still ambiguous.
+
+  # ── 02 · The scoping test ──────────────────────────────────────────────────
+  - component: section-divider
+    number: "02"
+    title: "The Scoping Test"
+    notes: >-
+      Second objective. A precise problem can still be the wrong problem for this
+      week. The scoping test is what separates precise from feasible.
+
+  - component: definition
+    term: "Scoping test"
+    definition: "Three gates a problem passes before you commit."
+    notes: >-
+      Emphasise that all three are pass or fail, not scores. A problem that fails
+      one gate is out, no matter how exciting. Teams will want to negotiate. Do not
+      let them negotiate here.
+
+  - component: icon-text-rows
+    title: "The Three Gates"
+    rows:
+      - icon: "target"
+        heading: "Measurable outcome"
+        body: "You can say whether it worked"
+      - icon: "file"
+        heading: "Data available"
+        body: "You have it, today, in hand"
+      - icon: "check"
+        heading: "Three days"
+        body: "Finishable by Friday noon"
+    notes: >-
+      Read them in this order every time — measurability first, because it is the
+      gate people most often think they pass and do not. Tell the room you will
+      take each one in turn.
+
+  - component: definition
+    term: "Gate 1 · Measurable"
+    definition: "State up front what would prove it worked."
+    notes: >-
+      In advance is the load-bearing phrase. Deciding after the fact what counts as
+      success is how a demo gets talked into looking successful. Write the number
+      down before you build.
+
+  - component: table-slide
+    title: "Vague Metric, Measurable Metric"
+    headers: ["Vague", "Measurable"]
+    rows:
+      - ["Better resumes", "Flags 8 of 10 known gaps"]
+      - ["Faster reviews", "Under 30 seconds per file"]
+      - ["Higher quality", "Two reviewers agree it passes"]
+      - ["More useful", "Used unprompted twice"]
+    notes: >-
+      The right column is deliberately modest. Small and checkable beats grand and
+      unfalsifiable. Ask them which row is hardest to write for their own idea —
+      usually the quality one.
+
+  - component: definition
+    term: "Gate 2 · Data"
+    definition: "It exists, you may use it, you have it today."
+    notes: >-
+      Three separate conditions and teams fail different ones. Before lunch today
+      is deliberately aggressive: data you will get access to next week does not
+      exist for the purposes of this week.
+
+  - component: icon-text-rows
+    title: "Where Data Plans Die"
+    rows:
+      - icon: "lock"
+        heading: "Access pending"
+        body: "Someone still has to approve it"
+      - icon: "file"
+        heading: "Wrong shape"
+        body: "Exists, but not in usable form"
+      - icon: "eye"
+        heading: "Too sensitive"
+        body: "Real records you cannot touch"
+    notes: >-
+      For each failure mode the fix is the same: synthesise or substitute now
+      rather than wait. Twenty made-up records you control beat two thousand you
+      are still waiting on.
+
+  - component: definition
+    term: "Gate 3 · Three days"
+    definition: "The whole path working, not one part polished."
+    notes: >-
+      This reframes what achievable means. The failure is not being too ambitious
+      overall; it is being too ambitious about depth on one step while the rest of
+      the path never gets built.
+
+  - component: this-vs-that
+    title: "What Three Days Buys"
+    left:
+      value: "One path"
+      label: "End to end and rough"
+    right:
+      value: "One part"
+      label: "Polished but alone"
+    notes: >-
+      Push them hard toward the left. Day 2 is explicitly the happy path, Day 3 is
+      hardening. A beautiful fragment has nothing to harden and nothing to demo on
+      Friday.
+
+  - component: comparison-matrix
+    title: "Three Candidate Ideas, Three Gates"
+    options: ["Resumes", "Policy", "Grader"]
+    criteria: ["Measurable", "Data now", "3 days"]
+    cells:
+      - ["Yes", "Yes", "Yes"]
+      - ["Yes", "No", "Yes"]
+      - ["No", "Yes", "No"]
+    highlights:
+      - [0, 0]
+    notes: >-
+      Only the first idea clears all three. Walk the second: it is a good problem
+      that fails on data today, which is a scheduling failure, not a quality one.
+      Advise parking it rather than abandoning it.
+
+  - component: definition
+    term: "The opposite case"
+    definition: "Making Claude argue your problem is the wrong one."
+    notes: >-
+      This is objective two's second half. The purpose is not to change their minds;
+      it is to surface the strongest objection while it is still cheap to act on.
+      Better now than from a peer team on Day 3.
+
+  - component: code
+    title: "Make Claude Argue Against You"
+    chrome: true
+    code: |
+      Our problem statement:
+      "<paste it>"
+
+      Argue this is the WRONG problem
+      for a three-day build.
+
+      Three strongest objections,
+      hardest first. No alternatives.
+    notes: >-
+      Hardest first matters — otherwise the strongest objection arrives third and
+      gets skimmed. No alternatives keeps Claude from rescuing them with a new idea
+      before they have absorbed the criticism.
+
+  - component: numbered-steps
+    title: "Running the Opposition"
+    steps:
+      - title: "Read all three"
+        body: "Do not answer while reading"
+      - title: "Rank them"
+        body: "Which would actually sink you"
+      - title: "Fix or accept"
+        body: "Narrow it, or note the risk"
+    notes: >-
+      Step one prevents defensiveness. Step three is the real decision: most
+      objections are answered by narrowing scope rather than by changing problems
+      altogether.
+
+  - component: bullet-list
+    title: "When the Objection Wins"
+    items:
+      - "Narrow the users, not the ambition"
+      - "Shrink the data, keep the path"
+      - "Stub the hard step for now"
+      - "Change problems only if a gate fails"
+    notes: >-
+      The last line is the guardrail. Teams love to switch ideas when criticised.
+      Switching is only justified by an actual gate failure, not by discomfort.
+
+  - component: bullet-list
+    title: "Cut Scope, Not Ambition"
+    items:
+      - "One user type, not four"
+      - "One input format, not any"
+      - "One clean path, no edge cases"
+    notes: >-
+      Give them the sentence to say to each other on Day 2 when scope grows: is
+      this on the one path? Everything else is a Day 3 conversation at the earliest.
+
+  # ── 03 · The Claude Project ────────────────────────────────────────────────
+  - component: section-divider
+    number: "03"
+    title: "The Team's Shared Brain"
+    notes: >-
+      Third objective. The statement they just wrote is worthless if it lives in one
+      person's chat history. This section makes it the team's.
+
+  - component: definition
+    term: "Claude Project"
+    definition: "A shared workspace holding instructions and context."
+    notes: >-
+      Two words to stress: persistent and shared. A chat is neither. Everything that
+      matters this week goes in the Project so that the fifth teammate gets the same
+      context as the first.
+
+  - component: two-panel-list
+    title: "Chat Versus Project"
+    accent_side: right
+    left:
+      title: "A chat"
+      items:
+        - "Context dies at the tab"
+        - "One person holds it"
+        - "Re-explained every time"
+    right:
+      title: "A Project"
+      items:
+        - "Context persists"
+        - "The whole team shares it"
+        - "Explained once"
+    notes: >-
+      The third row is the one that saves real hours this week. Ask how many have
+      re-pasted the same background into a fresh chat three times. Most hands go up.
+
+  - component: icon-text-rows
+    title: "What a Project Holds"
+    rows:
+      - icon: "doc"
+        heading: "Instructions"
+        body: "Standing rules for every chat"
+      - icon: "file"
+        heading: "Context"
+        body: "Uploaded docs and data"
+      - icon: "users"
+        heading: "One place"
+        body: "Everyone works from it"
+    notes: >-
+      Map these to the syllabus wording exactly: instructions, uploaded context,
+      one place everyone works from. Say that the first is the one teams
+      under-invest in.
+
+  - component: numbered-steps
+    title: "Stand One Up Now"
+    steps:
+      - title: "Create"
+        body: "Name it for the problem"
+      - title: "Instruct"
+        body: "Paste the problem statement"
+      - title: "Share"
+        body: "Add every teammate today"
+    notes: >-
+      Do this live, not later — five minutes at the laptops. Naming it for the
+      problem rather than the team is deliberate: it keeps the problem in front of
+      them every time they open it.
+
+  - component: code
+    title: "Project Instructions Template"
+    chrome: false
+    code: |
+      # Problem
+      <the precise statement>
+
+      # Success looks like
+      <the measurable outcome>
+
+      # Out of scope
+      <what we cut, and why>
+    notes: >-
+      The out-of-scope section is the one teams omit and the one that pays off. Once
+      cut scope is written down, Claude will push back when a teammate quietly
+      reintroduces it on Day 2.
+
+  - component: bullet-list
+    title: "What to Upload"
+    items:
+      - "Sample data, even if faked"
+      - "The interrogation transcript"
+      - "The objections you accepted"
+    notes: >-
+      The middle item surprises people. The transcript records why the problem is
+      worded this way, which stops the team relitigating settled decisions midweek.
+
+  - component: bullet-list
+    title: "What Not to Upload"
+    items:
+      - "Real personal records"
+      - "Anything under an NDA"
+      - "Credentials or API keys"
+    notes: >-
+      Brief and firm. Substitute synthetic data for anything sensitive — gate two
+      already told them synthetic is acceptable, so there is no excuse to take the
+      risk.
+
+  - component: card-grid
+    title: "Team Conventions Worth Setting"
+    cards:
+      - icon: "doc"
+        title: "One source"
+        body: "Project over chat"
+      - icon: "check"
+        title: "Log it"
+        body: "Decisions land in writing"
+      - icon: "users"
+        title: "Shared"
+        body: "Everyone reads it first"
+      - icon: "zap"
+        title: "Update"
+        body: "Change it when scope does"
+    notes: >-
+      Four small habits that separate teams who finish from teams who thrash. Ask
+      each team to pick the one they are worst at and say it out loud.
+
+  - component: bullet-list
+    title: "Project Pitfalls"
+    items:
+      - "Instructions written once, never updated"
+      - "Uploads nobody has actually read"
+      - "One member still working in chat"
+    notes: >-
+      All three are silent failures — nothing breaks, the team just drifts apart.
+      Suggest a sixty-second Project check at the start of each day.
+
+  - component: bullet-list
+    title: "Done With This Session When"
+    items:
+      - "The statement passes three gates"
+      - "The strongest objection is answered"
+      - "The Project exists and is shared"
+    notes: >-
+      The exit criteria. Read them slowly and ask teams to self-assess. Anyone
+      missing the third can fix it in ninety seconds before the break.
+
+  # ── Close ──────────────────────────────────────────────────────────────────
+  - component: stat-callout
+    title: "What You Leave With"
+    stats:
+      - value: "1"
+        label: "Precise problem"
+      - value: "3"
+        label: "Gates passed"
+      - value: "1"
+        label: "Shared Project"
+    notes: >-
+      The concrete output of 35 minutes. If a team cannot show all three, they are
+      not ready for 1.2 — flag it now rather than discovering it during the
+      workflow mapping.
+
+  - component: bullet-list
+    title: "Next: Mapping the Workflow"
+    items:
+      - "Break the problem into steps"
+      - "Draw it as a Claude Artifact"
+      - "Name what each step needs"
+    notes: >-
+      A short bridge into session 1.2 at ten o'clock. Make the dependency explicit:
+      the workflow map is built directly on the problem statement they just wrote,
+      so a weak statement produces a weak map.
+
+  - component: question
+    question: "Can a stranger restate it?"
+    notes: >-
+      Close on the test, not on a summary. If the answer is no, that team spends the
+      break fixing it. Hold the slide up while people pack up — it is the sentence
+      you want them carrying into Day 2.
