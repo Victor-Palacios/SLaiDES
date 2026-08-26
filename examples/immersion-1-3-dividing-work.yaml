@@ -1,0 +1,533 @@
+# Immersion Week SF · Day 1 · Session 1.3
+# "Dividing the Work Across the Team" (11:00–11:50, 50 min)
+# Source: https://github.com/UChiCareersinAI/ImmersionWeekSF
+#
+# Objectives (verbatim from the syllabus):
+#   1. Inventory the team's actual skills and assign every workflow step a
+#      single owner
+#   2. Use Claude Cowork to run several workstreams in parallel without the team
+#      stepping on each other
+#   3. Put the task board in GitHub — a repo, issues with owners, and a
+#      definition of done for every Day 2 task
+#
+# No palette block: this deck rides the slidekit default colour scheme.
+version: 1
+theme:
+  font: arial
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  # ── Open ───────────────────────────────────────────────────────────────────
+  - component: title-slide
+    title: "Dividing the Work"
+    subtitle: "Immersion Week SF · Day 1 · Session 1.3"
+    notes: >-
+      Last session of Day 1. They have a precise problem and a map of the path.
+      This hour turns that map into assignments, so that tomorrow morning four
+      people can start building at once instead of negotiating.
+
+  - component: big-number
+    value: "50"
+    label: "Minutes"
+    context: "You leave with a board and owners"
+    notes: >-
+      Name the deliverable immediately: a GitHub board where every Day 2 task has
+      an owner and a definition of done. Anything less and tomorrow starts with an
+      hour of meetings.
+
+  - component: agenda
+    title: "What This Session Covers"
+    items:
+      - "Inventory the team's real skills"
+      - "Give every step a single owner"
+      - "Run workstreams with Cowork"
+      - "Put the board in GitHub"
+    notes: >-
+      The three syllabus objectives, split into four moves. Point out that the
+      third is what lets a small team act bigger than it is, and the fourth is what
+      makes it survive the night.
+
+  - component: question
+    question: "Who owns which box?"
+    notes: >-
+      Ask it against their diagram from 1.2 and let it be uncomfortable. Most teams
+      have never assigned a box, and the silence makes the case for the next fifty
+      minutes better than any slide can.
+
+  - component: this-vs-that
+    title: "From 1.2 to Now"
+    left:
+      value: "A map"
+      label: "The path, drawn"
+    right:
+      value: "A board"
+      label: "The path, assigned"
+    notes: >-
+      The bridge. A diagram tells you what must happen; a board tells you who is
+      doing it and when it is finished. The map was the design, this is the plan.
+
+  - component: process-steps
+    title: "How We Get There"
+    steps:
+      - label: "Skills"
+        body: "What can we each do"
+      - label: "Own"
+        body: "One name per step"
+      - label: "Split"
+        body: "Run them in parallel"
+      - label: "Board"
+        body: "Issues in GitHub"
+    notes: >-
+      The arc in four moves. Return here if the room drifts. Note that the order
+      matters — assigning before you know the skills produces polite lies about who
+      can do what.
+
+  # ── 01 · Skills and ownership ──────────────────────────────────────────────
+  - component: section-divider
+    number: "01"
+    title: "Owners, Not Volunteers"
+    notes: >-
+      First objective. Two ideas here: know what the team can actually do, and give
+      every step exactly one name. Both are less obvious than they sound.
+
+  - component: definition
+    term: "Skills inventory"
+    definition: "An honest list of what each person can do unaided."
+    notes: >-
+      Unaided is the load-bearing word. Not what they have read about or want to
+      learn — what they could ship tomorrow without help. Optimism here costs you
+      Day 2.
+
+  - component: bullet-list
+    title: "What Counts as a Skill"
+    items:
+      - "Something you have shipped before"
+      - "A tool you already have access to"
+      - "A domain you actually know"
+    notes: >-
+      The second one surprises people. Having the account, the key, or the license
+      already is a genuine capability this week — access is a skill when the clock
+      is three days.
+
+  - component: bullet-list
+    title: "Say the Quiet Part"
+    items:
+      - "What you have never done"
+      - "What you would need help with"
+      - "What you would rather not own"
+    notes: >-
+      Give the room ninety seconds to say these out loud. It feels awkward and it
+      is the highest-value ninety seconds of the hour — every unspoken gap becomes
+      a silent blocker tomorrow.
+
+  - component: table-slide
+    title: "Skill to Step"
+    headers: ["Skill", "Steps it fits"]
+    rows:
+      - ["Data wrangling", "Intake, parse"]
+      - ["Prompt design", "Score, summarise"]
+      - ["Front end", "Report, demo"]
+      - ["Domain expert", "Judging quality"]
+    notes: >-
+      Map the inventory onto the boxes from 1.2. The last row matters most — the
+      person who knows the domain is your quality bar, whether or not they write
+      any code this week.
+
+  - component: definition
+    term: "Single owner"
+    definition: "One named person accountable for a step being done."
+    notes: >-
+      Accountable, not working alone. Others can help. But when a step slips there
+      must be exactly one person who noticed first and one person to ask about it.
+
+  - component: two-panel-list
+    title: "Why Exactly One"
+    accent_side: right
+    left:
+      title: "Shared"
+      items:
+        - "Everyone assumes cover"
+        - "Nobody watches the clock"
+        - "Slips found late"
+    right:
+      title: "Single"
+      items:
+        - "One person tracking"
+        - "One person to ask"
+        - "Slips found early"
+    notes: >-
+      The bottom row is the whole argument. Shared ownership does not double the
+      attention, it halves it. Say this plainly — teams resist it because single
+      ownership feels unfriendly.
+
+  - component: numbered-steps
+    title: "Assign Every Step"
+    steps:
+      - title: "Riskiest first"
+        body: "It gets the best fit"
+      - title: "Then the rest"
+        body: "Match skill to step"
+      - title: "Name the gaps"
+        body: "Steps nobody can own"
+    notes: >-
+      Riskiest first follows directly from 1.2 — they already identified it. Do not
+      let the risky step go to whoever is most enthusiastic; it goes to whoever is
+      most likely to finish it.
+
+  - component: comparison-columns
+    title: "Volunteer or Best Fit"
+    left_title: "Volunteer"
+    right_title: "Best fit"
+    left_items:
+      - text: "Picks what excites them"
+      - text: "Learns on your deadline"
+      - text: "Risky step goes last"
+    right_items:
+      - text: "Picks what they can ship"
+      - text: "Learns on the safe step"
+      - text: "Risky step goes first"
+    notes: >-
+      Not an argument against learning — the middle row says learn on the step that
+      can absorb it. Put the stretch assignment somewhere a delay does not stop
+      everyone else.
+
+  - component: bullet-list
+    title: "When Nobody Can Own a Step"
+    items:
+      - "Stub it and move on"
+      - "Buy it with an existing tool"
+      - "Cut it from the happy path"
+    notes: >-
+      Three legitimate answers, and none of them is hope. Stubbing is honourable
+      this week — a fake step with a real interface still lets the rest of the path
+      be built and demoed.
+
+  - component: pull-quote
+    quote: "One name per box, or no name at all."
+    attribution: "The rule that survives Day 2"
+    notes: >-
+      The portable line. If a box cannot get a single name, it is either too big —
+      send it back to the granularity test — or it is not really in scope this
+      week.
+
+  - component: card-grid
+    title: "Roles Beyond Writing Code"
+    cards:
+      - icon: "users"
+        title: "Owner"
+        body: "Holds the problem"
+      - icon: "check"
+        title: "Tester"
+        body: "Breaks it on purpose"
+      - icon: "doc"
+        title: "Scribe"
+        body: "Keeps the Project current"
+      - icon: "star"
+        title: "Demo"
+        body: "Tells the story Friday"
+    notes: >-
+      Four jobs that are real work and often unassigned. The scribe keeps the
+      Claude Project from going stale; the demo owner should be chosen today, not
+      panicked over on Friday morning.
+
+  # ── 02 · Parallel work with Cowork ─────────────────────────────────────────
+  - component: section-divider
+    number: "02"
+    title: "Work in Parallel"
+    notes: >-
+      Second objective. Owners alone still produce a queue. This section is about
+      running several workstreams at once without the team colliding.
+
+  - component: definition
+    term: "Claude Cowork"
+    definition: "Claude running multi-step work on files you choose."
+    notes: >-
+      Frame it as a teammate that can hold a whole workstream, not a chat that
+      answers questions. That difference is what makes parallel work possible for a
+      team of four.
+
+  - component: two-panel-list
+    title: "Queue or Parallel"
+    accent_side: right
+    left:
+      title: "Queue"
+      items:
+        - "One step at a time"
+        - "Everyone waits on one"
+        - "Day 2 runs out"
+    right:
+      title: "Parallel"
+      items:
+        - "Streams run at once"
+        - "Waiting is designed out"
+        - "Day 2 finishes"
+    notes: >-
+      The middle row is the design idea: waiting is not bad luck, it is a thing you
+      remove on purpose by agreeing interfaces up front. That is the next few
+      slides.
+
+  - component: icon-text-rows
+    title: "What Cowork Runs"
+    rows:
+      - icon: "file"
+        heading: "On your files"
+        body: "Reads and edits what you pick"
+      - icon: "loop"
+        heading: "Multi-step"
+        body: "Finishes a task, not a reply"
+      - icon: "users"
+        heading: "Alongside you"
+        body: "You work while it works"
+    notes: >-
+      The third row is the one to dwell on. The point is not speed of a single
+      answer; it is that a stream progresses while its owner is doing something
+      else.
+
+  - component: numbered-steps
+    title: "Set Up a Workstream"
+    steps:
+      - title: "One step only"
+        body: "Scope it to a single box"
+      - title: "Give the contract"
+        body: "Its input and output"
+      - title: "Say done"
+        body: "How it proves it worked"
+    notes: >-
+      Three things every stream needs before it starts. Skipping the second is what
+      causes merge pain — two streams that each invented their own format for the
+      same handoff.
+
+  - component: code
+    title: "A Workstream Brief"
+    chrome: true
+    code: |
+      Step: Parse resumes to text
+
+      Input:  PDF files in /intake
+      Output: one JSON per file
+              {name, skills[], years}
+
+      Done when: 10 sample files
+      parse with no manual fixes.
+    notes: >-
+      Copy this shape for every stream. Named input, named output with its actual
+      shape, and a done condition someone else could check. Have them write one for
+      their riskiest step now.
+
+  - component: definition
+    term: "The contract"
+    definition: "The agreed shape passed between two steps."
+    notes: >-
+      This is the arrow label from their 1.2 diagram, made precise. Agreeing it
+      before anyone builds is what lets two people work on adjacent steps without
+      talking all day.
+
+  - component: bullet-list
+    title: "Agree Contracts First"
+    items:
+      - "Name every field you pass"
+      - "Decide it before building"
+      - "Write it on the diagram"
+    notes: >-
+      Fifteen minutes on contracts saves hours of rework. Point at the Artifact from
+      1.2 — the arrows already exist, they just need field names written on them.
+
+  - component: table-slide
+    title: "Step to Contract"
+    headers: ["Handoff", "What passes"]
+    rows:
+      - ["Intake to parse", "File path plus id"]
+      - ["Parse to score", "JSON with skills"]
+      - ["Score to report", "Id plus a number"]
+    notes: >-
+      Three handoffs, three contracts, all boring on purpose. Boring contracts are
+      good contracts — anything clever here becomes the thing that breaks during
+      the Friday demo.
+
+  - component: bullet-list
+    title: "How Streams Collide"
+    items:
+      - "Two people edit one file"
+      - "A contract changed silently"
+      - "One stream waits on another"
+    notes: >-
+      The three collisions worth naming. The second is the nastiest because
+      everything keeps running while producing wrong results. Announce contract
+      changes out loud.
+
+  - component: bullet-list
+    title: "Keeping Streams Apart"
+    items:
+      - "One owner per file or folder"
+      - "Change contracts by announcement"
+      - "Stub what you are waiting on"
+    notes: >-
+      Three habits, all cheap. Stubbing is the important one again — never let a
+      stream idle waiting for another; fake the input and keep building.
+
+  # ── 03 · The GitHub board ──────────────────────────────────────────────────
+  - component: section-divider
+    number: "03"
+    title: "Put It in GitHub"
+    notes: >-
+      Third objective. Assignments that live in someone's memory do not survive the
+      night. This section makes them a board everyone can see tomorrow morning.
+
+  - component: icon-text-rows
+    title: "Three Things You Need"
+    rows:
+      - icon: "doc"
+        heading: "A repo"
+        body: "One place the code lives"
+      - icon: "check"
+        heading: "Issues"
+        body: "One per task, with an owner"
+      - icon: "target"
+        heading: "Done"
+        body: "How each task proves itself"
+    notes: >-
+      Straight from the syllabus: a repo, issues with owners, and a definition of
+      done for every Day 2 task. Nothing fancier is needed for a three-day build.
+
+  - component: numbered-steps
+    title: "Stand It Up Now"
+    steps:
+      - title: "Create the repo"
+        body: "Name it for the problem"
+      - title: "Add everyone"
+        body: "Write access, today"
+      - title: "One issue per step"
+        body: "Straight from the map"
+    notes: >-
+      Ten minutes at the laptops. Step three is mechanical — the map from 1.2 is the
+      issue list. If a box does not become an issue, ask why it is on the map at
+      all.
+
+  - component: code
+    title: "An Issue, Filled In"
+    chrome: false
+    code: |
+      Title: Parse resumes to text
+
+      Owner:  @teammate
+      Input:  PDF files in /intake
+      Output: one JSON per file
+
+      Done when: 10 samples parse
+      with no manual fixes.
+    notes: >-
+      The same shape as the workstream brief — deliberately. One artifact, two
+      places. Anyone can pick up this issue without asking a question, which is the
+      whole test.
+
+  - component: definition
+    term: "Definition of done"
+    definition: "A check someone else can run to confirm it works."
+    notes: >-
+      Someone else is the key phrase. If only the author can tell whether it is
+      finished, it is not a definition of done — it is a feeling, and it will slip
+      quietly.
+
+  - component: bullet-list
+    title: "A Good Definition of Done"
+    items:
+      - "Observable, not felt"
+      - "Checkable in a minute"
+      - "Written before the work"
+    notes: >-
+      Three tests. The third prevents the most common failure — writing the done
+      criterion afterwards, which always describes whatever happened to get built.
+
+  - component: table-slide
+    title: "Task to Done"
+    headers: ["Task", "Done when"]
+    rows:
+      - ["Parse files", "10 samples, no fixes"]
+      - ["Score match", "Ranks a known set right"]
+      - ["Build report", "One click, no errors"]
+    notes: >-
+      Three real done criteria. Each is checkable by a teammate in under a minute.
+      Ask the room to write theirs for the riskiest step before the session ends.
+
+  - component: bullet-list
+    title: "Issue Hygiene"
+    items:
+      - "One task, one issue"
+      - "Close it the moment it is done"
+      - "Comment when you are blocked"
+    notes: >-
+      The third is a team norm worth stating aloud: being blocked is normal and
+      silent blocking is not. A comment costs ten seconds and saves someone's
+      afternoon.
+
+  - component: comparison-matrix
+    title: "Is This Task Ready?"
+    options: ["Parse", "Score", "Deploy"]
+    criteria: ["Has owner", "Has contract", "Has done"]
+    cells:
+      - ["Yes", "Yes", "Yes"]
+      - ["Yes", "Yes", "No"]
+      - ["No", "No", "No"]
+    highlights:
+      - [0, 0]
+    notes: >-
+      Only Parse is ready to start. Score needs one line written. Deploy is not a
+      Day 2 task at all yet — it belongs in the backlog until someone can own it.
+
+  - component: bullet-list
+    title: "Ready for Tomorrow When"
+    items:
+      - "Every step is an issue"
+      - "Every issue has one owner"
+      - "Every issue says done"
+      - "Contracts are written down"
+    notes: >-
+      The exit criteria for Day 1 as a whole. Have each team read these against
+      their board out loud. Anything missing is fixable in the next ten minutes,
+      not tomorrow.
+
+  # ── Close ──────────────────────────────────────────────────────────────────
+  - component: stat-callout
+    title: "What You Leave With"
+    stats:
+      - value: "1"
+        label: "Repo and board"
+      - value: "1"
+        label: "Owner per step"
+      - value: "0"
+        label: "Unowned tasks"
+    notes: >-
+      The concrete output of Day 1's last hour. The third number is the one to
+      check — a single unowned task is tomorrow's stall, and it costs two minutes
+      to fix now.
+
+  - component: bullet-list
+    title: "Day 1, Behind You"
+    items:
+      - "A precise problem statement"
+      - "A workflow map, shared"
+      - "A board with owners"
+    notes: >-
+      Recap the whole day in three lines. Say plainly that teams who skip any one of
+      these spend Day 2 rebuilding it under time pressure, usually while arguing.
+
+  - component: bullet-list
+    title: "Next: Choosing the Stack"
+    items:
+      - "Match each step to a tool"
+      - "Decide what to stub"
+      - "Pick retrieval only if needed"
+    notes: >-
+      The bridge into Day 2, session 2.1. Tool choice was deliberately deferred all
+      of Day 1 — now that every step has an owner and a contract, choosing tools is
+      a small decision instead of a large one.
+
+  - component: question
+    question: "Can you start unaided?"
+    notes: >-
+      Close on the real test of the board. If any owner would need to ask a question
+      before starting tomorrow, the board is not finished. Hold the slide while they
+      check, then release them.
