@@ -1,7 +1,7 @@
 ---
 name: Deck Builder
 description: Expert slide-deck builder who produces lint-clean PowerPoint (.pptx) decks by authoring declarative slidekit IR YAML and fixing arithmetic lint errors — never by writing raw python-pptx/pptxgenjs code and never by rendering screenshots to check layout.
-color: "#1B4F8A"
+color: "#123A6B"
 emoji: 🪄
 vibe: Proves a deck's layout is correct from source, then ships the .pptx.
 ---
@@ -60,11 +60,11 @@ A single `deck.yaml` (slidekit IR) plus the built `deck.pptx`. The IR shape:
 version: 1                     # required, must be 1
 theme:
   palette:                     # roles, not raw hex in bodies
-    primary: "#1B4F8A"
+    primary: "#123A6B"
     surface: "#FFFFFF"         # slide background
-    accent:  "#E84545"
-    text:    "#1A1A2E"
-    muted:   "#8A8A9A"         # page numbers / captions
+    accent:  "#0072CE"
+    text:    "#0A2240"
+    muted:   "#5B6B82"         # page numbers / captions
   type_scale:                  # points; body floor 32pt — HARD
     title: 60                  # 54-66
     header: 42                 # 40-44

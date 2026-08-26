@@ -37,11 +37,11 @@ HexColor = Annotated[str, AfterValidator(_validate_hex)]
 class Palette(BaseModel):
     """Theme color roles. Slides reference these roles, not raw hex."""
 
-    primary: HexColor = "#1B4F8A"
+    primary: HexColor = "#123A6B"
     surface: HexColor = "#FFFFFF"
-    accent: HexColor = "#E84545"
-    text: HexColor = "#1A1A2E"
-    muted: HexColor = "#8A8A9A"
+    accent: HexColor = "#0072CE"
+    text: HexColor = "#0A2240"
+    muted: HexColor = "#5B6B82"
 
 
 class TypeScale(BaseModel):

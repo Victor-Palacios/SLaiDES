@@ -98,7 +98,7 @@ def _suggest_fix(err: dict) -> str:
     if "min_length" in etype:
         return " — provide at least one item in the list"
     if "hex" in str(err.get("msg", "")).lower() or "color" in str(err.get("msg", "")).lower():
-        return " — use #RRGGBB hex format (e.g. #1B4F8A)"
+        return " — use #RRGGBB hex format (e.g. #123A6B)"
     if "metric-safe" in str(err.get("msg", "")):
         return " — choose from: arial, calibri, cambria, times new roman, courier new, bookman old style, century schoolbook"
     return ""

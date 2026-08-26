@@ -54,11 +54,11 @@ Useful commands:
 version: 1                     # required, must be 1
 theme:
   palette:                     # reference roles, never raw hex in slide bodies
-    primary: "#1B4F8A"
+    primary: "#123A6B"
     surface: "#FFFFFF"         # slide background
-    accent:  "#E84545"
-    text:    "#1A1A2E"
-    muted:   "#8A8A9A"         # page numbers / captions
+    accent:  "#0072CE"
+    text:    "#0A2240"
+    muted:   "#5B6B82"         # page numbers / captions
   type_scale:                  # points; body floor is 32pt — HARD, never below
     title: 60                  # 54-66
     header: 42                 # 40-44
