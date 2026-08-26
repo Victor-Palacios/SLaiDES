@@ -1,0 +1,665 @@
+# Immersion Week SF · Day 1 · Session 1.2
+# "Mapping the Workflow to the Solution" (10:00–10:55, 55 min)
+# Source: https://github.com/UChiCareersinAI/ImmersionWeekSF
+#
+# Objectives (verbatim from the syllabus):
+#   1. Decompose the problem into a stepwise workflow, from raw input to
+#      delivered output
+#   2. Turn that workflow into a Claude Artifact — a diagram the whole team can
+#      see, revise, and share by link
+#   3. Name what each step needs — data, a tool, a Claude Routine on a schedule,
+#      or a human decision — then have Claude generate the three ways the
+#      riskiest step most likely fails
+#
+# No palette block: this deck rides the slidekit default colour scheme.
+version: 1
+theme:
+  font: arial
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  # ── Open ───────────────────────────────────────────────────────────────────
+  - component: title-slide
+    title: "Mapping the Workflow"
+    subtitle: "Immersion Week SF · Day 1 · Session 1.2"
+    notes: >-
+      Open by connecting to the last session. They have a precise problem. This
+      hour turns that one sentence into a picture of how the solution actually
+      runs, step by step. Nothing gets built until the path is drawn.
+
+  - component: big-number
+    value: "55"
+    label: "Minutes"
+    context: "You leave with a diagram the team shares"
+    notes: >-
+      Longer than the last session, and the output is visual rather than verbal.
+      Name the artifact now: a shareable diagram, not notes. If they leave with
+      prose, this hour did not land.
+
+  - component: agenda
+    title: "What This Session Covers"
+    items:
+      - "Decomposing the problem into steps"
+      - "Turning the map into an Artifact"
+      - "Naming what each step needs"
+      - "Finding how the riskiest step fails"
+    notes: >-
+      The three syllabus objectives plus the risk pass at the end. Flag that the
+      last item is the one that saves Day 3 — most teams skip it and pay later.
+
+  - component: question
+    question: "From input to output: how?"
+    notes: >-
+      Ask it about their own problem and let the silence sit. Most teams can name
+      the input and the output but go vague in the middle. That vague middle is
+      exactly what this session makes concrete.
+
+  - component: this-vs-that
+    title: "From 1.1 to Now"
+    left:
+      value: "Problem"
+      label: "One precise sentence"
+    right:
+      value: "Workflow"
+      label: "The path to solve it"
+    notes: >-
+      The bridge slide. A problem statement says what is wrong; a workflow says
+      how you get from raw input to a delivered answer. You need both before any
+      code exists.
+
+  - component: process-steps
+    title: "How We Get There"
+    steps:
+      - label: "Break"
+        body: "Split it into steps"
+      - label: "Draw"
+        body: "Make it an Artifact"
+      - label: "Annotate"
+        body: "Name what each needs"
+      - label: "Stress"
+        body: "Find how it breaks"
+    notes: >-
+      The arc in four moves. Return here whenever the room loses the thread. Point
+      out that only the last move is optional-feeling, and it is the one that
+      matters most on Day 3.
+
+  # ── 01 · Decompose the problem ─────────────────────────────────────────────
+  - component: section-divider
+    number: "01"
+    title: "Decompose Into Steps"
+    notes: >-
+      First objective. The goal is a stepwise path from raw input to delivered
+      output — no gaps, no magic middle where the hard part quietly lives.
+
+  - component: definition
+    term: "Workflow"
+    definition: "Ordered steps from raw input to delivered output."
+    notes: >-
+      Both ends matter. Teams often start mid-stream, assuming clean data appears
+      from somewhere. The workflow starts at whatever genuinely arrives, in
+      whatever state it arrives in.
+
+  - component: definition
+    term: "Step"
+    definition: "One change, with a named input and output."
+    notes: >-
+      This is the unit test for a step. If you cannot say what goes in and what
+      comes out, it is not a step yet — it is a wish, and it will hide the hard
+      work until Day 2.
+
+  - component: icon-text-rows
+    title: "Every Step Has Three Parts"
+    rows:
+      - icon: "file"
+        heading: "Input"
+        body: "What arrives, and its shape"
+      - icon: "zap"
+        heading: "Transform"
+        body: "The one thing this step does"
+      - icon: "check"
+        heading: "Output"
+        body: "What leaves, ready for next"
+    notes: >-
+      Insist on the middle being ONE thing. The moment a step does two things, it
+      is two steps. That discipline is what makes the map assignable later in 1.3.
+
+  - component: numbered-steps
+    title: "How to Decompose"
+    steps:
+      - title: "Name the output"
+        body: "What the user finally gets"
+      - title: "Work backwards"
+        body: "What must exist before it"
+      - title: "Stop at raw input"
+        body: "What you actually receive"
+    notes: >-
+      Backwards is deliberate. Forward decomposition drifts into what is easy to
+      build; backwards keeps every step justified by the output it serves. Have
+      them try it right now on paper.
+
+  - component: bullet-list
+    title: "Start From the Output"
+    items:
+      - "Forward drifts toward what is easy"
+      - "Backwards keeps every step earning"
+      - "You spot the missing middle sooner"
+    notes: >-
+      Reinforce the previous slide. The middle item is the test: if a step does not
+      serve the output, cut it. Teams add steps because they are interesting, not
+      because they are needed.
+
+  - component: table-slide
+    title: "Vague Step, Concrete Step"
+    headers: ["Vague", "Concrete"]
+    rows:
+      - ["Process the data", "Parse CSV to records"]
+      - ["Analyze it", "Score each row 0 to 1"]
+      - ["Use AI", "Claude drafts a summary"]
+      - ["Show results", "Render a ranked table"]
+    notes: >-
+      Work left to right out loud, then ask the room to do row three for their own
+      project. The pattern is the same every time: name the verb and name the
+      output shape.
+
+  - component: bullet-list
+    title: "The Granularity Test"
+    items:
+      - "One person could own it"
+      - "You could test it alone"
+      - "It fits in a morning"
+    notes: >-
+      Three checks for right-sized steps. The first is what makes 1.3 possible — if
+      a step cannot have one owner, the team will collide on it tomorrow.
+
+  - component: comparison-columns
+    title: "Too Coarse, Too Fine"
+    left_title: "Too coarse"
+    right_title: "Too fine"
+    left_items:
+      - text: "Build the pipeline"
+      - text: "Hides the hard part"
+      - text: "Cannot be assigned"
+    right_items:
+      - text: "Open the file"
+      - text: "Twenty trivial boxes"
+      - text: "Noise, not a map"
+    notes: >-
+      Both failure modes in one view. Coarse is more dangerous because it looks
+      finished. Fine is annoying but recoverable. Aim for five to nine steps for a
+      three-day build.
+
+  - component: code
+    title: "Prompt to Decompose"
+    chrome: true
+    code: |
+      Our problem:
+      "<paste the 1.1 statement>"
+
+      Work BACKWARDS from the output.
+      List the steps, each with its
+      input and output.
+      Stop at the raw input we have.
+      5-9 steps. No tools yet.
+    notes: >-
+      The last two lines do the work. Bounding the count stops Claude producing a
+      twenty-box map, and forbidding tools keeps this about the path, not the
+      stack — the stack is session 2.1.
+
+  - component: process-steps
+    title: "A Worked Example"
+    steps:
+      - label: "Intake"
+        body: "Resume files arrive"
+      - label: "Parse"
+        body: "Text out of each file"
+      - label: "Score"
+        body: "Match against the role"
+      - label: "Report"
+        body: "Ranked list with gaps"
+    notes: >-
+      Walk the resume example from 1.1 end to end. Four steps, each with a clear
+      input and output. Ask which step they think is riskiest — plant the seed for
+      the risk pass in section three.
+
+  - component: bullet-list
+    title: "Common Decomposition Mistakes"
+    items:
+      - "Starting after the messy part"
+      - "One step doing three things"
+      - "No step for getting the data"
+      - "The output nobody defined"
+    notes: >-
+      The third is the most common and the most expensive. Data acquisition is
+      always a step, never an assumption — 1.1's second gate already told them the
+      data has to exist today.
+
+  - component: two-panel-list
+    title: "Linear or Branching"
+    accent_side: left
+    left:
+      title: "Linear"
+      items:
+        - "One path start to end"
+        - "Easy to demo"
+        - "Pick this for Day 2"
+    right:
+      title: "Branching"
+      items:
+        - "Cases split the path"
+        - "Harder to finish"
+        - "Note it, defer it"
+    notes: >-
+      Push hard toward linear. Branches are real but they multiply the work. Note
+      them on the map as future paths and build the single line through the middle
+      this week.
+
+  - component: definition
+    term: "The happy path"
+    definition: "The one route where nothing fails."
+    notes: >-
+      Name it now because Day 2 is built entirely on it. Everything they defer
+      today — bad inputs, empty files, weird encodings — becomes Day 3's attack
+      surface, which is exactly where it belongs.
+
+  - component: bullet-list
+    title: "Mark the Happy Path"
+    items:
+      - "One line through the map"
+      - "Every branch labelled later"
+      - "Edge cases listed, not built"
+    notes: >-
+      Have them literally trace it on their diagram. Listing edge cases without
+      building them is the discipline — writing them down stops the team relitigating
+      whether to handle them now.
+
+  - component: pull-quote
+    quote: "A gap in the map is a gap in Day 2."
+    attribution: "Why the middle matters"
+    notes: >-
+      The portable line for this section. Every vague box on the map becomes an
+      argument tomorrow when someone has to build it. Repeat this when a team wants
+      to move on with a fuzzy middle.
+
+  # ── 02 · Turn it into an Artifact ──────────────────────────────────────────
+  - component: section-divider
+    number: "02"
+    title: "Make It an Artifact"
+    notes: >-
+      Second objective. The map exists in someone's head or notebook. This section
+      makes it a thing the whole team can see, change, and send by link.
+
+  - component: definition
+    term: "Claude Artifact"
+    definition: "Standalone content Claude builds, shared by link."
+    notes: >-
+      Stress standalone and by link. It is not a message in a transcript; it is a
+      document with its own address that keeps working after the conversation is
+      gone.
+
+  - component: two-panel-list
+    title: "Described or Drawn"
+    accent_side: right
+    left:
+      title: "Described"
+      items:
+        - "Lives in a transcript"
+        - "Each person pictures it"
+        - "Re-explained each time"
+    right:
+      title: "Drawn"
+      items:
+        - "One picture, one meaning"
+        - "Disagreement shows fast"
+        - "Sent as a link"
+    notes: >-
+      The middle row is the real argument. A diagram makes disagreement visible in
+      seconds; prose lets two people nod at completely different mental models for
+      a whole day.
+
+  - component: icon-text-rows
+    title: "What an Artifact Gives You"
+    rows:
+      - icon: "eye"
+        heading: "See"
+        body: "The whole path at once"
+      - icon: "loop"
+        heading: "Revise"
+        body: "Change it in seconds"
+      - icon: "users"
+        heading: "Share"
+        body: "One link, whole team"
+    notes: >-
+      Map these to the syllabus wording: see, revise, share by link. The revise
+      point matters most today — the map will change three times in this hour and
+      that is healthy.
+
+  - component: numbered-steps
+    title: "Build the Diagram"
+    steps:
+      - title: "Paste the steps"
+        body: "Your list from section one"
+      - title: "Ask for a diagram"
+        body: "Boxes and arrows, top down"
+      - title: "Fix it out loud"
+        body: "Revise until it matches"
+    notes: >-
+      Do this live at the laptops, ten minutes. Step three is the point of the
+      exercise: the first diagram is always slightly wrong, and correcting it is
+      how the team converges.
+
+  - component: code
+    title: "Prompt for the Diagram"
+    chrome: true
+    code: |
+      Here are our workflow steps:
+      <paste the list>
+
+      Build an Artifact: a flow
+      diagram, top to bottom.
+      One box per step.
+      Label every arrow with what
+      passes between the steps.
+    notes: >-
+      Labelling the arrows is the trick. It forces the input and output of every
+      step to be named, and it exposes any place where two steps do not actually
+      connect.
+
+  - component: bullet-list
+    title: "What the Diagram Must Show"
+    items:
+      - "Raw input, where it enters"
+      - "One box per step"
+      - "What passes on each arrow"
+      - "The delivered output"
+    notes: >-
+      This is the acceptance test for their diagram. Walk the room and check all
+      four. Missing arrow labels is the usual failure and the fastest to fix.
+
+  - component: bullet-list
+    title: "Diagram Conventions"
+    items:
+      - "Top to bottom reads fastest"
+      - "One verb per box"
+      - "Keep labels under five words"
+    notes: >-
+      Small conventions that keep the map readable when it is projected on a wall
+      tomorrow. Long labels are a sign a box is doing too much — send them back to
+      the granularity test.
+
+  - component: bullet-list
+    title: "Revise It in Front of Everyone"
+    items:
+      - "Ask for the change out loud"
+      - "Re-read the new version together"
+      - "Stop when nobody objects"
+    notes: >-
+      Revising together is what turns one person's map into the team's map. If one
+      teammate stays quiet through this, they will build a different system
+      tomorrow.
+
+  - component: bullet-list
+    title: "Artifact Pitfalls"
+    items:
+      - "A pretty diagram nobody rechecks"
+      - "Boxes with no arrow labels"
+      - "The link never actually shared"
+    notes: >-
+      All three are quiet failures. Suggest pasting the link into the Claude
+      Project from 1.1 right now, so the map lives beside the problem statement it
+      serves.
+
+  - component: this-vs-that
+    title: "Where the Map Lives"
+    left:
+      value: "Chat"
+      label: "Scrolls away by noon"
+    right:
+      value: "Project"
+      label: "Beside the problem"
+    notes: >-
+      Close the loop with session 1.1. The Project is the shared brain; the Artifact
+      link belongs in it. Give them thirty seconds to actually paste it before
+      moving on.
+
+  # ── 03 · Name what each step needs ─────────────────────────────────────────
+  - component: section-divider
+    number: "03"
+    title: "Name What Each Step Needs"
+    notes: >-
+      Third objective. A map of boxes is not yet a plan. Each box needs a resource
+      named, and there are exactly four kinds worth distinguishing.
+
+  - component: card-grid
+    title: "Four Kinds of Need"
+    cards:
+      - icon: "file"
+        title: "Data"
+        body: "Something must be supplied"
+      - icon: "wrench"
+        title: "Tool"
+        body: "Code, API, or model call"
+      - icon: "loop"
+        title: "Routine"
+        body: "It runs on a schedule"
+      - icon: "users"
+        title: "Human"
+        body: "A person decides"
+    notes: >-
+      Read them in this order every time. The fourth is the one teams forget to
+      allow — some steps should keep a person in the loop, and saying so now is a
+      design decision, not a failure.
+
+  - component: bullet-list
+    title: "Annotate Every Box"
+    items:
+      - "One need per step, minimum"
+      - "Say which of the four it is"
+      - "Unknowns get marked, not skipped"
+    notes: >-
+      The third is the important habit. An honest question mark on the map is worth
+      more than a confident guess — it tells the team exactly where to spend the
+      next hour.
+
+  - component: definition
+    term: "Claude Routine"
+    definition: "A prompt Claude runs on a schedule, unprompted."
+    notes: >-
+      The key phrase is without you starting it. If a step must happen every
+      morning, or every time new data lands, it is a routine and not a thing a
+      person remembers to do.
+
+  - component: bullet-list
+    title: "When a Step Is a Routine"
+    items:
+      - "It repeats on a clock"
+      - "Nobody should have to remember"
+      - "Late is worse than imperfect"
+    notes: >-
+      The third test is the sharpest. If being late costs more than being slightly
+      wrong, automate it. Day 3 revisits routines for ongoing checks after the
+      week ends.
+
+  - component: code
+    title: "A Step as a Routine"
+    chrome: false
+    code: |
+      Every weekday at 8:00
+
+      1. Read new files in /intake
+      2. Score each against the role
+      3. Append to the ranked sheet
+      4. Flag anything scoring low
+    notes: >-
+      A routine is just a step with a clock attached. Point out that this is the
+      same step from their map, only scheduled — no new logic, just a trigger.
+
+  - component: definition
+    term: "Human decision"
+    definition: "A step where a person judges and the system waits."
+    notes: >-
+      Waits is the operative word. If the system proceeds without the judgement,
+      the human is not in the loop — they are being notified, which is a different
+      and much weaker thing.
+
+  - component: bullet-list
+    title: "Keep a Human When"
+    items:
+      - "Being wrong is expensive"
+      - "The call needs context you lack"
+      - "Someone must be accountable"
+    notes: >-
+      These are the three honest reasons. Note that none of them is the model is
+      not good enough — that is a capability question, and it changes; these do
+      not.
+
+  - component: table-slide
+    title: "Step to Need"
+    headers: ["Step", "What it needs"]
+    rows:
+      - ["Intake files", "Data plus a routine"]
+      - ["Parse text", "A tool"]
+      - ["Score match", "A model call"]
+      - ["Approve list", "A human decision"]
+    notes: >-
+      The worked example, annotated. Ask the room which row would hurt most if it
+      silently failed. That question is the hinge into the risk pass on the next
+      slide.
+
+  # ── The risk pass ──────────────────────────────────────────────────────────
+  - component: definition
+    term: "The riskiest step"
+    definition: "The one whose failure wastes the most time."
+    notes: >-
+      Not the hardest step, and not the most interesting. The one that costs the
+      most if it breaks. Those are often different boxes, and teams instinctively
+      pick the interesting one.
+
+  - component: numbered-steps
+    title: "Find It"
+    steps:
+      - title: "Mark unknowns"
+        body: "Boxes you cannot describe"
+      - title: "Ask who blocks"
+        body: "Which stalls everything after"
+      - title: "Pick one"
+        body: "Only one gets this attention"
+    notes: >-
+      Force a single choice. Teams want to name three risky steps and then address
+      none of them properly. One step, three failure modes, in the next ten
+      minutes.
+
+  - component: code
+    title: "Prompt for Failure Modes"
+    chrome: true
+    code: |
+      Our riskiest step:
+      "<describe the step>"
+
+      Give the THREE most likely ways
+      this fails in practice.
+      Most likely first.
+      For each: the early warning sign.
+      No fixes yet.
+    notes: >-
+      Most likely first, not most dramatic. The early warning sign is what makes
+      this actionable — it tells them what to watch for tomorrow while they build.
+
+  - component: icon-text-rows
+    title: "Where Steps Usually Fail"
+    rows:
+      - icon: "file"
+        heading: "Input"
+        body: "Arrives wrong or not at all"
+      - icon: "zap"
+        heading: "Transform"
+        body: "Works, but not on real data"
+      - icon: "lock"
+        heading: "Access"
+        body: "The key, quota, or approval"
+    notes: >-
+      Three axes to prompt them if Claude's answers feel thin. Access failures are
+      the most under-predicted and the most annoying, because no amount of clever
+      code fixes a missing credential.
+
+  - component: bullet-list
+    title: "What to Do With Three Failures"
+    items:
+      - "Build the warning sign in first"
+      - "Stub the step if it may not land"
+      - "Give the risky box its best owner"
+    notes: >-
+      Three concrete moves, all available today. The third connects straight to
+      1.3 — the riskiest step should go to whoever is most likely to get it done,
+      not whoever wants it.
+
+  - component: comparison-matrix
+    title: "Which Step Gets the Attention"
+    options: ["Intake", "Parse", "Score"]
+    criteria: ["Unknown", "Blocks rest", "Hard to fix"]
+    cells:
+      - ["Yes", "Yes", "Yes"]
+      - ["No", "Yes", "No"]
+      - ["Yes", "No", "No"]
+    highlights:
+      - [0, 0]
+    notes: >-
+      Intake wins on all three, so it gets the risk work. Walk the second row: Parse
+      blocks everything after it but is well understood, so it is a schedule risk,
+      not a design risk.
+
+  - component: bullet-list
+    title: "Write the Risk Down"
+    items:
+      - "Put it on the diagram"
+      - "Name the warning sign"
+      - "Say who is watching for it"
+    notes: >-
+      Unwritten risk is the same as unknown risk. Have them add it to the Artifact
+      now, while the map is open, rather than promising to do it after the break.
+
+  # ── Close ──────────────────────────────────────────────────────────────────
+  - component: bullet-list
+    title: "Done With This Session When"
+    items:
+      - "The map runs input to output"
+      - "It is an Artifact with a link"
+      - "Every box names what it needs"
+      - "The riskiest step has three failures"
+    notes: >-
+      The exit criteria. Read them slowly and have teams self-assess out loud.
+      Anyone missing the second can fix it in two minutes before 1.3 starts.
+
+  - component: stat-callout
+    title: "What You Leave With"
+    stats:
+      - value: "1"
+        label: "Shared diagram"
+      - value: "4"
+        label: "Kinds of need"
+      - value: "3"
+        label: "Named failures"
+    notes: >-
+      The concrete output of the hour. If a team cannot show all three, they are
+      not ready to divide the work in 1.3 — flag it now rather than at eleven
+      o'clock.
+
+  - component: bullet-list
+    title: "Next: Dividing the Work"
+    items:
+      - "Give every step one owner"
+      - "Run workstreams in parallel"
+      - "Put the board in GitHub"
+    notes: >-
+      The bridge into session 1.3. Make the dependency explicit: you can only
+      assign owners to steps that exist, so the quality of that hour depends
+      entirely on the map they just drew.
+
+  - component: question
+    question: "Which box comes last?"
+    notes: >-
+      Close on a question that reveals priorities. The answer is usually the
+      riskiest step, which is exactly the one they should build first. Let that
+      land, then send them to the break.
