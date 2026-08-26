@@ -1,0 +1,676 @@
+# Immersion Week SF · Day 2 · Session 2.2
+# "Building the Happy Path" (10:00–10:55, 55 min)
+# Source: https://github.com/UChiCareersinAI/ImmersionWeekSF
+#
+# Objectives (verbatim from the syllabus):
+#   1. Drive Claude Code to implement each step against one known-good input —
+#      no edge cases, no error handling, not yet
+#   2. Connect the steps so a single input reaches a finished output with no
+#      manual intervention
+#   3. Commit to GitHub the moment it works, before adding anything else to it
+#
+# No palette block: this deck rides the slidekit default colour scheme.
+version: 1
+theme:
+  font: arial
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  # ── Open ───────────────────────────────────────────────────────────────────
+  - component: title-slide
+    title: "The Happy Path"
+    subtitle: "Immersion Week SF · Day 2 · Session 2.2"
+    notes: >-
+      The first session of the week where they write code. Everything before this
+      was deciding what to build; this is the hour it starts existing. Keep the
+      energy high and the scope brutally small.
+
+  - component: big-number
+    value: "55"
+    label: "Minutes"
+    context: "One input reaches one output"
+    notes: >-
+      Name the deliverable in one line: a single known-good input travels the
+      whole map and comes out the far end without anyone touching it. Not a good
+      product — a working path.
+
+  - component: agenda
+    title: "What This Session Covers"
+    items:
+      - "Pick one known-good input"
+      - "Build each step against it"
+      - "Connect the steps end to end"
+      - "Commit the moment it works"
+    notes: >-
+      Three syllabus objectives across four moves. The order is not negotiable:
+      teams that connect before building have nothing to connect, and teams that
+      polish before committing lose the working version.
+
+  - component: question
+    question: "What is your one input?"
+    notes: >-
+      Ask it and wait. Teams that cannot answer in ten seconds have not chosen an
+      input, they have a category of inputs — and a category cannot be built
+      against. Make them name a specific file, message, or URL.
+
+  - component: this-vs-that
+    title: "From 2.1 to Now"
+    left:
+      value: "A stack"
+      label: "What each step runs on"
+    right:
+      value: "A path"
+      label: "One input, all the way"
+    notes: >-
+      The bridge. Last session gave every box a tool. Tools sitting side by side
+      are not a prototype; the prototype appears the moment one input crosses all
+      of them without help.
+
+  - component: process-steps
+    title: "How We Get There"
+    steps:
+      - label: "Input"
+        body: "Choose one, freeze it"
+      - label: "Build"
+        body: "One step at a time"
+      - label: "Chain"
+        body: "Remove every hand"
+      - label: "Commit"
+        body: "The second it works"
+    notes: >-
+      The shape of the hour. Point out that "chain" is a separate move from
+      "build" — the seams between steps are where the time actually goes, and
+      teams who assume otherwise run out of clock.
+
+  - component: timeline
+    title: "The Next 55 Minutes"
+    events:
+      - date: "10:00"
+        title: "Freeze it"
+        description: "One file, committed, shared"
+      - date: "10:10"
+        title: "Build steps"
+        description: "One box at a time, verified"
+      - date: "10:35"
+        title: "Connect"
+        description: "Run it from a cold start"
+      - date: "10:50"
+        title: "Commit"
+        description: "Tag the version that works"
+    notes: >-
+      Put the clock on the wall. The two times that matter are 10:35 and 10:50 —
+      a team still building steps at 10:35 must cut a box, and a team not
+      committed by 10:50 has lost the session regardless of what runs.
+
+  - component: pull-quote
+    quote: "Make it work. Only then, anything else."
+    attribution: "The Day 2 rule"
+    notes: >-
+      A deliberately old idea. Working comes before right, and right comes before
+      fast. Today ends at the first word. Anyone reaching for the second before
+      lunch is off the path.
+
+  # ── 01 · One Known-Good Input ──────────────────────────────────────────────
+  - component: section-divider
+    number: "01"
+    title: "One Known-Good Input"
+    notes: >-
+      First objective. A single frozen input is the most useful constraint
+      available today — it turns an open-ended build into a finite one and gives
+      the team an unambiguous test.
+
+  - component: definition
+    term: "Happy path"
+    definition: "The one route where nothing goes wrong"
+    notes: >-
+      Define it before they water it down. The happy path is not the common case
+      or the typical case; it is one specific route, with one specific input,
+      chosen because it works.
+
+  - component: bullet-list
+    title: "What It Is Not"
+    items:
+      - "Not the average case"
+      - "Not most of your inputs"
+      - "Not robust to anything"
+      - "Not what you ship later"
+    notes: >-
+      Four disclaimers, because teams keep widening the definition until it means
+      "the product". The happy path is a scaffold you build the real thing
+      against, and it is allowed to be embarrassingly narrow.
+
+  - component: numbered-steps
+    title: "Choosing the Input"
+    steps:
+      - title: "Take a real one"
+        body: "From the actual problem, not invented"
+      - title: "Check it is boring"
+        body: "Nothing weird, nothing missing"
+      - title: "Freeze it in the repo"
+        body: "Same bytes for everyone, all day"
+    notes: >-
+      Step three is the one teams skip and regret. If two people are testing
+      against slightly different inputs, every disagreement about whether it works
+      becomes unresolvable.
+
+  - component: bullet-list
+    title: "What Makes One Good"
+    items:
+      - "Small enough to read fully"
+      - "Real enough to be convincing"
+      - "Boring enough to always work"
+      - "Fixed, so results compare"
+    notes: >-
+      Four properties. The tension is between the first two — small and real pull
+      in opposite directions. Resolve it toward small; a convincing demo needs one
+      good example, not a large one.
+
+  - component: code
+    title: "Freeze it where everyone can see"
+    code: |
+      $ mkdir -p fixtures
+      $ cp ~/Downloads/report.pdf fixtures/
+      $ git add fixtures/report.pdf
+      $ git commit -m "freeze demo input"
+    notes: >-
+      Four commands, thirty seconds, and the team stops arguing about inputs for
+      the rest of the week. Do this before writing a line of the pipeline.
+
+  - component: two-panel-list
+    title: "Today and Not Today"
+    left:
+      title: "Today"
+      items:
+        - "One input, all the way"
+        - "The steps from your map"
+        - "Whatever is ugliest"
+    right:
+      title: "Not today"
+      items:
+        - "Edge cases"
+        - "Error handling"
+        - "A second input"
+    accent_side: "left"
+    notes: >-
+      Read the right column aloud twice. Every item there is genuinely good
+      engineering, and every one of them will cost you the demo if you do it this
+      morning. They are Day 3 work.
+
+  - component: bullet-list
+    title: "The Ban List for This Hour"
+    items:
+      - "No try or catch anywhere"
+      - "No configuration files"
+      - "No second input to test"
+      - "No renaming or refactoring"
+    notes: >-
+      A hard ban, not a suggestion. Each of these feels responsible and each is a
+      way of avoiding the frightening part, which is finding out whether the path
+      actually connects.
+
+  - component: definition
+    term: "Claude Code"
+    definition: "An agent that edits and runs your repo"
+    notes: >-
+      Introduce it precisely. It is not autocomplete — it reads files, writes
+      them, and runs commands in your project. That changes how you should ask
+      for things, which is the next few slides.
+
+  - component: numbered-steps
+    title: "Driving It, Per Step"
+    steps:
+      - title: "Name the one step"
+        body: "From your map, by its box"
+      - title: "Give it the contract"
+        body: "What comes in, what goes out"
+      - title: "Point at the input"
+        body: "The frozen file, by path"
+    notes: >-
+      Three things in every request. The second is the one from 1.2 — the arrow
+      labels they wrote yesterday are exactly the contracts to hand over now. That
+      is why yesterday mattered.
+
+  - component: bullet-list
+    title: "Give It What It Needs"
+    items:
+      - "The map, as a file in the repo"
+      - "The contracts between steps"
+      - "The frozen input, by path"
+      - "The command that proves it ran"
+    notes: >-
+      An agent working in your repo can read anything you put there. Committing
+      yesterday's map and contracts as plain text costs a minute and stops you
+      re-explaining the same design in every request.
+
+  - component: comparison-columns
+    title: "Two Ways to Ask"
+    left_title: "Vague"
+    right_title: "Specific"
+    left_items:
+      - text: "\"Parse the document\""
+      - text: "\"Make it handle PDFs\""
+      - text: "\"Clean up the output\""
+    right_items:
+      - text: "\"Read fixtures/report.pdf\""
+      - text: "\"Return title and date\""
+      - text: "\"Write it to out.json\""
+    notes: >-
+      The single highest-leverage slide for the hour. Left-hand asks produce
+      plausible code you cannot check. Right-hand asks produce code with an
+      obvious pass or fail, which is what lets you move fast.
+
+  - component: code
+    title: "A request worth making"
+    code: |
+      Read fixtures/report.pdf.
+      Pull out title, author, date.
+      Write them to out/step1.json.
+      Run it and show me the file.
+    notes: >-
+      Four lines that name the input, the output, the location, and the proof. The
+      last line matters most — asking it to run the thing turns a claim into an
+      artifact you can look at.
+
+  - component: icon-text-rows
+    title: "Three Rules for Driving"
+    rows:
+      - icon: "target"
+        heading: "One step per ask"
+        body: "Never two boxes of the map at once"
+      - icon: "eye"
+        heading: "Make it run"
+        body: "Ask for the output, not a description"
+      - icon: "undo"
+        heading: "Reset, do not nudge"
+        body: "If two tries fail, restate the whole ask"
+    notes: >-
+      The third is counter-intuitive and worth dwelling on. Nudging a wrong answer
+      usually produces a differently wrong answer; restating the request cleanly
+      is almost always faster than three corrections.
+
+  - component: bullet-list
+    title: "When It Goes Sideways"
+    items:
+      - "It invented a file — name paths"
+      - "It over-built — say what to skip"
+      - "It cannot run — give it the command"
+      - "It loops — restate from scratch"
+    notes: >-
+      Four common failures and their one-line fixes. Notice each fix is
+      information you had and did not give. That is usually the shape of the
+      problem.
+
+  - component: bullet-list
+    title: "Check Each Step Before Moving On"
+    items:
+      - "You ran it yourself, just now"
+      - "The output file exists"
+      - "You read the output"
+      - "It matches the contract"
+    notes: >-
+      A gate between boxes. Moving on from an unverified step is how teams end up
+      at noon with five steps and no idea which one is broken. Thirty seconds here
+      saves an hour later.
+
+  # ── 02 · Connect the Steps ─────────────────────────────────────────────────
+  - component: section-divider
+    number: "02"
+    title: "Connect the Steps"
+    notes: >-
+      Second objective, and the half of the session teams underestimate. Working
+      steps are not a working path; the seams between them are new work and need
+      their own time.
+
+  - component: question
+    question: "Where do hands still touch?"
+    notes: >-
+      Ask this while they are feeling good about their individual steps. Every
+      copy-paste, every "then I open the file and", every manual rename is a place
+      the demo will break in front of people.
+
+  - component: definition
+    term: "Manual step"
+    definition: "Anything a person does between two steps"
+    notes: >-
+      Broaden the definition on purpose. Renaming a file counts. Opening a tab
+      counts. If it lives in someone's head rather than the repo, it will be
+      forgotten exactly once, on stage.
+
+  - component: bullet-list
+    title: "Manual Steps That Hide"
+    items:
+      - "Copying output into the next box"
+      - "Renaming a file by hand"
+      - "Pasting into a chat window"
+      - "Knowing to run them in order"
+    notes: >-
+      Four that teams genuinely do not notice, because the person doing them is
+      the person who built it. Have someone else try to run the pipeline — the
+      hidden steps surface in seconds.
+
+  - component: this-vs-that
+    title: "Two Kinds of Demo"
+    left:
+      value: "Narrated"
+      label: "And now I open this"
+    right:
+      value: "Run once"
+      label: "One command, done"
+    notes: >-
+      The difference an audience feels immediately. A narrated demo asks people to
+      believe the connections exist. A single command shows them. Day 3's red team
+      will attack the narration.
+
+  - component: numbered-steps
+    title: "Connecting, in Order"
+    steps:
+      - title: "Write the contracts down"
+        body: "What each step leaves behind"
+      - title: "Chain two, then three"
+        body: "Add one box at a time"
+      - title: "Run it from cold"
+        body: "Delete the outputs and start over"
+    notes: >-
+      Step three is the real test. A pipeline that only works when yesterday's
+      files happen to be lying around is not connected — it is a coincidence you
+      have not noticed yet.
+
+  - component: table-slide
+    title: "Write Down the Seams"
+    headers: ["Step", "Leaves behind"]
+    rows:
+      - ["Ingest", "out/raw.json"]
+      - ["Extract", "out/fields.json"]
+      - ["Reason", "out/answer.md"]
+      - ["Render", "out/index.html"]
+    notes: >-
+      Concrete filenames, not abstractions. Once each step names the file it
+      leaves behind, connecting them is mechanical — and any mismatch becomes
+      visible on this table instead of at runtime.
+
+  - component: code
+    title: "The whole path, one command"
+    code: |
+      $ rm -rf out/ && mkdir out
+      $ python run.py fixtures/report.pdf
+      ... 4 steps ok
+      $ open out/index.html
+    notes: >-
+      This is the deliverable of the session in four lines. The first line is the
+      important one — clearing the outputs is what proves the path runs from cold
+      rather than from leftovers.
+
+  - component: bullet-list
+    title: "The Seam Is Where It Breaks"
+    items:
+      - "One step writes, the next cannot read"
+      - "A field is named two ways"
+      - "One step assumes a list"
+      - "A path is right on one machine"
+    notes: >-
+      Four seam failures, all of them mismatches rather than bugs inside a step.
+      This is why the contracts from 1.2 pay off: a written contract makes a
+      mismatch a five-second fix.
+
+  - component: numbered-steps
+    title: "Debugging a Seam"
+    steps:
+      - title: "Open both files"
+        body: "What was written, what was expected"
+      - title: "Fix the later step"
+        body: "Adapt downstream, not upstream"
+      - title: "Rerun from cold"
+        body: "Never trust a partial run"
+    notes: >-
+      Step two is a rule of thumb worth adopting for the week: change the consumer
+      rather than the producer, because upstream changes invalidate every step
+      after them.
+
+  - component: comparison-matrix
+    title: "Connect Early or Late"
+    options: ["Connect early", "Connect late"]
+    criteria: ["Surprises", "Rework", "Demo risk"]
+    cells:
+      - ["Now, small", "Late, large"]
+      - ["Cheap", "Expensive"]
+      - ["Low", "High"]
+    highlights: [[0, 0], [2, 0]]
+    notes: >-
+      The case for connecting before polishing. Every surprise you find at 10:40
+      is small; the same surprise at 4:30 tomorrow is the demo. Connect ugly,
+      early, and often.
+
+  - component: card-grid
+    title: "Four Smells"
+    cards:
+      - title: "Only Ana"
+        body: "One person can run it"
+      - title: "Warm only"
+        body: "Fails from a clean start"
+      - title: "In order"
+        body: "You must know the sequence"
+      - title: "One box"
+        body: "A step still done by hand"
+    notes: >-
+      Four ways a path looks connected and is not. Read each and have teams
+      self-diagnose out loud. Most rooms will have at least two of these right
+      now.
+
+  - component: numbered-steps
+    title: "If You Are Behind"
+    steps:
+      - title: "Cut a box, not a corner"
+        body: "Stub a whole step, keep the path whole"
+      - title: "Shrink the input"
+        body: "One page instead of the whole report"
+      - title: "Never drop the commit"
+        body: "A short path committed beats a long one lost"
+    notes: >-
+      Read this at 10:35 whether or not anyone asks. Teams under time pressure
+      instinctively half-finish every step; the right move is to fully remove one
+      so the path still runs end to end.
+
+  - component: bullet-list
+    title: "Done Means All Four"
+    items:
+      - "One command, start to finish"
+      - "Runs from an empty output dir"
+      - "Someone else ran it"
+      - "The output is the real thing"
+    notes: >-
+      The definition of done for this hour. Note the third: a teammate running it
+      on their own machine catches more problems in a minute than an hour of
+      reading code.
+
+  - component: pull-quote
+    quote: "If hands touch it, it is not connected."
+    attribution: "Objective two, restated"
+    notes: >-
+      The syllabus says no manual intervention, and it means none. This is the
+      line to repeat when a team argues that their one small copy-paste does not
+      really count.
+
+  # ── 03 · Commit the Moment It Works ────────────────────────────────────────
+  - component: section-divider
+    number: "03"
+    title: "Commit It Immediately"
+    notes: >-
+      Third objective. Short section, absolute rule. The gap between "it works"
+      and "it is committed" is where more prototypes die than in any technical
+      failure all week.
+
+  - component: definition
+    term: "Works"
+    definition: "It ran end to end, cold, in front of you"
+    notes: >-
+      Define working so it cannot be argued with. Not "should work", not "worked
+      earlier" — it ran, from cold, and you watched it. That is the moment the
+      commit rule triggers.
+
+  - component: bullet-list
+    title: "Why Right Now"
+    items:
+      - "This is the version that works"
+      - "The next change may break it"
+      - "You will not remember what changed"
+      - "A demo needs a known-good commit"
+    notes: >-
+      Four reasons, but the second carries it. The moment after something works is
+      the moment of maximum temptation to improve it, and the improvement is not
+      yet reversible.
+
+  - component: numbered-steps
+    title: "The Commit Ritual"
+    steps:
+      - title: "Stop typing"
+        body: "Hands off the keyboard, it works"
+      - title: "Commit and push"
+        body: "Message says what now works"
+      - title: "Then keep going"
+        body: "Anything new lands on top of it"
+    notes: >-
+      Deliberately ceremonial, because the discipline is behavioural rather than
+      technical. Everyone knows they should commit; almost nobody does it at
+      exactly the right second.
+
+  - component: code
+    title: "Sixty seconds of insurance"
+    code: |
+      $ git add run.py steps/ fixtures/
+      $ git commit -m "happy path runs cold"
+      $ git push -u origin main
+      $ git tag happy-path && git push --tags
+    notes: >-
+      Note the explicit paths on the first line rather than a bulk add — you want
+      the pipeline, not the output directory or a stray virtual environment. The
+      tag gives the demo a name to fall back to.
+
+  - component: file-tree
+    title: "What the repo looks like now"
+    root: "happy-path/"
+    entries:
+      - name: "fixtures/"
+        depth: 0
+      - name: "report.pdf"
+        depth: 1
+      - name: "steps/"
+        depth: 0
+      - name: "extract.py"
+        depth: 1
+      - name: "render.py"
+        depth: 1
+      - name: "run.py"
+        depth: 0
+      - name: "README.md"
+        depth: 0
+    notes: >-
+      The whole prototype, seven entries. Show it to make the point that a working
+      path is small — if a team's repo is much bigger than this by 10:50, they
+      built something other than the happy path.
+
+  - component: bullet-list
+    title: "What the Message Should Say"
+    items:
+      - "What input it accepts"
+      - "What output it produces"
+      - "What is still stubbed"
+      - "Not how clever it is"
+    notes: >-
+      A commit message that answers the first three is a handover note. Tomorrow's
+      red team and tonight's tired teammate both read it, and neither cares about
+      the fourth.
+
+  - component: two-panel-list
+    title: "Before and After the Commit"
+    left:
+      title: "Before committing"
+      items:
+        - "Nothing else at all"
+        - "No tidying, no renaming"
+        - "No one more small fix"
+    right:
+      title: "After committing"
+      items:
+        - "Everything you want"
+        - "Break it freely"
+        - "You can always get back"
+    accent_side: "right"
+    notes: >-
+      The whole rule in two columns. The left column is a discipline of about
+      sixty seconds; the right column is the freedom it buys for the rest of the
+      day.
+
+  - component: icon-text-rows
+    title: "What the Commit Buys You"
+    rows:
+      - icon: "anchor"
+        heading: "A place to stand"
+        body: "Every later change can be undone to here"
+      - icon: "users"
+        heading: "A shared build"
+        body: "Teammates start from what already works"
+      - icon: "play"
+        heading: "A safe demo"
+        body: "A known-good tag if tomorrow goes wrong"
+    notes: >-
+      Three payoffs, and the third is the one they will actually use. Every week
+      at least one team demos from the tag rather than from main, and is very glad
+      it exists.
+
+  - component: bullet-list
+    title: "Then, and Only Then"
+    items:
+      - "Add a second input"
+      - "Handle the obvious failure"
+      - "Make the output look right"
+      - "Start on the demo wrapper"
+    notes: >-
+      The queue that opens once the commit is in. Notice the last item is 2.3's
+      work — teams who finish early should start there rather than gold-plating
+      the pipeline.
+
+  - component: table-slide
+    title: "Write This Down Now"
+    headers: ["Question", "Your answer"]
+    rows:
+      - ["The frozen input", "…"]
+      - ["The one command", "…"]
+      - ["The known-good tag", "…"]
+      - ["Still done by hand", "…"]
+    notes: >-
+      Four answers into the repo before the break. The fourth is the honest one,
+      and it becomes part of the caveat list that 2.3 asks them to write and Day 3
+      attacks.
+
+  - component: bullet-list
+    title: "Leaving This Session"
+    items:
+      - "One input, frozen in the repo"
+      - "One command runs it all"
+      - "It works from a cold start"
+      - "It is committed and pushed"
+    notes: >-
+      The exit checklist. A team missing the last line is not finished, however
+      good their code is — read it slowly and let the pause do the work.
+
+  - component: question
+    question: "Could a stranger run it?"
+    notes: >-
+      The gate into 2.3. Right now the honest answer is usually no, and that gap —
+      between a path that runs and a thing a stranger can drive — is exactly what
+      the next session is for.
+
+  - component: bullet-list
+    title: "Next: Making It Demoable"
+    items:
+      - "A front end a stranger can drive"
+      - "A public URL, not your laptop"
+      - "A three-minute demo script"
+      - "An honest list of what is faked"
+    notes: >-
+      Set up 2.3. The pipeline they just built is the engine; the next hour puts a
+      handle on it and gets it off their machine. The last line is the one Day 3
+      will read most carefully.
