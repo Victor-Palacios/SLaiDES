@@ -386,6 +386,14 @@ def emit_pptx(
                     slide.shapes._spTree[-1], "sldNum", _SLDNUM_PH_IDX
                 )
 
+        # Speaker notes: written to the slide's notes page, which is what
+        # PowerPoint's and Google Slides' speaker-notes pane reads. Notes never
+        # appear on the slide itself, so they carry no geometry and are invisible
+        # to the layout engine and the linter. Touching `notes_slide` creates the
+        # notes part on demand, so slides without notes stay byte-clean.
+        if rs.notes:
+            slide.notes_slide.notes_text_frame.text = rs.notes
+
     prs.save(str(output_path))
     return output_path
 

@@ -145,6 +145,10 @@ class ResolvedSlide:
     # emitter across the whole canvas before any content — a true background, so it is NOT a
     # content node and is exempt from margin/overlap rules by design (e.g. the code layout).
     background: Optional[str] = None
+    # Presenter speaker notes passed through from the IR. Emit-only and
+    # deliberately NOT serialised in to_dict() — it is prose, not geometry, so it
+    # must not churn layout goldens.
+    notes: Optional[str] = None
 
     def all_nodes(self) -> list[ResolvedNode]:
         """Flat list of all nodes including chrome."""

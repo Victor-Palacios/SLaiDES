@@ -79,6 +79,14 @@ slides:
                                # link in the bottom-right chrome (left of the page
                                # number). http(s) only. Use it to cite a slide's
                                # origin — prefer first-party/official sources.
+    notes: "..."               # OPTIONAL, any slide: presenter speaker notes.
+                               # Written to the pptx notes page (PowerPoint's and
+                               # Google Slides' speaker-notes pane); NEVER drawn on
+                               # the slide, so it cannot overflow or affect lint.
+                               # STANDING RULE: give every slide `notes` saying what
+                               # the slide is for and what to say — one short
+                               # paragraph. Use a YAML block scalar (|) if it runs
+                               # to several lines.
 ```
 
 **Metric-safe fonts (the only allowed set):** Arial, Calibri, Cambria,

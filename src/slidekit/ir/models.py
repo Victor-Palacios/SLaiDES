@@ -163,6 +163,11 @@ class _SlideBase(BaseModel):
     """
 
     source: Optional[str] = None
+    # Speaker notes for the presenter. Never rendered on the slide itself — the
+    # pptx emitter writes them to the slide's notes page (PowerPoint's and Google
+    # Slides' speaker-notes pane), so they carry no geometry and cannot affect
+    # layout or lint.
+    notes: Optional[str] = None
 
     @field_validator("source", check_fields=False)
     @classmethod

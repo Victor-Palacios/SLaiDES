@@ -56,3 +56,8 @@ glyphs; text hugs its underline rule; matrix layouts highlight 1–2 items,
 never whole categories; when the operator supplies explicit numbers, use
 their literals verbatim; bullet-list items fit on ONE line — keep each short
 enough that it never wraps (FB-098).
+
+**Speaker notes are mandatory.** Every slide of every deck you author carries a
+`notes:` field explaining the point of that slide and what to say. Notes render
+to the pptx notes page only — never on the slide — so they never affect layout
+or lint. Standing operator instruction (2026-08-26).

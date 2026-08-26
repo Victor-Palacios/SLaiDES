@@ -310,6 +310,7 @@ def _resolve_slide(
         nodes=nodes,
         chrome=chrome,
         background=_COMPONENT_BACKGROUNDS.get(comp),
+        notes=getattr(slide, "notes", None),
     )
 
 
