@@ -1,0 +1,612 @@
+# Immersion Week SF · Day 2 · Session 2.1
+# "Choosing Your Low-Code Stack" (9:20–9:55, 35 min)
+# Source: https://github.com/UChiCareersinAI/ImmersionWeekSF
+#
+# Objectives (verbatim from the syllabus):
+#   1. Match each step of yesterday's workflow map to a specific tool, and decide
+#      deliberately what to stub and what to build
+#   2. Tell the difference between needing RAG and just needing context in the
+#      window — then pick the cheaper one that works
+#   3. Stand up the smallest retrieval layer that answers your prototype's
+#      questions, with a Claude Project as the baseline to beat
+#
+# No palette block: this deck rides the slidekit default colour scheme.
+version: 1
+theme:
+  font: arial
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  # ── Open ───────────────────────────────────────────────────────────────────
+  - component: title-slide
+    title: "Choosing the Stack"
+    subtitle: "Immersion Week SF · Day 2 · Session 2.1"
+    notes: >-
+      Day 2 opens. Yesterday was all talk and diagrams by design. This is the
+      first session where they name real tools, and the last one before they
+      start building in 2.2.
+
+  - component: big-number
+    value: "35"
+    label: "Minutes"
+    context: "You leave with a tool per step"
+    notes: >-
+      Short session, hard deliverable. By 9:55 every box on their 1.2 map has a
+      named tool beside it and a stub-or-build decision. No box may be left
+      undecided, even if the decision is "we fake it".
+
+  - component: agenda
+    title: "What This Session Covers"
+    items:
+      - "Give every step a named tool"
+      - "Decide what to stub, not build"
+      - "RAG or just more context"
+      - "Stand up the smallest layer"
+    notes: >-
+      Three syllabus objectives, four moves. The second is the one teams skip and
+      the one that saves the most time. The third is where most of the wasted
+      effort in the room will otherwise go.
+
+  - component: question
+    question: "What will you not build?"
+    notes: >-
+      Open here rather than with tools. Every team arrives eager to list what they
+      will build; almost none has decided what they will refuse. The refusals are
+      what make a 2-day prototype possible.
+
+  - component: this-vs-that
+    title: "From 1.3 to Now"
+    left:
+      value: "A board"
+      label: "Who does each step"
+    right:
+      value: "A stack"
+      label: "What each step runs on"
+    notes: >-
+      The bridge from yesterday. They ended Day 1 with owners on every step. An
+      owner still cannot start without knowing which tool they are opening. That
+      is the gap this hour closes.
+
+  - component: process-steps
+    title: "How We Get There"
+    steps:
+      - label: "Map"
+        body: "Reopen yesterday's diagram"
+      - label: "Tool"
+        body: "Name one per step"
+      - label: "Stub"
+        body: "Mark what stays fake"
+      - label: "Retrieve"
+        body: "Only if you must"
+    notes: >-
+      The shape of the session. Emphasise the order — tools before retrieval.
+      Teams that debate RAG first end up designing a retrieval system for a step
+      that turns out to be stubbed anyway.
+
+  - component: pull-quote
+    quote: "Boring tools, interesting problem."
+    attribution: "The Day 2 rule"
+    notes: >-
+      Set the tone for tool selection. Their novelty budget was already spent on
+      the problem they chose yesterday. Spending it again on the stack is how
+      prototypes die before the demo.
+
+  # ── 01 · A Tool for Every Step ─────────────────────────────────────────────
+  - component: section-divider
+    number: "01"
+    title: "A Tool for Every Step"
+    notes: >-
+      First objective. Walk the map left to right and write a tool name in each
+      box. This is mechanical work, and it should be — the thinking happened
+      yesterday.
+
+  - component: definition
+    term: "Low-code"
+    definition: "Assembling built pieces instead of writing them"
+    notes: >-
+      Define it before they resist it. Low-code is not a lesser tier of
+      engineering; it is a decision about where your effort goes. You are still
+      responsible for the design, just not for the plumbing.
+
+  - component: bullet-list
+    title: "The Rule for This Hour"
+    items:
+      - "Every box gets one tool name"
+      - "No box may stay undecided"
+      - "\"We fake it\" counts as decided"
+      - "Write it on the board now"
+    notes: >-
+      State the rule plainly and hold them to it. An undecided box is a box that
+      blocks its owner tomorrow morning. A box marked "faked" is not a failure —
+      it is a scoped decision.
+
+  - component: bullet-list
+    title: "Where the Tool Names Come From"
+    items:
+      - "What your team already uses"
+      - "What the workshop hands you"
+      - "What has a free tier today"
+      - "Not what you meant to learn"
+    notes: >-
+      Four sources, in priority order. The fourth line is the trap: this week is
+      not the week to learn a new framework. Learning happens after the demo
+      ships, not on the critical path to it.
+
+  - component: card-grid
+    title: "The Four Jobs"
+    cards:
+      - title: "Intake"
+        body: "Getting the input in"
+      - title: "Think"
+        body: "The model doing the work"
+      - title: "Store"
+        body: "Anything you look up later"
+      - title: "Show"
+        body: "What the user actually sees"
+    notes: >-
+      Almost every prototype in the room reduces to these four jobs. Have teams
+      sort their boxes into these buckets — it usually collapses eight boxes into
+      four decisions.
+
+  - component: table-slide
+    title: "A Worked Mapping"
+    headers: ["Step", "Tool"]
+    rows:
+      - ["Collect the input", "A form or a paste box"]
+      - ["Understand it", "Claude, one prompt"]
+      - ["Look something up", "Claude Project files"]
+      - ["Produce the output", "Claude Artifact"]
+      - ["Show a stranger", "A hosted page"]
+    notes: >-
+      An example mapping, not a template to copy. Point at how unglamorous every
+      right-hand cell is. Four of the five are things they could stand up before
+      lunch.
+
+  - component: bullet-list
+    title: "Signs You Picked Wrong"
+    items:
+      - "Nobody on the team has used it"
+      - "Setup is measured in hours"
+      - "It needs a key you don't have"
+      - "The docs assume production"
+    notes: >-
+      Four smells. Any one of them is survivable; two together means pick again.
+      The cost of switching tools now is minutes; the cost of switching at 4pm
+      tomorrow is the demo.
+
+  - component: two-panel-list
+    title: "Build or Stub"
+    left:
+      title: "Build it"
+      items:
+        - "It is the thing you claim"
+        - "The demo touches it live"
+        - "Nobody believes it faked"
+    right:
+      title: "Stub it"
+      items:
+        - "It is plumbing, not proof"
+        - "The demo never opens it"
+        - "It works but is boring"
+    accent_side: "left"
+    notes: >-
+      The core distinction of the session. Build only what carries the claim you
+      are making. Everything else exists to let that claim be shown, and can be
+      as fake as it needs to be.
+
+  - component: definition
+    term: "Stub"
+    definition: "A fake that is honest about being fake"
+    notes: >-
+      Stress the second half. A stub is not a lie — it is a deliberate placeholder
+      you can name out loud. The moment you forget which parts are stubbed, you
+      are demoing something you do not understand.
+
+  - component: numbered-steps
+    title: "How to Decide, Per Box"
+    steps:
+      - title: "Ask what it proves"
+        body: "If nothing, it is plumbing"
+      - title: "Ask who sees it"
+        body: "If nobody, stub it"
+      - title: "Ask what it costs"
+        body: "Over an hour needs a reason"
+    notes: >-
+      Three questions, thirty seconds per box. Run them out loud as a team so the
+      decisions are shared. A box that survives all three is a box worth an
+      afternoon.
+
+  - component: bullet-list
+    title: "Always Safe to Stub"
+    items:
+      - "Login and user accounts"
+      - "Payments of any kind"
+      - "Email and notifications"
+      - "Anything with a real database"
+    notes: >-
+      Four things no prototype in this room needs. Each is days of work and none
+      is what they are being judged on. If a demo needs a user, hardcode one.
+
+  - component: bullet-list
+    title: "Never Safe to Stub"
+    items:
+      - "The step your idea rests on"
+      - "Whatever you claim is novel"
+      - "The output a stranger reads"
+      - "The path the demo walks"
+    notes: >-
+      The mirror image. If the interesting claim is stubbed, there is no
+      prototype — there is a slideshow. Day 3's red team will find this faster
+      than you would like.
+
+  - component: icon-text-rows
+    title: "Three Tests Before You Commit"
+    rows:
+      - icon: "clock"
+        heading: "Under an hour"
+        body: "You can have it running before lunch"
+      - icon: "check"
+        heading: "Someone knows it"
+        body: "One person on the team has shipped with it"
+      - icon: "shield"
+        heading: "Fails quietly"
+        body: "When it breaks, the demo still walks"
+    notes: >-
+      Apply these to each tool name they just wrote. Any tool failing two of three
+      gets replaced now, while replacing it is free. The third test is the one
+      teams never think about until Day 3.
+
+  - component: comparison-matrix
+    title: "Picking Between Two Options"
+    options: ["Familiar tool", "Better tool"]
+    criteria: ["Setup", "Ceiling", "Demo risk"]
+    cells:
+      - ["Minutes", "Half a day"]
+      - ["Low", "High"]
+      - ["Low", "Unknown"]
+    highlights: [[0, 0], [2, 0]]
+    notes: >-
+      The recurring argument, resolved. The better tool wins on ceiling, and the
+      ceiling is irrelevant in a two-day build. Highlight setup and demo risk —
+      those are the only rows that pay out this week.
+
+  - component: stat-callout
+    title: "Where the Time Actually Goes"
+    stats:
+      - value: "80%"
+        label: "Wiring things together"
+        subtext: "Not the clever part"
+      - value: "20%"
+        label: "The idea itself"
+        subtext: "What you are judged on"
+    notes: >-
+      Illustrative, not measured — say so. The point stands regardless: choosing
+      tools that wire together quickly buys back the only hours that matter.
+      Every stub is a direct transfer from the left column to the right.
+
+  # ── 02 · RAG or Just Context ───────────────────────────────────────────────
+  - component: section-divider
+    number: "02"
+    title: "RAG or Just Context"
+    notes: >-
+      Second objective, and the most expensive mistake available to them today.
+      Teams build retrieval systems for problems that fit in a single prompt.
+      This section exists to stop that.
+
+  - component: definition
+    term: "RAG"
+    definition: "Fetch the few relevant bits, then ask"
+    notes: >-
+      Strip the acronym down. Retrieval-augmented generation is a search step
+      bolted in front of a prompt. That is all. Once it sounds that ordinary, the
+      question of whether you need it gets easier.
+
+  - component: question
+    question: "Does it all fit already?"
+    notes: >-
+      The whole section in five words. Ask it before any architecture discussion.
+      For most teams in this room the honest answer is yes, and that answer saves
+      them an afternoon.
+
+  - component: this-vs-that
+    title: "Two Ways to Give Context"
+    left:
+      value: "Paste it"
+      label: "Everything, every time"
+    right:
+      value: "Fetch it"
+      label: "Only what is relevant"
+    notes: >-
+      Frame them as the same goal with different costs. Pasting is free to build
+      and costs tokens. Fetching costs a build and saves tokens. Which is cheaper
+      depends entirely on how much you have.
+
+  - component: bullet-list
+    title: "What a Context Window Holds"
+    items:
+      - "A long policy document"
+      - "A few hundred support tickets"
+      - "A codebase of modest size"
+      - "More than you probably have"
+    notes: >-
+      Calibrate their intuition. Modern windows are much larger than people
+      assume, and the assumption is usually years out of date. Have them estimate
+      their corpus out loud before deciding.
+
+  - component: numbered-steps
+    title: "The Decision, in Order"
+    steps:
+      - title: "Measure the corpus"
+        body: "Actual size, not your guess"
+      - title: "Try pasting it"
+        body: "If it fits, you are done"
+      - title: "Only then, retrieve"
+        body: "And keep it as small as you can"
+    notes: >-
+      Insist on step one. Teams argue about retrieval for twenty minutes without
+      ever checking how much text they have. Measuring usually ends the argument
+      in under a minute.
+
+  - component: two-panel-list
+    title: "Which One Do You Need"
+    left:
+      title: "Just context"
+      items:
+        - "It fits in one window"
+        - "The corpus barely changes"
+        - "Every question sees it all"
+    right:
+      title: "Real retrieval"
+      items:
+        - "Far more than fits"
+        - "It changes constantly"
+        - "Questions need a slice"
+    accent_side: "right"
+    notes: >-
+      Three discriminators. Note they must answer yes to most of a column, not
+      just one line. One matching line is a coincidence; three is an
+      architecture.
+
+  - component: table-slide
+    title: "What Each One Costs You"
+    headers: ["", "Paste it", "Retrieve it"]
+    rows:
+      - ["Build time", "Zero", "Hours"]
+      - ["Per question", "More tokens", "Fewer tokens"]
+      - ["Breaks when", "Corpus grows", "Search misses"]
+      - ["Debuggable", "Easily", "Less easily"]
+    notes: >-
+      Retrieval trades build time for run cost. In a two-day prototype you have
+      almost no build time and almost no run volume, which is exactly the regime
+      where pasting wins.
+
+  - component: bullet-list
+    title: "The Costs Nobody Budgets"
+    items:
+      - "Chunking the documents well"
+      - "Deciding how many to fetch"
+      - "Debugging what it missed"
+      - "Explaining it in the demo"
+    notes: >-
+      The build cost of RAG is not the vector store; it is these four. Each is a
+      quiet afternoon. The last one bites on Day 3 when a red-teamer asks why the
+      system missed an obvious document.
+
+  - component: code
+    title: "Measure before you architect"
+    code: |
+      $ wc -w docs/*.md
+        41,204 total
+
+      # ~55k tokens. It fits.
+      # No retrieval needed today.
+    notes: >-
+      Run this live if you can. One command settles a debate teams will otherwise
+      have for half an hour. Words times roughly 1.3 gets you close enough to
+      tokens for this decision.
+
+  - component: bullet-list
+    title: "You Are Over-Building If"
+    items:
+      - "You picked a vector database first"
+      - "Your corpus is under 20 files"
+      - "You cannot name a missed query"
+      - "It is not tomorrow's demo step"
+    notes: >-
+      Four warnings, any of which should stop them. The third is the sharpest: if
+      you cannot describe a question that pasting fails to answer, you do not have
+      a retrieval problem yet.
+
+  - component: pull-quote
+    quote: "The cheapest thing that works."
+    attribution: "Objective two, in five words"
+    notes: >-
+      The syllabus says pick the cheaper one that works. Both halves bind —
+      cheapest is not an excuse for something that does not answer the question,
+      and working is not an excuse for spending the afternoon.
+
+  # ── 03 · The Smallest Retrieval Layer ──────────────────────────────────────
+  - component: section-divider
+    number: "03"
+    title: "The Smallest Layer"
+    notes: >-
+      Third objective. For teams that genuinely need retrieval, this is how to get
+      it in minutes rather than hours — and how to prove it was worth building at
+      all.
+
+  - component: definition
+    term: "Claude Project"
+    definition: "A workspace with your files always in context"
+    notes: >-
+      Introduce it as the baseline, not as a compromise. A Project keeps
+      instructions and files attached to every conversation, which is exactly the
+      cheap end of the retrieval spectrum.
+
+  - component: bullet-list
+    title: "Why It Is the Baseline"
+    items:
+      - "Standing it up takes minutes"
+      - "No keys, no store, no code"
+      - "Your files are simply there"
+      - "Anyone can drive it"
+    notes: >-
+      Four reasons it is the thing to beat. The fourth matters most for a team
+      demo: a teammate who did not build it can still run it, which is not true
+      of a hand-rolled pipeline.
+
+  - component: numbered-steps
+    title: "Stand One Up"
+    steps:
+      - title: "Create the Project"
+        body: "Name it after the problem"
+      - title: "Add your documents"
+        body: "The real ones, not samples"
+      - title: "Write the instructions"
+        body: "Say how to answer, and how not to"
+    notes: >-
+      Ten minutes, live, right now if there is time. Step two is where teams
+      cheat by uploading a toy file — the whole point is finding out whether the
+      real corpus behaves.
+
+  - component: code
+    title: "Project instructions worth writing"
+    code: |
+      Answer only from the attached files.
+      Quote the filename you used.
+      If the files do not cover it,
+      say so plainly. Do not guess.
+    notes: >-
+      Four lines that do most of the work. The third and fourth are what make the
+      baseline honest — without them you cannot tell a retrieval failure from a
+      confident invention.
+
+  - component: bullet-list
+    title: "What Goes in the Project"
+    items:
+      - "The documents you must cite"
+      - "One example of a good answer"
+      - "Your glossary and odd terms"
+      - "Nothing you would not ship"
+    notes: >-
+      Curate rather than dump. A single strong example answer improves output more
+      than ten extra documents. The last line is a privacy reminder worth saying
+      out loud.
+
+  - component: table-slide
+    title: "The Baseline to Beat"
+    headers: ["Measure", "Your target"]
+    rows:
+      - ["Questions answered", "More than the Project"]
+      - ["Wrong answers", "Fewer than the Project"]
+      - ["Time to build", "Under one afternoon"]
+      - ["Teammate can run it", "Yes"]
+    notes: >-
+      This is what "baseline to beat" means concretely. If a hand-built retrieval
+      layer does not win at least two rows, the Project was the right answer and
+      you just bought back an afternoon.
+
+  - component: numbered-steps
+    title: "How to Know You Beat It"
+    steps:
+      - title: "Write ten questions"
+        body: "Real ones, before you build"
+      - title: "Run both, same questions"
+        body: "Project first, then yours"
+      - title: "Count, do not vibe"
+        body: "Keep whichever wins"
+    notes: >-
+      A ten-minute evaluation that prevents a lost afternoon. Writing the
+      questions first is essential — questions written afterwards are always
+      written to flatter whatever you built.
+
+  - component: icon-text-rows
+    title: "Three Layers, Cheapest First"
+    rows:
+      - icon: "doc"
+        heading: "Paste it in"
+        body: "Zero build; use it while the corpus is small"
+      - icon: "folder"
+        heading: "Claude Project"
+        body: "Minutes to stand up; the baseline to beat"
+      - icon: "search"
+        heading: "Real retrieval"
+        body: "Only once you can name what the others missed"
+    notes: >-
+      The ladder, and the rule for climbing it: you may only take a step up when
+      you can point at a specific failure of the step below. Most teams will spend
+      Day 2 on the middle rung.
+
+  - component: bullet-list
+    title: "When to Graduate"
+    items:
+      - "The Project cannot hold it all"
+      - "You can name what it missed"
+      - "The corpus changes daily"
+      - "You have the afternoon spare"
+    notes: >-
+      All four, not any one. A team that can tick all four has a genuine retrieval
+      problem and should build. A team ticking two is about to lose tomorrow
+      morning to plumbing.
+
+  - component: comparison-columns
+    title: "Two Teams, Same Corpus"
+    left_title: "Built retrieval"
+    right_title: "Used a Project"
+    left_items:
+      - text: "Afternoon on chunking"
+      - text: "Demo has a search step"
+      - text: "Nobody else can run it"
+    right_items:
+      - text: "Twenty minutes total"
+      - text: "Demo has an answer"
+      - text: "Whole team can run it"
+    notes: >-
+      A composite of what happens most weeks, not a specific case. The middle row
+      is the one that stings: a demo that shows retrieval working is less
+      persuasive than one that shows the answer being right.
+
+  - component: bullet-list
+    title: "Leaving This Session"
+    items:
+      - "Every box has a tool name"
+      - "Every box is build or stub"
+      - "Retrieval decided, not deferred"
+      - "The baseline is standing up"
+    notes: >-
+      The exit checklist. Read it slowly and have each team check itself against
+      it. Any unticked line is a conversation to finish in the ten minutes before
+      2.2, not during it.
+
+  - component: table-slide
+    title: "Write This Down Now"
+    headers: ["Question", "Your answer"]
+    rows:
+      - ["Riskiest tool choice", "…"]
+      - ["Biggest stub", "…"]
+      - ["Retrieval: yes or no", "…"]
+      - ["What proves it works", "…"]
+    notes: >-
+      Four answers to capture in the repo before the break. These become the
+      opening lines of tomorrow's demo caveats, and the first thing Day 3's red
+      team will read.
+
+  - component: question
+    question: "Can you start building?"
+    notes: >-
+      The gate into 2.2. If a team cannot answer yes, the missing piece is almost
+      always an undecided box rather than a hard technical problem. Find it now.
+
+  - component: bullet-list
+    title: "Next: Building the Happy Path"
+    items:
+      - "One known-good input, end to end"
+      - "No edge cases, no error handling"
+      - "Claude Code drives each step"
+      - "Commit the moment it works"
+    notes: >-
+      Set up 2.2 so the break has a purpose. Their stack decisions are what make
+      the next session a build session instead of another design session. Nothing
+      chosen here is permanent — but everything chosen here is started.
