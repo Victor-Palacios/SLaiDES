@@ -69,6 +69,24 @@ against the right margin, not parked inboard. Standing operator instruction
 (2026-08-26).
 
 **Speaker notes are mandatory.** Every slide of every deck you author carries a
-`notes:` field explaining the point of that slide and what to say. Notes render
-to the pptx notes page only — never on the slide — so they never affect layout
-or lint. Standing operator instruction (2026-08-26).
+`notes:` field. Notes render to the pptx notes page only — never on the slide —
+so they never affect layout or lint. Standing operator instruction (2026-08-26).
+
+**Notes are the spoken narrative, not stage direction.** A note is what a
+presenter would say out loud, so that reading a deck's notes end to end tells its
+story. Four rules (operator decision 2026-08-27, after reviewing three candidate
+styles):
+
+- **Say the slide.** One or two sentences speaking the slide's own content in
+  full prose. No argument the slide does not make, no example it does not have.
+- **Voice is a natural presenter mix**: "we" for what the room does together,
+  "you" for the audience's own work. Never "they"/"teams" *about* the audience.
+- **Logistics are rewritten as speech, never dropped.** "The gate is 10:45"
+  becomes "we swap logs at 10:45, whatever state your testing is in."
+- **No stage directions** — nothing of the form *Stress…, Flag…, Point out…,
+  Ask it and wait, Return here whenever…, Read this at 11:40, Have each…*
+
+Example — slide `definition: Workflow / "Ordered steps from raw input to
+delivered output."` → *"A workflow is the ordered set of steps that carries you
+from raw input all the way to a delivered output. Both ends of that sentence
+matter as much as the middle."*

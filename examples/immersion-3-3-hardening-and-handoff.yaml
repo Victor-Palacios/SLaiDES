@@ -26,18 +26,18 @@ slides:
     title: "Hardening and Handoff"
     subtitle: "Immersion Week SF · Day 3 · Session 3.3"
     notes: >-
-      The last session of the week. They are holding a log of their own failures
-      written by people with no reason to be gentle. This hour turns that into a
-      better prototype and something that keeps testing itself.
+      This is session 3.3, Hardening and Handoff — the last session of the week.
+      You are holding a log of your own failures, written by people with no
+      reason to be gentle.
 
   - component: big-number
     value: "50"
     label: "Minutes"
     context: "You leave with it hardened"
     notes: >-
-      The deliverable in one line: the failures above the cut line fixed, proven
-      by re-running the exact tests that caught them, pushed, and a schedule of
-      checks running after everyone goes home.
+      Fifty minutes, and you leave with the failures above the cut line fixed
+      and proven, everything pushed, and a schedule of checks running after you
+      go home.
 
   - component: agenda
     title: "What This Session Covers"
@@ -47,16 +47,15 @@ slides:
       - "Fix, re-run, and push"
       - "Schedule checks that outlive you"
     notes: >-
-      Three syllabus objectives across four moves. The second is a separate move
-      on purpose — deciding what you will not fix is a distinct act from ranking,
-      and teams that skip it fix whatever is nearest.
+      Four things this session. We triage severity against cost, commit to a cut
+      line, fix and re-run and push, and schedule checks that outlive you.
 
   - component: question
     question: "What will you not fix?"
     notes: >-
-      Open here rather than with the log. In fifty minutes they cannot fix
-      everything, and the teams that end the week strongest are the ones that
-      decided that on purpose rather than by running out of time.
+      Start here: what will you not fix? In fifty minutes you cannot fix
+      everything, and the teams that end strongest decided that on purpose
+      rather than by running out of time.
 
   - component: this-vs-that
     title: "From 3.2 to Now"
@@ -67,9 +66,8 @@ slides:
       value: "A line"
       label: "What you will fix"
     notes: >-
-      The bridge. A log is a pile of facts and produces anxiety. A cut line turns
-      the same pile into a plan, and the pile stops being frightening the moment
-      the line exists.
+      A log is a pile of facts, and it produces anxiety. A cut line turns the
+      same pile into a plan.
 
   - component: process-steps
     title: "How We Get There"
@@ -83,9 +81,9 @@ slides:
       - label: "Watch"
         body: "Schedule it to keep testing"
     notes: >-
-      The shape of the hour. Note that fixing is only the third move — most of the
-      value is in the first two, and teams that dive straight into code fix the
-      easy things and leave the critical ones.
+      Four moves: triage on severity against cost to fix, draw the cut line out
+      loud, fix and re-run the exact test, then schedule it to keep testing
+      itself.
 
   - component: timeline
     title: "The Next 50 Minutes"
@@ -103,33 +101,31 @@ slides:
         title: "Schedule"
         description: "Checks that run without you"
     notes: >-
-      The gate is 11:40. Stop fixing then regardless of what is left — the
-      scheduled checks are the only part of this hour that keeps working after the
-      week ends, and they need the full ten minutes.
+      The hour runs in four blocks, and 11:40 is the gate — stop fixing then,
+      whatever is left. The scheduled checks are the only part of this hour that
+      keeps working after the week ends.
 
   - component: pull-quote
     quote: "Deciding what to ignore is the work."
     attribution: "The triage rule"
     notes: >-
-      The line for the session. Anyone can rank a list; committing to leave the
-      bottom of it alone is what makes the ranking mean something. That commitment
-      is the deliverable of the first twelve minutes.
+      Deciding what to ignore is the work. Anyone can rank a list; committing to
+      leave the bottom of it alone is what makes the ranking mean anything.
 
   # ── 01 · The Cut Line ──────────────────────────────────────────────────────
   - component: section-divider
     number: "01"
     title: "The Cut Line"
     notes: >-
-      First objective. Two axes, one line, twelve minutes. Do this as a whole team
-      with the log on a shared screen, not by splitting the list between people.
+      First objective: two axes, one line, twelve minutes — done as a whole team
+      with the log on a shared screen.
 
   - component: definition
     term: "Triage"
     definition: "Sorting by what to do, not by what is worst"
     notes: >-
-      Borrowed from medicine, and the borrowing is exact. Triage is not ranking by
-      severity — it is ranking by where your limited effort does the most good,
-      which is a different order.
+      Triage means sorting by what to do, not by what is worst. It is ranking by
+      where your limited effort does the most good, which is a different order.
 
   - component: bullet-list
     title: "Before You Sort Anything"
@@ -139,9 +135,8 @@ slides:
       - "Reproduce anything unclear"
       - "Then start ranking"
     notes: >-
-      Four steps first. The second usually shrinks a twenty-entry log to eight
-      real problems, and doing it before ranking stops the same bug being fixed
-      three times.
+      Four steps before ranking anything. Read the whole log. Merge findings
+      that share one cause. Reproduce anything unclear. Then start ranking.
 
   - component: table-slide
     title: "Two Axes, Nothing Else"
@@ -150,9 +145,9 @@ slides:
       - ["Severity", "How bad if a judge hits it?"]
       - ["Cost", "How long to fix it, honestly?"]
     notes: >-
-      Two questions per finding, thirty seconds each. Resist adding a third axis —
-      elegance, interest, whose fault it was. Every extra axis is a way of
-      arriving at the answer you already wanted.
+      Two questions per finding, thirty seconds each. Severity: how bad is it if
+      a judge hits it? Cost: how long to fix, honestly? Resist adding a third
+      axis.
 
   - component: comparison-matrix
     title: "Where Each Finding Lands"
@@ -164,16 +159,16 @@ slides:
       - ["Maybe", "Never"]
     highlights: [[0, 1], [1, 1]]
     notes: >-
-      The grid that does the work. Note the top-right cell: a critical failure
-      gets fixed even when it is expensive, because severity beats cost at the
-      top. Everything else trades.
+      Here is the grid. A critical finding is fixed now whether it is cheap or
+      costly — severity beats cost at the top. A high one is fixed if cheap and
+      debated if costly. A low one is maybe if cheap and never if costly.
 
   - component: definition
     term: "Cut line"
     definition: "The point below which you fix nothing today"
     notes: >-
-      Say the hard half out loud: below the line means not today, not tonight, not
-      quietly during the demo. A line people cross privately is not a line.
+      The cut line is the point below which you fix nothing today. Not tonight,
+      and not quietly during the demo.
 
   - component: numbered-steps
     title: "Drawing It"
@@ -185,9 +180,9 @@ slides:
       - title: "Draw where the time runs out"
         body: "Then stop, and say the number"
     notes: >-
-      Step two is the honest one. Teams rank well and then plan to fix nine things
-      in thirty minutes. Adding the estimates up is what forces the line to land
-      somewhere real.
+      Three steps. Rank by the grid — fix now, decide, maybe, never. Add up the
+      hours against the time you actually have. Then draw the line where the
+      time runs out, and say the number out loud.
 
   - component: bullet-list
     title: "Always Above the Line"
@@ -197,9 +192,9 @@ slides:
       - "A crash on a normal input"
       - "Anything that leaks a secret"
     notes: >-
-      Four non-negotiables regardless of cost. The first outranks the rest — a
-      system that is wrong while looking right damages trust in a way a crash
-      never does.
+      Four things stay above the line regardless of cost: confidently wrong
+      output, anything that hangs forever, a crash on a normal input, and
+      anything that leaks a secret.
 
   - component: bullet-list
     title: "Usually Below the Line"
@@ -209,9 +204,9 @@ slides:
       - "It fails on an absurd input"
       - "Something already in caveats"
     notes: >-
-      Four things to leave alone with a clear conscience. The last is why
-      yesterday's caveat list pays off twice — a documented limit is a decision
-      already made, not a bug rediscovered.
+      Four things you can leave alone with a clear conscience: it looks rough,
+      it is slow but finishes, it fails on an absurd input, or it is already in
+      your caveats.
 
   - component: bullet-list
     title: "Estimating Cost Fast"
@@ -221,9 +216,9 @@ slides:
       - "Over an hour: today, no"
       - "Unknown: treat it as over"
     notes: >-
-      Four buckets, no finer. The fourth is the discipline — an unknown estimate
-      is not a small one, and teams systematically guess low on things they have
-      not looked at.
+      Four buckets, no finer. Under ten minutes: just do it. Under an hour: it
+      needs the line. Over an hour: not today. Unknown: treat it as over an
+      hour.
 
   - component: two-panel-list
     title: "Two Ways to Spend the Hour"
@@ -241,9 +236,9 @@ slides:
         - "Know exactly what is left"
     accent_side: "right"
     notes: >-
-      Both teams run out of time; only one of them chose where. The third row is
-      the one that decides how the demo goes, because an unfixed critical finding
-      does not stay hidden.
+      Without a line you fix what is nearest, run out of time surprised, and the
+      critical one survives. With a line you fix what matters most, run out of
+      time on purpose, and know exactly what is left.
 
   - component: bullet-list
     title: "Traps in Triage"
@@ -253,9 +248,9 @@ slides:
       - "Arguing whether it counts"
       - "Re-litigating their findings"
     notes: >-
-      Four ways the twelve minutes disappear. The last two are the same instinct
-      3.2 asked them to suppress, arriving late. If a finding is disputed, rank it
-      and move on.
+      Four ways the twelve minutes disappear: fixing the interesting one first,
+      softening severity to feel better, arguing whether something counts, and
+      re-litigating their findings.
 
   - component: icon-text-rows
     title: "Three Rules for the Line"
@@ -270,9 +265,9 @@ slides:
         heading: "Held once drawn"
         body: "Moving it later is how the hour is lost"
     notes: >-
-      The third is where discipline breaks. A team that keeps sliding the line
-      downward as they finish things ends up mid-fix at 11:50 with nothing pushed
-      and nothing scheduled.
+      Three rules. Drawn against real time — sum the estimates rather than
+      aspiring. Agreed out loud, so everyone hears where it landed. And held
+      once drawn, because moving it later is how the hour is lost.
 
   - component: code
     title: "The line, written into the repo"
@@ -284,26 +279,24 @@ slides:
         F-01 slow, F-05 ugly errors,
         F-09 fails on 400-page input
     notes: >-
-      Committed, not remembered. The lower list is the more valuable one — it goes
-      straight into the demo caveats and answers the question a judge is about to
-      ask.
+      Write it into the repo as TRIAGE.md — what is above the line, and what is
+      below it on purpose. The lower list is the more valuable one, because it
+      goes straight into your demo caveats.
 
   # ── 02 · Fix and Prove It ──────────────────────────────────────────────────
   - component: section-divider
     number: "02"
     title: "Fix and Prove It"
     notes: >-
-      Second objective. Twenty-two minutes of fixing, and the syllabus is specific
-      that each fix must be proven by re-running the exact test that caught it.
-      That word exact is doing real work.
+      Second objective: twenty-two minutes of fixing, and every fix proven by
+      re-running the exact test that caught it.
 
   - component: definition
     term: "Fixed"
     definition: "The test that caught it now passes"
     notes: >-
-      Define it so it cannot drift. Not "I changed the code", not "it should be
-      better" — the specific input from the log goes in and the right thing comes
-      out, watched by a person.
+      Fixed means the test that caught it now passes. Not “I changed the code”,
+      not “it should be better”.
 
   - component: numbered-steps
     title: "The Fix Loop"
@@ -315,9 +308,9 @@ slides:
       - title: "Re-run that exact input"
         body: "The one from the log, not a similar one"
     notes: >-
-      Step one is skipped constantly and it is the one that saves time. A fix
-      applied to a failure you never reproduced is a guess, and about half of
-      those guesses are wrong.
+      Three steps. Reproduce it first, and see the failure before you change
+      anything. Change one thing, the smallest edit that could work. Then re-run
+      that exact input — the one from the log, not a similar one.
 
   - component: bullet-list
     title: "One at a Time"
@@ -327,9 +320,9 @@ slides:
       - "Commit each fix separately"
       - "Never batch three and hope"
     notes: >-
-      Four rules that feel slow and are faster. Batched fixes that do not work
-      leave you unable to tell which change broke what, at the worst possible
-      point in the week.
+      Four rules that feel slow and are faster: one finding one change, re-run
+      before starting the next, commit each fix separately, and never batch
+      three and hope.
 
   - component: code
     title: "Prove it, one line"
@@ -341,8 +334,7 @@ slides:
       # Now it refuses. Re-ran, watched it.
     notes: >-
       This is what proof looks like — the exact input from the log, the new
-      behaviour on screen, and a note tying it to the finding number. Thirty
-      seconds, and it makes the commit message write itself.
+      behaviour on screen, and a note tying it back to the finding number.
 
   - component: this-vs-that
     title: "Two Kinds of Done"
@@ -353,9 +345,9 @@ slides:
       value: "Re-ran"
       label: "You watched it work"
     notes: >-
-      The distinction the objective turns on. Every unproven fix is a finding you
-      have merely moved out of sight, and Day 3 exists precisely because things
-      out of sight get found by someone else.
+      Two kinds of done. You believe it should work now. Or you re-ran it and
+      watched it work. Every unproven fix is a finding you have moved out of
+      sight.
 
   - component: bullet-list
     title: "Not Now"
@@ -365,9 +357,8 @@ slides:
       - "Do not restyle anything"
       - "Do not start a second input"
     notes: >-
-      The same ban list as Day 2, for the same reason. There are thirty minutes
-      left in the week; every one spent on something not on the log is taken from
-      something that is.
+      Not now: do not refactor while fixing, do not add a feature nobody asked
+      for, do not restyle anything, and do not start on a second input.
 
   - component: numbered-steps
     title: "Pushing It"
@@ -379,9 +370,9 @@ slides:
       - title: "Update the caveats"
         body: "Fixed comes off, below-the-line goes on"
     notes: >-
-      Step three is the one that gets forgotten. A stale caveat list is worse than
-      none, because it tells a judge you are not tracking your own system
-      accurately.
+      Three steps. Commit per finding, with the message naming the finding it
+      closes. Push after each one rather than once at the end when it is rushed.
+      And update the caveats — fixed comes off, below-the-line goes on.
 
   - component: code
     title: "A commit that closes a finding"
@@ -391,9 +382,9 @@ slides:
       $ git push
       # then: strike F-03 from CAVEATS.md
     notes: >-
-      Explicit paths, the finding number in the message, and the caveat update as
-      part of the same move. Anyone reading the history later can trace a fix back
-      to the log entry that caused it.
+      Explicit paths, the finding number in the message, and the caveat update
+      as part of the same move. Anyone reading the history later can trace a fix
+      back to the log entry that caused it.
 
   - component: table-slide
     title: "What the Record Shows"
@@ -404,9 +395,9 @@ slides:
       - ["F-01 slow", "Below the line"]
       - ["F-09 huge input", "Below the line"]
     notes: >-
-      Four rows a stranger can read in ten seconds. Note that below-the-line
-      entries stay on the record rather than disappearing — that is the difference
-      between a known limit and an unknown one.
+      Four rows a stranger can read in ten seconds. Two fixed and re-ran, two
+      below the line. Note that the below-the-line entries stay on the record
+      rather than disappearing.
 
   - component: bullet-list
     title: "The Ones You Did Not Fix"
@@ -416,17 +407,16 @@ slides:
       - "They become the next sprint"
       - "They are not failures"
     notes: >-
-      Four destinations. The last line matters for morale on the final afternoon:
-      a documented, deliberate limit is a scoping decision, and every shipped
-      system has a list like it.
+      The ones you did not fix go into the caveats, into the demo script, and
+      into the next sprint. They are not failures — every shipped system has a
+      list like this.
 
   - component: pull-quote
     quote: "An unproven fix is still a bug."
     attribution: "Objective two, restated"
     notes: >-
-      The line to repeat when a team is running short and tempted to push a change
-      they have not re-run. If there is time for one but not both, fix fewer
-      things and prove them.
+      An unproven fix is still a bug. If there is time for one but not both, fix
+      fewer things and prove them.
 
   # ── 03 · After You Stop Looking ────────────────────────────────────────────
   - component: section-divider
@@ -434,23 +424,21 @@ slides:
     title: "After You Stop Looking"
     notes: >-
       Third objective, and the one that outlives the week. Everything so far was
-      tested because people were watching. This section is about what happens when
-      they are not.
+      tested because people were watching.
 
   - component: question
     question: "Who tests it next week?"
     notes: >-
-      Ask it and let the silence sit. The honest answer for most prototypes is
-      nobody, which is exactly why they quietly stop working and nobody finds out
-      until they are opened in front of someone.
+      So: who tests it next week? For most prototypes the honest answer is
+      nobody, which is why they quietly stop working.
 
   - component: definition
     term: "Routine"
     definition: "A prompt that runs on a schedule, without you"
     notes: >-
-      Define it plainly. A Routine is a scheduled agent run — the same instructions
-      they would type, fired on a timer, reporting what it found. That is the whole
-      idea.
+      A Routine is a prompt that runs on a schedule, without you. It is a
+      scheduled agent run — the same instructions you would type, fired on a
+      timer.
 
   - component: bullet-list
     title: "Why Schedule Checks at All"
@@ -460,9 +448,9 @@ slides:
       - "You will not think to look"
       - "A dead demo is found by a judge"
     notes: >-
-      Four reasons. The second is the most common in practice — prototypes rarely
-      break because of code changes, they break because something they depend on
-      changed underneath them.
+      Four reasons to schedule checks. Things break with nobody touching them. A
+      key expires, a service moves. You will not think to look. And a dead demo
+      gets found by a judge.
 
   - component: numbered-steps
     title: "Setting One Up"
@@ -474,9 +462,9 @@ slides:
       - title: "Say where it reports"
         body: "Somewhere you will actually see it"
     notes: >-
-      Three steps, a few minutes each. Step three decides whether any of this
-      matters — a check reporting into a place nobody opens is the same as no
-      check at all.
+      Three steps. Write the check as a prompt — exactly what you would do by
+      hand. Pick a schedule, and daily is right for almost everything. Then say
+      where it reports, somewhere you will actually see it.
 
   - component: code
     title: "A check worth scheduling"
@@ -487,9 +475,9 @@ slides:
       If the output is missing or wrong,
       say so in one line. Otherwise say OK.
     notes: >-
-      Five lines, and it is just the happy path from 2.2 run by somebody else. The
-      last line matters — a check that reports nothing when healthy is a check you
-      stop trusting.
+      Five lines, and it is just your happy path run by somebody else. Open the
+      URL, upload the fixture, click Run, and say so in one line if the output
+      is missing or wrong — otherwise say OK.
 
   - component: bullet-list
     title: "What to Schedule"
@@ -499,9 +487,9 @@ slides:
       - "The URL still loads at all"
       - "Anything with a key or a quota"
     notes: >-
-      Four checks, and the second is the point of the whole session. A fix that
-      silently regresses is worse than the original bug, because you have stopped
-      watching for it.
+      Four things to schedule: the happy path end to end, the findings you fixed
+      today, whether the URL still loads at all, and anything with a key or a
+      quota.
 
   - component: two-panel-list
     title: "Two Kinds of Check"
@@ -519,9 +507,9 @@ slides:
         - "Lands where you look daily"
     accent_side: "right"
     notes: >-
-      The same specificity lesson as the whole week, applied one last time. A vague
-      scheduled prompt produces a vague daily message that everybody learns to
-      ignore within a week.
+      A weak check says “check if it works”, reports only on failure, and goes
+      where nobody looks. A strong one has one input and one expectation,
+      reports either way, and lands where you look daily.
 
   - component: bullet-list
     title: "Schedule as Many as It Needs"
@@ -531,9 +519,10 @@ slides:
       - "One for each external thing"
       - "Cheap enough to be generous"
     notes: >-
-      The syllabus says unlimited, so the constraint is not count — it is whether
-      each one is worth reading. Generous with checks, strict about them reporting
-      something a person can act on.
+      The constraint is not the count — the syllabus says unlimited. One per fix
+      you made today, one for the happy path, one for each external dependency.
+      Be generous with checks and strict about them reporting something you can
+      act on.
 
   - component: icon-text-rows
     title: "Three Every Prototype Needs"
@@ -548,9 +537,9 @@ slides:
         heading: "Did the fixes hold"
         body: "Today's findings, re-run on a timer"
     notes: >-
-      If a team only sets up three, these are the three. The first catches the
-      dead-demo case, the second catches silent breakage, and the third catches
-      regression of everything they did this hour.
+      If you only set up three, make it these. Is it alive — the URL loads and
+      returns a page. Does it still work — the happy path daily, start to
+      finish. And did the fixes hold — today's findings, re-run on a timer.
 
   - component: bullet-list
     title: "The Handoff"
@@ -560,9 +549,9 @@ slides:
       - "TRIAGE says what you chose"
       - "The checks say it still runs"
     notes: >-
-      Four files, and together they are the handoff. Anyone picking this up in a
-      month — including them — can understand the system without a conversation,
-      which is what handoff means.
+      Four files, and together they are the handoff. README says what it does.
+      CAVEATS says what it does not. TRIAGE says what you chose. And the checks
+      say it still runs.
 
   - component: file-tree
     title: "The repo at the end of the week"
@@ -591,9 +580,9 @@ slides:
       - name: "README.md"
         depth: 0
     notes: >-
-      Three days of work in one screen. Point out that four of these files are
-      prose rather than code — the record of what they chose and what they know is
-      as much of the deliverable as the pipeline.
+      Three days of work in one screen. Four of these files are prose rather
+      than code — the record of what you chose and what you know is as much of
+      the deliverable as the pipeline.
 
   - component: table-slide
     title: "The Handoff Checklist"
@@ -604,9 +593,9 @@ slides:
       - ["Caveats current", "Matches reality today"]
       - ["Checks running", "One fired already"]
     notes: >-
-      Four binary checks to run as a team before 11:50. The last is the one to
-      verify rather than assume — a Routine that was created but never fired has
-      not been tested either.
+      Four binary checks before 11:50. Everything pushed, nothing only local.
+      Fixes proven, each test re-run. Caveats current, matching reality today.
+      And checks running, with at least one already fired.
 
   - component: numbered-steps
     title: "If You Are Behind"
@@ -618,9 +607,9 @@ slides:
       - title: "Never skip the schedule"
         body: "It is the only part that outlives today"
     notes: >-
-      Read this at 11:38. The order of sacrifice is fixes first, the schedule
-      last — a prototype with two fixes and a working daily check is in better
-      shape than one with five fixes and nobody watching.
+      If you are behind: stop fixing at 11:40 and whatever is left goes into the
+      caveats. Push what is proven, and leave an unproven change uncommitted.
+      But never skip the schedule — it is the only part that outlives today.
 
   - component: bullet-list
     title: "Leaving This Session"
@@ -630,8 +619,8 @@ slides:
       - "Everything pushed to GitHub"
       - "Checks running without you"
     notes: >-
-      The exit checklist for the session and for the week. Four lines, all binary,
-      all verifiable in the repo by someone who was not in the room.
+      You are leaving with a cut line written and held, the fixes above it each
+      re-run, everything pushed to GitHub, and checks running without you.
 
   - component: table-slide
     title: "Write This Down Now"
@@ -642,9 +631,8 @@ slides:
       - ["Biggest thing left", "…"]
       - ["What the checks watch", "…"]
     notes: >-
-      The last four answers of the week. The third is what they should say out loud
-      in the demo before anyone asks, which turns their largest remaining weakness
-      into evidence that they know their own system.
+      The last four answers of the week: where the line landed, what you fixed
+      and proved, the biggest thing left, and what the checks are watching.
 
   - component: bullet-list
     title: "What You Built This Week"
@@ -654,13 +642,14 @@ slides:
       - "A prototype at a public URL"
       - "Proof that you tested it"
     notes: >-
-      Close the week here. Four lines covering three days. The last is the one most
-      teams never have — plenty of people can show a demo, far fewer can show what
-      they did to try to break it.
+      What you built this week: a problem stated precisely, a workflow mapped
+      and owned, a prototype at a public URL, and proof that you tested it.
+      Plenty of people can show a demo; far fewer can show what they did to
+      break it.
 
   - component: question
     question: "What would you build next?"
     notes: >-
-      The final question of the week. Everything below the cut line, everything in
-      the caveats and everything the red team found is already the answer — they
-      leave with a backlog rather than a blank page.
+      One last question: what would you build next? Everything below your cut
+      line, everything in your caveats and everything the red team found is
+      already the answer — you leave with a backlog rather than a blank page.

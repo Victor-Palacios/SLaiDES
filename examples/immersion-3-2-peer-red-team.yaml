@@ -25,18 +25,17 @@ slides:
     title: "Peer Red-Team Round"
     subtitle: "Immersion Week SF · Day 3 · Session 3.2"
     notes: >-
-      The session everyone remembers. Two teams swap prototypes and spend an hour
-      trying to break each other's work. Set the tone early: this is a service
-      they are performing for each other.
+      This is session 3.2, the Peer Red-Team Round — the session everyone
+      remembers. Two teams swap prototypes and spend an hour trying to break
+      each other's work.
 
   - component: big-number
     value: "55"
     label: "Minutes"
     context: "You leave holding your own log"
     notes: >-
-      Name the deliverable, and note whose it is. They leave with a written list
-      of their own failures, produced by people with no reason to be gentle. That
-      list is the input to 3.3.
+      Fifty-five minutes, and you leave holding a written list of your own
+      failures, produced by people with no reason to be gentle.
 
   - component: agenda
     title: "What This Session Covers"
@@ -46,15 +45,15 @@ slides:
       - "Generate inputs in bulk, free"
       - "Trade logs without defending"
     notes: >-
-      Three syllabus objectives across four moves. The last one is a skill rather
-      than a task, and it is the one people find hardest all week.
+      Four things this session. We swap builds with another team, break it by
+      hand and then by agent, generate inputs in bulk for free, and trade logs
+      without defending them.
 
   - component: question
     question: "Whose build will you break?"
     notes: >-
-      Pair the teams now, before any explanation. Pairing takes two minutes and
-      every minute after it is testing time. Cross-pair so nobody tests the team
-      testing them, if the numbers allow.
+      First: whose build will you break? We pair now, and every minute after
+      that is testing time.
 
   - component: this-vs-that
     title: "From 3.1 to Now"
@@ -65,9 +64,8 @@ slides:
       value: "A round"
       label: "Pointed at real software"
     notes: >-
-      The bridge. Last session designed the attack against their own system in the
-      abstract. This one runs it against someone else's, which is both easier and
-      considerably more revealing.
+      Last session designed the attack in the abstract. This one runs it against
+      real software, which is both easier and considerably more revealing.
 
   - component: process-steps
     title: "How We Get There"
@@ -81,8 +79,9 @@ slides:
       - label: "Trade"
         body: "Logs back, no arguing"
     notes: >-
-      The shape of the hour. The order matters — hands before agent. Ten minutes
-      of a curious human finds the things an agent will not think to try.
+      Four moves: swap URLs, caveats and edge cases; ten minutes of your own
+      hands; turn the agent loose; then trade logs back with no arguing. Hands
+      before agent — that order matters.
 
   - component: timeline
     title: "The Next 55 Minutes"
@@ -100,34 +99,31 @@ slides:
         title: "Trade logs"
         description: "Hand it over, then receive"
     notes: >-
-      The gate is 10:45. Whatever state the testing is in, logs change hands then
-      — an unshared finding helps nobody, and 3.3 needs the full ten minutes to
-      triage.
+      The hour runs in four blocks, and 10:45 is the one that matters — logs
+      change hands then, whatever state your testing is in. An unshared finding
+      helps nobody, and the next session needs its full ten minutes.
 
   - component: pull-quote
     quote: "A friend who breaks it is a gift."
     attribution: "The red-team rule"
     notes: >-
-      Say this before the swap and mean it. Everything found in the next hour is
-      found by someone with no stake in being kind and no ability to hurt them.
-      There is no cheaper place to be wrong.
+      A friend who breaks it is a gift. Everything found in the next hour is
+      found by someone with no stake in being kind and no ability to hurt you.
 
   # ── 01 · Break It by Hand ──────────────────────────────────────────────────
   - component: section-divider
     number: "01"
     title: "Break It by Hand"
     notes: >-
-      First objective, first half. Before any automation, one person clicking with
-      intent. This is the highest-yield ten minutes of the session and teams are
-      always surprised by that.
+      First objective, first half: before any automation, one person clicking
+      with intent.
 
   - component: definition
     term: "Red team"
     definition: "People trying to break it, on purpose, for you"
     notes: >-
-      The last two words carry the definition. A red team is not an opponent; it
-      is a service. Frame it this way now and the log exchange at the end goes
-      very differently.
+      A red team is people trying to break it, on purpose, for you. Those last
+      two words carry the definition — it is a service, not an opposition.
 
   - component: bullet-list
     title: "The Rules of the Round"
@@ -137,9 +133,9 @@ slides:
       - "No fixing, only finding"
       - "No defending when it is your turn"
     notes: >-
-      Four rules, read out before the swap. The third stops helpful teams from
-      quietly patching things instead of logging them, which destroys the record
-      3.3 depends on.
+      Four rules for the round. Attack the build, never the team. Everything you
+      find gets written down. No fixing, only finding. And no defending when it
+      is your turn.
 
   - component: numbered-steps
     title: "The Swap"
@@ -151,9 +147,9 @@ slides:
       - title: "Start the clock"
         body: "Ten minutes of hands before anything else"
     notes: >-
-      Step two is the discipline. The moment a builder explains their system, the
-      tester inherits their mental model and stops being a stranger — which was
-      the whole value they brought.
+      Three steps. Trade three things: the URL, the caveats, and the edge cases.
+      Say nothing else — no walkthrough, no context, no warnings. Then start the
+      clock with ten minutes of hands.
 
   - component: bullet-list
     title: "What You Hand Over"
@@ -163,9 +159,9 @@ slides:
       - "tests/edge-cases.md from 3.1"
       - "Nothing spoken out loud"
     notes: >-
-      Three files and a link. Handing over the caveats feels like giving away the
-      answers and is the opposite — it tells the tester which parts are already
-      known, so they spend their time elsewhere.
+      You hand over the public URL from yesterday, CAVEATS.md unedited, your
+      edge-case file from last session, and nothing spoken out loud. Handing
+      over the caveats feels like giving away answers and does the opposite.
 
   - component: numbered-steps
     title: "Your First Ten Minutes"
@@ -177,9 +173,9 @@ slides:
       - title: "Then go off-script"
         body: "Whatever occurred to you while doing that"
     notes: >-
-      Step one is not wasted time. You cannot tell what counts as broken until you
-      have seen it work, and the tester who skips this logs a lot of intended
-      behaviour.
+      Three steps for your first ten minutes. Use it normally once, the happy
+      path, as a real person would. Run their own list, every case in their
+      file. Then go off-script, with whatever occurred to you while doing that.
 
   - component: bullet-list
     title: "Why Hands Before Agents"
@@ -189,8 +185,8 @@ slides:
       - "You feel the slow parts"
       - "You find the confusing screen"
     notes: >-
-      Four things no probe will report. An agent tests correctness; a person tests
-      whether it makes sense. Both matter, and only one of them can be automated.
+      Four things no probe will report back to you: what looks wrong, what
+      nobody wrote down, what feels slow, and which screen is confusing.
 
   - component: comparison-matrix
     title: "What Each Method Finds"
@@ -202,9 +198,9 @@ slides:
       - ["Ten minutes", "Hundreds fast"]
     highlights: [[0, 0], [1, 1]]
     notes: >-
-      Neither method dominates, which is why the syllabus asks for both. Hands
-      find what does not make sense; agents find what nobody would think to type.
-      Highlight the two cells where each wins outright.
+      Neither method wins outright. Hands find the confusing interface and are
+      blind to almost nothing about sense; agents miss the interface entirely
+      but find rare inputs, and they do hundreds in the time you do ten.
 
   - component: bullet-list
     title: "How to Break What You Did Not Build"
@@ -214,9 +210,9 @@ slides:
       - "Click before it finishes"
       - "Try the same thing twice"
     notes: >-
-      Four openers that work on almost anything. The third and fourth exploit
-      state and timing, which are the two areas a two-day prototype has thought
-      about least.
+      Four openers that work on almost anything. Do the obvious wrong thing
+      first. Give it the opposite of the example. Click before it finishes. And
+      try the same thing twice.
 
   - component: icon-text-rows
     title: "Three Postures That Work"
@@ -231,9 +227,10 @@ slides:
         heading: "The bad actor"
         body: "Reads the page to work out what to abuse"
     notes: >-
-      Have each tester pick one and stay in character for a few minutes. Rotating
-      postures deliberately covers more ground than three people all attacking the
-      same way.
+      Three postures, and pick one to stay in. The confused user, who does the
+      wrong thing sincerely rather than cleverly. The impatient user, who clicks
+      twice, refreshes, and will not wait. And the bad actor, who reads the page
+      to work out what to abuse.
 
   - component: two-panel-list
     title: "Two Kinds of Finding"
@@ -251,9 +248,9 @@ slides:
         - "How to make it happen"
     accent_side: "right"
     notes: >-
-      The difference between a complaint and a bug report. Left-hand findings
-      cannot be acted on in 3.3, so a tester producing them has spent the hour
-      generously and unhelpfully.
+      Not useful: “it felt slow”, “the design is rough”, “it broke somehow”.
+      Useful: the exact input used, what came back instead, and how to make it
+      happen again.
 
   - component: code
     title: "Write it down as it happens"
@@ -264,9 +261,8 @@ slides:
       severity: high
       repro: open URL, click Run
     notes: >-
-      Log in the moment, not at the end. Five lines while the failure is on screen
-      beats a reconstruction ten minutes later, and reconstructions are where
-      reproduction steps go wrong.
+      Log it while the failure is on screen, not at the end. Five lines — what
+      you sent, what you got, the severity, and how to reproduce it.
 
   - component: bullet-list
     title: "Do Not Do These"
@@ -276,25 +272,24 @@ slides:
       - "Do not test their teammates"
       - "Do not stop at the first break"
     notes: >-
-      Four temptations. The last is the most common — teams find one dramatic
-      failure, feel finished, and hand back a log with a single entry. Keep going
-      until the clock says otherwise.
+      Four things not to do. Do not fix anything you find. Do not tell them mid-
+      round. Do not test their teammates. And do not stop at the first break —
+      that is the most common one.
 
   # ── 02 · Volume for Free ───────────────────────────────────────────────────
   - component: section-divider
     number: "02"
     title: "Volume for Free"
     notes: >-
-      Second objective. A human finds the interesting failures; volume finds the
-      ones nobody would think of. The syllabus point is that volume no longer
-      costs anything.
+      Second objective: a human finds the interesting failures, and volume finds
+      the ones nobody would think of. Volume no longer costs anything.
 
   - component: question
     question: "How many have you tried?"
     notes: >-
-      Ask at about the twenty-minute mark. Most teams will have run ten or fifteen
-      inputs by hand. The next twenty minutes should add a hundred, and that is a
-      difference in kind rather than degree.
+      About twenty minutes in: how many inputs have you actually tried? Most of
+      you will be at ten or fifteen. The next twenty minutes should add a
+      hundred.
 
   - component: bullet-list
     title: "Why Volume Finds More"
@@ -304,17 +299,17 @@ slides:
       - "Combinations you would not pair"
       - "It never gets bored or polite"
     notes: >-
-      Four reasons. The second is the honest one: a person testing for twenty
-      minutes converges on a handful of patterns, while generated inputs keep
-      wandering into places nobody chose.
+      Four reasons volume finds more. Rare inputs need many tries. You repeat
+      yourself, and models vary. It pairs combinations you would not. And it
+      never gets bored or polite.
 
   - component: definition
     term: "Nvidia's free API"
     definition: "Hosted models you can call in bulk at no cost"
     notes: >-
-      Introduce it as the enabling detail for this objective. The point is not the
-      specific provider; it is that generating a hundred adversarial inputs is now
-      a free operation rather than a budget decision.
+      Nvidia's free API is hosted models you can call in bulk at no cost. The
+      point is not the provider — it is that a hundred adversarial inputs is now
+      free rather than a budget decision.
 
   - component: numbered-steps
     title: "Standing It Up"
@@ -326,9 +321,9 @@ slides:
       - title: "Ask for inputs, not answers"
         body: "You want test material, not opinions"
     notes: >-
-      Five minutes end to end. Step three is where teams go wrong: they ask the
-      model to test the prototype, which produces commentary, rather than to
-      produce inputs, which produces ammunition.
+      Three steps, five minutes. Get a key, and keep it out of git. Call it like
+      any chat model, since the interface is the familiar one. And ask for
+      inputs rather than answers — you want ammunition, not commentary.
 
   - component: code
     title: "One call, a hundred inputs"
@@ -341,8 +336,8 @@ slides:
       # five times, one axis per batch.
     notes: >-
       An OpenAI-compatible interface, so existing code mostly works unchanged.
-      Note the key comes from the environment — a key pasted into a file that gets
-      committed is a real risk on a public repo.
+      Note the key comes from the environment, because a key pasted into a file
+      that gets committed is a real risk on a public repo.
 
   - component: code
     title: "The generation prompt that works"
@@ -354,9 +349,9 @@ slides:
       Vary the way each one is broken.
       Output only the inputs, one per line.
     notes: >-
-      Three moves in six lines: give it the target, name one axis, demand variety.
-      The last line matters — without it you get a numbered list with commentary
-      you then have to strip.
+      Three moves in six lines: give it the target, name one axis, and demand
+      variety. That last line — output only the inputs, one per line — saves you
+      stripping commentary afterwards.
 
   - component: bullet-list
     title: "Ask for One Axis at a Time"
@@ -366,9 +361,9 @@ slides:
       - "Twenty adversarial ones"
       - "Twenty out of scope"
     notes: >-
-      Batching by axis is what produces variety. Asking for a hundred mixed inputs
-      returns eighty of whichever axis the model finds most obvious, usually
-      adversarial.
+      Batch by axis: twenty empty-ish inputs, twenty malformed, twenty
+      adversarial, twenty out of scope. Asking for a hundred mixed returns
+      eighty of whichever axis it finds most obvious.
 
   - component: bullet-list
     title: "The Trap of Generated Inputs"
@@ -378,9 +373,9 @@ slides:
       - "Too polite to be adversarial"
       - "Plausible, but never weird"
     notes: >-
-      Four ways a batch looks big and tests one thing. Skim any twenty before
-      running them — if you can summarise the batch in one sentence, ask again
-      with a different framing.
+      Four ways a batch looks big and tests one thing. They rhyme with each
+      other. They are all broken the same way. They are too polite to be
+      adversarial. Or they are plausible but never weird.
 
   - component: table-slide
     title: "A Hundred Inputs, Spread"
@@ -392,9 +387,10 @@ slides:
       - ["Out of scope", "Real, but not your job"]
       - ["At scale", "Huge, repeated, parallel"]
     notes: >-
-      The five axes from 3.1, now as generation prompts. Twenty per row is a
-      hundred inputs for about five minutes of work and no money, which is the
-      whole point of the objective.
+      The five axes again, now as generation prompts. Empty: nothing, blank,
+      whitespace. Malformed: wrong type, truncated. Adversarial: hidden
+      instructions. Out of scope: real, but not your job. At scale: huge,
+      repeated, parallel.
 
   - component: numbered-steps
     title: "Turning the Probe Loose"
@@ -406,9 +402,10 @@ slides:
       - title: "Let it run, and watch it"
         body: "Stopping rule armed, someone looking"
     notes: >-
-      This is the second half of objective one. Step three is not optional — an
-      unattended probe against someone else's live URL is how a red-team round
-      turns into an incident.
+      Three steps. Point it at their URL — your brief from last session with one
+      line changed. Feed it the generated inputs as a starting list rather than
+      the only one. And let it run while somebody watches, with the stopping
+      rule armed.
 
   - component: bullet-list
     title: "Before You Point It at Them"
@@ -418,9 +415,9 @@ slides:
       - "Never test during their demo"
       - "Do not leave junk they must clear"
     notes: >-
-      Four courtesies, and they are not merely polite. Two teams sharing one live
-      URL can trivially deny each other the session, and a probe filling their
-      storage with test rows costs them 3.3.
+      Four courtesies, and they are not merely polite. Tell them the probe is
+      starting. Agree a rate you both accept. Never test during their demo. And
+      do not leave junk they have to clear.
 
   - component: icon-text-rows
     title: "Three Rules at Volume"
@@ -435,9 +432,10 @@ slides:
         heading: "Read a sample yourself"
         body: "A pass rate you never looked at is a guess"
     notes: >-
-      The second rule saves 3.3. A log of a hundred entries with four real causes
-      is harder to triage than a log of four, and the clustering work belongs to
-      the tester.
+      Three rules at volume. Do not flood them — space the requests, since you
+      share one URL. Cluster before logging, because forty crashes of one cause
+      is one finding. And read a sample yourself, because a pass rate you never
+      looked at is a guess.
 
   - component: bullet-list
     title: "Triaging the Flood"
@@ -447,34 +445,31 @@ slides:
       - "Drop what their caveats admit"
       - "Rank what is left by severity"
     notes: >-
-      Four steps turning raw output into a usable log. The third is a courtesy
-      with teeth — re-reporting a documented limitation wastes their triage time
-      and rewards nobody.
+      Four steps to turn raw output into a usable log. Group by what actually
+      broke. Keep the smallest example of each. Drop what their caveats already
+      admit. Then rank what is left by severity.
 
   - component: pull-quote
     quote: "Volume is free. Attention is not."
     attribution: "Objective two, with the catch"
     notes: >-
-      The counterweight to the whole section. Generating a thousand inputs costs
-      nothing and reading a thousand results costs the session, which is why
-      clustering matters more than raw count.
+      Volume is free, attention is not. Generating a thousand inputs costs
+      nothing; reading a thousand results costs the session.
 
   # ── 03 · The Log, and Receiving It ─────────────────────────────────────────
   - component: section-divider
     number: "03"
     title: "The Log"
     notes: >-
-      Third objective. Everything found in the last forty minutes has to become
-      something another team can act on in fifty minutes, without you sitting next
-      to them.
+      Third objective: everything you found has to become something another team
+      can act on in fifty minutes, without you sitting next to them.
 
   - component: definition
     term: "Reproduction steps"
     definition: "Enough for a stranger to see it themselves"
     notes: >-
-      Define the bar precisely. Not enough for you to see it again — enough for
-      someone who was not there. If the builder cannot reproduce it, they cannot
-      confirm they fixed it.
+      Reproduction steps means enough for a stranger to see it themselves — not
+      enough for you to find it again.
 
   - component: table-slide
     title: "Every Entry Has Five Fields"
@@ -486,9 +481,8 @@ slides:
       - ["Severity", "High"]
       - ["Repro", "Open URL, click Run"]
     notes: >-
-      Five fields, no more. Anything longer does not get written under time
-      pressure, and anything shorter is not actionable. This table is the format
-      for the whole round.
+      Five fields per entry, no more. What you sent. What came back. What should
+      have happened. The severity. And how to reproduce it.
 
   - component: code
     title: "FINDINGS.md, handed over as a file"
@@ -499,9 +493,8 @@ slides:
       expect: refuse, or say which year
       repro:  upload it, click Run
     notes: >-
-      One entry, five lines, in a file rather than a chat message. A file survives
-      the session, can be committed by the receiving team, and is what they will
-      triage against in 3.3.
+      One entry, five lines, in a file rather than a chat message. A file
+      survives the session and is what they triage against next hour.
 
   - component: bullet-list
     title: "Severity, in Four Levels"
@@ -511,9 +504,9 @@ slides:
       - "Medium: fails, but says so"
       - "Low: ugly, confusing, slow"
     notes: >-
-      Note that critical is not the most dramatic failure — it is the quietest.
-      Confidently wrong output outranks a crash, because a crash tells the user
-      something is wrong.
+      Four levels. Critical: wrong output that looks right. High: crashes or
+      hangs on real input. Medium: it fails, but says so. Low: ugly, confusing,
+      slow. Notice critical is the quietest failure, not the loudest.
 
   - component: bullet-list
     title: "Assigning It Honestly"
@@ -523,9 +516,8 @@ slides:
       - "Not how hard it looks to fix"
       - "Documented limits drop a level"
     notes: >-
-      Four calibrations. The third is the common error: testers soften severity
-      out of sympathy for the work involved, which pushes the wrong things above
-      3.3's cut line.
+      Four calibrations. Severity is about the user. Not how clever your input
+      was. Not how hard it looks to fix. And documented limits drop a level.
 
   - component: bullet-list
     title: "What Makes a Log Useless"
@@ -535,8 +527,9 @@ slides:
       - "Severity on everything the same"
       - "Opinions mixed in with failures"
     notes: >-
-      Four ways to hand over an hour of work that cannot be used. Read this before
-      the trade at 10:45 and give teams two minutes to clean up against it.
+      Four ways to hand over an hour of work that cannot be used: findings with
+      no input attached, forty entries with one real cause, the same severity on
+      everything, and opinions mixed in with failures.
 
   - component: numbered-steps
     title: "Handing It Back"
@@ -548,17 +541,16 @@ slides:
       - title: "Then stop talking"
         body: "Let them read it without you narrating"
     notes: >-
-      Three steps, and the third is the discipline. A tester talking through their
-      log turns it into a negotiation, and the builder starts explaining instead of
-      reading.
+      Three steps. Give them the file — written, not spoken, not a conversation.
+      Say one sentence: the single thing you would fix first. Then stop talking
+      and let them read it.
 
   - component: definition
     term: "Receiving it"
     definition: "Reading the whole log before saying anything"
     notes: >-
-      The skill the syllabus asks for, stated as a rule you can follow. Not
-      accepting every finding, not agreeing — reading all of it first. Agreement
-      can come later; the reading has to come first.
+      Receiving it means reading the whole log before you say anything. Not
+      accepting every finding, not agreeing — reading all of it first.
 
   - component: two-panel-list
     title: "Two Ways to Take It"
@@ -576,9 +568,9 @@ slides:
         - "Write it down and move on"
     accent_side: "right"
     notes: >-
-      The left column is what everyone does instinctively, including experienced
-      engineers. Naming it in advance is most of what stops it, which is why this
-      slide exists at all.
+      Defending sounds like “that is not a real input”, “you used it wrong”, “we
+      know, it is in the caveats”. Receiving is reading all of it first, asking
+      only how to reproduce, writing it down, and moving on.
 
   - component: bullet-list
     title: "The Only Question to Ask"
@@ -588,9 +580,9 @@ slides:
       - "Not whether it counts"
       - "Not what they misunderstood"
     notes: >-
-      One legitimate question during the handover. Everything else is a
-      disagreement, and disagreements about whether a finding counts belong in
-      3.3's triage, where there is a cut line to settle them.
+      There is exactly one legitimate question during the handover: how do I
+      reproduce that? Not why they tried it, not whether it counts, not what
+      they misunderstood.
 
   - component: bullet-list
     title: "Why This Is Worth the Discomfort"
@@ -600,9 +592,9 @@ slides:
       - "The next tester is a judge"
       - "This is the last free round"
     notes: >-
-      Four reasons, and the last carries it. Every failure surfaced in this room
-      costs them nothing but pride; the same failure found in a demo costs them
-      the demo.
+      Four reasons it is worth the discomfort. They had no reason to be kind.
+      They are not going to fix it. The next tester is a judge. And this is the
+      last free round.
 
   - component: numbered-steps
     title: "If You Are Behind"
@@ -614,9 +606,10 @@ slides:
       - title: "Never skip severity"
         body: "An unranked log cannot be triaged"
     notes: >-
-      Read at 10:40. The order of sacrifice is the generated volume first, the
-      hand findings last — and severity never, because 3.3 is entirely a
-      severity-against-cost exercise.
+      If you are behind: trade at 10:45 regardless, because a short log on time
+      beats a full one late. Drop the volume run — the hand findings are the
+      ones worth having. But never skip severity, because an unranked log cannot
+      be triaged.
 
   - component: bullet-list
     title: "Leaving This Session"
@@ -626,9 +619,8 @@ slides:
       - "You handed over a written log"
       - "You read yours without arguing"
     notes: >-
-      The exit checklist. All four are behavioural rather than technical, which is
-      what makes this session unusual. A team that ticks all four is ready to
-      triage.
+      You are leaving having broken someone else's build, run hands then volume,
+      handed over a written log, and read your own without arguing.
 
   - component: table-slide
     title: "Write This Down Now"
@@ -639,16 +631,15 @@ slides:
       - ["Critical findings", "…"]
       - ["Fix first after lunch", "…"]
     notes: >-
-      Four answers before the break. The second checks the prediction they wrote
-      at the end of 3.1 — being wrong about your own weakest point is the most
-      useful thing to learn today.
+      Four answers before the break: the worst thing they found, whether you
+      predicted it, how many criticals you have, and what you fix first after
+      lunch.
 
   - component: question
     question: "What did you not expect?"
     notes: >-
-      Close on this and take two or three answers out loud. The surprises are the
-      real product of the session, and hearing another team's surprise usually
-      sends someone straight to check their own build.
+      Last question: what did you not expect? The surprises are the real product
+      of this session.
 
   - component: bullet-list
     title: "Next: Hardening and Handoff"
@@ -658,6 +649,6 @@ slides:
       - "Fix, re-run the exact test, push"
       - "Schedule checks that outlive you"
     notes: >-
-      Set up 3.3, the last session of the week. Make the second line land: the cut
-      line means deciding what they will not fix, which is harder than fixing and
-      more useful.
+      Next session we triage by severity against cost, commit to a cut line out
+      loud, fix and re-run the exact test that caught each one, and schedule
+      checks that outlive you.

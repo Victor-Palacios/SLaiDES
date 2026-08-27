@@ -25,18 +25,16 @@ slides:
     title: "Making It Demoable"
     subtitle: "Immersion Week SF · Day 2 · Session 2.3"
     notes: >-
-      Last session of Day 2. They have a pipeline that runs; nobody outside the
-      team can use it. This hour closes that gap and hands Day 3 something to
-      attack.
+      This is session 2.3, Making It Demoable. You have a pipeline that runs;
+      right now nobody outside your team can use it.
 
   - component: big-number
     value: "50"
     label: "Minutes"
     context: "You leave with a public URL"
     notes: >-
-      The deliverable in one line: a link they can send to someone who is not in
-      this room. Everything else this hour — the script, the caveats — hangs off
-      that link existing.
+      Fifty minutes, and you leave with a link you can send to somebody who is
+      not in this room.
 
   - component: agenda
     title: "What This Session Covers"
@@ -46,16 +44,14 @@ slides:
       - "Write a three-minute script"
       - "Document what is faked"
     notes: >-
-      Three syllabus objectives across four moves. The fourth feels optional and
-      is not: an undocumented fake is the single easiest thing for tomorrow's red
-      team to find.
+      Four things this session. We wrap it so a stranger can drive it, ship it
+      to a public URL, write a three-minute script, and document what is faked.
 
   - component: question
     question: "Could a stranger drive it?"
     notes: >-
-      The question 2.2 ended on, now the one to answer. Make them picture a
-      specific stranger — a friend, a recruiter — opening a link with no
-      explanation from them at all.
+      Could a stranger drive it? Picture a specific one — a friend, a recruiter
+      — opening a link with no explanation from you at all.
 
   - component: this-vs-that
     title: "From 2.2 to Now"
@@ -66,9 +62,9 @@ slides:
       value: "A demo"
       label: "It runs when they do"
     notes: >-
-      The bridge. Yesterday's and this morning's work produced something that
-      works in your hands. A demo is the same thing working in somebody else's,
-      which is a different and smaller problem than it feels.
+      This morning's work runs in your hands. A demo is the same thing running
+      in somebody else's, which is a different and smaller problem than it
+      feels.
 
   - component: process-steps
     title: "How We Get There"
@@ -82,9 +78,9 @@ slides:
       - label: "Admit"
         body: "Write down what is fake"
     notes: >-
-      The shape of the hour. Note that three of the four are not code. The build
-      is already done; this session is about making the build legible to someone
-      who was not here.
+      Four moves: wrap it in a front end however plain, ship it to a URL off
+      your machine, script three minutes and rehearse them, and write down what
+      is fake.
 
   - component: timeline
     title: "The Next 50 Minutes"
@@ -102,34 +98,31 @@ slides:
         title: "Confess"
         description: "The caveat list, in the repo"
     notes: >-
-      Put the clock up. 11:20 is the hard gate — a team without a URL by then
-      should stop improving the front end and ship whatever exists, because the
-      remaining three deliverables all assume a link.
+      The hour runs in four blocks. Wrap it by 11:20, ship it, script it at
+      11:35, and write the caveats at 11:45. If you have no URL by 11:20, ship
+      whatever exists — the rest of the hour assumes a link.
 
   - component: pull-quote
     quote: "A demo nobody can open is a story."
     attribution: "The Day 2 close"
     notes: >-
-      The line for the whole session. Until there is a URL, everything they have
-      is something they can describe. Day 3 does not attack descriptions, and
-      neither do investors.
+      A demo nobody can open is a story. Until there is a URL, everything you
+      have is something you can describe.
 
   # ── 01 · A Front End a Stranger Can Drive ──────────────────────────────────
   - component: section-divider
     number: "01"
     title: "A Front End"
     notes: >-
-      First objective. The bar is low on purpose: not beautiful, not responsive,
-      not accessible — drivable. One input, one button, one output that appears
-      without help.
+      First objective, and the bar is deliberately low: not beautiful, not
+      responsive — drivable.
 
   - component: definition
     term: "Front end"
     definition: "The part that works without you in the room"
     notes: >-
-      Define it by its job rather than its technology. If a person needs you on a
-      call to get a result, you do not have a front end yet, however much HTML
-      exists.
+      A front end is the part that works without you in the room. If somebody
+      needs you on a call to get a result, you do not have one yet.
 
   - component: bullet-list
     title: "What a Stranger Needs"
@@ -139,9 +132,9 @@ slides:
       - "A result they can read"
       - "No instructions from you"
     notes: >-
-      Four needs, in the order they hit. Most prototypes fail the first — the page
-      opens and there is no sentence saying what the thing is for. That sentence
-      is the cheapest fix available today.
+      A stranger needs four things, in this order: to know what this thing does,
+      something obvious to click, a result they can read, and no instructions
+      from you.
 
   - component: two-panel-list
     title: "Two Honest Options"
@@ -159,9 +152,9 @@ slides:
         - "Yours after the week"
     accent_side: "left"
     notes: >-
-      Both are named in the syllabus and both are legitimate. Push the room toward
-      the left column unless a team has a specific reason — the time saved goes
-      into the script and the caveats, which are worth more.
+      Two honest options. A Claude Artifact takes minutes, comes with a
+      shareable link, and is good enough to be judged. A page you host gives
+      more control, takes more time, and is yours after the week.
 
   - component: comparison-matrix
     title: "Choosing Between Them"
@@ -173,17 +166,16 @@ slides:
       - ["Low", "Yours to manage"]
     highlights: [[0, 0], [2, 0]]
     notes: >-
-      The trade in three rows. Control is the only column the hosted page wins,
-      and control is worth very little in a demo that lasts three minutes and then
-      never runs again.
+      Artifact versus hosted page, in three rows. Minutes to live against an
+      hour or more. Limited control against total control. Low demo risk against
+      risk you manage yourself.
 
   - component: definition
     term: "Claude Artifact"
     definition: "A working page Claude builds and hosts for you"
     notes: >-
-      Say what it removes: no repo, no build step, no hosting decision. For a
-      team whose interesting work is in the pipeline rather than the interface,
-      that is the whole problem solved.
+      A Claude Artifact is a working page Claude builds and hosts for you — no
+      repo, no build step, no hosting decision.
 
   - component: numbered-steps
     title: "Wrapping It, Either Way"
@@ -195,9 +187,9 @@ slides:
       - title: "Drive it yourself, cold"
         body: "New tab, no context, no excuses"
     notes: >-
-      Step two prevents the classic failure of a beautiful layout that breaks the
-      moment real output arrives. Give it the actual JSON from this morning, not
-      a description of the shape.
+      Three steps either way. Describe the one screen: input, button, result,
+      nothing else. Paste in a real result so the layout fits actual output.
+      Then drive it yourself cold, in a new tab, with no context.
 
   - component: code
     title: "A wrapper worth asking for"
@@ -208,9 +200,9 @@ slides:
       <paste out/answer.md here>
       Plain and readable. No styling flourish.
     notes: >-
-      Five lines that produce something usable on the first try. The fourth line
-      is the one people leave out, and it is the reason their first attempt looks
-      wrong.
+      Here is the ask. One page, a box to paste into, a Run button, the result
+      below — and this exact output as the example. Plain and readable, no
+      styling flourish.
 
   - component: bullet-list
     title: "Put These on the Page"
@@ -220,9 +212,9 @@ slides:
       - "The result, readable as text"
       - "A line saying what is faked"
     notes: >-
-      Four elements, and the second is the highest-leverage. A pre-filled example
-      means a stranger gets a result on their first click instead of staring at an
-      empty box wondering what to type.
+      Four things on the page: one sentence saying what it does, an example
+      input already filled in, the result readable as text, and a line saying
+      what is faked.
 
   - component: bullet-list
     title: "Leave These Out"
@@ -232,9 +224,8 @@ slides:
       - "A second page of any kind"
       - "Anything you would style twice"
     notes: >-
-      Same ban list logic as 2.2. Each of these is real work that no one
-      evaluating a two-day prototype will credit you for, and each is an hour you
-      do not have.
+      Leave out accounts and sign-in, settings and options, a second page of any
+      kind, and anything you would end up styling twice.
 
   - component: icon-text-rows
     title: "Three Tests of Drivable"
@@ -249,9 +240,10 @@ slides:
         heading: "Survives a bad input"
         body: "Says something, rather than showing nothing"
     notes: >-
-      The third is the only error handling allowed today, and it is one line: when
-      something fails, say so on the page. A silent blank screen is what makes a
-      demo look broken rather than limited.
+      Three tests of drivable. One click to a result, from landing on the page
+      with nothing typed. Obvious what happened, so the output reads without you
+      explaining it. And it survives a bad input by saying something rather than
+      showing nothing.
 
   - component: bullet-list
     title: "Watch For These"
@@ -261,25 +253,23 @@ slides:
       - "A spinner that never finishes"
       - "Output only you can read"
     notes: >-
-      Four failure modes, all found by watching one person use it. Do not help
-      them. The urge to reach over and click is exactly the information you came
-      for.
+      Four things to watch for: an empty box with no hint, a result that needs
+      your voice to make sense, a spinner that never finishes, and output only
+      you can read.
 
   # ── 02 · Off Your Laptop ───────────────────────────────────────────────────
   - component: section-divider
     number: "02"
     title: "Off Your Laptop"
     notes: >-
-      Second objective. Short, mechanical, and non-negotiable. The syllabus is
-      explicit that the demo must not depend on your laptop staying open, and
-      there is a reason it is written that way.
+      Second objective: getting it off your laptop, which the syllabus is
+      explicit about.
 
   - component: question
     question: "What if the wifi drops?"
     notes: >-
-      Ask it plainly. Every failed demo anyone in the room has seen was a local
-      thing that stopped being reachable. A public URL removes the entire category
-      for the price of ten minutes.
+      What if the wifi drops? Every failed demo any of us has seen was a local
+      thing that stopped being reachable.
 
   - component: bullet-list
     title: "Why Localhost Is Not a Demo"
@@ -289,9 +279,9 @@ slides:
       - "You cannot send it to anyone"
       - "Tomorrow's team cannot test it"
     notes: >-
-      Four reasons, and the fourth is specific to this week. Day 3's red team
-      needs to reach the thing without you present; a localhost demo cannot be
-      attacked, which sounds good and is not.
+      Localhost is not a demo. It dies when your laptop sleeps, nobody can open
+      it later, you cannot send it to anyone, and tomorrow's red team cannot
+      test it.
 
   - component: comparison-columns
     title: "Two Ways to Ship It"
@@ -306,9 +296,9 @@ slides:
       - text: "Fast to set up"
       - text: "A second account to make"
     notes: >-
-      Both named in the syllabus. Pages if the front end is a static file and the
-      repo already exists; Cloudflare if something has to run server-side. Do not
-      let this choice take more than two minutes.
+      Two ways to ship. GitHub Pages is already where your code is, a commit is
+      a deploy, and it serves static pages only. Cloudflare handles more than
+      static and is fast to set up, but it is another account to make.
 
   - component: numbered-steps
     title: "Shipping with Pages"
@@ -320,9 +310,9 @@ slides:
       - title: "Wait, then open the URL"
         body: "First build takes a minute or two"
     notes: >-
-      Three steps, under five minutes. The waiting in step three catches people
-      out — they check immediately, see a 404, and assume it failed. Tell them to
-      wait.
+      Three steps with Pages. Put the page in the repo, as index dot html at the
+      root or in docs. Turn Pages on in settings and pick the branch. Then wait
+      — the first build takes a minute or two — and open the URL.
 
   - component: code
     title: "From repo to public URL"
@@ -333,9 +323,9 @@ slides:
       $ git push
       # Settings > Pages > branch: main, /docs
     notes: >-
-      Five lines. Note the last is a click, not a command — the one manual step
-      today that is genuinely unavoidable, and it only ever happens once per
-      repo.
+      Five lines from repo to public URL: copy the page into docs, add it,
+      commit, push, then turn Pages on in settings. That last one is a click
+      rather than a command, and it happens once per repo.
 
   - component: bullet-list
     title: "What Breaks When You Go Public"
@@ -345,9 +335,9 @@ slides:
       - "A file you never committed"
       - "Anything reading your disk"
     notes: >-
-      Four things that work on a laptop and not on the internet. Each is found in
-      seconds by opening the public URL in a private window, which is the very
-      next slide.
+      Four things that work on a laptop and not on the internet: paths that only
+      exist locally, a key that was in your shell, a file you never committed,
+      and anything reading your disk.
 
   - component: bullet-list
     title: "Check Before You Share It"
@@ -357,9 +347,9 @@ slides:
       - "Nothing private in the fixture"
       - "Nothing you cannot show"
     notes: >-
-      Thirty seconds that prevent a genuinely bad week. Remind them a public repo
-      is public forever, including its history — deleting a key in a later commit
-      does not remove it.
+      Thirty seconds before you share it. No API keys in the page, no keys
+      anywhere in the repo history, nothing private in the fixture, and nothing
+      you cannot show. A public repo is public forever, history included.
 
   - component: numbered-steps
     title: "Test It Like a Stranger"
@@ -371,9 +361,10 @@ slides:
       - title: "Then try it on a phone"
         body: "Half the people you send it to will"
     notes: >-
-      The single most valuable ten minutes of the session. Nearly every team finds
-      at least one break here, and every one of those breaks would otherwise have
-      surfaced in front of an audience.
+      Three steps, and this is the most valuable ten minutes of the session.
+      Open a private window — no logins, no cache, no extensions. Do nothing but
+      click, typing nothing you have not pre-filled. Then try it on a phone,
+      because half the people you send it to will.
 
   - component: numbered-steps
     title: "If You Are Behind"
@@ -385,9 +376,10 @@ slides:
       - title: "Never drop the caveats"
         body: "Five honest lines take two minutes"
     notes: >-
-      Read this at 11:20 regardless. The order of sacrifice matters: the front end
-      is the most expendable thing in this session, and the caveat list is the
-      least, which is the opposite of what teams assume.
+      If you are behind: ship what exists, because an ugly live page beats a
+      good local one. Drop the front end if you must — a page showing one saved
+      result still counts. But never drop the caveats; five honest lines take
+      two minutes.
 
   - component: table-slide
     title: "The Ship Checklist"
@@ -398,33 +390,32 @@ slides:
       - ["Laptop closed", "A teammate can open it"]
       - ["No secrets", "Nothing in page or repo"]
     notes: >-
-      Four checks, all binary. Run them as a team out loud. The third is the one
-      the syllabus actually asks for, and the easiest to verify — close the lid
-      and have someone else try.
+      Four checks, all binary. Private window: it loads and runs. Phone: you can
+      read the output. Laptop closed: a teammate can still open it. No secrets:
+      nothing in the page or the repo.
 
   - component: pull-quote
     quote: "Needs your laptop? Not shipped."
     attribution: "Objective two, restated"
     notes: >-
-      The line to repeat when a team says their local version is basically the
-      same thing. It is not the same thing, and the difference shows up at the
-      worst possible moment.
+      Needs your laptop? Not shipped. A local version is not basically the same
+      thing.
 
   # ── 03 · The Script and the Caveats ────────────────────────────────────────
   - component: section-divider
     number: "03"
     title: "Script and Caveats"
     notes: >-
-      Third objective, and the part that separates teams tomorrow. A working demo
-      badly narrated loses to a modest demo explained well, every time.
+      Third objective, and this is what separates teams tomorrow: the script and
+      the caveats.
 
   - component: definition
     term: "Demo script"
     definition: "The three minutes, written down word for word"
     notes: >-
-      Insist on written. Teams believe they will improvise fine and then spend
-      ninety seconds explaining their architecture to people who wanted to see it
-      work.
+      A demo script is the three minutes, written down word for word. Written,
+      because improvising turns into ninety seconds of architecture nobody asked
+      for.
 
   - component: table-slide
     title: "The Three Minutes"
@@ -435,9 +426,9 @@ slides:
       - ["2:00–2:30", "What is real, what is not"]
       - ["2:30–3:00", "What you would build next"]
     notes: >-
-      A structure that works. The largest block is the demo itself, and the word
-      to stress is silence — narrating every click is what eats the time and
-      undercuts the thing running.
+      Here is a structure that works. Thirty seconds on the problem, concretely.
+      Ninety seconds driving it live, in silence. Thirty seconds on what is real
+      and what is not. Thirty seconds on what you would build next.
 
   - component: bullet-list
     title: "The First Thirty Seconds"
@@ -447,9 +438,8 @@ slides:
       - "One sentence, no background"
       - "Then stop and show it"
     notes: >-
-      The opening they will be tempted to make longest. It is the shortest.
-      Everything they learned in 1.1 about a precise problem statement pays out
-      right here, in three sentences.
+      The first thirty seconds: name who has the problem, say what it costs them
+      today, one sentence with no background — then stop and show it.
 
   - component: bullet-list
     title: "Do Not Say These"
@@ -459,9 +449,9 @@ slides:
       - "We ran out of time to"
       - "It is basically just a wrapper"
     notes: >-
-      Four phrases that lose the room. The second and third are apologies nobody
-      asked for; the fourth is a team talking themselves down in public. State
-      limits as facts instead — that is what the caveat list is for.
+      Four phrases that lose the room. “Let me explain the architecture.”
+      “Normally this works.” “We ran out of time to.” And “it is basically just
+      a wrapper.”
 
   - component: numbered-steps
     title: "Rehearse It Properly"
@@ -473,17 +463,16 @@ slides:
       - title: "Cut until it fits"
         body: "Three minutes means three minutes"
     notes: >-
-      Twenty minutes of rehearsal beats another twenty of building at this stage.
-      Step two is the one that finds the parts only muscle memory was holding
-      together.
+      Three steps. Time it out loud, because silently in your head is always
+      shorter. Have someone else drive, since the builder's hands hide the rough
+      edges. Then cut until it fits — three minutes means three minutes.
 
   - component: definition
     term: "Caveat list"
     definition: "Everything stubbed, faked, or known to break"
     notes: >-
-      Introduce it as an asset, not a confession. A written caveat list is the
-      difference between a team that knows its own system and one that is about to
-      be surprised by it in public.
+      A caveat list is everything stubbed, faked, or known to break. It is an
+      asset rather than a confession.
 
   - component: bullet-list
     title: "What Goes on the List"
@@ -493,9 +482,8 @@ slides:
       - "Inputs you know it fails on"
       - "Anything only tested once"
     notes: >-
-      Four categories. The last catches the things nobody thinks to write down —
-      the path that worked the one time it was run, which is not the same as
-      working.
+      Four categories go on it: every step you stubbed, every hardcoded value,
+      inputs you know it fails on, and anything only tested once.
 
   - component: table-slide
     title: "How to Write It Down"
@@ -506,9 +494,8 @@ slides:
       - ["Retrieval", "Faked, four docs"]
       - ["Long inputs", "Known to break"]
     notes: >-
-      A format, not content. Two columns is enough. Anyone reading this table
-      knows exactly where the system is soft, which is precisely what you want
-      before tomorrow rather than during it.
+      Two columns is enough. Login: stubbed, one user. PDF parsing: one file
+      only. Retrieval: faked, four docs. Long inputs: known to break.
 
   - component: code
     title: "CAVEATS.md, in the repo root"
@@ -519,9 +506,9 @@ slides:
       - Retrieval: 4 docs, pasted not fetched
       - Fails on: inputs over ~20 pages
     notes: >-
-      Five lines, committed next to the code. In the repo rather than in a
-      document, because that is where tomorrow's red team will look and where it
-      cannot be quietly forgotten.
+      Five lines, committed next to the code as CAVEATS dot md — in the repo
+      rather than a document, because that is where tomorrow's red team will
+      look.
 
   - component: file-tree
     title: "The repo at the end of Day 2"
@@ -542,9 +529,8 @@ slides:
       - name: "README.md"
         depth: 0
     notes: >-
-      Two days of work, seven entries. Point at CAVEATS.md sitting beside the
-      code as an equal — that placement is the argument, and it is the file
-      tomorrow's red team opens first.
+      Two days of work, seven entries. Notice CAVEATS.md sitting beside the code
+      as an equal.
 
   - component: two-panel-list
     title: "Hiding and Naming"
@@ -562,9 +548,9 @@ slides:
         - "The question moves on"
     accent_side: "right"
     notes: >-
-      The core argument for honesty, and it is tactical rather than moral. A named
-      limit is a scoping decision; the same limit discovered by someone else is a
-      failure. Same fact, opposite outcome.
+      Hiding a limit means they find it anyway, it looks like a mistake, and you
+      lose the room. Naming it means you look in control, it reads as a
+      decision, and the question moves on. Same fact, opposite outcome.
 
   - component: icon-text-rows
     title: "What Day 3 Will Attack"
@@ -579,9 +565,10 @@ slides:
         heading: "The dead link"
         body: "A URL that only worked on your machine"
     notes: >-
-      Preview tomorrow so tonight's work is aimed. All three are cheap to defend
-      against today and expensive to explain away tomorrow, which is the whole
-      argument for this session.
+      Three things Day 3 will attack. The undocumented fake — anything real-
+      looking that is not on your list. The single input, because the second
+      thing they try will not be yours. And the dead link, a URL that only ever
+      worked on your machine.
 
   - component: bullet-list
     title: "Leaving This Session"
@@ -591,8 +578,9 @@ slides:
       - "A three-minute script, rehearsed"
       - "CAVEATS.md, committed"
     notes: >-
-      The exit checklist and the end of Day 2. Four lines, all binary. A team that
-      ticks all four has genuinely finished the build phase of the week.
+      You are leaving with a URL a stranger can open, that works with your
+      laptop shut, a three-minute script you have rehearsed, and CAVEATS dot md
+      committed.
 
   - component: table-slide
     title: "Write This Down Now"
@@ -603,9 +591,8 @@ slides:
       - ["Biggest caveat", "…"]
       - ["Most likely to break", "…"]
     notes: >-
-      Four answers into the repo before Day 2 ends. The last is the one to sleep
-      on — teams usually know it, and writing it down is how it gets fixed rather
-      than discovered.
+      Four answers into the repo before Day 2 ends: the public URL, who drives
+      the demo, your biggest caveat, and what is most likely to break.
 
   - component: bullet-list
     title: "Tonight, If You Have Energy"
@@ -615,16 +602,15 @@ slides:
       - "Fix only what stopped them"
       - "Add what broke to the caveats"
     notes: >-
-      Optional, and worth more than any code they could write. One real person
-      failing to use the thing tells them more than the whole team looking at it
-      again, and every fix it produces is aimed at something real.
+      Optional tonight, and worth more than any code: send the link to one
+      stranger, watch where they get stuck, fix only what stopped them, and add
+      what broke to the caveats.
 
   - component: question
     question: "What would you attack?"
     notes: >-
-      Close by turning them around. Asking a team where their own system is
-      weakest is the most efficient preparation for tomorrow, and the answer is
-      always immediate.
+      Last question of the day: what would you attack? You already know where
+      your own system is weakest.
 
   - component: bullet-list
     title: "Next: The Battle Test"
@@ -634,5 +620,6 @@ slides:
       - "Agents probe it, not just people"
       - "Bring the caveat list with you"
     notes: >-
-      Set up Day 3 and end the day here. The mindset flips overnight from building
-      to breaking, and the caveat list they just wrote is what they arrive with.
+      Tomorrow the mindset flips. You design an attack rather than a feature,
+      another team red-teams yours, agents probe it rather than just people —
+      and you bring the caveat list with you.
