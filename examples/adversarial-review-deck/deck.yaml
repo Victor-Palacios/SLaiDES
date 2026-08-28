@@ -1,0 +1,561 @@
+version: 1
+theme:
+  palette:
+    surface: "#FFFFFF"
+    text: "#111827"
+    primary: "#1F3A5F"
+    accent: "#B31B1B"
+    muted: "#6B7280"
+  type_scale:
+    title: 60
+    header: 42
+    body: 34
+    caption: 25
+  font: arial
+  motif: minimal
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  # ---------------------------------------------------------------- opening
+  - component: title-slide
+    title: "Adversarial Review"
+    subtitle: "Structured disagreement for grounded code review"
+    source: "https://arxiv.org/abs/2608.18167"
+
+  - component: agenda
+    title: "Agenda"
+    items:
+      - "The design question"
+      - "Building AR step by step"
+      - "Where AR breaks"
+      - "The one-prompt fix"
+      - "Real repositories and cost"
+
+  - component: question
+    question: "How many agents?"
+
+  - component: definition
+    term: "Adversarial Review"
+    definition: "A reviewer writes. A critic audits the review."
+
+  - component: kpi-grid
+    title: "Three benchmarks, three wins"
+    kpis:
+      - value: "87%"
+        label: "LiveCodeBench"
+      - value: "0.533"
+        label: "SWE-PRBench"
+      - value: "75.2%"
+        label: "SWE-bench"
+      - value: "3"
+        label: "Agents"
+
+  - component: bullet-list
+    title: "Three contributions"
+    items:
+      - "A minimal reviewer-critic loop works"
+      - "Agents optimise for agreement"
+      - "Structured disagreement fixes it"
+
+  # ------------------------------------------------------- 01 the question
+  - component: section-divider
+    number: "01"
+    title: "The design question"
+
+  - component: two-panel-list
+    title: "Two paradigms"
+    left:
+      title: "Role-separated teams"
+      items:
+        - "Many agents, split by role"
+        - "Diminishing returns"
+        - "Coordination overhead"
+    right:
+      title: "Subagents as tools"
+      items:
+        - "Invoked like a tool call"
+        - "No agent interaction"
+        - "The production default"
+
+  - component: question
+    question: "Is there a middle?"
+
+  - component: icon-text-rows
+    title: "Prior work, in three families"
+    rows:
+      - icon: loop
+        heading: "Self-refinement"
+        body: "One model critiques itself"
+      - icon: team
+        heading: "Role-separated teams"
+        body: "MapCoder, AgentCoder, CodeCoR"
+      - icon: users
+        heading: "Debate and aggregation"
+        body: "MAD, then MARS"
+
+  - component: comparison-columns
+    title: "Debate versus aggregation"
+    left_title: "MAD"
+    left_items:
+      - text: "Everyone reads everyone"
+      - text: "Cost grows with agents"
+      - text: "Pass-rate can drop"
+    right_title: "MARS"
+    right_items:
+      - text: "Reviewers run in parallel"
+      - text: "A meta-reviewer decides"
+      - text: "No interaction at all"
+
+  - component: comparison-matrix
+    title: "Three benchmarks, three claims"
+    options: ["LCB", "PRBench", "Verified"]
+    criteria: ["Task", "Metric", "Size"]
+    cells:
+      - ["Generate", "Review", "Repair"]
+      - ["Pass %", "F1", "pass@1"]
+      - ["105", "100", "500"]
+    highlights:
+      - [0, 1]
+
+  # -------------------------------------------------------- 02 construction
+  - component: section-divider
+    number: "02"
+    title: "Building AR"
+
+  - component: bullet-list
+    title: "The LiveCodeBench setup"
+    items:
+      - "105 stdin-style tasks"
+      - "57 tagged hard"
+      - "Claude Sonnet 4.5, medium"
+      - "One design choice per step"
+
+  - component: nested-circles
+    title: "Where the methods separate"
+    stages:
+      - value: "105"
+        label: "Tasks"
+      - value: "57"
+        label: "Hard"
+      - value: "43"
+        label: "Solved"
+
+  - component: process-steps
+    title: "The construction ladder"
+    steps:
+      - label: "Zero-shot"
+        body: "No check"
+      - label: "Refine"
+        body: "Self check"
+      - label: "Reviewer"
+        body: "One outside"
+      - label: "Two more"
+        body: "In parallel"
+
+  - component: big-number
+    value: "77%"
+    label: "The starting pass-rate"
+    context: "Four methods land on this number."
+
+  - component: bullet-list
+    title: "Why self-critique fails"
+    items:
+      - "Critic and generator are one model"
+      - "It repeats its own mistakes"
+      - "So it misses what it missed"
+
+  - component: bullet-list
+    title: "Why one reviewer is not enough"
+    items:
+      - "High variance across runs"
+      - "It can approve without checking"
+      - "Or flag nits and miss the bug"
+
+  - component: chart-with-insight
+    title: "The cluster, and the break"
+    chart:
+      type: chart
+      chart_type: bar
+      labels: ["ZS", "1R", "2R", "MARS", "AR"]
+      series:
+        - name: "Pass rate"
+          values: [77, 77, 75, 82, 87]
+    insight: "AR leads."
+
+  - component: card-grid
+    title: "MARS spends five agents"
+    cards:
+      - title: "Author"
+        body: "Writes the draft"
+        icon: code
+      - title: "Reviewers"
+        body: "Three in parallel"
+        icon: users
+      - title: "Meta"
+        body: "One final verdict"
+        icon: target
+      - title: "Cap"
+        body: "Two rounds only"
+        icon: loop
+
+  - component: metric-comparison
+    title: "MARS breaks the cluster"
+    metrics:
+      - value: "82%"
+        label: "Pass-rate"
+        delta: "+5 pts"
+      - value: "39/57"
+        label: "Hard tasks"
+        delta: "+3"
+      - value: "5"
+        label: "Agents"
+        delta: "+4"
+
+  - component: bullet-list
+    title: "But MARS pays for it"
+    items:
+      - "Five agents for a small gain"
+      - "All interaction is removed"
+      - "Parallel reviews never meet"
+
+  - component: question
+    question: "Can two agents talk?"
+
+  # ---------------------------------------------------------- 03 the loop
+  - component: section-divider
+    number: "03"
+    title: "Inside the loop"
+
+  - component: definition
+    term: "The inner loop"
+    definition: "Review text moves. The artifact never does."
+
+  - component: numbered-steps
+    title: "The inner loop"
+    steps:
+      - title: "Reviewer"
+        body: "R inspects the frozen artifact"
+      - title: "Critic"
+        body: "A fresh C audits that review"
+      - title: "Repeat"
+        body: "Until R and C are consistent"
+
+  - component: numbered-steps
+    title: "The outer loop"
+    steps:
+      - title: "Converge"
+        body: "One consistent review emerges"
+      - title: "Decide"
+        body: "Accept it, or hand it to M"
+      - title: "Edit"
+        body: "M writes artifact version N+1"
+
+  - component: bullet-list
+    title: "First-pass termination"
+    items:
+      - "Reviewer approved at once"
+      - "Critic agreed at once"
+      - "No back-and-forth needed"
+      - "Otherwise, edit and repeat"
+
+  - component: pull-quote
+    quote: "Self-review is not review."
+    attribution: "AR SKILL.md"
+
+  - component: stat-callout
+    title: "Three roles, one interaction"
+    stats:
+      - value: "M"
+        label: "Writes, edits"
+      - value: "R"
+        label: "Reviews code"
+      - value: "C"
+        label: "Audits R"
+
+  - component: table-slide
+    title: "LiveCodeBench results"
+    headers: ["Method", "Pass", "Agents"]
+    rows:
+      - ["Two-reviewers", "75%", "3"]
+      - ["Zero-shot", "77%", "1"]
+      - ["MARS", "82%", "5"]
+      - ["AR", "87%", "3"]
+    source: "https://arxiv.org/abs/2608.18167"
+
+  - component: big-number
+    value: "87%"
+    label: "AR on LiveCodeBench"
+    context: "Five points over MARS."
+
+  - component: this-vs-that
+    title: "Reviewing roles"
+    left:
+      value: "4"
+      label: "MARS"
+    right:
+      value: "2"
+      label: "AR"
+
+  # ------------------------------------------------------ 04 review quality
+  - component: section-divider
+    number: "04"
+    title: "Review quality"
+
+  - component: bullet-list
+    title: "The SWE-PRBench setup"
+    items:
+      - "100 real pull-request diffs"
+      - "A GPT-5.2 judge scores them"
+      - "Kappa 0.75 against humans"
+      - "F1 over matched comments"
+
+  - component: table-slide
+    title: "SWE-PRBench F1"
+    headers: ["Method", "F1", "N"]
+    rows:
+      - ["AR", "0.457", "100"]
+      - ["Single-reviewer", "0.495", "100"]
+      - ["MARS", "0.501", "100"]
+      - ["Two-reviewers", "0.503", "100"]
+    source: "https://arxiv.org/abs/2608.18167"
+
+  - component: big-number
+    value: "0.457"
+    label: "AR, naively applied"
+    context: "Last of the four review methods."
+
+  - component: question
+    question: "Why did AR lose?"
+
+  - component: two-panel-list
+    title: "Two failure modes"
+    left:
+      title: "Over-decomposition"
+      items:
+        - "The reviewer hedges"
+        - "The critic confirms them"
+        - "Thin comments pile up"
+    right:
+      title: "The critic yields"
+      items:
+        - "C finds a real bug"
+        - "R rebuts, cites no code"
+        - "C gives in anyway"
+
+  - component: funnel
+    title: "Case A: what survives"
+    stages:
+      - label: "Flags raised"
+        value: "5"
+      - label: "Judged real"
+        value: "2"
+      - label: "Actual bugs"
+        value: "1"
+
+  - component: metric-comparison
+    title: "Case B: the dropped bug"
+    metrics:
+      - value: "0.286"
+        label: "AR on this task"
+      - value: "0.667"
+        label: "MARS on this task"
+
+  - component: definition
+    term: "False consensus"
+    definition: "Agreement without the evidence to earn it."
+
+  - component: bullet-list
+    title: "A reliability bug, not a score"
+    items:
+      - "It looks like independent checks"
+      - "It comes from the interaction"
+      - "Not from weak agents"
+
+  - component: pull-quote
+    quote: "Agreement is not validation."
+    attribution: "Section 7"
+
+  # ------------------------------------------------------------- 05 the fix
+  - component: section-divider
+    number: "05"
+    title: "The one-prompt fix"
+
+  - component: numbered-steps
+    title: "Three verdicts, not two"
+    steps:
+      - title: "AGREE"
+        body: "Every flag is real"
+      - title: "EVIDENCE"
+        body: "Cite code that contradicts"
+      - title: "CONCERN"
+        body: "Doubt with no code to cite"
+
+  - component: code
+    title: "The critic's output format"
+    chrome: true
+    code: |
+      ## Output format
+
+      AGREE
+      DISAGREE_EVIDENCE: <cite file:line>
+      DISAGREE_CONCERN: <plausible, unproven>
+
+  - component: roadmap
+    title: "What the reviewer owes back"
+    phases:
+      - title: "AGREE"
+        items:
+          - "Keep every flag"
+      - title: "EVIDENCE"
+        items:
+          - "Revise the flag"
+      - title: "CONCERN"
+        items:
+          - "Cite code or drop"
+
+  - component: metric-comparison
+    title: "The text constraint pays"
+    metrics:
+      - value: "0.533"
+        label: "AR constrained"
+        delta: "+0.076"
+      - value: "0.503"
+        label: "Best baseline"
+        delta: "+0.030"
+
+  - component: bullet-list
+    title: "What did not change"
+    items:
+      - "Still one reviewer, one critic"
+      - "Same wiring, same agent count"
+      - "Only the prompt text changed"
+
+  # ------------------------------------------------------ 06 real repos
+  - component: section-divider
+    number: "06"
+    title: "Real repositories"
+
+  - component: bullet-list
+    title: "The SWE-bench setup"
+    items:
+      - "500 real GitHub issues"
+      - "Claude Code, full tool access"
+      - "AR written as a SKILL.md"
+      - "pass@1 via the Docker harness"
+
+  - component: table-slide
+    title: "SWE-bench Verified"
+    headers: ["Method", "Pass@1", "N"]
+    rows:
+      - ["Zero-shot", "71.6%", "500"]
+      - ["MARS", "72.6%", "500"]
+      - ["AR", "75.2%", "500"]
+    source: "https://arxiv.org/abs/2608.18167"
+
+  - component: big-number
+    value: "75.2%"
+    label: "AR on real issues"
+    context: "No orchestrator, just the text protocol."
+
+  - component: timeline
+    title: "Case 1: one frame deeper"
+    events:
+      - date: "Round 1"
+        title: "R blames caller"
+        description: "Symptom"
+      - date: "Round 1"
+        title: "C pushes back"
+        description: "Root cause"
+      - date: "Edit"
+        title: "M fixes callee"
+        description: "20 lines"
+
+  - component: comparison-columns
+    title: "Case 1: symptom or cause"
+    left_title: "Zero-shot and MARS"
+    left_items:
+      - text: "Patch the calling code"
+      - text: "45 and 50 line patches"
+      - text: "Both fail hidden tests"
+    right_title: "AR"
+    right_items:
+      - text: "Patch the callee instead"
+      - text: "About 20 lines"
+      - text: "The only one that passes"
+
+  - component: bullet-list
+    title: "Case 2: scope creep"
+    items:
+      - "astropy, add one argument"
+      - "Zero-shot ships 24 lines"
+      - "AR ships 32 and over-edits"
+      - "Nobody called it out of scope"
+
+  - component: this-vs-that
+    title: "When AR hurts"
+    left:
+      value: "24"
+      label: "Zero-shot lines"
+    right:
+      value: "32"
+      label: "AR lines"
+
+  # --------------------------------------------------------- 07 cost, limits
+  - component: section-divider
+    number: "07"
+    title: "Cost and limits"
+
+  - component: big-number
+    value: "4.5x"
+    label: "AR's token multiple"
+    context: "Measured against the zero-shot scaffold."
+
+  - component: definition
+    term: "Pareto frontier"
+    definition: "Nothing tested is cheaper and better."
+
+  - component: bullet-list
+    title: "When to spend the tokens"
+    items:
+      - "Complex repositories"
+      - "Root cause beats token cost"
+      - "Skip it on easy tasks"
+
+  - component: swot
+    title: "AR in one frame"
+    strengths:
+      - "Top score on all three"
+    weaknesses:
+      - "About 4.5x the tokens"
+    opportunities:
+      - "Scope-aware critics next"
+    threats:
+      - "Judges reward surface"
+
+  - component: bullet-list
+    title: "What the paper does not claim"
+    items:
+      - "No formal guarantee"
+      - "Three probes, not full coverage"
+      - "Each benchmark sees one angle"
+
+  - component: bullet-list
+    title: "Future work"
+    items:
+      - "A scope-checking critic"
+      - "A gate that skips easy tasks"
+      - "Training on disagreement traces"
+
+  - component: bullet-list
+    title: "The takeaway"
+    items:
+      - "Do not scale the agent count"
+      - "Make disagreement explicit"
+      - "Ground every flag in code"
+
+  - component: pull-quote
+    quote: "Minimal, structured, grounded."
+    attribution: "Qiu and Gill, 2026"
