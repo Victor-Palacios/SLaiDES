@@ -351,6 +351,125 @@ slides:
       anywhere in the repo history, nothing private in the fixture, and nothing
       you cannot show. A public repo is public forever, history included.
 
+  - component: question
+    question: "Where does the data go?"
+    notes: >-
+      A page on Pages or Cloudflare is a file being served. The moment your demo
+      needs to remember anything a visitor did, that file has nowhere to put it.
+
+  - component: this-vs-that
+    title: "One Way or Two"
+    left:
+      value: "Static"
+      label: "A page that just shows"
+    right:
+      value: "Stateful"
+      label: "A page that remembers"
+    notes: >-
+      A read-only page shows a stranger what you made. A page that can also write
+      lets them leave something behind, and that is a different kind of demo.
+
+  - component: definition
+    term: "Supabase"
+    definition: "Hosted Postgres, with auth and storage"
+    notes: >-
+      Supabase is a hosted Postgres database that also gives you sign-in and file
+      storage, reachable straight from a web page.
+
+  - component: card-grid
+    title: "What You Get"
+    cards:
+      - title: "Database"
+        body: "Rows your page can write"
+      - title: "Auth"
+        body: "Sign-in you did not build"
+      - title: "Storage"
+        body: "Files people upload"
+      - title: "API"
+        body: "All of it, over HTTPS"
+    notes: >-
+      Four things: a database your page can write rows to, sign-in you did not
+      have to build, storage for files people upload, and an HTTPS API that
+      reaches all of it.
+
+  - component: numbered-steps
+    title: "Standing It Up"
+    steps:
+      - title: "Create the project"
+        body: "One click, on the free tier"
+      - title: "Make one table"
+        body: "The columns your demo needs"
+      - title: "Copy the two keys"
+        body: "The project URL and the public key"
+    notes: >-
+      Three steps, about ten minutes. Create the project on the free tier, make
+      one table with the columns your demo needs, and copy the project URL and
+      the public key.
+
+  - component: code
+    title: "Writing a row from a static page"
+    code: |
+      const db = createClient(URL, PUBLIC_KEY)
+
+      await db.from("runs").insert({
+        input: text,
+        result: answer,
+      })
+    notes: >-
+      This is the whole integration. Create the client with your URL and public
+      key, then insert a row. No server of your own, from a page that is still
+      just a static file.
+
+  - component: bullet-list
+    title: "What a Demo Actually Stores"
+    items:
+      - "What a visitor typed in"
+      - "The result you gave back"
+      - "A file somebody uploaded"
+      - "A count of how often it ran"
+    notes: >-
+      Four things worth storing in a prototype: what a visitor typed, the result
+      you gave back, any file they uploaded, and a count of how often the thing
+      was run.
+
+  - component: bullet-list
+    title: "The Two Keys Are Not the Same"
+    items:
+      - "The public key belongs in the page"
+      - "The secret key never does"
+      - "Turn row level security on first"
+      - "Then check it as a stranger"
+    notes: >-
+      This is the one exception to the rule two slides ago. Supabase gives you a
+      public key that is designed to sit in the page, and a secret key that must
+      never leave your machine — and the public one is only safe once row level
+      security is switched on.
+
+  - component: table-slide
+    title: "Which Half Does What"
+    headers: ["Job", "Which half"]
+    rows:
+      - ["Serves the page", "Pages or Cloudflare"]
+      - ["Remembers input", "Supabase"]
+      - ["Handles sign-in", "Supabase"]
+      - ["Costs you nothing", "Both"]
+    notes: >-
+      The two halves split cleanly. Pages or Cloudflare serves the page;
+      Supabase remembers what happened and handles sign-in. Both are free at the
+      size a prototype runs at.
+
+  - component: bullet-list
+    title: "When Not to Bother"
+    items:
+      - "Your demo only ever reads"
+      - "Nothing needs to outlive the tab"
+      - "One saved result would do"
+      - "Then stub it, like anything else"
+    notes: >-
+      Skip all of this if your demo only reads, if nothing needs to outlive the
+      browser tab, or if one saved result would do. A backend is a step like any
+      other, and stubbing it is a legitimate answer.
+
   - component: numbered-steps
     title: "Test It Like a Stranger"
     steps:
