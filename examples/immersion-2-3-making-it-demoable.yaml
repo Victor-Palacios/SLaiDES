@@ -485,6 +485,86 @@ slides:
       browser tab, or if one saved result would do. A backend is a step like any
       other, and stubbing it is a legitimate answer.
 
+  - component: question
+    question: "Who else can write to it?"
+    notes: >-
+      The key that lets your page write to the database is in the page, which
+      means it is in everybody's browser. So the honest question is who else can
+      use it.
+
+  - component: definition
+    term: "Row level security"
+    definition: "A rule for who may read or write each row"
+    notes: >-
+      Row level security is a rule attached to a table saying who is allowed to
+      read or write each row. It is the thing standing between your publishable
+      key and your data.
+
+  - component: bullet-list
+    title: "A New Table Is Wide Open"
+    items:
+      - "Row level security starts switched off"
+      - "The publishable key sits in your page"
+      - "So anyone can read every row"
+      - "And anyone can write new ones"
+    notes: >-
+      A table you have just made has row level security switched off, and the key
+      that reaches it is in your page. Until you change that, anyone who opens
+      your demo can read every row and write as many as they like.
+
+  - component: bullet-list
+    title: "What Someone Could Do"
+    items:
+      - "Read everything you have stored"
+      - "Insert a thousand junk rows"
+      - "Fill the storage bucket up"
+      - "Leave text the next visitor sees"
+    notes: >-
+      With an open table someone can read everything you have stored, insert a
+      thousand junk rows, fill your storage, or leave text that the next visitor
+      to your demo will be shown.
+
+  - component: numbered-steps
+    title: "Lock It Down"
+    steps:
+      - title: "Turn the rule on"
+        body: "Before the URL is public, not after"
+      - title: "Write one policy"
+        body: "Say exactly what a visitor may do"
+      - title: "Try it as a stranger"
+        body: "Private window, and your own key"
+    notes: >-
+      Three steps. Turn row level security on before the URL is public rather
+      than after. Write one policy saying exactly what a visitor may do. Then try
+      it as a stranger, in a private window, using the key from your own page.
+
+  - component: code
+    title: "The smallest policy that works"
+    code: |
+      alter table runs
+        enable row level security;
+
+      create policy "visitors may submit"
+        on runs for insert
+        to anon with check (true);
+      -- no read policy: nobody gets it back
+    notes: >-
+      This turns the rule on and allows one thing: visitors may submit a row.
+      There is no read policy at all, so nothing can be read back out — which is
+      usually exactly what a demo needs.
+
+  - component: bullet-list
+    title: "Then Write It Down"
+    items:
+      - "What the page is allowed to write"
+      - "What it must never read back"
+      - "Any personal data you now store"
+      - "All of it into CAVEATS.md"
+    notes: >-
+      Then write it down: what the page may write, what it must never read back,
+      and any personal data you are now storing. That goes into CAVEATS.md with
+      everything else, because tomorrow it is the first thing a red team probes.
+
   - component: numbered-steps
     title: "Test It Like a Stranger"
     steps:
