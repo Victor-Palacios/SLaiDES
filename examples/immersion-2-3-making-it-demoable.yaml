@@ -445,6 +445,19 @@ slides:
       never leave your machine — and the public one is only safe once row level
       security is switched on.
 
+  - component: bullet-list
+    title: "Secrets Are Not Secret in a Page"
+    items:
+      - "Secrets keep it out of the repo"
+      - "They do not keep it out of the page"
+      - "A build that inlines it publishes it"
+      - "Only server-side code keeps it private"
+    notes: >-
+      GitHub Secrets keeps a key out of your repository and your git history, but
+      not out of the page — if a build step inlines the value into the JavaScript
+      you ship, anyone can read it. A key only stays private inside something
+      that runs on a server, like an Action, a Worker, or an edge function.
+
   - component: table-slide
     title: "Which Half Does What"
     headers: ["Job", "Which half"]

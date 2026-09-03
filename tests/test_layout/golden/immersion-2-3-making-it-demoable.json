@@ -7216,7 +7216,7 @@
     {
       "slide_index": 36,
       "page_number": 37,
-      "component": "table-slide",
+      "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
@@ -7229,11 +7229,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Which Half Does What",
+          "text_content": "Secrets Are Not Secret in a Page",
           "lines": [
             {
-              "text": "Which Half Does What",
-              "width_emu": 5660082,
+              "text": "Secrets Are Not Secret in a Page",
+              "width_emu": 8251552,
               "height_emu": 640080,
               "overflows": false
             }
@@ -7245,81 +7245,65 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_293",
+          "node_id": "bl_item_293",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1499616,
-            "w": 3822268,
+            "y": 1908050,
+            "w": 11277600,
             "h": 518159
           },
-          "text_content": "Job",
+          "text_content": "Secrets keep it out of the repo",
           "lines": [
             {
-              "text": "Job",
-              "width_emu": 767668,
+              "text": "Secrets keep it out of the repo",
+              "width_emu": 5760777,
               "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#123A6B"
+          "bold": false,
+          "italic": false
         },
         {
-          "node_id": "th_294",
+          "node_id": "bl_item_294",
           "node_type": "text",
           "rect": {
-            "x": 4828108,
-            "y": 1499616,
-            "w": 4182172,
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
             "h": 518159
           },
-          "text_content": "Which half",
+          "text_content": "They do not keep it out of the page",
           "lines": [
             {
-              "text": "Which half",
-              "width_emu": 2182825,
+              "text": "They do not keep it out of the page",
+              "width_emu": 6673714,
               "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#123A6B"
+          "bold": false,
+          "italic": false
         },
         {
-          "node_id": "table_rule_295",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2072639,
-            "w": 8553080,
-            "h": 54864
-          },
-          "group_id": "table_head",
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "td_296",
+          "node_id": "bl_item_295",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2401823,
-            "w": 3822268,
-            "h": 633984
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "Serves the page",
+          "text_content": "A build that inlines it publishes it",
           "lines": [
             {
-              "text": "Serves the page",
-              "width_emu": 3144676,
+              "text": "A build that inlines it publishes it",
+              "width_emu": 6096856,
               "height_emu": 518160,
               "overflows": false
             }
@@ -7330,157 +7314,19 @@
           "italic": false
         },
         {
-          "node_id": "td_297",
-          "node_type": "text",
-          "rect": {
-            "x": 4828108,
-            "y": 2401823,
-            "w": 4182172,
-            "h": 633984
-          },
-          "text_content": "Pages or Cloudflare",
-          "lines": [
-            {
-              "text": "Pages or Cloudflare",
-              "width_emu": 3816412,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_298",
+          "node_id": "bl_item_296",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3310127,
-            "w": 3822268,
-            "h": 633984
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "Remembers input",
+          "text_content": "Only server-side code keeps it private",
           "lines": [
             {
-              "text": "Remembers input",
-              "width_emu": 3407804,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_299",
-          "node_type": "text",
-          "rect": {
-            "x": 4828108,
-            "y": 3310127,
-            "w": 4182172,
-            "h": 633984
-          },
-          "text_content": "Supabase",
-          "lines": [
-            {
-              "text": "Supabase",
-              "width_emu": 1944787,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_300",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4218431,
-            "w": 3822268,
-            "h": 633984
-          },
-          "text_content": "Handles sign-in",
-          "lines": [
-            {
-              "text": "Handles sign-in",
-              "width_emu": 2976215,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_301",
-          "node_type": "text",
-          "rect": {
-            "x": 4828108,
-            "y": 4218431,
-            "w": 4182172,
-            "h": 633984
-          },
-          "text_content": "Supabase",
-          "lines": [
-            {
-              "text": "Supabase",
-              "width_emu": 1944787,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_302",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5126735,
-            "w": 3822268,
-            "h": 633984
-          },
-          "text_content": "Costs you nothing",
-          "lines": [
-            {
-              "text": "Costs you nothing",
-              "width_emu": 3456508,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_303",
-          "node_type": "text",
-          "rect": {
-            "x": 4828108,
-            "y": 5126735,
-            "w": 4182172,
-            "h": 633984
-          },
-          "text_content": "Both",
-          "lines": [
-            {
-              "text": "Both",
-              "width_emu": 888268,
+              "text": "Only server-side code keeps it private",
+              "width_emu": 7223795,
               "height_emu": 518160,
               "overflows": false
             }
@@ -7493,7 +7339,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_304",
+          "node_id": "chrome_pagenum_297",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -7522,12 +7368,12 @@
     {
       "slide_index": 37,
       "page_number": 38,
-      "component": "bullet-list",
+      "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_305",
+          "node_id": "title_298",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7535,11 +7381,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "When Not to Bother",
+          "text_content": "Which Half Does What",
           "lines": [
             {
-              "text": "When Not to Bother",
-              "width_emu": 5007136,
+              "text": "Which Half Does What",
+              "width_emu": 5660082,
               "height_emu": 640080,
               "overflows": false
             }
@@ -7551,19 +7397,81 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_306",
+          "node_id": "th_299",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1908050,
-            "w": 11277600,
+            "y": 1499616,
+            "w": 3822268,
             "h": 518159
           },
-          "text_content": "Your demo only ever reads",
+          "text_content": "Job",
           "lines": [
             {
-              "text": "Your demo only ever reads",
-              "width_emu": 5144703,
+              "text": "Job",
+              "width_emu": 767668,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "th_300",
+          "node_type": "text",
+          "rect": {
+            "x": 4828108,
+            "y": 1499616,
+            "w": 4182172,
+            "h": 518159
+          },
+          "text_content": "Which half",
+          "lines": [
+            {
+              "text": "Which half",
+              "width_emu": 2182825,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "table_rule_301",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 8553080,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_302",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 3822268,
+            "h": 633984
+          },
+          "text_content": "Serves the page",
+          "lines": [
+            {
+              "text": "Serves the page",
+              "width_emu": 3144676,
               "height_emu": 518160,
               "overflows": false
             }
@@ -7574,19 +7482,19 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_307",
+          "node_id": "td_303",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 2883409,
-            "w": 11277600,
-            "h": 518159
+            "x": 4828108,
+            "y": 2401823,
+            "w": 4182172,
+            "h": 633984
           },
-          "text_content": "Nothing needs to outlive the tab",
+          "text_content": "Pages or Cloudflare",
           "lines": [
             {
-              "text": "Nothing needs to outlive the tab",
-              "width_emu": 6073453,
+              "text": "Pages or Cloudflare",
+              "width_emu": 3816412,
               "height_emu": 518160,
               "overflows": false
             }
@@ -7597,19 +7505,19 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_308",
+          "node_id": "td_304",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3858768,
-            "w": 11277600,
-            "h": 518159
+            "y": 3310127,
+            "w": 3822268,
+            "h": 633984
           },
-          "text_content": "One saved result would do",
+          "text_content": "Remembers input",
           "lines": [
             {
-              "text": "One saved result would do",
-              "width_emu": 5112655,
+              "text": "Remembers input",
+              "width_emu": 3407804,
               "height_emu": 518160,
               "overflows": false
             }
@@ -7620,19 +7528,111 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_309",
+          "node_id": "td_305",
+          "node_type": "text",
+          "rect": {
+            "x": 4828108,
+            "y": 3310127,
+            "w": 4182172,
+            "h": 633984
+          },
+          "text_content": "Supabase",
+          "lines": [
+            {
+              "text": "Supabase",
+              "width_emu": 1944787,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_306",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4834127,
-            "w": 11277600,
-            "h": 518159
+            "y": 4218431,
+            "w": 3822268,
+            "h": 633984
           },
-          "text_content": "Then stub it, like anything else",
+          "text_content": "Handles sign-in",
           "lines": [
             {
-              "text": "Then stub it, like anything else",
-              "width_emu": 5808638,
+              "text": "Handles sign-in",
+              "width_emu": 2976215,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_307",
+          "node_type": "text",
+          "rect": {
+            "x": 4828108,
+            "y": 4218431,
+            "w": 4182172,
+            "h": 633984
+          },
+          "text_content": "Supabase",
+          "lines": [
+            {
+              "text": "Supabase",
+              "width_emu": 1944787,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_308",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 3822268,
+            "h": 633984
+          },
+          "text_content": "Costs you nothing",
+          "lines": [
+            {
+              "text": "Costs you nothing",
+              "width_emu": 3456508,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_309",
+          "node_type": "text",
+          "rect": {
+            "x": 4828108,
+            "y": 5126735,
+            "w": 4182172,
+            "h": 633984
+          },
+          "text_content": "Both",
+          "lines": [
+            {
+              "text": "Both",
+              "width_emu": 888268,
               "height_emu": 518160,
               "overflows": false
             }
@@ -7674,7 +7674,7 @@
     {
       "slide_index": 38,
       "page_number": 39,
-      "component": "numbered-steps",
+      "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
@@ -7687,11 +7687,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Test It Like a Stranger",
+          "text_content": "When Not to Bother",
           "lines": [
             {
-              "text": "Test It Like a Stranger",
-              "width_emu": 5533244,
+              "text": "When Not to Bother",
+              "width_emu": 5007136,
               "height_emu": 640080,
               "overflows": false
             }
@@ -7703,69 +7703,19 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_num_312",
+          "node_id": "bl_item_312",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1499616,
-            "w": 776183,
-            "h": 640080
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "01",
+          "text_content": "Your demo only ever reads",
           "lines": [
             {
-              "text": "01",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_0",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_head_313",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 1499616,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Open a private window",
-          "lines": [
-            {
-              "text": "Open a private window",
-              "width_emu": 5809059,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_0",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_body_314",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 2185416,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "No logins, no cache, no extensions",
-          "lines": [
-            {
-              "text": "No logins, no cache, no extensions",
-              "width_emu": 6697117,
+              "text": "Your demo only ever reads",
+              "width_emu": 5144703,
               "height_emu": 518160,
               "overflows": false
             }
@@ -7773,73 +7723,22 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "step_0"
+          "italic": false
         },
         {
-          "node_id": "step_num_315",
+          "node_id": "bl_item_313",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3011424,
-            "w": 776183,
-            "h": 640080
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "02",
+          "text_content": "Nothing needs to outlive the tab",
           "lines": [
             {
-              "text": "02",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_1",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_head_316",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 3011424,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Do nothing but click",
-          "lines": [
-            {
-              "text": "Do nothing but click",
-              "width_emu": 5126162,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_1",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_body_317",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 3697224,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "Type nothing you have not pre-filled",
-          "lines": [
-            {
-              "text": "Type nothing you have not pre-filled",
-              "width_emu": 6841331,
+              "text": "Nothing needs to outlive the tab",
+              "width_emu": 6073453,
               "height_emu": 518160,
               "overflows": false
             }
@@ -7847,73 +7746,22 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "step_1"
+          "italic": false
         },
         {
-          "node_id": "step_num_318",
+          "node_id": "bl_item_314",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4523232,
-            "w": 776183,
-            "h": 640080
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "03",
+          "text_content": "One saved result would do",
           "lines": [
             {
-              "text": "03",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_2",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_head_319",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 4523232,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Then try it on a phone",
-          "lines": [
-            {
-              "text": "Then try it on a phone",
-              "width_emu": 5571009,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_2",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_body_320",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 5209032,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "Half the people you send it to will",
-          "lines": [
-            {
-              "text": "Half the people you send it to will",
-              "width_emu": 6312756,
+              "text": "One saved result would do",
+              "width_emu": 5112655,
               "height_emu": 518160,
               "overflows": false
             }
@@ -7921,13 +7769,35 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "step_2"
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_315",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Then stub it, like anything else",
+          "lines": [
+            {
+              "text": "Then stub it, like anything else",
+              "width_emu": 5808638,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_321",
+          "node_id": "chrome_pagenum_316",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -7961,7 +7831,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_322",
+          "node_id": "title_317",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7969,11 +7839,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "If You Are Behind",
+          "text_content": "Test It Like a Stranger",
           "lines": [
             {
-              "text": "If You Are Behind",
-              "width_emu": 4405759,
+              "text": "Test It Like a Stranger",
+              "width_emu": 5533244,
               "height_emu": 640080,
               "overflows": false
             }
@@ -7985,7 +7855,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_num_323",
+          "node_id": "step_num_318",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8010,7 +7880,7 @@
           "text_color": "#123A6B"
         },
         {
-          "node_id": "step_head_324",
+          "node_id": "step_head_319",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8018,11 +7888,11 @@
             "w": 10272817,
             "h": 640080
           },
-          "text_content": "Ship what exists",
+          "text_content": "Open a private window",
           "lines": [
             {
-              "text": "Ship what exists",
-              "width_emu": 4179429,
+              "text": "Open a private window",
+              "width_emu": 5809059,
               "height_emu": 640080,
               "overflows": false
             }
@@ -8035,7 +7905,7 @@
           "text_color": "#123A6B"
         },
         {
-          "node_id": "step_body_325",
+          "node_id": "step_body_320",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8043,11 +7913,11 @@
             "w": 10272817,
             "h": 551688
           },
-          "text_content": "An ugly live page beats a good local one",
+          "text_content": "No logins, no cache, no extensions",
           "lines": [
             {
-              "text": "An ugly live page beats a good local one",
-              "width_emu": 7754057,
+              "text": "No logins, no cache, no extensions",
+              "width_emu": 6697117,
               "height_emu": 518160,
               "overflows": false
             }
@@ -8059,7 +7929,7 @@
           "group_id": "step_0"
         },
         {
-          "node_id": "step_num_326",
+          "node_id": "step_num_321",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8084,7 +7954,7 @@
           "text_color": "#123A6B"
         },
         {
-          "node_id": "step_head_327",
+          "node_id": "step_head_322",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8092,11 +7962,11 @@
             "w": 10272817,
             "h": 640080
           },
-          "text_content": "Drop the front end",
+          "text_content": "Do nothing but click",
           "lines": [
             {
-              "text": "Drop the front end",
-              "width_emu": 4651883,
+              "text": "Do nothing but click",
+              "width_emu": 5126162,
               "height_emu": 640080,
               "overflows": false
             }
@@ -8109,7 +7979,7 @@
           "text_color": "#123A6B"
         },
         {
-          "node_id": "step_body_328",
+          "node_id": "step_body_323",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8117,11 +7987,11 @@
             "w": 10272817,
             "h": 551688
           },
-          "text_content": "A page showing one saved result still counts",
+          "text_content": "Type nothing you have not pre-filled",
           "lines": [
             {
-              "text": "A page showing one saved result still counts",
-              "width_emu": 8473232,
+              "text": "Type nothing you have not pre-filled",
+              "width_emu": 6841331,
               "height_emu": 518160,
               "overflows": false
             }
@@ -8133,7 +8003,7 @@
           "group_id": "step_1"
         },
         {
-          "node_id": "step_num_329",
+          "node_id": "step_num_324",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8158,7 +8028,7 @@
           "text_color": "#123A6B"
         },
         {
-          "node_id": "step_head_330",
+          "node_id": "step_head_325",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8166,11 +8036,11 @@
             "w": 10272817,
             "h": 640080
           },
-          "text_content": "Never drop the caveats",
+          "text_content": "Then try it on a phone",
           "lines": [
             {
-              "text": "Never drop the caveats",
-              "width_emu": 5870004,
+              "text": "Then try it on a phone",
+              "width_emu": 5571009,
               "height_emu": 640080,
               "overflows": false
             }
@@ -8183,7 +8053,7 @@
           "text_color": "#123A6B"
         },
         {
-          "node_id": "step_body_331",
+          "node_id": "step_body_326",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8191,11 +8061,11 @@
             "w": 10272817,
             "h": 551688
           },
-          "text_content": "Five honest lines take two minutes",
+          "text_content": "Half the people you send it to will",
           "lines": [
             {
-              "text": "Five honest lines take two minutes",
-              "width_emu": 6600130,
+              "text": "Half the people you send it to will",
+              "width_emu": 6312756,
               "height_emu": 518160,
               "overflows": false
             }
@@ -8209,7 +8079,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_332",
+          "node_id": "chrome_pagenum_327",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8238,12 +8108,12 @@
     {
       "slide_index": 40,
       "page_number": 41,
-      "component": "table-slide",
+      "component": "numbered-steps",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_333",
+          "node_id": "title_328",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8251,11 +8121,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "The Ship Checklist",
+          "text_content": "If You Are Behind",
           "lines": [
             {
-              "text": "The Ship Checklist",
-              "width_emu": 4771951,
+              "text": "If You Are Behind",
+              "width_emu": 4405759,
               "height_emu": 640080,
               "overflows": false
             }
@@ -8267,127 +8137,143 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_334",
+          "node_id": "step_num_329",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 3269657,
-            "h": 518159
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "Check",
+          "text_content": "01",
           "lines": [
             {
-              "text": "Check",
-              "width_emu": 1296033,
-              "height_emu": 518160,
+              "text": "01",
+              "width_emu": 593303,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
-          "group_id": "table_head",
+          "group_id": "step_0",
           "text_color": "#123A6B"
         },
         {
-          "node_id": "th_335",
+          "node_id": "step_head_330",
           "node_type": "text",
           "rect": {
-            "x": 4275497,
+            "x": 1461983,
             "y": 1499616,
-            "w": 4935503,
-            "h": 518159
+            "w": 10272817,
+            "h": 640080
           },
-          "text_content": "Pass means",
+          "text_content": "Ship what exists",
           "lines": [
             {
-              "text": "Pass means",
-              "width_emu": 2496555,
-              "height_emu": 518160,
+              "text": "Ship what exists",
+              "width_emu": 4179429,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
-          "group_id": "table_head",
+          "group_id": "step_0",
           "text_color": "#123A6B"
         },
         {
-          "node_id": "table_rule_336",
-          "node_type": "box",
+          "node_id": "step_body_331",
+          "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 2072639,
-            "w": 8753800,
-            "h": 54864
+            "x": 1461983,
+            "y": 2185416,
+            "w": 10272817,
+            "h": 551688
           },
-          "group_id": "table_head",
-          "fill_color": "#0072CE"
+          "text_content": "An ugly live page beats a good local one",
+          "lines": [
+            {
+              "text": "An ugly live page beats a good local one",
+              "width_emu": 7754057,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_0"
         },
         {
-          "node_id": "td_337",
+          "node_id": "step_num_332",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2401823,
-            "w": 3269657,
-            "h": 633984
+            "y": 3011424,
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "Private window",
+          "text_content": "02",
           "lines": [
             {
-              "text": "Private window",
-              "width_emu": 2903897,
-              "height_emu": 518160,
+              "text": "02",
+              "width_emu": 593303,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#123A6B"
         },
         {
-          "node_id": "td_338",
+          "node_id": "step_head_333",
           "node_type": "text",
           "rect": {
-            "x": 4275497,
-            "y": 2401823,
-            "w": 4935503,
-            "h": 633984
+            "x": 1461983,
+            "y": 3011424,
+            "w": 10272817,
+            "h": 640080
           },
-          "text_content": "It loads and runs",
+          "text_content": "Drop the front end",
           "lines": [
             {
-              "text": "It loads and runs",
-              "width_emu": 3192537,
-              "height_emu": 518160,
+              "text": "Drop the front end",
+              "width_emu": 4651883,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#123A6B"
         },
         {
-          "node_id": "td_339",
+          "node_id": "step_body_334",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 3310127,
-            "w": 3269657,
-            "h": 633984
+            "x": 1461983,
+            "y": 3697224,
+            "w": 10272817,
+            "h": 551688
           },
-          "text_content": "Phone",
+          "text_content": "A page showing one saved result still counts",
           "lines": [
             {
-              "text": "Phone",
-              "width_emu": 1248594,
+              "text": "A page showing one saved result still counts",
+              "width_emu": 8473232,
               "height_emu": 518160,
               "overflows": false
             }
@@ -8395,91 +8281,73 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "step_1"
         },
         {
-          "node_id": "td_340",
-          "node_type": "text",
-          "rect": {
-            "x": 4275497,
-            "y": 3310127,
-            "w": 4935503,
-            "h": 633984
-          },
-          "text_content": "You can read the output",
-          "lines": [
-            {
-              "text": "You can read the output",
-              "width_emu": 4569743,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_341",
+          "node_id": "step_num_335",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4218431,
-            "w": 3269657,
-            "h": 633984
+            "y": 4523232,
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "Laptop closed",
+          "text_content": "03",
           "lines": [
             {
-              "text": "Laptop closed",
-              "width_emu": 2688841,
-              "height_emu": 518160,
+              "text": "03",
+              "width_emu": 593303,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#123A6B"
         },
         {
-          "node_id": "td_342",
+          "node_id": "step_head_336",
           "node_type": "text",
           "rect": {
-            "x": 4275497,
-            "y": 4218431,
-            "w": 4935503,
-            "h": 633984
+            "x": 1461983,
+            "y": 4523232,
+            "w": 10272817,
+            "h": 640080
           },
-          "text_content": "A teammate can open it",
+          "text_content": "Never drop the caveats",
           "lines": [
             {
-              "text": "A teammate can open it",
-              "width_emu": 4536641,
-              "height_emu": 518160,
+              "text": "Never drop the caveats",
+              "width_emu": 5870004,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#123A6B"
         },
         {
-          "node_id": "td_343",
+          "node_id": "step_body_337",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 5126735,
-            "w": 3269657,
-            "h": 633984
+            "x": 1461983,
+            "y": 5209032,
+            "w": 10272817,
+            "h": 551688
           },
-          "text_content": "No secrets",
+          "text_content": "Five honest lines take two minutes",
           "lines": [
             {
-              "text": "No secrets",
-              "width_emu": 2063700,
+              "text": "Five honest lines take two minutes",
+              "width_emu": 6600130,
               "height_emu": 518160,
               "overflows": false
             }
@@ -8487,35 +8355,13 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_344",
-          "node_type": "text",
-          "rect": {
-            "x": 4275497,
-            "y": 5126735,
-            "w": 4935503,
-            "h": 633984
-          },
-          "text_content": "Nothing in page or repo",
-          "lines": [
-            {
-              "text": "Nothing in page or repo",
-              "width_emu": 4513027,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "step_2"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_345",
+          "node_id": "chrome_pagenum_338",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8544,35 +8390,24 @@
     {
       "slide_index": 41,
       "page_number": 42,
-      "component": "pull-quote",
+      "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_348",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2621280,
-            "w": 128016,
-            "h": 1615440
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "quote_346",
+          "node_id": "title_339",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 2621280,
-            "w": 10738104,
-            "h": 731520
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
           },
-          "text_content": "\"Needs your laptop? Not shipped.\"",
+          "text_content": "The Ship Checklist",
           "lines": [
             {
-              "text": "\"Needs your laptop? Not shipped.\"",
-              "width_emu": 8862826,
+              "text": "The Ship Checklist",
+              "width_emu": 4771951,
               "height_emu": 640080,
               "overflows": false
             }
@@ -8580,22 +8415,85 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "attrib_347",
+          "node_id": "th_340",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 3627120,
-            "w": 10738104,
-            "h": 609600
+            "x": 457200,
+            "y": 1499616,
+            "w": 3269657,
+            "h": 518159
           },
-          "text_content": "- Objective two, restated",
+          "text_content": "Check",
           "lines": [
             {
-              "text": "- Objective two, restated",
-              "width_emu": 4655765,
+              "text": "Check",
+              "width_emu": 1296033,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "th_341",
+          "node_type": "text",
+          "rect": {
+            "x": 4275497,
+            "y": 1499616,
+            "w": 4935503,
+            "h": 518159
+          },
+          "text_content": "Pass means",
+          "lines": [
+            {
+              "text": "Pass means",
+              "width_emu": 2496555,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "table_rule_342",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 8753800,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_343",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 3269657,
+            "h": 633984
+          },
+          "text_content": "Private window",
+          "lines": [
+            {
+              "text": "Private window",
+              "width_emu": 2903897,
               "height_emu": 518160,
               "overflows": false
             }
@@ -8603,13 +8501,173 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "text_color": "#5B6B82"
+          "italic": false
+        },
+        {
+          "node_id": "td_344",
+          "node_type": "text",
+          "rect": {
+            "x": 4275497,
+            "y": 2401823,
+            "w": 4935503,
+            "h": 633984
+          },
+          "text_content": "It loads and runs",
+          "lines": [
+            {
+              "text": "It loads and runs",
+              "width_emu": 3192537,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_345",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3310127,
+            "w": 3269657,
+            "h": 633984
+          },
+          "text_content": "Phone",
+          "lines": [
+            {
+              "text": "Phone",
+              "width_emu": 1248594,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_346",
+          "node_type": "text",
+          "rect": {
+            "x": 4275497,
+            "y": 3310127,
+            "w": 4935503,
+            "h": 633984
+          },
+          "text_content": "You can read the output",
+          "lines": [
+            {
+              "text": "You can read the output",
+              "width_emu": 4569743,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_347",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4218431,
+            "w": 3269657,
+            "h": 633984
+          },
+          "text_content": "Laptop closed",
+          "lines": [
+            {
+              "text": "Laptop closed",
+              "width_emu": 2688841,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_348",
+          "node_type": "text",
+          "rect": {
+            "x": 4275497,
+            "y": 4218431,
+            "w": 4935503,
+            "h": 633984
+          },
+          "text_content": "A teammate can open it",
+          "lines": [
+            {
+              "text": "A teammate can open it",
+              "width_emu": 4536641,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_349",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 3269657,
+            "h": 633984
+          },
+          "text_content": "No secrets",
+          "lines": [
+            {
+              "text": "No secrets",
+              "width_emu": 2063700,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_350",
+          "node_type": "text",
+          "rect": {
+            "x": 4275497,
+            "y": 5126735,
+            "w": 4935503,
+            "h": 633984
+          },
+          "text_content": "Nothing in page or repo",
+          "lines": [
+            {
+              "text": "Nothing in page or repo",
+              "width_emu": 4513027,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_349",
+          "node_id": "chrome_pagenum_351",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8638,59 +8696,35 @@
     {
       "slide_index": 42,
       "page_number": 43,
-      "component": "section-divider",
+      "component": "pull-quote",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_352",
+          "node_id": "accent_bar_354",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 1783080,
+            "y": 2621280,
             "w": 128016,
-            "h": 2011680
+            "h": 1615440
           },
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "sec_num_350",
+          "node_id": "quote_352",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 1783080,
-            "w": 10738104,
-            "h": 1005840
-          },
-          "text_content": "03",
-          "lines": [
-            {
-              "text": "03",
-              "width_emu": 847576,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "sec_title_351",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 3063240,
+            "y": 2621280,
             "w": 10738104,
             "h": 731520
           },
-          "text_content": "Script and Caveats",
+          "text_content": "\"Needs your laptop? Not shipped.\"",
           "lines": [
             {
-              "text": "Script and Caveats",
-              "width_emu": 4802423,
+              "text": "\"Needs your laptop? Not shipped.\"",
+              "width_emu": 8862826,
               "height_emu": 640080,
               "overflows": false
             }
@@ -8698,13 +8732,36 @@
           "font": "arial",
           "size_pt": 42.0,
           "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "attrib_353",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3627120,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "- Objective two, restated",
+          "lines": [
+            {
+              "text": "- Objective two, restated",
+              "width_emu": 4655765,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
           "italic": false,
-          "text_color": "#0072CE"
+          "text_color": "#5B6B82"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_353",
+          "node_id": "chrome_pagenum_355",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8733,35 +8790,35 @@
     {
       "slide_index": 43,
       "page_number": 44,
-      "component": "definition",
+      "component": "section-divider",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_356",
+          "node_id": "accent_bar_358",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2484120,
+            "y": 1783080,
             "w": 128016,
-            "h": 1889760
+            "h": 2011680
           },
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_354",
+          "node_id": "sec_num_356",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 2484120,
+            "y": 1783080,
             "w": 10738104,
             "h": 1005840
           },
-          "text_content": "Demo script",
+          "text_content": "03",
           "lines": [
             {
-              "text": "Demo script",
-              "width_emu": 4403824,
+              "text": "03",
+              "width_emu": 847576,
               "height_emu": 914400,
               "overflows": false
             }
@@ -8773,32 +8830,33 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_355",
+          "node_id": "sec_title_357",
           "node_type": "text",
           "rect": {
             "x": 996696,
-            "y": 3764280,
+            "y": 3063240,
             "w": 10738104,
-            "h": 609600
+            "h": 731520
           },
-          "text_content": "The three minutes, written down word for word",
+          "text_content": "Script and Caveats",
           "lines": [
             {
-              "text": "The three minutes, written down word for word",
-              "width_emu": 8879731,
-              "height_emu": 518160,
+              "text": "Script and Caveats",
+              "width_emu": 4802423,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_357",
+          "node_id": "chrome_pagenum_359",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8827,271 +8885,59 @@
     {
       "slide_index": 44,
       "page_number": 45,
-      "component": "table-slide",
+      "component": "definition",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_358",
-          "node_type": "text",
+          "node_id": "accent_bar_362",
+          "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
           },
-          "text_content": "The Three Minutes",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_360",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "Demo script",
           "lines": [
             {
-              "text": "The Three Minutes",
-              "width_emu": 4712308,
-              "height_emu": 640080,
+              "text": "Demo script",
+              "width_emu": 4403824,
+              "height_emu": 914400,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 42.0,
+          "size_pt": 60.0,
           "bold": true,
           "italic": false,
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_359",
+          "node_id": "def_361",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 2286722,
-            "h": 518159
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
           },
-          "text_content": "Time",
+          "text_content": "The three minutes, written down word for word",
           "lines": [
             {
-              "text": "Time",
-              "width_emu": 1000013,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "th_360",
-          "node_type": "text",
-          "rect": {
-            "x": 3292562,
-            "y": 1499616,
-            "w": 5406308,
-            "h": 518159
-          },
-          "text_content": "What you say",
-          "lines": [
-            {
-              "text": "What you say",
-              "width_emu": 2783297,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "table_rule_361",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2072639,
-            "w": 8241670,
-            "h": 54864
-          },
-          "group_id": "table_head",
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "td_362",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2401823,
-            "w": 2286722,
-            "h": 633984
-          },
-          "text_content": "0:00\u20130:30",
-          "lines": [
-            {
-              "text": "0:00\u20130:30",
-              "width_emu": 1920962,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_363",
-          "node_type": "text",
-          "rect": {
-            "x": 3292562,
-            "y": 2401823,
-            "w": 5406308,
-            "h": 633984
-          },
-          "text_content": "The problem, concretely",
-          "lines": [
-            {
-              "text": "The problem, concretely",
-              "width_emu": 4631941,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_364",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3310127,
-            "w": 2286722,
-            "h": 633984
-          },
-          "text_content": "0:30\u20132:00",
-          "lines": [
-            {
-              "text": "0:30\u20132:00",
-              "width_emu": 1920962,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_365",
-          "node_type": "text",
-          "rect": {
-            "x": 3292562,
-            "y": 3310127,
-            "w": 5406308,
-            "h": 633984
-          },
-          "text_content": "Drive it, live, in silence",
-          "lines": [
-            {
-              "text": "Drive it, live, in silence",
-              "width_emu": 4271404,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_366",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4218431,
-            "w": 2286722,
-            "h": 633984
-          },
-          "text_content": "2:00\u20132:30",
-          "lines": [
-            {
-              "text": "2:00\u20132:30",
-              "width_emu": 1920962,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_367",
-          "node_type": "text",
-          "rect": {
-            "x": 3292562,
-            "y": 4218431,
-            "w": 5406308,
-            "h": 633984
-          },
-          "text_content": "What is real, what is not",
-          "lines": [
-            {
-              "text": "What is real, what is not",
-              "width_emu": 4583658,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_368",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5126735,
-            "w": 2286722,
-            "h": 633984
-          },
-          "text_content": "2:30\u20133:00",
-          "lines": [
-            {
-              "text": "2:30\u20133:00",
-              "width_emu": 1920962,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_369",
-          "node_type": "text",
-          "rect": {
-            "x": 3292562,
-            "y": 5126735,
-            "w": 5406308,
-            "h": 633984
-          },
-          "text_content": "What you would build next",
-          "lines": [
-            {
-              "text": "What you would build next",
-              "width_emu": 5040548,
+              "text": "The three minutes, written down word for word",
+              "width_emu": 8879731,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9104,7 +8950,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_370",
+          "node_id": "chrome_pagenum_363",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -9133,12 +8979,12 @@
     {
       "slide_index": 45,
       "page_number": 46,
-      "component": "bullet-list",
+      "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_371",
+          "node_id": "title_364",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9146,11 +8992,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "The First Thirty Seconds",
+          "text_content": "The Three Minutes",
           "lines": [
             {
-              "text": "The First Thirty Seconds",
-              "width_emu": 6253646,
+              "text": "The Three Minutes",
+              "width_emu": 4712308,
               "height_emu": 640080,
               "overflows": false
             }
@@ -9162,19 +9008,81 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_372",
+          "node_id": "th_365",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1908050,
-            "w": 11277600,
+            "y": 1499616,
+            "w": 2286722,
             "h": 518159
           },
-          "text_content": "Name who has the problem",
+          "text_content": "Time",
           "lines": [
             {
-              "text": "Name who has the problem",
-              "width_emu": 5280273,
+              "text": "Time",
+              "width_emu": 1000013,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "th_366",
+          "node_type": "text",
+          "rect": {
+            "x": 3292562,
+            "y": 1499616,
+            "w": 5406308,
+            "h": 518159
+          },
+          "text_content": "What you say",
+          "lines": [
+            {
+              "text": "What you say",
+              "width_emu": 2783297,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "table_rule_367",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 8241670,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_368",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 2286722,
+            "h": 633984
+          },
+          "text_content": "0:00\u20130:30",
+          "lines": [
+            {
+              "text": "0:00\u20130:30",
+              "width_emu": 1920962,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9185,19 +9093,19 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_373",
+          "node_id": "td_369",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 2883409,
-            "w": 11277600,
-            "h": 518159
+            "x": 3292562,
+            "y": 2401823,
+            "w": 5406308,
+            "h": 633984
           },
-          "text_content": "Say what it costs them today",
+          "text_content": "The problem, concretely",
           "lines": [
             {
-              "text": "Say what it costs them today",
-              "width_emu": 5495962,
+              "text": "The problem, concretely",
+              "width_emu": 4631941,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9208,19 +9116,19 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_374",
+          "node_id": "td_370",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3858768,
-            "w": 11277600,
-            "h": 518159
+            "y": 3310127,
+            "w": 2286722,
+            "h": 633984
           },
-          "text_content": "One sentence, no background",
+          "text_content": "0:30\u20132:00",
           "lines": [
             {
-              "text": "One sentence, no background",
-              "width_emu": 5785445,
+              "text": "0:30\u20132:00",
+              "width_emu": 1920962,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9231,19 +9139,111 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_375",
+          "node_id": "td_371",
+          "node_type": "text",
+          "rect": {
+            "x": 3292562,
+            "y": 3310127,
+            "w": 5406308,
+            "h": 633984
+          },
+          "text_content": "Drive it, live, in silence",
+          "lines": [
+            {
+              "text": "Drive it, live, in silence",
+              "width_emu": 4271404,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_372",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4834127,
-            "w": 11277600,
-            "h": 518159
+            "y": 4218431,
+            "w": 2286722,
+            "h": 633984
           },
-          "text_content": "Then stop and show it",
+          "text_content": "2:00\u20132:30",
           "lines": [
             {
-              "text": "Then stop and show it",
-              "width_emu": 4224598,
+              "text": "2:00\u20132:30",
+              "width_emu": 1920962,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_373",
+          "node_type": "text",
+          "rect": {
+            "x": 3292562,
+            "y": 4218431,
+            "w": 5406308,
+            "h": 633984
+          },
+          "text_content": "What is real, what is not",
+          "lines": [
+            {
+              "text": "What is real, what is not",
+              "width_emu": 4583658,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_374",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 2286722,
+            "h": 633984
+          },
+          "text_content": "2:30\u20133:00",
+          "lines": [
+            {
+              "text": "2:30\u20133:00",
+              "width_emu": 1920962,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_375",
+          "node_type": "text",
+          "rect": {
+            "x": 3292562,
+            "y": 5126735,
+            "w": 5406308,
+            "h": 633984
+          },
+          "text_content": "What you would build next",
+          "lines": [
+            {
+              "text": "What you would build next",
+              "width_emu": 5040548,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9298,11 +9298,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Do Not Say These",
+          "text_content": "The First Thirty Seconds",
           "lines": [
             {
-              "text": "Do Not Say These",
-              "width_emu": 4534942,
+              "text": "The First Thirty Seconds",
+              "width_emu": 6253646,
               "height_emu": 640080,
               "overflows": false
             }
@@ -9322,11 +9322,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "Let me explain the architecture",
+          "text_content": "Name who has the problem",
           "lines": [
             {
-              "text": "Let me explain the architecture",
-              "width_emu": 5904570,
+              "text": "Name who has the problem",
+              "width_emu": 5280273,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9345,11 +9345,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "Normally this works",
+          "text_content": "Say what it costs them today",
           "lines": [
             {
-              "text": "Normally this works",
-              "width_emu": 3742829,
+              "text": "Say what it costs them today",
+              "width_emu": 5495962,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9368,11 +9368,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "We ran out of time to",
+          "text_content": "One sentence, no background",
           "lines": [
             {
-              "text": "We ran out of time to",
-              "width_emu": 4000054,
+              "text": "One sentence, no background",
+              "width_emu": 5785445,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9391,11 +9391,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "It is basically just a wrapper",
+          "text_content": "Then stop and show it",
           "lines": [
             {
-              "text": "It is basically just a wrapper",
-              "width_emu": 5279641,
+              "text": "Then stop and show it",
+              "width_emu": 4224598,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9437,7 +9437,7 @@
     {
       "slide_index": 47,
       "page_number": 48,
-      "component": "numbered-steps",
+      "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
@@ -9450,11 +9450,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Rehearse It Properly",
+          "text_content": "Do Not Say These",
           "lines": [
             {
-              "text": "Rehearse It Properly",
-              "width_emu": 5188148,
+              "text": "Do Not Say These",
+              "width_emu": 4534942,
               "height_emu": 640080,
               "overflows": false
             }
@@ -9466,69 +9466,19 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_num_384",
+          "node_id": "bl_item_384",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1499616,
-            "w": 776183,
-            "h": 640080
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "01",
+          "text_content": "Let me explain the architecture",
           "lines": [
             {
-              "text": "01",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_0",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_head_385",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 1499616,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Time it, out loud",
-          "lines": [
-            {
-              "text": "Time it, out loud",
-              "width_emu": 4108847,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_0",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_body_386",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 2185416,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "Silently in your head is always shorter",
-          "lines": [
-            {
-              "text": "Silently in your head is always shorter",
-              "width_emu": 7224006,
+              "text": "Let me explain the architecture",
+              "width_emu": 5904570,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9536,73 +9486,22 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "step_0"
+          "italic": false
         },
         {
-          "node_id": "step_num_387",
+          "node_id": "bl_item_385",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3011424,
-            "w": 776183,
-            "h": 640080
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "02",
+          "text_content": "Normally this works",
           "lines": [
             {
-              "text": "02",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_1",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_head_388",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 3011424,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Have someone else drive",
-          "lines": [
-            {
-              "text": "Have someone else drive",
-              "width_emu": 6374495,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_1",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_body_389",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 3697224,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "The builder's hands hide the rough edges",
-          "lines": [
-            {
-              "text": "The builder's hands hide the rough edges",
-              "width_emu": 7932427,
+              "text": "Normally this works",
+              "width_emu": 3742829,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9610,73 +9509,22 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "step_1"
+          "italic": false
         },
         {
-          "node_id": "step_num_390",
+          "node_id": "bl_item_386",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4523232,
-            "w": 776183,
-            "h": 640080
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "03",
+          "text_content": "We ran out of time to",
           "lines": [
             {
-              "text": "03",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_2",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_head_391",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 4523232,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Cut until it fits",
-          "lines": [
-            {
-              "text": "Cut until it fits",
-              "width_emu": 3584823,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_2",
-          "text_color": "#123A6B"
-        },
-        {
-          "node_id": "step_body_392",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 5209032,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "Three minutes means three minutes",
-          "lines": [
-            {
-              "text": "Three minutes means three minutes",
-              "width_emu": 6911963,
+              "text": "We ran out of time to",
+              "width_emu": 4000054,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9684,13 +9532,35 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "step_2"
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_387",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "It is basically just a wrapper",
+          "lines": [
+            {
+              "text": "It is basically just a wrapper",
+              "width_emu": 5279641,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_393",
+          "node_id": "chrome_pagenum_388",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -9719,59 +9589,98 @@
     {
       "slide_index": 48,
       "page_number": 49,
-      "component": "definition",
+      "component": "numbered-steps",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_396",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2484120,
-            "w": 128016,
-            "h": 1889760
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "term_394",
+          "node_id": "title_389",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 2484120,
-            "w": 10738104,
-            "h": 1005840
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
           },
-          "text_content": "Caveat list",
+          "text_content": "Rehearse It Properly",
           "lines": [
             {
-              "text": "Caveat list",
-              "width_emu": 3811860,
-              "height_emu": 914400,
+              "text": "Rehearse It Properly",
+              "width_emu": 5188148,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 60.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_395",
+          "node_id": "step_num_390",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 3764280,
-            "w": 10738104,
-            "h": 609600
+            "x": 457200,
+            "y": 1499616,
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "Everything stubbed, faked, or known to break",
+          "text_content": "01",
           "lines": [
             {
-              "text": "Everything stubbed, faked, or known to break",
-              "width_emu": 8665096,
+              "text": "01",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_head_391",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 1499616,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Time it, out loud",
+          "lines": [
+            {
+              "text": "Time it, out loud",
+              "width_emu": 4108847,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_body_392",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 2185416,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "Silently in your head is always shorter",
+          "lines": [
+            {
+              "text": "Silently in your head is always shorter",
+              "width_emu": 7224006,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9779,12 +9688,161 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "step_0"
+        },
+        {
+          "node_id": "step_num_393",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3011424,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "02",
+          "lines": [
+            {
+              "text": "02",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_head_394",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3011424,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Have someone else drive",
+          "lines": [
+            {
+              "text": "Have someone else drive",
+              "width_emu": 6374495,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_body_395",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3697224,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "The builder's hands hide the rough edges",
+          "lines": [
+            {
+              "text": "The builder's hands hide the rough edges",
+              "width_emu": 7932427,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_1"
+        },
+        {
+          "node_id": "step_num_396",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4523232,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "03",
+          "lines": [
+            {
+              "text": "03",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_head_397",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 4523232,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Cut until it fits",
+          "lines": [
+            {
+              "text": "Cut until it fits",
+              "width_emu": 3584823,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_body_398",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 5209032,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "Three minutes means three minutes",
+          "lines": [
+            {
+              "text": "Three minutes means three minutes",
+              "width_emu": 6911963,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_2"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_397",
+          "node_id": "chrome_pagenum_399",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -9813,117 +9871,59 @@
     {
       "slide_index": 49,
       "page_number": 50,
-      "component": "bullet-list",
+      "component": "definition",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_398",
-          "node_type": "text",
+          "node_id": "accent_bar_402",
+          "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
           },
-          "text_content": "What Goes on the List",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_400",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "Caveat list",
           "lines": [
             {
-              "text": "What Goes on the List",
-              "width_emu": 5630391,
-              "height_emu": 640080,
+              "text": "Caveat list",
+              "width_emu": 3811860,
+              "height_emu": 914400,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 42.0,
+          "size_pt": 60.0,
           "bold": true,
           "italic": false,
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_399",
+          "node_id": "def_401",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 1908050,
-            "w": 11277600,
-            "h": 518159
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
           },
-          "text_content": "Every step you stubbed",
+          "text_content": "Everything stubbed, faked, or known to break",
           "lines": [
             {
-              "text": "Every step you stubbed",
-              "width_emu": 4512605,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_400",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2883409,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Every hardcoded value",
-          "lines": [
-            {
-              "text": "Every hardcoded value",
-              "width_emu": 4416673,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_401",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3858768,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Inputs you know it fails on",
-          "lines": [
-            {
-              "text": "Inputs you know it fails on",
-              "width_emu": 4944405,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_402",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4834127,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Anything only tested once",
-          "lines": [
-            {
-              "text": "Anything only tested once",
-              "width_emu": 4945038,
+              "text": "Everything stubbed, faked, or known to break",
+              "width_emu": 8665096,
               "height_emu": 518160,
               "overflows": false
             }
@@ -9965,7 +9965,7 @@
     {
       "slide_index": 50,
       "page_number": 51,
-      "component": "table-slide",
+      "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
@@ -9978,11 +9978,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "How to Write It Down",
+          "text_content": "What Goes on the List",
           "lines": [
             {
-              "text": "How to Write It Down",
-              "width_emu": 5323582,
+              "text": "What Goes on the List",
+              "width_emu": 5630391,
               "height_emu": 640080,
               "overflows": false
             }
@@ -9994,81 +9994,65 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_405",
+          "node_id": "bl_item_405",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1499616,
-            "w": 2765539,
+            "y": 1908050,
+            "w": 11277600,
             "h": 518159
           },
-          "text_content": "What",
+          "text_content": "Every step you stubbed",
           "lines": [
             {
-              "text": "What",
-              "width_emu": 1055253,
+              "text": "Every step you stubbed",
+              "width_emu": 4512605,
               "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#123A6B"
+          "bold": false,
+          "italic": false
         },
         {
-          "node_id": "th_406",
+          "node_id": "bl_item_406",
           "node_type": "text",
           "rect": {
-            "x": 3771379,
-            "y": 1499616,
-            "w": 3894797,
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
             "h": 518159
           },
-          "text_content": "Status",
+          "text_content": "Every hardcoded value",
           "lines": [
             {
-              "text": "Status",
-              "width_emu": 1319647,
+              "text": "Every hardcoded value",
+              "width_emu": 4416673,
               "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#123A6B"
+          "bold": false,
+          "italic": false
         },
         {
-          "node_id": "table_rule_407",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2072639,
-            "w": 7208976,
-            "h": 54864
-          },
-          "group_id": "table_head",
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "td_408",
+          "node_id": "bl_item_407",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2401823,
-            "w": 2765539,
-            "h": 633984
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "Login",
+          "text_content": "Inputs you know it fails on",
           "lines": [
             {
-              "text": "Login",
-              "width_emu": 1056518,
+              "text": "Inputs you know it fails on",
+              "width_emu": 4944405,
               "height_emu": 518160,
               "overflows": false
             }
@@ -10079,157 +10063,19 @@
           "italic": false
         },
         {
-          "node_id": "td_409",
-          "node_type": "text",
-          "rect": {
-            "x": 3771379,
-            "y": 2401823,
-            "w": 3894797,
-            "h": 633984
-          },
-          "text_content": "Stubbed, one user",
-          "lines": [
-            {
-              "text": "Stubbed, one user",
-              "width_emu": 3529037,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_410",
+          "node_id": "bl_item_408",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3310127,
-            "w": 2765539,
-            "h": 633984
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "PDF parsing",
+          "text_content": "Anything only tested once",
           "lines": [
             {
-              "text": "PDF parsing",
-              "width_emu": 2399779,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_411",
-          "node_type": "text",
-          "rect": {
-            "x": 3771379,
-            "y": 3310127,
-            "w": 3894797,
-            "h": 633984
-          },
-          "text_content": "One file only",
-          "lines": [
-            {
-              "text": "One file only",
-              "width_emu": 2400201,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_412",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4218431,
-            "w": 2765539,
-            "h": 633984
-          },
-          "text_content": "Retrieval",
-          "lines": [
-            {
-              "text": "Retrieval",
-              "width_emu": 1703797,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_413",
-          "node_type": "text",
-          "rect": {
-            "x": 3771379,
-            "y": 4218431,
-            "w": 3894797,
-            "h": 633984
-          },
-          "text_content": "Faked, four docs",
-          "lines": [
-            {
-              "text": "Faked, four docs",
-              "width_emu": 3216151,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_414",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5126735,
-            "w": 2765539,
-            "h": 633984
-          },
-          "text_content": "Long inputs",
-          "lines": [
-            {
-              "text": "Long inputs",
-              "width_emu": 2232794,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_415",
-          "node_type": "text",
-          "rect": {
-            "x": 3771379,
-            "y": 5126735,
-            "w": 3894797,
-            "h": 633984
-          },
-          "text_content": "Known to break",
-          "lines": [
-            {
-              "text": "Known to break",
-              "width_emu": 3000462,
+              "text": "Anything only tested once",
+              "width_emu": 4945038,
               "height_emu": 518160,
               "overflows": false
             }
@@ -10242,7 +10088,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_416",
+          "node_id": "chrome_pagenum_409",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -10271,12 +10117,318 @@
     {
       "slide_index": 51,
       "page_number": 52,
+      "component": "table-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_410",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "How to Write It Down",
+          "lines": [
+            {
+              "text": "How to Write It Down",
+              "width_emu": 5323582,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_411",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2765539,
+            "h": 518159
+          },
+          "text_content": "What",
+          "lines": [
+            {
+              "text": "What",
+              "width_emu": 1055253,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "th_412",
+          "node_type": "text",
+          "rect": {
+            "x": 3771379,
+            "y": 1499616,
+            "w": 3894797,
+            "h": 518159
+          },
+          "text_content": "Status",
+          "lines": [
+            {
+              "text": "Status",
+              "width_emu": 1319647,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "table_rule_413",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 7208976,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_414",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 2765539,
+            "h": 633984
+          },
+          "text_content": "Login",
+          "lines": [
+            {
+              "text": "Login",
+              "width_emu": 1056518,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_415",
+          "node_type": "text",
+          "rect": {
+            "x": 3771379,
+            "y": 2401823,
+            "w": 3894797,
+            "h": 633984
+          },
+          "text_content": "Stubbed, one user",
+          "lines": [
+            {
+              "text": "Stubbed, one user",
+              "width_emu": 3529037,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_416",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3310127,
+            "w": 2765539,
+            "h": 633984
+          },
+          "text_content": "PDF parsing",
+          "lines": [
+            {
+              "text": "PDF parsing",
+              "width_emu": 2399779,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_417",
+          "node_type": "text",
+          "rect": {
+            "x": 3771379,
+            "y": 3310127,
+            "w": 3894797,
+            "h": 633984
+          },
+          "text_content": "One file only",
+          "lines": [
+            {
+              "text": "One file only",
+              "width_emu": 2400201,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_418",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4218431,
+            "w": 2765539,
+            "h": 633984
+          },
+          "text_content": "Retrieval",
+          "lines": [
+            {
+              "text": "Retrieval",
+              "width_emu": 1703797,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_419",
+          "node_type": "text",
+          "rect": {
+            "x": 3771379,
+            "y": 4218431,
+            "w": 3894797,
+            "h": 633984
+          },
+          "text_content": "Faked, four docs",
+          "lines": [
+            {
+              "text": "Faked, four docs",
+              "width_emu": 3216151,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_420",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 2765539,
+            "h": 633984
+          },
+          "text_content": "Long inputs",
+          "lines": [
+            {
+              "text": "Long inputs",
+              "width_emu": 2232794,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_421",
+          "node_type": "text",
+          "rect": {
+            "x": 3771379,
+            "y": 5126735,
+            "w": 3894797,
+            "h": 633984
+          },
+          "text_content": "Known to break",
+          "lines": [
+            {
+              "text": "Known to break",
+              "width_emu": 3000462,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_422",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "52",
+          "lines": [
+            {
+              "text": "52",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 52,
+      "page_number": 53,
       "component": "code",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "code_dot_417",
+          "node_id": "code_dot_423",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -10288,7 +10440,7 @@
           "fill_color": "#FF5F56"
         },
         {
-          "node_id": "code_dot_418",
+          "node_id": "code_dot_424",
           "node_type": "box",
           "rect": {
             "x": 713232,
@@ -10300,7 +10452,7 @@
           "fill_color": "#FFBD2E"
         },
         {
-          "node_id": "code_dot_419",
+          "node_id": "code_dot_425",
           "node_type": "box",
           "rect": {
             "x": 969264,
@@ -10312,7 +10464,7 @@
           "fill_color": "#27C93F"
         },
         {
-          "node_id": "code_title_420",
+          "node_id": "code_title_426",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10338,7 +10490,7 @@
           "text_color": "#D4D4D4"
         },
         {
-          "node_id": "code_run_421",
+          "node_id": "code_run_427",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10363,7 +10515,7 @@
           "text_color": "#6A9955"
         },
         {
-          "node_id": "code_run_422",
+          "node_id": "code_run_428",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10388,7 +10540,7 @@
           "text_color": "#D4D4D4"
         },
         {
-          "node_id": "code_run_423",
+          "node_id": "code_run_429",
           "node_type": "text",
           "rect": {
             "x": 6193730,
@@ -10413,7 +10565,7 @@
           "text_color": "#CE9178"
         },
         {
-          "node_id": "code_run_424",
+          "node_id": "code_run_430",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10438,7 +10590,7 @@
           "text_color": "#D4D4D4"
         },
         {
-          "node_id": "code_run_425",
+          "node_id": "code_run_431",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10463,7 +10615,7 @@
           "text_color": "#D4D4D4"
         },
         {
-          "node_id": "code_run_426",
+          "node_id": "code_run_432",
           "node_type": "text",
           "rect": {
             "x": 2664693,
@@ -10488,7 +10640,7 @@
           "text_color": "#B5CEA8"
         },
         {
-          "node_id": "code_run_427",
+          "node_id": "code_run_433",
           "node_type": "text",
           "rect": {
             "x": 2904840,
@@ -10513,7 +10665,7 @@
           "text_color": "#D4D4D4"
         },
         {
-          "node_id": "code_run_428",
+          "node_id": "code_run_434",
           "node_type": "text",
           "rect": {
             "x": 5593259,
@@ -10538,7 +10690,7 @@
           "text_color": "#569CD6"
         },
         {
-          "node_id": "code_run_429",
+          "node_id": "code_run_435",
           "node_type": "text",
           "rect": {
             "x": 6193520,
@@ -10563,7 +10715,7 @@
           "text_color": "#D4D4D4"
         },
         {
-          "node_id": "code_run_430",
+          "node_id": "code_run_436",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10588,7 +10740,7 @@
           "text_color": "#D4D4D4"
         },
         {
-          "node_id": "code_run_431",
+          "node_id": "code_run_437",
           "node_type": "text",
           "rect": {
             "x": 4957155,
@@ -10613,7 +10765,7 @@
           "text_color": "#B5CEA8"
         },
         {
-          "node_id": "code_run_432",
+          "node_id": "code_run_438",
           "node_type": "text",
           "rect": {
             "x": 5437448,
@@ -10640,7 +10792,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_433",
+          "node_id": "chrome_pagenum_439",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -10648,10 +10800,10 @@
             "w": 548640,
             "h": 365760
           },
-          "text_content": "52",
+          "text_content": "53",
           "lines": [
             {
-              "text": "52",
+              "text": "53",
               "width_emu": 226020,
               "height_emu": 243840,
               "overflows": false
@@ -10668,14 +10820,14 @@
       "background": "#0C1A1C"
     },
     {
-      "slide_index": 52,
-      "page_number": 53,
+      "slide_index": 53,
+      "page_number": 54,
       "component": "file-tree",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_434",
+          "node_id": "title_440",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10699,7 +10851,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "tree_card_435",
+          "node_id": "tree_card_441",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -10712,7 +10864,7 @@
           "corner_radius": 128016
         },
         {
-          "node_id": "tree_name_436",
+          "node_id": "tree_name_442",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -10738,167 +10890,11 @@
           "text_color": "#569CD6"
         },
         {
-          "node_id": "tree_pfx_437",
-          "node_type": "text",
-          "rect": {
-            "x": 822960,
-            "y": 2215896,
-            "w": 777337,
-            "h": 396240
-          },
-          "text_content": "\u251c\u2500 ",
-          "lines": [
-            {
-              "text": "\u251c\u2500 ",
-              "width_emu": 594457,
-              "height_emu": 396240,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 26,
-          "bold": false,
-          "italic": false,
-          "is_caption": true,
-          "group_id": "filetree",
-          "text_color": "#55707A"
-        },
-        {
-          "node_id": "tree_name_438",
-          "node_type": "text",
-          "rect": {
-            "x": 1417417,
-            "y": 2215896,
-            "w": 1173641,
-            "h": 396240
-          },
-          "text_content": "docs/",
-          "lines": [
-            {
-              "text": "docs/",
-              "width_emu": 990761,
-              "height_emu": 396240,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 26,
-          "bold": true,
-          "italic": false,
-          "is_caption": true,
-          "group_id": "filetree",
-          "text_color": "#569CD6"
-        },
-        {
-          "node_id": "tree_pfx_439",
-          "node_type": "text",
-          "rect": {
-            "x": 822960,
-            "y": 2612136,
-            "w": 1371793,
-            "h": 396240
-          },
-          "text_content": "\u2502  \u2514\u2500 ",
-          "lines": [
-            {
-              "text": "\u2502  \u2514\u2500 ",
-              "width_emu": 1188913,
-              "height_emu": 396240,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 26,
-          "bold": false,
-          "italic": false,
-          "is_caption": true,
-          "group_id": "filetree",
-          "text_color": "#55707A"
-        },
-        {
-          "node_id": "tree_name_440",
-          "node_type": "text",
-          "rect": {
-            "x": 2011873,
-            "y": 2612136,
-            "w": 2164402,
-            "h": 396240
-          },
-          "text_content": "index.html",
-          "lines": [
-            {
-              "text": "index.html",
-              "width_emu": 1981522,
-              "height_emu": 396240,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 26,
-          "bold": false,
-          "italic": false,
-          "is_caption": true,
-          "group_id": "filetree",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "tree_pfx_441",
-          "node_type": "text",
-          "rect": {
-            "x": 822960,
-            "y": 3008376,
-            "w": 777337,
-            "h": 396240
-          },
-          "text_content": "\u251c\u2500 ",
-          "lines": [
-            {
-              "text": "\u251c\u2500 ",
-              "width_emu": 594457,
-              "height_emu": 396240,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 26,
-          "bold": false,
-          "italic": false,
-          "is_caption": true,
-          "group_id": "filetree",
-          "text_color": "#55707A"
-        },
-        {
-          "node_id": "tree_name_442",
-          "node_type": "text",
-          "rect": {
-            "x": 1417417,
-            "y": 3008376,
-            "w": 1966250,
-            "h": 396240
-          },
-          "text_content": "fixtures/",
-          "lines": [
-            {
-              "text": "fixtures/",
-              "width_emu": 1783370,
-              "height_emu": 396240,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 26,
-          "bold": true,
-          "italic": false,
-          "is_caption": true,
-          "group_id": "filetree",
-          "text_color": "#569CD6"
-        },
-        {
           "node_id": "tree_pfx_443",
           "node_type": "text",
           "rect": {
             "x": 822960,
-            "y": 3404616,
+            "y": 2215896,
             "w": 777337,
             "h": 396240
           },
@@ -10924,15 +10920,15 @@
           "node_type": "text",
           "rect": {
             "x": 1417417,
-            "y": 3404616,
-            "w": 1371793,
+            "y": 2215896,
+            "w": 1173641,
             "h": 396240
           },
-          "text_content": "steps/",
+          "text_content": "docs/",
           "lines": [
             {
-              "text": "steps/",
-              "width_emu": 1188913,
+              "text": "docs/",
+              "width_emu": 990761,
               "height_emu": 396240,
               "overflows": false
             }
@@ -10950,15 +10946,15 @@
           "node_type": "text",
           "rect": {
             "x": 822960,
-            "y": 3800856,
-            "w": 777337,
+            "y": 2612136,
+            "w": 1371793,
             "h": 396240
           },
-          "text_content": "\u251c\u2500 ",
+          "text_content": "\u2502  \u2514\u2500 ",
           "lines": [
             {
-              "text": "\u251c\u2500 ",
-              "width_emu": 594457,
+              "text": "\u2502  \u2514\u2500 ",
+              "width_emu": 1188913,
               "height_emu": 396240,
               "overflows": false
             }
@@ -10975,16 +10971,16 @@
           "node_id": "tree_name_446",
           "node_type": "text",
           "rect": {
-            "x": 1417417,
-            "y": 3800856,
-            "w": 1371793,
+            "x": 2011873,
+            "y": 2612136,
+            "w": 2164402,
             "h": 396240
           },
-          "text_content": "run.py",
+          "text_content": "index.html",
           "lines": [
             {
-              "text": "run.py",
-              "width_emu": 1188913,
+              "text": "index.html",
+              "width_emu": 1981522,
               "height_emu": 396240,
               "overflows": false
             }
@@ -11002,7 +10998,7 @@
           "node_type": "text",
           "rect": {
             "x": 822960,
-            "y": 4197096,
+            "y": 3008376,
             "w": 777337,
             "h": 396240
           },
@@ -11028,6 +11024,162 @@
           "node_type": "text",
           "rect": {
             "x": 1417417,
+            "y": 3008376,
+            "w": 1966250,
+            "h": 396240
+          },
+          "text_content": "fixtures/",
+          "lines": [
+            {
+              "text": "fixtures/",
+              "width_emu": 1783370,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#569CD6"
+        },
+        {
+          "node_id": "tree_pfx_449",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 3404616,
+            "w": 777337,
+            "h": 396240
+          },
+          "text_content": "\u251c\u2500 ",
+          "lines": [
+            {
+              "text": "\u251c\u2500 ",
+              "width_emu": 594457,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_450",
+          "node_type": "text",
+          "rect": {
+            "x": 1417417,
+            "y": 3404616,
+            "w": 1371793,
+            "h": 396240
+          },
+          "text_content": "steps/",
+          "lines": [
+            {
+              "text": "steps/",
+              "width_emu": 1188913,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#569CD6"
+        },
+        {
+          "node_id": "tree_pfx_451",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 3800856,
+            "w": 777337,
+            "h": 396240
+          },
+          "text_content": "\u251c\u2500 ",
+          "lines": [
+            {
+              "text": "\u251c\u2500 ",
+              "width_emu": 594457,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_452",
+          "node_type": "text",
+          "rect": {
+            "x": 1417417,
+            "y": 3800856,
+            "w": 1371793,
+            "h": 396240
+          },
+          "text_content": "run.py",
+          "lines": [
+            {
+              "text": "run.py",
+              "width_emu": 1188913,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#D4D4D4"
+        },
+        {
+          "node_id": "tree_pfx_453",
+          "node_type": "text",
+          "rect": {
+            "x": 822960,
+            "y": 4197096,
+            "w": 777337,
+            "h": 396240
+          },
+          "text_content": "\u251c\u2500 ",
+          "lines": [
+            {
+              "text": "\u251c\u2500 ",
+              "width_emu": 594457,
+              "height_emu": 396240,
+              "overflows": false
+            }
+          ],
+          "font": "courier new",
+          "size_pt": 26,
+          "bold": false,
+          "italic": false,
+          "is_caption": true,
+          "group_id": "filetree",
+          "text_color": "#55707A"
+        },
+        {
+          "node_id": "tree_name_454",
+          "node_type": "text",
+          "rect": {
+            "x": 1417417,
             "y": 4197096,
             "w": 2164402,
             "h": 396240
@@ -11050,7 +11202,7 @@
           "text_color": "#D4D4D4"
         },
         {
-          "node_id": "tree_pfx_449",
+          "node_id": "tree_pfx_455",
           "node_type": "text",
           "rect": {
             "x": 822960,
@@ -11076,7 +11228,7 @@
           "text_color": "#55707A"
         },
         {
-          "node_id": "tree_name_450",
+          "node_id": "tree_name_456",
           "node_type": "text",
           "rect": {
             "x": 1417417,
@@ -11104,285 +11256,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_451",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "53",
-          "lines": [
-            {
-              "text": "53",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 53,
-      "page_number": 54,
-      "component": "two-panel-list",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_452",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "Hiding and Naming",
-          "lines": [
-            {
-              "text": "Hiding and Naming",
-              "width_emu": 4859722,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "lp_head_453",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 621791
-          },
-          "text_content": "Hiding a limit",
-          "lines": [
-            {
-              "text": "Hiding a limit",
-              "width_emu": 2710768,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "lp_head",
-          "text_color": "#5B6B82"
-        },
-        {
-          "node_id": "lp_rule_454",
-          "node_type": "box",
-          "rect": {
-            "x": 548640,
-            "y": 2176271,
-            "w": 1650492,
-            "h": 54864
-          },
-          "group_id": "lp_head",
-          "fill_color": "#5B6B82"
-        },
-        {
-          "node_id": "rp_head_455",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 621791
-          },
-          "text_content": "Naming a limit",
-          "lines": [
-            {
-              "text": "Naming a limit",
-              "width_emu": 2951125,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "rp_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "rp_rule_456",
-          "node_type": "box",
-          "rect": {
-            "x": 6324600,
-            "y": 2176271,
-            "w": 1650492,
-            "h": 54864
-          },
-          "group_id": "rp_head",
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "lp_item_457",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2395727,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "They find it anyway",
-          "lines": [
-            {
-              "text": "They find it anyway",
-              "width_emu": 3696022,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "lp_head"
-        },
-        {
-          "node_id": "lp_item_458",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3608831,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "It looks like a mistake",
-          "lines": [
-            {
-              "text": "It looks like a mistake",
-              "width_emu": 4103576,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "lp_head"
-        },
-        {
-          "node_id": "lp_item_459",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4821935,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "You lose the room",
-          "lines": [
-            {
-              "text": "You lose the room",
-              "width_emu": 3464731,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "lp_head"
-        },
-        {
-          "node_id": "rp_item_460",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 2395727,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "You look in control",
-          "lines": [
-            {
-              "text": "You look in control",
-              "width_emu": 3512803,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "rp_head"
-        },
-        {
-          "node_id": "rp_item_461",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 3608831,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "It reads as a decision",
-          "lines": [
-            {
-              "text": "It reads as a decision",
-              "width_emu": 4080383,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "rp_head"
-        },
-        {
-          "node_id": "rp_item_462",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 4821935,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "The question moves on",
-          "lines": [
-            {
-              "text": "The question moves on",
-              "width_emu": 4488569,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "rp_head"
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_463",
+          "node_id": "chrome_pagenum_457",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -11411,12 +11285,12 @@
     {
       "slide_index": 54,
       "page_number": 55,
-      "component": "icon-text-rows",
+      "component": "two-panel-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_464",
+          "node_id": "title_458",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -11424,11 +11298,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "What Day 3 Will Attack",
+          "text_content": "Hiding and Naming",
           "lines": [
             {
-              "text": "What Day 3 Will Attack",
-              "width_emu": 5725455,
+              "text": "Hiding and Naming",
+              "width_emu": 4859722,
               "height_emu": 640080,
               "overflows": false
             }
@@ -11440,19 +11314,19 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "heading_465",
+          "node_id": "lp_head_459",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 11277600,
-            "h": 518159
+            "w": 5501640,
+            "h": 621791
           },
-          "text_content": "The undocumented fake",
+          "text_content": "Hiding a limit",
           "lines": [
             {
-              "text": "The undocumented fake",
-              "width_emu": 4966333,
+              "text": "Hiding a limit",
+              "width_emu": 2710768,
               "height_emu": 518160,
               "overflows": false
             }
@@ -11461,46 +11335,35 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "group_id": "itr_0"
+          "group_id": "lp_head",
+          "text_color": "#5B6B82"
         },
         {
-          "node_id": "body_466",
-          "node_type": "text",
+          "node_id": "lp_rule_460",
+          "node_type": "box",
           "rect": {
-            "x": 457200,
-            "y": 2109215,
-            "w": 11277600,
-            "h": 627889
+            "x": 548640,
+            "y": 2176271,
+            "w": 1650492,
+            "h": 54864
           },
-          "text_content": "Anything real-looking that is not on your list",
-          "lines": [
-            {
-              "text": "Anything real-looking that is not on your list",
-              "width_emu": 8232663,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "itr_0"
+          "group_id": "lp_head",
+          "fill_color": "#5B6B82"
         },
         {
-          "node_id": "heading_467",
+          "node_id": "rp_head_461",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 3011424,
-            "w": 11277600,
-            "h": 518159
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 621791
           },
-          "text_content": "The single input",
+          "text_content": "Naming a limit",
           "lines": [
             {
-              "text": "The single input",
-              "width_emu": 3310396,
+              "text": "Naming a limit",
+              "width_emu": 2951125,
               "height_emu": 518160,
               "overflows": false
             }
@@ -11509,22 +11372,35 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "group_id": "itr_1"
+          "group_id": "rp_head",
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "body_468",
+          "node_id": "rp_rule_462",
+          "node_type": "box",
+          "rect": {
+            "x": 6324600,
+            "y": 2176271,
+            "w": 1650492,
+            "h": 54864
+          },
+          "group_id": "rp_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "lp_item_463",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3621023,
-            "w": 11277600,
-            "h": 627889
+            "y": 2395727,
+            "w": 5501640,
+            "h": 609600
           },
-          "text_content": "The second thing they try will not be yours",
+          "text_content": "They find it anyway",
           "lines": [
             {
-              "text": "The second thing they try will not be yours",
-              "width_emu": 8064413,
+              "text": "They find it anyway",
+              "width_emu": 3696022,
               "height_emu": 518160,
               "overflows": false
             }
@@ -11533,46 +11409,22 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "itr_1"
+          "group_id": "lp_head"
         },
         {
-          "node_id": "heading_469",
+          "node_id": "lp_item_464",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4523232,
-            "w": 11277600,
-            "h": 518159
+            "y": 3608831,
+            "w": 5501640,
+            "h": 609600
           },
-          "text_content": "The dead link",
+          "text_content": "It looks like a mistake",
           "lines": [
             {
-              "text": "The dead link",
-              "width_emu": 2759261,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "itr_2"
-        },
-        {
-          "node_id": "body_470",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5132831,
-            "w": 11277600,
-            "h": 627889
-          },
-          "text_content": "A URL that only worked on your machine",
-          "lines": [
-            {
-              "text": "A URL that only worked on your machine",
-              "width_emu": 7808454,
+              "text": "It looks like a mistake",
+              "width_emu": 4103576,
               "height_emu": 518160,
               "overflows": false
             }
@@ -11581,12 +11433,108 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "group_id": "itr_2"
+          "group_id": "lp_head"
+        },
+        {
+          "node_id": "lp_item_465",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4821935,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "You lose the room",
+          "lines": [
+            {
+              "text": "You lose the room",
+              "width_emu": 3464731,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "lp_head"
+        },
+        {
+          "node_id": "rp_item_466",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "You look in control",
+          "lines": [
+            {
+              "text": "You look in control",
+              "width_emu": 3512803,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rp_head"
+        },
+        {
+          "node_id": "rp_item_467",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3608831,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "It reads as a decision",
+          "lines": [
+            {
+              "text": "It reads as a decision",
+              "width_emu": 4080383,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rp_head"
+        },
+        {
+          "node_id": "rp_item_468",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4821935,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "The question moves on",
+          "lines": [
+            {
+              "text": "The question moves on",
+              "width_emu": 4488569,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rp_head"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_471",
+          "node_id": "chrome_pagenum_469",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -11615,12 +11563,12 @@
     {
       "slide_index": 55,
       "page_number": 56,
-      "component": "bullet-list",
+      "component": "icon-text-rows",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_472",
+          "node_id": "title_470",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -11628,11 +11576,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Leaving This Session",
+          "text_content": "What Day 3 Will Attack",
           "lines": [
             {
-              "text": "Leaving This Session",
-              "width_emu": 5454067,
+              "text": "What Day 3 Will Attack",
+              "width_emu": 5725455,
               "height_emu": 640080,
               "overflows": false
             }
@@ -11644,42 +11592,43 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_473",
+          "node_id": "heading_471",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1908050,
+            "y": 1499616,
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "A URL a stranger can open",
+          "text_content": "The undocumented fake",
           "lines": [
             {
-              "text": "A URL a stranger can open",
-              "width_emu": 5192775,
+              "text": "The undocumented fake",
+              "width_emu": 4966333,
               "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "bold": true,
+          "italic": false,
+          "group_id": "itr_0"
         },
         {
-          "node_id": "bl_item_474",
+          "node_id": "body_472",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2883409,
+            "y": 2109215,
             "w": 11277600,
-            "h": 518159
+            "h": 627889
           },
-          "text_content": "It works with your laptop shut",
+          "text_content": "Anything real-looking that is not on your list",
           "lines": [
             {
-              "text": "It works with your laptop shut",
-              "width_emu": 5567859,
+              "text": "Anything real-looking that is not on your list",
+              "width_emu": 8232663,
               "height_emu": 518160,
               "overflows": false
             }
@@ -11687,45 +11636,47 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "itr_0"
         },
         {
-          "node_id": "bl_item_475",
+          "node_id": "heading_473",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3858768,
+            "y": 3011424,
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "A three-minute script, rehearsed",
+          "text_content": "The single input",
           "lines": [
             {
-              "text": "A three-minute script, rehearsed",
-              "width_emu": 6144084,
+              "text": "The single input",
+              "width_emu": 3310396,
               "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "bold": true,
+          "italic": false,
+          "group_id": "itr_1"
         },
         {
-          "node_id": "bl_item_476",
+          "node_id": "body_474",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4834127,
+            "y": 3621023,
             "w": 11277600,
-            "h": 518159
+            "h": 627889
           },
-          "text_content": "CAVEATS.md, committed",
+          "text_content": "The second thing they try will not be yours",
           "lines": [
             {
-              "text": "CAVEATS.md, committed",
-              "width_emu": 4902870,
+              "text": "The second thing they try will not be yours",
+              "width_emu": 8064413,
               "height_emu": 518160,
               "overflows": false
             }
@@ -11733,7 +11684,56 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "itr_1"
+        },
+        {
+          "node_id": "heading_475",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4523232,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "The dead link",
+          "lines": [
+            {
+              "text": "The dead link",
+              "width_emu": 2759261,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "itr_2"
+        },
+        {
+          "node_id": "body_476",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5132831,
+            "w": 11277600,
+            "h": 627889
+          },
+          "text_content": "A URL that only worked on your machine",
+          "lines": [
+            {
+              "text": "A URL that only worked on your machine",
+              "width_emu": 7808454,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "itr_2"
         }
       ],
       "chrome": [
@@ -11767,7 +11767,7 @@
     {
       "slide_index": 56,
       "page_number": 57,
-      "component": "table-slide",
+      "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
@@ -11780,11 +11780,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Write This Down Now",
+          "text_content": "Leaving This Session",
           "lines": [
             {
-              "text": "Write This Down Now",
-              "width_emu": 5442607,
+              "text": "Leaving This Session",
+              "width_emu": 5454067,
               "height_emu": 640080,
               "overflows": false
             }
@@ -11796,81 +11796,65 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_479",
+          "node_id": "bl_item_479",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1499616,
-            "w": 4445722,
+            "y": 1908050,
+            "w": 11277600,
             "h": 518159
           },
-          "text_content": "Question",
+          "text_content": "A URL a stranger can open",
           "lines": [
             {
-              "text": "Question",
-              "width_emu": 1871204,
+              "text": "A URL a stranger can open",
+              "width_emu": 5192775,
               "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#123A6B"
+          "bold": false,
+          "italic": false
         },
         {
-          "node_id": "th_480",
+          "node_id": "bl_item_480",
           "node_type": "text",
           "rect": {
-            "x": 5451562,
-            "y": 1499616,
-            "w": 2925356,
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
             "h": 518159
           },
-          "text_content": "Your answer",
+          "text_content": "It works with your laptop shut",
           "lines": [
             {
-              "text": "Your answer",
-              "width_emu": 2559596,
+              "text": "It works with your laptop shut",
+              "width_emu": 5567859,
               "height_emu": 518160,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#123A6B"
+          "bold": false,
+          "italic": false
         },
         {
-          "node_id": "table_rule_481",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2072639,
-            "w": 7919718,
-            "h": 54864
-          },
-          "group_id": "table_head",
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "td_482",
+          "node_id": "bl_item_481",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2401823,
-            "w": 4445722,
-            "h": 633984
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "The public URL",
+          "text_content": "A three-minute script, rehearsed",
           "lines": [
             {
-              "text": "The public URL",
-              "width_emu": 2976004,
+              "text": "A three-minute script, rehearsed",
+              "width_emu": 6144084,
               "height_emu": 518160,
               "overflows": false
             }
@@ -11881,157 +11865,19 @@
           "italic": false
         },
         {
-          "node_id": "td_483",
-          "node_type": "text",
-          "rect": {
-            "x": 5451562,
-            "y": 2401823,
-            "w": 2925356,
-            "h": 633984
-          },
-          "text_content": "\u2026",
-          "lines": [
-            {
-              "text": "\u2026",
-              "width_emu": 431800,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_484",
+          "node_id": "bl_item_482",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3310127,
-            "w": 4445722,
-            "h": 633984
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "Who drives the demo",
+          "text_content": "CAVEATS.md, committed",
           "lines": [
             {
-              "text": "Who drives the demo",
-              "width_emu": 4079962,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_485",
-          "node_type": "text",
-          "rect": {
-            "x": 5451562,
-            "y": 3310127,
-            "w": 2925356,
-            "h": 633984
-          },
-          "text_content": "\u2026",
-          "lines": [
-            {
-              "text": "\u2026",
-              "width_emu": 431800,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_486",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4218431,
-            "w": 4445722,
-            "h": 633984
-          },
-          "text_content": "Biggest caveat",
-          "lines": [
-            {
-              "text": "Biggest caveat",
-              "width_emu": 2832422,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_487",
-          "node_type": "text",
-          "rect": {
-            "x": 5451562,
-            "y": 4218431,
-            "w": 2925356,
-            "h": 633984
-          },
-          "text_content": "\u2026",
-          "lines": [
-            {
-              "text": "\u2026",
-              "width_emu": 431800,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_488",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5126735,
-            "w": 4445722,
-            "h": 633984
-          },
-          "text_content": "Most likely to break",
-          "lines": [
-            {
-              "text": "Most likely to break",
-              "width_emu": 3695601,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_489",
-          "node_type": "text",
-          "rect": {
-            "x": 5451562,
-            "y": 5126735,
-            "w": 2925356,
-            "h": 633984
-          },
-          "text_content": "\u2026",
-          "lines": [
-            {
-              "text": "\u2026",
-              "width_emu": 431800,
+              "text": "CAVEATS.md, committed",
+              "width_emu": 4902870,
               "height_emu": 518160,
               "overflows": false
             }
@@ -12044,7 +11890,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_490",
+          "node_id": "chrome_pagenum_483",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -12073,12 +11919,12 @@
     {
       "slide_index": 57,
       "page_number": 58,
-      "component": "bullet-list",
+      "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_491",
+          "node_id": "title_484",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -12086,11 +11932,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Tonight, If You Have Energy",
+          "text_content": "Write This Down Now",
           "lines": [
             {
-              "text": "Tonight, If You Have Energy",
-              "width_emu": 7023795,
+              "text": "Write This Down Now",
+              "width_emu": 5442607,
               "height_emu": 640080,
               "overflows": false
             }
@@ -12102,19 +11948,81 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_492",
+          "node_id": "th_485",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1908050,
-            "w": 11277600,
+            "y": 1499616,
+            "w": 4445722,
             "h": 518159
           },
-          "text_content": "Send the link to one stranger",
+          "text_content": "Question",
           "lines": [
             {
-              "text": "Send the link to one stranger",
-              "width_emu": 5521052,
+              "text": "Question",
+              "width_emu": 1871204,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "th_486",
+          "node_type": "text",
+          "rect": {
+            "x": 5451562,
+            "y": 1499616,
+            "w": 2925356,
+            "h": 518159
+          },
+          "text_content": "Your answer",
+          "lines": [
+            {
+              "text": "Your answer",
+              "width_emu": 2559596,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "table_rule_487",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 7919718,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_488",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 4445722,
+            "h": 633984
+          },
+          "text_content": "The public URL",
+          "lines": [
+            {
+              "text": "The public URL",
+              "width_emu": 2976004,
               "height_emu": 518160,
               "overflows": false
             }
@@ -12125,19 +12033,19 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_493",
+          "node_id": "td_489",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 2883409,
-            "w": 11277600,
-            "h": 518159
+            "x": 5451562,
+            "y": 2401823,
+            "w": 2925356,
+            "h": 633984
           },
-          "text_content": "Watch where they get stuck",
+          "text_content": "\u2026",
           "lines": [
             {
-              "text": "Watch where they get stuck",
-              "width_emu": 5287863,
+              "text": "\u2026",
+              "width_emu": 431800,
               "height_emu": 518160,
               "overflows": false
             }
@@ -12148,19 +12056,19 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_494",
+          "node_id": "td_490",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3858768,
-            "w": 11277600,
-            "h": 518159
+            "y": 3310127,
+            "w": 4445722,
+            "h": 633984
           },
-          "text_content": "Fix only what stopped them",
+          "text_content": "Who drives the demo",
           "lines": [
             {
-              "text": "Fix only what stopped them",
-              "width_emu": 5256237,
+              "text": "Who drives the demo",
+              "width_emu": 4079962,
               "height_emu": 518160,
               "overflows": false
             }
@@ -12171,19 +12079,111 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_495",
+          "node_id": "td_491",
+          "node_type": "text",
+          "rect": {
+            "x": 5451562,
+            "y": 3310127,
+            "w": 2925356,
+            "h": 633984
+          },
+          "text_content": "\u2026",
+          "lines": [
+            {
+              "text": "\u2026",
+              "width_emu": 431800,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_492",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4834127,
-            "w": 11277600,
-            "h": 518159
+            "y": 4218431,
+            "w": 4445722,
+            "h": 633984
           },
-          "text_content": "Add what broke to the caveats",
+          "text_content": "Biggest caveat",
           "lines": [
             {
-              "text": "Add what broke to the caveats",
-              "width_emu": 5808849,
+              "text": "Biggest caveat",
+              "width_emu": 2832422,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_493",
+          "node_type": "text",
+          "rect": {
+            "x": 5451562,
+            "y": 4218431,
+            "w": 2925356,
+            "h": 633984
+          },
+          "text_content": "\u2026",
+          "lines": [
+            {
+              "text": "\u2026",
+              "width_emu": 431800,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_494",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 4445722,
+            "h": 633984
+          },
+          "text_content": "Most likely to break",
+          "lines": [
+            {
+              "text": "Most likely to break",
+              "width_emu": 3695601,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_495",
+          "node_type": "text",
+          "rect": {
+            "x": 5451562,
+            "y": 5126735,
+            "w": 2925356,
+            "h": 633984
+          },
+          "text_content": "\u2026",
+          "lines": [
+            {
+              "text": "\u2026",
+              "width_emu": 431800,
               "height_emu": 518160,
               "overflows": false
             }
@@ -12225,48 +12225,130 @@
     {
       "slide_index": 58,
       "page_number": 59,
-      "component": "question",
+      "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_498",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2926080,
-            "w": 128016,
-            "h": 1005840
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "question_497",
+          "node_id": "title_497",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 2926080,
-            "w": 10738104,
-            "h": 1005840
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
           },
-          "text_content": "What would you attack?",
+          "text_content": "Tonight, If You Have Energy",
           "lines": [
             {
-              "text": "What would you attack?",
-              "width_emu": 8720956,
-              "height_emu": 914400,
+              "text": "Tonight, If You Have Energy",
+              "width_emu": 7023795,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 60.0,
+          "size_pt": 42.0,
           "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_498",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Send the link to one stranger",
+          "lines": [
+            {
+              "text": "Send the link to one stranger",
+              "width_emu": 5521052,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_499",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Watch where they get stuck",
+          "lines": [
+            {
+              "text": "Watch where they get stuck",
+              "width_emu": 5287863,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_500",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Fix only what stopped them",
+          "lines": [
+            {
+              "text": "Fix only what stopped them",
+              "width_emu": 5256237,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_501",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Add what broke to the caveats",
+          "lines": [
+            {
+              "text": "Add what broke to the caveats",
+              "width_emu": 5808849,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
           "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_499",
+          "node_id": "chrome_pagenum_502",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -12295,12 +12377,82 @@
     {
       "slide_index": 59,
       "page_number": 60,
+      "component": "question",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_504",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2926080,
+            "w": 128016,
+            "h": 1005840
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "question_503",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2926080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "What would you attack?",
+          "lines": [
+            {
+              "text": "What would you attack?",
+              "width_emu": 8720956,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_505",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "60",
+          "lines": [
+            {
+              "text": "60",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 60,
+      "page_number": 61,
       "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_500",
+          "node_id": "title_506",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -12324,7 +12476,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_501",
+          "node_id": "bl_item_507",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -12347,7 +12499,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_502",
+          "node_id": "bl_item_508",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -12370,7 +12522,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_503",
+          "node_id": "bl_item_509",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -12393,7 +12545,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_504",
+          "node_id": "bl_item_510",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -12418,7 +12570,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_505",
+          "node_id": "chrome_pagenum_511",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -12426,10 +12578,10 @@
             "w": 548640,
             "h": 365760
           },
-          "text_content": "60",
+          "text_content": "61",
           "lines": [
             {
-              "text": "60",
+              "text": "61",
               "width_emu": 226020,
               "height_emu": 243840,
               "overflows": false
