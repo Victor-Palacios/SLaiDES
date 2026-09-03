@@ -4500,11 +4500,11 @@
             "w": 5501640,
             "h": 847344
           },
-          "text_content": "Handles more than static",
+          "text_content": "Workers run your code",
           "lines": [
             {
-              "text": "Handles more than static",
-              "width_emu": 4776155,
+              "text": "Workers run your code",
+              "width_emu": 4359746,
               "height_emu": 518160,
               "overflows": false
             }
@@ -4546,11 +4546,11 @@
             "w": 5501640,
             "h": 847344
           },
-          "text_content": "Fast to set up",
+          "text_content": "Secret keys stay secret",
           "lines": [
             {
-              "text": "Fast to set up",
-              "width_emu": 2616101,
+              "text": "Secret keys stay secret",
+              "width_emu": 4463479,
               "height_emu": 518160,
               "overflows": false
             }
@@ -4569,11 +4569,11 @@
             "w": 5501640,
             "h": 847344
           },
-          "text_content": "Static pages only",
+          "text_content": "Static only, no server",
           "lines": [
             {
-              "text": "Static pages only",
-              "width_emu": 3288469,
+              "text": "Static only, no server",
+              "width_emu": 3999843,
               "height_emu": 518160,
               "overflows": false
             }

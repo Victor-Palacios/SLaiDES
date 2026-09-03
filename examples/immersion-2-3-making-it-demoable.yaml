@@ -290,15 +290,17 @@ slides:
     left_items:
       - text: "Already where your code is"
       - text: "A commit is a deploy"
-      - text: "Static pages only"
+      - text: "Static only, no server"
     right_items:
-      - text: "Handles more than static"
-      - text: "Fast to set up"
+      - text: "Workers run your code"
+      - text: "Secret keys stay secret"
       - text: "A second account to make"
     notes: >-
-      Two ways to ship. GitHub Pages is already where your code is, a commit is
-      a deploy, and it serves static pages only. Cloudflare handles more than
-      static and is fast to set up, but it is another account to make.
+      Two ways to ship. GitHub Pages is already where your code is and a commit
+      is a deploy, but it serves static files only, with nowhere to run code.
+      Cloudflare is another account to make, and in exchange its Workers run
+      code on a server, which is the only way a secret key stays out of the
+      page.
 
   - component: numbered-steps
     title: "Shipping with Pages"
