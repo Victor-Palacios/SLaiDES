@@ -1,0 +1,7676 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": null,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_1",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2575560,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "Victor Palacios",
+          "lines": [
+            {
+              "text": "Victor Palacios",
+              "width_emu": 5449714,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "subtitle_2",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 3764280,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Director of Data Science and AI Partnerships \u00b7 USF",
+          "lines": [
+            {
+              "text": "Director of Data Science and AI Partnerships \u00b7 USF",
+              "width_emu": 9815649,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": []
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "question",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_4",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2926080,
+            "w": 128016,
+            "h": 1005840
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "question_3",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2926080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "How do you end up here?",
+          "lines": [
+            {
+              "text": "How do you end up here?",
+              "width_emu": 9313292,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_5",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 2,
+      "page_number": 3,
+      "component": "timeline",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_6",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Still Collecting Degrees",
+          "lines": [
+            {
+              "text": "Still Collecting Degrees",
+              "width_emu": 5957776,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_date_7",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "2011",
+          "lines": [
+            {
+              "text": "2011",
+              "width_emu": 688795,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_title_8",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Berkeley",
+          "lines": [
+            {
+              "text": "Berkeley",
+              "width_emu": 1800572,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_9",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "BA in Japanese language and literature",
+          "lines": [
+            {
+              "text": "BA in",
+              "width_emu": 1008236,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Japanese",
+              "width_emu": 1872679,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "language",
+              "width_emu": 1776958,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "and",
+              "width_emu": 720440,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "literature",
+              "width_emu": 1679972,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "ev_date_10",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "2015",
+          "lines": [
+            {
+              "text": "2015",
+              "width_emu": 706313,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_title_11",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Nagoya",
+          "lines": [
+            {
+              "text": "Nagoya",
+              "width_emu": 1559793,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_12",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "MS in Information Science, in Japan",
+          "lines": [
+            {
+              "text": "MS in",
+              "width_emu": 1103747,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Information",
+              "width_emu": 2160054,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Science, in",
+              "width_emu": 2112194,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Japan",
+              "width_emu": 1176486,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "ev_date_13",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "2021",
+          "lines": [
+            {
+              "text": "2021",
+              "width_emu": 706313,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_title_14",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "USF",
+          "lines": [
+            {
+              "text": "USF",
+              "width_emu": 863600,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_15",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "MS in Data Science",
+          "lines": [
+            {
+              "text": "MS in Data",
+              "width_emu": 2135808,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Science",
+              "width_emu": 1536179,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "ev_date_16",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "2026",
+          "lines": [
+            {
+              "text": "2026",
+              "width_emu": 706313,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_title_17",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Quantic",
+          "lines": [
+            {
+              "text": "Quantic",
+              "width_emu": 1607443,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_18",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "MS in Software Eng, under way",
+          "lines": [
+            {
+              "text": "MS in",
+              "width_emu": 1103747,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Software",
+              "width_emu": 1704008,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Eng, under",
+              "width_emu": 2112615,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "way",
+              "width_emu": 767879,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_19",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "3",
+          "lines": [
+            {
+              "text": "3",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 3,
+      "page_number": 4,
+      "component": "agenda",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_20",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What I Will Cover",
+          "lines": [
+            {
+              "text": "What I Will Cover",
+              "width_emu": 4351586,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "agenda_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "agenda_rule_21",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1280160,
+            "w": 11277600,
+            "h": 64008
+          },
+          "group_id": "agenda_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "ag_num_22",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1618488,
+            "w": 914400,
+            "h": 518159
+          },
+          "text_content": "01",
+          "lines": [
+            {
+              "text": "01",
+              "width_emu": 480293,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "agenda_0",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ag_item_23",
+          "node_type": "text",
+          "rect": {
+            "x": 1371600,
+            "y": 1618488,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Research, from brains to health",
+          "lines": [
+            {
+              "text": "Research, from brains to health",
+              "width_emu": 6024116,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "agenda_0"
+        },
+        {
+          "node_id": "ag_num_24",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2722626,
+            "w": 914400,
+            "h": 518159
+          },
+          "text_content": "02",
+          "lines": [
+            {
+              "text": "02",
+              "width_emu": 480293,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "agenda_1",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ag_item_25",
+          "node_type": "text",
+          "rect": {
+            "x": 1371600,
+            "y": 2722626,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "The path, and its detours",
+          "lines": [
+            {
+              "text": "The path, and its detours",
+              "width_emu": 4776788,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "agenda_1"
+        },
+        {
+          "node_id": "ag_num_26",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3826764,
+            "w": 914400,
+            "h": 518159
+          },
+          "text_content": "03",
+          "lines": [
+            {
+              "text": "03",
+              "width_emu": 480293,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "agenda_2",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ag_item_27",
+          "node_type": "text",
+          "rect": {
+            "x": 1371600,
+            "y": 3826764,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Writing things down in public",
+          "lines": [
+            {
+              "text": "Writing things down in public",
+              "width_emu": 5464336,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "agenda_2"
+        },
+        {
+          "node_id": "ag_num_28",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4930902,
+            "w": 914400,
+            "h": 518159
+          },
+          "text_content": "04",
+          "lines": [
+            {
+              "text": "04",
+              "width_emu": 480293,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "agenda_3",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ag_item_29",
+          "node_type": "text",
+          "rect": {
+            "x": 1371600,
+            "y": 4930902,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Partnerships, and one big repo",
+          "lines": [
+            {
+              "text": "Partnerships, and one big repo",
+              "width_emu": 5905202,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "agenda_3"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_30",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "4",
+          "lines": [
+            {
+              "text": "4",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 4,
+      "page_number": 5,
+      "component": "section-divider",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_33",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1783080,
+            "w": 128016,
+            "h": 2011680
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_num_31",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 1783080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "01",
+          "lines": [
+            {
+              "text": "01",
+              "width_emu": 847576,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_title_32",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3063240,
+            "w": 10738104,
+            "h": 731520
+          },
+          "text_content": "Research",
+          "lines": [
+            {
+              "text": "Research",
+              "width_emu": 2401863,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_34",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "5",
+          "lines": [
+            {
+              "text": "5",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 5,
+      "page_number": 6,
+      "component": "definition",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_37",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_35",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "Deception detection",
+          "lines": [
+            {
+              "text": "Deception detection",
+              "width_emu": 7282160,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "def_36",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "Finding what the brain does when someone lies",
+          "lines": [
+            {
+              "text": "Finding what the brain does when someone lies",
+              "width_emu": 9121353,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_38",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "6",
+          "lines": [
+            {
+              "text": "6",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 6,
+      "page_number": 7,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_39",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Nagoya, 2014",
+          "lines": [
+            {
+              "text": "Nagoya, 2014",
+              "width_emu": 3409801,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_40",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Are action lies unlike speech lies?",
+          "lines": [
+            {
+              "text": "Are action lies unlike speech lies?",
+              "width_emu": 6480584,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_41",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Measured with near-infrared light",
+          "lines": [
+            {
+              "text": "Measured with near-infrared light",
+              "width_emu": 6312123,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_42",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Forty sentences, three sessions",
+          "lines": [
+            {
+              "text": "Forty sentences, three sessions",
+              "width_emu": 6096012,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_43",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Published at JCSS in Japan",
+          "lines": [
+            {
+              "text": "Published at JCSS in Japan",
+              "width_emu": 5352802,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_44",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "7",
+          "lines": [
+            {
+              "text": "7",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 7,
+      "page_number": 8,
+      "component": "numbered-steps",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_45",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "How the Study Ran",
+          "lines": [
+            {
+              "text": "How the Study Ran",
+              "width_emu": 4859982,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_num_46",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "01",
+          "lines": [
+            {
+              "text": "01",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_head_47",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 1499616,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Learning",
+          "lines": [
+            {
+              "text": "Learning",
+              "width_emu": 2252365,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_body_48",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 2185416,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "You gesture or speak twenty sentences",
+          "lines": [
+            {
+              "text": "You gesture or speak twenty sentences",
+              "width_emu": 7521290,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_0"
+        },
+        {
+          "node_id": "step_num_49",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3011424,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "02",
+          "lines": [
+            {
+              "text": "02",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_head_50",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3011424,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Recognition",
+          "lines": [
+            {
+              "text": "Recognition",
+              "width_emu": 3081635,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_body_51",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3697224,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "You recall which ones you did which way",
+          "lines": [
+            {
+              "text": "You recall which ones you did which way",
+              "width_emu": 7784840,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_1"
+        },
+        {
+          "node_id": "step_num_52",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4523232,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "03",
+          "lines": [
+            {
+              "text": "03",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_head_53",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 4523232,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Lying",
+          "lines": [
+            {
+              "text": "Lying",
+              "width_emu": 1402519,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "step_body_54",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 5209032,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "You lie about twenty, tell the truth about twenty",
+          "lines": [
+            {
+              "text": "You lie about twenty, tell the truth about twenty",
+              "width_emu": 8881628,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_2"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_55",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "8",
+          "lines": [
+            {
+              "text": "8",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 8,
+      "page_number": 9,
+      "component": "pull-quote",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_58",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2621280,
+            "w": 128016,
+            "h": 1615440
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "quote_56",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2621280,
+            "w": 10738104,
+            "h": 731520
+          },
+          "text_content": "\"Different lies, different regions.\"",
+          "lines": [
+            {
+              "text": "\"Different lies, different regions.\"",
+              "width_emu": 8389590,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "attrib_57",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3627120,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "- Palacios, Saito et al., JCSS 2014",
+          "lines": [
+            {
+              "text": "- Palacios, Saito et al., JCSS 2014",
+              "width_emu": 6600341,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "text_color": "#5B6B82"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_59",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "9",
+          "lines": [
+            {
+              "text": "9",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 9,
+      "page_number": 10,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_60",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Then Healthcare, 2021",
+          "lines": [
+            {
+              "text": "Then Healthcare, 2021",
+              "width_emu": 5632996,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_61",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "A sensor reads blood sugar all day",
+          "lines": [
+            {
+              "text": "A sensor reads blood sugar all day",
+              "width_emu": 6625010,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_62",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Can it tell when you ate?",
+          "lines": [
+            {
+              "text": "Can it tell when you ate?",
+              "width_emu": 4728716,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_63",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Healthy participants, not patients",
+          "lines": [
+            {
+              "text": "Healthy participants, not patients",
+              "width_emu": 6264684,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_64",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "First author, with Woodbridge and Fry",
+          "lines": [
+            {
+              "text": "First author, with Woodbridge and Fry",
+              "width_emu": 7191958,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_65",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "10",
+          "lines": [
+            {
+              "text": "10",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 10,
+      "page_number": 11,
+      "component": "this-vs-that",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_66",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What It Was Really For",
+          "lines": [
+            {
+              "text": "What It Was Really For",
+              "width_emu": 5729883,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "vs_value_67",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2776728,
+            "w": 4792980,
+            "h": 914400
+          },
+          "text_content": "Asked",
+          "lines": [
+            {
+              "text": "Asked",
+              "width_emu": 2287116,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_label_68",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3965448,
+            "w": 4792980,
+            "h": 518159
+          },
+          "text_content": "Did you eat when told?",
+          "lines": [
+            {
+              "text": "Did you eat when told?",
+              "width_emu": 4392848,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_value_69",
+          "node_type": "text",
+          "rect": {
+            "x": 6941820,
+            "y": 2776728,
+            "w": 4792980,
+            "h": 914400
+          },
+          "text_content": "Measured",
+          "lines": [
+            {
+              "text": "Measured",
+              "width_emu": 3557364,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_label_70",
+          "node_type": "text",
+          "rect": {
+            "x": 6941820,
+            "y": 3965448,
+            "w": 4792980,
+            "h": 518159
+          },
+          "text_content": "The sensor knew",
+          "lines": [
+            {
+              "text": "The sensor knew",
+              "width_emu": 3288047,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_text_71",
+          "node_type": "text",
+          "rect": {
+            "x": 5524500,
+            "y": 3310127,
+            "w": 1143000,
+            "h": 640080
+          },
+          "text_content": "VS",
+          "lines": [
+            {
+              "text": "VS",
+              "width_emu": 711547,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "align": "center"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_72",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "11",
+          "lines": [
+            {
+              "text": "11",
+              "width_emu": 210939,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 11,
+      "page_number": 12,
+      "component": "stat-callout",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_73",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Number That Mattered",
+          "lines": [
+            {
+              "text": "The Number That Mattered",
+              "width_emu": 6757095,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_value_74",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2449068,
+            "w": 5501640,
+            "h": 914400
+          },
+          "text_content": "60%",
+          "lines": [
+            {
+              "text": "60%",
+              "width_emu": 1525116,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_75",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3637788,
+            "w": 5501640,
+            "h": 518159
+          },
+          "text_content": "Baseline",
+          "lines": [
+            {
+              "text": "Baseline",
+              "width_emu": 1656358,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_76",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4430267,
+            "w": 5501640,
+            "h": 381000
+          },
+          "text_content": "Where we started",
+          "lines": [
+            {
+              "text": "Where we started",
+              "width_emu": 2488065,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_77",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2449068,
+            "w": 5501640,
+            "h": 914400
+          },
+          "text_content": "89%",
+          "lines": [
+            {
+              "text": "89%",
+              "width_emu": 1525116,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_78",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3637788,
+            "w": 5501640,
+            "h": 518159
+          },
+          "text_content": "After the work",
+          "lines": [
+            {
+              "text": "After the work",
+              "width_emu": 2663751,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_79",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4430267,
+            "w": 5501640,
+            "h": 381000
+          },
+          "text_content": "Same data, better target",
+          "lines": [
+            {
+              "text": "Same data, better target",
+              "width_emu": 3423977,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_80",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "12",
+          "lines": [
+            {
+              "text": "12",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 12,
+      "page_number": 13,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_81",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "ICD-10 Coding, 2024",
+          "lines": [
+            {
+              "text": "ICD-10 Coding, 2024",
+              "width_emu": 5157415,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_82",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Clinical notes into diagnosis codes",
+          "lines": [
+            {
+              "text": "Clinical notes into diagnosis codes",
+              "width_emu": 6600763,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_83",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Small open models, not large ones",
+          "lines": [
+            {
+              "text": "Small open models, not large ones",
+              "width_emu": 6648834,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_84",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Over 100,000 notes from MIMIC-IV",
+          "lines": [
+            {
+              "text": "Over 100,000 notes from MIMIC-IV",
+              "width_emu": 6719255,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_85",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Swiss and USF collaboration",
+          "lines": [
+            {
+              "text": "Swiss and USF collaboration",
+              "width_emu": 5519998,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_86",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "13",
+          "lines": [
+            {
+              "text": "13",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 13,
+      "page_number": 14,
+      "component": "table-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_87",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What We Benchmarked",
+          "lines": [
+            {
+              "text": "What We Benchmarked",
+              "width_emu": 5918188,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_88",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2045732,
+            "h": 518159
+          },
+          "text_content": "Model",
+          "lines": [
+            {
+              "text": "Model",
+              "width_emu": 1247329,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "th_89",
+          "node_type": "text",
+          "rect": {
+            "x": 3051572,
+            "y": 1499616,
+            "w": 3557875,
+            "h": 518159
+          },
+          "text_content": "Size",
+          "lines": [
+            {
+              "text": "Size",
+              "width_emu": 864022,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "table_rule_90",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 6152247,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_91",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 2045732,
+            "h": 936752
+          },
+          "text_content": "Falcon",
+          "lines": [
+            {
+              "text": "Falcon",
+              "width_emu": 1296033,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_92",
+          "node_type": "text",
+          "rect": {
+            "x": 3051572,
+            "y": 2401823,
+            "w": 3557875,
+            "h": 936752
+          },
+          "text_content": "1B parameters",
+          "lines": [
+            {
+              "text": "1B parameters",
+              "width_emu": 2832001,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_93",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3612895,
+            "w": 2045732,
+            "h": 936752
+          },
+          "text_content": "Phi-3.5",
+          "lines": [
+            {
+              "text": "Phi-3.5",
+              "width_emu": 1368140,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_94",
+          "node_type": "text",
+          "rect": {
+            "x": 3051572,
+            "y": 3612895,
+            "w": 3557875,
+            "h": 936752
+          },
+          "text_content": "3.5B parameters",
+          "lines": [
+            {
+              "text": "3.5B parameters",
+              "width_emu": 3192115,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_95",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4823967,
+            "w": 2045732,
+            "h": 936752
+          },
+          "text_content": "Meditron",
+          "lines": [
+            {
+              "text": "Meditron",
+              "width_emu": 1679972,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_96",
+          "node_type": "text",
+          "rect": {
+            "x": 3051572,
+            "y": 4823967,
+            "w": 3557875,
+            "h": 936752
+          },
+          "text_content": "7B parameters",
+          "lines": [
+            {
+              "text": "7B parameters",
+              "width_emu": 2832001,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_97",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "14",
+          "lines": [
+            {
+              "text": "14",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 14,
+      "page_number": 15,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_98",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What Surprised Us",
+          "lines": [
+            {
+              "text": "What Surprised Us",
+              "width_emu": 4771690,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_99",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "The 1B model held its own",
+          "lines": [
+            {
+              "text": "The 1B model held its own",
+              "width_emu": 5088409,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_100",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "It was not a medical model",
+          "lines": [
+            {
+              "text": "It was not a medical model",
+              "width_emu": 5112023,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_101",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "LoRA kept quality, cut compute",
+          "lines": [
+            {
+              "text": "LoRA kept quality, cut compute",
+              "width_emu": 5920594,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_102",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Small can be good enough",
+          "lines": [
+            {
+              "text": "Small can be good enough",
+              "width_emu": 5137534,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_103",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "15",
+          "lines": [
+            {
+              "text": "15",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 15,
+      "page_number": 16,
+      "component": "table-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_104",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Three Papers, One Habit",
+          "lines": [
+            {
+              "text": "Three Papers, One Habit",
+              "width_emu": 6195306,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_105",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 1326346,
+            "h": 518159
+          },
+          "text_content": "Year",
+          "lines": [
+            {
+              "text": "Year",
+              "width_emu": 912515,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "th_106",
+          "node_type": "text",
+          "rect": {
+            "x": 2332186,
+            "y": 1499616,
+            "w": 5262094,
+            "h": 518159
+          },
+          "text_content": "Question",
+          "lines": [
+            {
+              "text": "Question",
+              "width_emu": 1871204,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "table_rule_107",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 7137080,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_108",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 1326346,
+            "h": 936752
+          },
+          "text_content": "2014",
+          "lines": [
+            {
+              "text": "2014",
+              "width_emu": 960586,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_109",
+          "node_type": "text",
+          "rect": {
+            "x": 2332186,
+            "y": 2401823,
+            "w": 5262094,
+            "h": 936752
+          },
+          "text_content": "What does a lie look like?",
+          "lines": [
+            {
+              "text": "What does a lie look like?",
+              "width_emu": 4896334,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_110",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3612895,
+            "w": 1326346,
+            "h": 936752
+          },
+          "text_content": "2021",
+          "lines": [
+            {
+              "text": "2021",
+              "width_emu": 960586,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_111",
+          "node_type": "text",
+          "rect": {
+            "x": 2332186,
+            "y": 3612895,
+            "w": 5262094,
+            "h": 936752
+          },
+          "text_content": "Did you really eat?",
+          "lines": [
+            {
+              "text": "Did you really eat?",
+              "width_emu": 3576265,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_112",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4823967,
+            "w": 1326346,
+            "h": 936752
+          },
+          "text_content": "2024",
+          "lines": [
+            {
+              "text": "2024",
+              "width_emu": 960586,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_113",
+          "node_type": "text",
+          "rect": {
+            "x": 2332186,
+            "y": 4823967,
+            "w": 5262094,
+            "h": 936752
+          },
+          "text_content": "Can a small model code?",
+          "lines": [
+            {
+              "text": "Can a small model code?",
+              "width_emu": 4872298,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_114",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "16",
+          "lines": [
+            {
+              "text": "16",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 16,
+      "page_number": 17,
+      "component": "section-divider",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_117",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1783080,
+            "w": 128016,
+            "h": 2011680
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_num_115",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 1783080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "02",
+          "lines": [
+            {
+              "text": "02",
+              "width_emu": 847576,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_title_116",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3063240,
+            "w": 10738104,
+            "h": 731520
+          },
+          "text_content": "The Path",
+          "lines": [
+            {
+              "text": "The Path",
+              "width_emu": 2252365,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_118",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "17",
+          "lines": [
+            {
+              "text": "17",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 17,
+      "page_number": 18,
+      "component": "this-vs-that",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_119",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Where I Started",
+          "lines": [
+            {
+              "text": "Where I Started",
+              "width_emu": 3912468,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "vs_value_120",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2776728,
+            "w": 4792980,
+            "h": 914400
+          },
+          "text_content": "Japanese",
+          "lines": [
+            {
+              "text": "Japanese",
+              "width_emu": 3473648,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_label_121",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3965448,
+            "w": 4792980,
+            "h": 518159
+          },
+          "text_content": "Language, literature",
+          "lines": [
+            {
+              "text": "Language, literature",
+              "width_emu": 3841080,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_value_122",
+          "node_type": "text",
+          "rect": {
+            "x": 6941820,
+            "y": 2776728,
+            "w": 4792980,
+            "h": 914400
+          },
+          "text_content": "Now",
+          "lines": [
+            {
+              "text": "Now",
+              "width_emu": 1608460,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_label_123",
+          "node_type": "text",
+          "rect": {
+            "x": 6941820,
+            "y": 3965448,
+            "w": 4792980,
+            "h": 518159
+          },
+          "text_content": "Data science and AI",
+          "lines": [
+            {
+              "text": "Data science and AI",
+              "width_emu": 3840659,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_text_124",
+          "node_type": "text",
+          "rect": {
+            "x": 5524500,
+            "y": 3310127,
+            "w": 1143000,
+            "h": 640080
+          },
+          "text_content": "VS",
+          "lines": [
+            {
+              "text": "VS",
+              "width_emu": 711547,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "align": "center"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_125",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "18",
+          "lines": [
+            {
+              "text": "18",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 18,
+      "page_number": 19,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_126",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What Japan Taught Me",
+          "lines": [
+            {
+              "text": "What Japan Taught Me",
+              "width_emu": 5768690,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_127",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Language is structured data",
+          "lines": [
+            {
+              "text": "Language is structured data",
+              "width_emu": 5353224,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_128",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Research is mostly patience",
+          "lines": [
+            {
+              "text": "Research is mostly patience",
+              "width_emu": 5399819,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_129",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Being the outsider is normal",
+          "lines": [
+            {
+              "text": "Being the outsider is normal",
+              "width_emu": 5352380,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_130",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Fluency takes years, not weeks",
+          "lines": [
+            {
+              "text": "Fluency takes years, not weeks",
+              "width_emu": 6023905,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_131",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "19",
+          "lines": [
+            {
+              "text": "19",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 19,
+      "page_number": 20,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_132",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Industry, in Between",
+          "lines": [
+            {
+              "text": "Industry, in Between",
+              "width_emu": 5176689,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_133",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Halo Solutions, working with the CEO",
+          "lines": [
+            {
+              "text": "Halo Solutions, working with the CEO",
+              "width_emu": 7175934,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_134",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Found overdue patients in 10,000 PDFs",
+          "lines": [
+            {
+              "text": "Found overdue patients in 10,000 PDFs",
+              "width_emu": 7633246,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_135",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "KNIME, teaching six courses",
+          "lines": [
+            {
+              "text": "KNIME, teaching six courses",
+              "width_emu": 5519576,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_136",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Fraud detection, to a big audience",
+          "lines": [
+            {
+              "text": "Fraud detection, to a big audience",
+              "width_emu": 6529499,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_137",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "20",
+          "lines": [
+            {
+              "text": "20",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 20,
+      "page_number": 21,
+      "component": "stat-callout",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_138",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Two Numbers From Industry",
+          "lines": [
+            {
+              "text": "Two Numbers From Industry",
+              "width_emu": 7221215,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_value_139",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2449068,
+            "w": 5501640,
+            "h": 914400
+          },
+          "text_content": "$13M",
+          "lines": [
+            {
+              "text": "$13M",
+              "width_emu": 1906116,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_140",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3637788,
+            "w": 5501640,
+            "h": 518159
+          },
+          "text_content": "Revenue identified",
+          "lines": [
+            {
+              "text": "Revenue identified",
+              "width_emu": 3576898,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_141",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4430267,
+            "w": 5501640,
+            "h": 381000
+          },
+          "text_content": "Overdue patients found",
+          "lines": [
+            {
+              "text": "Overdue patients found",
+              "width_emu": 3300729,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_142",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2449068,
+            "w": 5501640,
+            "h": 914400
+          },
+          "text_content": "90k",
+          "lines": [
+            {
+              "text": "90k",
+              "width_emu": 1271364,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_143",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3637788,
+            "w": 5501640,
+            "h": 518159
+          },
+          "text_content": "Subscriber audience",
+          "lines": [
+            {
+              "text": "Subscriber audience",
+              "width_emu": 3936591,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_144",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4430267,
+            "w": 5501640,
+            "h": 381000
+          },
+          "text_content": "For the fraud talk",
+          "lines": [
+            {
+              "text": "For the fraud talk",
+              "width_emu": 2400009,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_145",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "21",
+          "lines": [
+            {
+              "text": "21",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 21,
+      "page_number": 22,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_146",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What I Do Now",
+          "lines": [
+            {
+              "text": "What I Do Now",
+              "width_emu": 3733279,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_147",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Match students to practicum teams",
+          "lines": [
+            {
+              "text": "Match students to practicum teams",
+              "width_emu": 6695641,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_148",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Mentor those teams for nine months",
+          "lines": [
+            {
+              "text": "Mentor those teams for nine months",
+              "width_emu": 6912173,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_149",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Teach the SQL certificate course",
+          "lines": [
+            {
+              "text": "Teach the SQL certificate course",
+              "width_emu": 6224203,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_150",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Career advising, all year",
+          "lines": [
+            {
+              "text": "Career advising, all year",
+              "width_emu": 4655976,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_151",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "22",
+          "lines": [
+            {
+              "text": "22",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 22,
+      "page_number": 23,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_152",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Still a Student Myself",
+          "lines": [
+            {
+              "text": "Still a Student Myself",
+              "width_emu": 5364473,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_153",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "A software engineering master's",
+          "lines": [
+            {
+              "text": "A software engineering master's",
+              "width_emu": 6130801,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_154",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Started October 2025",
+          "lines": [
+            {
+              "text": "Started October 2025",
+              "width_emu": 4128666,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_155",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "While doing this job",
+          "lines": [
+            {
+              "text": "While doing this job",
+              "width_emu": 3744305,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_156",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "The learning does not stop",
+          "lines": [
+            {
+              "text": "The learning does not stop",
+              "width_emu": 5113077,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_157",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "23",
+          "lines": [
+            {
+              "text": "23",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 23,
+      "page_number": 24,
+      "component": "section-divider",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_160",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1783080,
+            "w": 128016,
+            "h": 2011680
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_num_158",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 1783080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "03",
+          "lines": [
+            {
+              "text": "03",
+              "width_emu": 847576,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_title_159",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3063240,
+            "w": 10738104,
+            "h": 731520
+          },
+          "text_content": "Writing It Down",
+          "lines": [
+            {
+              "text": "Writing It Down",
+              "width_emu": 3901008,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_161",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "24",
+          "lines": [
+            {
+              "text": "24",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 24,
+      "page_number": 25,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_162",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "mAIstory",
+          "lines": [
+            {
+              "text": "mAIstory",
+              "width_emu": 2312008,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_163",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Fine-tuned Gemma 2B for stories",
+          "lines": [
+            {
+              "text": "Fine-tuned Gemma 2B for stories",
+              "width_emu": 6383598,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_164",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "An AI storyteller for children",
+          "lines": [
+            {
+              "text": "An AI storyteller for children",
+              "width_emu": 5279851,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_165",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Built through KaggleX mentorship",
+          "lines": [
+            {
+              "text": "Built through KaggleX mentorship",
+              "width_emu": 6432934,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_166",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Code published with the article",
+          "lines": [
+            {
+              "text": "Code published with the article",
+              "width_emu": 5880745,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_167",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "25",
+          "lines": [
+            {
+              "text": "25",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 25,
+      "page_number": 26,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_168",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The AWS Certificate",
+          "lines": [
+            {
+              "text": "The AWS Certificate",
+              "width_emu": 5048548,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_169",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Cloud Practitioner, passed first go",
+          "lines": [
+            {
+              "text": "Cloud Practitioner, passed first go",
+              "width_emu": 6456338,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_170",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Zero cloud experience going in",
+          "lines": [
+            {
+              "text": "Zero cloud experience going in",
+              "width_emu": 5904992,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_171",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Only free study materials",
+          "lines": [
+            {
+              "text": "Only free study materials",
+              "width_emu": 4775522,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_172",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Wrote up exactly how",
+          "lines": [
+            {
+              "text": "Wrote up exactly how",
+              "width_emu": 4120021,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_173",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "26",
+          "lines": [
+            {
+              "text": "26",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 26,
+      "page_number": 27,
+      "component": "stat-callout",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_174",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Numbers From That Post",
+          "lines": [
+            {
+              "text": "The Numbers From That Post",
+              "width_emu": 7468381,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_value_175",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "838",
+          "lines": [
+            {
+              "text": "838",
+              "width_emu": 1271364,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_176",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Score",
+          "lines": [
+            {
+              "text": "Score",
+              "width_emu": 1127993,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_177",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "700 is a pass",
+          "lines": [
+            {
+              "text": "700 is a pass",
+              "width_emu": 1870894,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_178",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "32",
+          "lines": [
+            {
+              "text": "32",
+              "width_emu": 847576,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_179",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Hours",
+          "lines": [
+            {
+              "text": "Hours",
+              "width_emu": 1151818,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_180",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Across one month",
+          "lines": [
+            {
+              "text": "Across one month",
+              "width_emu": 2558914,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_181",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "$0",
+          "lines": [
+            {
+              "text": "$0",
+              "width_emu": 847576,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_182",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Spent",
+          "lines": [
+            {
+              "text": "Spent",
+              "width_emu": 1128415,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_183",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Free materials only",
+          "lines": [
+            {
+              "text": "Free materials only",
+              "width_emu": 2699680,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_184",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "27",
+          "lines": [
+            {
+              "text": "27",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 27,
+      "page_number": 28,
+      "component": "pull-quote",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_187",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2621280,
+            "w": 128016,
+            "h": 1615440
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "quote_185",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2621280,
+            "w": 10738104,
+            "h": 731520
+          },
+          "text_content": "\"The paywall is usually optional.\"",
+          "lines": [
+            {
+              "text": "\"The paywall is usually optional.\"",
+              "width_emu": 8478924,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "attrib_186",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3627120,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "- A recurring theme",
+          "lines": [
+            {
+              "text": "- A recurring theme",
+              "width_emu": 3647951,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "text_color": "#5B6B82"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_188",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "28",
+          "lines": [
+            {
+              "text": "28",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 28,
+      "page_number": 29,
+      "component": "section-divider",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_191",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1783080,
+            "w": 128016,
+            "h": 2011680
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_num_189",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 1783080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "04",
+          "lines": [
+            {
+              "text": "04",
+              "width_emu": 847576,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_title_190",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3063240,
+            "w": 10738104,
+            "h": 731520
+          },
+          "text_content": "Partnerships",
+          "lines": [
+            {
+              "text": "Partnerships",
+              "width_emu": 3260824,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_192",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "29",
+          "lines": [
+            {
+              "text": "29",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 29,
+      "page_number": 30,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_193",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Practicum",
+          "lines": [
+            {
+              "text": "The Practicum",
+              "width_emu": 3675720,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_194",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Sixteen hours a week",
+          "lines": [
+            {
+              "text": "Sixteen hours a week",
+              "width_emu": 4128455,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_195",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Roughly nine months",
+          "lines": [
+            {
+              "text": "Roughly nine months",
+              "width_emu": 4056559,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_196",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Every student, guaranteed",
+          "lines": [
+            {
+              "text": "Every student, guaranteed",
+              "width_emu": 5065006,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_197",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Real problems, real clients",
+          "lines": [
+            {
+              "text": "Real problems, real clients",
+              "width_emu": 5087776,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_198",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "30",
+          "lines": [
+            {
+              "text": "30",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 30,
+      "page_number": 31,
+      "component": "stat-callout",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_199",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Scale of It",
+          "lines": [
+            {
+              "text": "The Scale of It",
+              "width_emu": 3616077,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_value_200",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "120+",
+          "lines": [
+            {
+              "text": "120+",
+              "width_emu": 1716360,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_201",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Companies",
+          "lines": [
+            {
+              "text": "Companies",
+              "width_emu": 2184090,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_202",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Relationships I hold",
+          "lines": [
+            {
+              "text": "Relationships I hold",
+              "width_emu": 2770994,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_203",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "150+",
+          "lines": [
+            {
+              "text": "150+",
+              "width_emu": 1716360,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_204",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Students",
+          "lines": [
+            {
+              "text": "Students",
+              "width_emu": 1704429,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_205",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Taught and mentored",
+          "lines": [
+            {
+              "text": "Taught and mentored",
+              "width_emu": 3000747,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_206",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "5.67",
+          "lines": [
+            {
+              "text": "5.67",
+              "width_emu": 1483072,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_207",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Of six",
+          "lines": [
+            {
+              "text": "Of six",
+              "width_emu": 1103536,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_208",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "My teaching score",
+          "lines": [
+            {
+              "text": "My teaching score",
+              "width_emu": 2576432,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_209",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "31",
+          "lines": [
+            {
+              "text": "31",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 31,
+      "page_number": 32,
+      "component": "card-grid",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_210",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Who We Work With",
+          "lines": [
+            {
+              "text": "Who We Work With",
+              "width_emu": 4864410,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "card_title_211",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Finance",
+          "lines": [
+            {
+              "text": "Finance",
+              "width_emu": 1631690,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_0"
+        },
+        {
+          "node_id": "card_body_212",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "BlackRock",
+          "lines": [
+            {
+              "text": "BlackRock",
+              "width_emu": 2039665,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_0"
+        },
+        {
+          "node_id": "card_title_213",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Cloud",
+          "lines": [
+            {
+              "text": "Cloud",
+              "width_emu": 1223082,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_1"
+        },
+        {
+          "node_id": "card_body_214",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "AWS and Atlassian",
+          "lines": [
+            {
+              "text": "AWS and",
+              "width_emu": 1807952,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Atlassian",
+              "width_emu": 1752079,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_1"
+        },
+        {
+          "node_id": "card_title_215",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Health",
+          "lines": [
+            {
+              "text": "Health",
+              "width_emu": 1319647,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_2"
+        },
+        {
+          "node_id": "card_body_216",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "UCSF, Stanford",
+          "lines": [
+            {
+              "text": "UCSF,",
+              "width_emu": 1247539,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Stanford",
+              "width_emu": 1632322,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_2"
+        },
+        {
+          "node_id": "card_title_217",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Mission",
+          "lines": [
+            {
+              "text": "Mission",
+              "width_emu": 1607443,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "card_3"
+        },
+        {
+          "node_id": "card_body_218",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2154935,
+            "w": 2613660,
+            "h": 3605785
+          },
+          "text_content": "The Gates Foundation",
+          "lines": [
+            {
+              "text": "The Gates",
+              "width_emu": 2016051,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "Foundation",
+              "width_emu": 2160687,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "card_3"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_219",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "32",
+          "lines": [
+            {
+              "text": "32",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 32,
+      "page_number": 33,
+      "component": "stat-callout",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_220",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Where Our Graduates Land",
+          "lines": [
+            {
+              "text": "Where Our Graduates Land",
+              "width_emu": 6935502,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_value_221",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2449068,
+            "w": 5501640,
+            "h": 914400
+          },
+          "text_content": "78%",
+          "lines": [
+            {
+              "text": "78%",
+              "width_emu": 1525116,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_222",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3637788,
+            "w": 5501640,
+            "h": 518159
+          },
+          "text_content": "Take offers in California",
+          "lines": [
+            {
+              "text": "Take offers in California",
+              "width_emu": 4504172,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_223",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4430267,
+            "w": 5501640,
+            "h": 381000
+          },
+          "text_content": "Class of 2025",
+          "lines": [
+            {
+              "text": "Class of 2025",
+              "width_emu": 1941432,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_224",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2449068,
+            "w": 5501640,
+            "h": 914400
+          },
+          "text_content": "$150k",
+          "lines": [
+            {
+              "text": "$150k",
+              "width_emu": 2118940,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_225",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3637788,
+            "w": 5501640,
+            "h": 518159
+          },
+          "text_content": "Median base salary",
+          "lines": [
+            {
+              "text": "Median base salary",
+              "width_emu": 3744305,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_226",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4430267,
+            "w": 5501640,
+            "h": 381000
+          },
+          "text_content": "California offers",
+          "lines": [
+            {
+              "text": "California offers",
+              "width_emu": 2217694,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_227",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "33",
+          "lines": [
+            {
+              "text": "33",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 33,
+      "page_number": 34,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_228",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What Gets Someone Hired",
+          "lines": [
+            {
+              "text": "What Gets Someone Hired",
+              "width_emu": 6698233,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_229",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Work a stranger can look at",
+          "lines": [
+            {
+              "text": "Work a stranger can look at",
+              "width_emu": 5272050,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_230",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "One project explained clearly",
+          "lines": [
+            {
+              "text": "One project explained clearly",
+              "width_emu": 5568491,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_231",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Curiosity that survives boredom",
+          "lines": [
+            {
+              "text": "Curiosity that survives boredom",
+              "width_emu": 6047519,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_232",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Not a perfect transcript",
+          "lines": [
+            {
+              "text": "Not a perfect transcript",
+              "width_emu": 4367758,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_233",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "34",
+          "lines": [
+            {
+              "text": "34",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 34,
+      "page_number": 35,
+      "component": "section-divider",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_236",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 1783080,
+            "w": 128016,
+            "h": 2011680
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_num_234",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 1783080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "05",
+          "lines": [
+            {
+              "text": "05",
+              "width_emu": 847576,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "sec_title_235",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3063240,
+            "w": 10738104,
+            "h": 731520
+          },
+          "text_content": "Ninth Circuit",
+          "lines": [
+            {
+              "text": "Ninth Circuit",
+              "width_emu": 3200140,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_237",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "35",
+          "lines": [
+            {
+              "text": "35",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 35,
+      "page_number": 36,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_238",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Problem",
+          "lines": [
+            {
+              "text": "The Problem",
+              "width_emu": 3230612,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_239",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Thousands of opinions a year",
+          "lines": [
+            {
+              "text": "Thousands of opinions a year",
+              "width_emu": 5665056,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_240",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Only a fraction are asylum cases",
+          "lines": [
+            {
+              "text": "Only a fraction are asylum cases",
+              "width_emu": 6263630,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_241",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Reading them all is impossible",
+          "lines": [
+            {
+              "text": "Reading them all is impossible",
+              "width_emu": 5832041,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_242",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "So the research does not happen",
+          "lines": [
+            {
+              "text": "So the research does not happen",
+              "width_emu": 6385706,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_243",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "36",
+          "lines": [
+            {
+              "text": "36",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 36,
+      "page_number": 37,
+      "component": "process-steps",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_244",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "How the Pipeline Works",
+          "lines": [
+            {
+              "text": "How the Pipeline Works",
+              "width_emu": 6036432,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ps_num_245",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 640080
+          },
+          "text_content": "01",
+          "lines": [
+            {
+              "text": "01",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_0",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "ps_rule_246",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2194560,
+            "w": 1072896,
+            "h": 54864
+          },
+          "group_id": "pstep_0",
+          "fill_color": "#123A6B"
+        },
+        {
+          "node_id": "ps_label_247",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2414016,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Fetch",
+          "lines": [
+            {
+              "text": "Fetch",
+              "width_emu": 1151607,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_0",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "ps_body_248",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3041903,
+            "w": 3576320,
+            "h": 2718817
+          },
+          "text_content": "Scrape opinions",
+          "lines": [
+            {
+              "text": "Scrape opinions",
+              "width_emu": 3096605,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "pstep_0"
+        },
+        {
+          "node_id": "ps_num_249",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 640080
+          },
+          "text_content": "02",
+          "lines": [
+            {
+              "text": "02",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_1",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "ps_rule_250",
+          "node_type": "box",
+          "rect": {
+            "x": 4307840,
+            "y": 2194560,
+            "w": 1072896,
+            "h": 54864
+          },
+          "group_id": "pstep_1",
+          "fill_color": "#123A6B"
+        },
+        {
+          "node_id": "ps_label_251",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2414016,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Classify",
+          "lines": [
+            {
+              "text": "Classify",
+              "width_emu": 1656147,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_1",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "ps_body_252",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3041903,
+            "w": 3576320,
+            "h": 2718817
+          },
+          "text_content": "Asylum or not?",
+          "lines": [
+            {
+              "text": "Asylum or not?",
+              "width_emu": 2879861,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "pstep_1"
+        },
+        {
+          "node_id": "ps_num_253",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 1499616,
+            "w": 3576320,
+            "h": 640080
+          },
+          "text_content": "03",
+          "lines": [
+            {
+              "text": "03",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_2",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "ps_rule_254",
+          "node_type": "box",
+          "rect": {
+            "x": 8158480,
+            "y": 2194560,
+            "w": 1072896,
+            "h": 54864
+          },
+          "group_id": "pstep_2",
+          "fill_color": "#123A6B"
+        },
+        {
+          "node_id": "ps_label_255",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2414016,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Extract",
+          "lines": [
+            {
+              "text": "Extract",
+              "width_emu": 1464072,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "pstep_2",
+          "text_color": "#123A6B"
+        },
+        {
+          "node_id": "ps_body_256",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3041903,
+            "w": 3576320,
+            "h": 2718817
+          },
+          "text_content": "Pull the features",
+          "lines": [
+            {
+              "text": "Pull the features",
+              "width_emu": 3120430,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "pstep_2"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_257",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "37",
+          "lines": [
+            {
+              "text": "37",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 37,
+      "page_number": 38,
+      "component": "stat-callout",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_258",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What It Has Built",
+          "lines": [
+            {
+              "text": "What It Has Built",
+              "width_emu": 4237509,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_value_259",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "5,779",
+          "lines": [
+            {
+              "text": "5,779",
+              "width_emu": 1906860,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_260",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Opinions",
+          "lines": [
+            {
+              "text": "Opinions",
+              "width_emu": 1704218,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_261",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "Growing daily",
+          "lines": [
+            {
+              "text": "Growing daily",
+              "width_emu": 1923448,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_262",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "70+",
+          "lines": [
+            {
+              "text": "70+",
+              "width_emu": 1292572,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_263",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Features each",
+          "lines": [
+            {
+              "text": "Features each",
+              "width_emu": 2760315,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_264",
+          "node_type": "text",
+          "rect": {
+            "x": 4307840,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "With a source quote",
+          "lines": [
+            {
+              "text": "With a source quote",
+              "width_emu": 2823704,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        },
+        {
+          "node_id": "stat_value_265",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 2449068,
+            "w": 3576320,
+            "h": 914400
+          },
+          "text_content": "26%",
+          "lines": [
+            {
+              "text": "26%",
+              "width_emu": 1525116,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "stat_label_266",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 3637788,
+            "w": 3576320,
+            "h": 518159
+          },
+          "text_content": "Are asylum",
+          "lines": [
+            {
+              "text": "Are asylum",
+              "width_emu": 2159633,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "stat_sub_267",
+          "node_type": "text",
+          "rect": {
+            "x": 8158480,
+            "y": 4430267,
+            "w": 3576320,
+            "h": 381000
+          },
+          "text_content": "The rest filtered",
+          "lines": [
+            {
+              "text": "The rest filtered",
+              "width_emu": 2205757,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": false,
+          "italic": false,
+          "is_caption": true
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_268",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "38",
+          "lines": [
+            {
+              "text": "38",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 38,
+      "page_number": 39,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_269",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Trick That Makes It Free",
+          "lines": [
+            {
+              "text": "The Trick That Makes It Free",
+              "width_emu": 7144122,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_270",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Classify cheaply before extracting",
+          "lines": [
+            {
+              "text": "Classify cheaply before extracting",
+              "width_emu": 6456127,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_271",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Throw away three quarters first",
+          "lines": [
+            {
+              "text": "Throw away three quarters first",
+              "width_emu": 5951376,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_272",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Roughly four times cheaper",
+          "lines": [
+            {
+              "text": "Roughly four times cheaper",
+              "width_emu": 5280273,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_273",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Free-tier models throughout",
+          "lines": [
+            {
+              "text": "Free-tier models throughout",
+              "width_emu": 5328134,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_274",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "39",
+          "lines": [
+            {
+              "text": "39",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 39,
+      "page_number": 40,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_275",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What It Runs On",
+          "lines": [
+            {
+              "text": "What It Runs On",
+              "width_emu": 4148175,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_276",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Llama 3.3 on a free API tier",
+          "lines": [
+            {
+              "text": "Llama 3.3 on a free API tier",
+              "width_emu": 5232623,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_277",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Postgres, and a vector index",
+          "lines": [
+            {
+              "text": "Postgres, and a vector index",
+              "width_emu": 5472559,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_278",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "A daily scheduled job",
+          "lines": [
+            {
+              "text": "A daily scheduled job",
+              "width_emu": 4056980,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_279",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Total ongoing cost: nothing",
+          "lines": [
+            {
+              "text": "Total ongoing cost: nothing",
+              "width_emu": 5137324,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_280",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "40",
+          "lines": [
+            {
+              "text": "40",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 40,
+      "page_number": 41,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_281",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Why It Matters",
+          "lines": [
+            {
+              "text": "Why It Matters",
+              "width_emu": 3645247,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_282",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "This work was always hand-coded",
+          "lines": [
+            {
+              "text": "This work was always hand-coded",
+              "width_emu": 6575884,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_283",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Now it is searchable",
+          "lines": [
+            {
+              "text": "Now it is searchable",
+              "width_emu": 3863851,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_284",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Every claim has its quote",
+          "lines": [
+            {
+              "text": "Every claim has its quote",
+              "width_emu": 4799769,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_285",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Anyone can read the code",
+          "lines": [
+            {
+              "text": "Anyone can read the code",
+              "width_emu": 5041392,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_286",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "41",
+          "lines": [
+            {
+              "text": "41",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 41,
+      "page_number": 42,
+      "component": "two-panel-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_287",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "What I Actually Believe",
+          "lines": [
+            {
+              "text": "What I Actually Believe",
+              "width_emu": 5819738,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "lp_head_288",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 621791
+          },
+          "text_content": "Paths are not straight",
+          "lines": [
+            {
+              "text": "Paths are not straight",
+              "width_emu": 4438811,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "lp_head",
+          "text_color": "#5B6B82"
+        },
+        {
+          "node_id": "lp_rule_289",
+          "node_type": "box",
+          "rect": {
+            "x": 548640,
+            "y": 2176271,
+            "w": 1650492,
+            "h": 54864
+          },
+          "group_id": "lp_head",
+          "fill_color": "#5B6B82"
+        },
+        {
+          "node_id": "rp_head_290",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 621791
+          },
+          "text_content": "The tools are free",
+          "lines": [
+            {
+              "text": "The tools are free",
+              "width_emu": 3599458,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "rp_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "rp_rule_291",
+          "node_type": "box",
+          "rect": {
+            "x": 6324600,
+            "y": 2176271,
+            "w": 1650492,
+            "h": 54864
+          },
+          "group_id": "rp_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "lp_item_292",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "I studied literature first",
+          "lines": [
+            {
+              "text": "I studied literature first",
+              "width_emu": 4247790,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "lp_head"
+        },
+        {
+          "node_id": "lp_item_293",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3608831,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Nothing was wasted",
+          "lines": [
+            {
+              "text": "Nothing was wasted",
+              "width_emu": 3864273,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "lp_head"
+        },
+        {
+          "node_id": "lp_item_294",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4821935,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "The detour is the edge",
+          "lines": [
+            {
+              "text": "The detour is the edge",
+              "width_emu": 4320952,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "lp_head"
+        },
+        {
+          "node_id": "rp_item_295",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "A certificate, for nothing",
+          "lines": [
+            {
+              "text": "A certificate, for nothing",
+              "width_emu": 4512394,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rp_head"
+        },
+        {
+          "node_id": "rp_item_296",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3608831,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "A legal database, free",
+          "lines": [
+            {
+              "text": "A legal database, free",
+              "width_emu": 4177159,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rp_head"
+        },
+        {
+          "node_id": "rp_item_297",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4821935,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "The barrier is starting",
+          "lines": [
+            {
+              "text": "The barrier is starting",
+              "width_emu": 4079540,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rp_head"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_298",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "42",
+          "lines": [
+            {
+              "text": "42",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 42,
+      "page_number": 43,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_299",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "If You Take One Action",
+          "lines": [
+            {
+              "text": "If You Take One Action",
+              "width_emu": 5729883,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_300",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Build one small thing publicly",
+          "lines": [
+            {
+              "text": "Build one small thing publicly",
+              "width_emu": 5544455,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_301",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Write down how you did it",
+          "lines": [
+            {
+              "text": "Write down how you did it",
+              "width_emu": 4912147,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_302",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Use the free tier for all of it",
+          "lines": [
+            {
+              "text": "Use the free tier for all of it",
+              "width_emu": 5063741,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_303",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Then show someone",
+          "lines": [
+            {
+              "text": "Then show someone",
+              "width_emu": 4008487,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_304",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "43",
+          "lines": [
+            {
+              "text": "43",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 43,
+      "page_number": 44,
+      "component": "question",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_306",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2926080,
+            "w": 128016,
+            "h": 1005840
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "question_305",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2926080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "What will you build?",
+          "lines": [
+            {
+              "text": "What will you build?",
+              "width_emu": 7365132,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_307",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "44",
+          "lines": [
+            {
+              "text": "44",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@
     "w": 1280.0,
     "h": 720.0
   },
-  "count": 14,
+  "count": 15,
   "decks": [
     {
       "stem": "agents-in-ai",
@@ -5420,6 +5420,409 @@
           "height_px": 720.0,
           "background": "#FFFFFF",
           "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:275.20px;width:13.44px;height:169.60px;background:#E0873C;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:275.20px;width:1127.36px;height:76.80px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">\"Make design quality auditable.\"</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:380.80px;width:1127.36px;height:64.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">- Ngo, Teo &amp; Byrne (2003)</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">20</div>"
+        }
+      ]
+    },
+    {
+      "stem": "victor-palacios-intro",
+      "title": "Victor Palacios",
+      "slide_count": 44,
+      "slides": [
+        {
+          "index": 1,
+          "component": "title-slide",
+          "caption": "Victor Palacios",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:96.00px;top:270.40px;width:1088.00px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Victor Palacios</div>\n    <div class=\"node node-text\" style=\"left:96.00px;top:395.20px;width:1088.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Director of Data Science and AI Partnerships · USF</div>"
+        },
+        {
+          "index": 2,
+          "component": "question",
+          "caption": "How do you end up here?",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:307.20px;width:13.44px;height:105.60px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:307.20px;width:1127.36px;height:105.60px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">How do you end up here?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">2</div>"
+        },
+        {
+          "index": 3,
+          "component": "timeline",
+          "caption": "Still Collecting Degrees",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Still Collecting Degrees</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:274.40px;height:40.00px;color:#0072CE;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0;\">2011</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:226.24px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Berkeley</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:309.44px;width:274.40px;height:295.36px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">BA in Japanese language and literature</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:157.44px;width:274.40px;height:40.00px;color:#0072CE;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0;\">2015</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:226.24px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Nagoya</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:309.44px;width:274.40px;height:295.36px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">MS in Information Science, in Japan</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:157.44px;width:274.40px;height:40.00px;color:#0072CE;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0;\">2021</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:226.24px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">USF</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:309.44px;width:274.40px;height:295.36px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">MS in Data Science</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:157.44px;width:274.40px;height:40.00px;color:#0072CE;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:bold;padding:0;\">2026</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:226.24px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Quantic</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:309.44px;width:274.40px;height:295.36px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">MS in Software Eng, under way</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">3</div>"
+        },
+        {
+          "index": 4,
+          "component": "agenda",
+          "caption": "What I Will Cover",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What I Will Cover</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:134.40px;width:1184.00px;height:6.72px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:169.92px;width:96.00px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">01</div>\n    <div class=\"node node-text\" style=\"left:144.00px;top:169.92px;width:1088.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Research, from brains to health</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:285.84px;width:96.00px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">02</div>\n    <div class=\"node node-text\" style=\"left:144.00px;top:285.84px;width:1088.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The path, and its detours</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:401.76px;width:96.00px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">03</div>\n    <div class=\"node node-text\" style=\"left:144.00px;top:401.76px;width:1088.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Writing things down in public</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:517.68px;width:96.00px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">04</div>\n    <div class=\"node node-text\" style=\"left:144.00px;top:517.68px;width:1088.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Partnerships, and one big repo</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">4</div>"
+        },
+        {
+          "index": 5,
+          "component": "section-divider",
+          "caption": "Research",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:187.20px;width:13.44px;height:211.20px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:187.20px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">01</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:321.60px;width:1127.36px;height:76.80px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Research</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">5</div>"
+        },
+        {
+          "index": 6,
+          "component": "definition",
+          "caption": "Deception detection",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:260.80px;width:13.44px;height:198.40px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:260.80px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Deception detection</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:395.20px;width:1127.36px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Finding what the brain does when someone lies</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">6</div>"
+        },
+        {
+          "index": 7,
+          "component": "bullet-list",
+          "caption": "Nagoya, 2014",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Nagoya, 2014</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Are action lies unlike speech lies?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Measured with near-infrared light</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Forty sentences, three sessions</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Published at JCSS in Japan</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">7</div>"
+        },
+        {
+          "index": 8,
+          "component": "numbered-steps",
+          "caption": "How the Study Ran",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">How the Study Ran</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:81.49px;height:67.20px;color:#123A6B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">01</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:157.44px;width:1078.51px;height:67.20px;color:#123A6B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Learning</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:229.44px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">You gesture or speak twenty sentences</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:316.16px;width:81.49px;height:67.20px;color:#123A6B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">02</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:316.16px;width:1078.51px;height:67.20px;color:#123A6B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Recognition</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:388.16px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">You recall which ones you did which way</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:474.88px;width:81.49px;height:67.20px;color:#123A6B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">03</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:474.88px;width:1078.51px;height:67.20px;color:#123A6B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Lying</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:546.88px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">You lie about twenty, tell the truth about twenty</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">8</div>"
+        },
+        {
+          "index": 9,
+          "component": "pull-quote",
+          "caption": "Different lies, different regions.",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:275.20px;width:13.44px;height:169.60px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:275.20px;width:1127.36px;height:76.80px;color:#0A2240;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">\"Different lies, different regions.\"</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:380.80px;width:1127.36px;height:64.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">- Palacios, Saito et al., JCSS 2014</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">9</div>"
+        },
+        {
+          "index": 10,
+          "component": "bullet-list",
+          "caption": "Then Healthcare, 2021",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Then Healthcare, 2021</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A sensor reads blood sugar all day</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Can it tell when you ate?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Healthy participants, not patients</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">First author, with Woodbridge and Fry</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">10</div>"
+        },
+        {
+          "index": 11,
+          "component": "this-vs-that",
+          "caption": "What It Was Really For",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What It Was Really For</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:291.52px;width:503.20px;height:96.00px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">Asked</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:416.32px;width:503.20px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">Did you eat when told?</div>\n    <div class=\"node node-text\" style=\"left:728.80px;top:291.52px;width:503.20px;height:96.00px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">Measured</div>\n    <div class=\"node node-text\" style=\"left:728.80px;top:416.32px;width:503.20px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">The sensor knew</div>\n    <div class=\"node node-text\" style=\"left:580.00px;top:347.52px;width:120.00px;height:67.20px;color:#5B6B82;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">VS</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">11</div>"
+        },
+        {
+          "index": 12,
+          "component": "stat-callout",
+          "caption": "The Number That Mattered",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Number That Mattered</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:257.12px;width:577.60px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">60%</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:381.92px;width:577.60px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Baseline</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:465.12px;width:577.60px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">Where we started</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:257.12px;width:577.60px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">89%</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:381.92px;width:577.60px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">After the work</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:465.12px;width:577.60px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">Same data, better target</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">12</div>"
+        },
+        {
+          "index": 13,
+          "component": "bullet-list",
+          "caption": "ICD-10 Coding, 2024",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">ICD-10 Coding, 2024</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Clinical notes into diagnosis codes</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Small open models, not large ones</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Over 100,000 notes from MIMIC-IV</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Swiss and USF collaboration</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">13</div>"
+        },
+        {
+          "index": 14,
+          "component": "table-slide",
+          "caption": "What We Benchmarked",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What We Benchmarked</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:214.78px;height:54.40px;color:#123A6B;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Model</div>\n    <div class=\"node node-text\" style=\"left:320.38px;top:157.44px;width:373.53px;height:54.40px;color:#123A6B;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Size</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:217.60px;width:645.91px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:252.16px;width:214.78px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Falcon</div>\n    <div class=\"node node-text\" style=\"left:320.38px;top:252.16px;width:373.53px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">1B parameters</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:379.31px;width:214.78px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Phi-3.5</div>\n    <div class=\"node node-text\" style=\"left:320.38px;top:379.31px;width:373.53px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">3.5B parameters</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:506.45px;width:214.78px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Meditron</div>\n    <div class=\"node node-text\" style=\"left:320.38px;top:506.45px;width:373.53px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">7B parameters</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">14</div>"
+        },
+        {
+          "index": 15,
+          "component": "bullet-list",
+          "caption": "What Surprised Us",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What Surprised Us</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The 1B model held its own</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">It was not a medical model</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">LoRA kept quality, cut compute</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Small can be good enough</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">15</div>"
+        },
+        {
+          "index": 16,
+          "component": "table-slide",
+          "caption": "Three Papers, One Habit",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Three Papers, One Habit</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:139.25px;height:54.40px;color:#123A6B;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Year</div>\n    <div class=\"node node-text\" style=\"left:244.85px;top:157.44px;width:552.45px;height:54.40px;color:#123A6B;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Question</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:217.60px;width:749.30px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:252.16px;width:139.25px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">2014</div>\n    <div class=\"node node-text\" style=\"left:244.85px;top:252.16px;width:552.45px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">What does a lie look like?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:379.31px;width:139.25px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">2021</div>\n    <div class=\"node node-text\" style=\"left:244.85px;top:379.31px;width:552.45px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Did you really eat?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:506.45px;width:139.25px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">2024</div>\n    <div class=\"node node-text\" style=\"left:244.85px;top:506.45px;width:552.45px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Can a small model code?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">16</div>"
+        },
+        {
+          "index": 17,
+          "component": "section-divider",
+          "caption": "The Path",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:187.20px;width:13.44px;height:211.20px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:187.20px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">02</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:321.60px;width:1127.36px;height:76.80px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Path</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">17</div>"
+        },
+        {
+          "index": 18,
+          "component": "this-vs-that",
+          "caption": "Where I Started",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Where I Started</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:291.52px;width:503.20px;height:96.00px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">Japanese</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:416.32px;width:503.20px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">Language, literature</div>\n    <div class=\"node node-text\" style=\"left:728.80px;top:291.52px;width:503.20px;height:96.00px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">Now</div>\n    <div class=\"node node-text\" style=\"left:728.80px;top:416.32px;width:503.20px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">Data science and AI</div>\n    <div class=\"node node-text\" style=\"left:580.00px;top:347.52px;width:120.00px;height:67.20px;color:#5B6B82;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">VS</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">18</div>"
+        },
+        {
+          "index": 19,
+          "component": "bullet-list",
+          "caption": "What Japan Taught Me",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What Japan Taught Me</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Language is structured data</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Research is mostly patience</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Being the outsider is normal</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Fluency takes years, not weeks</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">19</div>"
+        },
+        {
+          "index": 20,
+          "component": "bullet-list",
+          "caption": "Industry, in Between",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Industry, in Between</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Halo Solutions, working with the CEO</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Found overdue patients in 10,000 PDFs</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">KNIME, teaching six courses</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Fraud detection, to a big audience</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">20</div>"
+        },
+        {
+          "index": 21,
+          "component": "stat-callout",
+          "caption": "Two Numbers From Industry",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Two Numbers From Industry</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:257.12px;width:577.60px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">$13M</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:381.92px;width:577.60px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Revenue identified</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:465.12px;width:577.60px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">Overdue patients found</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:257.12px;width:577.60px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">90k</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:381.92px;width:577.60px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Subscriber audience</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:465.12px;width:577.60px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">For the fraud talk</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">21</div>"
+        },
+        {
+          "index": 22,
+          "component": "bullet-list",
+          "caption": "What I Do Now",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What I Do Now</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Match students to practicum teams</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Mentor those teams for nine months</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Teach the SQL certificate course</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Career advising, all year</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">22</div>"
+        },
+        {
+          "index": 23,
+          "component": "bullet-list",
+          "caption": "Still a Student Myself",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Still a Student Myself</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A software engineering master's</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Started October 2025</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">While doing this job</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The learning does not stop</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">23</div>"
+        },
+        {
+          "index": 24,
+          "component": "section-divider",
+          "caption": "Writing It Down",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:187.20px;width:13.44px;height:211.20px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:187.20px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">03</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:321.60px;width:1127.36px;height:76.80px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Writing It Down</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">24</div>"
+        },
+        {
+          "index": 25,
+          "component": "bullet-list",
+          "caption": "mAIstory",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">mAIstory</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Fine-tuned Gemma 2B for stories</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">An AI storyteller for children</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Built through KaggleX mentorship</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Code published with the article</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">25</div>"
+        },
+        {
+          "index": 26,
+          "component": "bullet-list",
+          "caption": "The AWS Certificate",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The AWS Certificate</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Cloud Practitioner, passed first go</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Zero cloud experience going in</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Only free study materials</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Wrote up exactly how</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">26</div>"
+        },
+        {
+          "index": 27,
+          "component": "stat-callout",
+          "caption": "The Numbers From That Post",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Numbers From That Post</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:257.12px;width:375.47px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">838</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:381.92px;width:375.47px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Score</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:465.12px;width:375.47px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">700 is a pass</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:257.12px;width:375.47px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">32</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:381.92px;width:375.47px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Hours</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:465.12px;width:375.47px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">Across one month</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:257.12px;width:375.47px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">$0</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:381.92px;width:375.47px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Spent</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:465.12px;width:375.47px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">Free materials only</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">27</div>"
+        },
+        {
+          "index": 28,
+          "component": "pull-quote",
+          "caption": "The paywall is usually optional.",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:275.20px;width:13.44px;height:169.60px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:275.20px;width:1127.36px;height:76.80px;color:#0A2240;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">\"The paywall is usually optional.\"</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:380.80px;width:1127.36px;height:64.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">- A recurring theme</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">28</div>"
+        },
+        {
+          "index": 29,
+          "component": "section-divider",
+          "caption": "Partnerships",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:187.20px;width:13.44px;height:211.20px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:187.20px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">04</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:321.60px;width:1127.36px;height:76.80px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Partnerships</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">29</div>"
+        },
+        {
+          "index": 30,
+          "component": "bullet-list",
+          "caption": "The Practicum",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Practicum</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Sixteen hours a week</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Roughly nine months</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Every student, guaranteed</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Real problems, real clients</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">30</div>"
+        },
+        {
+          "index": 31,
+          "component": "stat-callout",
+          "caption": "The Scale of It",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Scale of It</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:257.12px;width:375.47px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">120+</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:381.92px;width:375.47px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Companies</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:465.12px;width:375.47px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">Relationships I hold</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:257.12px;width:375.47px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">150+</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:381.92px;width:375.47px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Students</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:465.12px;width:375.47px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">Taught and mentored</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:257.12px;width:375.47px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">5.67</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:381.92px;width:375.47px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Of six</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:465.12px;width:375.47px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">My teaching score</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">31</div>"
+        },
+        {
+          "index": 32,
+          "component": "card-grid",
+          "caption": "Who We Work With",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Who We Work With</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Finance</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:226.24px;width:274.40px;height:378.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">BlackRock</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:157.44px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Cloud</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:226.24px;width:274.40px;height:378.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">AWS and Atlassian</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:157.44px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Health</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:226.24px;width:274.40px;height:378.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">UCSF, Stanford</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:157.44px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Mission</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:226.24px;width:274.40px;height:378.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The Gates Foundation</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">32</div>"
+        },
+        {
+          "index": 33,
+          "component": "stat-callout",
+          "caption": "Where Our Graduates Land",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Where Our Graduates Land</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:257.12px;width:577.60px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">78%</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:381.92px;width:577.60px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Take offers in California</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:465.12px;width:577.60px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">Class of 2025</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:257.12px;width:577.60px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">$150k</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:381.92px;width:577.60px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Median base salary</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:465.12px;width:577.60px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">California offers</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">33</div>"
+        },
+        {
+          "index": 34,
+          "component": "bullet-list",
+          "caption": "What Gets Someone Hired",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What Gets Someone Hired</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Work a stranger can look at</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">One project explained clearly</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Curiosity that survives boredom</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Not a perfect transcript</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">34</div>"
+        },
+        {
+          "index": 35,
+          "component": "section-divider",
+          "caption": "Ninth Circuit",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:187.20px;width:13.44px;height:211.20px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:187.20px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">05</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:321.60px;width:1127.36px;height:76.80px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Ninth Circuit</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">35</div>"
+        },
+        {
+          "index": 36,
+          "component": "bullet-list",
+          "caption": "The Problem",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Problem</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Thousands of opinions a year</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Only a fraction are asylum cases</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Reading them all is impossible</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">So the research does not happen</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">36</div>"
+        },
+        {
+          "index": 37,
+          "component": "process-steps",
+          "caption": "How the Pipeline Works",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">How the Pipeline Works</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:375.47px;height:67.20px;color:#123A6B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">01</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:230.40px;width:112.64px;height:5.76px;background:#123A6B;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:253.44px;width:375.47px;height:54.40px;color:#123A6B;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Fetch</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:319.36px;width:375.47px;height:285.44px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Scrape opinions</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:157.44px;width:375.47px;height:67.20px;color:#123A6B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">02</div>\n    <div class=\"node node-box\" style=\"left:452.27px;top:230.40px;width:112.64px;height:5.76px;background:#123A6B;\"></div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:253.44px;width:375.47px;height:54.40px;color:#123A6B;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Classify</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:319.36px;width:375.47px;height:285.44px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Asylum or not?</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:157.44px;width:375.47px;height:67.20px;color:#123A6B;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">03</div>\n    <div class=\"node node-box\" style=\"left:856.53px;top:230.40px;width:112.64px;height:5.76px;background:#123A6B;\"></div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:253.44px;width:375.47px;height:54.40px;color:#123A6B;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Extract</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:319.36px;width:375.47px;height:285.44px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Pull the features</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">37</div>"
+        },
+        {
+          "index": 38,
+          "component": "stat-callout",
+          "caption": "What It Has Built",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What It Has Built</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:257.12px;width:375.47px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">5,779</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:381.92px;width:375.47px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Opinions</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:465.12px;width:375.47px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">Growing daily</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:257.12px;width:375.47px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">70+</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:381.92px;width:375.47px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Features each</div>\n    <div class=\"node node-text\" style=\"left:452.27px;top:465.12px;width:375.47px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">With a source quote</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:257.12px;width:375.47px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">26%</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:381.92px;width:375.47px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Are asylum</div>\n    <div class=\"node node-text\" style=\"left:856.53px;top:465.12px;width:375.47px;height:40.00px;color:#5B6B82;font-family:'Arial',Arial;font-size:33.3px;line-height:1.2;font-weight:normal;padding:0;\">The rest filtered</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">38</div>"
+        },
+        {
+          "index": 39,
+          "component": "bullet-list",
+          "caption": "The Trick That Makes It Free",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Trick That Makes It Free</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Classify cheaply before extracting</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Throw away three quarters first</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Roughly four times cheaper</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Free-tier models throughout</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">39</div>"
+        },
+        {
+          "index": 40,
+          "component": "bullet-list",
+          "caption": "What It Runs On",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What It Runs On</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Llama 3.3 on a free API tier</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Postgres, and a vector index</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A daily scheduled job</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Total ongoing cost: nothing</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">40</div>"
+        },
+        {
+          "index": 41,
+          "component": "bullet-list",
+          "caption": "Why It Matters",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Why It Matters</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">This work was always hand-coded</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Now it is searchable</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Every claim has its quote</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Anyone can read the code</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">41</div>"
+        },
+        {
+          "index": 42,
+          "component": "two-panel-list",
+          "caption": "What I Actually Believe",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What I Actually Believe</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:65.28px;color:#5B6B82;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Paths are not straight</div>\n    <div class=\"node node-box\" style=\"left:57.60px;top:228.48px;width:173.28px;height:5.76px;background:#5B6B82;\"></div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:157.44px;width:577.60px;height:65.28px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">The tools are free</div>\n    <div class=\"node node-box\" style=\"left:664.00px;top:228.48px;width:173.28px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:251.52px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">I studied literature first</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:378.88px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Nothing was wasted</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:506.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The detour is the edge</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:251.52px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A certificate, for nothing</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:378.88px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A legal database, free</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:506.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The barrier is starting</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">42</div>"
+        },
+        {
+          "index": 43,
+          "component": "bullet-list",
+          "caption": "If You Take One Action",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">If You Take One Action</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Build one small thing publicly</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Write down how you did it</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Use the free tier for all of it</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Then show someone</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">43</div>"
+        },
+        {
+          "index": 44,
+          "component": "question",
+          "caption": "What will you build?",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:307.20px;width:13.44px;height:105.60px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:307.20px;width:1127.36px;height:105.60px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">What will you build?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">44</div>"
         }
       ]
     }

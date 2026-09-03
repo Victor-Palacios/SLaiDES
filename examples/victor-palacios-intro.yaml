@@ -1,0 +1,552 @@
+# Victor Palacios — introduction talk for undergraduates
+#
+# Sources (all verified 2026-09):
+#   Resume ............. Resume_2026.pdf, supplied by the operator
+#   JCSS 2014 paper .... jcss.gr.jp/meetings/JCSS2014/proceedings/pdf/JCSS2014_P2-37.pdf
+#   EMBC 2021 paper .... 10.1109/EMBC46164.2021.9630408 · pubmed 34892722
+#   ICD-10 abstract .... gr-forscht.ch/abstracts/39-benchmarking-pretrained-large-
+#                        language-models-for-automated-icd-10-coding-from-clinical-text
+#   mAIstory ........... medium.com/usf-msds/maistory-fine-tuning-gemma-for-
+#                        storytelling-013b3cdc38f0
+#   AWS cert ........... medium.com/@vicpal/passing-the-aws-cloud-practitioner-
+#                        certification-exam-using-only-free-materials-9cf1a36f0df6
+#   ninth_circuit ...... github.com/Victor-Palacios/ninth_circuit
+#   Programme figures .. usfca.edu MSDSAI page (class of 2025)
+version: 1
+theme:
+  font: arial
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  # ── Open ───────────────────────────────────────────────────────────────────
+  - component: title-slide
+    title: "Victor Palacios"
+    subtitle: "Director of Data Science and AI Partnerships · USF"
+    notes: >-
+      I am Victor Palacios, and I direct data science and AI partnerships at the
+      University of San Francisco.
+
+  - component: question
+    question: "How do you end up here?"
+    notes: >-
+      That is the question I actually want to answer today, because the route I
+      took looks nothing like a plan.
+
+  - component: timeline
+    title: "Still Collecting Degrees"
+    events:
+      - date: "2011"
+        title: "Berkeley"
+        description: "BA in Japanese language and literature"
+      - date: "2015"
+        title: "Nagoya"
+        description: "MS in Information Science, in Japan"
+      - date: "2021"
+        title: "USF"
+        description: "MS in Data Science"
+      - date: "2026"
+        title: "Quantic"
+        description: "MS in Software Eng, under way"
+    notes: >-
+      Four degrees in four fields: Japanese literature at Berkeley, information
+      science at Nagoya, data science here at USF, and a software engineering
+      master's I am part-way through right now.
+
+  - component: agenda
+    title: "What I Will Cover"
+    items:
+      - "Research, from brains to health"
+      - "The path, and its detours"
+      - "Writing things down in public"
+      - "Partnerships, and one big repo"
+    notes: >-
+      Four things: the research I have worked on, the path that connects it, the
+      writing I publish along the way, and the partnerships and projects I run
+      now.
+
+  # ── 01 · Research ──────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "01"
+    title: "Research"
+    notes: >-
+      I will start with research, because it is the oldest thread and it runs
+      from cognitive neuroscience through healthcare to legal and clinical text.
+
+  - component: definition
+    term: "Deception detection"
+    definition: "Finding what the brain does when someone lies"
+    notes: >-
+      My first research area was deception detection: measuring what the brain
+      does differently when a person is lying.
+
+  - component: bullet-list
+    title: "Nagoya, 2014"
+    items:
+      - "Are action lies unlike speech lies?"
+      - "Measured with near-infrared light"
+      - "Forty sentences, three sessions"
+      - "Published at JCSS in Japan"
+    notes: >-
+      At Nagoya in 2014 I asked whether lying about something you did is
+      different, in the brain, from lying about something you said. We measured
+      it with near-infrared spectroscopy across three sessions.
+
+  - component: numbered-steps
+    title: "How the Study Ran"
+    steps:
+      - title: "Learning"
+        body: "You gesture or speak twenty sentences"
+      - title: "Recognition"
+        body: "You recall which ones you did which way"
+      - title: "Lying"
+        body: "You lie about twenty, tell the truth about twenty"
+    notes: >-
+      Participants first gestured or spoke twenty sentences each, then recalled
+      which they had done which way, then lied about half of them and told the
+      truth about the other half.
+
+  - component: pull-quote
+    quote: "Different lies, different regions."
+    attribution: "Palacios, Saito et al., JCSS 2014"
+    notes: >-
+      The result was that the right superior frontal gyrus lit up uniquely for
+      action lies, which says that different kinds of lie recruit different parts
+      of the brain rather than one shared lying circuit.
+
+  - component: bullet-list
+    title: "Then Healthcare, 2021"
+    items:
+      - "A sensor reads blood sugar all day"
+      - "Can it tell when you ate?"
+      - "Healthy participants, not patients"
+      - "First author, with Woodbridge and Fry"
+    notes: >-
+      In 2021 I moved to healthcare, asking whether a continuous glucose monitor
+      could tell when someone had eaten. It became my first first-author paper,
+      with Diane Woodbridge and Jean Fry.
+
+  - component: this-vs-that
+    title: "What It Was Really For"
+    left:
+      value: "Asked"
+      label: "Did you eat when told?"
+    right:
+      value: "Measured"
+      label: "The sensor knew"
+    notes: >-
+      The clever part is what it was for. Instead of asking participants whether
+      they had followed the study protocol, the sensor data could tell us — an
+      objective measure of compliance.
+
+  - component: stat-callout
+    title: "The Number That Mattered"
+    stats:
+      - value: "60%"
+        label: "Baseline"
+        subtext: "Where we started"
+      - value: "89%"
+        label: "After the work"
+        subtext: "Same data, better target"
+    notes: >-
+      I defined meal consumption as the target variable, and that one decision
+      took the model from sixty percent to eighty-nine percent on the same
+      underlying data.
+
+  - component: bullet-list
+    title: "ICD-10 Coding, 2024"
+    items:
+      - "Clinical notes into diagnosis codes"
+      - "Small open models, not large ones"
+      - "Over 100,000 notes from MIMIC-IV"
+      - "Swiss and USF collaboration"
+    notes: >-
+      The most recent work benchmarks pretrained language models for turning
+      clinical notes into ICD-10 diagnosis codes, using over a hundred thousand
+      notes from MIMIC-IV, with collaborators in Switzerland.
+
+  - component: table-slide
+    title: "What We Benchmarked"
+    headers: ["Model", "Size"]
+    rows:
+      - ["Falcon", "1B parameters"]
+      - ["Phi-3.5", "3.5B parameters"]
+      - ["Meditron", "7B parameters"]
+    notes: >-
+      We tested three models between one and seven billion parameters: Falcon,
+      Phi three point five, and Meditron, which is the one actually trained on
+      medical text.
+
+  - component: bullet-list
+    title: "What Surprised Us"
+    items:
+      - "The 1B model held its own"
+      - "It was not a medical model"
+      - "LoRA kept quality, cut compute"
+      - "Small can be good enough"
+    notes: >-
+      The surprise was that Falcon at one billion parameters, which is not a
+      medical model at all, achieved results we did not expect — and
+      parameter-efficient fine-tuning kept that quality while cutting the compute
+      right down.
+
+  - component: table-slide
+    title: "Three Papers, One Habit"
+    headers: ["Year", "Question"]
+    rows:
+      - ["2014", "What does a lie look like?"]
+      - ["2021", "Did you really eat?"]
+      - ["2024", "Can a small model code?"]
+    notes: >-
+      Lying, eating, and medical coding look unrelated, and in a sense they are.
+      What connects them is that each one takes a messy human signal and asks
+      what a machine can honestly read out of it.
+
+  # ── 02 · The Path ──────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "02"
+    title: "The Path"
+    notes: >-
+      Now the part I think is more useful to you than any of the research: how
+      someone gets from a literature degree to this job.
+
+  - component: this-vs-that
+    title: "Where I Started"
+    left:
+      value: "Japanese"
+      label: "Language, literature"
+    right:
+      value: "Now"
+      label: "Data science and AI"
+    notes: >-
+      I started in Japanese language and literature, and I now work in data
+      science and artificial intelligence. Nothing about the first was wasted on
+      the way to the second.
+
+  - component: bullet-list
+    title: "What Japan Taught Me"
+    items:
+      - "Language is structured data"
+      - "Research is mostly patience"
+      - "Being the outsider is normal"
+      - "Fluency takes years, not weeks"
+    notes: >-
+      Four things I took from Japan. Language turns out to be structured data.
+      Research is mostly patience. Being the person who does not yet understand
+      is a normal working state. And real fluency in anything takes years.
+
+  - component: bullet-list
+    title: "Industry, in Between"
+    items:
+      - "Halo Solutions, working with the CEO"
+      - "Found overdue patients in 10,000 PDFs"
+      - "KNIME, teaching six courses"
+      - "Fraud detection, to a big audience"
+    notes: >-
+      Between degrees I worked at Halo Solutions directly with the CEO, building
+      a pipeline that pulled overdue patients out of more than ten thousand PDFs,
+      and at KNIME, where I led six data science courses and presented on fraud
+      detection.
+
+  - component: stat-callout
+    title: "Two Numbers From Industry"
+    stats:
+      - value: "$13M"
+        label: "Revenue identified"
+        subtext: "Overdue patients found"
+      - value: "90k"
+        label: "Subscriber audience"
+        subtext: "For the fraud talk"
+    notes: >-
+      Two numbers from that period: the overdue-patient work represented up to
+      thirteen million dollars in recoverable revenue, and the fraud detection
+      session went out to an audience of ninety thousand subscribers.
+
+  - component: bullet-list
+    title: "What I Do Now"
+    items:
+      - "Match students to practicum teams"
+      - "Mentor those teams for nine months"
+      - "Teach the SQL certificate course"
+      - "Career advising, all year"
+    notes: >-
+      Today I match students with practicum teams, mentor those teams for nine
+      months, teach the professional certificate course in SQL, and do career
+      advising all year round.
+
+  - component: bullet-list
+    title: "Still a Student Myself"
+    items:
+      - "A software engineering master's"
+      - "Started October 2025"
+      - "While doing this job"
+      - "The learning does not stop"
+    notes: >-
+      I should say that I am still a student myself. I started a software
+      engineering master's in October last year and I am doing it alongside this
+      job, because the learning genuinely does not stop.
+
+  # ── 03 · In Public ─────────────────────────────────────────────────────────
+  - component: section-divider
+    number: "03"
+    title: "Writing It Down"
+    notes: >-
+      Third: almost everything I learn, I write down publicly. Two examples.
+
+  - component: bullet-list
+    title: "mAIstory"
+    items:
+      - "Fine-tuned Gemma 2B for stories"
+      - "An AI storyteller for children"
+      - "Built through KaggleX mentorship"
+      - "Code published with the article"
+    notes: >-
+      The first is mAIstory, where I fine-tuned Gemma two billion into an
+      interactive storyteller for children, built during a KaggleX mentorship,
+      with all the code published alongside the write-up.
+
+  - component: bullet-list
+    title: "The AWS Certificate"
+    items:
+      - "Cloud Practitioner, passed first go"
+      - "Zero cloud experience going in"
+      - "Only free study materials"
+      - "Wrote up exactly how"
+    notes: >-
+      The second article is about passing the AWS Cloud Practitioner
+      certification with essentially no cloud experience, using only free
+      materials, and then writing up exactly how I did it.
+
+  - component: stat-callout
+    title: "The Numbers From That Post"
+    stats:
+      - value: "838"
+        label: "Score"
+        subtext: "700 is a pass"
+      - value: "32"
+        label: "Hours"
+        subtext: "Across one month"
+      - value: "$0"
+        label: "Spent"
+        subtext: "Free materials only"
+    notes: >-
+      The numbers were a score of eight hundred and thirty-eight against a pass
+      mark of seven hundred, thirty-two hours of study spread over a month, and
+      nothing spent at all.
+
+  - component: pull-quote
+    quote: "The paywall is usually optional."
+    attribution: "A recurring theme"
+    notes: >-
+      That is a theme you will see again in a moment. A surprising amount of what
+      looks like it costs money turns out to be optional.
+
+  # ── 04 · Partnerships ──────────────────────────────────────────────────────
+  - component: section-divider
+    number: "04"
+    title: "Partnerships"
+    notes: >-
+      Fourth: the part of my job that is about companies rather than code.
+
+  - component: bullet-list
+    title: "The Practicum"
+    items:
+      - "Sixteen hours a week"
+      - "Roughly nine months"
+      - "Every student, guaranteed"
+      - "Real problems, real clients"
+    notes: >-
+      Every student in our master's programme does a practicum: sixteen hours a
+      week for about nine months, on a real problem for a real organisation. It
+      is guaranteed, not a lottery.
+
+  - component: stat-callout
+    title: "The Scale of It"
+    stats:
+      - value: "120+"
+        label: "Companies"
+        subtext: "Relationships I hold"
+      - value: "150+"
+        label: "Students"
+        subtext: "Taught and mentored"
+      - value: "5.67"
+        label: "Of six"
+        subtext: "My teaching score"
+    notes: >-
+      To give you the scale: I manage relationships with over a hundred and
+      twenty companies, I have taught or mentored more than a hundred and fifty
+      master's students, and my instructional score is five point six seven out
+      of six.
+
+  - component: card-grid
+    title: "Who We Work With"
+    cards:
+      - title: "Finance"
+        body: "BlackRock"
+      - title: "Cloud"
+        body: "AWS and Atlassian"
+      - title: "Health"
+        body: "UCSF, Stanford"
+      - title: "Mission"
+        body: "The Gates Foundation"
+    notes: >-
+      Our partners run from finance, with BlackRock, through cloud and software
+      companies like AWS and Atlassian, to health systems including UCSF and
+      Stanford, and mission organisations such as the Gates Foundation.
+
+  - component: stat-callout
+    title: "Where Our Graduates Land"
+    stats:
+      - value: "78%"
+        label: "Take offers in California"
+        subtext: "Class of 2025"
+      - value: "$150k"
+        label: "Median base salary"
+        subtext: "California offers"
+    notes: >-
+      Of the class of twenty twenty-five, seventy-eight percent accepted offers
+      in California, at a median base salary of a hundred and fifty thousand
+      dollars.
+
+  - component: bullet-list
+    title: "What Gets Someone Hired"
+    items:
+      - "Work a stranger can look at"
+      - "One project explained clearly"
+      - "Curiosity that survives boredom"
+      - "Not a perfect transcript"
+    notes: >-
+      Having watched a lot of these placements, what gets someone hired is work a
+      stranger can look at and one project they can explain clearly. It is almost
+      never the transcript.
+
+  # ── 05 · Ninth Circuit ─────────────────────────────────────────────────────
+  - component: section-divider
+    number: "05"
+    title: "Ninth Circuit"
+    notes: >-
+      Last, a project of my own that pulls all of this together: language,
+      large-scale data, free tools, and something genuinely useful.
+
+  - component: bullet-list
+    title: "The Problem"
+    items:
+      - "Thousands of opinions a year"
+      - "Only a fraction are asylum cases"
+      - "Reading them all is impossible"
+      - "So the research does not happen"
+    notes: >-
+      The Ninth Circuit publishes thousands of opinions a year, only a fraction
+      of which concern asylum. Reading and coding them by hand is not something a
+      person can do, so that research simply does not get done.
+
+  - component: process-steps
+    title: "How the Pipeline Works"
+    steps:
+      - label: "Fetch"
+        body: "Scrape opinions"
+      - label: "Classify"
+        body: "Asylum or not?"
+      - label: "Extract"
+        body: "Pull the features"
+    notes: >-
+      The pipeline has three stages. It fetches opinions from the court, asks a
+      model whether each one is an asylum case, and then extracts structured
+      legal features from the ones that are.
+
+  - component: stat-callout
+    title: "What It Has Built"
+    stats:
+      - value: "5,779"
+        label: "Opinions"
+        subtext: "Growing daily"
+      - value: "70+"
+        label: "Features each"
+        subtext: "With a source quote"
+      - value: "26%"
+        label: "Are asylum"
+        subtext: "The rest filtered"
+    notes: >-
+      So far it holds five thousand seven hundred and seventy-nine opinions,
+      extracts more than seventy structured features from each asylum case with a
+      supporting quote for every one, and finds that about twenty-six percent of
+      opinions qualify.
+
+  - component: bullet-list
+    title: "The Trick That Makes It Free"
+    items:
+      - "Classify cheaply before extracting"
+      - "Throw away three quarters first"
+      - "Roughly four times cheaper"
+      - "Free-tier models throughout"
+    notes: >-
+      The trick is the order. A cheap classification pass throws away about three
+      quarters of the opinions before the expensive extraction ever runs, which
+      makes the whole thing roughly four times cheaper — and it runs on free-tier
+      models throughout.
+
+  - component: bullet-list
+    title: "What It Runs On"
+    items:
+      - "Llama 3.3 on a free API tier"
+      - "Postgres, and a vector index"
+      - "A daily scheduled job"
+      - "Total ongoing cost: nothing"
+    notes: >-
+      It runs on Llama three point three through a free API tier, a Postgres
+      database with a vector index for search, and a scheduled job that runs
+      daily. The ongoing cost is nothing.
+
+  - component: bullet-list
+    title: "Why It Matters"
+    items:
+      - "This work was always hand-coded"
+      - "Now it is searchable"
+      - "Every claim has its quote"
+      - "Anyone can read the code"
+    notes: >-
+      It matters because this kind of asylum research has always been hand-coded
+      by people with time and funding. This makes it searchable, keeps a quote
+      behind every extracted claim, and the code is public for anyone to check.
+
+  # ── Close ──────────────────────────────────────────────────────────────────
+  - component: two-panel-list
+    title: "What I Actually Believe"
+    left:
+      title: "Paths are not straight"
+      items:
+        - "I studied literature first"
+        - "Nothing was wasted"
+        - "The detour is the edge"
+    right:
+      title: "The tools are free"
+      items:
+        - "A certificate, for nothing"
+        - "A legal database, free"
+        - "The barrier is starting"
+    accent_side: "right"
+    notes: >-
+      First, paths are not straight — I studied literature, none of it was
+      wasted, and the detour turned into the thing that makes me useful. Second,
+      the tools are genuinely free now, and the barrier is starting rather than
+      paying.
+
+  - component: bullet-list
+    title: "If You Take One Action"
+    items:
+      - "Build one small thing publicly"
+      - "Write down how you did it"
+      - "Use the free tier for all of it"
+      - "Then show someone"
+    notes: >-
+      If you do one thing after today, build something small in public, write
+      down how you did it, do the whole thing on free tiers, and then show it to
+      somebody.
+
+  - component: question
+    question: "What will you build?"
+    notes: >-
+      So that is my question back to you, and I would genuinely like to hear the
+      answer. What will you build?
