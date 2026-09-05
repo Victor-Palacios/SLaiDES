@@ -1,0 +1,124 @@
+# Best practice for .env files, locally and on GitHub.
+#
+# Built under the three-colour rule (2026-09-05): the `code` component is
+# avoided deliberately, because its panel plus syntax colouring puts a slide
+# over budget. File contents are shown with table-slide instead.
+version: 1
+theme:
+  font: arial
+  # Three-colour rule (2026-09-05): `primary` is collapsed onto `accent` so the
+  # structural blue and the headline blue are one colour, not two. Every slide
+  # then renders as white background + ink + one blue.
+  palette:
+    primary: "#0072CE"
+    accent: "#0072CE"
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  - component: title-slide
+    title: "The .env File"
+    subtitle: "Keeping secrets out of your repository"
+    notes: >-
+      This is about the .env file: what belongs in one, and how to stop it
+      reaching GitHub.
+
+  - component: question
+    question: "Where do your keys live?"
+    notes: >-
+      If the answer is anywhere inside a file you commit, they are not yours any
+      more.
+
+  - component: definition
+    term: ".env"
+    definition: "Local settings your code reads and git ignores"
+    notes: >-
+      A .env file holds the settings your code reads at startup, and it is the
+      one file in your project that git must never see.
+
+  - component: table-slide
+    title: "What Goes in One"
+    headers: ["Setting", "Example value"]
+    rows:
+      - ["An API key", "sk-live-4f9c2a..."]
+      - ["A database URL", "postgres://user:pw@host"]
+      - ["A signing token", "A long random string"]
+      - ["A per-machine path", "/Users/you/data"]
+    notes: >-
+      Four kinds of thing belong there: API keys, database URLs, signing tokens,
+      and anything whose value differs from one machine to the next.
+
+  - component: bullet-list
+    title: "Ignore It Before You Write It"
+    items:
+      - "Add .env to .gitignore first"
+      - "Then create the file"
+      - "Never the other way round"
+      - "One slip and it is in history"
+    notes: >-
+      Put .env into .gitignore before you create it, not after. Do it the other
+      way round and a single careless commit puts the file into your history for
+      good.
+
+  - component: bullet-list
+    title: "Commit an Example Instead"
+    items:
+      - "A file named .env.example"
+      - "Every key name, no values"
+      - "Committed on purpose"
+      - "So a teammate knows what to set"
+    notes: >-
+      Commit a .env.example alongside it: every key name with the values left
+      blank. That is how a teammate cloning your repo knows what they need to set
+      without you sending anything private.
+
+  - component: bullet-list
+    title: "On GitHub"
+    items:
+      - "The .env file never goes up"
+      - "Actions read repository secrets"
+      - "Per-environment secrets for deploys"
+      - "Never print one into the log"
+    notes: >-
+      On GitHub the file itself never goes up. Actions read values from
+      repository secrets, deploys can use per-environment secrets, and nothing
+      should ever print a secret into a build log.
+
+  - component: bullet-list
+    title: "If It Is Already Pushed"
+    items:
+      - "Rotate the key first, right now"
+      - "Deleting the file is not enough"
+      - "Your history still holds it"
+      - "Assume it was already read"
+    notes: >-
+      If a .env is already pushed, rotate the key before anything else. Deleting
+      the file does not remove it from your history, and a key that has been
+      public should be treated as one that has already been read.
+
+  - component: table-slide
+    title: "Where Each Value Lives"
+    headers: ["Place", "How it is stored"]
+    rows:
+      - ["Your laptop", "A .env file, ignored"]
+      - ["A pull request", "Nothing at all"]
+      - ["GitHub Actions", "Repository secrets"]
+      - ["Production", "The host's secret store"]
+    notes: >-
+      The same value lives differently in each place: a .env file on your laptop,
+      nothing whatsoever in a pull request, repository secrets in Actions, and
+      your host's own secret store in production.
+
+  - component: bullet-list
+    title: "Before You Push"
+    items:
+      - "Is .env in .gitignore?"
+      - "Does git status show it?"
+      - "Is .env.example up to date?"
+      - "Would you show this diff to anyone?"
+    notes: >-
+      Four checks before you push: .env is in .gitignore, git status does not
+      show it, the example file is current, and you would be happy for anyone to
+      read the diff.

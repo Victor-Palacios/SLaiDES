@@ -4,7 +4,7 @@
     "w": 1280.0,
     "h": 720.0
   },
-  "count": 15,
+  "count": 16,
   "decks": [
     {
       "stem": "agents-in-ai",
@@ -1102,6 +1102,103 @@
           "height_px": 720.0,
           "background": "#0F1F2E",
           "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:166.24px;width:1184.00px;height:177.60px;color:#F0A202;font-family:'Arial',Arial;font-size:140.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">0.1.0</div>\n    <div class=\"node node-box\" style=\"left:582.40px;top:349.60px;width:115.20px;height:5.76px;background:#F0A202;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:384.16px;width:1184.00px;height:76.80px;color:#E7EDF3;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">Ship your first version</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:489.76px;width:1184.00px;height:64.00px;color:#9DB0C0;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">Four functions, importable, published.</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#9DB0C0;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">65</div>"
+        }
+      ]
+    },
+    {
+      "stem": "env-file-best-practice",
+      "title": "The .env File",
+      "slide_count": 10,
+      "slides": [
+        {
+          "index": 1,
+          "component": "title-slide",
+          "caption": "The .env File",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:96.00px;top:270.40px;width:1088.00px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">The .env File</div>\n    <div class=\"node node-text\" style=\"left:96.00px;top:395.20px;width:1088.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Keeping secrets out of your repository</div>"
+        },
+        {
+          "index": 2,
+          "component": "question",
+          "caption": "Where do your keys live?",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:307.20px;width:13.44px;height:105.60px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:307.20px;width:1127.36px;height:105.60px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Where do your keys live?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">2</div>"
+        },
+        {
+          "index": 3,
+          "component": "definition",
+          "caption": ".env",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:260.80px;width:13.44px;height:198.40px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:260.80px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">.env</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:395.20px;width:1127.36px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Local settings your code reads and git ignores</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">3</div>"
+        },
+        {
+          "index": 4,
+          "component": "table-slide",
+          "caption": "What Goes in One",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What Goes in One</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:431.53px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Setting</div>\n    <div class=\"node node-text\" style=\"left:537.13px;top:157.44px;width:540.50px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Example value</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:217.60px;width:1029.62px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:252.16px;width:431.53px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">An API key</div>\n    <div class=\"node node-text\" style=\"left:537.13px;top:252.16px;width:540.50px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">sk-live-4f9c2a...</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:347.52px;width:431.53px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A database URL</div>\n    <div class=\"node node-text\" style=\"left:537.13px;top:347.52px;width:540.50px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">postgres://user:pw@host</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:442.88px;width:431.53px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A signing token</div>\n    <div class=\"node node-text\" style=\"left:537.13px;top:442.88px;width:540.50px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A long random string</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:538.24px;width:431.53px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A per-machine path</div>\n    <div class=\"node node-text\" style=\"left:537.13px;top:538.24px;width:540.50px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">/Users/you/data</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">4</div>"
+        },
+        {
+          "index": 5,
+          "component": "bullet-list",
+          "caption": "Ignore It Before You Write It",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Ignore It Before You Write It</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Add .env to .gitignore first</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Then create the file</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Never the other way round</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">One slip and it is in history</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">5</div>"
+        },
+        {
+          "index": 6,
+          "component": "bullet-list",
+          "caption": "Commit an Example Instead",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Commit an Example Instead</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A file named .env.example</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Every key name, no values</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Committed on purpose</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">So a teammate knows what to set</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">6</div>"
+        },
+        {
+          "index": 7,
+          "component": "bullet-list",
+          "caption": "On GitHub",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">On GitHub</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The .env file never goes up</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Actions read repository secrets</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Per-environment secrets for deploys</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Never print one into the log</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">7</div>"
+        },
+        {
+          "index": 8,
+          "component": "bullet-list",
+          "caption": "If It Is Already Pushed",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">If It Is Already Pushed</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Rotate the key first, right now</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Deleting the file is not enough</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Your history still holds it</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Assume it was already read</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">8</div>"
+        },
+        {
+          "index": 9,
+          "component": "table-slide",
+          "caption": "Where Each Value Lives",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Where Each Value Lives</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:338.25px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Place</div>\n    <div class=\"node node-text\" style=\"left:443.85px;top:157.44px;width:495.54px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">How it is stored</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:217.60px;width:891.39px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:252.16px;width:338.25px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Your laptop</div>\n    <div class=\"node node-text\" style=\"left:443.85px;top:252.16px;width:495.54px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A .env file, ignored</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:347.52px;width:338.25px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A pull request</div>\n    <div class=\"node node-text\" style=\"left:443.85px;top:347.52px;width:495.54px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Nothing at all</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:442.88px;width:338.25px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">GitHub Actions</div>\n    <div class=\"node node-text\" style=\"left:443.85px;top:442.88px;width:495.54px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Repository secrets</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:538.24px;width:338.25px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Production</div>\n    <div class=\"node node-text\" style=\"left:443.85px;top:538.24px;width:495.54px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The host's secret store</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">9</div>"
+        },
+        {
+          "index": 10,
+          "component": "bullet-list",
+          "caption": "Before You Push",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Before You Push</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Is .env in .gitignore?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Does git status show it?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Is .env.example up to date?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Would you show this diff to anyone?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">10</div>"
         }
       ]
     },

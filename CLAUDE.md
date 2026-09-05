@@ -57,6 +57,32 @@ never whole categories; when the operator supplies explicit numbers, use
 their literals verbatim; bullet-list items fit on ONE line — keep each short
 enough that it never wraps (FB-098).
 
+**Run a repetition pass before shipping any deck.** Drafting produces slides
+that restate each other, and the operator notices. After the deck lints clean
+and before emitting anything, reduce every slide to a one-line claim, read the
+claims as a list, and find the pairs that say the same thing. Then:
+
+- **Delete, do not reword.** Two slides making one point are one slide plus
+  filler. Cutting the weaker one is the fix; rephrasing it is not.
+- **Variance must be true.** A second slide on a topic earns its place only by
+  adding a distinction the first does not make — a different axis, a concrete
+  example of an abstract rule, a counter-case, or a mirror ("always safe to
+  stub" / "never safe to stub"). Restating the same claim in a different
+  component is repetition wearing a costume.
+- **Recurring structure across decks is not repetition.** Deliberate devices
+  that repeat once per session — the agenda, the exit checklist, "if you are
+  behind", "write this down now" — are navigation, and they stay.
+- Say in the reply what the pass removed, or that it found nothing.
+
+Standing operator instruction (2026-09-05).
+
+**At most three colours on a slide, counting the background.** A white
+background with blue and black text is the ceiling. A fourth colour — grey body
+text, a muted caption, a second accent — is not allowed, even when it is subtle.
+Combined with the no-black-and-white rule above, every slide lands on exactly
+two or three colours: the background, an ink, and at most one more. Standing
+operator instruction (2026-09-05).
+
 **No slide may be black and white.** Every slide must carry at least one element
 the eye reads as colour — the page number does NOT count (it is chrome). This is
 enforced by the linter as `E_MONOCHROME`, judged perceptually (a very dark navy
