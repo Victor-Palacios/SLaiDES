@@ -4,9 +4,9 @@ theme:
   palette:
     surface: "#FFFFFF"   # clean page
     text: "#0A2240"      # deep navy ink
-    primary: "#123A6B"   # navy, solid marks
+    primary: "#0072CE"   # = accent (three-colour rule; was #123A6B)
     accent: "#0072CE"    # bright blue highlight
-    muted: "#5B6B82"     # cool grey secondary
+    muted: "#0A2240"     # = text (three-colour rule; was #5B6B82)
   font: arial
 page_numbers:
   enabled: true
@@ -67,12 +67,12 @@ slides:
       - {icon: "grid", heading: "Cloud Architectures", body: "Scalable cloud-based solutions"}
       - {icon: "check", heading: "AI Engineering", body: "LLM apps, fine-tuned models"}
 
-  - component: card-grid
+  - component: icon-text-rows
     title: "How You Learn"
-    cards:
-      - {icon: "file", title: "Async", body: "On your clock"}
-      - {icon: "users", title: "Team", body: "Agile peers"}
-      - {icon: "check", title: "Applied", body: "Real projects"}
+    rows:
+      - {icon: "file", heading: "Async", body: "On your clock"}
+      - {icon: "users", heading: "Team", body: "Agile peers"}
+      - {icon: "check", heading: "Applied", body: "Real projects"}
 
   - component: timeline
     title: "The Arc of the Degree"

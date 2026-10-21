@@ -20,10 +20,6 @@
         "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0 9px;\">What Changed This Quarter</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:251.52px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Activation time dropped by half</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:353.92px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Support tickets fell sharply</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:456.32px;width:1184.00px;height:54.40px;color:#1A1A2E;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">Expansion revenue outpaced new sales</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1088.00px;top:633.60px;width:144.00px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0 9px;\">1</div>"
       }
     },
-    "card-grid": {
-      "status": "approved",
-      "date": "2026-07-02"
-    },
     "chart-with-insight": {
       "status": "approved",
       "date": "2026-07-04"

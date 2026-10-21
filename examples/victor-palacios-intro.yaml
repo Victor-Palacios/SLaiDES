@@ -380,21 +380,19 @@ slides:
       master's students, and my instructional score is five point six seven out
       of six.
 
-  - component: card-grid
+  - component: table-slide
     title: "Who We Work With"
-    cards:
-      - title: "Finance"
-        body: "BlackRock"
-      - title: "Cloud"
-        body: "AWS and Atlassian"
-      - title: "Health"
-        body: "UCSF, Stanford"
-      - title: "Mission"
-        body: "The Gates Foundation"
+    headers: ["Sector", "Partners"]
+    rows:
+      - ["Finance", "BlackRock"]
+      - ["Cloud", "AWS and Atlassian"]
+      - ["Health", "UCSF, Stanford"]
+      - ["Mission", "The Gates Foundation"]
     notes: >-
-      Our partners run from finance, with BlackRock, through cloud and software
-      companies like AWS and Atlassian, to health systems including UCSF and
-      Stanford, and mission organisations such as the Gates Foundation.
+      Our partners run from finance, with BlackRock, through cloud and
+      software companies like AWS and Atlassian, to health systems including
+      UCSF and Stanford, and mission organisations such as the Gates
+      Foundation.
 
   - component: stat-callout
     title: "Where Our Graduates Land"
@@ -544,9 +542,3 @@ slides:
       If you do one thing after today, build something small in public, write
       down how you did it, do the whole thing on free tiers, and then show it to
       somebody.
-
-  - component: question
-    question: "What will you build?"
-    notes: >-
-      So that is my question back to you, and I would genuinely like to hear the
-      answer. What will you build?

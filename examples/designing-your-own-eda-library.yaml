@@ -15,11 +15,11 @@ theme:
   # all-blue-on-white of FB-074): a dark navy ground with light body text, bright-blue
   # headlines and an amber accent — pairs naturally with the dark code panels.
   palette:
-    primary: "#8FC1F0"    # bright python-blue — headlines pop on the dark ground
+    primary: "#F0A202"   # = accent (three-colour rule; was #8FC1F0)
     surface: "#0F1F2E"    # dark navy ground
     accent: "#F0A202"     # warm amber accent
     text: "#E7EDF3"       # near-white body text
-    muted: "#9DB0C0"      # cool grey for de-emphasis / chrome
+    muted: "#E7EDF3"     # = text (three-colour rule; was #9DB0C0)
   type_scale:
     title: 60
     header: 42

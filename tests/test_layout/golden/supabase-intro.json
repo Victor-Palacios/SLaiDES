@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1",
+          "node_id": "title_5521",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -32,7 +32,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "subtitle_2",
+          "node_id": "subtitle_5522",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -65,7 +65,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_4",
+          "node_id": "accent_bar_5524",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -76,7 +76,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "question_3",
+          "node_id": "question_5523",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -101,7 +101,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_5",
+          "node_id": "chrome_pagenum_5525",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -135,7 +135,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_8",
+          "node_id": "accent_bar_5528",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -146,7 +146,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_6",
+          "node_id": "term_5526",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -170,7 +170,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_7",
+          "node_id": "def_5527",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -195,7 +195,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_9",
+          "node_id": "chrome_pagenum_5529",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -229,7 +229,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_10",
+          "node_id": "title_5530",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -253,7 +253,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_11",
+          "node_id": "image_5531",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -265,7 +265,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_12",
+          "node_id": "content_text_5532",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -288,7 +288,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_13",
+          "node_id": "content_text_5533",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -311,7 +311,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_14",
+          "node_id": "content_text_5534",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -336,7 +336,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_15",
+          "node_id": "chrome_pagenum_5535",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -361,7 +361,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_16",
+          "node_id": "chrome_source_5536",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -391,12 +391,12 @@
     {
       "slide_index": 4,
       "page_number": 5,
-      "component": "card-grid",
+      "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_17",
+          "node_id": "title_5537",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -420,49 +420,81 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "card_title_18",
+          "node_id": "th_5538",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 2613660,
+            "w": 2214193,
             "h": 518159
+          },
+          "text_content": "Piece",
+          "lines": [
+            {
+              "text": "Piece",
+              "width_emu": 1128415,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_5539",
+          "node_type": "text",
+          "rect": {
+            "x": 3220033,
+            "y": 1499616,
+            "w": 4277893,
+            "h": 518159
+          },
+          "text_content": "What it does",
+          "lines": [
+            {
+              "text": "What it does",
+              "width_emu": 2566764,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "table_rule_5540",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 7040726,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_5541",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 2214193,
+            "h": 633984
           },
           "text_content": "Database",
           "lines": [
             {
               "text": "Database",
-              "width_emu": 1920118,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_0"
-        },
-        {
-          "node_id": "card_body_19",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "Tables of your data",
-          "lines": [
-            {
-              "text": "Tables of",
-              "width_emu": 1728254,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "your data",
-              "width_emu": 1800361,
+              "width_emu": 1848433,
               "height_emu": 518160,
               "overflows": false
             }
@@ -470,53 +502,45 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_0"
+          "italic": false
         },
         {
-          "node_id": "card_title_20",
+          "node_id": "td_5542",
           "node_type": "text",
           "rect": {
-            "x": 3345180,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 518159
+            "x": 3220033,
+            "y": 2401823,
+            "w": 4277893,
+            "h": 633984
+          },
+          "text_content": "Tables of your data",
+          "lines": [
+            {
+              "text": "Tables of your data",
+              "width_emu": 3648583,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5543",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3310127,
+            "w": 2214193,
+            "h": 633984
           },
           "text_content": "Auth",
           "lines": [
             {
               "text": "Auth",
-              "width_emu": 983146,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_1"
-        },
-        {
-          "node_id": "card_body_21",
-          "node_type": "text",
-          "rect": {
-            "x": 3345180,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "Who is signed in",
-          "lines": [
-            {
-              "text": "Who is",
-              "width_emu": 1319647,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "signed in",
-              "width_emu": 1728465,
+              "width_emu": 888268,
               "height_emu": 518160,
               "overflows": false
             }
@@ -524,59 +548,45 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_1"
+          "italic": false
         },
         {
-          "node_id": "card_title_22",
+          "node_id": "td_5544",
           "node_type": "text",
           "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 518159
+            "x": 3220033,
+            "y": 3310127,
+            "w": 4277893,
+            "h": 633984
+          },
+          "text_content": "Who is signed in",
+          "lines": [
+            {
+              "text": "Who is signed in",
+              "width_emu": 3168079,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5545",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4218431,
+            "w": 2214193,
+            "h": 633984
           },
           "text_content": "Storage",
           "lines": [
             {
               "text": "Storage",
-              "width_emu": 1607654,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_2"
-        },
-        {
-          "node_id": "card_body_23",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "Files people upload",
-          "lines": [
-            {
-              "text": "Files",
-              "width_emu": 911671,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "people",
-              "width_emu": 1296665,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "upload",
-              "width_emu": 1296665,
+              "width_emu": 1512354,
               "height_emu": 518160,
               "overflows": false
             }
@@ -584,53 +594,45 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_2"
+          "italic": false
         },
         {
-          "node_id": "card_title_24",
+          "node_id": "td_5546",
           "node_type": "text",
           "rect": {
-            "x": 9121140,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 518159
+            "x": 3220033,
+            "y": 4218431,
+            "w": 4277893,
+            "h": 633984
+          },
+          "text_content": "Files people upload",
+          "lines": [
+            {
+              "text": "Files people upload",
+              "width_emu": 3744937,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5547",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 2214193,
+            "h": 633984
           },
           "text_content": "API",
           "lines": [
             {
               "text": "API",
-              "width_emu": 719807,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_3"
-        },
-        {
-          "node_id": "card_body_25",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "How your page asks",
-          "lines": [
-            {
-              "text": "How your",
-              "width_emu": 1823765,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "page asks",
-              "width_emu": 1968401,
+              "width_emu": 695982,
               "height_emu": 518160,
               "overflows": false
             }
@@ -638,13 +640,35 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_3"
+          "italic": false
+        },
+        {
+          "node_id": "td_5548",
+          "node_type": "text",
+          "rect": {
+            "x": 3220033,
+            "y": 5126735,
+            "w": 4277893,
+            "h": 633984
+          },
+          "text_content": "How your page asks",
+          "lines": [
+            {
+              "text": "How your page asks",
+              "width_emu": 3912133,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_26",
+          "node_id": "chrome_pagenum_5549",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -678,7 +702,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_29",
+          "node_id": "accent_bar_5552",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -689,7 +713,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_27",
+          "node_id": "term_5550",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -713,7 +737,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_28",
+          "node_id": "def_5551",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -738,7 +762,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_30",
+          "node_id": "chrome_pagenum_5553",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -772,7 +796,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_31",
+          "node_id": "title_5554",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -796,7 +820,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_32",
+          "node_id": "image_5555",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -808,7 +832,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_33",
+          "node_id": "content_text_5556",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -831,7 +855,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_34",
+          "node_id": "content_text_5557",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -854,7 +878,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_35",
+          "node_id": "content_text_5558",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -879,7 +903,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_36",
+          "node_id": "chrome_pagenum_5559",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -904,7 +928,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_37",
+          "node_id": "chrome_source_5560",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -934,164 +958,12 @@
     {
       "slide_index": 7,
       "page_number": 8,
-      "component": "bullet-list",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_38",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "Four Things You Do to a Table",
-          "lines": [
-            {
-              "text": "Four Things You Do to a Table",
-              "width_emu": 7645226,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "bl_item_39",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1908050,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Add a row",
-          "lines": [
-            {
-              "text": "Add a row",
-              "width_emu": 1944154,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_40",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2883409,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Find the rows you want",
-          "lines": [
-            {
-              "text": "Find the rows you want",
-              "width_emu": 4440076,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_41",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3858768,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Change a row",
-          "lines": [
-            {
-              "text": "Change a row",
-              "width_emu": 2688419,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_42",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4834127,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Delete a row",
-          "lines": [
-            {
-              "text": "Delete a row",
-              "width_emu": 2424026,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_43",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "8",
-          "lines": [
-            {
-              "text": "8",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 8,
-      "page_number": 9,
       "component": "image-half-bleed",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_44",
+          "node_id": "title_5561",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1115,7 +987,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_45",
+          "node_id": "image_5562",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -1127,7 +999,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_46",
+          "node_id": "content_text_5563",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1150,7 +1022,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_47",
+          "node_id": "content_text_5564",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1173,7 +1045,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_48",
+          "node_id": "content_text_5565",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1198,7 +1070,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_49",
+          "node_id": "chrome_pagenum_5566",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1206,10 +1078,10 @@
             "w": 548640,
             "h": 365760
           },
-          "text_content": "9",
+          "text_content": "8",
           "lines": [
             {
-              "text": "9",
+              "text": "8",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false
@@ -1223,7 +1095,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_50",
+          "node_id": "chrome_source_5567",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -1251,119 +1123,61 @@
       ]
     },
     {
-      "slide_index": 9,
-      "page_number": 10,
-      "component": "bullet-list",
+      "slide_index": 8,
+      "page_number": 9,
+      "component": "definition",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_51",
-          "node_type": "text",
+          "node_id": "accent_bar_5570",
+          "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
           },
-          "text_content": "Storage Is for Files",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_5568",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "SQL",
           "lines": [
             {
-              "text": "Storage Is for Files",
-              "width_emu": 4801902,
-              "height_emu": 640080,
+              "text": "SQL",
+              "width_emu": 1566416,
+              "height_emu": 914400,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 42.0,
+          "size_pt": 60.0,
           "bold": true,
           "italic": false,
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_52",
+          "node_id": "def_5569",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 1908050,
-            "w": 11277600,
-            "h": 518159
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
           },
-          "text_content": "Profile photos",
+          "text_content": "The language for building and asking a database",
           "lines": [
             {
-              "text": "Profile photos",
-              "width_emu": 2640347,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_53",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2883409,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Uploaded PDFs",
-          "lines": [
-            {
-              "text": "Uploaded PDFs",
-              "width_emu": 3048112,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_54",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3858768,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Anything too big for a table",
-          "lines": [
-            {
-              "text": "Anything too big for a table",
-              "width_emu": 5137113,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_55",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4834127,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Same access rules as the data",
-          "lines": [
-            {
-              "text": "Same access rules as the data",
-              "width_emu": 5904359,
+              "text": "The language for building and asking a database",
+              "width_emu": 9338729,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1376,7 +1190,148 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_56",
+          "node_id": "chrome_pagenum_5571",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "9",
+          "lines": [
+            {
+              "text": "9",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 9,
+      "page_number": 10,
+      "component": "image-half-bleed",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_5572",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Two Ways to Make a Table",
+          "lines": [
+            {
+              "text": "Two Ways to Make a Table",
+              "width_emu": 6629474,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "image_5573",
+          "node_type": "image",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 4261104
+          },
+          "text_content": "examples/assets/supabase/sql-tab.png",
+          "slot_type": "image"
+        },
+        {
+          "node_id": "content_text_5574",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Click in the Table Editor",
+          "lines": [
+            {
+              "text": "Click in the Table Editor",
+              "width_emu": 4504172,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_5575",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2383536,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Or write it in SQL",
+          "lines": [
+            {
+              "text": "Or write it in SQL",
+              "width_emu": 3287204,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_5576",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3267456,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "We will write SQL",
+          "lines": [
+            {
+              "text": "We will write SQL",
+              "width_emu": 3375124,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_5577",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1399,65 +1354,149 @@
           "italic": false,
           "is_chrome": true,
           "align": "right"
+        },
+        {
+          "node_id": "chrome_source_5578",
+          "node_type": "text",
+          "rect": {
+            "x": 10085130,
+            "y": 6035040,
+            "w": 826710,
+            "h": 365760
+          },
+          "text_content": "Source",
+          "lines": [
+            {
+              "text": "Source",
+              "width_emu": 643830,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "text_color": "#0072CE",
+          "href": "https://supabase.com/docs/guides/database/tables"
         }
       ]
     },
     {
       "slide_index": 10,
       "page_number": 11,
-      "component": "definition",
+      "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_59",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2484120,
-            "w": 128016,
-            "h": 1889760
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "term_57",
+          "node_id": "title_5579",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 2484120,
-            "w": 10738104,
-            "h": 1005840
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
           },
-          "text_content": "API",
+          "text_content": "Why We Use SQL",
           "lines": [
             {
-              "text": "API",
-              "width_emu": 1270248,
-              "height_emu": 914400,
+              "text": "Why We Use SQL",
+              "width_emu": 4435971,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 60.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_58",
+          "node_id": "bl_item_5580",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 3764280,
-            "w": 10738104,
-            "h": 609600
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "How your page talks to the database",
+          "text_content": "It is written down, so it repeats",
           "lines": [
             {
-              "text": "How your page talks to the database",
-              "width_emu": 7009160,
+              "text": "It is written down, so it repeats",
+              "width_emu": 5807794,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_5581",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "It can live in git as a migration",
+          "lines": [
+            {
+              "text": "It can live in git as a migration",
+              "width_emu": 5688037,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_5582",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Claude writes it, you review it",
+          "lines": [
+            {
+              "text": "Claude writes it, you review it",
+              "width_emu": 5591473,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_5583",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "It reaches every Postgres type",
+          "lines": [
+            {
+              "text": "It reaches every Postgres type",
+              "width_emu": 5832041,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1470,7 +1509,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_60",
+          "node_id": "chrome_pagenum_5584",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1499,159 +1538,376 @@
     {
       "slide_index": 11,
       "page_number": 12,
-      "component": "this-vs-that",
+      "component": "code",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_61",
-          "node_type": "text",
+          "node_id": "code_dot_5585",
+          "node_type": "box",
           "rect": {
             "x": 457200,
             "y": 457200,
+            "w": 146304,
+            "h": 146304
+          },
+          "group_id": "code",
+          "fill_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_dot_5586",
+          "node_type": "box",
+          "rect": {
+            "x": 713232,
+            "y": 457200,
+            "w": 146304,
+            "h": 146304
+          },
+          "group_id": "code",
+          "fill_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_dot_5587",
+          "node_type": "box",
+          "rect": {
+            "x": 969264,
+            "y": 457200,
+            "w": 146304,
+            "h": 146304
+          },
+          "group_id": "code",
+          "fill_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_title_5588",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 923544,
             "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "Why People Use It",
-          "lines": [
-            {
-              "text": "Why People Use It",
-              "width_emu": 4623755,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "vs_value_62",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2776728,
-            "w": 4792980,
-            "h": 914400
-          },
-          "text_content": "Server",
-          "lines": [
-            {
-              "text": "Server",
-              "width_emu": 2372692,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "align": "center"
-        },
-        {
-          "node_id": "vs_label_63",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3965448,
-            "w": 4792980,
-            "h": 518159
-          },
-          "text_content": "You build and run it",
-          "lines": [
-            {
-              "text": "You build and run it",
-              "width_emu": 3681264,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "align": "center"
-        },
-        {
-          "node_id": "vs_value_64",
-          "node_type": "text",
-          "rect": {
-            "x": 6941820,
-            "y": 2776728,
-            "w": 4792980,
-            "h": 914400
-          },
-          "text_content": "Supabase",
-          "lines": [
-            {
-              "text": "Supabase",
-              "width_emu": 3599780,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "align": "center"
-        },
-        {
-          "node_id": "vs_label_65",
-          "node_type": "text",
-          "rect": {
-            "x": 6941820,
-            "y": 3965448,
-            "w": 4792980,
-            "h": 518159
-          },
-          "text_content": "You set up a project",
-          "lines": [
-            {
-              "text": "You set up a project",
-              "width_emu": 3801021,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "align": "center"
-        },
-        {
-          "node_id": "vs_text_66",
-          "node_type": "text",
-          "rect": {
-            "x": 5524500,
-            "y": 3310127,
-            "w": 1143000,
             "h": 640080
           },
-          "text_content": "VS",
+          "text_content": "A first table, in SQL",
           "lines": [
             {
-              "text": "VS",
-              "width_emu": 711547,
+              "text": "A first table, in SQL",
+              "width_emu": 4565675,
               "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
           "size_pt": 42.0,
-          "bold": true,
+          "bold": false,
           "italic": false,
           "is_caption": true,
-          "align": "center"
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5589",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1837944,
+            "w": 3879324,
+            "h": 518159
+          },
+          "text_content": "create table notes (",
+          "lines": [
+            {
+              "text": "create table notes (",
+              "width_emu": 3696444,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5590",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2356103,
+            "w": 5968325,
+            "h": 518159
+          },
+          "text_content": "  id bigint generated by default",
+          "lines": [
+            {
+              "text": "  id bigint generated by default",
+              "width_emu": 5785445,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5591",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2874262,
+            "w": 662751,
+            "h": 518159
+          },
+          "text_content": "    ",
+          "lines": [
+            {
+              "text": "    ",
+              "width_emu": 479871,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5592",
+          "node_type": "text",
+          "rect": {
+            "x": 937071,
+            "y": 2874262,
+            "w": 638927,
+            "h": 518159
+          },
+          "text_content": "as",
+          "lines": [
+            {
+              "text": "as",
+              "width_emu": 456047,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#569CD6"
+        },
+        {
+          "node_id": "code_run_5593",
+          "node_type": "text",
+          "rect": {
+            "x": 1393118,
+            "y": 2874262,
+            "w": 4110194,
+            "h": 518159
+          },
+          "text_content": " identity primary key,",
+          "lines": [
+            {
+              "text": " identity primary key,",
+              "width_emu": 3927314,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5594",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3392421,
+            "w": 2295074,
+            "h": 518159
+          },
+          "text_content": "  body text ",
+          "lines": [
+            {
+              "text": "  body text ",
+              "width_emu": 2112194,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5595",
+          "node_type": "text",
+          "rect": {
+            "x": 2569394,
+            "y": 3392421,
+            "w": 783141,
+            "h": 518159
+          },
+          "text_content": "not",
+          "lines": [
+            {
+              "text": "not",
+              "width_emu": 600261,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#569CD6"
+        },
+        {
+          "node_id": "code_run_5596",
+          "node_type": "text",
+          "rect": {
+            "x": 3169655,
+            "y": 3392421,
+            "w": 1094973,
+            "h": 518159
+          },
+          "text_content": " null,",
+          "lines": [
+            {
+              "text": " null,",
+              "width_emu": 912093,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5597",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3910580,
+            "w": 7526853,
+            "h": 518159
+          },
+          "text_content": "  created_at timestamptz default now()",
+          "lines": [
+            {
+              "text": "  created_at timestamptz default now()",
+              "width_emu": 7343973,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5598",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4428739,
+            "w": 446641,
+            "h": 518159
+          },
+          "text_content": ");",
+          "lines": [
+            {
+              "text": ");",
+              "width_emu": 263761,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5599",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4946898,
+            "w": 3255449,
+            "h": 518159
+          },
+          "text_content": "alter table notes",
+          "lines": [
+            {
+              "text": "alter table notes",
+              "width_emu": 3072569,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
+        },
+        {
+          "node_id": "code_run_5600",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5465057,
+            "w": 5270867,
+            "h": 518159
+          },
+          "text_content": "  enable row level security;",
+          "lines": [
+            {
+              "text": "  enable row level security;",
+              "width_emu": 5087987,
+              "height_emu": 518159,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "code",
+          "text_color": "#FFFFFF"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_67",
+          "node_id": "chrome_pagenum_5601",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1675,7 +1931,8 @@
           "is_chrome": true,
           "align": "right"
         }
-      ]
+      ],
+      "background": "#0C1A1C"
     },
     {
       "slide_index": 12,
@@ -1685,7 +1942,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_68",
+          "node_id": "title_5602",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1693,11 +1950,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "The Rule That Protects It",
+          "text_content": "Claude Can Build It",
           "lines": [
             {
-              "text": "The Rule That Protects It",
-              "width_emu": 6283077,
+              "text": "Claude Can Build It",
+              "width_emu": 4889674,
               "height_emu": 640080,
               "overflows": false
             }
@@ -1709,7 +1966,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_69",
+          "node_id": "image_5603",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -1717,11 +1974,11 @@
             "w": 5501640,
             "h": 4261104
           },
-          "text_content": "examples/assets/supabase/rls.png",
+          "text_content": "examples/assets/supabase/mcp-setup.png",
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_70",
+          "node_id": "content_text_5604",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1729,11 +1986,11 @@
             "w": 5501640,
             "h": 609600
           },
-          "text_content": "Turn on row level security",
+          "text_content": "Supabase's MCP server",
           "lines": [
             {
-              "text": "Turn on row level security",
-              "width_emu": 4903502,
+              "text": "Supabase's MCP server",
+              "width_emu": 4634471,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1744,7 +2001,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_71",
+          "node_id": "content_text_5605",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1752,11 +2009,11 @@
             "w": 5501640,
             "h": 609600
           },
-          "text_content": "Without it, data is open",
+          "text_content": "Claude runs the SQL",
           "lines": [
             {
-              "text": "Without it, data is open",
-              "width_emu": 4392426,
+              "text": "Claude runs the SQL",
+              "width_emu": 4032523,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1767,7 +2024,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_72",
+          "node_id": "content_text_5606",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1775,11 +2032,11 @@
             "w": 5501640,
             "h": 609600
           },
-          "text_content": "Supabase warns you itself",
+          "text_content": "Approve each step first",
           "lines": [
             {
-              "text": "Supabase warns you itself",
-              "width_emu": 5040548,
+              "text": "Approve each step first",
+              "width_emu": 4416251,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1792,7 +2049,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_73",
+          "node_id": "chrome_pagenum_5607",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1817,7 +2074,174 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_74",
+          "node_id": "chrome_source_5608",
+          "node_type": "text",
+          "rect": {
+            "x": 10085130,
+            "y": 6035040,
+            "w": 826710,
+            "h": 365760
+          },
+          "text_content": "Source",
+          "lines": [
+            {
+              "text": "Source",
+              "width_emu": 643830,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "text_color": "#0072CE",
+          "href": "https://supabase.com/docs/guides/getting-started/mcp"
+        }
+      ]
+    },
+    {
+      "slide_index": 13,
+      "page_number": 14,
+      "component": "image-half-bleed",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_5609",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Rule That Protects It",
+          "lines": [
+            {
+              "text": "The Rule That Protects It",
+              "width_emu": 6283077,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "image_5610",
+          "node_type": "image",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 4261104
+          },
+          "text_content": "examples/assets/supabase/rls.png",
+          "slot_type": "image"
+        },
+        {
+          "node_id": "content_text_5611",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Turn on row level security",
+          "lines": [
+            {
+              "text": "Turn on row level security",
+              "width_emu": 4903502,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_5612",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2383536,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Without it, data is open",
+          "lines": [
+            {
+              "text": "Without it, data is open",
+              "width_emu": 4392426,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_5613",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3267456,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Supabase warns you itself",
+          "lines": [
+            {
+              "text": "Supabase warns you itself",
+              "width_emu": 5040548,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_5614",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "14",
+          "lines": [
+            {
+              "text": "14",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        },
+        {
+          "node_id": "chrome_source_5615",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -1845,14 +2269,14 @@
       ]
     },
     {
-      "slide_index": 13,
-      "page_number": 14,
+      "slide_index": 14,
+      "page_number": 15,
       "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_75",
+          "node_id": "title_5616",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1876,7 +2300,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_76",
+          "node_id": "th_5617",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1901,7 +2325,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_77",
+          "node_id": "th_5618",
           "node_type": "text",
           "rect": {
             "x": 4779615,
@@ -1926,7 +2350,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "table_rule_78",
+          "node_id": "table_rule_5619",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -1938,7 +2362,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_79",
+          "node_id": "td_5620",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1961,7 +2385,7 @@
           "italic": false
         },
         {
-          "node_id": "td_80",
+          "node_id": "td_5621",
           "node_type": "text",
           "rect": {
             "x": 4779615,
@@ -1984,7 +2408,7 @@
           "italic": false
         },
         {
-          "node_id": "td_81",
+          "node_id": "td_5622",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2007,7 +2431,7 @@
           "italic": false
         },
         {
-          "node_id": "td_82",
+          "node_id": "td_5623",
           "node_type": "text",
           "rect": {
             "x": 4779615,
@@ -2030,7 +2454,7 @@
           "italic": false
         },
         {
-          "node_id": "td_83",
+          "node_id": "td_5624",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2053,7 +2477,7 @@
           "italic": false
         },
         {
-          "node_id": "td_84",
+          "node_id": "td_5625",
           "node_type": "text",
           "rect": {
             "x": 4779615,
@@ -2078,7 +2502,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_85",
+          "node_id": "chrome_pagenum_5626",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2086,10 +2510,10 @@
             "w": 548640,
             "h": 365760
           },
-          "text_content": "14",
+          "text_content": "15",
           "lines": [
             {
-              "text": "14",
+              "text": "15",
               "width_emu": 226020,
               "height_emu": 243840,
               "overflows": false
@@ -2105,14 +2529,14 @@
       ]
     },
     {
-      "slide_index": 14,
-      "page_number": 15,
+      "slide_index": 15,
+      "page_number": 16,
       "component": "image-half-bleed",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_86",
+          "node_id": "title_5627",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2136,7 +2560,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_87",
+          "node_id": "image_5628",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -2148,7 +2572,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_88",
+          "node_id": "content_text_5629",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2171,7 +2595,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_89",
+          "node_id": "content_text_5630",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2194,7 +2618,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_90",
+          "node_id": "content_text_5631",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2219,7 +2643,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_91",
+          "node_id": "chrome_pagenum_5632",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2227,10 +2651,10 @@
             "w": 548640,
             "h": 365760
           },
-          "text_content": "15",
+          "text_content": "16",
           "lines": [
             {
-              "text": "15",
+              "text": "16",
               "width_emu": 226020,
               "height_emu": 243840,
               "overflows": false
@@ -2244,7 +2668,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_92",
+          "node_id": "chrome_source_5633",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -2272,14 +2696,14 @@
       ]
     },
     {
-      "slide_index": 15,
-      "page_number": 16,
+      "slide_index": 16,
+      "page_number": 17,
       "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_93",
+          "node_id": "title_5634",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2303,7 +2727,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_94",
+          "node_id": "th_5635",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2328,7 +2752,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_95",
+          "node_id": "th_5636",
           "node_type": "text",
           "rect": {
             "x": 4971690,
@@ -2353,7 +2777,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "table_rule_96",
+          "node_id": "table_rule_5637",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -2365,7 +2789,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_97",
+          "node_id": "td_5638",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2388,7 +2812,7 @@
           "italic": false
         },
         {
-          "node_id": "td_98",
+          "node_id": "td_5639",
           "node_type": "text",
           "rect": {
             "x": 4971690,
@@ -2411,7 +2835,7 @@
           "italic": false
         },
         {
-          "node_id": "td_99",
+          "node_id": "td_5640",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2434,7 +2858,7 @@
           "italic": false
         },
         {
-          "node_id": "td_100",
+          "node_id": "td_5641",
           "node_type": "text",
           "rect": {
             "x": 4971690,
@@ -2457,7 +2881,7 @@
           "italic": false
         },
         {
-          "node_id": "td_101",
+          "node_id": "td_5642",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2480,7 +2904,7 @@
           "italic": false
         },
         {
-          "node_id": "td_102",
+          "node_id": "td_5643",
           "node_type": "text",
           "rect": {
             "x": 4971690,
@@ -2505,289 +2929,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_103",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "16",
-          "lines": [
-            {
-              "text": "16",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 16,
-      "page_number": 17,
-      "component": "numbered-steps",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_104",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "Your First Ten Minutes",
-          "lines": [
-            {
-              "text": "Your First Ten Minutes",
-              "width_emu": 5699671,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_num_105",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 776183,
-            "h": 640080
-          },
-          "text_content": "01",
-          "lines": [
-            {
-              "text": "01",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_0",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_head_106",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 1499616,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Make an account",
-          "lines": [
-            {
-              "text": "Make an account",
-              "width_emu": 4298193,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_0",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_body_107",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 2185416,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "The free plan is enough",
-          "lines": [
-            {
-              "text": "The free plan is enough",
-              "width_emu": 4537063,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "step_0"
-        },
-        {
-          "node_id": "step_num_108",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3011424,
-            "w": 776183,
-            "h": 640080
-          },
-          "text_content": "02",
-          "lines": [
-            {
-              "text": "02",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_1",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_head_109",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 3011424,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Create a project",
-          "lines": [
-            {
-              "text": "Create a project",
-              "width_emu": 4031754,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_1",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_body_110",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 3697224,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "You get a database right away",
-          "lines": [
-            {
-              "text": "You get a database right away",
-              "width_emu": 5793668,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "step_1"
-        },
-        {
-          "node_id": "step_num_111",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4523232,
-            "w": 776183,
-            "h": 640080
-          },
-          "text_content": "03",
-          "lines": [
-            {
-              "text": "03",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_2",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_head_112",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 4523232,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Make one table",
-          "lines": [
-            {
-              "text": "Make one table",
-              "width_emu": 3823915,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_2",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_body_113",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 5209032,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "Then add a row by hand",
-          "lines": [
-            {
-              "text": "Then add a row by hand",
-              "width_emu": 4657030,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "step_2"
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_114",
+          "node_id": "chrome_pagenum_5644",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2821,7 +2963,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_115",
+          "node_id": "title_5645",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2845,12 +2987,12 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_116",
+          "node_id": "th_5646",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 3557664,
+            "w": 5333779,
             "h": 518159
           },
           "text_content": "Screenshot",
@@ -2870,12 +3012,12 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_117",
+          "node_id": "th_5647",
           "node_type": "text",
           "rect": {
-            "x": 4563504,
+            "x": 6339619,
             "y": 1499616,
-            "w": 5070862,
+            "w": 4566111,
             "h": 518159
           },
           "text_content": "Captured from",
@@ -2895,31 +3037,31 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "table_rule_118",
+          "node_id": "table_rule_5648",
           "node_type": "box",
           "rect": {
             "x": 457200,
             "y": 2072639,
-            "w": 9177166,
+            "w": 10448530,
             "h": 54864
           },
           "group_id": "table_head",
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_119",
+          "node_id": "td_5649",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2401823,
-            "w": 3557664,
+            "w": 5333779,
             "h": 452323
           },
-          "text_content": "Homepage",
+          "text_content": "Homepage, editor, sign-in",
           "lines": [
             {
-              "text": "Homepage",
-              "width_emu": 2112404,
+              "text": "Homepage, editor, sign-in",
+              "width_emu": 4920580,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2930,12 +3072,12 @@
           "italic": false
         },
         {
-          "node_id": "td_120",
+          "node_id": "td_5650",
           "node_type": "text",
           "rect": {
-            "x": 4563504,
+            "x": 6339619,
             "y": 2401823,
-            "w": 5070862,
+            "w": 4566111,
             "h": 452323
           },
           "text_content": "supabase.com",
@@ -2953,19 +3095,19 @@
           "italic": false
         },
         {
-          "node_id": "td_121",
+          "node_id": "td_5651",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3128466,
-            "w": 3557664,
+            "w": 5333779,
             "h": 452323
           },
-          "text_content": "Table editor",
+          "text_content": "Two ways to make a table",
           "lines": [
             {
-              "text": "Table editor",
-              "width_emu": 2232372,
+              "text": "Two ways to make a table",
+              "width_emu": 4968019,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2976,104 +3118,12 @@
           "italic": false
         },
         {
-          "node_id": "td_122",
+          "node_id": "td_5652",
           "node_type": "text",
           "rect": {
-            "x": 4563504,
+            "x": 6339619,
             "y": 3128466,
-            "w": 5070862,
-            "h": 452323
-          },
-          "text_content": "supabase.com/database",
-          "lines": [
-            {
-              "text": "supabase.com/database",
-              "width_emu": 4705102,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_123",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3855109,
-            "w": 3557664,
-            "h": 452323
-          },
-          "text_content": "Sign-in",
-          "lines": [
-            {
-              "text": "Sign-in",
-              "width_emu": 1344104,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_124",
-          "node_type": "text",
-          "rect": {
-            "x": 4563504,
-            "y": 3855109,
-            "w": 5070862,
-            "h": 452323
-          },
-          "text_content": "supabase.com/auth",
-          "lines": [
-            {
-              "text": "supabase.com/auth",
-              "width_emu": 3768762,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_125",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4581752,
-            "w": 3557664,
-            "h": 452323
-          },
-          "text_content": "Security warning",
-          "lines": [
-            {
-              "text": "Security warning",
-              "width_emu": 3191904,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_126",
-          "node_type": "text",
-          "rect": {
-            "x": 4563504,
-            "y": 4581752,
-            "w": 5070862,
+            "w": 4566111,
             "h": 452323
           },
           "text_content": "supabase.com/docs",
@@ -3091,12 +3141,104 @@
           "italic": false
         },
         {
-          "node_id": "td_127",
+          "node_id": "td_5653",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3855109,
+            "w": 5333779,
+            "h": 452323
+          },
+          "text_content": "Claude and MCP setup",
+          "lines": [
+            {
+              "text": "Claude and MCP setup",
+              "width_emu": 4456733,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5654",
+          "node_type": "text",
+          "rect": {
+            "x": 6339619,
+            "y": 3855109,
+            "w": 4566111,
+            "h": 452323
+          },
+          "text_content": "supabase.com/docs",
+          "lines": [
+            {
+              "text": "supabase.com/docs",
+              "width_emu": 3840448,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5655",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4581752,
+            "w": 5333779,
+            "h": 452323
+          },
+          "text_content": "Security warning",
+          "lines": [
+            {
+              "text": "Security warning",
+              "width_emu": 3191904,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5656",
+          "node_type": "text",
+          "rect": {
+            "x": 6339619,
+            "y": 4581752,
+            "w": 4566111,
+            "h": 452323
+          },
+          "text_content": "supabase.com/docs",
+          "lines": [
+            {
+              "text": "supabase.com/docs",
+              "width_emu": 3840448,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5657",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 5308395,
-            "w": 3557664,
+            "w": 5333779,
             "h": 452323
           },
           "text_content": "Pricing",
@@ -3114,12 +3256,12 @@
           "italic": false
         },
         {
-          "node_id": "td_128",
+          "node_id": "td_5658",
           "node_type": "text",
           "rect": {
-            "x": 4563504,
+            "x": 6339619,
             "y": 5308395,
-            "w": 5070862,
+            "w": 4566111,
             "h": 452323
           },
           "text_content": "supabase.com/pricing",
@@ -3139,7 +3281,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_129",
+          "node_id": "chrome_pagenum_5659",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -3168,48 +3310,260 @@
     {
       "slide_index": 18,
       "page_number": 19,
-      "component": "question",
+      "component": "numbered-steps",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_131",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2926080,
-            "w": 128016,
-            "h": 1005840
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "question_130",
+          "node_id": "title_5660",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 2926080,
-            "w": 10738104,
-            "h": 1005840
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
           },
-          "text_content": "What should it remember?",
+          "text_content": "Your First Session With Claude",
           "lines": [
             {
-              "text": "What should it remember?",
-              "width_emu": 9610576,
-              "height_emu": 914400,
+              "text": "Your First Session With Claude",
+              "width_emu": 7898383,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 60.0,
+          "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_num_5661",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "01",
+          "lines": [
+            {
+              "text": "01",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_head_5662",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 1499616,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Connect Claude to Supabase",
+          "lines": [
+            {
+              "text": "Connect Claude to Supabase",
+              "width_emu": 7379829,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_body_5663",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 2185416,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "One claude mcp add command",
+          "lines": [
+            {
+              "text": "One claude mcp add command",
+              "width_emu": 6000502,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_0"
+        },
+        {
+          "node_id": "step_num_5664",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3011424,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "02",
+          "lines": [
+            {
+              "text": "02",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_head_5665",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3011424,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Describe the table you need",
+          "lines": [
+            {
+              "text": "Describe the table you need",
+              "width_emu": 7084479,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_body_5666",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3697224,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "In plain words; Claude writes the SQL",
+          "lines": [
+            {
+              "text": "In plain words; Claude writes the SQL",
+              "width_emu": 7224216,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_1"
+        },
+        {
+          "node_id": "step_num_5667",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4523232,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "03",
+          "lines": [
+            {
+              "text": "03",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_head_5668",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 4523232,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Read it, then approve it",
+          "lines": [
+            {
+              "text": "Read it, then approve it",
+              "width_emu": 5897873,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_body_5669",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 5209032,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "Check that RLS is switched on",
+          "lines": [
+            {
+              "text": "Check that RLS is switched on",
+              "width_emu": 5856077,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_2"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_132",
+          "node_id": "chrome_pagenum_5670",
           "node_type": "text",
           "rect": {
             "x": 11186160,

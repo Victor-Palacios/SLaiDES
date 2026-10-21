@@ -1,11 +1,11 @@
 version: 1
 theme:
   palette:
-    primary: "#263238"
+    primary: "#FF5722"   # = accent (three-colour rule; was #263238)
     surface: "#ECEFF1"
     accent: "#FF5722"
     text: "#212121"
-    muted: "#78909C"
+    muted: "#212121"     # = text (three-colour rule; was #78909C)
   type_scale:
     title: 54
     header: 40
@@ -82,19 +82,3 @@ slides:
     content:
       - type: text
         content: "Image with text side."
-
-  - component: card-grid
-    title: "Card Grid"
-    cards:
-      - icon: star
-        title: "Feature A"
-        body: "Fast and reliable."
-      - icon: bolt
-        title: "Feature B"
-        body: "Secure by design."
-      - icon: shield
-        title: "Feature C"
-        body: "Scales with you."
-      - icon: globe
-        title: "Feature D"
-        body: "Pay as you go."

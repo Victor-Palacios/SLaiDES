@@ -2,7 +2,7 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_selection_guide.py` — do not hand-edit. The machine-readable form is `slidekit catalog --json`. A test (`tests/test_catalog`) fails if it drifts._
 
-Pick a component per slide from its **content shape** — no rendering or vision needed. There are **30 components** across **22 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
+Pick a component per slide from its **content shape** — no rendering or vision needed. There are **29 components** across **21 distinct layouts**; variants share an anchor's geometry and differ only by marker / colour / orientation / fields.
 
 ## agenda — Numbered agenda / table of contents.
 
@@ -10,13 +10,6 @@ Pick a component per slide from its **content shape** — no rendering or vision
   - use when: Listing what the deck covers.
   - content shape: an ordered list of section titles
   - required fields: `items`
-
-## card-grid — A grid of content cards.
-
-- **`card-grid`** · capacity 2–8
-  - use when: Several peer items as cards.
-  - content shape: a set of {title, body, icon?} cards
-  - required fields: `cards`
 
 ## code-block — A dark terminal/IDE-style code block.
 

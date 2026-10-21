@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_449",
+          "node_id": "title_5671",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -32,7 +32,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "subtitle_450",
+          "node_id": "subtitle_5672",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -65,7 +65,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_452",
+          "node_id": "accent_bar_5674",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -76,7 +76,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "question_451",
+          "node_id": "question_5673",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -101,7 +101,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_453",
+          "node_id": "chrome_pagenum_5675",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -135,7 +135,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_456",
+          "node_id": "accent_bar_5678",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -146,7 +146,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_454",
+          "node_id": "term_5676",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -170,7 +170,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_455",
+          "node_id": "def_5677",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -195,7 +195,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_457",
+          "node_id": "chrome_pagenum_5679",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -229,7 +229,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_458",
+          "node_id": "title_5680",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -253,7 +253,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_459",
+          "node_id": "image_5681",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -265,7 +265,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_460",
+          "node_id": "content_text_5682",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -288,7 +288,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_461",
+          "node_id": "content_text_5683",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -311,7 +311,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_462",
+          "node_id": "content_text_5684",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -319,11 +319,11 @@
             "w": 5501640,
             "h": 609600
           },
-          "text_content": "Published December 2017",
+          "text_content": "Free to read as a PDF",
           "lines": [
             {
-              "text": "Published December 2017",
-              "width_emu": 5088830,
+              "text": "Free to read as a PDF",
+              "width_emu": 4271826,
               "height_emu": 518160,
               "overflows": false
             }
@@ -336,7 +336,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_463",
+          "node_id": "chrome_pagenum_5685",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -361,7 +361,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_464",
+          "node_id": "chrome_source_5686",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -391,424 +391,12 @@
     {
       "slide_index": 4,
       "page_number": 5,
-      "component": "timeline",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_465",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "Where It Came From",
-          "lines": [
-            {
-              "text": "Where It Came From",
-              "width_emu": 5186846,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "ev_date_466",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 381000
-          },
-          "text_content": "1995",
-          "lines": [
-            {
-              "text": "1995",
-              "width_emu": 706313,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": true,
-          "italic": false,
-          "is_caption": true,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "ev_title_467",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2154936,
-            "w": 2613660,
-            "h": 518159
-          },
-          "text_content": "Merged",
-          "lines": [
-            {
-              "text": "Merged",
-              "width_emu": 1535547,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false
-        },
-        {
-          "node_id": "ev_desc_468",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2947415,
-            "w": 2613660,
-            "h": 2813305
-          },
-          "text_content": "Three design methods combine",
-          "lines": [
-            {
-              "text": "Three",
-              "width_emu": 1127993,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "design",
-              "width_emu": 1272418,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "methods",
-              "width_emu": 1656147,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "combine",
-              "width_emu": 1632111,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "ev_date_469",
-          "node_type": "text",
-          "rect": {
-            "x": 3345180,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 381000
-          },
-          "text_content": "1997",
-          "lines": [
-            {
-              "text": "1997",
-              "width_emu": 706313,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": true,
-          "italic": false,
-          "is_caption": true,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "ev_title_470",
-          "node_type": "text",
-          "rect": {
-            "x": 3345180,
-            "y": 2154936,
-            "w": 2613660,
-            "h": 518159
-          },
-          "text_content": "OMG",
-          "lines": [
-            {
-              "text": "OMG",
-              "width_emu": 1031429,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false
-        },
-        {
-          "node_id": "ev_desc_471",
-          "node_type": "text",
-          "rect": {
-            "x": 3345180,
-            "y": 2947415,
-            "w": 2613660,
-            "h": 2813305
-          },
-          "text_content": "Adopted as a standard",
-          "lines": [
-            {
-              "text": "Adopted as",
-              "width_emu": 2184722,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "a standard",
-              "width_emu": 2040508,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "ev_date_472",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 381000
-          },
-          "text_content": "2005",
-          "lines": [
-            {
-              "text": "2005",
-              "width_emu": 706313,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": true,
-          "italic": false,
-          "is_caption": true,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "ev_title_473",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 2154936,
-            "w": 2613660,
-            "h": 518159
-          },
-          "text_content": "ISO",
-          "lines": [
-            {
-              "text": "ISO",
-              "width_emu": 743843,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false
-        },
-        {
-          "node_id": "ev_desc_474",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 2947415,
-            "w": 2613660,
-            "h": 2813305
-          },
-          "text_content": "Becomes an ISO standard",
-          "lines": [
-            {
-              "text": "Becomes",
-              "width_emu": 1799940,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "an ISO",
-              "width_emu": 1344104,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "standard",
-              "width_emu": 1680394,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "ev_date_475",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 381000
-          },
-          "text_content": "2017",
-          "lines": [
-            {
-              "text": "2017",
-              "width_emu": 706313,
-              "height_emu": 381000,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 25.0,
-          "bold": true,
-          "italic": false,
-          "is_caption": true,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "ev_title_476",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 2154936,
-            "w": 2613660,
-            "h": 518159
-          },
-          "text_content": "UML 2.5.1",
-          "lines": [
-            {
-              "text": "UML 2.5.1",
-              "width_emu": 2007828,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false
-        },
-        {
-          "node_id": "ev_desc_477",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 2947415,
-            "w": 2613660,
-            "h": 2813305
-          },
-          "text_content": "The version in use today",
-          "lines": [
-            {
-              "text": "The version",
-              "width_emu": 2255986,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "in use today",
-              "width_emu": 2328515,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_478",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "5",
-          "lines": [
-            {
-              "text": "5",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        },
-        {
-          "node_id": "chrome_source_479",
-          "node_type": "text",
-          "rect": {
-            "x": 10085130,
-            "y": 6035040,
-            "w": 826710,
-            "h": 365760
-          },
-          "text_content": "Source",
-          "lines": [
-            {
-              "text": "Source",
-              "width_emu": 643830,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "text_color": "#0072CE",
-          "href": "https://en.wikipedia.org/wiki/Unified_Modeling_Language"
-        }
-      ]
-    },
-    {
-      "slide_index": 5,
-      "page_number": 6,
       "component": "two-panel-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_480",
+          "node_id": "title_5687",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -832,7 +420,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "lp_head_481",
+          "node_id": "lp_head_5688",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -857,19 +445,19 @@
           "text_color": "#0A2240"
         },
         {
-          "node_id": "lp_rule_482",
+          "node_id": "lp_rule_5689",
           "node_type": "box",
           "rect": {
-            "x": 548640,
+            "x": 457200,
             "y": 2176271,
-            "w": 1650492,
+            "w": 4030625,
             "h": 54864
           },
           "group_id": "lp_head",
           "fill_color": "#0A2240"
         },
         {
-          "node_id": "rp_head_483",
+          "node_id": "rp_head_5690",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -894,19 +482,19 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "rp_rule_484",
+          "node_id": "rp_rule_5691",
           "node_type": "box",
           "rect": {
-            "x": 6324600,
+            "x": 6233160,
             "y": 2176271,
-            "w": 1650492,
+            "w": 4870400,
             "h": 54864
           },
           "group_id": "rp_head",
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "lp_item_485",
+          "node_id": "lp_item_5692",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -930,7 +518,7 @@
           "group_id": "lp_head"
         },
         {
-          "node_id": "lp_item_486",
+          "node_id": "lp_item_5693",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -954,7 +542,7 @@
           "group_id": "lp_head"
         },
         {
-          "node_id": "lp_item_487",
+          "node_id": "lp_item_5694",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -978,7 +566,7 @@
           "group_id": "lp_head"
         },
         {
-          "node_id": "rp_item_488",
+          "node_id": "rp_item_5695",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1002,7 +590,7 @@
           "group_id": "rp_head"
         },
         {
-          "node_id": "rp_item_489",
+          "node_id": "rp_item_5696",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1026,7 +614,7 @@
           "group_id": "rp_head"
         },
         {
-          "node_id": "rp_item_490",
+          "node_id": "rp_item_5697",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1052,7 +640,101 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_491",
+          "node_id": "chrome_pagenum_5698",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "5",
+          "lines": [
+            {
+              "text": "5",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 5,
+      "page_number": 6,
+      "component": "definition",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_5701",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_5699",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "Class diagram",
+          "lines": [
+            {
+              "text": "Class diagram",
+              "width_emu": 5209356,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "def_5700",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "The things in a system and how they relate",
+          "lines": [
+            {
+              "text": "The things in a system and how they relate",
+              "width_emu": 8208628,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_5702",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1081,106 +763,12 @@
     {
       "slide_index": 6,
       "page_number": 7,
-      "component": "definition",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "accent_bar_494",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2484120,
-            "w": 128016,
-            "h": 1889760
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "term_492",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 2484120,
-            "w": 10738104,
-            "h": 1005840
-          },
-          "text_content": "Class diagram",
-          "lines": [
-            {
-              "text": "Class diagram",
-              "width_emu": 5209356,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "def_493",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 3764280,
-            "w": 10738104,
-            "h": 609600
-          },
-          "text_content": "The things in a system and how they relate",
-          "lines": [
-            {
-              "text": "The things in a system and how they relate",
-              "width_emu": 8208628,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_495",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "7",
-          "lines": [
-            {
-              "text": "7",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 7,
-      "page_number": 8,
       "component": "image-half-bleed",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_496",
+          "node_id": "title_5703",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1204,7 +792,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_497",
+          "node_id": "image_5704",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -1216,7 +804,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_498",
+          "node_id": "content_text_5705",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1239,7 +827,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_499",
+          "node_id": "content_text_5706",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1262,7 +850,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_500",
+          "node_id": "content_text_5707",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1287,7 +875,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_501",
+          "node_id": "chrome_pagenum_5708",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1295,10 +883,10 @@
             "w": 548640,
             "h": 365760
           },
-          "text_content": "8",
+          "text_content": "7",
           "lines": [
             {
-              "text": "8",
+              "text": "7",
               "width_emu": 113010,
               "height_emu": 243840,
               "overflows": false
@@ -1312,7 +900,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_502",
+          "node_id": "chrome_source_5709",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -1340,14 +928,14 @@
       ]
     },
     {
-      "slide_index": 8,
-      "page_number": 9,
+      "slide_index": 7,
+      "page_number": 8,
       "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_503",
+          "node_id": "title_5710",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1371,7 +959,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_504",
+          "node_id": "th_5711",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1396,7 +984,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_505",
+          "node_id": "th_5712",
           "node_type": "text",
           "rect": {
             "x": 4394411,
@@ -1421,7 +1009,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "table_rule_506",
+          "node_id": "table_rule_5713",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -1433,7 +1021,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_507",
+          "node_id": "td_5714",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1456,7 +1044,7 @@
           "italic": false
         },
         {
-          "node_id": "td_508",
+          "node_id": "td_5715",
           "node_type": "text",
           "rect": {
             "x": 4394411,
@@ -1479,7 +1067,7 @@
           "italic": false
         },
         {
-          "node_id": "td_509",
+          "node_id": "td_5716",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1502,7 +1090,7 @@
           "italic": false
         },
         {
-          "node_id": "td_510",
+          "node_id": "td_5717",
           "node_type": "text",
           "rect": {
             "x": 4394411,
@@ -1525,7 +1113,7 @@
           "italic": false
         },
         {
-          "node_id": "td_511",
+          "node_id": "td_5718",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1548,7 +1136,7 @@
           "italic": false
         },
         {
-          "node_id": "td_512",
+          "node_id": "td_5719",
           "node_type": "text",
           "rect": {
             "x": 4394411,
@@ -1573,7 +1161,313 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_513",
+          "node_id": "chrome_pagenum_5720",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "8",
+          "lines": [
+            {
+              "text": "8",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 8,
+      "page_number": 9,
+      "component": "table-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_5721",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Lines Between Classes",
+          "lines": [
+            {
+              "text": "The Lines Between Classes",
+              "width_emu": 6996187,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_5722",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 3437907,
+            "h": 518159
+          },
+          "text_content": "Line end",
+          "lines": [
+            {
+              "text": "Line end",
+              "width_emu": 1775271,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_5723",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 1499616,
+            "w": 4229822,
+            "h": 518159
+          },
+          "text_content": "Means",
+          "lines": [
+            {
+              "text": "Means",
+              "width_emu": 1343893,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "table_rule_5724",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 8216369,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_5725",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 3437907,
+            "h": 633984
+          },
+          "text_content": "Hollow triangle",
+          "lines": [
+            {
+              "text": "Hollow triangle",
+              "width_emu": 2832001,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5726",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 2401823,
+            "w": 4229822,
+            "h": 633984
+          },
+          "text_content": "Is a kind of",
+          "lines": [
+            {
+              "text": "Is a kind of",
+              "width_emu": 2088158,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5727",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3310127,
+            "w": 3437907,
+            "h": 633984
+          },
+          "text_content": "Filled diamond",
+          "lines": [
+            {
+              "text": "Filled diamond",
+              "width_emu": 2808176,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5728",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 3310127,
+            "w": 4229822,
+            "h": 633984
+          },
+          "text_content": "Owns, and dies with",
+          "lines": [
+            {
+              "text": "Owns, and dies with",
+              "width_emu": 3864062,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5729",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4218431,
+            "w": 3437907,
+            "h": 633984
+          },
+          "text_content": "Hollow diamond",
+          "lines": [
+            {
+              "text": "Hollow diamond",
+              "width_emu": 3072147,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5730",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 4218431,
+            "w": 4229822,
+            "h": 633984
+          },
+          "text_content": "Has, but shares",
+          "lines": [
+            {
+              "text": "Has, but shares",
+              "width_emu": 3024076,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5731",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 3437907,
+            "h": 633984
+          },
+          "text_content": "Plain line",
+          "lines": [
+            {
+              "text": "Plain line",
+              "width_emu": 1752290,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5732",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 5126735,
+            "w": 4229822,
+            "h": 633984
+          },
+          "text_content": "Knows about",
+          "lines": [
+            {
+              "text": "Knows about",
+              "width_emu": 2496555,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_5733",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1602,271 +1496,59 @@
     {
       "slide_index": 9,
       "page_number": 10,
-      "component": "table-slide",
+      "component": "definition",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_514",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "The Lines Between Classes",
-          "lines": [
-            {
-              "text": "The Lines Between Classes",
-              "width_emu": 6996187,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "th_515",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 3437907,
-            "h": 518159
-          },
-          "text_content": "Line end",
-          "lines": [
-            {
-              "text": "Line end",
-              "width_emu": 1775271,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "th_516",
-          "node_type": "text",
-          "rect": {
-            "x": 4443747,
-            "y": 1499616,
-            "w": 4229822,
-            "h": 518159
-          },
-          "text_content": "Means",
-          "lines": [
-            {
-              "text": "Means",
-              "width_emu": 1343893,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "table_rule_517",
+          "node_id": "accent_bar_5736",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2072639,
-            "w": 8216369,
-            "h": 54864
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
           },
-          "group_id": "table_head",
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_518",
+          "node_id": "term_5734",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 2401823,
-            "w": 3437907,
-            "h": 633984
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
           },
-          "text_content": "Hollow triangle",
+          "text_content": "Sequence diagram",
           "lines": [
             {
-              "text": "Hollow triangle",
-              "width_emu": 2832001,
-              "height_emu": 518160,
+              "text": "Sequence diagram",
+              "width_emu": 6775772,
+              "height_emu": 914400,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "td_519",
+          "node_id": "def_5735",
           "node_type": "text",
           "rect": {
-            "x": 4443747,
-            "y": 2401823,
-            "w": 4229822,
-            "h": 633984
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
           },
-          "text_content": "Is a kind of",
+          "text_content": "Who talks to whom, and in what order",
           "lines": [
             {
-              "text": "Is a kind of",
-              "width_emu": 2088158,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_520",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3310127,
-            "w": 3437907,
-            "h": 633984
-          },
-          "text_content": "Filled diamond",
-          "lines": [
-            {
-              "text": "Filled diamond",
-              "width_emu": 2808176,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_521",
-          "node_type": "text",
-          "rect": {
-            "x": 4443747,
-            "y": 3310127,
-            "w": 4229822,
-            "h": 633984
-          },
-          "text_content": "Owns, and dies with",
-          "lines": [
-            {
-              "text": "Owns, and dies with",
-              "width_emu": 3864062,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_522",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4218431,
-            "w": 3437907,
-            "h": 633984
-          },
-          "text_content": "Hollow diamond",
-          "lines": [
-            {
-              "text": "Hollow diamond",
-              "width_emu": 3072147,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_523",
-          "node_type": "text",
-          "rect": {
-            "x": 4443747,
-            "y": 4218431,
-            "w": 4229822,
-            "h": 633984
-          },
-          "text_content": "Has, but shares",
-          "lines": [
-            {
-              "text": "Has, but shares",
-              "width_emu": 3024076,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_524",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5126735,
-            "w": 3437907,
-            "h": 633984
-          },
-          "text_content": "Plain line",
-          "lines": [
-            {
-              "text": "Plain line",
-              "width_emu": 1752290,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_525",
-          "node_type": "text",
-          "rect": {
-            "x": 4443747,
-            "y": 5126735,
-            "w": 4229822,
-            "h": 633984
-          },
-          "text_content": "Knows about",
-          "lines": [
-            {
-              "text": "Knows about",
-              "width_emu": 2496555,
+              "text": "Who talks to whom, and in what order",
+              "width_emu": 7224006,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1879,7 +1561,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_526",
+          "node_id": "chrome_pagenum_5737",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1908,106 +1590,12 @@
     {
       "slide_index": 10,
       "page_number": 11,
-      "component": "definition",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "accent_bar_529",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2484120,
-            "w": 128016,
-            "h": 1889760
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "term_527",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 2484120,
-            "w": 10738104,
-            "h": 1005840
-          },
-          "text_content": "Sequence diagram",
-          "lines": [
-            {
-              "text": "Sequence diagram",
-              "width_emu": 6775772,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "def_528",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 3764280,
-            "w": 10738104,
-            "h": 609600
-          },
-          "text_content": "Who talks to whom, and in what order",
-          "lines": [
-            {
-              "text": "Who talks to whom, and in what order",
-              "width_emu": 7224006,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_530",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "11",
-          "lines": [
-            {
-              "text": "11",
-              "width_emu": 210939,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 11,
-      "page_number": 12,
       "component": "image-half-bleed",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_531",
+          "node_id": "title_5738",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2031,7 +1619,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_532",
+          "node_id": "image_5739",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -2043,7 +1631,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_533",
+          "node_id": "content_text_5740",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2066,7 +1654,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_534",
+          "node_id": "content_text_5741",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2089,7 +1677,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_535",
+          "node_id": "content_text_5742",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2114,7 +1702,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_536",
+          "node_id": "chrome_pagenum_5743",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2122,11 +1710,11 @@
             "w": 548640,
             "h": 365760
           },
-          "text_content": "12",
+          "text_content": "11",
           "lines": [
             {
-              "text": "12",
-              "width_emu": 226020,
+              "text": "11",
+              "width_emu": 210939,
               "height_emu": 243840,
               "overflows": false
             }
@@ -2139,7 +1727,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_537",
+          "node_id": "chrome_source_5744",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -2167,14 +1755,14 @@
       ]
     },
     {
-      "slide_index": 12,
-      "page_number": 13,
+      "slide_index": 11,
+      "page_number": 12,
       "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_538",
+          "node_id": "title_5745",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2198,7 +1786,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_539",
+          "node_id": "bl_item_5746",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2221,7 +1809,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_540",
+          "node_id": "bl_item_5747",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2244,7 +1832,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_541",
+          "node_id": "bl_item_5748",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2267,7 +1855,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_542",
+          "node_id": "bl_item_5749",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2292,7 +1880,101 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_543",
+          "node_id": "chrome_pagenum_5750",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "12",
+          "lines": [
+            {
+              "text": "12",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 12,
+      "page_number": 13,
+      "component": "definition",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_5753",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_5751",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "State machine",
+          "lines": [
+            {
+              "text": "State machine",
+              "width_emu": 5166568,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "def_5752",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "The stages one thing moves through",
+          "lines": [
+            {
+              "text": "The stages one thing moves through",
+              "width_emu": 7009160,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_5754",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2321,106 +2003,12 @@
     {
       "slide_index": 13,
       "page_number": 14,
-      "component": "definition",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "accent_bar_546",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2484120,
-            "w": 128016,
-            "h": 1889760
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "term_544",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 2484120,
-            "w": 10738104,
-            "h": 1005840
-          },
-          "text_content": "State machine",
-          "lines": [
-            {
-              "text": "State machine",
-              "width_emu": 5166568,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "def_545",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 3764280,
-            "w": 10738104,
-            "h": 609600
-          },
-          "text_content": "The stages one thing moves through",
-          "lines": [
-            {
-              "text": "The stages one thing moves through",
-              "width_emu": 7009160,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_547",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "14",
-          "lines": [
-            {
-              "text": "14",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 14,
-      "page_number": 15,
       "component": "image-half-bleed",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_548",
+          "node_id": "title_5755",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2444,7 +2032,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_549",
+          "node_id": "image_5756",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -2456,7 +2044,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_550",
+          "node_id": "content_text_5757",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2479,7 +2067,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_551",
+          "node_id": "content_text_5758",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2502,7 +2090,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_552",
+          "node_id": "content_text_5759",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2527,7 +2115,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_553",
+          "node_id": "chrome_pagenum_5760",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2535,10 +2123,10 @@
             "w": 548640,
             "h": 365760
           },
-          "text_content": "15",
+          "text_content": "14",
           "lines": [
             {
-              "text": "15",
+              "text": "14",
               "width_emu": 226020,
               "height_emu": 243840,
               "overflows": false
@@ -2552,7 +2140,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_554",
+          "node_id": "chrome_source_5761",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -2580,14 +2168,14 @@
       ]
     },
     {
-      "slide_index": 15,
-      "page_number": 16,
+      "slide_index": 14,
+      "page_number": 15,
       "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_555",
+          "node_id": "title_5762",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2611,7 +2199,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_556",
+          "node_id": "th_5763",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2636,7 +2224,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_557",
+          "node_id": "th_5764",
           "node_type": "text",
           "rect": {
             "x": 6220073,
@@ -2661,7 +2249,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "table_rule_558",
+          "node_id": "table_rule_5765",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -2673,7 +2261,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_559",
+          "node_id": "td_5766",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2696,7 +2284,7 @@
           "italic": false
         },
         {
-          "node_id": "td_560",
+          "node_id": "td_5767",
           "node_type": "text",
           "rect": {
             "x": 6220073,
@@ -2719,7 +2307,7 @@
           "italic": false
         },
         {
-          "node_id": "td_561",
+          "node_id": "td_5768",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2742,7 +2330,7 @@
           "italic": false
         },
         {
-          "node_id": "td_562",
+          "node_id": "td_5769",
           "node_type": "text",
           "rect": {
             "x": 6220073,
@@ -2765,7 +2353,7 @@
           "italic": false
         },
         {
-          "node_id": "td_563",
+          "node_id": "td_5770",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2788,7 +2376,7 @@
           "italic": false
         },
         {
-          "node_id": "td_564",
+          "node_id": "td_5771",
           "node_type": "text",
           "rect": {
             "x": 6220073,
@@ -2811,7 +2399,7 @@
           "italic": false
         },
         {
-          "node_id": "td_565",
+          "node_id": "td_5772",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2834,7 +2422,7 @@
           "italic": false
         },
         {
-          "node_id": "td_566",
+          "node_id": "td_5773",
           "node_type": "text",
           "rect": {
             "x": 6220073,
@@ -2859,7 +2447,159 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_567",
+          "node_id": "chrome_pagenum_5774",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "15",
+          "lines": [
+            {
+              "text": "15",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 15,
+      "page_number": 16,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_5775",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Tools for Drawing It",
+          "lines": [
+            {
+              "text": "Tools for Drawing It",
+              "width_emu": 4968329,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_5776",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Pen and paper, honestly",
+          "lines": [
+            {
+              "text": "Pen and paper, honestly",
+              "width_emu": 4657452,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_5777",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Mermaid: diagrams written as text",
+          "lines": [
+            {
+              "text": "Mermaid: diagrams written as text",
+              "width_emu": 6479108,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_5778",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "PlantUML: also text",
+          "lines": [
+            {
+              "text": "PlantUML: also text",
+              "width_emu": 3743883,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_5779",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "draw.io: drag and drop",
+          "lines": [
+            {
+              "text": "draw.io: drag and drop",
+              "width_emu": 4296916,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_5780",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2888,12 +2628,12 @@
     {
       "slide_index": 16,
       "page_number": 17,
-      "component": "bullet-list",
+      "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_568",
+          "node_id": "title_5781",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2901,11 +2641,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Tools for Drawing It",
+          "text_content": "Sources",
           "lines": [
             {
-              "text": "Tools for Drawing It",
-              "width_emu": 4968329,
+              "text": "Sources",
+              "width_emu": 2104951,
               "height_emu": 640080,
               "overflows": false
             }
@@ -2917,19 +2657,81 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_569",
+          "node_id": "th_5782",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1908050,
-            "w": 11277600,
+            "y": 1499616,
+            "w": 3941815,
             "h": 518159
           },
-          "text_content": "Pen and paper, honestly",
+          "text_content": "Slide",
           "lines": [
             {
-              "text": "Pen and paper, honestly",
-              "width_emu": 4657452,
+              "text": "Slide",
+              "width_emu": 1031850,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_5783",
+          "node_type": "text",
+          "rect": {
+            "x": 4947655,
+            "y": 1499616,
+            "w": 4637164,
+            "h": 518159
+          },
+          "text_content": "Taken from",
+          "lines": [
+            {
+              "text": "Taken from",
+              "width_emu": 2295413,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "table_rule_5784",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 9127619,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_5785",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 3941815,
+            "h": 633984
+          },
+          "text_content": "Specification",
+          "lines": [
+            {
+              "text": "Specification",
+              "width_emu": 2448272,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2940,19 +2742,19 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_570",
+          "node_id": "td_5786",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 2883409,
-            "w": 11277600,
-            "h": 518159
+            "x": 4947655,
+            "y": 2401823,
+            "w": 4637164,
+            "h": 633984
           },
-          "text_content": "Mermaid: diagrams written as text",
+          "text_content": "omg.org/spec/UML",
           "lines": [
             {
-              "text": "Mermaid: diagrams written as text",
-              "width_emu": 6479108,
+              "text": "omg.org/spec/UML",
+              "width_emu": 3647740,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2963,19 +2765,19 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_571",
+          "node_id": "td_5787",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3858768,
-            "w": 11277600,
-            "h": 518159
+            "y": 3310127,
+            "w": 3941815,
+            "h": 633984
           },
-          "text_content": "PlantUML: also text",
+          "text_content": "The diagram types",
           "lines": [
             {
-              "text": "PlantUML: also text",
-              "width_emu": 3743883,
+              "text": "The diagram types",
+              "width_emu": 3576055,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2986,19 +2788,111 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_572",
+          "node_id": "td_5788",
+          "node_type": "text",
+          "rect": {
+            "x": 4947655,
+            "y": 3310127,
+            "w": 4637164,
+            "h": 633984
+          },
+          "text_content": "Wikipedia, UML",
+          "lines": [
+            {
+              "text": "Wikipedia, UML",
+              "width_emu": 3023443,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5789",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4834127,
-            "w": 11277600,
-            "h": 518159
+            "y": 4218431,
+            "w": 3941815,
+            "h": 633984
           },
-          "text_content": "draw.io: drag and drop",
+          "text_content": "Example diagrams",
           "lines": [
             {
-              "text": "draw.io: drag and drop",
-              "width_emu": 4296916,
+              "text": "Example diagrams",
+              "width_emu": 3575844,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5790",
+          "node_type": "text",
+          "rect": {
+            "x": 4947655,
+            "y": 4218431,
+            "w": 4637164,
+            "h": 633984
+          },
+          "text_content": "Drawn with Mermaid",
+          "lines": [
+            {
+              "text": "Drawn with Mermaid",
+              "width_emu": 3935115,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5791",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 3941815,
+            "h": 633984
+          },
+          "text_content": "What they model",
+          "lines": [
+            {
+              "text": "What they model",
+              "width_emu": 3239976,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5792",
+          "node_type": "text",
+          "rect": {
+            "x": 4947655,
+            "y": 5126735,
+            "w": 4637164,
+            "h": 633984
+          },
+          "text_content": "ninth_circuit README",
+          "lines": [
+            {
+              "text": "ninth_circuit README",
+              "width_emu": 4271404,
               "height_emu": 518160,
               "overflows": false
             }
@@ -3011,7 +2905,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_573",
+          "node_id": "chrome_pagenum_5793",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -3045,7 +2939,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_574",
+          "node_id": "title_5794",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3069,7 +2963,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_575",
+          "node_id": "bl_item_5795",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3092,7 +2986,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_576",
+          "node_id": "bl_item_5796",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3115,7 +3009,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_577",
+          "node_id": "bl_item_5797",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3138,7 +3032,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_578",
+          "node_id": "bl_item_5798",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3163,7 +3057,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_579",
+          "node_id": "chrome_pagenum_5799",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -3175,382 +3069,6 @@
           "lines": [
             {
               "text": "18",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 18,
-      "page_number": 19,
-      "component": "table-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_580",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "Sources",
-          "lines": [
-            {
-              "text": "Sources",
-              "width_emu": 2104951,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "th_581",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 4629152,
-            "h": 518159
-          },
-          "text_content": "Slide",
-          "lines": [
-            {
-              "text": "Slide",
-              "width_emu": 1031850,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "th_582",
-          "node_type": "text",
-          "rect": {
-            "x": 5634992,
-            "y": 1499616,
-            "w": 4637164,
-            "h": 518159
-          },
-          "text_content": "Taken from",
-          "lines": [
-            {
-              "text": "Taken from",
-              "width_emu": 2295413,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "table_rule_583",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2072639,
-            "w": 9814956,
-            "h": 54864
-          },
-          "group_id": "table_head",
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "td_584",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2401823,
-            "w": 4629152,
-            "h": 633984
-          },
-          "text_content": "Specification",
-          "lines": [
-            {
-              "text": "Specification",
-              "width_emu": 2448272,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_585",
-          "node_type": "text",
-          "rect": {
-            "x": 5634992,
-            "y": 2401823,
-            "w": 4637164,
-            "h": 633984
-          },
-          "text_content": "omg.org/spec/UML",
-          "lines": [
-            {
-              "text": "omg.org/spec/UML",
-              "width_emu": 3647740,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_586",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3310127,
-            "w": 4629152,
-            "h": 633984
-          },
-          "text_content": "History, diagram types",
-          "lines": [
-            {
-              "text": "History, diagram types",
-              "width_emu": 4263392,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_587",
-          "node_type": "text",
-          "rect": {
-            "x": 5634992,
-            "y": 3310127,
-            "w": 4637164,
-            "h": 633984
-          },
-          "text_content": "Wikipedia, UML",
-          "lines": [
-            {
-              "text": "Wikipedia, UML",
-              "width_emu": 3023443,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_588",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4218431,
-            "w": 4629152,
-            "h": 633984
-          },
-          "text_content": "Example diagrams",
-          "lines": [
-            {
-              "text": "Example diagrams",
-              "width_emu": 3575844,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_589",
-          "node_type": "text",
-          "rect": {
-            "x": 5634992,
-            "y": 4218431,
-            "w": 4637164,
-            "h": 633984
-          },
-          "text_content": "Drawn with Mermaid",
-          "lines": [
-            {
-              "text": "Drawn with Mermaid",
-              "width_emu": 3935115,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_590",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5126735,
-            "w": 4629152,
-            "h": 633984
-          },
-          "text_content": "What they model",
-          "lines": [
-            {
-              "text": "What they model",
-              "width_emu": 3239976,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_591",
-          "node_type": "text",
-          "rect": {
-            "x": 5634992,
-            "y": 5126735,
-            "w": 4637164,
-            "h": 633984
-          },
-          "text_content": "ninth_circuit README",
-          "lines": [
-            {
-              "text": "ninth_circuit README",
-              "width_emu": 4271404,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_592",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "19",
-          "lines": [
-            {
-              "text": "19",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 19,
-      "page_number": 20,
-      "component": "question",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "accent_bar_594",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2926080,
-            "w": 128016,
-            "h": 1005840
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "question_593",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 2926080,
-            "w": 10738104,
-            "h": 1005840
-          },
-          "text_content": "What would you draw first?",
-          "lines": [
-            {
-              "text": "What would you draw first?",
-              "width_emu": 9948044,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_595",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "20",
-          "lines": [
-            {
-              "text": "20",
               "width_emu": 226020,
               "height_emu": 243840,
               "overflows": false

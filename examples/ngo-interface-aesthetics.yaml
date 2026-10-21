@@ -5,11 +5,11 @@
 version: 1
 theme:
   palette:
-    primary: "#1F3A5F"   # deep slate blue
+    primary: "#E0873C"   # = accent (three-colour rule; was #1F3A5F)
     surface: "#FFFFFF"
     accent: "#E0873C"     # warm amber (≈complementary to the blue → good harmony)
     text: "#1A1A2E"
-    muted: "#8A8A9A"
+    muted: "#1A1A2E"     # = text (three-colour rule; was #8A8A9A)
   type_scale:
     title: 60
     header: 42

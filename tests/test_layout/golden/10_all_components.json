@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_103",
+          "node_id": "title_96",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -32,7 +32,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "subtitle_104",
+          "node_id": "subtitle_97",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -57,7 +57,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_105",
+          "node_id": "chrome_pagenum_98",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -91,7 +91,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_106",
+          "node_id": "title_99",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -115,7 +115,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "heading_107",
+          "node_id": "heading_100",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -139,7 +139,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "body_108",
+          "node_id": "body_101",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -163,7 +163,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "heading_109",
+          "node_id": "heading_102",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -187,7 +187,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "body_110",
+          "node_id": "body_103",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -211,7 +211,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "heading_111",
+          "node_id": "heading_104",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -235,7 +235,7 @@
           "group_id": "itr_2"
         },
         {
-          "node_id": "body_112",
+          "node_id": "body_105",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -261,7 +261,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_113",
+          "node_id": "chrome_pagenum_106",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -295,7 +295,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_114",
+          "node_id": "title_107",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -319,7 +319,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "stat_value_115",
+          "node_id": "stat_value_108",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -343,7 +343,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "stat_label_116",
+          "node_id": "stat_label_109",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -366,7 +366,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_117",
+          "node_id": "stat_value_110",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -390,7 +390,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "stat_label_118",
+          "node_id": "stat_label_111",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -413,7 +413,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_119",
+          "node_id": "stat_sub_112",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -437,7 +437,7 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_120",
+          "node_id": "stat_value_113",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -461,7 +461,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "stat_label_121",
+          "node_id": "stat_label_114",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -486,7 +486,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_122",
+          "node_id": "chrome_pagenum_115",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -520,7 +520,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_123",
+          "node_id": "title_116",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -544,7 +544,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "left_head_124",
+          "node_id": "left_head_117",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -565,10 +565,10 @@
           "size_pt": 32.0,
           "bold": true,
           "italic": false,
-          "text_color": "#263238"
+          "text_color": "#FF5722"
         },
         {
-          "node_id": "right_head_125",
+          "node_id": "right_head_118",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -589,10 +589,10 @@
           "size_pt": 32.0,
           "bold": true,
           "italic": false,
-          "text_color": "#263238"
+          "text_color": "#FF5722"
         },
         {
-          "node_id": "left_item_126",
+          "node_id": "left_item_119",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -615,7 +615,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_127",
+          "node_id": "right_item_120",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -638,7 +638,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_128",
+          "node_id": "left_item_121",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -661,7 +661,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_129",
+          "node_id": "right_item_122",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -686,7 +686,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_130",
+          "node_id": "chrome_pagenum_123",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -720,7 +720,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_131",
+          "node_id": "title_124",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -744,7 +744,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "ev_date_132",
+          "node_id": "ev_date_125",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -769,7 +769,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "ev_title_133",
+          "node_id": "ev_title_126",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -792,7 +792,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_134",
+          "node_id": "ev_desc_127",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -827,7 +827,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_135",
+          "node_id": "ev_date_128",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -852,7 +852,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "ev_title_136",
+          "node_id": "ev_title_129",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -875,7 +875,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_137",
+          "node_id": "ev_desc_130",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -910,7 +910,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_138",
+          "node_id": "ev_date_131",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -935,7 +935,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "ev_title_139",
+          "node_id": "ev_title_132",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -958,7 +958,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_140",
+          "node_id": "ev_desc_133",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -989,7 +989,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_141",
+          "node_id": "chrome_pagenum_134",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1023,7 +1023,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_142",
+          "node_id": "title_135",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1047,7 +1047,7 @@
           "text_color": "#FF5722"
         },
         {
-          "node_id": "image_143",
+          "node_id": "image_136",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -1059,7 +1059,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_144",
+          "node_id": "content_text_137",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1084,7 +1084,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_145",
+          "node_id": "chrome_pagenum_138",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1096,288 +1096,6 @@
           "lines": [
             {
               "text": "6",
-              "width_emu": 121940,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 6,
-      "page_number": 7,
-      "component": "card-grid",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_146",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 731520
-          },
-          "text_content": "Card Grid",
-          "lines": [
-            {
-              "text": "Card Grid",
-              "width_emu": 2743646,
-              "height_emu": 609600,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 40.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#FF5722"
-        },
-        {
-          "node_id": "card_title_147",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1463040,
-            "w": 2613660,
-            "h": 487680
-          },
-          "text_content": "Feature A",
-          "lines": [
-            {
-              "text": "Feature A",
-              "width_emu": 2194917,
-              "height_emu": 487680,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 32.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_0"
-        },
-        {
-          "node_id": "card_body_148",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2087880,
-            "w": 2613660,
-            "h": 3672840
-          },
-          "text_content": "Fast and reliable.",
-          "lines": [
-            {
-              "text": "Fast and",
-              "width_emu": 1951038,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "reliable.",
-              "width_emu": 2194917,
-              "height_emu": 487680,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 32.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "card_0"
-        },
-        {
-          "node_id": "card_title_149",
-          "node_type": "text",
-          "rect": {
-            "x": 3345180,
-            "y": 1463040,
-            "w": 2613660,
-            "h": 487680
-          },
-          "text_content": "Feature B",
-          "lines": [
-            {
-              "text": "Feature B",
-              "width_emu": 2194917,
-              "height_emu": 487680,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 32.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_1"
-        },
-        {
-          "node_id": "card_body_150",
-          "node_type": "text",
-          "rect": {
-            "x": 3345180,
-            "y": 2087880,
-            "w": 2613660,
-            "h": 3672840
-          },
-          "text_content": "Secure by design.",
-          "lines": [
-            {
-              "text": "Secure",
-              "width_emu": 1463278,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "by",
-              "width_emu": 487759,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "design.",
-              "width_emu": 1707158,
-              "height_emu": 487680,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 32.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "card_1"
-        },
-        {
-          "node_id": "card_title_151",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 1463040,
-            "w": 2613660,
-            "h": 487680
-          },
-          "text_content": "Feature C",
-          "lines": [
-            {
-              "text": "Feature C",
-              "width_emu": 2194917,
-              "height_emu": 487680,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 32.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_2"
-        },
-        {
-          "node_id": "card_body_152",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 2087880,
-            "w": 2613660,
-            "h": 3672840
-          },
-          "text_content": "Scales with you.",
-          "lines": [
-            {
-              "text": "Scales",
-              "width_emu": 1463278,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "with you.",
-              "width_emu": 2194917,
-              "height_emu": 487680,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 32.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "card_2"
-        },
-        {
-          "node_id": "card_title_153",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 1463040,
-            "w": 2613660,
-            "h": 487680
-          },
-          "text_content": "Feature D",
-          "lines": [
-            {
-              "text": "Feature D",
-              "width_emu": 2194917,
-              "height_emu": 487680,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 32.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_3"
-        },
-        {
-          "node_id": "card_body_154",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 2087880,
-            "w": 2613660,
-            "h": 3672840
-          },
-          "text_content": "Pay as you go.",
-          "lines": [
-            {
-              "text": "Pay as",
-              "width_emu": 1463278,
-              "height_emu": 487680,
-              "overflows": false
-            },
-            {
-              "text": "you go.",
-              "width_emu": 1707158,
-              "height_emu": 487680,
-              "overflows": false
-            }
-          ],
-          "font": "courier new",
-          "size_pt": 32.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "card_3"
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_155",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "7",
-          "lines": [
-            {
-              "text": "7",
               "width_emu": 121940,
               "height_emu": 243840,
               "overflows": false

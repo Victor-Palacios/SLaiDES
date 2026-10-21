@@ -4,7 +4,9 @@
 #   assets/uml/omg-spec.png ... screenshot of https://www.omg.org/spec/UML/,
 #                               captured 2026-10-21 (headless Chromium, cropped
 #                               to the 1290x1000 slot, cookie banner kept out)
-#   history and the 14 diagram types: https://en.wikipedia.org/wiki/Unified_Modeling_Language
+#   the 14 diagram types: https://en.wikipedia.org/wiki/Unified_Modeling_Language
+# No history slide: operator rule (2026-10-21) — no historical facts unless they
+# are extremely relevant to what the audience will do.
 # The three example diagrams are drawn for this deck with Mermaid, modelling the
 # public ninth_circuit pipeline (https://github.com/Victor-Palacios/ninth_circuit)
 # from what its README states. Their editable sources are in assets/uml/source/.
@@ -58,32 +60,11 @@ slides:
       - type: text
         content: "Current version 2.5.1"
       - type: text
-        content: "Published December 2017"
+        content: "Free to read as a PDF"
     source: "https://www.omg.org/spec/UML/"
     notes: >-
-      UML is maintained by the Object Management Group. Its specification page
-      shows the current version, 2.5.1, published in December 2017.
-
-  - component: timeline
-    title: "Where It Came From"
-    events:
-      - date: "1995"
-        title: "Merged"
-        description: "Three design methods combine"
-      - date: "1997"
-        title: "OMG"
-        description: "Adopted as a standard"
-      - date: "2005"
-        title: "ISO"
-        description: "Becomes an ISO standard"
-      - date: "2017"
-        title: "UML 2.5.1"
-        description: "The version in use today"
-    source: "https://en.wikipedia.org/wiki/Unified_Modeling_Language"
-    notes: >-
-      Grady Booch, James Rumbaugh and Ivar Jacobson merged their design methods
-      into UML in the mid-1990s. The OMG adopted it in 1997, it became an ISO
-      standard in 2005, and version 2.5.1 arrived in 2017.
+      UML is maintained by the Object Management Group. The current version is
+      2.5.1, and the full specification is free to read as a PDF.
 
   - component: two-panel-list
     title: "Fourteen Diagrams, Two Families"
@@ -249,6 +230,19 @@ slides:
       diagrams in this deck, and PlantUML both turn text into diagrams, and
       draw.io lets you drag shapes around.
 
+  - component: table-slide
+    title: "Sources"
+    headers: ["Slide", "Taken from"]
+    rows:
+      - ["Specification", "omg.org/spec/UML"]
+      - ["The diagram types", "Wikipedia, UML"]
+      - ["Example diagrams", "Drawn with Mermaid"]
+      - ["What they model", "ninth_circuit README"]
+    notes: >-
+      The specification screenshot was captured on the twenty-first of October
+      2026, the list of diagram types comes from Wikipedia's UML article, and
+      the example diagrams were drawn for this deck from the ninth_circuit README.
+
   - component: bullet-list
     title: "Good Habits"
     items:
@@ -260,22 +254,3 @@ slides:
       Draw to explain rather than to archive everything, answer one question per
       diagram, leave out whatever does not matter to that question, and keep the
       diagram next to the code it describes.
-
-  - component: table-slide
-    title: "Sources"
-    headers: ["Slide", "Taken from"]
-    rows:
-      - ["Specification", "omg.org/spec/UML"]
-      - ["History, diagram types", "Wikipedia, UML"]
-      - ["Example diagrams", "Drawn with Mermaid"]
-      - ["What they model", "ninth_circuit README"]
-    notes: >-
-      The specification screenshot was captured on the twenty-first of October
-      2026, the history and diagram types come from Wikipedia's UML article, and
-      the example diagrams were drawn for this deck from the ninth_circuit README.
-
-  - component: question
-    question: "What would you draw first?"
-    notes: >-
-      So, for a system you know: which diagram would you draw first, and what
-      question would it answer?

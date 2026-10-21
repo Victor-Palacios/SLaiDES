@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1",
+          "node_id": "title_5264",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -16,11 +16,11 @@
             "w": 10363200,
             "h": 914400
           },
-          "text_content": "What Is MCP?",
+          "text_content": "MCP, as One Story",
           "lines": [
             {
-              "text": "What Is MCP?",
-              "width_emu": 5079876,
+              "text": "MCP, as One Story",
+              "width_emu": 6719218,
               "height_emu": 914400,
               "overflows": false
             }
@@ -32,7 +32,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "subtitle_2",
+          "node_id": "subtitle_5265",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -40,11 +40,11 @@
             "w": 10363200,
             "h": 518159
           },
-          "text_content": "The Model Context Protocol, from the source",
+          "text_content": "How Claude reaches your tools, and the risks",
           "lines": [
             {
-              "text": "The Model Context Protocol, from the source",
-              "width_emu": 8591934,
+              "text": "How Claude reaches your tools, and the risks",
+              "width_emu": 8688288,
               "height_emu": 518160,
               "overflows": false
             }
@@ -60,48 +60,182 @@
     {
       "slide_index": 1,
       "page_number": 2,
-      "component": "question",
+      "component": "icon-text-rows",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_4",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2926080,
-            "w": 128016,
-            "h": 1005840
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "question_3",
+          "node_id": "title_5266",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 2926080,
-            "w": 10738104,
-            "h": 1005840
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
           },
-          "text_content": "What can an AI app reach?",
+          "text_content": "Meet Maya, Our Example",
           "lines": [
             {
-              "text": "What can an AI app reach?",
-              "width_emu": 9710291,
-              "height_emu": 914400,
+              "text": "Meet Maya, Our Example",
+              "width_emu": 6284640,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 60.0,
+          "size_pt": 42.0,
           "bold": true,
-          "italic": false
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "heading_5267",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Who she is",
+          "lines": [
+            {
+              "text": "Who she is",
+              "width_emu": 2279179,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "itr_0"
+        },
+        {
+          "node_id": "body_5268",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2109215,
+            "w": 11277600,
+            "h": 627889
+          },
+          "text_content": "A student building a class app",
+          "lines": [
+            {
+              "text": "A student building a class app",
+              "width_emu": 5713338,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "itr_0"
+        },
+        {
+          "node_id": "heading_5269",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3011424,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Her data",
+          "lines": [
+            {
+              "text": "Her data",
+              "width_emu": 1727833,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "itr_1"
+        },
+        {
+          "node_id": "body_5270",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3621023,
+            "w": 11277600,
+            "h": 627889
+          },
+          "text_content": "Kept in Supabase",
+          "lines": [
+            {
+              "text": "Kept in Supabase",
+              "width_emu": 3409069,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "itr_1"
+        },
+        {
+          "node_id": "heading_5271",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4523232,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Her code",
+          "lines": [
+            {
+              "text": "Her code",
+              "width_emu": 1847800,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "itr_2"
+        },
+        {
+          "node_id": "body_5272",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5132831,
+            "w": 11277600,
+            "h": 627889
+          },
+          "text_content": "Kept on GitHub",
+          "lines": [
+            {
+              "text": "Kept on GitHub",
+              "width_emu": 2952390,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "itr_2"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_5",
+          "node_id": "chrome_pagenum_5273",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -130,59 +264,98 @@
     {
       "slide_index": 2,
       "page_number": 3,
-      "component": "definition",
+      "component": "numbered-steps",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_8",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2484120,
-            "w": 128016,
-            "h": 1889760
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "term_6",
+          "node_id": "title_5274",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 2484120,
-            "w": 10738104,
-            "h": 1005840
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
           },
-          "text_content": "MCP",
+          "text_content": "Her Afternoon, Without MCP",
           "lines": [
             {
-              "text": "MCP",
-              "width_emu": 1693292,
-              "height_emu": 914400,
+              "text": "Her Afternoon, Without MCP",
+              "width_emu": 7175376,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 60.0,
+          "size_pt": 42.0,
           "bold": true,
           "italic": false,
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_7",
+          "node_id": "step_num_5275",
           "node_type": "text",
           "rect": {
-            "x": 996696,
-            "y": 3764280,
-            "w": 10738104,
-            "h": 609600
+            "x": 457200,
+            "y": 1499616,
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "An open standard for connecting AI apps to systems",
+          "text_content": "01",
           "lines": [
             {
-              "text": "An open standard for connecting AI apps to systems",
-              "width_emu": 9985375,
+              "text": "01",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_head_5276",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 1499616,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Copy the numbers",
+          "lines": [
+            {
+              "text": "Copy the numbers",
+              "width_emu": 4682617,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_body_5277",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 2185416,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "Open Supabase, copy this week's sign-ups",
+          "lines": [
+            {
+              "text": "Open Supabase, copy this week's sign-ups",
+              "width_emu": 8243416,
               "height_emu": 518160,
               "overflows": false
             }
@@ -190,12 +363,161 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "step_0"
+        },
+        {
+          "node_id": "step_num_5278",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3011424,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "02",
+          "lines": [
+            {
+              "text": "02",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_head_5279",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3011424,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Paste them into Claude",
+          "lines": [
+            {
+              "text": "Paste them into Claude",
+              "width_emu": 5898133,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_body_5280",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3697224,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "Ask what changed since last week",
+          "lines": [
+            {
+              "text": "Ask what changed since last week",
+              "width_emu": 6576516,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_1"
+        },
+        {
+          "node_id": "step_num_5281",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4523232,
+            "w": 776183,
+            "h": 640080
+          },
+          "text_content": "03",
+          "lines": [
+            {
+              "text": "03",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_head_5282",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 4523232,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Copy the answer to GitHub",
+          "lines": [
+            {
+              "text": "Copy the answer to GitHub",
+              "width_emu": 6845647,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_body_5283",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 5209032,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "Paste it into a new issue by hand",
+          "lines": [
+            {
+              "text": "Paste it into a new issue by hand",
+              "width_emu": 6312967,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "step_2"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_9",
+          "node_id": "chrome_pagenum_5284",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -229,7 +551,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_10",
+          "node_id": "title_5285",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -237,11 +559,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "The Official Analogy",
+          "text_content": "The Idea: One Plug",
           "lines": [
             {
-              "text": "The Official Analogy",
-              "width_emu": 5137100,
+              "text": "The Idea: One Plug",
+              "width_emu": 4830812,
               "height_emu": 640080,
               "overflows": false
             }
@@ -253,7 +575,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_11",
+          "node_id": "image_5286",
           "node_type": "image",
           "rect": {
             "x": 6233160,
@@ -265,7 +587,7 @@
           "slot_type": "image"
         },
         {
-          "node_id": "content_text_12",
+          "node_id": "content_text_5287",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -288,7 +610,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_13",
+          "node_id": "content_text_5288",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -296,11 +618,11 @@
             "w": 5501640,
             "h": 609600
           },
-          "text_content": "One plug, many devices",
+          "text_content": "One plug, many tools",
           "lines": [
             {
-              "text": "One plug, many devices",
-              "width_emu": 4632362,
+              "text": "One plug, many tools",
+              "width_emu": 4080383,
               "height_emu": 518160,
               "overflows": false
             }
@@ -311,7 +633,7 @@
           "italic": false
         },
         {
-          "node_id": "content_text_14",
+          "node_id": "content_text_5289",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -319,11 +641,11 @@
             "w": 5501640,
             "h": 609600
           },
-          "text_content": "One protocol, many tools",
+          "text_content": "From the official site",
           "lines": [
             {
-              "text": "One protocol, many tools",
-              "width_emu": 4800191,
+              "text": "From the official site",
+              "width_emu": 3855628,
               "height_emu": 518160,
               "overflows": false
             }
@@ -336,7 +658,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_15",
+          "node_id": "chrome_pagenum_5290",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -361,7 +683,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_16",
+          "node_id": "chrome_source_5291",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -391,12 +713,12 @@
     {
       "slide_index": 4,
       "page_number": 5,
-      "component": "image-half-bleed",
+      "component": "numbered-steps",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_17",
+          "node_id": "title_5292",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -404,11 +726,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Where It Came From",
+          "text_content": "Her Afternoon, With MCP",
           "lines": [
             {
-              "text": "Where It Came From",
-              "width_emu": 5186846,
+              "text": "Her Afternoon, With MCP",
+              "width_emu": 6346106,
               "height_emu": 640080,
               "overflows": false
             }
@@ -420,31 +742,69 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_18",
-          "node_type": "image",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 4261104
-          },
-          "text_content": "examples/assets/mcp/announce.png",
-          "slot_type": "image"
-        },
-        {
-          "node_id": "content_text_19",
+          "node_id": "step_num_5293",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 5501640,
-            "h": 609600
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "Anthropic, November 2024",
+          "text_content": "01",
           "lines": [
             {
-              "text": "Anthropic, November 2024",
-              "width_emu": 5136480,
+              "text": "01",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_head_5294",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 1499616,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Ask one question",
+          "lines": [
+            {
+              "text": "Ask one question",
+              "width_emu": 4445608,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_0",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_body_5295",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 2185416,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "Did sign-ups drop this week?",
+          "lines": [
+            {
+              "text": "Did sign-ups drop this week?",
+              "width_emu": 5544245,
               "height_emu": 518160,
               "overflows": false
             }
@@ -452,22 +812,73 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "step_0"
         },
         {
-          "node_id": "content_text_20",
+          "node_id": "step_num_5296",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2383536,
-            "w": 5501640,
-            "h": 609600
+            "y": 3011424,
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "Open source from day one",
+          "text_content": "02",
           "lines": [
             {
-              "text": "Open source from day one",
-              "width_emu": 5112445,
+              "text": "02",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_head_5297",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3011424,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Claude checks Supabase",
+          "lines": [
+            {
+              "text": "Claude checks Supabase",
+              "width_emu": 6403665,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_1",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_body_5298",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 3697224,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "It reads the table itself",
+          "lines": [
+            {
+              "text": "It reads the table itself",
+              "width_emu": 4224387,
               "height_emu": 518160,
               "overflows": false
             }
@@ -475,22 +886,73 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "step_1"
         },
         {
-          "node_id": "content_text_21",
+          "node_id": "step_num_5299",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3267456,
-            "w": 5501640,
-            "h": 609600
+            "y": 4523232,
+            "w": 776183,
+            "h": 640080
           },
-          "text_content": "Replaced one-off links",
+          "text_content": "03",
           "lines": [
             {
-              "text": "Replaced one-off links",
-              "width_emu": 4264658,
+              "text": "03",
+              "width_emu": 593303,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_head_5300",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 4523232,
+            "w": 10272817,
+            "h": 640080
+          },
+          "text_content": "Claude files the issue",
+          "lines": [
+            {
+              "text": "Claude files the issue",
+              "width_emu": 5454328,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "step_2",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_body_5301",
+          "node_type": "text",
+          "rect": {
+            "x": 1461983,
+            "y": 5209032,
+            "w": 10272817,
+            "h": 551688
+          },
+          "text_content": "On GitHub, once she approves it",
+          "lines": [
+            {
+              "text": "On GitHub, once she approves it",
+              "width_emu": 6264473,
               "height_emu": 518160,
               "overflows": false
             }
@@ -498,12 +960,13 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "group_id": "step_2"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_22",
+          "node_id": "chrome_pagenum_5302",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -526,44 +989,18 @@
           "italic": false,
           "is_chrome": true,
           "align": "right"
-        },
-        {
-          "node_id": "chrome_source_23",
-          "node_type": "text",
-          "rect": {
-            "x": 10085130,
-            "y": 6035040,
-            "w": 826710,
-            "h": 365760
-          },
-          "text_content": "Source",
-          "lines": [
-            {
-              "text": "Source",
-              "width_emu": 643830,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "text_color": "#0072CE",
-          "href": "https://www.anthropic.com/news/model-context-protocol"
         }
       ]
     },
     {
       "slide_index": 5,
       "page_number": 6,
-      "component": "icon-text-rows",
+      "component": "image-half-bleed",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_24",
+          "node_id": "title_5303",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -571,11 +1008,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Three Participants",
+          "text_content": "What Is Actually Connected",
           "lines": [
             {
-              "text": "Three Participants",
-              "width_emu": 4653967,
+              "text": "What Is Actually Connected",
+              "width_emu": 7004261,
               "height_emu": 640080,
               "overflows": false
             }
@@ -587,43 +1024,31 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "heading_25",
+          "node_id": "image_5304",
+          "node_type": "image",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 4261104
+          },
+          "text_content": "examples/assets/mcp/story.png",
+          "slot_type": "image"
+        },
+        {
+          "node_id": "content_text_5305",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 11277600,
-            "h": 518159
+            "w": 5501640,
+            "h": 609600
           },
-          "text_content": "Host",
+          "text_content": "One connection per tool",
           "lines": [
             {
-              "text": "Host",
-              "width_emu": 959532,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "itr_0"
-        },
-        {
-          "node_id": "body_26",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2109215,
-            "w": 11277600,
-            "h": 627889
-          },
-          "text_content": "The AI app, such as Claude Code",
-          "lines": [
-            {
-              "text": "The AI app, such as Claude Code",
-              "width_emu": 6457181,
+              "text": "One connection per tool",
+              "width_emu": 4584923,
               "height_emu": 518160,
               "overflows": false
             }
@@ -631,47 +1056,22 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "itr_0"
+          "italic": false
         },
         {
-          "node_id": "heading_27",
+          "node_id": "content_text_5306",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3011424,
-            "w": 11277600,
-            "h": 518159
+            "y": 2383536,
+            "w": 5501640,
+            "h": 609600
           },
-          "text_content": "Client",
+          "text_content": "Each is a small program",
           "lines": [
             {
-              "text": "Client",
-              "width_emu": 1199468,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "itr_1"
-        },
-        {
-          "node_id": "body_28",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3621023,
-            "w": 11277600,
-            "h": 627889
-          },
-          "text_content": "One connection to one server",
-          "lines": [
-            {
-              "text": "One connection to one server",
-              "width_emu": 5664845,
+              "text": "Each is a small program",
+              "width_emu": 4631519,
               "height_emu": 518160,
               "overflows": false
             }
@@ -679,47 +1079,22 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "itr_1"
+          "italic": false
         },
         {
-          "node_id": "heading_29",
+          "node_id": "content_text_5307",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 4523232,
-            "w": 11277600,
-            "h": 518159
+            "y": 3267456,
+            "w": 5501640,
+            "h": 609600
           },
-          "text_content": "Server",
+          "text_content": "Someone wrote each one",
           "lines": [
             {
-              "text": "Server",
-              "width_emu": 1344526,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "itr_2"
-        },
-        {
-          "node_id": "body_30",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5132831,
-            "w": 11277600,
-            "h": 627889
-          },
-          "text_content": "A program that offers context",
-          "lines": [
-            {
-              "text": "A program that offers context",
-              "width_emu": 5536443,
+              "text": "Someone wrote each one",
+              "width_emu": 4921002,
               "height_emu": 518160,
               "overflows": false
             }
@@ -727,13 +1102,12 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "itr_2"
+          "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_31",
+          "node_id": "chrome_pagenum_5308",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -756,150 +1130,9 @@
           "italic": false,
           "is_chrome": true,
           "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 6,
-      "page_number": 7,
-      "component": "image-half-bleed",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_32",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "How They Connect",
-          "lines": [
-            {
-              "text": "How They Connect",
-              "width_emu": 4800860,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
         },
         {
-          "node_id": "image_33",
-          "node_type": "image",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 4261104
-          },
-          "text_content": "examples/assets/mcp/architecture.png",
-          "slot_type": "image"
-        },
-        {
-          "node_id": "content_text_34",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "One client per server",
-          "lines": [
-            {
-              "text": "One client per server",
-              "width_emu": 4007855,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "content_text_35",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2383536,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "Local servers use stdio",
-          "lines": [
-            {
-              "text": "Local servers use stdio",
-              "width_emu": 4416041,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "content_text_36",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3267456,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "Remote servers use HTTP",
-          "lines": [
-            {
-              "text": "Remote servers use HTTP",
-              "width_emu": 5110969,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_37",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "7",
-          "lines": [
-            {
-              "text": "7",
-              "width_emu": 113010,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        },
-        {
-          "node_id": "chrome_source_38",
+          "node_id": "chrome_source_5309",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -927,14 +1160,14 @@
       ]
     },
     {
-      "slide_index": 7,
-      "page_number": 8,
-      "component": "image-half-bleed",
+      "slide_index": 6,
+      "page_number": 7,
+      "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_39",
+          "node_id": "title_5310",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -942,11 +1175,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "What a Server Offers",
+          "text_content": "What a Connection Can Offer",
           "lines": [
             {
-              "text": "What a Server Offers",
-              "width_emu": 5276701,
+              "text": "What a Connection Can Offer",
+              "width_emu": 7408478,
               "height_emu": 640080,
               "overflows": false
             }
@@ -958,31 +1191,81 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_40",
-          "node_type": "image",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 4261104
-          },
-          "text_content": "examples/assets/mcp/server.png",
-          "slot_type": "image"
-        },
-        {
-          "node_id": "content_text_41",
+          "node_id": "th_5311",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 5501640,
-            "h": 609600
+            "w": 4613972,
+            "h": 518159
           },
-          "text_content": "Tools: actions to take",
+          "text_content": "It can offer",
           "lines": [
             {
-              "text": "Tools: actions to take",
-              "width_emu": 4032312,
+              "text": "It can offer",
+              "width_emu": 2207282,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_5312",
+          "node_type": "text",
+          "rect": {
+            "x": 5619812,
+            "y": 1499616,
+            "w": 4397439,
+            "h": 518159
+          },
+          "text_content": "For Maya",
+          "lines": [
+            {
+              "text": "For Maya",
+              "width_emu": 1895661,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "table_rule_5313",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 9560051,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_5314",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 4613972,
+            "h": 936752
+          },
+          "text_content": "Actions to take",
+          "lines": [
+            {
+              "text": "Actions to take",
+              "width_emu": 2832212,
               "height_emu": 518160,
               "overflows": false
             }
@@ -993,19 +1276,19 @@
           "italic": false
         },
         {
-          "node_id": "content_text_42",
+          "node_id": "td_5315",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 2383536,
-            "w": 5501640,
-            "h": 609600
+            "x": 5619812,
+            "y": 2401823,
+            "w": 4397439,
+            "h": 936752
           },
-          "text_content": "Resources: data to read",
+          "text_content": "Open a GitHub issue",
           "lines": [
             {
-              "text": "Resources: data to read",
-              "width_emu": 4608537,
+              "text": "Open a GitHub issue",
+              "width_emu": 4008276,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1016,19 +1299,88 @@
           "italic": false
         },
         {
-          "node_id": "content_text_43",
+          "node_id": "td_5316",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3267456,
-            "w": 5501640,
-            "h": 609600
+            "y": 3612895,
+            "w": 4613972,
+            "h": 936752
           },
-          "text_content": "Prompts: ready templates",
+          "text_content": "Things to read",
           "lines": [
             {
-              "text": "Prompts: ready templates",
-              "width_emu": 4919737,
+              "text": "Things to read",
+              "width_emu": 2760315,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5317",
+          "node_type": "text",
+          "rect": {
+            "x": 5619812,
+            "y": 3612895,
+            "w": 4397439,
+            "h": 936752
+          },
+          "text_content": "This week's sign-ups",
+          "lines": [
+            {
+              "text": "This week's sign-ups",
+              "width_emu": 3994150,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5318",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4823967,
+            "w": 4613972,
+            "h": 936752
+          },
+          "text_content": "Ready-made requests",
+          "lines": [
+            {
+              "text": "Ready-made requests",
+              "width_emu": 4248212,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_5319",
+          "node_type": "text",
+          "rect": {
+            "x": 5619812,
+            "y": 4823967,
+            "w": 4397439,
+            "h": 936752
+          },
+          "text_content": "Summarise the week",
+          "lines": [
+            {
+              "text": "Summarise the week",
+              "width_emu": 4031679,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1041,7 +1393,148 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_44",
+          "node_id": "chrome_pagenum_5320",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "7",
+          "lines": [
+            {
+              "text": "7",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 7,
+      "page_number": 8,
+      "component": "image-half-bleed",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_5321",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Setting It Up",
+          "lines": [
+            {
+              "text": "Setting It Up",
+              "width_emu": 3140757,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "image_5322",
+          "node_type": "image",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 4261104
+          },
+          "text_content": "examples/assets/mcp/cc.png",
+          "slot_type": "image"
+        },
+        {
+          "node_id": "content_text_5323",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "One command per tool",
+          "lines": [
+            {
+              "text": "One command per tool",
+              "width_emu": 4392216,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_5324",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2383536,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Documented by Anthropic",
+          "lines": [
+            {
+              "text": "Documented by Anthropic",
+              "width_emu": 4944616,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_5325",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3267456,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Then Maya just asks",
+          "lines": [
+            {
+              "text": "Then Maya just asks",
+              "width_emu": 3959783,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_5326",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1066,7 +1559,7 @@
           "align": "right"
         },
         {
-          "node_id": "chrome_source_45",
+          "node_id": "chrome_source_5327",
           "node_type": "text",
           "rect": {
             "x": 10085130,
@@ -1089,339 +1582,55 @@
           "italic": false,
           "is_chrome": true,
           "text_color": "#0072CE",
-          "href": "https://modelcontextprotocol.io/docs/learn/server-concepts"
+          "href": "https://code.claude.com/docs/en/mcp"
         }
       ]
     },
     {
       "slide_index": 8,
       "page_number": 9,
-      "component": "table-slide",
+      "component": "question",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_46",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "Who Controls Each One",
-          "lines": [
-            {
-              "text": "Who Controls Each One",
-              "width_emu": 6104669,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "th_47",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 2429671,
-            "h": 518159
-          },
-          "text_content": "Feature",
-          "lines": [
-            {
-              "text": "Feature",
-              "width_emu": 1559793,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "th_48",
-          "node_type": "text",
-          "rect": {
-            "x": 3435511,
-            "y": 1499616,
-            "w": 3294325,
-            "h": 518159
-          },
-          "text_content": "Controlled by",
-          "lines": [
-            {
-              "text": "Controlled by",
-              "width_emu": 2782664,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "th_49",
-          "node_type": "text",
-          "rect": {
-            "x": 7278476,
-            "y": 1499616,
-            "w": 3534472,
-            "h": 518159
-          },
-          "text_content": "Example",
-          "lines": [
-            {
-              "text": "Example",
-              "width_emu": 1776115,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "table_rule_50",
+          "node_id": "accent_bar_5329",
           "node_type": "box",
           "rect": {
             "x": 457200,
-            "y": 2072639,
-            "w": 10355748,
-            "h": 54864
+            "y": 2926080,
+            "w": 128016,
+            "h": 1005840
           },
-          "group_id": "table_head",
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_51",
+          "node_id": "question_5328",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 2401823,
-            "w": 2429671,
-            "h": 936752
+            "x": 996696,
+            "y": 2926080,
+            "w": 10738104,
+            "h": 1005840
           },
-          "text_content": "Tools",
+          "text_content": "What if the program lies?",
           "lines": [
             {
-              "text": "Tools",
-              "width_emu": 1008025,
-              "height_emu": 518160,
+              "text": "What if the program lies?",
+              "width_emu": 9144744,
+              "height_emu": 914400,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_52",
-          "node_type": "text",
-          "rect": {
-            "x": 3435511,
-            "y": 2401823,
-            "w": 3294325,
-            "h": 936752
-          },
-          "text_content": "The model",
-          "lines": [
-            {
-              "text": "The model",
-              "width_emu": 2040086,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_53",
-          "node_type": "text",
-          "rect": {
-            "x": 7278476,
-            "y": 2401823,
-            "w": 3534472,
-            "h": 936752
-          },
-          "text_content": "Search flights",
-          "lines": [
-            {
-              "text": "Search flights",
-              "width_emu": 2616101,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_54",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3612895,
-            "w": 2429671,
-            "h": 936752
-          },
-          "text_content": "Resources",
-          "lines": [
-            {
-              "text": "Resources",
-              "width_emu": 2063911,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_55",
-          "node_type": "text",
-          "rect": {
-            "x": 3435511,
-            "y": 3612895,
-            "w": 3294325,
-            "h": 936752
-          },
-          "text_content": "The application",
-          "lines": [
-            {
-              "text": "The application",
-              "width_emu": 2928565,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_56",
-          "node_type": "text",
-          "rect": {
-            "x": 7278476,
-            "y": 3612895,
-            "w": 3534472,
-            "h": 936752
-          },
-          "text_content": "Read a calendar",
-          "lines": [
-            {
-              "text": "Read a calendar",
-              "width_emu": 3168712,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_57",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4823967,
-            "w": 2429671,
-            "h": 936752
-          },
-          "text_content": "Prompts",
-          "lines": [
-            {
-              "text": "Prompts",
-              "width_emu": 1607654,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_58",
-          "node_type": "text",
-          "rect": {
-            "x": 3435511,
-            "y": 4823967,
-            "w": 3294325,
-            "h": 936752
-          },
-          "text_content": "The user",
-          "lines": [
-            {
-              "text": "The user",
-              "width_emu": 1704008,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_59",
-          "node_type": "text",
-          "rect": {
-            "x": 7278476,
-            "y": 4823967,
-            "w": 3534472,
-            "h": 936752
-          },
-          "text_content": "Plan a vacation",
-          "lines": [
-            {
-              "text": "Plan a vacation",
-              "width_emu": 2952601,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
+          "size_pt": 60.0,
+          "bold": true,
           "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_60",
+          "node_id": "chrome_pagenum_5330",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1450,12 +1659,12 @@
     {
       "slide_index": 9,
       "page_number": 10,
-      "component": "numbered-steps",
+      "component": "image-half-bleed",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_61",
+          "node_id": "title_5331",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1463,11 +1672,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "One Tool Call, Step by Step",
+          "text_content": "This Really Happened",
           "lines": [
             {
-              "text": "One Tool Call, Step by Step",
-              "width_emu": 6925084,
+              "text": "This Really Happened",
+              "width_emu": 5542880,
               "height_emu": 640080,
               "overflows": false
             }
@@ -1479,7 +1688,174 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_num_62",
+          "node_id": "image_5332",
+          "node_type": "image",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 4261104
+          },
+          "text_content": "examples/assets/mcp/postmark-case.png",
+          "slot_type": "image"
+        },
+        {
+          "node_id": "content_text_5333",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "A fake email tool",
+          "lines": [
+            {
+              "text": "A fake email tool",
+              "width_emu": 3168290,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_5334",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2383536,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "It worked as promised",
+          "lines": [
+            {
+              "text": "It worked as promised",
+              "width_emu": 4223755,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_5335",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3267456,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Then one line changed",
+          "lines": [
+            {
+              "text": "Then one line changed",
+              "width_emu": 4393481,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_5336",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "10",
+          "lines": [
+            {
+              "text": "10",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        },
+        {
+          "node_id": "chrome_source_5337",
+          "node_type": "text",
+          "rect": {
+            "x": 10085130,
+            "y": 6035040,
+            "w": 826710,
+            "h": 365760
+          },
+          "text_content": "Source",
+          "lines": [
+            {
+              "text": "Source",
+              "width_emu": 643830,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "text_color": "#0072CE",
+          "href": "https://snyk.io/blog/malicious-mcp-server-on-npm-postmark-mcp-harvests-emails/"
+        }
+      ]
+    },
+    {
+      "slide_index": 10,
+      "page_number": 11,
+      "component": "numbered-steps",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_5338",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "How the Trap Worked",
+          "lines": [
+            {
+              "text": "How the Trap Worked",
+              "width_emu": 5443389,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "step_num_5339",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1504,7 +1880,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_63",
+          "node_id": "step_head_5340",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1512,11 +1888,11 @@
             "w": 10272817,
             "h": 640080
           },
-          "text_content": "Discover",
+          "text_content": "Copy a real tool",
           "lines": [
             {
-              "text": "Discover",
-              "width_emu": 2253407,
+              "text": "Copy a real tool",
+              "width_emu": 4001281,
               "height_emu": 640080,
               "overflows": false
             }
@@ -1529,7 +1905,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_64",
+          "node_id": "step_body_5341",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1537,11 +1913,11 @@
             "w": 10272817,
             "h": 551688
           },
-          "text_content": "The app asks the server for its tools",
+          "text_content": "The genuine one, from the email company",
           "lines": [
             {
-              "text": "The app asks the server for its tools",
-              "width_emu": 6839855,
+              "text": "The genuine one, from the email company",
+              "width_emu": 8088871,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1553,7 +1929,7 @@
           "group_id": "step_0"
         },
         {
-          "node_id": "step_num_65",
+          "node_id": "step_num_5342",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1578,7 +1954,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_66",
+          "node_id": "step_head_5343",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1586,11 +1962,11 @@
             "w": 10272817,
             "h": 640080
           },
-          "text_content": "Decide",
+          "text_content": "Earn trust",
           "lines": [
             {
-              "text": "Decide",
-              "width_emu": 1749177,
+              "text": "Earn trust",
+              "width_emu": 2519325,
               "height_emu": 640080,
               "overflows": false
             }
@@ -1603,7 +1979,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_67",
+          "node_id": "step_body_5344",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1611,11 +1987,11 @@
             "w": 10272817,
             "h": 551688
           },
-          "text_content": "The model picks one for the task",
+          "text_content": "Fifteen honest versions in a row",
           "lines": [
             {
-              "text": "The model picks one for the task",
-              "width_emu": 6240227,
+              "text": "Fifteen honest versions in a row",
+              "width_emu": 6096223,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1627,7 +2003,7 @@
           "group_id": "step_1"
         },
         {
-          "node_id": "step_num_68",
+          "node_id": "step_num_5345",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1652,7 +2028,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_69",
+          "node_id": "step_head_5346",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1660,11 +2036,11 @@
             "w": 10272817,
             "h": 640080
           },
-          "text_content": "Call",
+          "text_content": "Add one hidden line",
           "lines": [
             {
-              "text": "Call",
-              "width_emu": 978247,
+              "text": "Add one hidden line",
+              "width_emu": 5096731,
               "height_emu": 640080,
               "overflows": false
             }
@@ -1677,7 +2053,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_70",
+          "node_id": "step_body_5347",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1685,11 +2061,11 @@
             "w": 10272817,
             "h": 551688
           },
-          "text_content": "The server runs it and sends back a result",
+          "text_content": "In version 1.0.16",
           "lines": [
             {
-              "text": "The server runs it and sends back a result",
-              "width_emu": 8040167,
+              "text": "In version 1.0.16",
+              "width_emu": 3192537,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1703,159 +2079,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_71",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "10",
-          "lines": [
-            {
-              "text": "10",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 10,
-      "page_number": 11,
-      "component": "bullet-list",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_72",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "What Travels Between Them",
-          "lines": [
-            {
-              "text": "What Travels Between Them",
-              "width_emu": 7202984,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "bl_item_73",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1908050,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "JSON-RPC 2.0 messages",
-          "lines": [
-            {
-              "text": "JSON-RPC 2.0 messages",
-              "width_emu": 5015247,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_74",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2883409,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Each request carries the version",
-          "lines": [
-            {
-              "text": "Each request carries the version",
-              "width_emu": 6192155,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_75",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3858768,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Servers say what they support",
-          "lines": [
-            {
-              "text": "Servers say what they support",
-              "width_emu": 5808005,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "bl_item_76",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4834127,
-            "w": 11277600,
-            "h": 518159
-          },
-          "text_content": "Same format, local or remote",
-          "lines": [
-            {
-              "text": "Same format, local or remote",
-              "width_emu": 5567437,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_77",
+          "node_id": "chrome_pagenum_5348",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1884,12 +2108,12 @@
     {
       "slide_index": 11,
       "page_number": 12,
-      "component": "image-half-bleed",
+      "component": "this-vs-that",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_78",
+          "node_id": "title_5349",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1897,11 +2121,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Ready-Made Servers",
+          "text_content": "What the Hidden Line Did",
           "lines": [
             {
-              "text": "Ready-Made Servers",
-              "width_emu": 5247791,
+              "text": "What the Hidden Line Did",
+              "width_emu": 6459662,
               "height_emu": 640080,
               "overflows": false
             }
@@ -1913,31 +2137,43 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_79",
-          "node_type": "image",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 4261104
-          },
-          "text_content": "examples/assets/mcp/servers.png",
-          "slot_type": "image"
-        },
-        {
-          "node_id": "content_text_80",
+          "node_id": "vs_value_5350",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 609600
+            "y": 2776728,
+            "w": 4792980,
+            "h": 914400
           },
-          "text_content": "Open-source examples",
+          "text_content": "Sent",
           "lines": [
             {
-              "text": "Open-source examples",
-              "width_emu": 4464112,
+              "text": "Sent",
+              "width_emu": 1651248,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_label_5351",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3965448,
+            "w": 4792980,
+            "h": 518159
+          },
+          "text_content": "What the user saw",
+          "lines": [
+            {
+              "text": "What the user saw",
+              "width_emu": 3575844,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1945,22 +2181,47 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "align": "center"
         },
         {
-          "node_id": "content_text_81",
+          "node_id": "vs_value_5352",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 2383536,
-            "w": 5501640,
-            "h": 609600
+            "x": 6941820,
+            "y": 2776728,
+            "w": 4792980,
+            "h": 914400
           },
-          "text_content": "91.4k stars on GitHub",
+          "text_content": "Copied",
           "lines": [
             {
-              "text": "91.4k stars on GitHub",
-              "width_emu": 4176105,
+              "text": "Copied",
+              "width_emu": 2582168,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "align": "center"
+        },
+        {
+          "node_id": "vs_label_5353",
+          "node_type": "text",
+          "rect": {
+            "x": 6941820,
+            "y": 3965448,
+            "w": 4792980,
+            "h": 518159
+          },
+          "text_content": "A copy to a stranger",
+          "lines": [
+            {
+              "text": "A copy to a stranger",
+              "width_emu": 3840448,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1968,35 +2229,38 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false
+          "italic": false,
+          "align": "center"
         },
         {
-          "node_id": "content_text_82",
+          "node_id": "vs_text_5354",
           "node_type": "text",
           "rect": {
-            "x": 457200,
-            "y": 3267456,
-            "w": 5501640,
-            "h": 609600
+            "x": 5524500,
+            "y": 3310127,
+            "w": 1143000,
+            "h": 640080
           },
-          "text_content": "Start from one of these",
+          "text_content": "VS",
           "lines": [
             {
-              "text": "Start from one of these",
-              "width_emu": 4392216,
-              "height_emu": 518160,
+              "text": "VS",
+              "width_emu": 711547,
+              "height_emu": 640080,
               "overflows": false
             }
           ],
           "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "align": "center"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_83",
+          "node_id": "chrome_pagenum_5355",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2019,44 +2283,18 @@
           "italic": false,
           "is_chrome": true,
           "align": "right"
-        },
-        {
-          "node_id": "chrome_source_84",
-          "node_type": "text",
-          "rect": {
-            "x": 10085130,
-            "y": 6035040,
-            "w": 826710,
-            "h": 365760
-          },
-          "text_content": "Source",
-          "lines": [
-            {
-              "text": "Source",
-              "width_emu": 643830,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "text_color": "#0072CE",
-          "href": "https://github.com/modelcontextprotocol/servers"
         }
       ]
     },
     {
       "slide_index": 12,
       "page_number": 13,
-      "component": "image-half-bleed",
+      "component": "bullet-list",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_85",
+          "node_id": "title_5356",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2064,11 +2302,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Using It From Claude Code",
+          "text_content": "What a Copy Could Hold",
           "lines": [
             {
-              "text": "Using It From Claude Code",
-              "width_emu": 6845647,
+              "text": "What a Copy Could Hold",
+              "width_emu": 6222392,
               "height_emu": 640080,
               "overflows": false
             }
@@ -2080,31 +2318,19 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "image_86",
-          "node_type": "image",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 4261104
-          },
-          "text_content": "examples/assets/mcp/cc.png",
-          "slot_type": "image"
-        },
-        {
-          "node_id": "content_text_87",
+          "node_id": "bl_item_5357",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 609600
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "Hundreds of tools",
+          "text_content": "Password reset links",
           "lines": [
             {
-              "text": "Hundreds of tools",
-              "width_emu": 3384401,
+              "text": "Password reset links",
+              "width_emu": 3959572,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2115,19 +2341,19 @@
           "italic": false
         },
         {
-          "node_id": "content_text_88",
+          "node_id": "bl_item_5358",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 2383536,
-            "w": 5501640,
-            "h": 609600
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "Connect, then just ask",
+          "text_content": "Invoices",
           "lines": [
             {
-              "text": "Connect, then just ask",
-              "width_emu": 4272459,
+              "text": "Invoices",
+              "width_emu": 1584040,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2138,19 +2364,42 @@
           "italic": false
         },
         {
-          "node_id": "content_text_89",
+          "node_id": "bl_item_5359",
           "node_type": "text",
           "rect": {
             "x": 457200,
-            "y": 3267456,
-            "w": 5501640,
-            "h": 609600
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
           },
-          "text_content": "Documented by Anthropic",
+          "text_content": "Internal company mail",
           "lines": [
             {
-              "text": "Documented by Anthropic",
-              "width_emu": 4944616,
+              "text": "Internal company mail",
+              "width_emu": 4223965,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_5360",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Anything Claude wrote for you",
+          "lines": [
+            {
+              "text": "Anything Claude wrote for you",
+              "width_emu": 5784602,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2163,7 +2412,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_90",
+          "node_id": "chrome_pagenum_5361",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2186,32 +2435,6 @@
           "italic": false,
           "is_chrome": true,
           "align": "right"
-        },
-        {
-          "node_id": "chrome_source_91",
-          "node_type": "text",
-          "rect": {
-            "x": 10085130,
-            "y": 6035040,
-            "w": 826710,
-            "h": 365760
-          },
-          "text_content": "Source",
-          "lines": [
-            {
-              "text": "Source",
-              "width_emu": 643830,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "text_color": "#0072CE",
-          "href": "https://code.claude.com/docs/en/mcp"
         }
       ]
     },
@@ -2223,7 +2446,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_92",
+          "node_id": "title_5362",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2231,11 +2454,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Adding a Server",
+          "text_content": "Sources",
           "lines": [
             {
-              "text": "Adding a Server",
-              "width_emu": 4090615,
+              "text": "Sources",
+              "width_emu": 2104951,
               "height_emu": 640080,
               "overflows": false
             }
@@ -2247,19 +2470,19 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_93",
+          "node_id": "th_5363",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 4205997,
+            "w": 3846726,
             "h": 518159
           },
-          "text_content": "To do this",
+          "text_content": "Slide",
           "lines": [
             {
-              "text": "To do this",
-              "width_emu": 2030599,
+              "text": "Slide",
+              "width_emu": 1031850,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2272,19 +2495,19 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_94",
+          "node_id": "th_5364",
           "node_type": "text",
           "rect": {
-            "x": 5211837,
+            "x": 4852566,
             "y": 1499616,
-            "w": 3414293,
+            "w": 4926226,
             "h": 518159
           },
-          "text_content": "Use",
+          "text_content": "Taken from",
           "lines": [
             {
-              "text": "Use",
-              "width_emu": 792125,
+              "text": "Taken from",
+              "width_emu": 2295413,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2297,31 +2520,31 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "table_rule_95",
+          "node_id": "table_rule_5365",
           "node_type": "box",
           "rect": {
             "x": 457200,
             "y": 2072639,
-            "w": 8168930,
+            "w": 9321592,
             "h": 54864
           },
           "group_id": "table_head",
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_96",
+          "node_id": "td_5366",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2401823,
-            "w": 4205997,
+            "w": 3846726,
             "h": 633984
           },
-          "text_content": "Add a server",
+          "text_content": "The one-plug idea",
           "lines": [
             {
-              "text": "Add a server",
-              "width_emu": 2448061,
+              "text": "The one-plug idea",
+              "width_emu": 3480966,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2332,19 +2555,19 @@
           "italic": false
         },
         {
-          "node_id": "td_97",
+          "node_id": "td_5367",
           "node_type": "text",
           "rect": {
-            "x": 5211837,
+            "x": 4852566,
             "y": 2401823,
-            "w": 3414293,
+            "w": 4926226,
             "h": 633984
           },
-          "text_content": "claude mcp add",
+          "text_content": "modelcontextprotocol.io",
           "lines": [
             {
-              "text": "claude mcp add",
-              "width_emu": 3048533,
+              "text": "modelcontextprotocol.io",
+              "width_emu": 4560466,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2355,19 +2578,19 @@
           "italic": false
         },
         {
-          "node_id": "td_98",
+          "node_id": "td_5368",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3310127,
-            "w": 4205997,
+            "w": 3846726,
             "h": 633984
           },
-          "text_content": "See your servers",
+          "text_content": "Setting it up",
           "lines": [
             {
-              "text": "See your servers",
-              "width_emu": 3263801,
+              "text": "Setting it up",
+              "width_emu": 2280444,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2378,19 +2601,19 @@
           "italic": false
         },
         {
-          "node_id": "td_99",
+          "node_id": "td_5369",
           "node_type": "text",
           "rect": {
-            "x": 5211837,
+            "x": 4852566,
             "y": 3310127,
-            "w": 3414293,
+            "w": 4926226,
             "h": 633984
           },
-          "text_content": "claude mcp list",
+          "text_content": "code.claude.com/docs",
           "lines": [
             {
-              "text": "claude mcp list",
-              "width_emu": 2855826,
+              "text": "code.claude.com/docs",
+              "width_emu": 4296494,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2401,19 +2624,19 @@
           "italic": false
         },
         {
-          "node_id": "td_100",
+          "node_id": "td_5370",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 4218431,
-            "w": 4205997,
+            "w": 3846726,
             "h": 633984
           },
-          "text_content": "Remote, e.g. Notion",
+          "text_content": "The real case",
           "lines": [
             {
-              "text": "Remote, e.g. Notion",
-              "width_emu": 3840237,
+              "text": "The real case",
+              "width_emu": 2616101,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2424,19 +2647,19 @@
           "italic": false
         },
         {
-          "node_id": "td_101",
+          "node_id": "td_5371",
           "node_type": "text",
           "rect": {
-            "x": 5211837,
+            "x": 4852566,
             "y": 4218431,
-            "w": 3414293,
+            "w": 4926226,
             "h": 633984
           },
-          "text_content": "--transport http",
+          "text_content": "snyk.io/blog",
           "lines": [
             {
-              "text": "--transport http",
-              "width_emu": 2831790,
+              "text": "snyk.io/blog",
+              "width_emu": 2280233,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2447,19 +2670,19 @@
           "italic": false
         },
         {
-          "node_id": "td_102",
+          "node_id": "td_5372",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 5126735,
-            "w": 4205997,
+            "w": 3846726,
             "h": 633984
           },
-          "text_content": "Local, e.g. Airtable",
+          "text_content": "Maya's diagram",
           "lines": [
             {
-              "text": "Local, e.g. Airtable",
-              "width_emu": 3552651,
+              "text": "Maya's diagram",
+              "width_emu": 3034196,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2470,19 +2693,19 @@
           "italic": false
         },
         {
-          "node_id": "td_103",
+          "node_id": "td_5373",
           "node_type": "text",
           "rect": {
-            "x": 5211837,
+            "x": 4852566,
             "y": 5126735,
-            "w": 3414293,
+            "w": 4926226,
             "h": 633984
           },
-          "text_content": "--transport stdio",
+          "text_content": "Drawn for this deck",
           "lines": [
             {
-              "text": "--transport stdio",
-              "width_emu": 3023654,
+              "text": "Drawn for this deck",
+              "width_emu": 3695601,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2495,7 +2718,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_104",
+          "node_id": "chrome_pagenum_5374",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2529,7 +2752,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_105",
+          "node_id": "title_5375",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2537,11 +2760,11 @@
             "w": 11277600,
             "h": 768096
           },
-          "text_content": "Use It Safely",
+          "text_content": "How Maya Stays Safe",
           "lines": [
             {
-              "text": "Use It Safely",
-              "width_emu": 3172271,
+              "text": "How Maya Stays Safe",
+              "width_emu": 5454848,
               "height_emu": 640080,
               "overflows": false
             }
@@ -2553,7 +2776,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_106",
+          "node_id": "bl_item_5376",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2561,11 +2784,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "Only connect servers you trust",
+          "text_content": "Use the official publisher's tool",
           "lines": [
             {
-              "text": "Only connect servers you trust",
-              "width_emu": 5831619,
+              "text": "Use the official publisher's tool",
+              "width_emu": 5810957,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2576,7 +2799,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_107",
+          "node_id": "bl_item_5377",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2584,11 +2807,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "Fetched content can carry instructions",
+          "text_content": "Pin the version she checked",
           "lines": [
             {
-              "text": "Fetched content can carry instructions",
-              "width_emu": 7296113,
+              "text": "Pin the version she checked",
+              "width_emu": 5400663,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2599,7 +2822,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_108",
+          "node_id": "bl_item_5378",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2607,11 +2830,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "Approve tool calls you did not expect",
+          "text_content": "Approve each action Claude takes",
           "lines": [
             {
-              "text": "Approve tool calls you did not expect",
-              "width_emu": 7032985,
+              "text": "Approve each action Claude takes",
+              "width_emu": 6577149,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2622,7 +2845,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_109",
+          "node_id": "bl_item_5379",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2630,11 +2853,11 @@
             "w": 11277600,
             "h": 518159
           },
-          "text_content": "A local server runs with your access",
+          "text_content": "Give each tool only what it needs",
           "lines": [
             {
-              "text": "A local server runs with your access",
-              "width_emu": 6863469,
+              "text": "Give each tool only what it needs",
+              "width_emu": 6336792,
               "height_emu": 518160,
               "overflows": false
             }
@@ -2647,7 +2870,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_110",
+          "node_id": "chrome_pagenum_5380",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2659,988 +2882,6 @@
           "lines": [
             {
               "text": "15",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 15,
-      "page_number": 16,
-      "component": "two-panel-list",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_111",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "What MCP Is, and Is Not",
-          "lines": [
-            {
-              "text": "What MCP Is, and Is Not",
-              "width_emu": 6095033,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "lp_head_112",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 621791
-          },
-          "text_content": "It is",
-          "lines": [
-            {
-              "text": "It is",
-              "width_emu": 743843,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "lp_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "lp_rule_113",
-          "node_type": "box",
-          "rect": {
-            "x": 548640,
-            "y": 2176271,
-            "w": 1650492,
-            "h": 54864
-          },
-          "group_id": "lp_head",
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "rp_head_114",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 5501640,
-            "h": 621791
-          },
-          "text_content": "It is not",
-          "lines": [
-            {
-              "text": "It is not",
-              "width_emu": 1535125,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "rp_head",
-          "text_color": "#0A2240"
-        },
-        {
-          "node_id": "rp_rule_115",
-          "node_type": "box",
-          "rect": {
-            "x": 6324600,
-            "y": 2176271,
-            "w": 1650492,
-            "h": 54864
-          },
-          "group_id": "rp_head",
-          "fill_color": "#0A2240"
-        },
-        {
-          "node_id": "lp_item_116",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2395727,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "A protocol for context",
-          "lines": [
-            {
-              "text": "A protocol for context",
-              "width_emu": 4056348,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "lp_head"
-        },
-        {
-          "node_id": "lp_item_117",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3608831,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "Open source",
-          "lines": [
-            {
-              "text": "Open source",
-              "width_emu": 2472308,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "lp_head"
-        },
-        {
-          "node_id": "lp_item_118",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4821935,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "The same for every app",
-          "lines": [
-            {
-              "text": "The same for every app",
-              "width_emu": 4560044,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "lp_head"
-        },
-        {
-          "node_id": "rp_item_119",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 2395727,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "An AI model",
-          "lines": [
-            {
-              "text": "An AI model",
-              "width_emu": 2328304,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "rp_head"
-        },
-        {
-          "node_id": "rp_item_120",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 3608831,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "An app you install",
-          "lines": [
-            {
-              "text": "An app you install",
-              "width_emu": 3408648,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "rp_head"
-        },
-        {
-          "node_id": "rp_item_121",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 4821935,
-            "w": 5501640,
-            "h": 609600
-          },
-          "text_content": "A rule for using models",
-          "lines": [
-            {
-              "text": "A rule for using models",
-              "width_emu": 4392216,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "rp_head"
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_122",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "16",
-          "lines": [
-            {
-              "text": "16",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 16,
-      "page_number": 17,
-      "component": "numbered-steps",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_123",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "Your First Ten Minutes",
-          "lines": [
-            {
-              "text": "Your First Ten Minutes",
-              "width_emu": 5699671,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_num_124",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 776183,
-            "h": 640080
-          },
-          "text_content": "01",
-          "lines": [
-            {
-              "text": "01",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_0",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_head_125",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 1499616,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Pick a server you trust",
-          "lines": [
-            {
-              "text": "Pick a server you trust",
-              "width_emu": 5722069,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_0",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_body_126",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 2185416,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "Start from the reference list",
-          "lines": [
-            {
-              "text": "Start from the reference list",
-              "width_emu": 5207533,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "step_0"
-        },
-        {
-          "node_id": "step_num_127",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3011424,
-            "w": 776183,
-            "h": 640080
-          },
-          "text_content": "02",
-          "lines": [
-            {
-              "text": "02",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_1",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_head_128",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 3011424,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Add it to your host",
-          "lines": [
-            {
-              "text": "Add it to your host",
-              "width_emu": 4740697,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_1",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_body_129",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 3697224,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "In Claude Code, claude mcp add",
-          "lines": [
-            {
-              "text": "In Claude Code, claude mcp add",
-              "width_emu": 6289142,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "step_1"
-        },
-        {
-          "node_id": "step_num_130",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4523232,
-            "w": 776183,
-            "h": 640080
-          },
-          "text_content": "03",
-          "lines": [
-            {
-              "text": "03",
-              "width_emu": 593303,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_2",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_head_131",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 4523232,
-            "w": 10272817,
-            "h": 640080
-          },
-          "text_content": "Ask for something it does",
-          "lines": [
-            {
-              "text": "Ask for something it does",
-              "width_emu": 6549777,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "step_2",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "step_body_132",
-          "node_type": "text",
-          "rect": {
-            "x": 1461983,
-            "y": 5209032,
-            "w": 10272817,
-            "h": 551688
-          },
-          "text_content": "And approve the tool call",
-          "lines": [
-            {
-              "text": "And approve the tool call",
-              "width_emu": 4752963,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "step_2"
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_133",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "17",
-          "lines": [
-            {
-              "text": "17",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 17,
-      "page_number": 18,
-      "component": "table-slide",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "title_134",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 457200,
-            "w": 11277600,
-            "h": 768096
-          },
-          "text_content": "Sources, Captured 21 Oct 2026",
-          "lines": [
-            {
-              "text": "Sources, Captured 21 Oct 2026",
-              "width_emu": 7856190,
-              "height_emu": 640080,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 42.0,
-          "bold": true,
-          "italic": false,
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "th_135",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 1499616,
-            "w": 4390060,
-            "h": 518159
-          },
-          "text_content": "Slide",
-          "lines": [
-            {
-              "text": "Slide",
-              "width_emu": 1031850,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "th_136",
-          "node_type": "text",
-          "rect": {
-            "x": 5395900,
-            "y": 1499616,
-            "w": 4926226,
-            "h": 518159
-          },
-          "text_content": "Taken from",
-          "lines": [
-            {
-              "text": "Taken from",
-              "width_emu": 2295413,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "table_head",
-          "text_color": "#0072CE"
-        },
-        {
-          "node_id": "table_rule_137",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2072639,
-            "w": 9864926,
-            "h": 54864
-          },
-          "group_id": "table_head",
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "td_138",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2401823,
-            "w": 4390060,
-            "h": 452323
-          },
-          "text_content": "Analogy, architecture",
-          "lines": [
-            {
-              "text": "Analogy, architecture",
-              "width_emu": 4024300,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_139",
-          "node_type": "text",
-          "rect": {
-            "x": 5395900,
-            "y": 2401823,
-            "w": 4926226,
-            "h": 452323
-          },
-          "text_content": "modelcontextprotocol.io",
-          "lines": [
-            {
-              "text": "modelcontextprotocol.io",
-              "width_emu": 4560466,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_140",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3128466,
-            "w": 4390060,
-            "h": 452323
-          },
-          "text_content": "Server features",
-          "lines": [
-            {
-              "text": "Server features",
-              "width_emu": 2951969,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_141",
-          "node_type": "text",
-          "rect": {
-            "x": 5395900,
-            "y": 3128466,
-            "w": 4926226,
-            "h": 452323
-          },
-          "text_content": "modelcontextprotocol.io",
-          "lines": [
-            {
-              "text": "modelcontextprotocol.io",
-              "width_emu": 4560466,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_142",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 3855109,
-            "w": 4390060,
-            "h": 452323
-          },
-          "text_content": "Announcement",
-          "lines": [
-            {
-              "text": "Announcement",
-              "width_emu": 2904741,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_143",
-          "node_type": "text",
-          "rect": {
-            "x": 5395900,
-            "y": 3855109,
-            "w": 4926226,
-            "h": 452323
-          },
-          "text_content": "anthropic.com/news",
-          "lines": [
-            {
-              "text": "anthropic.com/news",
-              "width_emu": 3840026,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_144",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 4581752,
-            "w": 4390060,
-            "h": 452323
-          },
-          "text_content": "Reference servers",
-          "lines": [
-            {
-              "text": "Reference servers",
-              "width_emu": 3527772,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_145",
-          "node_type": "text",
-          "rect": {
-            "x": 5395900,
-            "y": 4581752,
-            "w": 4926226,
-            "h": 452323
-          },
-          "text_content": "github.com",
-          "lines": [
-            {
-              "text": "github.com",
-              "width_emu": 2112194,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_146",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 5308395,
-            "w": 4390060,
-            "h": 452323
-          },
-          "text_content": "Claude Code",
-          "lines": [
-            {
-              "text": "Claude Code",
-              "width_emu": 2520590,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        },
-        {
-          "node_id": "td_147",
-          "node_type": "text",
-          "rect": {
-            "x": 5395900,
-            "y": 5308395,
-            "w": 4926226,
-            "h": 452323
-          },
-          "text_content": "code.claude.com/docs",
-          "lines": [
-            {
-              "text": "code.claude.com/docs",
-              "width_emu": 4296494,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_148",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "18",
-          "lines": [
-            {
-              "text": "18",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 18,
-      "page_number": 19,
-      "component": "question",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "accent_bar_150",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2926080,
-            "w": 128016,
-            "h": 1005840
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "question_149",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 2926080,
-            "w": 10738104,
-            "h": 1005840
-          },
-          "text_content": "What would you connect?",
-          "lines": [
-            {
-              "text": "What would you connect?",
-              "width_emu": 9439796,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_151",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "19",
-          "lines": [
-            {
-              "text": "19",
               "width_emu": 226020,
               "height_emu": 243840,
               "overflows": false

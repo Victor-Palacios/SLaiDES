@@ -99,21 +99,27 @@ def test_bullet_list_items_flush_left_pure_typography():
     assert not [n for n in s.nodes if n.node_type != "text"]
 
 
-# ── FB-027: code is syntax-coloured like a modern IDE (VS Code Dark+) ────────────
+# ── FB-027 superseded by FB-118: code uses exactly two inks on its panel ─────────
 
 
 def test_code_runs_carry_ide_token_colours():
+    """FB-027 asked for full IDE colouring; FB-118 (at most three colours per slide,
+    counting the background) caps the code panel at one foreground plus one
+    highlight. Keywords, declarations and the prompt sigil take the highlight;
+    every other token is the foreground."""
     from slidekit.layout.engine import (
-        _CODE_COMMENT, _CODE_DECL, _CODE_FUNC, _CODE_STRING, _code_line_runs)
+        _CODE_COMMENT, _CODE_DECL, _CODE_FG, _CODE_HL, _CODE_STRING, _code_line_runs)
     runs = _code_line_runs('def main():')
-    assert ("def", _CODE_DECL) == runs[0]
-    assert ("main", _CODE_FUNC) in runs
+    assert ("def", _CODE_HL) == runs[0]
+    assert all(c == _CODE_FG for _, c in runs[1:])
     assert _code_line_runs("# hi") == [("# hi", _CODE_COMMENT)]
-    assert ('"Hello, world!"', _CODE_STRING) in _code_line_runs('print("Hello, world!")')
+    # Same-colour neighbours merge, so a line with no keyword is one foreground run.
+    assert _code_line_runs('print("Hello, world!")') == [('print("Hello, world!")', _CODE_STRING)]
 
     _, s = _slide("21_code")
-    colours = {n.text_color for n in s.nodes if n.node_type == "text"}
-    assert {_CODE_COMMENT, _CODE_DECL, _CODE_FUNC, _CODE_STRING} <= colours
+    colours = {n.text_color for n in s.nodes if n.node_type == "text" and not n.is_chrome}
+    assert {_CODE_FG, _CODE_HL} <= colours
+    assert _CODE_DECL == _CODE_HL
 
 
 def test_code_runs_tile_each_line_exactly():
@@ -345,12 +351,13 @@ def test_rules_hug_their_text():
 def test_nested_circles_nest_and_share_a_bottom_tangent():
     """Operator-requested layout (2026-07-05, from their own job-search slide):
     circles nest strictly (each inside the previous), all tangent at one bottom
-    point, fills cycling muted → accent → primary, white text per stage."""
+    point, fills alternating ink → accent (FB-118: at most three colours per slide),
+    white text per stage."""
     deck, s = _slide("43_nested_circles")
     circles = [n for n in s.nodes if n.node_type == "ellipse"]
     assert len(circles) == 3
     pal = deck.theme.palette
-    assert [c.fill_color for c in circles] == [pal.muted, pal.accent, pal.primary]
+    assert [c.fill_color for c in circles] == [pal.text, pal.accent, pal.text]
     bottoms = {c.rect.bottom() for c in circles}
     assert len(bottoms) == 1  # shared bottom tangent
     centres = {c.rect.x + c.rect.w // 2 for c in circles}

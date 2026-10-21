@@ -1,27 +1,24 @@
-# What Is MCP? — an entry-level tour of the Model Context Protocol.
+# MCP, as One Story — an entry-level deck with no protocol jargon.
 #
-# Sources are Anthropic's and the protocol's own. Screenshots captured on
-# 2026-10-21 with headless Chromium, cropped to the 1290x1000 image slot:
-#   assets/mcp/intro.png ......... https://modelcontextprotocol.io/docs/getting-started/intro
-#   assets/mcp/announce.png ...... https://www.anthropic.com/news/model-context-protocol
-#   assets/mcp/server.png ........ https://modelcontextprotocol.io/docs/learn/server-concepts
-#   assets/mcp/servers.png ....... https://github.com/modelcontextprotocol/servers
-#   assets/mcp/cc.png ............ https://code.claude.com/docs/en/mcp
-# One diagram is redrawn rather than captured:
-#   assets/mcp/architecture.png .. simplified from the Mermaid diagram on
-#                                  https://modelcontextprotocol.io/docs/learn/architecture
-#                                  (source: assets/mcp/source/architecture.mmd)
-# Protocol facts follow the spec version current on that date, 2026-07-28.
+# Built as a single use-case story (Maya, a fictional example student) plus one
+# real incident. Sources:
+#   assets/mcp/intro.png .......... https://modelcontextprotocol.io/docs/getting-started/intro
+#                                   (screenshot, captured 2026-10-21)
+#   assets/mcp/cc.png ............. https://code.claude.com/docs/en/mcp
+#                                   (screenshot, captured 2026-10-21)
+#   assets/mcp/postmark-case.png .. https://snyk.io/blog/malicious-mcp-server-on-npm-postmark-mcp-harvests-emails/
+#                                   (screenshot, captured 2026-10-21; the facts used
+#                                   are the ones Snyk, The Hacker News and Dark Reading
+#                                   agree on — contested download counts are left out)
+#   assets/mcp/story.png .......... drawn for this deck with Mermaid
+#                                   (source: assets/mcp/source/story.mmd), after
+#                                   https://modelcontextprotocol.io/docs/learn/architecture
 #
-# Three-colour rule: `primary` is collapsed onto `accent`, and the redrawn
-# diagram uses only white, blue and ink. Screenshots are shown as captured.
+# Operator rules applied: 15 slides; a story, not protocol vocabulary; no history
+# slide; the deck ends on its last real content, not a question; three colours.
 version: 1
 theme:
   font: arial
-  palette:
-    primary: "#0072CE"
-    accent: "#0072CE"
-    muted: "#0A2240"   # grey would be a fourth colour; collapse onto ink
 page_numbers:
   enabled: true
   start_at: 1
@@ -29,28 +26,44 @@ page_numbers:
 
 slides:
   - component: title-slide
-    title: "What Is MCP?"
-    subtitle: "The Model Context Protocol, from the source"
+    title: "MCP, as One Story"
+    subtitle: "How Claude reaches your tools, and the risks"
     notes: >-
-      This is an entry-level tour of MCP, the Model Context Protocol, using the
-      protocol's own documentation and Anthropic's announcement as sources.
+      This is MCP told as one story: how Claude reaches the tools you already
+      use, and what happens when one of those tools is not what it claims.
 
-  - component: question
-    question: "What can an AI app reach?"
+  - component: icon-text-rows
+    title: "Meet Maya, Our Example"
+    rows:
+      - icon: "users"
+        heading: "Who she is"
+        body: "A student building a class app"
+      - icon: "file"
+        heading: "Her data"
+        body: "Kept in Supabase"
+      - icon: "check"
+        heading: "Her code"
+        body: "Kept on GitHub"
     notes: >-
-      On its own, an AI app only knows what you type into it. The question MCP
-      answers is how it reaches everything else — your files, your tools, your
-      data.
+      Meet Maya, an example student. She is building an app for a class, her data
+      lives in Supabase, and her code lives on GitHub.
 
-  - component: definition
-    term: "MCP"
-    definition: "An open standard for connecting AI apps to systems"
+  - component: numbered-steps
+    title: "Her Afternoon, Without MCP"
+    steps:
+      - title: "Copy the numbers"
+        body: "Open Supabase, copy this week's sign-ups"
+      - title: "Paste them into Claude"
+        body: "Ask what changed since last week"
+      - title: "Copy the answer to GitHub"
+        body: "Paste it into a new issue by hand"
     notes: >-
-      MCP is an open standard for connecting AI applications to the external
-      systems where your information and tools actually live.
+      Without MCP, Maya's afternoon is copying and pasting. She copies this
+      week's sign-ups out of Supabase, pastes them into Claude to ask what
+      changed, then copies the answer into a GitHub issue by hand.
 
   - component: image-half-bleed
-    title: "The Official Analogy"
+    title: "The Idea: One Plug"
     image_side: right
     image:
       type: image
@@ -61,156 +74,63 @@ slides:
       - type: text
         content: "A USB-C port for AI"
       - type: text
-        content: "One plug, many devices"
+        content: "One plug, many tools"
       - type: text
-        content: "One protocol, many tools"
+        content: "From the official site"
     source: "https://modelcontextprotocol.io/docs/getting-started/intro"
     notes: >-
-      The protocol's own site puts it this way: MCP is like a USB-C port for AI
-      applications. One standard plug connects many devices, and one protocol
-      connects an AI app to many tools.
-
-  - component: image-half-bleed
-    title: "Where It Came From"
-    image_side: right
-    image:
-      type: image
-      path: "examples/assets/mcp/announce.png"
-      fit: contain
-      alt: "Screenshot of Anthropic's announcement, Introducing the Model Context Protocol, captured 2026-10-21"
-    content:
-      - type: text
-        content: "Anthropic, November 2024"
-      - type: text
-        content: "Open source from day one"
-      - type: text
-        content: "Replaced one-off links"
-    source: "https://www.anthropic.com/news/model-context-protocol"
-    notes: >-
-      Anthropic open-sourced MCP in November 2024. Before it, every data source
-      needed its own custom connection, and the announcement describes MCP as
-      replacing those fragmented links with a single protocol.
-
-  - component: icon-text-rows
-    title: "Three Participants"
-    rows:
-      - icon: "users"
-        heading: "Host"
-        body: "The AI app, such as Claude Code"
-      - icon: "loop"
-        heading: "Client"
-        body: "One connection to one server"
-      - icon: "file"
-        heading: "Server"
-        body: "A program that offers context"
-    notes: >-
-      There are three participants. The host is the AI application, such as
-      Claude Code. A client is one connection to one server. And a server is a
-      program that offers context to the app.
-
-  - component: image-half-bleed
-    title: "How They Connect"
-    image_side: right
-    image:
-      type: image
-      path: "examples/assets/mcp/architecture.png"
-      fit: contain
-      alt: "Diagram of an MCP host with two clients connected to a local and a remote server, redrawn from modelcontextprotocol.io"
-    content:
-      - type: text
-        content: "One client per server"
-      - type: text
-        content: "Local servers use stdio"
-      - type: text
-        content: "Remote servers use HTTP"
-    source: "https://modelcontextprotocol.io/docs/learn/architecture"
-    notes: >-
-      The host creates one client for each server it connects to. A server on
-      your own machine talks over standard input and output, called stdio, and a
-      remote server talks over HTTP.
-
-  - component: image-half-bleed
-    title: "What a Server Offers"
-    image_side: right
-    image:
-      type: image
-      path: "examples/assets/mcp/server.png"
-      fit: contain
-      alt: "Screenshot of modelcontextprotocol.io, Understanding MCP servers, captured 2026-10-21"
-    content:
-      - type: text
-        content: "Tools: actions to take"
-      - type: text
-        content: "Resources: data to read"
-      - type: text
-        content: "Prompts: ready templates"
-    source: "https://modelcontextprotocol.io/docs/learn/server-concepts"
-    notes: >-
-      A server offers three kinds of thing: tools, which are actions the AI can
-      take; resources, which are data it can read; and prompts, which are
-      ready-made templates for common tasks.
-
-  - component: table-slide
-    title: "Who Controls Each One"
-    headers: ["Feature", "Controlled by", "Example"]
-    rows:
-      - ["Tools", "The model", "Search flights"]
-      - ["Resources", "The application", "Read a calendar"]
-      - ["Prompts", "The user", "Plan a vacation"]
-    notes: >-
-      Each one has a different owner. The model decides when to call a tool, the
-      application decides which resources to include, and the user chooses a
-      prompt — those are the documentation's own examples.
+      MCP's own site explains it as a USB-C port for AI: one standard plug, so
+      an AI app can connect to many different tools the same way.
 
   - component: numbered-steps
-    title: "One Tool Call, Step by Step"
+    title: "Her Afternoon, With MCP"
     steps:
-      - title: "Discover"
-        body: "The app asks the server for its tools"
-      - title: "Decide"
-        body: "The model picks one for the task"
-      - title: "Call"
-        body: "The server runs it and sends back a result"
+      - title: "Ask one question"
+        body: "Did sign-ups drop this week?"
+      - title: "Claude checks Supabase"
+        body: "It reads the table itself"
+      - title: "Claude files the issue"
+        body: "On GitHub, once she approves it"
     notes: >-
-      A tool call happens in three steps. The app asks the server which tools it
-      has, the model picks one that fits the task, and the server runs it and
-      sends the result back into the conversation.
-
-  - component: bullet-list
-    title: "What Travels Between Them"
-    items:
-      - "JSON-RPC 2.0 messages"
-      - "Each request carries the version"
-      - "Servers say what they support"
-      - "Same format, local or remote"
-    notes: >-
-      Under the hood the messages are JSON-RPC 2.0. Every request carries the
-      protocol version, servers announce what they support, and the format is
-      identical whether the server is local or remote.
+      With MCP, Maya asks one question: did sign-ups drop this week? Claude reads
+      the table in Supabase itself, and files the GitHub issue once she approves
+      it.
 
   - component: image-half-bleed
-    title: "Ready-Made Servers"
+    title: "What Is Actually Connected"
     image_side: right
     image:
       type: image
-      path: "examples/assets/mcp/servers.png"
+      path: "examples/assets/mcp/story.png"
       fit: contain
-      alt: "Screenshot of github.com/modelcontextprotocol/servers, captured 2026-10-21"
+      alt: "Diagram: Claude Code on Maya's laptop with one MCP connection to Supabase and one to GitHub"
     content:
       - type: text
-        content: "Open-source examples"
+        content: "One connection per tool"
       - type: text
-        content: "91.4k stars on GitHub"
+        content: "Each is a small program"
       - type: text
-        content: "Start from one of these"
-    source: "https://github.com/modelcontextprotocol/servers"
+        content: "Someone wrote each one"
+    source: "https://modelcontextprotocol.io/docs/learn/architecture"
     notes: >-
-      You rarely start from nothing. The protocol's reference servers are open
-      source on GitHub, with ninety-one thousand stars on the day these
-      screenshots were taken.
+      Behind the scenes, Claude Code has one connection per tool. Each connection
+      is a small program that someone wrote — and that detail matters later in
+      the story.
+
+  - component: table-slide
+    title: "What a Connection Can Offer"
+    headers: ["It can offer", "For Maya"]
+    rows:
+      - ["Actions to take", "Open a GitHub issue"]
+      - ["Things to read", "This week's sign-ups"]
+      - ["Ready-made requests", "Summarise the week"]
+    notes: >-
+      A connection can offer three kinds of thing: actions Claude can take, like
+      opening an issue; things it can read, like this week's sign-ups; and
+      ready-made requests, like summarising the week.
 
   - component: image-half-bleed
-    title: "Using It From Claude Code"
+    title: "Setting It Up"
     image_side: right
     image:
       type: image
@@ -219,92 +139,101 @@ slides:
       alt: "Screenshot of the Claude Code documentation page on MCP, captured 2026-10-21"
     content:
       - type: text
-        content: "Hundreds of tools"
-      - type: text
-        content: "Connect, then just ask"
+        content: "One command per tool"
       - type: text
         content: "Documented by Anthropic"
+      - type: text
+        content: "Then Maya just asks"
     source: "https://code.claude.com/docs/en/mcp"
     notes: >-
-      Claude Code is one host you can try today. Its documentation says it can
-      connect to hundreds of external tools this way, and once a server is
-      connected you simply ask Claude to use it.
-
-  - component: table-slide
-    title: "Adding a Server"
-    headers: ["To do this", "Use"]
-    rows:
-      - ["Add a server", "claude mcp add"]
-      - ["See your servers", "claude mcp list"]
-      - ["Remote, e.g. Notion", "--transport http"]
-      - ["Local, e.g. Airtable", "--transport stdio"]
-    notes: >-
-      Two commands do most of the work: claude mcp add to connect a server and
-      claude mcp list to see what you have. A remote server such as Notion uses
-      the HTTP transport, and a local one such as Airtable uses stdio.
-
-  - component: bullet-list
-    title: "Use It Safely"
-    items:
-      - "Only connect servers you trust"
-      - "Fetched content can carry instructions"
-      - "Approve tool calls you did not expect"
-      - "A local server runs with your access"
-    notes: >-
-      Anthropic's own advice is to verify you trust each server before you
-      connect it, because content a server fetches can carry hidden instructions.
-      Approve only the tool calls you expect, and remember a local server runs
-      with your access.
-
-  - component: two-panel-list
-    title: "What MCP Is, and Is Not"
-    left:
-      title: "It is"
-      items:
-        - "A protocol for context"
-        - "Open source"
-        - "The same for every app"
-    right:
-      title: "It is not"
-      items:
-        - "An AI model"
-        - "An app you install"
-        - "A rule for using models"
-    accent_side: "left"
-    notes: >-
-      MCP is a protocol for sharing context, it is open source, and it works the
-      same for every app. It is not a model, not an app you install, and it says
-      nothing about how an app should use its model.
-
-  - component: numbered-steps
-    title: "Your First Ten Minutes"
-    steps:
-      - title: "Pick a server you trust"
-        body: "Start from the reference list"
-      - title: "Add it to your host"
-        body: "In Claude Code, claude mcp add"
-      - title: "Ask for something it does"
-        body: "And approve the tool call"
-    notes: >-
-      To try it: pick a server you trust from the reference list, add it to your
-      host — in Claude Code that is claude mcp add — then ask for something only
-      that server can do, and approve the call.
-
-  - component: table-slide
-    title: "Sources, Captured 21 Oct 2026"
-    headers: ["Slide", "Taken from"]
-    rows:
-      - ["Analogy, architecture", "modelcontextprotocol.io"]
-      - ["Server features", "modelcontextprotocol.io"]
-      - ["Announcement", "anthropic.com/news"]
-      - ["Reference servers", "github.com"]
-      - ["Claude Code", "code.claude.com/docs"]
-    notes: >-
-      Every screenshot was captured on the twenty-first of October 2026 from the
-      pages listed here, the architecture diagram is redrawn from the protocol's
-      own, and each slide's Source link opens the exact page.
+      Setting it up is one command per tool, documented by Anthropic. After that,
+      Maya simply asks for what she wants.
 
   - component: question
-    question: "What would you connect?"
+    question: "What if the program lies?"
     notes: >-
-      So, the question for your own work: what would you connect first?
+      Every connection is a program someone else wrote. So here is the question
+      the rest of this deck answers: what if that program lies?
+
+  - component: image-half-bleed
+    title: "This Really Happened"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/mcp/postmark-case.png"
+      fit: contain
+      alt: "Screenshot of Snyk's report, Malicious MCP Server on npm postmark-mcp Harvests Emails, captured 2026-10-21"
+    content:
+      - type: text
+        content: "A fake email tool"
+      - type: text
+        content: "It worked as promised"
+      - type: text
+        content: "Then one line changed"
+    source: "https://snyk.io/blog/malicious-mcp-server-on-npm-postmark-mcp-harvests-emails/"
+    notes: >-
+      This really happened in September 2025. A connection for sending email,
+      called postmark-mcp, worked exactly as promised — until one line of it
+      changed.
+
+  - component: numbered-steps
+    title: "How the Trap Worked"
+    steps:
+      - title: "Copy a real tool"
+        body: "The genuine one, from the email company"
+      - title: "Earn trust"
+        body: "Fifteen honest versions in a row"
+      - title: "Add one hidden line"
+        body: "In version 1.0.16"
+    notes: >-
+      The trap took three moves. Copy the genuine tool from the email company.
+      Publish fifteen honest versions so people trust it. Then add one hidden
+      line in version 1.0.16.
+
+  - component: this-vs-that
+    title: "What the Hidden Line Did"
+    left:
+      value: "Sent"
+      label: "What the user saw"
+    right:
+      value: "Copied"
+      label: "A copy to a stranger"
+    notes: >-
+      The user saw an email sent, exactly as asked. What actually happened is
+      that a secret copy of every email went to a stranger.
+
+  - component: bullet-list
+    title: "What a Copy Could Hold"
+    items:
+      - "Password reset links"
+      - "Invoices"
+      - "Internal company mail"
+      - "Anything Claude wrote for you"
+    notes: >-
+      Those copies could hold password reset links, invoices, internal company
+      mail — anything the AI had been asked to send.
+
+  - component: table-slide
+    title: "Sources"
+    headers: ["Slide", "Taken from"]
+    rows:
+      - ["The one-plug idea", "modelcontextprotocol.io"]
+      - ["Setting it up", "code.claude.com/docs"]
+      - ["The real case", "snyk.io/blog"]
+      - ["Maya's diagram", "Drawn for this deck"]
+    notes: >-
+      The screenshots were captured on the twenty-first of October 2026, the
+      real case comes from Snyk's report, and Maya is an example we made up to
+      tell the story.
+
+  - component: bullet-list
+    title: "How Maya Stays Safe"
+    items:
+      - "Use the official publisher's tool"
+      - "Pin the version she checked"
+      - "Approve each action Claude takes"
+      - "Give each tool only what it needs"
+    notes: >-
+      So Maya uses the official publisher's tool, pins the version she checked
+      so a silent update cannot change it, approves each action Claude takes, and
+      gives each tool only the access it needs.

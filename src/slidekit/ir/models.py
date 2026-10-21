@@ -35,13 +35,20 @@ HexColor = Annotated[str, AfterValidator(_validate_hex)]
 
 
 class Palette(BaseModel):
-    """Theme color roles. Slides reference these roles, not raw hex."""
+    """Theme color roles. Slides reference these roles, not raw hex.
 
-    primary: HexColor = "#123A6B"
+    The defaults resolve to exactly three colours — white, one blue, one ink — per
+    the operator's three-colour rule (enforced as E_COLOR_COUNT): `primary` is the
+    accent blue and `muted` is the ink, so no default slide can paint a navy or a
+    grey as a fourth colour. The roles stay distinct names so a deck may still map
+    them elsewhere, and the linter holds any such deck to three colours.
+    """
+
+    primary: HexColor = "#0072CE"
     surface: HexColor = "#FFFFFF"
     accent: HexColor = "#0072CE"
     text: HexColor = "#0A2240"
-    muted: HexColor = "#5B6B82"
+    muted: HexColor = "#0A2240"
 
 
 class TypeScale(BaseModel):
@@ -246,16 +253,10 @@ class ImageHalfBleedSlide(_SlideBase):
     content: list[ContentSlot] = Field(min_length=1)
 
 
-class Card(BaseModel):
-    icon: Optional[str] = None
-    title: str
-    body: str
-
-
-class CardGridSlide(_SlideBase):
-    component: Literal["card-grid"]
-    title: Optional[str] = None
-    cards: list[Card] = Field(min_length=1)
+# CardGridSlide (and its Card) was retired 2026-10-21 per operator request (FB-117:
+# "I don't like this format - remove it from the slaides possible choices
+# permanently"). Peer items with a title and a short body go in a table-slide, or
+# icon-text-rows for three or fewer.
 
 
 # ── Phase 9: openers & emphasis (catalog #2–9) ────────────────────────────────
@@ -522,7 +523,6 @@ Slide = Annotated[
         ComparisonColumnsSlide,
         TimelineSlide,
         ImageHalfBleedSlide,
-        CardGridSlide,
         SectionDividerSlide,
         AgendaSlide,
         BigNumberSlide,

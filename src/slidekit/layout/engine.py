@@ -21,7 +21,6 @@ from slidekit.ir.models import (
     TwoPanelListSlide,
     BigNumberSlide,
     BulletListSlide,
-    CardGridSlide,
     ChartWithInsightSlide,
     CodeSlide,
     ComparisonColumnsSlide,
@@ -194,8 +193,6 @@ def _resolve_slide(
         nodes = _layout_timeline(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     elif comp == "image-half-bleed":
         nodes = _layout_image_half_bleed(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
-    elif comp == "card-grid":
-        nodes = _layout_card_grid(slide, cx, cy, cw, ch_with_pn, font, ts, palette)
     # Emphasis-stack hero layouts center a short text block: center it on the FULL content
     # height (the optical canvas midline), NOT the page-number-reduced height — otherwise
     # the block sits ~25px high (top-heavy, hurting balance). These blocks are short and
@@ -318,6 +315,14 @@ def _resolve_slide(
         background=_COMPONENT_BACKGROUNDS.get(comp),
         notes=getattr(slide, "notes", None),
     )
+
+
+def _underline_w(text: str, font: str, size_pt: float, max_w: int) -> int:
+    """Width of an underline rule beneath bold heading ``text``: exactly the text's
+    measured width, so the rule starts at the first glyph and ends at the last
+    (operator 2026-10-21: "the underline doesn't match up with the text it
+    underlines"). Capped at the column so a long heading cannot overrun it."""
+    return max(1, min(max_w, measure_text(text, font, size_pt, bold=True)))
 
 
 # Operator style rule (2026-07-05): text and its underline rule HUG — a slim 0.06"
@@ -574,52 +579,8 @@ def _layout_image_half_bleed(slide: ImageHalfBleedSlide, cx, cy, cw, ch, font, t
     return nodes
 
 
-def _layout_card_grid(slide: CardGridSlide, cx, cy, cw, ch, font, ts, palette) -> list[ResolvedNode]:
-    nodes: list[ResolvedNode] = []
-    gap = GAP_MIN_EMU
-    y = cy
-
-    if slide.title:
-        title_h = int(ts.header * LINE_SPACING_SINGLE * EMU_PER_PT * 1.2)
-        nodes.append(_make_text_node(_nid("title"), slide.title, font, ts.header,
-                                     bold=True, italic=False, rect=Rect(cx, y, cw, title_h),
-                                     color=_hl(palette, palette.primary)))
-        y += title_h + gap
-
-    n_cards = len(slide.cards)
-    cols = min(4, n_cards) if n_cards > 0 else 1
-    rows = (n_cards + cols - 1) // cols
-    card_w = (cw - gap * (cols - 1)) // cols
-    available_h = cy + ch - y
-    card_h = (available_h - gap * (rows - 1)) // rows
-
-    inner_gap = int(0.15 * EMU_PER_INCH)
-
-    for i, card in enumerate(slide.cards):
-        row_i = i // cols
-        col_i = i % cols
-        card_x = cx + col_i * (card_w + gap)
-        card_y = y + row_i * (card_h + gap)
-        gid = f"card_{i}"
-
-        # Operator feedback (issue #12): drop the filled accent "bubble" disc; cards are
-        # title + body starting at the top of the cell.
-        inner_y = card_y
-
-        title_h = int(ts.body * LINE_SPACING_SINGLE * EMU_PER_PT)
-        body_h = card_h - (inner_y - card_y) - title_h - inner_gap
-        nodes.append(_make_text_node(_nid("card_title"), card.title, font, ts.body,
-                                     bold=True, italic=False,
-                                     rect=Rect(card_x, inner_y, card_w, title_h),
-                                     group_id=gid))
-        nodes.append(_make_text_node(_nid("card_body"), card.body, font, ts.body,
-                                     bold=False, italic=False,
-                                     rect=Rect(card_x, inner_y + title_h + inner_gap,
-                                               card_w, max(body_h, title_h)),
-                                     group_id=gid))
-
-    return nodes
-
+# card-grid was retired 2026-10-21 per operator request (FB-117) — table-slide
+# carries peer items with a title and body; icon-text-rows covers three or fewer.
 
 # ── Phase 9: openers & emphasis (catalog #2–9) ────────────────────────────────
 #
@@ -889,18 +850,25 @@ def _layout_bullet_list(slide: BulletListSlide, cx, cy, cw, ch, font, ts, palett
 # Background: the operator preferred the original deep-teal panel over VS Code's
 # neutral #1E1E1E (FB-031: "background color as it was in the previous version,
 # but the colors look good for the text") — token colours stay Dark+.
-_CODE_BG = "#0C1A1C"       # deep-teal terminal panel (pre-FB-027 background)
-_CODE_FG = "#D4D4D4"       # default foreground / punctuation
-_CODE_COMMENT = "#6A9955"  # comments
-_CODE_KEYWORD = "#C586C0"  # control-flow keywords (if/for/return/...)
-_CODE_DECL = "#569CD6"     # declaration keywords + constants (def/class/import/None/...)
-_CODE_STRING = "#CE9178"   # string literals
-_CODE_NUMBER = "#B5CEA8"   # numeric literals
-_CODE_FUNC = "#DCDCAA"     # function names at def sites and call sites
-_CODE_PROMPT = "#4EC9B0"   # the "$" sigil on terminal lines
-_CODE_TITLE = "#D4D4D4"    # filename tab — the light foreground (FB-077: the old dim
-                           # #858585 grey was hard to read on the near-black panel)
-_CODE_DOTS = ("#FF5F56", "#FFBD2E", "#27C93F")  # macOS window traffic lights
+#
+# Three-colour rule (operator 2026-09-05, enforced as E_COLOR_COUNT 2026-10-21): the
+# slide may paint only three colours, so the code theme is the panel, ONE foreground
+# and ONE highlight. That supersedes Dark+'s seven token colours (FB-027) and the
+# red/amber/green window dots: keywords and the "$" prompt carry the blue; comments,
+# strings, numbers and names share the white foreground; the dots are drawn in it too.
+# White replaces the old light grey #D4D4D4 — the operator ruled out grey text.
+_CODE_BG = "#0C1A1C"       # deep-teal terminal panel (kept per FB-031)
+_CODE_FG = "#FFFFFF"       # the one foreground: names, strings, numbers, comments
+_CODE_HL = "#569CD6"       # the one highlight: keywords, declarations, the "$" sigil
+_CODE_COMMENT = _CODE_FG
+_CODE_KEYWORD = _CODE_HL
+_CODE_DECL = _CODE_HL
+_CODE_STRING = _CODE_FG
+_CODE_NUMBER = _CODE_FG
+_CODE_FUNC = _CODE_FG
+_CODE_PROMPT = _CODE_HL
+_CODE_TITLE = _CODE_FG     # filename tab (FB-077: legible on the panel)
+_CODE_DOTS = (_CODE_FG, _CODE_FG, _CODE_FG)  # window dots, in the foreground
 _CODE_FONT = "courier new"  # (retained; code now uses the deck font per FB-110)
 
 _PY_CONTROL = frozenset("if elif else for while try except finally with return yield "
@@ -1032,13 +1000,12 @@ def _layout_code(slide: CodeSlide, cx, cy, cw, ch, font, ts, palette):
 # a measured text node so the linter still proves every line fits; the card box
 # and all line nodes share one group_id so the text-over-panel overlaps and the
 # tight line stacking are lint-exempt (same discipline as the code/card layouts).
-_TREE_BG = "#0C1A1C"      # deep-teal near-black panel (matches the code layout)
-_TREE_FILE = "#D4D4D4"    # file names / default foreground
-_TREE_GUIDE = "#55707A"   # dimmed tree connectors
-# FB-065: directories use the conventional editor "folder blue" (the same blue the code
-# layout uses for declarations) rather than the deck accent — the familiar file-explorer
-# look for a folder tree, and legible on the dark panel regardless of the deck's accent.
-_TREE_DIR = "#569CD6"     # directory names (VS Code-style folder blue)
+# Three-colour rule (enforced as E_COLOR_COUNT 2026-10-21): the tree sits on the
+# deck's own surface under an accent title, so it may only reuse those colours. The
+# panel is the deck ink, file names are the surface colour, and directories and
+# connectors are the accent. That supersedes FB-065's fixed editor "folder blue" and
+# the dimmed grey connectors, each of which was a fourth colour. Ink and surface are
+# the deck's contrasting pair by design, so this stays legible on dark themes too.
 _TREE_FONT = "courier new"
 
 
@@ -1091,7 +1058,7 @@ def _layout_file_tree(slide: FileTreeSlide, cx, cy, cw, ch, font, ts, palette):
     card_h = cy + ch - card_y
     nodes.append(ResolvedNode(_nid("tree_card"), "box",
                               Rect(cx, card_y, cw, card_h),
-                              fill_color=_TREE_BG,
+                              fill_color=palette.text,
                               corner_radius=int(0.14 * EMU_PER_INCH),
                               group_id=gid))
 
@@ -1132,13 +1099,13 @@ def _layout_file_tree(slide: FileTreeSlide, cx, cy, cw, ch, font, ts, palette):
                 _nid("tree_pfx"), prefix, _TREE_FONT, size, bold=False, italic=False,
                 rect=Rect(inner_x, ty, pfx_w + INSET_LEFT_EMU + INSET_RIGHT_EMU, line_h),
                 lines=[Line(text=prefix, width_emu=pfx_w, height_emu=line_h, overflows=False)],
-                is_caption=is_caption, color=_TREE_GUIDE, group_id=gid))
+                is_caption=is_caption, color=palette.accent, group_id=gid))
             name_x = inner_x + pfx_w
         else:
             name_x = inner_x
         name_w = measure_text(name, _TREE_FONT, size, bold=is_dir)
         overflows = (name_x - inner_x) + name_w > inner_w
-        color = _TREE_DIR if is_dir else _TREE_FILE
+        color = palette.accent if is_dir else palette.surface
         nodes.append(_make_text_node(
             _nid("tree_name"), name, _TREE_FONT, size, bold=is_dir, italic=False,
             rect=Rect(name_x, ty, name_w + INSET_LEFT_EMU + INSET_RIGHT_EMU, line_h),
@@ -1268,12 +1235,14 @@ def _two_panel_list(title, left_head, left_items, left_color,
         # without bullet markers (FB-026) and is the panel's non-text mark. It rides
         # INSIDE the existing heading->items gap (panel-wide group_id makes the tight
         # spacing intentional), so the items keep every EMU of space they had.
-        # FB-055: the rule's left edge lines up with the heading's first GLYPH, not the
-        # box edge — text carries a left inset, boxes don't, so shift the rule right by
-        # that inset. Now the grey/gold word sits flush above its coloured bar.
+        # FB-055, revisited 2026-10-21: the rule underlines the heading WORD — its
+        # left edge is the first glyph and it spans exactly the heading's measured
+        # width. Every emitter now draws glyphs at rect.x with no left inset, so the
+        # old "+ INSET_LEFT_EMU" shift left the rule 0.1" right of the text, and the
+        # fixed 30%-of-column width matched no heading at all.
         nodes.append(ResolvedNode(_nid(f"{prefix}_rule"), "box",
-                                  Rect(px + INSET_LEFT_EMU, y + head_h + inner,
-                                       max(1, int(col_w * 0.3)), rule_h),
+                                  Rect(px, y + head_h + inner,
+                                       _underline_w(head, font, ts.body, col_w), rule_h),
                                   fill_color=color, group_id=gid))
     items_y = y + head_h + gap
     items_h = cy + ch - items_y
@@ -1649,7 +1618,8 @@ def _layout_process_steps(slide: ProcessStepsSlide, cx, cy, cw, ch, font, ts, pa
                                      color=palette.primary, group_id=gid))
         nodes.append(ResolvedNode(_nid("ps_rule"), "box",
                                   Rect(sx, y + num_h + _RULE_GAP_EMU,
-                                       max(1, int(col_w * 0.3)), rule_h),
+                                       _underline_w(f"{i + 1:02d}", font, ts.header, col_w),
+                                       rule_h),
                                   fill_color=palette.primary, group_id=gid))
         ly = y + num_h + gap
         nodes.append(_make_text_node(_nid("ps_label"), step.label, font, ts.body, bold=True,
@@ -1724,8 +1694,8 @@ def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, 
     job-search slide): each stage is a circle INSIDE the previous one, all tangent
     at the same bottom point, so every stage reads as a subset of the stage before
     (>700 applications ⊃ 6 interviews ⊃ 1.5 offers). Circles are measured ellipse
-    nodes; diameters step down evenly (D·(n-i)/n); fills cycle muted → accent →
-    primary; each stage's value+label sits centred in the visible band between its
+    nodes; diameters step down evenly (D·(n-i)/n); fills alternate ink and
+    accent; each stage's value+label sits centred in the visible band between its
     circle's top and the next circle's top (the innermost gets its whole circle),
     with the text box width set to the circle's chord at the band — so the linter
     can still prove every line fits. One shared group_id: the nesting is the point."""
@@ -1740,7 +1710,11 @@ def _layout_nested_circles(slide: NestedCirclesSlide, cx, cy, cw, ch, font, ts, 
     bottom = top0 + D
 
     n = len(slide.stages)
-    fills = [palette.muted, palette.accent, palette.primary, palette.muted]
+    # Rings strictly alternate ink and accent. The old muted/accent/primary cycle
+    # stopped working once the three-colour rule collapsed primary onto accent:
+    # rings 2 and 3 got one colour and merged. Alternating keeps every neighbour
+    # distinct with only two fills, and the surface-coloured labels read on both.
+    fills = [palette.text, palette.accent, palette.text, palette.accent]
     diams = [max(1, D * (n - i) // n) for i in range(n)]
     tops = [bottom - d for d in diams]
 
@@ -1854,7 +1828,7 @@ def _layout_swot(slide: SwotSlide, cx, cy, cw, ch, font, ts, palette):
         # heading->items gap (shared gid) so quadrant items lose no space.
         nodes.append(ResolvedNode(_nid("swot_rule"), "box",
                                   Rect(qx, qy + head_h + inner,
-                                       max(1, int(col_w * 0.3)), rule_h),
+                                       _underline_w(head, font, ts.body, col_w), rule_h),
                                   fill_color=color, group_id=gid))
         items_y = qy + head_h + gap
         items_h = qy + cell_h - items_y

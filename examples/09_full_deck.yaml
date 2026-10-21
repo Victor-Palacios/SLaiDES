@@ -1,11 +1,11 @@
 version: 1
 theme:
   palette:
-    primary: "#1B4F8A"
+    primary: "#E84545"   # = accent (three-colour rule; was #1B4F8A)
     surface: "#FFFFFF"
     accent: "#E84545"
     text: "#1A1A2E"
-    muted: "#8A8A9A"
+    muted: "#1A1A2E"     # = text (three-colour rule; was #8A8A9A)
   type_scale:
     title: 60
     header: 42
@@ -63,18 +63,11 @@ slides:
         title: "Open Beta"
         description: "ISV program; target 50 partners."
 
-  - component: card-grid
+  - component: table-slide
     title: "Investment Areas"
-    cards:
-      - icon: code
-        title: "Build"
-        body: "Reliability and dev tooling."
-      - icon: users
-        title: "Growth"
-        body: "Enterprise sales and channels."
-      - icon: globe
-        title: "Global"
-        body: "APAC and EMEA expansion."
-      - icon: chart-up
-        title: "Analytics"
-        body: "Customer and usage insights."
+    headers: ["Area", "Focus"]
+    rows:
+      - ["Build", "Reliability and dev tooling"]
+      - ["Growth", "Enterprise sales and channels"]
+      - ["Global", "APAC and EMEA expansion"]
+      - ["Analytics", "Customer and usage insights"]

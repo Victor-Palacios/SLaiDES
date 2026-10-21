@@ -81,7 +81,29 @@ background with blue and black text is the ceiling. A fourth colour — grey bod
 text, a muted caption, a second accent — is not allowed, even when it is subtle.
 Combined with the no-black-and-white rule above, every slide lands on exactly
 two or three colours: the background, an ink, and at most one more. Standing
-operator instruction (2026-09-05).
+operator instruction (2026-09-05). **Enforced since 2026-10-21 as lint error
+`E_COLOR_COUNT`**, which counts colours with the emitters' own logic
+(`slidekit.emit.colors`) — never hand-roll a colour audit, it will miss what the
+emitter actually paints (a grey "vs" caption shipped that way, FB-118). Chrome
+and image pixels do not count. The default palette is already three colours
+(`primary` = `accent`, `muted` = `text`); a custom palette must collapse the same
+way. A screenshot is evidence and is shown as captured.
+
+**Never end a deck on a question slide.** A closing rhetorical question ("What
+would you draw first?") adds nothing; end on the last real content — a takeaway,
+a next step, a checklist — with any sources slide placed before it. Opening and
+mid-deck questions are fine. Enforced as lint error `E_CLOSING_QUESTION`.
+Standing operator instruction (2026-10-21, FB-120).
+
+**No history unless it is extremely relevant.** Leave out origin stories, dates
+of adoption, version timelines and "where it came from" slides. Include a
+historical fact only when the audience needs it to do something — for example,
+the date of a real security incident the deck is about. Standing operator
+instruction (2026-10-21).
+
+**`card-grid` is retired** at the operator's request (FB-117) and must not be
+reintroduced. Peer items with a title and body go in a `table-slide`, or
+`icon-text-rows` for three or fewer.
 
 **No slide may be black and white.** Every slide must carry at least one element
 the eye reads as colour — the page number does NOT count (it is chrome). This is

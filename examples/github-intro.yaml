@@ -234,20 +234,6 @@ slides:
       invite, and both keep their full history forever — which is why a password
       should never be committed to either.
 
-  - component: numbered-steps
-    title: "Your First Ten Minutes"
-    steps:
-      - title: "Make an account"
-        body: "It is free"
-      - title: "Create a repository"
-        body: "Tick the box to add a README"
-      - title: "Edit the README"
-        body: "Commit it, and look at History"
-    notes: >-
-      To try it: make a free account, create a repository with a README, then
-      edit that README on the website, commit it, and look at the history you
-      just made.
-
   - component: table-slide
     title: "Screenshots, Captured 21 Oct 2026"
     headers: ["Screenshot", "Captured from"]
@@ -262,7 +248,16 @@ slides:
       2026 from the pages listed here, and each slide's Source link opens the
       exact page.
 
-  - component: question
-    question: "What will you put in yours?"
+  - component: numbered-steps
+    title: "Your First Ten Minutes"
+    steps:
+      - title: "Make an account"
+        body: "It is free"
+      - title: "Create a repository"
+        body: "Tick the box to add a README"
+      - title: "Edit the README"
+        body: "Commit it, and look at History"
     notes: >-
-      So the last question is yours: what will you put in your first repository?
+      To try it: make a free account, create a repository with a README, then
+      edit that README on the website, commit it, and look at the history you
+      just made.

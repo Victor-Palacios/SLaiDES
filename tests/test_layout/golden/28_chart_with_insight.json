@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_262",
+          "node_id": "title_238",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#1B998B"
         },
         {
-          "node_id": "chart_val_263",
+          "node_id": "chart_val_239",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -58,7 +58,7 @@
           "text_color": "#1B998B"
         },
         {
-          "node_id": "chart_barbox_264",
+          "node_id": "chart_barbox_240",
           "node_type": "box",
           "rect": {
             "x": 680085,
@@ -70,7 +70,7 @@
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "chart_cat_265",
+          "node_id": "chart_cat_241",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -93,10 +93,10 @@
           "italic": false,
           "is_caption": true,
           "group_id": "chart_bar_0",
-          "text_color": "#8A8A9A"
+          "text_color": "#1A1A2E"
         },
         {
-          "node_id": "chart_val_266",
+          "node_id": "chart_val_242",
           "node_type": "text",
           "rect": {
             "x": 2217420,
@@ -122,7 +122,7 @@
           "text_color": "#1B998B"
         },
         {
-          "node_id": "chart_barbox_267",
+          "node_id": "chart_barbox_243",
           "node_type": "box",
           "rect": {
             "x": 2440305,
@@ -134,7 +134,7 @@
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "chart_cat_268",
+          "node_id": "chart_cat_244",
           "node_type": "text",
           "rect": {
             "x": 2217420,
@@ -157,10 +157,10 @@
           "italic": false,
           "is_caption": true,
           "group_id": "chart_bar_1",
-          "text_color": "#8A8A9A"
+          "text_color": "#1A1A2E"
         },
         {
-          "node_id": "chart_val_269",
+          "node_id": "chart_val_245",
           "node_type": "text",
           "rect": {
             "x": 3977640,
@@ -186,7 +186,7 @@
           "text_color": "#1B998B"
         },
         {
-          "node_id": "chart_barbox_270",
+          "node_id": "chart_barbox_246",
           "node_type": "box",
           "rect": {
             "x": 4200525,
@@ -198,7 +198,7 @@
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "chart_cat_271",
+          "node_id": "chart_cat_247",
           "node_type": "text",
           "rect": {
             "x": 3977640,
@@ -221,10 +221,10 @@
           "italic": false,
           "is_caption": true,
           "group_id": "chart_bar_2",
-          "text_color": "#8A8A9A"
+          "text_color": "#1A1A2E"
         },
         {
-          "node_id": "chart_val_272",
+          "node_id": "chart_val_248",
           "node_type": "text",
           "rect": {
             "x": 5737860,
@@ -250,7 +250,7 @@
           "text_color": "#1B998B"
         },
         {
-          "node_id": "chart_barbox_273",
+          "node_id": "chart_barbox_249",
           "node_type": "box",
           "rect": {
             "x": 5960745,
@@ -262,7 +262,7 @@
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "chart_cat_274",
+          "node_id": "chart_cat_250",
           "node_type": "text",
           "rect": {
             "x": 5737860,
@@ -285,10 +285,10 @@
           "italic": false,
           "is_caption": true,
           "group_id": "chart_bar_3",
-          "text_color": "#8A8A9A"
+          "text_color": "#1A1A2E"
         },
         {
-          "node_id": "accent_bar_276",
+          "node_id": "accent_bar_252",
           "node_type": "box",
           "rect": {
             "x": 7498080,
@@ -299,7 +299,7 @@
           "fill_color": "#1B998B"
         },
         {
-          "node_id": "insight_275",
+          "node_id": "insight_251",
           "node_type": "text",
           "rect": {
             "x": 8037576,
@@ -324,7 +324,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_277",
+          "node_id": "chrome_pagenum_253",
           "node_type": "text",
           "rect": {
             "x": 11186160,

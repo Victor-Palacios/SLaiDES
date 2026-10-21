@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "code_dot_193",
+          "node_id": "code_dot_176",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -17,10 +17,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#FF5F56"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_dot_194",
+          "node_id": "code_dot_177",
           "node_type": "box",
           "rect": {
             "x": 713232,
@@ -29,10 +29,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#FFBD2E"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_dot_195",
+          "node_id": "code_dot_178",
           "node_type": "box",
           "rect": {
             "x": 969264,
@@ -41,10 +41,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#27C93F"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_title_196",
+          "node_id": "code_title_179",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -67,10 +67,10 @@
           "italic": false,
           "is_caption": true,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_197",
+          "node_id": "code_run_180",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -92,10 +92,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#6A9955"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_198",
+          "node_id": "code_run_181",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -120,19 +120,19 @@
           "text_color": "#569CD6"
         },
         {
-          "node_id": "code_run_199",
+          "node_id": "code_run_182",
           "node_type": "text",
           "rect": {
             "x": 1148966,
             "y": 2356103,
-            "w": 320137,
+            "w": 1881406,
             "h": 518159
           },
-          "text_content": " ",
+          "text_content": " main():",
           "lines": [
             {
-              "text": " ",
-              "width_emu": 137257,
+              "text": " main():",
+              "width_emu": 1698526,
               "height_emu": 518159,
               "overflows": false
             }
@@ -142,72 +142,22 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_200",
-          "node_type": "text",
-          "rect": {
-            "x": 1286222,
-            "y": 2356103,
-            "w": 1261747,
-            "h": 518159
-          },
-          "text_content": "main",
-          "lines": [
-            {
-              "text": "main",
-              "width_emu": 1078867,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#DCDCAA"
-        },
-        {
-          "node_id": "code_run_201",
-          "node_type": "text",
-          "rect": {
-            "x": 2365090,
-            "y": 2356103,
-            "w": 665282,
-            "h": 518159
-          },
-          "text_content": "():",
-          "lines": [
-            {
-              "text": "():",
-              "width_emu": 482402,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "code_run_202",
+          "node_id": "code_run_183",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2874262,
-            "w": 731907,
+            "w": 5211621,
             "h": 518159
           },
-          "text_content": "    ",
+          "text_content": "    print(\"Hello, world!\")",
           "lines": [
             {
-              "text": "    ",
-              "width_emu": 549027,
+              "text": "    print(\"Hello, world!\")",
+              "width_emu": 5028741,
               "height_emu": 518159,
               "overflows": false
             }
@@ -217,122 +167,22 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_203",
-          "node_type": "text",
-          "rect": {
-            "x": 1006227,
-            "y": 2874262,
-            "w": 1197441,
-            "h": 518159
-          },
-          "text_content": "print",
-          "lines": [
-            {
-              "text": "print",
-              "width_emu": 1014561,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#DCDCAA"
-        },
-        {
-          "node_id": "code_run_204",
-          "node_type": "text",
-          "rect": {
-            "x": 2020788,
-            "y": 2874262,
-            "w": 351341,
-            "h": 518159
-          },
-          "text_content": "(",
-          "lines": [
-            {
-              "text": "(",
-              "width_emu": 168461,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "code_run_205",
-          "node_type": "text",
-          "rect": {
-            "x": 2189249,
-            "y": 2874262,
-            "w": 3311111,
-            "h": 518159
-          },
-          "text_content": "\"Hello, world!\"",
-          "lines": [
-            {
-              "text": "\"Hello, world!\"",
-              "width_emu": 3128231,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#CE9178"
-        },
-        {
-          "node_id": "code_run_206",
-          "node_type": "text",
-          "rect": {
-            "x": 5317480,
-            "y": 2874262,
-            "w": 351341,
-            "h": 518159
-          },
-          "text_content": ")",
-          "lines": [
-            {
-              "text": ")",
-              "width_emu": 168461,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "code_run_207",
+          "node_id": "code_run_184",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3910580,
-            "w": 1261747,
+            "w": 1598670,
             "h": 518159
           },
-          "text_content": "main",
+          "text_content": "main()",
           "lines": [
             {
-              "text": "main",
-              "width_emu": 1078867,
+              "text": "main()",
+              "width_emu": 1415790,
               "height_emu": 518159,
               "overflows": false
             }
@@ -342,35 +192,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#DCDCAA"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_208",
-          "node_type": "text",
-          "rect": {
-            "x": 1536067,
-            "y": 3910580,
-            "w": 519802,
-            "h": 518159
-          },
-          "text_content": "()",
-          "lines": [
-            {
-              "text": "()",
-              "width_emu": 336922,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "calibri",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "code_run_209",
+          "node_id": "code_run_185",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -392,10 +217,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#4EC9B0"
+          "text_color": "#569CD6"
         },
         {
-          "node_id": "code_run_210",
+          "node_id": "code_run_186",
           "node_type": "text",
           "rect": {
             "x": 731924,
@@ -417,10 +242,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_211",
+          "node_id": "code_run_187",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -442,7 +267,7 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         }
       ],
       "chrome": [],

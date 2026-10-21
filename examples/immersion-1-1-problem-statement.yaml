@@ -522,21 +522,14 @@ slides:
       Do not upload real personal records, anything under an NDA, or credentials
       and API keys.
 
-  - component: card-grid
+  - component: table-slide
     title: "Team Conventions Worth Setting"
-    cards:
-      - icon: "doc"
-        title: "One source"
-        body: "Project over chat"
-      - icon: "check"
-        title: "Log it"
-        body: "Decisions land in writing"
-      - icon: "users"
-        title: "Shared"
-        body: "Everyone reads it first"
-      - icon: "zap"
-        title: "Update"
-        body: "Change it when scope does"
+    headers: ["Convention", "What it means"]
+    rows:
+      - ["One source", "Project over chat"]
+      - ["Log it", "Decisions land in writing"]
+      - ["Shared", "Everyone reads it first"]
+      - ["Update", "Change it when scope does"]
     notes: >-
       Four conventions worth agreeing now: the Project is the single source,
       decisions get logged in writing, everyone reads it first, and it gets
@@ -587,9 +580,3 @@ slides:
     notes: >-
       Next session we break that problem into steps, draw it as a Claude
       Artifact, and name what each step needs.
-
-  - component: question
-    question: "Can a stranger restate it?"
-    notes: >-
-      One last question to take with you: can a stranger restate your problem
-      back to you? If not, it is not precise yet.

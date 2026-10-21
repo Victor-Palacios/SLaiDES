@@ -1,11 +1,11 @@
 version: 1
 theme:
   palette:
-    primary: "#0B3D2E"
+    primary: "#F2B705"   # = accent (three-colour rule; was #0B3D2E)
     surface: "#FFFFFF"
     accent: "#F2B705"
     text: "#1A1A2E"
-    muted: "#9A9A9A"
+    muted: "#1A1A2E"     # = text (three-colour rule; was #9A9A9A)
   font: arial
 page_numbers:
   enabled: true

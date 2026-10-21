@@ -52,6 +52,7 @@ from slidekit.metrics.constants import (
     INSET_BOTTOM_EMU,
 )
 from slidekit.metrics.measure import measure_text
+from slidekit.emit.colors import icon_hex, shape_hex, text_hex
 
 # A single line's textbox is sized to the exact glyph width we measured with our
 # bundled metrics. Google Slides ignores the PPTX `wrap="none"` flag and re-lays
@@ -431,7 +432,7 @@ def _emit_box(slide, node: "ResolvedNode", palette, shape=None) -> None:
         # shorter side (0–0.5).
         short = min(rect.w, rect.h) or 1
         shape.adjustments[0] = min(0.5, node.corner_radius / short)
-    hex_color = node.fill_color or palette.primary
+    hex_color = shape_hex(node, palette)
     r, g, b = _hex_to_rgb(hex_color)
     shape.fill.solid()
     shape.fill.fore_color.rgb = RGBColor(r, g, b)
@@ -504,14 +505,9 @@ def _emit_text(slide, node: "ResolvedNode", palette, canvas_w: int = 12192000) -
     tf.margin_top = Emu(INSET_TOP_EMU)
     tf.margin_bottom = Emu(INSET_BOTTOM_EMU)
 
-    # Color precedence: an explicit text_color override (e.g. a label sitting on a
-    # dark shape) wins; otherwise chrome/caption use muted and the rest use text.
-    if node.text_color:
-        hex_color = node.text_color
-    elif node.is_chrome or node.is_caption:
-        hex_color = palette.muted
-    else:
-        hex_color = palette.text
+    # Colour precedence lives in slidekit.emit.colors — shared with the other
+    # emitters and with the linter's colour-count check, so they cannot disagree.
+    hex_color = text_hex(node, palette)
 
     r, g, b = _hex_to_rgb(hex_color)
     font_name = _PPTX_FONT_NAME.get(node.font or "arial", "Arial")
@@ -575,7 +571,7 @@ def _emit_icon(slide, node: "ResolvedNode", palette) -> None:
     shape = slide.shapes.add_shape(
         MSO_SHAPE.OVAL, Emu(cx), Emu(cy), Emu(diameter), Emu(diameter)
     )
-    r, g, b = _hex_to_rgb(node.fill_color or palette.accent)
+    r, g, b = _hex_to_rgb(icon_hex(node, palette))
     shape.fill.solid()
     shape.fill.fore_color.rgb = RGBColor(r, g, b)
     shape.line.fill.background()  # no border

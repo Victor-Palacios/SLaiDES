@@ -31,15 +31,15 @@ comments:
   source: 'issue #11'
   notes: 'issue #11: removed expanding spacer so the second text block follows the first'
 - id: FB-004
-  component: card-grid
-  family: card-grid
+  component: table-slide
+  family: table
   status: done
   severity: med
   comment: remove bubbles
   created: '2026-06-19'
   updated: '2026-06-19'
   source: 'issue #12'
-  notes: 'issue #12: removed accent ''bubble'' disc from cards'
+  notes: 'issue #12: removed accent ''bubble'' disc from cards. (Retargeted to table-slide for the validator after FB-117 retired card-grid.)'
 - id: FB-005
   component: icon-text-rows
   family: icon-text-rows
@@ -391,15 +391,15 @@ comments:
   source: web 2026-07-04T16:13:11.736Z
   notes: 'Reimagined: coloured header/criteria boxes removed — options are plain bold primary text over a thin accent rule (table-slide motif), criteria plain bold text, cells plain text. New highlights: [[row, col], ...] field (max 2) renders the winning cell(s) as accent chips — the only colour in the matrix body.'
 - id: FB-040
-  component: card-grid
-  family: labeled-image-grid
+  component: table-slide
+  family: table
   status: done
   severity: med
   comment: 👎 delete this one
   created: '2026-07-04'
   updated: '2026-07-04'
   source: web 2026-07-04T16:13:11.736Z
-  notes: team-grid DELETED per operator (model, layout, registry, specimen, golden, recommender). logo-wall is now the labeled-image-grid anchor; people intros fall back to card-grid. (Item retargeted to logo-wall, then to card-grid after FB-046 deleted logo-wall too.)
+  notes: team-grid DELETED per operator (model, layout, registry, specimen, golden, recommender). logo-wall is now the labeled-image-grid anchor; people intros fall back to card-grid. (Item retargeted to logo-wall, then to card-grid after FB-046 deleted logo-wall too, then to table-slide — the new people fallback — after FB-117 retired card-grid.)
 - id: FB-041
   component: image-half-bleed
   family: image-full-bleed
@@ -451,15 +451,15 @@ comments:
   source: web 2026-07-05T15:52:58.945Z
   notes: Option headers now render in the DEFAULT text colour instead of brand primary (the primary tint read as a third colour), and the specimen palette sets primary to the text tone — the slide is literally red (rule + highlight chips) and black (everything else).
 - id: FB-046
-  component: card-grid
-  family: labeled-image-grid
+  component: bullet-list
+  family: marker-list
   status: done
   severity: med
   comment: 📝 delete this slide layout
   created: '2026-07-05'
   updated: '2026-07-05'
   source: web 2026-07-05T15:52:58.945Z
-  notes: logo-wall DELETED per operator note, closing the labeled-image-grid family. Logo content falls back to card-grid label cards in the recommender. (Retargeted for validator.)
+  notes: logo-wall DELETED per operator note, closing the labeled-image-grid family. Logo content falls back to card-grid label cards in the recommender. (Retargeted for validator; retargeted again to bullet-list, the new logo fallback, after FB-117 retired card-grid.)
 - id: FB-047
   component: section-divider
   family: emphasis-stack
@@ -1325,3 +1325,43 @@ comments:
   updated: '2026-07-22'
   source: web 2026-07-22T03:21:01.730Z
   notes: applied 2026-07-22 (added a MAJOR.MINOR.PATCH semantic-versioning slide)
+- id: FB-117
+  component: table-slide
+  family: table
+  status: done
+  severity: high
+  comment: I don't like this format - remove it from the slaides possible choices permanently
+  created: '2026-10-21'
+  updated: '2026-10-21'
+  source: operator chat 2026-10-21
+  notes: card-grid DELETED (model, layout, registry, prototype, specimen deck, golden). 19 slides migrated — four-item grids to two-column table-slides, three-item grids to icon-text-rows, the all-components showcase slide dropped. Recommender fallbacks reworked — axes to comparison-matrix, people to table-slide, logos to bullet-list. (Retargeted for validator.)
+- id: FB-118
+  component: this-vs-that
+  family: vs-badge
+  status: done
+  severity: high
+  comment: too many colors on one page - make the versus black and don't allow this many colors on 1 page (here there are 4 colors - blue, white, black and grey). make this a rule
+  created: '2026-10-21'
+  updated: '2026-10-21'
+  source: operator chat 2026-10-21
+  notes: Three-colour rule now ENFORCED as lint error E_COLOR_COUNT, using the emitters' own colour logic (slidekit.emit.colors) so the check cannot drift from what is painted; a test reads the colours back out of an emitted pptx. Default palette collapsed to white, one blue, one ink (primary = accent, muted = text), so the "vs" caption is ink. Code theme cut to panel + white + one blue (supersedes FB-027's seven token colours and the traffic-light dots); file-tree takes the deck's own three colours (supersedes FB-065); nested-circle rings alternate ink and accent. 23 custom palettes collapsed the same way. All decks lint clean.
+- id: FB-119
+  component: two-panel-list
+  family: two-panel-list
+  status: done
+  severity: med
+  comment: notice the alignment is wrong for this style of slide deck (the underline doesn't match up with the text it underlines)
+  created: '2026-10-21'
+  updated: '2026-10-21'
+  source: operator chat 2026-10-21
+  notes: Heading underlines now start at the first glyph and span exactly the heading's measured width (two-panel-list panels, swot headings, process-steps numerals). The old FB-055 left-inset shift was stale — every emitter draws glyphs at rect.x — and the fixed 30%-of-column width matched no heading. Guarded by tests/test_layout/test_underline_alignment.py.
+- id: FB-120
+  component: question
+  family: emphasis-stack
+  status: done
+  severity: med
+  comment: don't end on these kinds of useless slides. make it a rule not to do this.
+  created: '2026-10-21'
+  updated: '2026-10-21'
+  source: operator chat 2026-10-21
+  notes: Enforced as lint error E_CLOSING_QUESTION — a multi-slide deck may not end on a question slide. Eight decks fixed; GitHub and UML also moved their sources slide ahead of the final actionable slide.

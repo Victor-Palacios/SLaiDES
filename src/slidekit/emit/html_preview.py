@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Union
 
 from slidekit.metrics.constants import LINE_SPACING_SINGLE
+from slidekit.emit.colors import background_hex, shape_hex, text_hex
 
 if TYPE_CHECKING:
     from slidekit.ir.models import Deck
@@ -63,7 +64,7 @@ def emit_html(
 
 def _slide_html(rs, deck: "Deck") -> str:
     palette = deck.theme.palette
-    surface_color = rs.background or palette.surface
+    surface_color = background_hex(rs, palette)
 
     slide_w_px = rs.canvas_w / _EMU_PER_PX
     slide_h_px = rs.canvas_h / _EMU_PER_PX
@@ -100,7 +101,7 @@ def _node_html(node: "ResolvedNode", palette) -> str:
         radius = f"border-radius:{_px(node.corner_radius)};" if node.corner_radius else ""
         style = (
             f"left:{left};top:{top};width:{width};height:{height};"
-            f"background:{node.fill_color or palette.primary};{radius}"
+            f"background:{shape_hex(node, palette)};{radius}"
         )
         return f'    <div class="node node-box{chrome_cls}" style="{style}"></div>'
 
@@ -109,19 +110,12 @@ def _node_html(node: "ResolvedNode", palette) -> str:
         # same fill contract as boxes, rounded by CSS.
         style = (
             f"left:{left};top:{top};width:{width};height:{height};"
-            f"background:{node.fill_color or palette.primary};border-radius:50%;"
+            f"background:{shape_hex(node, palette)};border-radius:50%;"
         )
         return f'    <div class="node node-box{chrome_cls}" style="{style}"></div>'
 
     if node.node_type == "text":
-        if node.text_color:
-            # Explicit per-node color (code syntax roles, accent values, labels on
-            # dark shapes) — same precedence as the pptx/pdf emitters.
-            color = node.text_color
-        elif node.is_chrome or node.is_caption:
-            color = palette.muted
-        else:
-            color = palette.text
+        color = text_hex(node, palette)  # shared precedence: slidekit.emit.colors
         font_name = (node.font or "arial").title()
         size_px = (node.size_pt or 32) * 96 / 72  # pt → px at 96 DPI
         weight = "bold" if node.bold else "normal"

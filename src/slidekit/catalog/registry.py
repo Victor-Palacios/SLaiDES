@@ -105,10 +105,8 @@ _META: dict[str, dict] = {
         purpose="Horizontal dated events.", use_when="A sequence of dated milestones.",
         capacity=(2, 6), content_shape="ordered {date, title, description} events"),
 
-    # card-grid
-    "card-grid": dict(family="card-grid", role="anchor",
-        purpose="A grid of content cards.", use_when="Several peer items as cards.",
-        capacity=(2, 8), content_shape="a set of {title, body, icon?} cards"),
+    # (card-grid was retired 2026-10-21 per operator request FB-117 — peer items with
+    # a title and body go in table-slide, or icon-text-rows for three or fewer.)
 
     # marker-list family
     "bullet-list": dict(family="marker-list", role="anchor",
@@ -176,7 +174,8 @@ _META: dict[str, dict] = {
         capacity=(3, 6), content_shape="ordered tiers that widen"),
 
     # matrices (matrix-2x2 was retired 2026-07-05 per operator feedback FB-044;
-    # swot is the surviving 2×2 and generic axes content falls back to card-grid)
+    # swot is the surviving 2×2 and generic axes content falls back to a 2×2
+    # comparison-matrix since card-grid's retirement, FB-117)
     "swot": dict(family="swot", role="anchor",
         purpose="A SWOT 2×2 — one defining statement per quadrant (FB-038).",
         use_when="A SWOT analysis specifically.",
@@ -189,8 +188,8 @@ _META: dict[str, dict] = {
     # (The labeled-image-grid family is closed: team-grid retired 2026-07-04 per
     # FB-040 and logo-wall 2026-07-05 per FB-046. image-full-bleed and image-grid
     # were retired 2026-07-04 per FB-041/FB-042 — image-half-bleed in the
-    # two-column family is the remaining image layout; logo/people content falls
-    # back to card-grid.)
+    # two-column family is the remaining image layout; people content falls back
+    # to a name/role table-slide and logos to a bullet-list of names, FB-117.)
 
 }
 

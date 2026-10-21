@@ -204,21 +204,14 @@ slides:
     notes: >-
       One name per box, or no name at all. That is the rule that survives Day 2.
 
-  - component: card-grid
+  - component: table-slide
     title: "Roles Beyond Writing Code"
-    cards:
-      - icon: "users"
-        title: "Owner"
-        body: "Holds the problem"
-      - icon: "check"
-        title: "Tester"
-        body: "Breaks it on purpose"
-      - icon: "doc"
-        title: "Scribe"
-        body: "Keeps the Project current"
-      - icon: "star"
-        title: "Demo"
-        body: "Tells the story Friday"
+    headers: ["Role", "What they do"]
+    rows:
+      - ["Owner", "Holds the problem"]
+      - ["Tester", "Breaks it on purpose"]
+      - ["Scribe", "Keeps the Project current"]
+      - ["Demo", "Tells the story Friday"]
     notes: >-
       Four roles beyond writing code. The owner holds the problem. The tester
       breaks it on purpose. The scribe keeps the Project current. And the demo
@@ -505,9 +498,3 @@ slides:
     notes: >-
       Tomorrow we match each step to a tool, decide what to stub, and pick
       retrieval only if you actually need it.
-
-  - component: question
-    question: "Can you start unaided?"
-    notes: >-
-      One question before you go: can you start unaided tomorrow morning? If
-      not, find the box that is stopping you.

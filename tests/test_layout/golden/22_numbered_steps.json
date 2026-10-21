@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_212",
+          "node_id": "title_188",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_num_213",
+          "node_id": "step_num_189",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -54,10 +54,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_0",
-          "text_color": "#2A1B4A"
+          "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_head_214",
+          "node_id": "step_head_190",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -79,10 +79,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_0",
-          "text_color": "#2A1B4A"
+          "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_body_215",
+          "node_id": "step_body_191",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -106,7 +106,7 @@
           "group_id": "step_0"
         },
         {
-          "node_id": "step_num_216",
+          "node_id": "step_num_192",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -128,10 +128,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_1",
-          "text_color": "#2A1B4A"
+          "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_head_217",
+          "node_id": "step_head_193",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -153,10 +153,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_1",
-          "text_color": "#2A1B4A"
+          "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_body_218",
+          "node_id": "step_body_194",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -180,7 +180,7 @@
           "group_id": "step_1"
         },
         {
-          "node_id": "step_num_219",
+          "node_id": "step_num_195",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -202,10 +202,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_2",
-          "text_color": "#2A1B4A"
+          "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_head_220",
+          "node_id": "step_head_196",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -227,10 +227,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_2",
-          "text_color": "#2A1B4A"
+          "text_color": "#7C4DFF"
         },
         {
-          "node_id": "step_body_221",
+          "node_id": "step_body_197",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -256,7 +256,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_222",
+          "node_id": "chrome_pagenum_198",
           "node_type": "text",
           "rect": {
             "x": 11186160,

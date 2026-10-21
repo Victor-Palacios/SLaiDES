@@ -1,11 +1,11 @@
 version: 1
 theme:
   palette:
-    primary: "#1B4F8A"
+    primary: "#E84545"   # = accent (three-colour rule; was #1B4F8A)
     surface: "#FFFFFF"
     accent: "#E84545"
     text: "#1A1A2E"
-    muted: "#8A8A9A"
+    muted: "#1A1A2E"     # = text (three-colour rule; was #8A8A9A)
   type_scale:
     title: 60
     header: 42
@@ -48,21 +48,14 @@ slides:
       - text: "Acts on its own"
       - text: "Calls tools"
 
-  - component: card-grid
+  - component: table-slide
     title: "Core Capabilities"
-    cards:
-      - icon: target
-        title: "Planning"
-        body: "Break goals into steps."
-      - icon: wrench
-        title: "Tool Use"
-        body: "Call APIs and code."
-      - icon: book
-        title: "Memory"
-        body: "Recall past context."
-      - icon: mirror
-        title: "Reflection"
-        body: "Critique and retry."
+    headers: ["Capability", "What it does"]
+    rows:
+      - ["Planning", "Break goals into steps"]
+      - ["Tool Use", "Call APIs and code"]
+      - ["Memory", "Recall past context"]
+      - ["Reflection", "Critique and retry"]
 
   - component: stat-callout
     title: "Why Now"
@@ -90,21 +83,14 @@ slides:
         title: "Agents"
         description: "Models that act."
 
-  - component: card-grid
+  - component: table-slide
     title: "Common Agent Patterns"
-    cards:
-      - icon: loop
-        title: "ReAct"
-        body: "Reason, then act."
-      - icon: wrench
-        title: "Tool Use"
-        body: "Call functions."
-      - icon: book
-        title: "RAG"
-        body: "Retrieve facts first."
-      - icon: team
-        title: "Multi-Agent"
-        body: "Specialists team up."
+    headers: ["Pattern", "In one line"]
+    rows:
+      - ["ReAct", "Reason, then act"]
+      - ["Tool Use", "Call functions"]
+      - ["RAG", "Retrieve facts first"]
+      - ["Multi-Agent", "Specialists team up"]
 
   - component: bullet-list
     title: "Multi-Agent Systems"

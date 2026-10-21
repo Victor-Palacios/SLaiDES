@@ -18,6 +18,7 @@ if TYPE_CHECKING:
     from slidekit.layout.models import ResolvedDeck, ResolvedNode
 
 from slidekit.metrics.constants import INSET_TOP_EMU
+from slidekit.emit.colors import background_hex, icon_hex, shape_hex, text_hex
 
 _EMU_PER_PT = 12700.0
 
@@ -50,7 +51,7 @@ def _pdf_font(name: str | None, bold: bool, italic: bool) -> str:
 
 def _draw_slide(c, rs, palette, page_w: float, page_h: float) -> None:
     """Paint one resolved slide onto the canvas: background fill, then every node."""
-    c.setFillColorRGB(*_rgb(getattr(rs, "background", None) or palette.surface))
+    c.setFillColorRGB(*_rgb(background_hex(rs, palette)))
     c.rect(0, 0, page_w, page_h, stroke=0, fill=1)
     for node in rs.nodes + rs.chrome:
         _draw_node(c, node, palette, page_h)
@@ -110,7 +111,7 @@ def _draw_node(c, node: "ResolvedNode", palette, page_h: float) -> None:
     top = page_h - _pt(rect.y)
 
     if node.node_type == "box":
-        c.setFillColorRGB(*_rgb(node.fill_color or palette.primary))
+        c.setFillColorRGB(*_rgb(shape_hex(node, palette)))
         if node.corner_radius:
             radius = min(node.corner_radius / _EMU_PER_PT, w / 2, h / 2)
             c.roundRect(x, top - h, w, h, radius, stroke=0, fill=1)
@@ -119,14 +120,14 @@ def _draw_node(c, node: "ResolvedNode", palette, page_h: float) -> None:
 
     elif node.node_type == "ellipse":
         # Filled ellipse inscribed in the node rect (nested-circles funnel).
-        c.setFillColorRGB(*_rgb(node.fill_color or palette.primary))
+        c.setFillColorRGB(*_rgb(shape_hex(node, palette)))
         c.ellipse(x, top - h, x + w, top, stroke=0, fill=1)
 
     elif node.node_type == "icon":
         d = min(w, h)
         icx = x + (w - d) / 2
         icy = top - (h + d) / 2  # center y
-        c.setFillColorRGB(*_rgb(node.fill_color or palette.accent))
+        c.setFillColorRGB(*_rgb(icon_hex(node, palette)))
         c.circle(x + w / 2, top - h / 2, d / 2, stroke=0, fill=1)
 
     elif node.node_type == "image":
@@ -145,13 +146,7 @@ def _draw_node(c, node: "ResolvedNode", palette, page_h: float) -> None:
 
 
 def _draw_text(c, node: "ResolvedNode", palette, page_h: float) -> None:
-    if node.text_color:
-        hex_color = node.text_color
-    elif node.is_chrome or node.is_caption:
-        hex_color = palette.muted
-    else:
-        hex_color = palette.text
-    c.setFillColorRGB(*_rgb(hex_color))
+    c.setFillColorRGB(*_rgb(text_hex(node, palette)))
 
     size = node.size_pt or 32.0
     font = _pdf_font(node.font, node.bold, node.italic)

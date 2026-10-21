@@ -204,18 +204,19 @@ class TestComponents:
         """))
         assert deck.slides[0].component == "image-half-bleed"
 
-    def test_card_grid_slide(self):
-        deck = loads(textwrap.dedent("""\
-            version: 1
-            slides:
-              - component: card-grid
-                title: "Products"
-                cards:
-                  - icon: star
-                    title: "Product A"
-                    body: "Description"
-        """))
-        assert deck.slides[0].component == "card-grid"
+    def test_card_grid_is_retired(self):
+        # Retired 2026-10-21 at the operator's request (FB-117): the component no
+        # longer exists, so a deck that names it must fail validation outright.
+        with pytest.raises(Exception, match="card-grid"):
+            loads(textwrap.dedent("""\
+                version: 1
+                slides:
+                  - component: card-grid
+                    title: "Products"
+                    cards:
+                      - title: "Product A"
+                        body: "Description"
+            """))
 
     def test_all_eight_components_represented(self):
         components = {s.component for deck in
@@ -223,7 +224,7 @@ class TestComponents:
                       for s in deck.slides}
         expected = {
             "title-slide", "icon-text-rows", "stat-callout",
-            "comparison-columns", "timeline", "image-half-bleed", "card-grid",
+            "comparison-columns", "timeline", "image-half-bleed",
         }
         assert expected.issubset(components), f"Missing: {expected - components}"
 

@@ -1,11 +1,11 @@
 version: 1
 theme:
   palette:
-    primary: "#3E2723"
+    primary: "#C2571A"   # = accent (three-colour rule; was #3E2723)
     surface: "#FFFFFF"
     accent: "#C2571A"
     text: "#1A1A2E"
-    muted: "#8A8A9A"
+    muted: "#1A1A2E"     # = text (three-colour rule; was #8A8A9A)
   font: cambria
 page_numbers:
   enabled: true

@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_296",
+          "node_id": "title_272",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_val_297",
+          "node_id": "metric_val_273",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -57,7 +57,7 @@
           "align": "center"
         },
         {
-          "node_id": "metric_label_298",
+          "node_id": "metric_label_274",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -81,7 +81,7 @@
           "align": "center"
         },
         {
-          "node_id": "metric_chip_299",
+          "node_id": "metric_chip_275",
           "node_type": "box",
           "rect": {
             "x": 1522569,
@@ -93,7 +93,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_300",
+          "node_id": "metric_delta_276",
           "node_type": "text",
           "rect": {
             "x": 1522569,
@@ -119,7 +119,7 @@
           "align": "center"
         },
         {
-          "node_id": "metric_val_301",
+          "node_id": "metric_val_277",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -144,7 +144,7 @@
           "align": "center"
         },
         {
-          "node_id": "metric_label_302",
+          "node_id": "metric_label_278",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -168,7 +168,7 @@
           "align": "center"
         },
         {
-          "node_id": "metric_chip_303",
+          "node_id": "metric_chip_279",
           "node_type": "box",
           "rect": {
             "x": 5175547,
@@ -180,7 +180,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_304",
+          "node_id": "metric_delta_280",
           "node_type": "text",
           "rect": {
             "x": 5175547,
@@ -206,7 +206,7 @@
           "align": "center"
         },
         {
-          "node_id": "metric_val_305",
+          "node_id": "metric_val_281",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -231,7 +231,7 @@
           "align": "center"
         },
         {
-          "node_id": "metric_label_306",
+          "node_id": "metric_label_282",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -255,7 +255,7 @@
           "align": "center"
         },
         {
-          "node_id": "metric_chip_307",
+          "node_id": "metric_chip_283",
           "node_type": "box",
           "rect": {
             "x": 9427731,
@@ -267,7 +267,7 @@
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "metric_delta_308",
+          "node_id": "metric_delta_284",
           "node_type": "text",
           "rect": {
             "x": 9427731,
@@ -295,7 +295,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_309",
+          "node_id": "chrome_pagenum_285",
           "node_type": "text",
           "rect": {
             "x": 11186160,

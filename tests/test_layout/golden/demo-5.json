@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_828",
+          "node_id": "title_806",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -32,7 +32,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "subtitle_829",
+          "node_id": "subtitle_807",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -65,7 +65,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_830",
+          "node_id": "title_808",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -89,7 +89,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "bl_item_831",
+          "node_id": "bl_item_809",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -112,7 +112,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_832",
+          "node_id": "bl_item_810",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -135,7 +135,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_833",
+          "node_id": "bl_item_811",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -158,7 +158,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_834",
+          "node_id": "bl_item_812",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -183,7 +183,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_835",
+          "node_id": "chrome_pagenum_813",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -217,7 +217,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_836",
+          "node_id": "title_814",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -241,7 +241,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_value_837",
+          "node_id": "stat_value_815",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -265,7 +265,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_838",
+          "node_id": "stat_label_816",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -288,7 +288,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_839",
+          "node_id": "stat_sub_817",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -312,7 +312,7 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_840",
+          "node_id": "stat_value_818",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -336,7 +336,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_841",
+          "node_id": "stat_label_819",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -359,7 +359,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_842",
+          "node_id": "stat_sub_820",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -383,7 +383,7 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_843",
+          "node_id": "stat_value_821",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -407,7 +407,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_844",
+          "node_id": "stat_label_822",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -430,7 +430,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_845",
+          "node_id": "stat_sub_823",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -456,7 +456,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_846",
+          "node_id": "chrome_pagenum_824",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -490,7 +490,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_847",
+          "node_id": "title_825",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -514,7 +514,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "heading_848",
+          "node_id": "heading_826",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -538,7 +538,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "body_849",
+          "node_id": "body_827",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -562,7 +562,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "heading_850",
+          "node_id": "heading_828",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -586,7 +586,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "body_851",
+          "node_id": "body_829",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -610,7 +610,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "heading_852",
+          "node_id": "heading_830",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -634,7 +634,7 @@
           "group_id": "itr_2"
         },
         {
-          "node_id": "body_853",
+          "node_id": "body_831",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -660,7 +660,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_854",
+          "node_id": "chrome_pagenum_832",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -694,7 +694,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_855",
+          "node_id": "title_833",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -718,7 +718,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "left_head_856",
+          "node_id": "left_head_834",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -739,10 +739,10 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "text_color": "#1B4F8A"
+          "text_color": "#E84545"
         },
         {
-          "node_id": "right_head_857",
+          "node_id": "right_head_835",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -763,10 +763,10 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "text_color": "#1B4F8A"
+          "text_color": "#E84545"
         },
         {
-          "node_id": "left_item_858",
+          "node_id": "left_item_836",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -789,7 +789,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_859",
+          "node_id": "right_item_837",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -812,7 +812,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_860",
+          "node_id": "left_item_838",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -835,7 +835,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_861",
+          "node_id": "right_item_839",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -858,7 +858,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_862",
+          "node_id": "left_item_840",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -881,7 +881,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_863",
+          "node_id": "right_item_841",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -904,7 +904,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_864",
+          "node_id": "left_item_842",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -927,7 +927,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_865",
+          "node_id": "right_item_843",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -952,7 +952,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_866",
+          "node_id": "chrome_pagenum_844",
           "node_type": "text",
           "rect": {
             "x": 11186160,

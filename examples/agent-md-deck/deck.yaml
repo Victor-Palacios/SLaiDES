@@ -4,9 +4,9 @@ theme:
   palette:
     surface: "#FFFFFF"   # clean page
     text: "#03256C"      # deep navy ink
-    primary: "#1768AC"   # mid blue, solid marks
+    primary: "#06BEE1"   # = accent (three-colour rule; was #1768AC)
     accent: "#06BEE1"    # bright cyan highlight
-    muted: "#2541B2"     # indigo, secondary text
+    muted: "#03256C"     # = text (three-colour rule; was #2541B2)
   font: arial
 page_numbers:
   enabled: true
@@ -71,12 +71,12 @@ slides:
       - {title: "Correct", body: "Fix what it guessed wrong"}
       - {title: "Commit", body: "It ships with the code"}
 
-  - component: card-grid
+  - component: icon-text-rows
     title: "Why It Pays Off"
-    cards:
-      - {icon: "check", title: "Consistent", body: "Same rules"}
-      - {icon: "zap", title: "Faster", body: "No discovery"}
-      - {icon: "users", title: "Shared", body: "Whole team"}
+    rows:
+      - {icon: "check", heading: "Consistent", body: "Same rules"}
+      - {icon: "zap", heading: "Faster", body: "No discovery"}
+      - {icon: "users", heading: "Shared", body: "Whole team"}
 
   - component: icon-text-rows
     title: "Rules Worth Writing Down"

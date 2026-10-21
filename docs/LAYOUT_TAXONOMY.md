@@ -2,14 +2,13 @@
 
 _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxonomy.py` — do not hand-edit. A test (`tests/test_catalog`) fails if it drifts._
 
-**30 components** implement **22 distinct layout skeletons** (families); **8** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **22 distinct layouts**.
+**29 components** implement **21 distinct layout skeletons** (families); **8** are styled variants of a family anchor — same geometry, differing only by marker / colour / orientation / field-set. "40 distinct layouts" would overstate it; the honest figure is **21 distinct layouts**.
 
-## Distinct layout families (22)
+## Distinct layout families (21)
 
 | Family | Anchor component | What the skeleton is |
 |---|---|---|
 | `agenda` | `agenda` | Numbered agenda / table of contents. |
-| `card-grid` | `card-grid` | A grid of content cards. |
 | `code-block` | `code` | A dark terminal/IDE-style code block. |
 | `comparison-matrix` | `comparison-matrix` | An options × criteria grid; 1–2 winning cells highlighted (FB-039). |
 | `emphasis-stack` | `section-divider` | Section break with number + title. |
@@ -38,7 +37,6 @@ _Generated from `src/slidekit/catalog/registry.py` by `scripts/build_layout_taxo
 | `agenda` | `agenda` | **anchor** | — |
 | `big-number` | `emphasis-stack` | variant | oversized accent value + label (+ context) |
 | `bullet-list` | `marker-list` | **anchor** | — |
-| `card-grid` | `card-grid` | **anchor** | — |
 | `chart-with-insight` | `two-column` | variant | chart (60%) + emphasis takeaway (40%) |
 | `code` | `code-block` | **anchor** | — |
 | `comparison-columns` | `two-column` | **anchor** | — |

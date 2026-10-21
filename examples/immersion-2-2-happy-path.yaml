@@ -424,21 +424,18 @@ slides:
       risk. Connecting late means surprises late and large, expensive rework,
       and high demo risk.
 
-  - component: card-grid
+  - component: table-slide
     title: "Four Smells"
-    cards:
-      - title: "Only Ana"
-        body: "One person can run it"
-      - title: "Warm only"
-        body: "Fails from a clean start"
-      - title: "In order"
-        body: "You must know the sequence"
-      - title: "One box"
-        body: "A step still done by hand"
+    headers: ["Smell", "What it means"]
+    rows:
+      - ["Only Ana", "One person can run it"]
+      - ["Warm only", "Fails from a clean start"]
+      - ["In order", "You must know the sequence"]
+      - ["One box", "A step still done by hand"]
     notes: >-
       Four smells that look connected and are not. Only one person can run it.
-      It fails from a clean start. You have to know the sequence. Or one box is
-      still done by hand.
+      It fails from a clean start. You have to know the sequence. Or one box
+      is still done by hand.
 
   - component: numbered-steps
     title: "If You Are Behind"

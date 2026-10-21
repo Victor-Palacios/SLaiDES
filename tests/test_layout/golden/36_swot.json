@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_362",
+          "node_id": "title_338",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot_head_363",
+          "node_id": "swot_head_339",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -57,19 +57,19 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot_rule_364",
+          "node_id": "swot_rule_340",
           "node_type": "box",
           "rect": {
             "x": 457200,
             "y": 2176271,
-            "w": 1650492,
+            "w": 2015207,
             "h": 54864
           },
           "group_id": "swot_head_0",
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot0_item_365",
+          "node_id": "swot0_item_341",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -93,7 +93,7 @@
           "group_id": "swot_head_0"
         },
         {
-          "node_id": "swot_head_366",
+          "node_id": "swot_head_342",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -115,22 +115,22 @@
           "bold": true,
           "italic": false,
           "group_id": "swot_head_1",
-          "text_color": "#8A8A9A"
+          "text_color": "#1A1A2E"
         },
         {
-          "node_id": "swot_rule_367",
+          "node_id": "swot_rule_343",
           "node_type": "box",
           "rect": {
             "x": 6233160,
             "y": 2176271,
-            "w": 1650492,
+            "w": 2584686,
             "h": 54864
           },
           "group_id": "swot_head_1",
-          "fill_color": "#8A8A9A"
+          "fill_color": "#1A1A2E"
         },
         {
-          "node_id": "swot1_item_368",
+          "node_id": "swot1_item_344",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -154,7 +154,7 @@
           "group_id": "swot_head_1"
         },
         {
-          "node_id": "swot_head_369",
+          "node_id": "swot_head_345",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -179,19 +179,19 @@
           "text_color": "#2A9D8F"
         },
         {
-          "node_id": "swot_rule_370",
+          "node_id": "swot_rule_346",
           "node_type": "box",
           "rect": {
             "x": 457200,
             "y": 4443983,
-            "w": 1650492,
+            "w": 2830525,
             "h": 54864
           },
           "group_id": "swot_head_2",
           "fill_color": "#2A9D8F"
         },
         {
-          "node_id": "swot2_item_371",
+          "node_id": "swot2_item_347",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -215,7 +215,7 @@
           "group_id": "swot_head_2"
         },
         {
-          "node_id": "swot_head_372",
+          "node_id": "swot_head_348",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -237,22 +237,22 @@
           "bold": true,
           "italic": false,
           "group_id": "swot_head_3",
-          "text_color": "#8A8A9A"
+          "text_color": "#1A1A2E"
         },
         {
-          "node_id": "swot_rule_373",
+          "node_id": "swot_rule_349",
           "node_type": "box",
           "rect": {
             "x": 6233160,
             "y": 4443983,
-            "w": 1650492,
+            "w": 1559793,
             "h": 54864
           },
           "group_id": "swot_head_3",
-          "fill_color": "#8A8A9A"
+          "fill_color": "#1A1A2E"
         },
         {
-          "node_id": "swot3_item_374",
+          "node_id": "swot3_item_350",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -278,7 +278,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_375",
+          "node_id": "chrome_pagenum_351",
           "node_type": "text",
           "rect": {
             "x": 11186160,

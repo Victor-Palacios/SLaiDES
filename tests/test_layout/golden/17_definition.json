@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_183",
+          "node_id": "accent_bar_166",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -19,7 +19,7 @@
           "fill_color": "#3949AB"
         },
         {
-          "node_id": "term_181",
+          "node_id": "term_164",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -43,7 +43,7 @@
           "text_color": "#3949AB"
         },
         {
-          "node_id": "def_182",
+          "node_id": "def_165",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -68,7 +68,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_184",
+          "node_id": "chrome_pagenum_167",
           "node_type": "text",
           "rect": {
             "x": 11186160,

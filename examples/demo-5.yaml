@@ -1,11 +1,11 @@
 version: 1
 theme:
   palette:
-    primary: "#1B4F8A"
+    primary: "#E84545"   # = accent (three-colour rule; was #1B4F8A)
     surface: "#FFFFFF"
     accent: "#E84545"
     text: "#1A1A2E"
-    muted: "#8A8A9A"
+    muted: "#1A1A2E"     # = text (three-colour rule; was #8A8A9A)
   type_scale:
     title: 60
     header: 42

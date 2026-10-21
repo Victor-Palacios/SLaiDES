@@ -3,11 +3,11 @@
 version: 1
 theme:
   palette:
-    primary: "#1F3A5F"
+    primary: "#C1642B"   # = accent (three-colour rule; was #1F3A5F)
     surface: "#FFFFFF"
     accent: "#C1642B"
     text: "#1A1A24"
-    muted: "#7C8794"
+    muted: "#1A1A24"     # = text (three-colour rule; was #7C8794)
   font: arial
 page_numbers:
   enabled: true
@@ -89,12 +89,12 @@ slides:
       - {icon: "map", heading: "Direct", body: "Give the workflow"}
       - {icon: "shield", heading: "Constrain", body: "State the hard rules"}
 
-  - component: card-grid
+  - component: icon-text-rows
     title: "Sections That Earn Space"
-    cards:
-      - {icon: "bolt", title: "Build loop", body: "Four steps"}
-      - {icon: "list", title: "Gallery", body: "30 layouts"}
-      - {icon: "flag", title: "Lint codes", body: "Nine codes"}
+    rows:
+      - {icon: "bolt", heading: "Build loop", body: "Four steps"}
+      - {icon: "list", heading: "Gallery", body: "30 layouts"}
+      - {icon: "flag", heading: "Lint codes", body: "Nine codes"}
 
   - component: two-panel-list
     title: "Writing the Description"

@@ -127,21 +127,18 @@ slides:
       you, and what has a free tier today. Not from what you meant to learn this
       week.
 
-  - component: card-grid
+  - component: table-slide
     title: "The Four Jobs"
-    cards:
-      - title: "Intake"
-        body: "Getting the input in"
-      - title: "Think"
-        body: "The model doing the work"
-      - title: "Store"
-        body: "Anything you look up later"
-      - title: "Show"
-        body: "What the user actually sees"
+    headers: ["Job", "What it covers"]
+    rows:
+      - ["Intake", "Getting the input in"]
+      - ["Think", "The model doing the work"]
+      - ["Store", "Anything you look up later"]
+      - ["Show", "What the user actually sees"]
     notes: >-
-      Almost every prototype reduces to four jobs. Intake, getting the input in.
-      Think, the model doing the work. Store, anything you look up later. And
-      show, what the user actually sees.
+      Almost every prototype reduces to four jobs. Intake, getting the input
+      in. Think, the model doing the work. Store, anything you look up later.
+      And show, what the user actually sees.
 
   - component: table-slide
     title: "A Worked Mapping"

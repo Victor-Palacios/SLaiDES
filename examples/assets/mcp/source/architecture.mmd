@@ -1,9 +1,0 @@
-graph TB
-    subgraph H["Host, e.g. Claude Code"]
-        C1["Client 1"]
-        C2["Client 2"]
-    end
-    S1["Local server<br/>e.g. files"]
-    S2["Remote server<br/>e.g. Sentry"]
-    C1 ---|"stdio"| S1
-    C2 ---|"HTTP"| S2

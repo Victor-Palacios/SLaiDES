@@ -124,7 +124,6 @@ lean outline — a `slides:` list where each slide is a chosen `component` + its
 | `comparison-columns` | `left_title`, `right_title`, `left_items[]`, `right_items[]` = `{text, icon?}` | `title` |
 | `timeline` | `events[]` = `{date, title, description?}` | `title` |
 | `image-half-bleed` | `image` (image slot), `content[]` | `title`, `image_side: left\|right` |
-| `card-grid` | `cards[]` = `{title, body, icon?}` | `title` |
 | `section-divider` | `number`, `title` | — |
 | `agenda` | `items[]` (text) | `title` (default `Agenda`) |
 | `big-number` | `value`, `label` | `context` |
@@ -174,7 +173,7 @@ component (no cover slide); copy and adapt. The `09_full_deck`, `10_all_componen
 `E_WRAP` enforces one line per text slot: if copy wraps, it is too long. The
 message quotes how many characters the slot holds, so write to that budget.
 Shrinking the font is **not** an available fix. Slots narrower than ~15
-characters a line (the timeline, card-grid and process-steps columns) cannot hold
+characters a line (the timeline and process-steps columns) cannot hold
 one-line copy at all, so they report `W_WRAP` and do not block the build.
 
 `E_OVERFLOW` and `E_MIN_BODY_SIZE` almost always mean **too much text on the slide**.

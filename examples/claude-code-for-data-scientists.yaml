@@ -1,11 +1,11 @@
 version: 1
 theme:
   palette:
-    primary: "#19323C"
+    primary: "#CC785C"   # = accent (three-colour rule; was #19323C)
     surface: "#FFFFFF"
     accent: "#CC785C"
     text: "#1A1A2E"
-    muted: "#8A8A9A"
+    muted: "#1A1A2E"     # = text (three-colour rule; was #8A8A9A)
   type_scale:
     title: 66
     header: 42
@@ -64,21 +64,14 @@ slides:
       Running profiling script...
       Wrote profile.md: 3 findings.
 
-  - component: card-grid
+  - component: table-slide
     title: "Everyday Workflows"
-    cards:
-      - icon: chart-up
-        title: "EDA"
-        body: "Profile new data in minutes."
-      - icon: wrench
-        title: "Cleaning"
-        body: "Fix types, nulls, duplicates."
-      - icon: target
-        title: "Modeling"
-        body: "Fast first baselines."
-      - icon: star
-        title: "Reporting"
-        body: "Plots and write-ups."
+    headers: ["Workflow", "What Claude does"]
+    rows:
+      - ["EDA", "Profile new data in minutes"]
+      - ["Cleaning", "Fix types, nulls, duplicates"]
+      - ["Modeling", "Fast first baselines"]
+      - ["Reporting", "Plots and write-ups"]
 
   - component: process-steps
     title: "How It Works on a Task"
@@ -383,7 +376,3 @@ slides:
         - "Only when you ask"
         - "One lookup at a time"
     source: "https://support.claude.com/en/articles/11817273-use-claude-s-chat-search-and-memory-to-build-on-previous-context"
-
-  # ── Close (FB-108: new call to action; FB-109: old title slide removed) ──
-  - component: question
-    question: "Build it from our phones."

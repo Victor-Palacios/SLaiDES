@@ -13,11 +13,11 @@ from __future__ import annotations
 _THEME_BLOCK = """version: 1
 theme:
   palette:
-    primary: "#123A6B"   # navy, solid marks
+    primary: "#0072CE"   # solid marks share the accent (3-colour rule)
     surface: "#FFFFFF"   # clean page
     accent: "#0072CE"    # bright blue highlight
     text: "#0A2240"      # deep navy ink
-    muted: "#5B6B82"     # cool grey secondary
+    muted: "#0A2240"     # captions share the ink: no grey (E_COLOR_COUNT)
   type_scale:
     title: 60            # 54-66pt
     header: 42           # 40-44pt

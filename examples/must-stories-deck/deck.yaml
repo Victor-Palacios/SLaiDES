@@ -3,11 +3,11 @@
 version: 1
 theme:
   palette:
-    primary: "#262625"   # near-black, for solid marks
+    primary: "#D97757"   # = accent (three-colour rule; was #262625)
     surface: "#F0EEE6"   # bone / cream page
     accent: "#D97757"    # Claude coral
     text: "#191919"      # ink
-    muted: "#6C6A64"     # warm grey
+    muted: "#191919"     # = text (three-colour rule; was #6C6A64)
   font: arial
 page_numbers:
   enabled: true
@@ -49,12 +49,12 @@ slides:
       - "The engine resolves every rect"
       - "Font metrics decide, not guesses"
 
-  - component: card-grid
+  - component: icon-text-rows
     title: "US-01 · Start From Valid"
-    cards:
-      - {icon: "file", title: "Scaffold", body: "One command"}
-      - {icon: "palette", title: "On theme", body: "Real palette"}
-      - {icon: "check", title: "Clean", body: "Builds green"}
+    rows:
+      - {icon: "file", heading: "Scaffold", body: "One command"}
+      - {icon: "palette", heading: "On theme", body: "Real palette"}
+      - {icon: "check", heading: "Clean", body: "Builds green"}
 
   - component: numbered-steps
     title: "US-03 · One Command"

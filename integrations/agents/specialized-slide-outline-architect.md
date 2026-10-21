@@ -37,7 +37,6 @@ slidekit's eight components and what each is for:
 - `comparison-columns` — A-vs-B, about three items per side.
 - `timeline` — three to four dated milestones.
 - `image-half-bleed` — one visual beside a short block.
-- `card-grid` — up to four short cards (title + one line).
 
 ## 🚨 Critical Rules
 - Output an **outline only** — never final slidekit IR, never code, never a rendered slide.

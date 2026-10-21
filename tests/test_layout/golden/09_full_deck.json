@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_57",
+          "node_id": "title_47",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -32,7 +32,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "subtitle_58",
+          "node_id": "subtitle_48",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -65,7 +65,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_59",
+          "node_id": "title_49",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -89,7 +89,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_value_60",
+          "node_id": "stat_value_50",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -113,7 +113,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_61",
+          "node_id": "stat_label_51",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -136,7 +136,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_62",
+          "node_id": "stat_sub_52",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -160,7 +160,7 @@
           "is_caption": true
         },
         {
-          "node_id": "stat_value_63",
+          "node_id": "stat_value_53",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -184,7 +184,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_64",
+          "node_id": "stat_label_54",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -207,7 +207,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_65",
+          "node_id": "stat_value_55",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -231,7 +231,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "stat_label_66",
+          "node_id": "stat_label_56",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -254,7 +254,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_sub_67",
+          "node_id": "stat_sub_57",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -280,7 +280,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_68",
+          "node_id": "chrome_pagenum_58",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -314,7 +314,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_69",
+          "node_id": "title_59",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -338,7 +338,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "left_head_70",
+          "node_id": "left_head_60",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -359,10 +359,10 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "text_color": "#1B4F8A"
+          "text_color": "#E84545"
         },
         {
-          "node_id": "right_head_71",
+          "node_id": "right_head_61",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -383,10 +383,10 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "text_color": "#1B4F8A"
+          "text_color": "#E84545"
         },
         {
-          "node_id": "left_item_72",
+          "node_id": "left_item_62",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -409,7 +409,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_73",
+          "node_id": "right_item_63",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -432,7 +432,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_74",
+          "node_id": "left_item_64",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -455,7 +455,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_75",
+          "node_id": "right_item_65",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -478,7 +478,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_76",
+          "node_id": "left_item_66",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -501,7 +501,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_77",
+          "node_id": "right_item_67",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -526,7 +526,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_78",
+          "node_id": "chrome_pagenum_68",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -560,7 +560,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_79",
+          "node_id": "title_69",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -584,7 +584,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_date_80",
+          "node_id": "ev_date_70",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -609,7 +609,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_81",
+          "node_id": "ev_title_71",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -632,7 +632,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_82",
+          "node_id": "ev_desc_72",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -679,7 +679,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_83",
+          "node_id": "ev_date_73",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -704,7 +704,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_84",
+          "node_id": "ev_title_74",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -727,7 +727,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_85",
+          "node_id": "ev_desc_75",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -768,7 +768,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_86",
+          "node_id": "ev_date_76",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -793,7 +793,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_87",
+          "node_id": "ev_title_77",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -816,7 +816,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_88",
+          "node_id": "ev_desc_78",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -857,7 +857,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_date_89",
+          "node_id": "ev_date_79",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -882,7 +882,7 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "ev_title_90",
+          "node_id": "ev_title_80",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -905,7 +905,7 @@
           "italic": false
         },
         {
-          "node_id": "ev_desc_91",
+          "node_id": "ev_desc_81",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -948,7 +948,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_92",
+          "node_id": "chrome_pagenum_82",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -977,12 +977,12 @@
     {
       "slide_index": 4,
       "page_number": 5,
-      "component": "card-grid",
+      "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_93",
+          "node_id": "title_83",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1006,55 +1006,81 @@
           "text_color": "#E84545"
         },
         {
-          "node_id": "card_title_94",
+          "node_id": "th_84",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 2613660,
+            "w": 2093593,
             "h": 518159
+          },
+          "text_content": "Area",
+          "lines": [
+            {
+              "text": "Area",
+              "width_emu": 960165,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#E84545"
+        },
+        {
+          "node_id": "th_85",
+          "node_type": "text",
+          "rect": {
+            "x": 3099433,
+            "y": 1499616,
+            "w": 6150573,
+            "h": 518159
+          },
+          "text_content": "Focus",
+          "lines": [
+            {
+              "text": "Focus",
+              "width_emu": 1271575,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#E84545"
+        },
+        {
+          "node_id": "table_rule_86",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 8792806,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#E84545"
+        },
+        {
+          "node_id": "td_87",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 2093593,
+            "h": 633984
           },
           "text_content": "Build",
           "lines": [
             {
               "text": "Build",
-              "width_emu": 1079289,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_0"
-        },
-        {
-          "node_id": "card_body_95",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "Reliability and dev tooling.",
-          "lines": [
-            {
-              "text": "Reliability",
-              "width_emu": 1847800,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "and dev",
-              "width_emu": 1536601,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "tooling.",
-              "width_emu": 1392386,
+              "width_emu": 960165,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1062,59 +1088,45 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_0"
+          "italic": false
         },
         {
-          "node_id": "card_title_96",
+          "node_id": "td_88",
           "node_type": "text",
           "rect": {
-            "x": 3345180,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 518159
+            "x": 3099433,
+            "y": 2401823,
+            "w": 6150573,
+            "h": 633984
+          },
+          "text_content": "Reliability and dev tooling",
+          "lines": [
+            {
+              "text": "Reliability and dev tooling",
+              "width_emu": 4896755,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_89",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3310127,
+            "w": 2093593,
+            "h": 633984
           },
           "text_content": "Growth",
           "lines": [
             {
               "text": "Growth",
-              "width_emu": 1511089,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_1"
-        },
-        {
-          "node_id": "card_body_97",
-          "node_type": "text",
-          "rect": {
-            "x": 3345180,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "Enterprise sales and channels.",
-          "lines": [
-            {
-              "text": "Enterprise",
-              "width_emu": 1967979,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "sales and",
-              "width_emu": 1848433,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "channels.",
-              "width_emu": 1848433,
+              "width_emu": 1391754,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1122,59 +1134,45 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_1"
+          "italic": false
         },
         {
-          "node_id": "card_title_98",
+          "node_id": "td_90",
           "node_type": "text",
           "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 518159
+            "x": 3099433,
+            "y": 3310127,
+            "w": 6150573,
+            "h": 633984
+          },
+          "text_content": "Enterprise sales and channels",
+          "lines": [
+            {
+              "text": "Enterprise sales and channels",
+              "width_emu": 5784813,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_91",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4218431,
+            "w": 2093593,
+            "h": 633984
           },
           "text_content": "Global",
           "lines": [
             {
               "text": "Global",
-              "width_emu": 1343471,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_2"
-        },
-        {
-          "node_id": "card_body_99",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "APAC and EMEA expansion.",
-          "lines": [
-            {
-              "text": "APAC and",
-              "width_emu": 1984214,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "EMEA",
-              "width_emu": 1223714,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "expansion.",
-              "width_emu": 2088579,
+              "width_emu": 1248172,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1182,59 +1180,45 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_2"
+          "italic": false
         },
         {
-          "node_id": "card_title_100",
+          "node_id": "td_92",
           "node_type": "text",
           "rect": {
-            "x": 9121140,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 518159
+            "x": 3099433,
+            "y": 4218431,
+            "w": 6150573,
+            "h": 633984
+          },
+          "text_content": "APAC and EMEA expansion",
+          "lines": [
+            {
+              "text": "APAC and EMEA expansion",
+              "width_emu": 5392651,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_93",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 2093593,
+            "h": 633984
           },
           "text_content": "Analytics",
           "lines": [
             {
               "text": "Analytics",
-              "width_emu": 1919908,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_3"
-        },
-        {
-          "node_id": "card_body_101",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "Customer and usage insights.",
-          "lines": [
-            {
-              "text": "Customer",
-              "width_emu": 1871625,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "and usage",
-              "width_emu": 2016894,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "insights.",
-              "width_emu": 1584040,
+              "width_emu": 1727833,
               "height_emu": 518160,
               "overflows": false
             }
@@ -1242,13 +1226,35 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_3"
+          "italic": false
+        },
+        {
+          "node_id": "td_94",
+          "node_type": "text",
+          "rect": {
+            "x": 3099433,
+            "y": 5126735,
+            "w": 6150573,
+            "h": 633984
+          },
+          "text_content": "Customer and usage insights",
+          "lines": [
+            {
+              "text": "Customer and usage insights",
+              "width_emu": 5592527,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_102",
+          "node_id": "chrome_pagenum_95",
           "node_type": "text",
           "rect": {
             "x": 11186160,

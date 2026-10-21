@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_396",
+          "node_id": "title_372",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#F2B705"
         },
         {
-          "node_id": "nc_circle_397",
+          "node_id": "nc_circle_373",
           "node_type": "ellipse",
           "rect": {
             "x": 3645408,
@@ -41,10 +41,10 @@
             "h": 4901184
           },
           "group_id": "nested",
-          "fill_color": "#9A9A9A"
+          "fill_color": "#1A1A2E"
         },
         {
-          "node_id": "nc_circle_398",
+          "node_id": "nc_circle_374",
           "node_type": "ellipse",
           "rect": {
             "x": 4462272,
@@ -56,7 +56,7 @@
           "fill_color": "#F2B705"
         },
         {
-          "node_id": "nc_circle_399",
+          "node_id": "nc_circle_375",
           "node_type": "ellipse",
           "rect": {
             "x": 5279136,
@@ -65,10 +65,10 @@
             "h": 1633728
           },
           "group_id": "nested",
-          "fill_color": "#0B3D2E"
+          "fill_color": "#1A1A2E"
         },
         {
-          "node_id": "nc_value_400",
+          "node_id": "nc_value_376",
           "node_type": "text",
           "rect": {
             "x": 4577329,
@@ -94,7 +94,7 @@
           "align": "center"
         },
         {
-          "node_id": "nc_label_401",
+          "node_id": "nc_label_377",
           "node_type": "text",
           "rect": {
             "x": 4017676,
@@ -120,7 +120,7 @@
           "align": "center"
         },
         {
-          "node_id": "nc_value_402",
+          "node_id": "nc_value_378",
           "node_type": "text",
           "rect": {
             "x": 4840583,
@@ -146,7 +146,7 @@
           "align": "center"
         },
         {
-          "node_id": "nc_label_403",
+          "node_id": "nc_label_379",
           "node_type": "text",
           "rect": {
             "x": 4554990,
@@ -172,7 +172,7 @@
           "align": "center"
         },
         {
-          "node_id": "nc_value_404",
+          "node_id": "nc_value_380",
           "node_type": "text",
           "rect": {
             "x": 5296524,
@@ -198,7 +198,7 @@
           "align": "center"
         },
         {
-          "node_id": "nc_label_405",
+          "node_id": "nc_label_381",
           "node_type": "text",
           "rect": {
             "x": 5307493,
@@ -227,7 +227,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_406",
+          "node_id": "chrome_pagenum_382",
           "node_type": "text",
           "rect": {
             "x": 11186160,

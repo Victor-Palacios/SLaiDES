@@ -13,6 +13,7 @@ import math
 from dataclasses import dataclass, field
 from typing import Literal, Optional
 
+from slidekit.emit.colors import slide_colors
 from slidekit.ir.models import DeckIR
 from slidekit.layout.models import Rect, ResolvedDeck, ResolvedNode, ResolvedSlide
 from slidekit.metrics.constants import (
@@ -40,7 +41,7 @@ TIMELINE_BALANCE_LINE_SLACK = 0
 # fewer words, never a smaller font (the 32pt floor is not negotiable).
 #
 # Some slots are physically too narrow to hold a readable single line: the
-# timeline/card-grid/process-steps columns are under 3 inches wide, where one line
+# timeline/process-steps columns are under 3 inches wide, where one line
 # is roughly ten characters. Holding those to one line would cap a description at
 # a single word, and widening the box is not an option — copy is fitted to proven
 # geometry, not the reverse. So a slot whose one-line capacity falls below this
@@ -100,6 +101,9 @@ def lint(deck: DeckIR, resolved: ResolvedDeck) -> list[LintIssue]:
     # Cross-slide warnings.
     issues.extend(_check_cross_slide(resolved, deck))
 
+    # E_CLOSING_QUESTION — the deck ends on a rhetorical question slide.
+    issues.extend(_check_closing_slide(deck))
+
     return issues
 
 
@@ -130,6 +134,9 @@ def _check_slide(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
 
     # E_MONOCHROME — the slide renders with no colour at all.
     issues.extend(_check_monochrome(slide, deck))
+
+    # E_COLOR_COUNT — the slide paints more than three colours.
+    issues.extend(_check_color_count(slide, deck))
 
     # E_OVERLAP — non-chrome nodes intersect.
     content_nodes = [n for n in slide.nodes if not n.is_chrome]
@@ -546,3 +553,61 @@ def _check_cross_slide(resolved: ResolvedDeck, deck: DeckIR) -> list[LintIssue]:
             ))
 
     return issues
+
+
+# Operator rule (2026-09-05, enforced 2026-10-21): a slide paints at most three
+# colours, counting its background — "a white background with blue and black text
+# is the max". Grey captions, a second accent and the like are a fourth colour.
+# Chrome (page number, Source link) and image pixels do not count; see
+# slidekit.emit.colors.slide_colors, which shares the emitters' own colour logic.
+MAX_SLIDE_COLOURS = 3
+
+
+def _check_color_count(slide: ResolvedSlide, deck: DeckIR) -> list[LintIssue]:
+    """E_COLOR_COUNT — more than MAX_SLIDE_COLOURS distinct colours on one slide."""
+    colours = slide_colors(slide, deck.theme.palette)
+    if len(colours) <= MAX_SLIDE_COLOURS:
+        return []
+    return [LintIssue(
+        code="E_COLOR_COUNT",
+        severity="error",
+        slide=slide.slide_index,
+        node_path=f"slide[{slide.slide_index}]",
+        message=(
+            f"Slide {slide.slide_index} ({slide.component}) paints {len(colours)} "
+            f"colours ({', '.join(sorted(colours))}); at most {MAX_SLIDE_COLOURS} are "
+            f"allowed, counting the background."
+        ),
+        suggested_fix=(
+            "Collapse palette roles onto each other — `primary` onto `accent`, `muted` "
+            "onto `text` — so the slide uses only its background, one ink and one "
+            "accent. Do not reach for a grey or a second accent."
+        ),
+    )]
+
+
+
+# Operator rule (2026-10-21): "don't end on these kinds of useless slides" — a deck
+# never closes on a bare question slide ("What would you draw first?"). It ends on
+# its last real content: a takeaway, a next step, a checklist. An opening or
+# mid-deck question is fine; only the final slide is held to this. A one-slide
+# deck is a component specimen, not a deck with an ending, so it is exempt.
+def _check_closing_slide(deck: DeckIR) -> list[LintIssue]:
+    """E_CLOSING_QUESTION — the last slide of a multi-slide deck is a question."""
+    if len(deck.slides) < 2 or deck.slides[-1].component != "question":
+        return []
+    last = len(deck.slides) - 1
+    return [LintIssue(
+        code="E_CLOSING_QUESTION",
+        severity="error",
+        slide=last,
+        node_path=f"slide[{last}]",
+        message=(
+            f"The deck ends on a question slide (slide {last}). A closing rhetorical "
+            f"question adds nothing; the deck must end on its last real content."
+        ),
+        suggested_fix=(
+            "Delete the closing question, or move it earlier in the deck, so the "
+            "final slide is a takeaway, a next step or a checklist."
+        ),
+    )]

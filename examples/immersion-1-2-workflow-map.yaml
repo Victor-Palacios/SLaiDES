@@ -420,24 +420,17 @@ slides:
       Third objective: every box on that diagram gets annotated with what it
       actually needs to run.
 
-  - component: card-grid
+  - component: table-slide
     title: "Four Kinds of Need"
-    cards:
-      - icon: "file"
-        title: "Data"
-        body: "Something must be supplied"
-      - icon: "wrench"
-        title: "Tool"
-        body: "Code, API, or model call"
-      - icon: "loop"
-        title: "Routine"
-        body: "It runs on a schedule"
-      - icon: "users"
-        title: "Human"
-        body: "A person decides"
+    headers: ["Need", "What it means"]
+    rows:
+      - ["Data", "Something must be supplied"]
+      - ["Tool", "Code, API, or model call"]
+      - ["Routine", "It runs on a schedule"]
+      - ["Human", "A person decides"]
     notes: >-
-      There are four kinds of need. Data, meaning something must be supplied. A
-      tool — code, an API, or a model call. A routine, meaning it runs on a
+      There are four kinds of need. Data, meaning something must be supplied.
+      A tool — code, an API, or a model call. A routine, meaning it runs on a
       schedule. Or a human, where a person decides.
 
   - component: bullet-list
@@ -638,9 +631,3 @@ slides:
     notes: >-
       Next session we give every step one owner, run the workstreams in
       parallel, and put the board in GitHub.
-
-  - component: question
-    question: "Which box comes last?"
-    notes: >-
-      One question to take with you: which box comes last? If two people answer
-      differently, your map is not finished.

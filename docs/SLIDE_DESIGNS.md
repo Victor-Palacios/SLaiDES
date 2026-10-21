@@ -103,7 +103,7 @@ Legend: ✓ = already shipped in v1.  Slots use the existing typed slot vocabula
 | # | key | required keys | use |
 |---|---|---|---|
 | 33 | ✓ `comparison-matrix` | `options[]`, `criteria[]`, `cells[][]` (+`highlights`) | features × options grid |
-| 34 | `card-grid` ✓ | `cards[]` = {title,body,icon?} | grid of short cards |
+| 34 | ~~`card-grid`~~ | _(retired 2026-10-21, FB-117)_ | operator disliked the format; peer items go in `table-slide`, or `icon-text-rows` for three or fewer |
 
 ### H. Visual & image
 | # | key | required keys | use |

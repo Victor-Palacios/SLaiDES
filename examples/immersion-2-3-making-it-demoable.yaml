@@ -378,17 +378,14 @@ slides:
       Supabase is a hosted Postgres database that also gives you sign-in and file
       storage, reachable straight from a web page.
 
-  - component: card-grid
+  - component: table-slide
     title: "What You Get"
-    cards:
-      - title: "Database"
-        body: "Rows your page can write"
-      - title: "Auth"
-        body: "Sign-in you did not build"
-      - title: "Storage"
-        body: "Files people upload"
-      - title: "API"
-        body: "All of it, over HTTPS"
+    headers: ["Piece", "What it gives you"]
+    rows:
+      - ["Database", "Rows your page can write"]
+      - ["Auth", "Sign-in you did not build"]
+      - ["Storage", "Files people upload"]
+      - ["API", "All of it, over HTTPS"]
     notes: >-
       Four things: a database your page can write rows to, sign-in you did not
       have to build, storage for files people upload, and an HTTPS API that

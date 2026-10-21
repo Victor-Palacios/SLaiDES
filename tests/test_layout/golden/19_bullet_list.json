@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_188",
+          "node_id": "title_171",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -32,7 +32,7 @@
           "text_color": "#E8743B"
         },
         {
-          "node_id": "bl_item_189",
+          "node_id": "bl_item_172",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -55,7 +55,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_190",
+          "node_id": "bl_item_173",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -78,7 +78,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_191",
+          "node_id": "bl_item_174",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -103,7 +103,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_192",
+          "node_id": "chrome_pagenum_175",
           "node_type": "text",
           "rect": {
             "x": 11186160,

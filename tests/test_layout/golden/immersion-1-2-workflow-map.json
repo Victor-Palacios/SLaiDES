@@ -8,7 +8,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1857",
+          "node_id": "title_1915",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -32,7 +32,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "subtitle_1858",
+          "node_id": "subtitle_1916",
           "node_type": "text",
           "rect": {
             "x": 914400,
@@ -65,7 +65,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "value_1859",
+          "node_id": "value_1917",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -91,7 +91,7 @@
           "align": "center"
         },
         {
-          "node_id": "rule_1860",
+          "node_id": "rule_1918",
           "node_type": "box",
           "rect": {
             "x": 5547360,
@@ -103,7 +103,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "label_1861",
+          "node_id": "label_1919",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -127,7 +127,7 @@
           "align": "center"
         },
         {
-          "node_id": "context_1862",
+          "node_id": "context_1920",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -148,13 +148,13 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "text_color": "#5B6B82",
+          "text_color": "#0A2240",
           "align": "center"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1863",
+          "node_id": "chrome_pagenum_1921",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -188,7 +188,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1864",
+          "node_id": "title_1922",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -213,7 +213,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "agenda_rule_1865",
+          "node_id": "agenda_rule_1923",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -225,7 +225,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "ag_num_1866",
+          "node_id": "ag_num_1924",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -250,7 +250,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "ag_item_1867",
+          "node_id": "ag_item_1925",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -274,7 +274,7 @@
           "group_id": "agenda_0"
         },
         {
-          "node_id": "ag_num_1868",
+          "node_id": "ag_num_1926",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -299,7 +299,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "ag_item_1869",
+          "node_id": "ag_item_1927",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -323,7 +323,7 @@
           "group_id": "agenda_1"
         },
         {
-          "node_id": "ag_num_1870",
+          "node_id": "ag_num_1928",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -348,7 +348,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "ag_item_1871",
+          "node_id": "ag_item_1929",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -372,7 +372,7 @@
           "group_id": "agenda_2"
         },
         {
-          "node_id": "ag_num_1872",
+          "node_id": "ag_num_1930",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -397,7 +397,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "ag_item_1873",
+          "node_id": "ag_item_1931",
           "node_type": "text",
           "rect": {
             "x": 1371600,
@@ -423,7 +423,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1874",
+          "node_id": "chrome_pagenum_1932",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -457,7 +457,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_1876",
+          "node_id": "accent_bar_1934",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -468,7 +468,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "question_1875",
+          "node_id": "question_1933",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -493,7 +493,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1877",
+          "node_id": "chrome_pagenum_1935",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -527,7 +527,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1878",
+          "node_id": "title_1936",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -551,7 +551,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "vs_value_1879",
+          "node_id": "vs_value_1937",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -575,7 +575,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_label_1880",
+          "node_id": "vs_label_1938",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -599,7 +599,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_value_1881",
+          "node_id": "vs_value_1939",
           "node_type": "text",
           "rect": {
             "x": 6941820,
@@ -623,7 +623,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_label_1882",
+          "node_id": "vs_label_1940",
           "node_type": "text",
           "rect": {
             "x": 6941820,
@@ -647,7 +647,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_text_1883",
+          "node_id": "vs_text_1941",
           "node_type": "text",
           "rect": {
             "x": 5524500,
@@ -674,7 +674,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1884",
+          "node_id": "chrome_pagenum_1942",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -708,7 +708,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1885",
+          "node_id": "title_1943",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -732,7 +732,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_num_1886",
+          "node_id": "ps_num_1944",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -754,22 +754,22 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_rule_1887",
+          "node_id": "ps_rule_1945",
           "node_type": "box",
           "rect": {
             "x": 457200,
             "y": 2194560,
-            "w": 784098,
+            "w": 593303,
             "h": 54864
           },
           "group_id": "pstep_0",
-          "fill_color": "#123A6B"
+          "fill_color": "#0072CE"
         },
         {
-          "node_id": "ps_label_1888",
+          "node_id": "ps_label_1946",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -791,10 +791,10 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_body_1889",
+          "node_id": "ps_body_1947",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -824,7 +824,7 @@
           "group_id": "pstep_0"
         },
         {
-          "node_id": "ps_num_1890",
+          "node_id": "ps_num_1948",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -846,22 +846,22 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_rule_1891",
+          "node_id": "ps_rule_1949",
           "node_type": "box",
           "rect": {
             "x": 3345180,
             "y": 2194560,
-            "w": 784098,
+            "w": 593303,
             "h": 54864
           },
           "group_id": "pstep_1",
-          "fill_color": "#123A6B"
+          "fill_color": "#0072CE"
         },
         {
-          "node_id": "ps_label_1892",
+          "node_id": "ps_label_1950",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -883,10 +883,10 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_body_1893",
+          "node_id": "ps_body_1951",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -916,7 +916,7 @@
           "group_id": "pstep_1"
         },
         {
-          "node_id": "ps_num_1894",
+          "node_id": "ps_num_1952",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -938,22 +938,22 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_rule_1895",
+          "node_id": "ps_rule_1953",
           "node_type": "box",
           "rect": {
             "x": 6233160,
             "y": 2194560,
-            "w": 784098,
+            "w": 593303,
             "h": 54864
           },
           "group_id": "pstep_2",
-          "fill_color": "#123A6B"
+          "fill_color": "#0072CE"
         },
         {
-          "node_id": "ps_label_1896",
+          "node_id": "ps_label_1954",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -975,10 +975,10 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_body_1897",
+          "node_id": "ps_body_1955",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -1008,7 +1008,7 @@
           "group_id": "pstep_2"
         },
         {
-          "node_id": "ps_num_1898",
+          "node_id": "ps_num_1956",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1030,22 +1030,22 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_3",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_rule_1899",
+          "node_id": "ps_rule_1957",
           "node_type": "box",
           "rect": {
             "x": 9121140,
             "y": 2194560,
-            "w": 784098,
+            "w": 593303,
             "h": 54864
           },
           "group_id": "pstep_3",
-          "fill_color": "#123A6B"
+          "fill_color": "#0072CE"
         },
         {
-          "node_id": "ps_label_1900",
+          "node_id": "ps_label_1958",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1067,10 +1067,10 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_3",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_body_1901",
+          "node_id": "ps_body_1959",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -1102,7 +1102,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1902",
+          "node_id": "chrome_pagenum_1960",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1136,7 +1136,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_1905",
+          "node_id": "accent_bar_1963",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -1147,7 +1147,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "sec_num_1903",
+          "node_id": "sec_num_1961",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -1171,7 +1171,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "sec_title_1904",
+          "node_id": "sec_title_1962",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -1197,7 +1197,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1906",
+          "node_id": "chrome_pagenum_1964",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1231,7 +1231,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_1909",
+          "node_id": "accent_bar_1967",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -1242,7 +1242,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_1907",
+          "node_id": "term_1965",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -1266,7 +1266,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_1908",
+          "node_id": "def_1966",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -1291,7 +1291,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1910",
+          "node_id": "chrome_pagenum_1968",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1325,7 +1325,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_1913",
+          "node_id": "accent_bar_1971",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -1336,7 +1336,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_1911",
+          "node_id": "term_1969",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -1360,7 +1360,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_1912",
+          "node_id": "def_1970",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -1385,7 +1385,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1914",
+          "node_id": "chrome_pagenum_1972",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1419,7 +1419,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1915",
+          "node_id": "title_1973",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1443,7 +1443,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "heading_1916",
+          "node_id": "heading_1974",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1467,7 +1467,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "body_1917",
+          "node_id": "body_1975",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1491,7 +1491,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "heading_1918",
+          "node_id": "heading_1976",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1515,7 +1515,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "body_1919",
+          "node_id": "body_1977",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1539,7 +1539,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "heading_1920",
+          "node_id": "heading_1978",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1563,7 +1563,7 @@
           "group_id": "itr_2"
         },
         {
-          "node_id": "body_1921",
+          "node_id": "body_1979",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1589,7 +1589,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1922",
+          "node_id": "chrome_pagenum_1980",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1623,7 +1623,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1923",
+          "node_id": "title_1981",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1647,7 +1647,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_num_1924",
+          "node_id": "step_num_1982",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1669,10 +1669,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_1925",
+          "node_id": "step_head_1983",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1694,10 +1694,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_1926",
+          "node_id": "step_body_1984",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1721,7 +1721,7 @@
           "group_id": "step_0"
         },
         {
-          "node_id": "step_num_1927",
+          "node_id": "step_num_1985",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1743,10 +1743,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_1928",
+          "node_id": "step_head_1986",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1768,10 +1768,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_1929",
+          "node_id": "step_body_1987",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1795,7 +1795,7 @@
           "group_id": "step_1"
         },
         {
-          "node_id": "step_num_1930",
+          "node_id": "step_num_1988",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1817,10 +1817,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_1931",
+          "node_id": "step_head_1989",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1842,10 +1842,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_1932",
+          "node_id": "step_body_1990",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -1871,7 +1871,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1933",
+          "node_id": "chrome_pagenum_1991",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -1905,7 +1905,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1934",
+          "node_id": "title_1992",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1929,7 +1929,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_1935",
+          "node_id": "bl_item_1993",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1952,7 +1952,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_1936",
+          "node_id": "bl_item_1994",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -1975,7 +1975,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_1937",
+          "node_id": "bl_item_1995",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2000,7 +2000,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1938",
+          "node_id": "chrome_pagenum_1996",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2034,7 +2034,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1939",
+          "node_id": "title_1997",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2058,7 +2058,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_1940",
+          "node_id": "th_1998",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2080,10 +2080,10 @@
           "bold": true,
           "italic": false,
           "group_id": "table_head",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "th_1941",
+          "node_id": "th_1999",
           "node_type": "text",
           "rect": {
             "x": 4611998,
@@ -2105,10 +2105,10 @@
           "bold": true,
           "italic": false,
           "group_id": "table_head",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "table_rule_1942",
+          "node_id": "table_rule_2000",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -2120,7 +2120,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_1943",
+          "node_id": "td_2001",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2143,7 +2143,7 @@
           "italic": false
         },
         {
-          "node_id": "td_1944",
+          "node_id": "td_2002",
           "node_type": "text",
           "rect": {
             "x": 4611998,
@@ -2166,7 +2166,7 @@
           "italic": false
         },
         {
-          "node_id": "td_1945",
+          "node_id": "td_2003",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2189,7 +2189,7 @@
           "italic": false
         },
         {
-          "node_id": "td_1946",
+          "node_id": "td_2004",
           "node_type": "text",
           "rect": {
             "x": 4611998,
@@ -2212,7 +2212,7 @@
           "italic": false
         },
         {
-          "node_id": "td_1947",
+          "node_id": "td_2005",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2235,7 +2235,7 @@
           "italic": false
         },
         {
-          "node_id": "td_1948",
+          "node_id": "td_2006",
           "node_type": "text",
           "rect": {
             "x": 4611998,
@@ -2258,7 +2258,7 @@
           "italic": false
         },
         {
-          "node_id": "td_1949",
+          "node_id": "td_2007",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2281,7 +2281,7 @@
           "italic": false
         },
         {
-          "node_id": "td_1950",
+          "node_id": "td_2008",
           "node_type": "text",
           "rect": {
             "x": 4611998,
@@ -2306,7 +2306,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1951",
+          "node_id": "chrome_pagenum_2009",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2340,7 +2340,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1952",
+          "node_id": "title_2010",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2364,7 +2364,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_1953",
+          "node_id": "bl_item_2011",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2387,7 +2387,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_1954",
+          "node_id": "bl_item_2012",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2410,7 +2410,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_1955",
+          "node_id": "bl_item_2013",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2435,7 +2435,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1956",
+          "node_id": "chrome_pagenum_2014",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2469,7 +2469,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1957",
+          "node_id": "title_2015",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2493,7 +2493,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "left_head_1958",
+          "node_id": "left_head_2016",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2514,10 +2514,10 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "right_head_1959",
+          "node_id": "right_head_2017",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -2538,10 +2538,10 @@
           "size_pt": 34.0,
           "bold": true,
           "italic": false,
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "left_item_1960",
+          "node_id": "left_item_2018",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2564,7 +2564,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_1961",
+          "node_id": "right_item_2019",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -2587,7 +2587,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_1962",
+          "node_id": "left_item_2020",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2610,7 +2610,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_1963",
+          "node_id": "right_item_2021",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -2633,7 +2633,7 @@
           "italic": false
         },
         {
-          "node_id": "left_item_1964",
+          "node_id": "left_item_2022",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2656,7 +2656,7 @@
           "italic": false
         },
         {
-          "node_id": "right_item_1965",
+          "node_id": "right_item_2023",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -2681,7 +2681,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1966",
+          "node_id": "chrome_pagenum_2024",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -2715,7 +2715,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "code_dot_1967",
+          "node_id": "code_dot_2025",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -2724,10 +2724,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#FF5F56"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_dot_1968",
+          "node_id": "code_dot_2026",
           "node_type": "box",
           "rect": {
             "x": 713232,
@@ -2736,10 +2736,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#FFBD2E"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_dot_1969",
+          "node_id": "code_dot_2027",
           "node_type": "box",
           "rect": {
             "x": 969264,
@@ -2748,10 +2748,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#27C93F"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_title_1970",
+          "node_id": "code_title_2028",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2774,10 +2774,10 @@
           "italic": false,
           "is_caption": true,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1971",
+          "node_id": "code_run_2029",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2799,10 +2799,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1972",
+          "node_id": "code_run_2030",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2824,10 +2824,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#CE9178"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1973",
+          "node_id": "code_run_2031",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2849,10 +2849,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1974",
+          "node_id": "code_run_2032",
           "node_type": "text",
           "rect": {
             "x": 4463790,
@@ -2877,7 +2877,7 @@
           "text_color": "#569CD6"
         },
         {
-          "node_id": "code_run_1975",
+          "node_id": "code_run_2033",
           "node_type": "text",
           "rect": {
             "x": 5327390,
@@ -2899,10 +2899,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1976",
+          "node_id": "code_run_2034",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2924,10 +2924,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1977",
+          "node_id": "code_run_2035",
           "node_type": "text",
           "rect": {
             "x": 4297648,
@@ -2949,10 +2949,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#C586C0"
+          "text_color": "#569CD6"
         },
         {
-          "node_id": "code_run_1978",
+          "node_id": "code_run_2036",
           "node_type": "text",
           "rect": {
             "x": 5065526,
@@ -2974,10 +2974,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1979",
+          "node_id": "code_run_2037",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -2999,10 +2999,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1980",
+          "node_id": "code_run_2038",
           "node_type": "text",
           "rect": {
             "x": 1513508,
@@ -3027,7 +3027,7 @@
           "text_color": "#569CD6"
         },
         {
-          "node_id": "code_run_1981",
+          "node_id": "code_run_2039",
           "node_type": "text",
           "rect": {
             "x": 2233947,
@@ -3049,10 +3049,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1982",
+          "node_id": "code_run_2040",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3074,22 +3074,22 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_1983",
+          "node_id": "code_run_2041",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 5465057,
-            "w": 423027,
+            "w": 4598921,
             "h": 518159
           },
-          "text_content": "5",
+          "text_content": "5-9 steps. No tools yet.",
           "lines": [
             {
-              "text": "5",
-              "width_emu": 240147,
+              "text": "5-9 steps. No tools yet.",
+              "width_emu": 4416041,
               "height_emu": 518159,
               "overflows": false
             }
@@ -3099,87 +3099,12 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#B5CEA8"
-        },
-        {
-          "node_id": "code_run_1984",
-          "node_type": "text",
-          "rect": {
-            "x": 697347,
-            "y": 5465057,
-            "w": 326673,
-            "h": 518159
-          },
-          "text_content": "-",
-          "lines": [
-            {
-              "text": "-",
-              "width_emu": 143793,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "code_run_1985",
-          "node_type": "text",
-          "rect": {
-            "x": 841139,
-            "y": 5465057,
-            "w": 423027,
-            "h": 518159
-          },
-          "text_content": "9",
-          "lines": [
-            {
-              "text": "9",
-              "width_emu": 240147,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#B5CEA8"
-        },
-        {
-          "node_id": "code_run_1986",
-          "node_type": "text",
-          "rect": {
-            "x": 1081286,
-            "y": 5465057,
-            "w": 3974835,
-            "h": 518159
-          },
-          "text_content": " steps. No tools yet.",
-          "lines": [
-            {
-              "text": " steps. No tools yet.",
-              "width_emu": 3791955,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_1987",
+          "node_id": "chrome_pagenum_2042",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -3214,7 +3139,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_1988",
+          "node_id": "title_2043",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3238,7 +3163,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_num_1989",
+          "node_id": "ps_num_2044",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3260,22 +3185,22 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_rule_1990",
+          "node_id": "ps_rule_2045",
           "node_type": "box",
           "rect": {
             "x": 457200,
             "y": 2194560,
-            "w": 784098,
+            "w": 593303,
             "h": 54864
           },
           "group_id": "pstep_0",
-          "fill_color": "#123A6B"
+          "fill_color": "#0072CE"
         },
         {
-          "node_id": "ps_label_1991",
+          "node_id": "ps_label_2046",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3297,10 +3222,10 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_body_1992",
+          "node_id": "ps_body_2047",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3330,7 +3255,7 @@
           "group_id": "pstep_0"
         },
         {
-          "node_id": "ps_num_1993",
+          "node_id": "ps_num_2048",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -3352,22 +3277,22 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_rule_1994",
+          "node_id": "ps_rule_2049",
           "node_type": "box",
           "rect": {
             "x": 3345180,
             "y": 2194560,
-            "w": 784098,
+            "w": 593303,
             "h": 54864
           },
           "group_id": "pstep_1",
-          "fill_color": "#123A6B"
+          "fill_color": "#0072CE"
         },
         {
-          "node_id": "ps_label_1995",
+          "node_id": "ps_label_2050",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -3389,10 +3314,10 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_body_1996",
+          "node_id": "ps_body_2051",
           "node_type": "text",
           "rect": {
             "x": 3345180,
@@ -3422,7 +3347,7 @@
           "group_id": "pstep_1"
         },
         {
-          "node_id": "ps_num_1997",
+          "node_id": "ps_num_2052",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -3444,22 +3369,22 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_rule_1998",
+          "node_id": "ps_rule_2053",
           "node_type": "box",
           "rect": {
             "x": 6233160,
             "y": 2194560,
-            "w": 784098,
+            "w": 593303,
             "h": 54864
           },
           "group_id": "pstep_2",
-          "fill_color": "#123A6B"
+          "fill_color": "#0072CE"
         },
         {
-          "node_id": "ps_label_1999",
+          "node_id": "ps_label_2054",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -3481,10 +3406,10 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_body_2000",
+          "node_id": "ps_body_2055",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -3520,7 +3445,7 @@
           "group_id": "pstep_2"
         },
         {
-          "node_id": "ps_num_2001",
+          "node_id": "ps_num_2056",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -3542,22 +3467,22 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_3",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_rule_2002",
+          "node_id": "ps_rule_2057",
           "node_type": "box",
           "rect": {
             "x": 9121140,
             "y": 2194560,
-            "w": 784098,
+            "w": 593303,
             "h": 54864
           },
           "group_id": "pstep_3",
-          "fill_color": "#123A6B"
+          "fill_color": "#0072CE"
         },
         {
-          "node_id": "ps_label_2003",
+          "node_id": "ps_label_2058",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -3579,10 +3504,10 @@
           "bold": true,
           "italic": false,
           "group_id": "pstep_3",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "ps_body_2004",
+          "node_id": "ps_body_2059",
           "node_type": "text",
           "rect": {
             "x": 9121140,
@@ -3614,7 +3539,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2005",
+          "node_id": "chrome_pagenum_2060",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -3648,7 +3573,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2006",
+          "node_id": "title_2061",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3672,7 +3597,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2007",
+          "node_id": "bl_item_2062",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3695,7 +3620,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2008",
+          "node_id": "bl_item_2063",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3718,7 +3643,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2009",
+          "node_id": "bl_item_2064",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3741,7 +3666,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2010",
+          "node_id": "bl_item_2065",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3766,7 +3691,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2011",
+          "node_id": "chrome_pagenum_2066",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -3800,7 +3725,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2012",
+          "node_id": "title_2067",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3824,7 +3749,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "lp_head_2013",
+          "node_id": "lp_head_2068",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3849,19 +3774,19 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "lp_rule_2014",
+          "node_id": "lp_rule_2069",
           "node_type": "box",
           "rect": {
-            "x": 548640,
+            "x": 457200,
             "y": 2176271,
-            "w": 1650492,
+            "w": 1295822,
             "h": 54864
           },
           "group_id": "lp_head",
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "rp_head_2015",
+          "node_id": "rp_head_2070",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -3883,22 +3808,22 @@
           "bold": true,
           "italic": false,
           "group_id": "rp_head",
-          "text_color": "#5B6B82"
+          "text_color": "#0A2240"
         },
         {
-          "node_id": "rp_rule_2016",
+          "node_id": "rp_rule_2071",
           "node_type": "box",
           "rect": {
-            "x": 6324600,
+            "x": 6233160,
             "y": 2176271,
-            "w": 1650492,
+            "w": 2135175,
             "h": 54864
           },
           "group_id": "rp_head",
-          "fill_color": "#5B6B82"
+          "fill_color": "#0A2240"
         },
         {
-          "node_id": "lp_item_2017",
+          "node_id": "lp_item_2072",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3922,7 +3847,7 @@
           "group_id": "lp_head"
         },
         {
-          "node_id": "lp_item_2018",
+          "node_id": "lp_item_2073",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3946,7 +3871,7 @@
           "group_id": "lp_head"
         },
         {
-          "node_id": "lp_item_2019",
+          "node_id": "lp_item_2074",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -3970,7 +3895,7 @@
           "group_id": "lp_head"
         },
         {
-          "node_id": "rp_item_2020",
+          "node_id": "rp_item_2075",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -3994,7 +3919,7 @@
           "group_id": "rp_head"
         },
         {
-          "node_id": "rp_item_2021",
+          "node_id": "rp_item_2076",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -4018,7 +3943,7 @@
           "group_id": "rp_head"
         },
         {
-          "node_id": "rp_item_2022",
+          "node_id": "rp_item_2077",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -4044,7 +3969,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2023",
+          "node_id": "chrome_pagenum_2078",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -4078,7 +4003,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_2026",
+          "node_id": "accent_bar_2081",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -4089,7 +4014,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_2024",
+          "node_id": "term_2079",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -4113,7 +4038,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_2025",
+          "node_id": "def_2080",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -4138,7 +4063,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2027",
+          "node_id": "chrome_pagenum_2082",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -4172,7 +4097,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2028",
+          "node_id": "title_2083",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4196,7 +4121,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2029",
+          "node_id": "bl_item_2084",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4219,7 +4144,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2030",
+          "node_id": "bl_item_2085",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4242,7 +4167,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2031",
+          "node_id": "bl_item_2086",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4267,7 +4192,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2032",
+          "node_id": "chrome_pagenum_2087",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -4301,7 +4226,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_2035",
+          "node_id": "accent_bar_2090",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -4312,7 +4237,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "quote_2033",
+          "node_id": "quote_2088",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -4335,7 +4260,7 @@
           "italic": false
         },
         {
-          "node_id": "attrib_2034",
+          "node_id": "attrib_2089",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -4356,12 +4281,12 @@
           "size_pt": 34.0,
           "bold": false,
           "italic": false,
-          "text_color": "#5B6B82"
+          "text_color": "#0A2240"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2036",
+          "node_id": "chrome_pagenum_2091",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -4395,7 +4320,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_2039",
+          "node_id": "accent_bar_2094",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -4406,7 +4331,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "sec_num_2037",
+          "node_id": "sec_num_2092",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -4430,7 +4355,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "sec_title_2038",
+          "node_id": "sec_title_2093",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -4456,7 +4381,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2040",
+          "node_id": "chrome_pagenum_2095",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -4490,7 +4415,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_2043",
+          "node_id": "accent_bar_2098",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -4501,7 +4426,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_2041",
+          "node_id": "term_2096",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -4525,7 +4450,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_2042",
+          "node_id": "def_2097",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -4550,7 +4475,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2044",
+          "node_id": "chrome_pagenum_2099",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -4584,7 +4509,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2045",
+          "node_id": "title_2100",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4608,7 +4533,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "lp_head_2046",
+          "node_id": "lp_head_2101",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4630,22 +4555,22 @@
           "bold": true,
           "italic": false,
           "group_id": "lp_head",
-          "text_color": "#5B6B82"
+          "text_color": "#0A2240"
         },
         {
-          "node_id": "lp_rule_2047",
+          "node_id": "lp_rule_2102",
           "node_type": "box",
           "rect": {
-            "x": 548640,
+            "x": 457200,
             "y": 2176271,
-            "w": 1650492,
+            "w": 2087947,
             "h": 54864
           },
           "group_id": "lp_head",
-          "fill_color": "#5B6B82"
+          "fill_color": "#0A2240"
         },
         {
-          "node_id": "rp_head_2048",
+          "node_id": "rp_head_2103",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -4670,19 +4595,19 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "rp_rule_2049",
+          "node_id": "rp_rule_2104",
           "node_type": "box",
           "rect": {
-            "x": 6324600,
+            "x": 6233160,
             "y": 2176271,
-            "w": 1650492,
+            "w": 1319647,
             "h": 54864
           },
           "group_id": "rp_head",
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "lp_item_2050",
+          "node_id": "lp_item_2105",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4706,7 +4631,7 @@
           "group_id": "lp_head"
         },
         {
-          "node_id": "lp_item_2051",
+          "node_id": "lp_item_2106",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4730,7 +4655,7 @@
           "group_id": "lp_head"
         },
         {
-          "node_id": "lp_item_2052",
+          "node_id": "lp_item_2107",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4754,7 +4679,7 @@
           "group_id": "lp_head"
         },
         {
-          "node_id": "rp_item_2053",
+          "node_id": "rp_item_2108",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -4778,7 +4703,7 @@
           "group_id": "rp_head"
         },
         {
-          "node_id": "rp_item_2054",
+          "node_id": "rp_item_2109",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -4802,7 +4727,7 @@
           "group_id": "rp_head"
         },
         {
-          "node_id": "rp_item_2055",
+          "node_id": "rp_item_2110",
           "node_type": "text",
           "rect": {
             "x": 6233160,
@@ -4828,7 +4753,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2056",
+          "node_id": "chrome_pagenum_2111",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -4862,7 +4787,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2057",
+          "node_id": "title_2112",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4886,7 +4811,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "heading_2058",
+          "node_id": "heading_2113",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4910,7 +4835,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "body_2059",
+          "node_id": "body_2114",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4934,7 +4859,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "heading_2060",
+          "node_id": "heading_2115",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4958,7 +4883,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "body_2061",
+          "node_id": "body_2116",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -4982,7 +4907,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "heading_2062",
+          "node_id": "heading_2117",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5006,7 +4931,7 @@
           "group_id": "itr_2"
         },
         {
-          "node_id": "body_2063",
+          "node_id": "body_2118",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5032,7 +4957,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2064",
+          "node_id": "chrome_pagenum_2119",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -5066,7 +4991,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2065",
+          "node_id": "title_2120",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5090,7 +5015,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_num_2066",
+          "node_id": "step_num_2121",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5112,10 +5037,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_2067",
+          "node_id": "step_head_2122",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -5137,10 +5062,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_2068",
+          "node_id": "step_body_2123",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -5164,7 +5089,7 @@
           "group_id": "step_0"
         },
         {
-          "node_id": "step_num_2069",
+          "node_id": "step_num_2124",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5186,10 +5111,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_2070",
+          "node_id": "step_head_2125",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -5211,10 +5136,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_2071",
+          "node_id": "step_body_2126",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -5238,7 +5163,7 @@
           "group_id": "step_1"
         },
         {
-          "node_id": "step_num_2072",
+          "node_id": "step_num_2127",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5260,10 +5185,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_2073",
+          "node_id": "step_head_2128",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -5285,10 +5210,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_2074",
+          "node_id": "step_body_2129",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -5314,7 +5239,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2075",
+          "node_id": "chrome_pagenum_2130",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -5348,7 +5273,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "code_dot_2076",
+          "node_id": "code_dot_2131",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -5357,10 +5282,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#FF5F56"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_dot_2077",
+          "node_id": "code_dot_2132",
           "node_type": "box",
           "rect": {
             "x": 713232,
@@ -5369,10 +5294,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#FFBD2E"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_dot_2078",
+          "node_id": "code_dot_2133",
           "node_type": "box",
           "rect": {
             "x": 969264,
@@ -5381,10 +5306,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#27C93F"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_title_2079",
+          "node_id": "code_title_2134",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5407,10 +5332,10 @@
           "italic": false,
           "is_caption": true,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2080",
+          "node_id": "code_run_2135",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5432,10 +5357,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2081",
+          "node_id": "code_run_2136",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5457,10 +5382,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2082",
+          "node_id": "code_run_2137",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5482,10 +5407,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2083",
+          "node_id": "code_run_2138",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5507,10 +5432,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2084",
+          "node_id": "code_run_2139",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5532,10 +5457,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2085",
+          "node_id": "code_run_2140",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5557,10 +5482,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2086",
+          "node_id": "code_run_2141",
           "node_type": "text",
           "rect": {
             "x": 4009219,
@@ -5582,10 +5507,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#C586C0"
+          "text_color": "#569CD6"
         },
         {
-          "node_id": "code_run_2087",
+          "node_id": "code_run_2142",
           "node_type": "text",
           "rect": {
             "x": 4777098,
@@ -5607,10 +5532,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2088",
+          "node_id": "code_run_2143",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5632,12 +5557,12 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2089",
+          "node_id": "chrome_pagenum_2144",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -5672,7 +5597,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2090",
+          "node_id": "title_2145",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5696,7 +5621,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2091",
+          "node_id": "bl_item_2146",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5719,7 +5644,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2092",
+          "node_id": "bl_item_2147",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5742,7 +5667,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2093",
+          "node_id": "bl_item_2148",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5765,7 +5690,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2094",
+          "node_id": "bl_item_2149",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5790,7 +5715,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2095",
+          "node_id": "chrome_pagenum_2150",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -5824,7 +5749,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2096",
+          "node_id": "title_2151",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5848,7 +5773,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2097",
+          "node_id": "bl_item_2152",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5871,7 +5796,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2098",
+          "node_id": "bl_item_2153",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5894,7 +5819,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2099",
+          "node_id": "bl_item_2154",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5919,7 +5844,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2100",
+          "node_id": "chrome_pagenum_2155",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -5953,7 +5878,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2101",
+          "node_id": "title_2156",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -5977,7 +5902,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2102",
+          "node_id": "bl_item_2157",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6000,7 +5925,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2103",
+          "node_id": "bl_item_2158",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6023,7 +5948,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2104",
+          "node_id": "bl_item_2159",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6048,7 +5973,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2105",
+          "node_id": "chrome_pagenum_2160",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -6082,7 +6007,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2106",
+          "node_id": "title_2161",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6106,7 +6031,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2107",
+          "node_id": "bl_item_2162",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6129,7 +6054,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2108",
+          "node_id": "bl_item_2163",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6152,7 +6077,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2109",
+          "node_id": "bl_item_2164",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6177,7 +6102,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2110",
+          "node_id": "chrome_pagenum_2165",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -6211,7 +6136,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2111",
+          "node_id": "title_2166",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6235,7 +6160,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "vs_value_2112",
+          "node_id": "vs_value_2167",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6259,7 +6184,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_label_2113",
+          "node_id": "vs_label_2168",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6283,7 +6208,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_value_2114",
+          "node_id": "vs_value_2169",
           "node_type": "text",
           "rect": {
             "x": 6941820,
@@ -6307,7 +6232,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_label_2115",
+          "node_id": "vs_label_2170",
           "node_type": "text",
           "rect": {
             "x": 6941820,
@@ -6331,7 +6256,7 @@
           "align": "center"
         },
         {
-          "node_id": "vs_text_2116",
+          "node_id": "vs_text_2171",
           "node_type": "text",
           "rect": {
             "x": 5524500,
@@ -6358,7 +6283,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2117",
+          "node_id": "chrome_pagenum_2172",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -6392,7 +6317,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_2120",
+          "node_id": "accent_bar_2175",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -6403,7 +6328,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "sec_num_2118",
+          "node_id": "sec_num_2173",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -6427,7 +6352,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "sec_title_2119",
+          "node_id": "sec_title_2174",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -6453,7 +6378,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2121",
+          "node_id": "chrome_pagenum_2176",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -6482,12 +6407,12 @@
     {
       "slide_index": 34,
       "page_number": 35,
-      "component": "card-grid",
+      "component": "table-slide",
       "canvas_w": 12192000,
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2122",
+          "node_id": "title_2177",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6511,55 +6436,81 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "card_title_2123",
+          "node_id": "th_2178",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1499616,
-            "w": 2613660,
+            "w": 1854078,
             "h": 518159
+          },
+          "text_content": "Need",
+          "lines": [
+            {
+              "text": "Need",
+              "width_emu": 1055886,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_2179",
+          "node_type": "text",
+          "rect": {
+            "x": 2859918,
+            "y": 1499616,
+            "w": 5814494,
+            "h": 518159
+          },
+          "text_content": "What it means",
+          "lines": [
+            {
+              "text": "What it means",
+              "width_emu": 2927090,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "table_rule_2180",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 8217212,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_2181",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 1854078,
+            "h": 633984
           },
           "text_content": "Data",
           "lines": [
             {
               "text": "Data",
-              "width_emu": 935918,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_0"
-        },
-        {
-          "node_id": "card_body_2124",
-          "node_type": "text",
-          "rect": {
-            "x": 457200,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "Something must be supplied",
-          "lines": [
-            {
-              "text": "Something",
-              "width_emu": 2064333,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "must be",
-              "width_emu": 1535968,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "supplied",
-              "width_emu": 1608497,
+              "width_emu": 912093,
               "height_emu": 518160,
               "overflows": false
             }
@@ -6567,59 +6518,45 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_0"
+          "italic": false
         },
         {
-          "node_id": "card_title_2125",
+          "node_id": "td_2182",
           "node_type": "text",
           "rect": {
-            "x": 3345180,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 518159
+            "x": 2859918,
+            "y": 2401823,
+            "w": 5814494,
+            "h": 633984
+          },
+          "text_content": "Something must be supplied",
+          "lines": [
+            {
+              "text": "Something must be supplied",
+              "width_emu": 5448734,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_2183",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3310127,
+            "w": 1854078,
+            "h": 633984
           },
           "text_content": "Tool",
           "lines": [
             {
               "text": "Tool",
-              "width_emu": 879202,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_1"
-        },
-        {
-          "node_id": "card_body_2126",
-          "node_type": "text",
-          "rect": {
-            "x": 3345180,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "Code, API, or model call",
-          "lines": [
-            {
-              "text": "Code, API,",
-              "width_emu": 2064333,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "or model",
-              "width_emu": 1679972,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "call",
-              "width_emu": 647911,
+              "width_emu": 792125,
               "height_emu": 518160,
               "overflows": false
             }
@@ -6627,106 +6564,44 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_1"
+          "italic": false
         },
         {
-          "node_id": "card_title_2127",
+          "node_id": "td_2184",
           "node_type": "text",
           "rect": {
-            "x": 6233160,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 518159
+            "x": 2859918,
+            "y": 3310127,
+            "w": 5814494,
+            "h": 633984
+          },
+          "text_content": "Code, API, or model call",
+          "lines": [
+            {
+              "text": "Code, API, or model call",
+              "width_emu": 4632151,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_2185",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4218431,
+            "w": 1854078,
+            "h": 633984
           },
           "text_content": "Routine",
           "lines": [
             {
               "text": "Routine",
-              "width_emu": 1607021,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_2"
-        },
-        {
-          "node_id": "card_body_2128",
-          "node_type": "text",
-          "rect": {
-            "x": 6233160,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "It runs on a schedule",
-          "lines": [
-            {
-              "text": "It runs on a",
-              "width_emu": 2160265,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "schedule",
-              "width_emu": 1728465,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "card_2"
-        },
-        {
-          "node_id": "card_title_2129",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 1499616,
-            "w": 2613660,
-            "h": 518159
-          },
-          "text_content": "Human",
-          "lines": [
-            {
-              "text": "Human",
-              "width_emu": 1463439,
-              "height_emu": 518160,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": true,
-          "italic": false,
-          "group_id": "card_3"
-        },
-        {
-          "node_id": "card_body_2130",
-          "node_type": "text",
-          "rect": {
-            "x": 9121140,
-            "y": 2154935,
-            "w": 2613660,
-            "h": 3605785
-          },
-          "text_content": "A person decides",
-          "lines": [
-            {
-              "text": "A person",
-              "width_emu": 1704429,
-              "height_emu": 518160,
-              "overflows": false
-            },
-            {
-              "text": "decides",
               "width_emu": 1488318,
               "height_emu": 518160,
               "overflows": false
@@ -6735,13 +6610,81 @@
           "font": "arial",
           "size_pt": 34.0,
           "bold": false,
-          "italic": false,
-          "group_id": "card_3"
+          "italic": false
+        },
+        {
+          "node_id": "td_2186",
+          "node_type": "text",
+          "rect": {
+            "x": 2859918,
+            "y": 4218431,
+            "w": 5814494,
+            "h": 633984
+          },
+          "text_content": "It runs on a schedule",
+          "lines": [
+            {
+              "text": "It runs on a schedule",
+              "width_emu": 4008698,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_2187",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 1854078,
+            "h": 633984
+          },
+          "text_content": "Human",
+          "lines": [
+            {
+              "text": "Human",
+              "width_emu": 1391965,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_2188",
+          "node_type": "text",
+          "rect": {
+            "x": 2859918,
+            "y": 5126735,
+            "w": 5814494,
+            "h": 633984
+          },
+          "text_content": "A person decides",
+          "lines": [
+            {
+              "text": "A person decides",
+              "width_emu": 3312716,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2131",
+          "node_id": "chrome_pagenum_2189",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -6775,7 +6718,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2132",
+          "node_id": "title_2190",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6799,7 +6742,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2133",
+          "node_id": "bl_item_2191",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6822,7 +6765,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2134",
+          "node_id": "bl_item_2192",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6845,7 +6788,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2135",
+          "node_id": "bl_item_2193",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -6870,7 +6813,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2136",
+          "node_id": "chrome_pagenum_2194",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -6904,7 +6847,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_2139",
+          "node_id": "accent_bar_2197",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -6915,7 +6858,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_2137",
+          "node_id": "term_2195",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -6939,7 +6882,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_2138",
+          "node_id": "def_2196",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -6964,7 +6907,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2140",
+          "node_id": "chrome_pagenum_2198",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -6998,7 +6941,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2141",
+          "node_id": "title_2199",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7022,7 +6965,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2142",
+          "node_id": "bl_item_2200",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7045,7 +6988,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2143",
+          "node_id": "bl_item_2201",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7068,7 +7011,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2144",
+          "node_id": "bl_item_2202",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7093,7 +7036,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2145",
+          "node_id": "chrome_pagenum_2203",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -7127,7 +7070,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "code_title_2146",
+          "node_id": "code_title_2204",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7150,22 +7093,22 @@
           "italic": false,
           "is_caption": true,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2147",
+          "node_id": "code_run_2205",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 1371600,
-            "w": 3710863,
+            "w": 4551271,
             "h": 518159
           },
-          "text_content": "Every weekday at ",
+          "text_content": "Every weekday at 8:00",
           "lines": [
             {
-              "text": "Every weekday at ",
-              "width_emu": 3527983,
+              "text": "Every weekday at 8:00",
+              "width_emu": 4368391,
               "height_emu": 518159,
               "overflows": false
             }
@@ -7175,97 +7118,22 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2148",
-          "node_type": "text",
-          "rect": {
-            "x": 3985183,
-            "y": 1371600,
-            "w": 423027,
-            "h": 518159
-          },
-          "text_content": "8",
-          "lines": [
-            {
-              "text": "8",
-              "width_emu": 240147,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#B5CEA8"
-        },
-        {
-          "node_id": "code_run_2149",
-          "node_type": "text",
-          "rect": {
-            "x": 4225330,
-            "y": 1371600,
-            "w": 302848,
-            "h": 518159
-          },
-          "text_content": ":",
-          "lines": [
-            {
-              "text": ":",
-              "width_emu": 119968,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "code_run_2150",
-          "node_type": "text",
-          "rect": {
-            "x": 4345298,
-            "y": 1371600,
-            "w": 663173,
-            "h": 518159
-          },
-          "text_content": "00",
-          "lines": [
-            {
-              "text": "00",
-              "width_emu": 480293,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#B5CEA8"
-        },
-        {
-          "node_id": "code_run_2151",
+          "node_id": "code_run_2206",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2407918,
-            "w": 423027,
+            "w": 3615142,
             "h": 518159
           },
-          "text_content": "1",
+          "text_content": "1. Read new files ",
           "lines": [
             {
-              "text": "1",
-              "width_emu": 240147,
+              "text": "1. Read new files ",
+              "width_emu": 3432262,
               "height_emu": 518159,
               "overflows": false
             }
@@ -7275,35 +7143,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#B5CEA8"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2152",
-          "node_type": "text",
-          "rect": {
-            "x": 697347,
-            "y": 2407918,
-            "w": 3374995,
-            "h": 518159
-          },
-          "text_content": ". Read new files ",
-          "lines": [
-            {
-              "text": ". Read new files ",
-              "width_emu": 3192115,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "code_run_2153",
+          "node_id": "code_run_2207",
           "node_type": "text",
           "rect": {
             "x": 3889462,
@@ -7328,7 +7171,7 @@
           "text_color": "#569CD6"
         },
         {
-          "node_id": "code_run_2154",
+          "node_id": "code_run_2208",
           "node_type": "text",
           "rect": {
             "x": 4225541,
@@ -7350,22 +7193,22 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2155",
+          "node_id": "code_run_2209",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 2926077,
-            "w": 423027,
+            "w": 5919832,
             "h": 518159
           },
-          "text_content": "2",
+          "text_content": "2. Score each against the role",
           "lines": [
             {
-              "text": "2",
-              "width_emu": 240147,
+              "text": "2. Score each against the role",
+              "width_emu": 5736952,
               "height_emu": 518159,
               "overflows": false
             }
@@ -7375,47 +7218,22 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#B5CEA8"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2156",
-          "node_type": "text",
-          "rect": {
-            "x": 697347,
-            "y": 2926077,
-            "w": 5679686,
-            "h": 518159
-          },
-          "text_content": ". Score each against the role",
-          "lines": [
-            {
-              "text": ". Score each against the role",
-              "width_emu": 5496806,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "code_run_2157",
+          "node_id": "code_run_2210",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3444236,
-            "w": 423027,
+            "w": 5944711,
             "h": 518159
           },
-          "text_content": "3",
+          "text_content": "3. Append to the ranked sheet",
           "lines": [
             {
-              "text": "3",
-              "width_emu": 240147,
+              "text": "3. Append to the ranked sheet",
+              "width_emu": 5761831,
               "height_emu": 518159,
               "overflows": false
             }
@@ -7425,47 +7243,22 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#B5CEA8"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2158",
-          "node_type": "text",
-          "rect": {
-            "x": 697347,
-            "y": 3444236,
-            "w": 5704565,
-            "h": 518159
-          },
-          "text_content": ". Append to the ranked sheet",
-          "lines": [
-            {
-              "text": ". Append to the ranked sheet",
-              "width_emu": 5521685,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
-        },
-        {
-          "node_id": "code_run_2159",
+          "node_id": "code_run_2211",
           "node_type": "text",
           "rect": {
             "x": 457200,
             "y": 3962395,
-            "w": 423027,
+            "w": 5535260,
             "h": 518159
           },
-          "text_content": "4",
+          "text_content": "4. Flag anything scoring low",
           "lines": [
             {
-              "text": "4",
-              "width_emu": 240147,
+              "text": "4. Flag anything scoring low",
+              "width_emu": 5352380,
               "height_emu": 518159,
               "overflows": false
             }
@@ -7475,37 +7268,12 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#B5CEA8"
-        },
-        {
-          "node_id": "code_run_2160",
-          "node_type": "text",
-          "rect": {
-            "x": 697347,
-            "y": 3962395,
-            "w": 5295114,
-            "h": 518159
-          },
-          "text_content": ". Flag anything scoring low",
-          "lines": [
-            {
-              "text": ". Flag anything scoring low",
-              "width_emu": 5112234,
-              "height_emu": 518159,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 34.0,
-          "bold": false,
-          "italic": false,
-          "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2161",
+          "node_id": "chrome_pagenum_2212",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -7540,7 +7308,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_2164",
+          "node_id": "accent_bar_2215",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -7551,7 +7319,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_2162",
+          "node_id": "term_2213",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -7575,7 +7343,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_2163",
+          "node_id": "def_2214",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -7600,7 +7368,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2165",
+          "node_id": "chrome_pagenum_2216",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -7634,7 +7402,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2166",
+          "node_id": "title_2217",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7658,7 +7426,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2167",
+          "node_id": "bl_item_2218",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7681,7 +7449,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2168",
+          "node_id": "bl_item_2219",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7704,7 +7472,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2169",
+          "node_id": "bl_item_2220",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7729,7 +7497,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2170",
+          "node_id": "chrome_pagenum_2221",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -7763,7 +7531,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2171",
+          "node_id": "title_2222",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7787,7 +7555,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "th_2172",
+          "node_id": "th_2223",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7809,10 +7577,10 @@
           "bold": true,
           "italic": false,
           "group_id": "table_head",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "th_2173",
+          "node_id": "th_2224",
           "node_type": "text",
           "rect": {
             "x": 3795415,
@@ -7834,10 +7602,10 @@
           "bold": true,
           "italic": false,
           "group_id": "table_head",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "table_rule_2174",
+          "node_id": "table_rule_2225",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -7849,7 +7617,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "td_2175",
+          "node_id": "td_2226",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7872,7 +7640,7 @@
           "italic": false
         },
         {
-          "node_id": "td_2176",
+          "node_id": "td_2227",
           "node_type": "text",
           "rect": {
             "x": 3795415,
@@ -7895,7 +7663,7 @@
           "italic": false
         },
         {
-          "node_id": "td_2177",
+          "node_id": "td_2228",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7918,7 +7686,7 @@
           "italic": false
         },
         {
-          "node_id": "td_2178",
+          "node_id": "td_2229",
           "node_type": "text",
           "rect": {
             "x": 3795415,
@@ -7941,7 +7709,7 @@
           "italic": false
         },
         {
-          "node_id": "td_2179",
+          "node_id": "td_2230",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -7964,7 +7732,7 @@
           "italic": false
         },
         {
-          "node_id": "td_2180",
+          "node_id": "td_2231",
           "node_type": "text",
           "rect": {
             "x": 3795415,
@@ -7987,7 +7755,7 @@
           "italic": false
         },
         {
-          "node_id": "td_2181",
+          "node_id": "td_2232",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8010,7 +7778,7 @@
           "italic": false
         },
         {
-          "node_id": "td_2182",
+          "node_id": "td_2233",
           "node_type": "text",
           "rect": {
             "x": 3795415,
@@ -8035,7 +7803,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2183",
+          "node_id": "chrome_pagenum_2234",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8069,7 +7837,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "accent_bar_2186",
+          "node_id": "accent_bar_2237",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -8080,7 +7848,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "term_2184",
+          "node_id": "term_2235",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -8104,7 +7872,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "def_2185",
+          "node_id": "def_2236",
           "node_type": "text",
           "rect": {
             "x": 996696,
@@ -8129,7 +7897,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2187",
+          "node_id": "chrome_pagenum_2238",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8163,7 +7931,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2188",
+          "node_id": "title_2239",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8187,7 +7955,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "step_num_2189",
+          "node_id": "step_num_2240",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8209,10 +7977,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_2190",
+          "node_id": "step_head_2241",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8234,10 +8002,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_0",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_2191",
+          "node_id": "step_body_2242",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8261,7 +8029,7 @@
           "group_id": "step_0"
         },
         {
-          "node_id": "step_num_2192",
+          "node_id": "step_num_2243",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8283,10 +8051,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_2193",
+          "node_id": "step_head_2244",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8308,10 +8076,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_1",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_2194",
+          "node_id": "step_body_2245",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8335,7 +8103,7 @@
           "group_id": "step_1"
         },
         {
-          "node_id": "step_num_2195",
+          "node_id": "step_num_2246",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8357,10 +8125,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_head_2196",
+          "node_id": "step_head_2247",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8382,10 +8150,10 @@
           "bold": true,
           "italic": false,
           "group_id": "step_2",
-          "text_color": "#123A6B"
+          "text_color": "#0072CE"
         },
         {
-          "node_id": "step_body_2197",
+          "node_id": "step_body_2248",
           "node_type": "text",
           "rect": {
             "x": 1461983,
@@ -8411,7 +8179,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2198",
+          "node_id": "chrome_pagenum_2249",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8445,7 +8213,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "code_dot_2199",
+          "node_id": "code_dot_2250",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -8454,10 +8222,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#FF5F56"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_dot_2200",
+          "node_id": "code_dot_2251",
           "node_type": "box",
           "rect": {
             "x": 713232,
@@ -8466,10 +8234,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#FFBD2E"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_dot_2201",
+          "node_id": "code_dot_2252",
           "node_type": "box",
           "rect": {
             "x": 969264,
@@ -8478,10 +8246,10 @@
             "h": 146304
           },
           "group_id": "code",
-          "fill_color": "#27C93F"
+          "fill_color": "#FFFFFF"
         },
         {
-          "node_id": "code_title_2202",
+          "node_id": "code_title_2253",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8504,10 +8272,10 @@
           "italic": false,
           "is_caption": true,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2203",
+          "node_id": "code_run_2254",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8529,10 +8297,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2204",
+          "node_id": "code_run_2255",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8554,10 +8322,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#CE9178"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2205",
+          "node_id": "code_run_2256",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8579,10 +8347,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2206",
+          "node_id": "code_run_2257",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8604,10 +8372,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2207",
+          "node_id": "code_run_2258",
           "node_type": "text",
           "rect": {
             "x": 2136961,
@@ -8632,7 +8400,7 @@
           "text_color": "#569CD6"
         },
         {
-          "node_id": "code_run_2208",
+          "node_id": "code_run_2259",
           "node_type": "text",
           "rect": {
             "x": 2473040,
@@ -8654,10 +8422,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2209",
+          "node_id": "code_run_2260",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8679,10 +8447,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2210",
+          "node_id": "code_run_2261",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8704,10 +8472,10 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         },
         {
-          "node_id": "code_run_2211",
+          "node_id": "code_run_2262",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8729,12 +8497,12 @@
           "bold": false,
           "italic": false,
           "group_id": "code",
-          "text_color": "#D4D4D4"
+          "text_color": "#FFFFFF"
         }
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2212",
+          "node_id": "chrome_pagenum_2263",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8769,7 +8537,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2213",
+          "node_id": "title_2264",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8793,7 +8561,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "heading_2214",
+          "node_id": "heading_2265",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8817,7 +8585,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "body_2215",
+          "node_id": "body_2266",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8841,7 +8609,7 @@
           "group_id": "itr_0"
         },
         {
-          "node_id": "heading_2216",
+          "node_id": "heading_2267",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8865,7 +8633,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "body_2217",
+          "node_id": "body_2268",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8889,7 +8657,7 @@
           "group_id": "itr_1"
         },
         {
-          "node_id": "heading_2218",
+          "node_id": "heading_2269",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8913,7 +8681,7 @@
           "group_id": "itr_2"
         },
         {
-          "node_id": "body_2219",
+          "node_id": "body_2270",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8939,7 +8707,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2220",
+          "node_id": "chrome_pagenum_2271",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -8973,7 +8741,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2221",
+          "node_id": "title_2272",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -8997,7 +8765,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2222",
+          "node_id": "bl_item_2273",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9020,7 +8788,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2223",
+          "node_id": "bl_item_2274",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9043,7 +8811,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2224",
+          "node_id": "bl_item_2275",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9068,7 +8836,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2225",
+          "node_id": "chrome_pagenum_2276",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -9102,7 +8870,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2226",
+          "node_id": "title_2277",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9126,7 +8894,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "cm_head_2227",
+          "node_id": "cm_head_2278",
           "node_type": "text",
           "rect": {
             "x": 3889248,
@@ -9151,7 +8919,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_head_2228",
+          "node_id": "cm_head_2279",
           "node_type": "text",
           "rect": {
             "x": 6595872,
@@ -9176,7 +8944,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_head_2229",
+          "node_id": "cm_head_2280",
           "node_type": "text",
           "rect": {
             "x": 9302496,
@@ -9201,7 +8969,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_rule_2230",
+          "node_id": "cm_rule_2281",
           "node_type": "box",
           "rect": {
             "x": 457200,
@@ -9213,7 +8981,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "cm_crit_2231",
+          "node_id": "cm_crit_2282",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9236,7 +9004,7 @@
           "italic": false
         },
         {
-          "node_id": "cm_hl_2232",
+          "node_id": "cm_hl_2283",
           "node_type": "box",
           "rect": {
             "x": 4568570,
@@ -9248,7 +9016,7 @@
           "fill_color": "#0072CE"
         },
         {
-          "node_id": "cm_cell_2233",
+          "node_id": "cm_cell_2284",
           "node_type": "text",
           "rect": {
             "x": 4568570,
@@ -9274,7 +9042,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_cell_2234",
+          "node_id": "cm_cell_2285",
           "node_type": "text",
           "rect": {
             "x": 6595872,
@@ -9299,7 +9067,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_cell_2235",
+          "node_id": "cm_cell_2286",
           "node_type": "text",
           "rect": {
             "x": 9302496,
@@ -9324,7 +9092,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_crit_2236",
+          "node_id": "cm_crit_2287",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9347,7 +9115,7 @@
           "italic": false
         },
         {
-          "node_id": "cm_cell_2237",
+          "node_id": "cm_cell_2288",
           "node_type": "text",
           "rect": {
             "x": 3889248,
@@ -9372,7 +9140,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_cell_2238",
+          "node_id": "cm_cell_2289",
           "node_type": "text",
           "rect": {
             "x": 6595872,
@@ -9397,7 +9165,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_cell_2239",
+          "node_id": "cm_cell_2290",
           "node_type": "text",
           "rect": {
             "x": 9302496,
@@ -9422,7 +9190,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_crit_2240",
+          "node_id": "cm_crit_2291",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9445,7 +9213,7 @@
           "italic": false
         },
         {
-          "node_id": "cm_cell_2241",
+          "node_id": "cm_cell_2292",
           "node_type": "text",
           "rect": {
             "x": 3889248,
@@ -9470,7 +9238,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_cell_2242",
+          "node_id": "cm_cell_2293",
           "node_type": "text",
           "rect": {
             "x": 6595872,
@@ -9495,7 +9263,7 @@
           "align": "center"
         },
         {
-          "node_id": "cm_cell_2243",
+          "node_id": "cm_cell_2294",
           "node_type": "text",
           "rect": {
             "x": 9302496,
@@ -9522,7 +9290,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2244",
+          "node_id": "chrome_pagenum_2295",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -9556,7 +9324,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2245",
+          "node_id": "title_2296",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9580,7 +9348,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2246",
+          "node_id": "bl_item_2297",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9603,7 +9371,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2247",
+          "node_id": "bl_item_2298",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9626,7 +9394,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2248",
+          "node_id": "bl_item_2299",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9651,7 +9419,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2249",
+          "node_id": "chrome_pagenum_2300",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -9685,7 +9453,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2250",
+          "node_id": "title_2301",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9709,7 +9477,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2251",
+          "node_id": "bl_item_2302",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9732,7 +9500,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2252",
+          "node_id": "bl_item_2303",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9755,7 +9523,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2253",
+          "node_id": "bl_item_2304",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9778,7 +9546,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2254",
+          "node_id": "bl_item_2305",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9803,7 +9571,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2255",
+          "node_id": "chrome_pagenum_2306",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -9837,7 +9605,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2256",
+          "node_id": "title_2307",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9861,7 +9629,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "stat_value_2257",
+          "node_id": "stat_value_2308",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9885,7 +9653,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "stat_label_2258",
+          "node_id": "stat_label_2309",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -9908,7 +9676,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_2259",
+          "node_id": "stat_value_2310",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -9932,7 +9700,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "stat_label_2260",
+          "node_id": "stat_label_2311",
           "node_type": "text",
           "rect": {
             "x": 4307840,
@@ -9955,7 +9723,7 @@
           "italic": false
         },
         {
-          "node_id": "stat_value_2261",
+          "node_id": "stat_value_2312",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -9979,7 +9747,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "stat_label_2262",
+          "node_id": "stat_label_2313",
           "node_type": "text",
           "rect": {
             "x": 8158480,
@@ -10004,7 +9772,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2263",
+          "node_id": "chrome_pagenum_2314",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -10038,7 +9806,7 @@
       "canvas_h": 6858000,
       "nodes": [
         {
-          "node_id": "title_2264",
+          "node_id": "title_2315",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10062,7 +9830,7 @@
           "text_color": "#0072CE"
         },
         {
-          "node_id": "bl_item_2265",
+          "node_id": "bl_item_2316",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10085,7 +9853,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2266",
+          "node_id": "bl_item_2317",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10108,7 +9876,7 @@
           "italic": false
         },
         {
-          "node_id": "bl_item_2267",
+          "node_id": "bl_item_2318",
           "node_type": "text",
           "rect": {
             "x": 457200,
@@ -10133,7 +9901,7 @@
       ],
       "chrome": [
         {
-          "node_id": "chrome_pagenum_2268",
+          "node_id": "chrome_pagenum_2319",
           "node_type": "text",
           "rect": {
             "x": 11186160,
@@ -10145,76 +9913,6 @@
           "lines": [
             {
               "text": "52",
-              "width_emu": 226020,
-              "height_emu": 243840,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 16,
-          "bold": false,
-          "italic": false,
-          "is_chrome": true,
-          "align": "right"
-        }
-      ]
-    },
-    {
-      "slide_index": 52,
-      "page_number": 53,
-      "component": "question",
-      "canvas_w": 12192000,
-      "canvas_h": 6858000,
-      "nodes": [
-        {
-          "node_id": "accent_bar_2270",
-          "node_type": "box",
-          "rect": {
-            "x": 457200,
-            "y": 2926080,
-            "w": 128016,
-            "h": 1005840
-          },
-          "fill_color": "#0072CE"
-        },
-        {
-          "node_id": "question_2269",
-          "node_type": "text",
-          "rect": {
-            "x": 996696,
-            "y": 2926080,
-            "w": 10738104,
-            "h": 1005840
-          },
-          "text_content": "Which box comes last?",
-          "lines": [
-            {
-              "text": "Which box comes last?",
-              "width_emu": 8468320,
-              "height_emu": 914400,
-              "overflows": false
-            }
-          ],
-          "font": "arial",
-          "size_pt": 60.0,
-          "bold": true,
-          "italic": false
-        }
-      ],
-      "chrome": [
-        {
-          "node_id": "chrome_pagenum_2271",
-          "node_type": "text",
-          "rect": {
-            "x": 11186160,
-            "y": 6035040,
-            "w": 548640,
-            "h": 365760
-          },
-          "text_content": "53",
-          "lines": [
-            {
-              "text": "53",
               "width_emu": 226020,
               "height_emu": 243840,
               "overflows": false

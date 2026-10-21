@@ -60,11 +60,11 @@ A single `deck.yaml` (slidekit IR) plus the built `deck.pptx`. The IR shape:
 version: 1                     # required, must be 1
 theme:
   palette:                     # roles, not raw hex in bodies
-    primary: "#123A6B"
+    primary: "#0072CE"         # shares the accent: max 3 colours per slide
     surface: "#FFFFFF"         # slide background
     accent:  "#0072CE"
     text:    "#0A2240"
-    muted:   "#5B6B82"         # page numbers / captions
+    muted:   "#0A2240"         # shares the ink: no grey (E_COLOR_COUNT)
   type_scale:                  # points; body floor 32pt — HARD
     title: 60                  # 54-66
     header: 42                 # 40-44
@@ -98,7 +98,6 @@ slides:
 | `comparison-columns` | `left_title`, `right_title`, `left_items[]`, `right_items[]` = `{text, icon?}` | `title` |
 | `timeline` | `events[]` = `{date, title, description?}` | `title` |
 | `image-half-bleed` | `image` (image slot), `content[]` | `title`, `image_side: left\|right` |
-| `card-grid` | `cards[]` = `{title, body, icon?}` | `title` |
 
 Minimal examples of every component ship in slidekit's `examples/01..10_*.yaml` — copy and adapt.
 
@@ -146,8 +145,8 @@ You receive markdown, one block per slide:
 ```
 Map each block to a component, place the copy into typed slots, then build+lint.
 The component suggestion is advisory — switch components if the copy won't fit one
-(e.g. five bullets that overflow `card-grid` may belong in `icon-text-rows` across
-two slides).
+(e.g. five items that overflow `icon-text-rows` may belong in a two-column
+`table-slide`).
 
 ### To **Reality Checker** → certification signal
 A slidekit deck is **production-ready when `slidekit build` exits 0 (lint clean) and

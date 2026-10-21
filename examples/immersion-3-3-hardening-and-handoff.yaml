@@ -646,10 +646,3 @@ slides:
       and owned, a prototype at a public URL, and proof that you tested it.
       Plenty of people can show a demo; far fewer can show what they did to
       break it.
-
-  - component: question
-    question: "What would you build next?"
-    notes: >-
-      One last question: what would you build next? Everything below your cut
-      line, everything in your caveats and everything the red team found is
-      already the answer — you leave with a backlog rather than a blank page.

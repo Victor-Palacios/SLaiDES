@@ -1,24 +1,25 @@
 # What Is Supabase? — an entry-level tour, grounded in real screenshots.
 #
-# Every screenshot was captured on 2026-10-21 with headless Chromium at a
-# 1290x1000 viewport (the exact shape of the image slot, so nothing is
-# stretched), from these public pages:
-#   assets/supabase/home.png ...... https://supabase.com/
-#   assets/supabase/database.png .. https://supabase.com/database
-#   assets/supabase/auth.png ...... https://supabase.com/auth
-#   assets/supabase/rls.png ....... https://supabase.com/docs/guides/database/postgres/row-level-security
-#   assets/supabase/pricing.png ... https://supabase.com/pricing
-# Each slide that shows one carries that URL as its `source`, rendered as a
-# clickable Source link beside the page number.
+# Screenshots captured 2026-10-21 with headless Chromium, cropped to the
+# 1290x1000 image slot, from these public pages:
+#   assets/supabase/home.png ....... https://supabase.com/
+#   assets/supabase/database.png ... https://supabase.com/database
+#   assets/supabase/auth.png ....... https://supabase.com/auth
+#   assets/supabase/sql-tab.png .... https://supabase.com/docs/guides/database/tables
+#                                    (SQL tab: ?queryGroups=database-method&database-method=sql)
+#   assets/supabase/mcp-setup.png .. https://supabase.com/docs/guides/getting-started/mcp
+#   assets/supabase/rls.png ........ https://supabase.com/docs/guides/database/postgres/row-level-security
+#   assets/supabase/pricing.png .... https://supabase.com/pricing
+# Setup claims follow those docs and https://supabase.com/docs/guides/deployment/database-migrations
+# ("Database migrations are SQL statements that create, update, or delete your
+# existing database schemas"). The CREATE TABLE example follows the Tables guide.
 #
-# Three-colour rule: `primary` is collapsed onto `accent`. Screenshots are the
-# one deliberate exception — they are evidence, shown as captured.
+# Three-colour rule: the default palette is already white, blue and ink.
+# Screenshots are shown as captured. The deck ends on its last real step, never
+# on a question (operator rule 2026-10-21).
 version: 1
 theme:
   font: arial
-  palette:
-    primary: "#0072CE"
-    accent: "#0072CE"
 page_numbers:
   enabled: true
   start_at: 1
@@ -29,8 +30,8 @@ slides:
     title: "What Is Supabase?"
     subtitle: "An entry-level tour, with real screenshots"
     notes: >-
-      This is an entry-level tour of Supabase: what it is, what its pieces do,
-      and how a real project uses it.
+      This is an entry-level tour of Supabase: what it is, how we set up a
+      database in it with Claude, and how to keep that database safe.
 
   - component: question
     question: "Where does your data live?"
@@ -66,17 +67,14 @@ slides:
       This is Supabase's own homepage. It starts from a Postgres database and
       adds the other things an app needs, all inside one project.
 
-  - component: card-grid
+  - component: table-slide
     title: "The Four Main Pieces"
-    cards:
-      - title: "Database"
-        body: "Tables of your data"
-      - title: "Auth"
-        body: "Who is signed in"
-      - title: "Storage"
-        body: "Files people upload"
-      - title: "API"
-        body: "How your page asks"
+    headers: ["Piece", "What it does"]
+    rows:
+      - ["Database", "Tables of your data"]
+      - ["Auth", "Who is signed in"]
+      - ["Storage", "Files people upload"]
+      - ["API", "How your page asks"]
     notes: >-
       Four pieces matter to start with: a database holding tables of your data,
       auth for who is signed in, storage for files people upload, and an API that
@@ -110,17 +108,6 @@ slides:
       column is one field such as a name or an email, and you can think of it as
       a spreadsheet that enforces rules.
 
-  - component: bullet-list
-    title: "Four Things You Do to a Table"
-    items:
-      - "Add a row"
-      - "Find the rows you want"
-      - "Change a row"
-      - "Delete a row"
-    notes: >-
-      Almost everything an app does with a table is one of four things: add a
-      row, find rows, change a row, or delete one.
-
   - component: image-half-bleed
     title: "Sign-In, Built In"
     image_side: right
@@ -141,36 +128,83 @@ slides:
       Sign-in comes built in. Email and password, or signing in with Google,
       GitHub and others, without you writing any login code yourself.
 
-  - component: bullet-list
-    title: "Storage Is for Files"
-    items:
-      - "Profile photos"
-      - "Uploaded PDFs"
-      - "Anything too big for a table"
-      - "Same access rules as the data"
-    notes: >-
-      Storage is for files rather than rows: profile photos, uploaded PDFs, and
-      anything too big to sit in a table — protected by the same kind of access
-      rules as your data.
-
   - component: definition
-    term: "API"
-    definition: "How your page talks to the database"
+    term: "SQL"
+    definition: "The language for building and asking a database"
     notes: >-
-      An API is the way your web page talks to the database over the internet,
-      asking for rows or sending new ones.
+      SQL is the language a database speaks. You use it to build tables and to
+      ask questions of the data inside them.
 
-  - component: this-vs-that
-    title: "Why People Use It"
-    left:
-      value: "Server"
-      label: "You build and run it"
-    right:
-      value: "Supabase"
-      label: "You set up a project"
+  - component: image-half-bleed
+    title: "Two Ways to Make a Table"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/supabase/sql-tab.png"
+      fit: contain
+      alt: "Screenshot of the Supabase docs Tables guide with the SQL tab open, captured 2026-10-21"
+    content:
+      - type: text
+        content: "Click in the Table Editor"
+      - type: text
+        content: "Or write it in SQL"
+      - type: text
+        content: "We will write SQL"
+    source: "https://supabase.com/docs/guides/database/tables"
     notes: >-
-      Without a service like this you would build and run a server yourself.
-      With Supabase you set up a project and the server side is handled for you.
+      Supabase's own guide offers two ways to make a table: click through the
+      Table Editor, or write it in SQL, which is the tab open here. We will write
+      SQL.
+
+  - component: bullet-list
+    title: "Why We Use SQL"
+    items:
+      - "It is written down, so it repeats"
+      - "It can live in git as a migration"
+      - "Claude writes it, you review it"
+      - "It reaches every Postgres type"
+    notes: >-
+      Clicks leave no record, but SQL is written down, so you can run it again
+      on a fresh project. It can be saved in git as a migration, Claude can write
+      it for you to review, and it can use every Postgres type, not just the
+      ones the Table Editor offers.
+
+  - component: code
+    title: "A first table, in SQL"
+    code: |
+      create table notes (
+        id bigint generated by default
+          as identity primary key,
+        body text not null,
+        created_at timestamptz default now()
+      );
+      alter table notes
+        enable row level security;
+    notes: >-
+      Here is a first table in SQL: a numbered id, the note itself, and the time
+      it was made. The last two lines switch on row level security, which we come
+      to in a moment.
+
+  - component: image-half-bleed
+    title: "Claude Can Build It"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/supabase/mcp-setup.png"
+      fit: contain
+      alt: "Screenshot of the Supabase MCP server docs with Claude Code selected, captured 2026-10-21"
+    content:
+      - type: text
+        content: "Supabase's MCP server"
+      - type: text
+        content: "Claude runs the SQL"
+      - type: text
+        content: "Approve each step first"
+    source: "https://supabase.com/docs/guides/getting-started/mcp"
+    notes: >-
+      Supabase publishes an MCP server that connects Claude Code to your project,
+      so Claude can write and run that SQL for you. Supabase's own advice is to
+      keep manual approval on and review each step before it runs.
 
   - component: image-half-bleed
     title: "The Rule That Protects It"
@@ -191,7 +225,7 @@ slides:
     notes: >-
       This is Supabase's own documentation, and the red box is its warning: a
       table without row level security can be read and written by anyone who can
-      reach it. Turning it on is the one setting you must not skip.
+      reach it. That is why our first table switched it on.
 
   - component: table-slide
     title: "Row Level Security, by Example"
@@ -222,9 +256,9 @@ slides:
         content: "50,000 users a month"
     source: "https://supabase.com/pricing"
     notes: >-
-      Starting costs nothing. The free plan on the pricing page includes a five
-      hundred megabyte database and up to fifty thousand monthly active users,
-      which is far more than a class project needs.
+      Starting costs nothing. The free plan includes a five hundred megabyte
+      database and up to fifty thousand monthly active users, which is far more
+      than a class project needs.
 
   - component: table-slide
     title: "A Real Project That Uses It"
@@ -238,35 +272,30 @@ slides:
       Supabase — thousands of them, fetched daily — along with a yes-or-no for
       whether each concerns asylum and the case details pulled out of it.
 
-  - component: numbered-steps
-    title: "Your First Ten Minutes"
-    steps:
-      - title: "Make an account"
-        body: "The free plan is enough"
-      - title: "Create a project"
-        body: "You get a database right away"
-      - title: "Make one table"
-        body: "Then add a row by hand"
-    notes: >-
-      To try it: make an account on the free plan, create a project, which gives
-      you a database straight away, then make one table and add a row by hand.
-
   - component: table-slide
     title: "Screenshots, Captured 21 Oct 2026"
     headers: ["Screenshot", "Captured from"]
     rows:
-      - ["Homepage", "supabase.com"]
-      - ["Table editor", "supabase.com/database"]
-      - ["Sign-in", "supabase.com/auth"]
+      - ["Homepage, editor, sign-in", "supabase.com"]
+      - ["Two ways to make a table", "supabase.com/docs"]
+      - ["Claude and MCP setup", "supabase.com/docs"]
       - ["Security warning", "supabase.com/docs"]
       - ["Pricing", "supabase.com/pricing"]
     notes: >-
-      Every screenshot in this deck was captured on the twenty-first of October
-      2026 from the pages listed here, and each slide's Source link opens the
-      exact page.
+      Every screenshot was captured on the twenty-first of October 2026 from the
+      pages listed here, and each slide's Source link opens the exact page.
 
-  - component: question
-    question: "What should it remember?"
+  - component: numbered-steps
+    title: "Your First Session With Claude"
+    steps:
+      - title: "Connect Claude to Supabase"
+        body: "One claude mcp add command"
+      - title: "Describe the table you need"
+        body: "In plain words; Claude writes the SQL"
+      - title: "Read it, then approve it"
+        body: "Check that RLS is switched on"
     notes: >-
-      So, for your own project: what should it remember? That answer is your
-      first table.
+      Your first session takes three steps. Connect Claude Code to Supabase with
+      a single claude mcp add command, describe the table you need in plain
+      words so Claude writes the SQL, then read that SQL before you approve it —
+      and check that row level security is switched on.
