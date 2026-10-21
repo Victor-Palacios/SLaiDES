@@ -1,30 +1,32 @@
-# MCP Servers, Explained and Built — an entry-level deck that follows one tutorial.
+# MCP, Told With Alpaca — an entry-level deck for people new to AI.
 #
-# Reference (the deck follows its chapters in order):
-#   "MCP Servers Explained & Built", Tech With Tim, YouTube, 30 min
-#   https://www.youtube.com/watch?v=He8tUwLzLnU
-#   Its code: https://github.com/techwithtim/descope-mcp-video
-#   (v1_local.py, v2_remote.py, v3_auth.py — the code slides are trimmed from these)
+# One story (Sam, a fictional example student) around one real MCP server:
+# Alpaca's official trading server. It answers three questions in order —
+# what an MCP server is, how you use one, and when not to trust it.
 #
-# Checked against primary sources:
-#   https://modelcontextprotocol.io/docs/learn/architecture ...... client/server, local vs remote
-#   https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization
-#       ........ 401 + where to log in, OAuth 2.1, tokens must name this server (audience),
-#                Client ID Metadata Documents preferred over dynamic registration
-#   https://code.claude.com/docs/en/mcp ........................... the Claude Code commands
-#   (the tutorial demos Cursor; the deck shows the same steps in Claude Code)
-#
-# Left out on purpose: the video's "about a quarter of public MCP servers have no
-# auth" figure — the tutorial's own script marks it "[verify]" with no source.
+# Sources:
+#   How MCP works (slides 4-6) ... "MCP Servers Explained & Built", Tech With Tim
+#                                  https://www.youtube.com/watch?v=He8tUwLzLnU
+#   Alpaca's server .............. https://github.com/alpacahq/alpaca-mcp-server
+#                                  (README: setup, toolsets, paper default, tool list,
+#                                  "do not expose it directly to the public internet",
+#                                  disclosure; src/alpaca_mcp_server/security.py:
+#                                  the untrusted-output warning). Read 2026-10-21.
+#   Claude Code commands ......... https://code.claude.com/docs/en/mcp
+#                                  (`--env` needs another option before the name;
+#                                  `/mcp` shows connected servers)
+#   Approval prompts ............. https://code.claude.com/docs/en/permissions
+#   The fake server .............. https://snyk.io/blog/malicious-mcp-server-on-npm-postmark-mcp-harvests-emails/
 #
 # Assets:
-#   assets/mcp/video.png ......... the video's public thumbnail
-#                                  (https://i.ytimg.com/vi/He8tUwLzLnU/sddefault.jpg,
-#                                  letterbox cropped, fetched 2026-10-21)
-#   assets/mcp/repo.png .......... https://github.com/techwithtim/descope-mcp-video
-#                                  (README, screenshot captured 2026-10-21)
-#   assets/mcp/postmark-case.png . https://snyk.io/blog/malicious-mcp-server-on-npm-postmark-mcp-harvests-emails/
-#                                  (screenshot, captured 2026-10-21)
+#   assets/mcp/alpaca-readme.png .. github.com/alpacahq/alpaca-mcp-server README
+#                                   (screenshot, captured 2026-10-21)
+#   assets/mcp/alpaca-warning.png . .../blob/main/src/alpaca_mcp_server/security.py#L22-L40
+#                                   (screenshot, captured 2026-10-21)
+#   assets/mcp/postmark-case.png .. the Snyk report above (screenshot, captured 2026-10-21)
+#   assets/mcp/video.png .......... the tutorial's public thumbnail
+#                                   (https://i.ytimg.com/vi/He8tUwLzLnU/sddefault.jpg,
+#                                   letterbox cropped, fetched 2026-10-21)
 version: 1
 theme:
   font: arial
@@ -35,325 +37,219 @@ page_numbers:
 
 slides:
   - component: title-slide
-    title: "MCP, Explained and Built"
-    subtitle: "Following one tutorial, step by step"
+    title: "MCP, Told With Alpaca"
+    subtitle: "Claude, a trading app, and trust"
     notes: >-
-      Today we learn what an MCP server is, and then we build one, following a
-      single tutorial step by step.
-
-  - component: image-half-bleed
-    title: "Our Reference"
-    image_side: right
-    image:
-      type: image
-      path: "examples/assets/mcp/video.png"
-      fit: contain
-      alt: "Thumbnail of the YouTube video MCP Servers Explained and Built by Tech With Tim"
-    content:
-      - type: text
-        content: "MCP Servers Explained"
-      - type: text
-        content: "Tech With Tim, 30 min"
-      - type: text
-        content: "We follow its order"
-    source: "https://www.youtube.com/watch?v=He8tUwLzLnU"
-    notes: >-
-      Our reference is a thirty-minute video by Tech With Tim called MCP Servers
-      Explained and Built. We follow it in the same order, so you can rewatch
-      any part of it afterwards.
+      Today we learn MCP through one story: Claude, a real trading app called
+      Alpaca, and the question of when to trust them.
 
   - component: agenda
     title: "What We Will Cover"
     items:
       - "What an MCP server is"
-      - "Local versus remote"
-      - "Who may call your tools"
-      - "Build a notes server"
-      - "Add a real login"
+      - "Sam connects Alpaca"
+      - "Sam's first trade"
+      - "When not to trust it"
     notes: >-
-      Five parts, the same as the video: what an MCP server is, local versus
-      remote, who may call your tools, building a notes server, and adding a
-      real login to it.
+      Four parts. We see what an MCP server is, watch Sam connect Alpaca to
+      Claude, follow Sam's first trade, and finish with when not to trust it.
+
+  - component: icon-text-rows
+    title: "Meet Sam, Our Example"
+    rows:
+      - icon: "user"
+        heading: "Who"
+        body: "A student learning to invest"
+      - icon: "target"
+        heading: "The goal"
+        body: "Practise without losing money"
+      - icon: "zap"
+        heading: "The tool"
+        body: "Claude Code"
+    notes: >-
+      Meet Sam, an example student we made up. Sam is learning to invest, wants
+      to practise without losing any money, and already uses Claude Code.
+
+  - component: this-vs-that
+    title: "What MCP Changes"
+    left:
+      value: "Alone"
+      label: "Claude only writes text"
+    right:
+      value: "With MCP"
+      label: "Claude can use apps"
+    notes: >-
+      On its own, Claude only takes in text and writes text back: it can't look
+      up a price or place an order. With MCP, Claude can use real apps on your
+      behalf.
 
   - component: definition
     term: "MCP Server"
-    definition: "Gives an AI model a list of functions it may call."
+    definition: "A program that lists actions Claude can ask it to do."
     notes: >-
-      An MCP server is a program that gives an AI model a list of functions it
-      is allowed to call. That really is the whole idea; everything else is
-      detail.
-
-  - component: bullet-list
-    title: "A Model Alone Only Writes Text"
-    items:
-      - "It can't read your files"
-      - "It can't check your calendar"
-      - "It can't query your database"
-    notes: >-
-      On its own, a model takes text in and gives text out. It can't read your
-      files, it can't check your calendar, and it can't query your database.
-
-  - component: definition
-    term: "Tool"
-    definition: "A function with a name, a description and inputs."
-    notes: >-
-      So we give it tools. A tool is just a function with a name, a description
-      and some inputs, which the model can ask to use.
+      An MCP server is a program that gives Claude a list of actions, and does
+      any of them when Claude asks. Each app that wants to work with Claude can
+      offer one.
 
   - component: numbered-steps
-    title: "How a Tool Call Works"
+    title: "One Question, Three Steps"
     steps:
-      - title: "The model asks for a tool"
-        body: "By name, with its inputs"
-      - title: "Your code runs it"
-        body: "The model never runs anything"
-      - title: "The result goes back"
-        body: "And the model carries on"
+      - title: "Sam asks Claude"
+        body: "What is Apple trading at?"
+      - title: "Claude asks the server"
+        body: "It picks the price action"
+      - title: "Claude answers"
+        body: "In plain words"
     notes: >-
-      A tool call takes three steps. The model asks for a tool by name, with its
-      inputs. Your code runs it — the model itself never runs anything. Then the
-      result goes back, and the model carries on.
-
-  - component: this-vs-that
-    title: "Why a Standard Helps"
-    left:
-      value: "Before"
-      label: "Each app built its own"
-    right:
-      value: "MCP"
-      label: "One server, every app"
-    notes: >-
-      Before MCP, every app had to rebuild the same tool plumbing, so a GitHub
-      tool written for Claude didn't work in Cursor. With MCP you write the tools
-      once, and any app that speaks MCP can use them — one plug that fits
-      everywhere, like USB-C.
-
-  - component: two-panel-list
-    title: "Two Sides"
-    left:
-      title: "MCP client"
-      items:
-        - "The app the model is in"
-        - "Claude Code, Cursor"
-        - "Asks for the tool list"
-    right:
-      title: "MCP server"
-      items:
-        - "Your code"
-        - "Sends its tool list"
-        - "Runs the tool asked for"
-    notes: >-
-      There are two sides. The client is the app the model lives in, like
-      Claude Code or Cursor, and it asks what tools exist. The server is your
-      code: it sends back its tool list and runs whichever tool is asked for.
-
-  - component: table-slide
-    title: "Local Versus Remote"
-    headers: ["", "Local", "Remote"]
-    rows:
-      - ["Runs on", "Your laptop", "The internet"]
-      - ["Reached by", "Claude starts it", "A URL"]
-      - ["Used by", "Only you", "Anyone with the URL"]
-    notes: >-
-      A server runs one of two ways. A local server runs on your laptop, Claude
-      starts it for you, and only you can use it. A remote server runs on the
-      internet behind a URL, and anyone who has that URL can reach it — which is
-      how GitHub, Notion and Stripe offer theirs.
-
-  - component: icon-text-rows
-    title: "Remote Means Three Questions"
-    rows:
-      - icon: "user"
-        heading: "Who is calling?"
-        body: "Which app sent this"
-      - icon: "users"
-        heading: "On whose behalf?"
-        body: "Which person it acts for"
-      - icon: "lock"
-        heading: "What may they do?"
-        body: "Read, write, or delete"
-    notes: >-
-      Once your server is on the internet, every request has to answer three
-      questions: which app is calling, which person it is acting for, and what
-      they are allowed to do — read, write, or delete.
-
-  - component: bullet-list
-    title: "Why One Shared Key Fails"
-    items:
-      - "Every agent looks the same"
-      - "No person behind a request"
-      - "One leak breaks everyone"
-    notes: >-
-      Many servers answer those questions with one shared key, and it fails all
-      three. Every agent using the key looks the same, there is no person behind
-      any request, and if one copy leaks you have to replace the key for
-      everyone.
-
-  - component: numbered-steps
-    title: "How a Real Login Works"
-    steps:
-      - title: "Claude calls with no token"
-        body: "Server says 401: log in here"
-      - title: "You log in and approve"
-        body: "Claude gets a token"
-      - title: "Claude sends the token"
-        body: "The server checks, then runs"
-    notes: >-
-      The real answer is OAuth, the login standard the MCP spec builds on.
-      Claude calls with no token, and the server replies 401 with where to log
-      in. You log in and approve on a separate login service, and Claude gets a
-      token. Claude sends that token with every request, and the server checks
-      it before running the tool.
-
-  - component: table-slide
-    title: "What the Token Answers"
-    headers: ["Question", "In the token"]
-    rows:
-      - ["Who is calling?", "The client id"]
-      - ["On whose behalf?", "The user id"]
-      - ["What may they do?", "The scopes"]
-      - ["For which server?", "This one only"]
-    notes: >-
-      The token answers all three questions. The client id says which app is
-      calling, the user id says who it acts for, and the scopes say what they
-      may do. It also names the one server it was made for, so it can't be
-      reused anywhere else.
+      Here is one question in three steps. Sam asks Claude what Apple is trading
+      at. Claude asks the server to run its price action — Claude never touches
+      Alpaca itself. Then Claude answers in plain words.
 
   - component: image-half-bleed
-    title: "Three Versions, One Server"
+    title: "Alpaca's Own Server"
     image_side: right
     image:
       type: image
-      path: "examples/assets/mcp/repo.png"
+      path: "examples/assets/mcp/alpaca-readme.png"
       fit: contain
-      alt: "Screenshot of the README of github.com/techwithtim/descope-mcp-video, captured 2026-10-21"
+      alt: "Screenshot of the README of github.com/alpacahq/alpaca-mcp-server, captured 2026-10-21"
     content:
       - type: text
-        content: "v1: local, no login"
+        content: "Made by Alpaca itself"
       - type: text
-        content: "v2: a URL, no login"
+        content: "Free to install"
       - type: text
-        content: "v3: a URL with login"
-    source: "https://github.com/techwithtim/descope-mcp-video"
+        content: "Works with Claude"
+    source: "https://github.com/alpacahq/alpaca-mcp-server"
     notes: >-
-      Now we build. The tutorial's code is on GitHub as three versions of one
-      notes server: version one is local with no login, version two is on a URL
-      with no login, and version three is on a URL with a real login.
+      Alpaca is a stock-trading app, and it publishes its own MCP server on
+      GitHub. It is free to install, and it works with Claude.
+
+  - component: table-slide
+    title: "What It Lets Claude Do"
+    headers: ["Kind", "Sam could ask"]
+    rows:
+      - ["Look", "What is Apple at?"]
+      - ["Check", "What do I own?"]
+      - ["Act", "Cancel my open orders"]
+    notes: >-
+      Its actions come in three kinds. Claude can look things up, like Apple's
+      price; check Sam's account, like what Sam owns; and act, like cancelling
+      open orders. The last kind changes things, and we come back to it.
+
+  - component: definition
+    term: "Paper Trading"
+    definition: "Trading with pretend money, so mistakes cost nothing."
+    notes: >-
+      Sam starts with paper trading: trading with pretend money, so every
+      mistake is free. Alpaca gives anyone a free paper account.
+
+  - component: numbered-steps
+    title: "Sam Sets It Up"
+    steps:
+      - title: "Open a paper account"
+        body: "Free, on alpaca.markets"
+      - title: "Make two keys"
+        body: "On the Alpaca dashboard"
+      - title: "Add the server"
+        body: "One command in Claude Code"
+    notes: >-
+      Setting it up takes three steps. Sam opens a free paper account on Alpaca,
+      makes two keys on the dashboard, and adds the server to Claude Code with
+      one command.
 
   - component: code
-    title: "v1_local.py"
+    title: "Adding the server"
     code: |
-      from fastmcp import FastMCP
-      mcp = FastMCP("notes")
-
-      @mcp.tool()
-      def add_a_note(text: str):
-          """Save a new note."""
-          return add_note("local", text)
-      mcp.run()
-    notes: >-
-      Here is version one, trimmed. We create a server called notes, mark an
-      ordinary Python function as a tool with one decorator, and run it. The
-      FastMCP library handles the rest of the protocol for us.
-
-  - component: bullet-list
-    title: "What the Model Reads"
-    items:
-      - "The docstring is the description"
-      - "Type hints say what to pass"
-      - "Write both on every tool"
-    notes: >-
-      The model only knows what you tell it. The docstring becomes the tool's
-      description, and the type hints tell it what to pass and what comes back,
-      so write both on every tool.
-
-  - component: code
-    title: "Connect it locally"
-    code: |
-      $ claude mcp add notes \
-          -- uv run v1_local.py
-
-      > What can my notes
-        server do?
-    notes: >-
-      To connect it locally, we tell Claude Code the command that starts the
-      server. Then you can simply ask what your notes server can do, and Claude
-      lists the three tools.
-
-  - component: code
-    title: "v2_remote.py"
-    code: |
-      mcp.run(transport="http",
-              port=8000)
-
       $ claude mcp add \
-          --transport http \
-          notes \
-          http://localhost:8000/mcp
+          --env ALPACA_API_KEY=… \
+          --env ALPACA_SECRET_KEY=… \
+          --transport stdio alpaca \
+          -- uvx alpaca-mcp-server
+
+      > /mcp
     notes: >-
-      Version two changes one line: the server now runs over HTTP, so it lives
-      at a URL. We connect Claude Code to that URL, and the slash mcp at the end
-      is required. But now anyone with the URL can read and delete the notes.
+      Here is that command. The two keys go in as settings, the last line names
+      the program to run, and then typing slash mcp inside Claude Code shows the
+      server is connected.
 
   - component: numbered-steps
-    title: "Set Up the Login Service"
+    title: "Sam's First Trade"
     steps:
-      - title: "Add your server"
-        body: "Its URL, ending in /mcp"
-      - title: "Add two scopes"
-        body: "notes:read and notes:write"
-      - title: "Copy the config URL"
-        body: "Into your .env file"
+      - title: "Sam asks"
+        body: "Buy 5 shares of Apple"
+      - title: "Claude Code checks first"
+        body: "Sam reads it and says yes"
+      - title: "Alpaca fills the order"
+        body: "With pretend money"
     notes: >-
-      For version three the tutorial uses a login service called Descope. You
-      add your server with its URL ending in slash mcp, add two scopes for
-      reading and writing notes, and copy the config URL into your env file.
+      Now Sam's first trade. Sam asks Claude to buy five shares of Apple. Before
+      anything happens, Claude Code shows the request and Sam reads it and says
+      yes. Then Alpaca fills the order, with pretend money.
 
-  - component: code
-    title: "v3_auth.py: the gate"
-    code: |
-      auth = DescopeProvider(
-          config_url=CONFIG_URL,
-          base_url=BASE_URL,
-          scopes_supported=[
-              "notes:read",
-              "notes:write"])
-      mcp = FastMCP("notes", auth=auth)
+  - component: definition
+    term: "close_all_positions"
+    definition: "Alpaca's own description: liquidate entire portfolio."
     notes: >-
-      In the code, the gate is one object. We point it at the login service and
-      list the two scopes, then hand it to the server, which now turns away any
-      request without a valid token.
+      Now, when not to trust it. One of Alpaca's actions is called close all
+      positions, and Alpaca describes it as liquidating your entire portfolio.
+      That is why you read every request before you say yes.
 
-  - component: code
-    title: "v3_auth.py: each tool"
-    code: |
-      @mcp.tool()
-      def add_a_note(text: str):
-          user, _ = current_user(
-              "notes:write")
-          return add_note(user, text)
+  - component: definition
+    term: "Prompt Injection"
+    definition: "Orders hidden in text that Claude reads, like news."
     notes: >-
-      Each tool then checks the token itself. Adding a note needs the write
-      scope, and the note is saved under the user's own id instead of the word
-      local.
+      The next risk is prompt injection: orders hidden inside text that Claude
+      reads, such as a news story, written to make Claude do something you never
+      asked for.
 
-  - component: numbered-steps
-    title: "Test It With Two Accounts"
-    steps:
-      - title: "Run /mcp and sign in"
-        body: "Add \"Tim is the best\""
-      - title: "Sign in as someone else"
-        body: "A second account"
-      - title: "List the notes"
-        body: "They see none"
+  - component: this-vs-that
+    title: "An Imagined Example"
+    left:
+      value: "Asked"
+      label: "Summarise Apple news"
+    right:
+      value: "Hidden"
+      label: "Also sell everything"
     notes: >-
-      Then we test it with two accounts. Run slash mcp in Claude Code, sign in
-      and approve both scopes, and add the note "Tim is the best". Sign in as
-      someone else, list the notes, and they see none, because every user now
-      has their own.
+      Here is an imagined example. Sam asks for a summary of Apple news, and one
+      article has a hidden line telling the AI to also sell everything.
 
   - component: image-half-bleed
-    title: "The Other Direction"
+    title: "Alpaca Warns Claude Too"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/mcp/alpaca-warning.png"
+      fit: contain
+      alt: "Screenshot of security.py in alpacahq/alpaca-mcp-server, lines 22 to 40, captured 2026-10-21"
+    content:
+      - type: text
+        content: "News is marked untrusted"
+      - type: text
+        content: "Read it, never obey it"
+      - type: text
+        content: "A warning, not a lock"
+    source: "https://github.com/alpacahq/alpaca-mcp-server/blob/main/src/alpaca_mcp_server/security.py"
+    notes: >-
+      Alpaca knows this. Its server marks news as untrusted and tells Claude to
+      read it but never obey it. That is a warning, not a lock, so it can still
+      fail.
+
+  - component: code
+    title: "Prices only, no trading"
+    code: |
+      "env": {
+        "ALPACA_TOOLSETS":
+          "stock-data"
+      }
+    notes: >-
+      A lock you control is turning actions off. With this one setting, Sam's
+      server offers only price data, so even a tricked Claude has no way to
+      trade.
+
+  - component: image-half-bleed
+    title: "Fake Servers Exist"
     image_side: right
     image:
       type: image
@@ -362,41 +258,102 @@ slides:
       alt: "Screenshot of Snyk's report, Malicious MCP Server on npm postmark-mcp Harvests Emails, captured 2026-10-21"
     content:
       - type: text
-        content: "A server can attack you"
+        content: "A copy of a real server"
       - type: text
-        content: "postmark-mcp, Sept 2025"
+        content: "Honest for 15 versions"
       - type: text
-        content: "It copied every email"
+        content: "Then copied every email"
     source: "https://snyk.io/blog/malicious-mcp-server-on-npm-postmark-mcp-harvests-emails/"
     notes: >-
-      Login protects your server from callers, but the danger also runs the
-      other way. In September 2025, a fake email server called postmark-mcp
-      worked honestly for fifteen versions, then quietly copied every email it
-      sent to a stranger.
+      The server itself can be the danger. In September 2025, a copy of a real
+      email server called postmark-mcp worked honestly for fifteen versions,
+      then quietly sent a copy of every email to a stranger.
+
+  - component: bullet-list
+    title: "Get the Real One"
+    items:
+      - "Publisher: alpacahq on GitHub"
+      - "Package: alpaca-mcp-server"
+      - "Pin the version you checked"
+    notes: >-
+      So Sam gets the real one: published by alpacahq on GitHub, with the
+      package name alpaca-mcp-server spelled exactly, and pinned to the version
+      Sam checked so an update can't change it silently.
+
+  - component: this-vs-that
+    title: "Pretend Money, Real Money"
+    left:
+      value: "Paper"
+      label: "The default setting"
+    right:
+      value: "Live"
+      label: "One setting away"
+    notes: >-
+      Pretend money is the default setting on Alpaca's server, but real money is
+      only one setting away. Sam stays on paper until every habit in this deck
+      is second nature.
+
+  - component: bullet-list
+    title: "Keys Work Like Passwords"
+    items:
+      - "Never commit them to GitHub"
+      - "Never put the server online"
+      - "Make new keys if they leak"
+    notes: >-
+      Sam's two keys work like passwords. Never commit them to GitHub, and never
+      put the server on the internet — Alpaca's own instructions say not to,
+      because it has no login of its own. If a key leaks, make new ones.
+
+  - component: pull-quote
+    quote: "…not be taken as investment advice."
+    attribution: "Alpaca's MCP server README"
+    notes: >-
+      And Alpaca says it plainly: what its server and the AI tell you should not
+      be taken as investment advice. Claude can place the trade; the decision is
+      still yours.
+
+  - component: image-half-bleed
+    title: "Want to Build One?"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/mcp/video.png"
+      fit: contain
+      alt: "Thumbnail of the YouTube video MCP Servers Explained and Built by Tech With Tim"
+    content:
+      - type: text
+        content: "Tech With Tim's tutorial"
+      - type: text
+        content: "Builds a small server"
+      - type: text
+        content: "Then adds a real login"
+    source: "https://www.youtube.com/watch?v=He8tUwLzLnU"
+    notes: >-
+      If you want to build a server yourself, Tech With Tim's thirty-minute
+      tutorial builds a small one in Python and then adds a real login. It is
+      also where our explanation of how MCP works comes from.
 
   - component: table-slide
     title: "Sources"
     headers: ["Part", "Taken from"]
     rows:
-      - ["The tutorial", "youtube.com, Tech With Tim"]
-      - ["Its code", "github.com/techwithtim"]
-      - ["Login rules", "modelcontextprotocol.io"]
+      - ["How MCP works", "Tech With Tim, YouTube"]
+      - ["Alpaca's server", "github.com/alpacahq"]
       - ["Claude commands", "code.claude.com/docs"]
-      - ["The attack", "snyk.io/blog"]
+      - ["The fake server", "snyk.io/blog"]
     notes: >-
-      The tutorial and its code come from Tech With Tim. We checked the login
-      rules against the MCP specification, the commands against the Claude Code
-      docs, and the attack against Snyk's report.
+      How MCP works comes from Tech With Tim's tutorial, everything about
+      Alpaca's server from Alpaca's own GitHub page, the commands from the
+      Claude Code docs, and the fake server from Snyk's report.
 
   - component: bullet-list
-    title: "Before You Build or Connect"
+    title: "Before You Trust a Server"
     items:
-      - "A remote server needs a login"
-      - "Give each tool one scope"
-      - "Connect only servers you trust"
-      - "Pin the version you checked"
+      - "Check who published it"
+      - "Check what its actions can do"
+      - "Turn off what you don't need"
+      - "Start with pretend money"
     notes: >-
-      So before you build or connect a server: a remote server needs a real
-      login, each tool should need only the scope it uses, connect only servers
-      you trust, and pin the version you checked so an update can't change it
-      behind your back.
+      So before you trust any MCP server: check who published it, check what
+      its actions can do, turn off the ones you don't need, and start with
+      pretend money.
