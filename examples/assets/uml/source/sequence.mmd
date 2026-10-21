@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant A as Actions
+    participant P as Pipeline
+    participant M as Model
+    participant D as Supabase
+    A->>P: Daily run
+    P->>P: Fetch opinions
+    P->>M: Asylum?
+    M-->>P: Yes or no
+    opt if yes
+        P->>M: Extract
+        M-->>P: Features
+    end
+    P->>D: Save

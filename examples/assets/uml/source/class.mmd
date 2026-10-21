@@ -1,0 +1,16 @@
+classDiagram
+    direction LR
+    class Opinion {
+        +date
+        +text
+        +isAsylum()
+    }
+    class AsylumOpinion {
+        +country
+    }
+    class Feature {
+        +name
+        +quote
+    }
+    Opinion <|-- AsylumOpinion : is a
+    AsylumOpinion *-- Feature : has many

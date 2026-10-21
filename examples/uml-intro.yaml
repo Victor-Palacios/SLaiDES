@@ -1,0 +1,281 @@
+# What Is UML? — an entry-level tour of the Unified Modeling Language.
+#
+# Grounding:
+#   assets/uml/omg-spec.png ... screenshot of https://www.omg.org/spec/UML/,
+#                               captured 2026-10-21 (headless Chromium, cropped
+#                               to the 1290x1000 slot, cookie banner kept out)
+#   history and the 14 diagram types: https://en.wikipedia.org/wiki/Unified_Modeling_Language
+# The three example diagrams are drawn for this deck with Mermaid, modelling the
+# public ninth_circuit pipeline (https://github.com/Victor-Palacios/ninth_circuit)
+# from what its README states. Their editable sources are in assets/uml/source/.
+#
+# Three-colour rule: `primary` is collapsed onto `accent`, and the drawn
+# diagrams use only white, blue and ink. The screenshot is shown as captured.
+version: 1
+theme:
+  font: arial
+  palette:
+    primary: "#0072CE"
+    accent: "#0072CE"
+    muted: "#0A2240"   # grey would be a fourth colour; collapse onto ink
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  - component: title-slide
+    title: "What Is UML?"
+    subtitle: "Drawing software before you build it"
+    notes: >-
+      This is an entry-level tour of UML, the Unified Modeling Language: what it
+      is, the diagrams you will actually meet, and how to read them.
+
+  - component: question
+    question: "How do you draw a design?"
+    notes: >-
+      Describing a system in words gets confusing fast. The question is how to
+      draw it so that anyone reading the picture understands it the same way.
+
+  - component: definition
+    term: "UML"
+    definition: "A standard visual language for software designs"
+    notes: >-
+      UML is a standard visual language for describing software designs, so a
+      box or an arrow means the same thing to everyone who reads it.
+
+  - component: image-half-bleed
+    title: "The Official Standard"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/uml/omg-spec.png"
+      fit: contain
+      alt: "Screenshot of omg.org/spec/UML, the UML 2.5.1 specification page, captured 2026-10-21"
+    content:
+      - type: text
+        content: "Maintained by the OMG"
+      - type: text
+        content: "Current version 2.5.1"
+      - type: text
+        content: "Published December 2017"
+    source: "https://www.omg.org/spec/UML/"
+    notes: >-
+      UML is maintained by the Object Management Group. Its specification page
+      shows the current version, 2.5.1, published in December 2017.
+
+  - component: timeline
+    title: "Where It Came From"
+    events:
+      - date: "1995"
+        title: "Merged"
+        description: "Three design methods combine"
+      - date: "1997"
+        title: "OMG"
+        description: "Adopted as a standard"
+      - date: "2005"
+        title: "ISO"
+        description: "Becomes an ISO standard"
+      - date: "2017"
+        title: "UML 2.5.1"
+        description: "The version in use today"
+    source: "https://en.wikipedia.org/wiki/Unified_Modeling_Language"
+    notes: >-
+      Grady Booch, James Rumbaugh and Ivar Jacobson merged their design methods
+      into UML in the mid-1990s. The OMG adopted it in 1997, it became an ISO
+      standard in 2005, and version 2.5.1 arrived in 2017.
+
+  - component: two-panel-list
+    title: "Fourteen Diagrams, Two Families"
+    left:
+      title: "Structure: what it is"
+      items:
+        - "Class"
+        - "Component"
+        - "Deployment"
+    right:
+      title: "Behaviour: what it does"
+      items:
+        - "Use case"
+        - "Sequence"
+        - "State machine"
+    accent_side: "right"
+    notes: >-
+      UML defines fourteen diagram types in two families of seven. Structure
+      diagrams show what a system is made of, and behaviour diagrams show what it
+      does. Here are three common ones from each.
+
+  - component: definition
+    term: "Class diagram"
+    definition: "The things in a system and how they relate"
+    notes: >-
+      A class diagram shows the kinds of thing in a system and how they relate to
+      one another.
+
+  - component: image-half-bleed
+    title: "A Class Diagram, Concretely"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/uml/class.png"
+      fit: contain
+      alt: "UML class diagram: Opinion, AsylumOpinion as a kind of Opinion, and AsylumOpinion composed of many Features"
+    content:
+      - type: text
+        content: "Each box is a class"
+      - type: text
+        content: "Each line is a link"
+      - type: text
+        content: "Modelling ninth_circuit"
+    source: "https://github.com/Victor-Palacios/ninth_circuit"
+    notes: >-
+      Here is one drawn for a real project, ninth_circuit, which reads court
+      opinions. An asylum opinion is a kind of opinion, and it has many features
+      pulled out of it.
+
+  - component: table-slide
+    title: "Reading a Class Box"
+    headers: ["Part of the box", "What it holds"]
+    rows:
+      - ["Top", "The class name"]
+      - ["Middle", "Its attributes"]
+      - ["Bottom", "Its operations"]
+    notes: >-
+      Every class box reads the same way: the name at the top, its attributes —
+      the data it holds — in the middle, and its operations, the things it can
+      do, at the bottom.
+
+  - component: table-slide
+    title: "The Lines Between Classes"
+    headers: ["Line end", "Means"]
+    rows:
+      - ["Hollow triangle", "Is a kind of"]
+      - ["Filled diamond", "Owns, and dies with"]
+      - ["Hollow diamond", "Has, but shares"]
+      - ["Plain line", "Knows about"]
+    notes: >-
+      The line ends carry the meaning. A hollow triangle means is a kind of. A
+      filled diamond means owns completely. A hollow diamond means has, but
+      shares. A plain line means one simply knows about the other.
+
+  - component: definition
+    term: "Sequence diagram"
+    definition: "Who talks to whom, and in what order"
+    notes: >-
+      A sequence diagram shows who talks to whom, and in what order.
+
+  - component: image-half-bleed
+    title: "A Sequence Diagram, Concretely"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/uml/seq.png"
+      fit: contain
+      alt: "UML sequence diagram of the ninth_circuit daily run: Actions, Pipeline, Model, Supabase"
+    content:
+      - type: text
+        content: "Time runs downward"
+      - type: text
+        content: "Solid arrows: requests"
+      - type: text
+        content: "Dashed arrows: replies"
+    source: "https://github.com/Victor-Palacios/ninth_circuit"
+    notes: >-
+      This is that project's daily run. Time runs downward, a solid arrow is a
+      request, and a dashed arrow is the reply that comes back.
+
+  - component: bullet-list
+    title: "Boxes That Change the Flow"
+    items:
+      - "opt: happens only if true"
+      - "alt: one branch or the other"
+      - "loop: repeats while true"
+      - "par: happens at the same time"
+    notes: >-
+      A labelled box around some messages changes how they run. Opt means they
+      happen only if a condition is true, alt picks one branch, loop repeats
+      them, and par runs them at the same time.
+
+  - component: definition
+    term: "State machine"
+    definition: "The stages one thing moves through"
+    notes: >-
+      A state machine diagram shows the stages that one thing moves through over
+      its life.
+
+  - component: image-half-bleed
+    title: "A State Diagram, Concretely"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/uml/state.png"
+      fit: contain
+      alt: "UML state machine for one opinion: Fetched, Classified, then SetAside or Extracted and Saved"
+    content:
+      - type: text
+        content: "Filled dot: the start"
+      - type: text
+        content: "Ringed dot: the end"
+      - type: text
+        content: "Labels say why it moves"
+    source: "https://github.com/Victor-Palacios/ninth_circuit"
+    notes: >-
+      Here is one opinion's life in that project. The filled dot is where it
+      starts, the ringed dot is where it ends, and the labels on the arrows say
+      why it moves from one stage to the next.
+
+  - component: table-slide
+    title: "Which Diagram, When"
+    headers: ["If you are asking", "Draw a"]
+    rows:
+      - ["What is it made of?", "Class diagram"]
+      - ["Who talks to whom?", "Sequence diagram"]
+      - ["What stages can it be in?", "State diagram"]
+      - ["What can a user do?", "Use case diagram"]
+    notes: >-
+      Pick the diagram from the question. What is it made of calls for a class
+      diagram, who talks to whom for a sequence diagram, what stages it can be in
+      for a state diagram, and what a user can do for a use case diagram.
+
+  - component: bullet-list
+    title: "Tools for Drawing It"
+    items:
+      - "Pen and paper, honestly"
+      - "Mermaid: diagrams written as text"
+      - "PlantUML: also text"
+      - "draw.io: drag and drop"
+    notes: >-
+      You need very little to start: pen and paper works. Mermaid, which drew the
+      diagrams in this deck, and PlantUML both turn text into diagrams, and
+      draw.io lets you drag shapes around.
+
+  - component: bullet-list
+    title: "Good Habits"
+    items:
+      - "Draw to explain, not to archive"
+      - "One question per diagram"
+      - "Leave out what does not matter"
+      - "Keep it next to the code"
+    notes: >-
+      Draw to explain rather than to archive everything, answer one question per
+      diagram, leave out whatever does not matter to that question, and keep the
+      diagram next to the code it describes.
+
+  - component: table-slide
+    title: "Sources"
+    headers: ["Slide", "Taken from"]
+    rows:
+      - ["Specification", "omg.org/spec/UML"]
+      - ["History, diagram types", "Wikipedia, UML"]
+      - ["Example diagrams", "Drawn with Mermaid"]
+      - ["What they model", "ninth_circuit README"]
+    notes: >-
+      The specification screenshot was captured on the twenty-first of October
+      2026, the history and diagram types come from Wikipedia's UML article, and
+      the example diagrams were drawn for this deck from the ninth_circuit README.
+
+  - component: question
+    question: "What would you draw first?"
+    notes: >-
+      So, for a system you know: which diagram would you draw first, and what
+      question would it answer?

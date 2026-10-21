@@ -1,0 +1,9 @@
+stateDiagram-v2
+    direction TB
+    [*] --> Fetched
+    Fetched --> Classified
+    Classified --> SetAside : no
+    Classified --> Extracted : asylum
+    Extracted --> Saved
+    SetAside --> [*]
+    Saved --> [*]

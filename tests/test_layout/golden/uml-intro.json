@@ -1,0 +1,3569 @@
+{
+  "slides": [
+    {
+      "slide_index": 0,
+      "page_number": null,
+      "component": "title-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_449",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 2575560,
+            "w": 10363200,
+            "h": 914400
+          },
+          "text_content": "What Is UML?",
+          "lines": [
+            {
+              "text": "What Is UML?",
+              "width_emu": 5037088,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "subtitle_450",
+          "node_type": "text",
+          "rect": {
+            "x": 914400,
+            "y": 3764280,
+            "w": 10363200,
+            "h": 518159
+          },
+          "text_content": "Drawing software before you build it",
+          "lines": [
+            {
+              "text": "Drawing software before you build it",
+              "width_emu": 6864313,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": []
+    },
+    {
+      "slide_index": 1,
+      "page_number": 2,
+      "component": "question",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_452",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2926080,
+            "w": 128016,
+            "h": 1005840
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "question_451",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2926080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "How do you draw a design?",
+          "lines": [
+            {
+              "text": "How do you draw a design?",
+              "width_emu": 10076036,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_453",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "2",
+          "lines": [
+            {
+              "text": "2",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 2,
+      "page_number": 3,
+      "component": "definition",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_456",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_454",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "UML",
+          "lines": [
+            {
+              "text": "UML",
+              "width_emu": 1650504,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "def_455",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "A standard visual language for software designs",
+          "lines": [
+            {
+              "text": "A standard visual language for software designs",
+              "width_emu": 9169425,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_457",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "3",
+          "lines": [
+            {
+              "text": "3",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 3,
+      "page_number": 4,
+      "component": "image-half-bleed",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_458",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Official Standard",
+          "lines": [
+            {
+              "text": "The Official Standard",
+              "width_emu": 5364473,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "image_459",
+          "node_type": "image",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 4261104
+          },
+          "text_content": "examples/assets/uml/omg-spec.png",
+          "slot_type": "image"
+        },
+        {
+          "node_id": "content_text_460",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Maintained by the OMG",
+          "lines": [
+            {
+              "text": "Maintained by the OMG",
+              "width_emu": 4560044,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_461",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2383536,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Current version 2.5.1",
+          "lines": [
+            {
+              "text": "Current version 2.5.1",
+              "width_emu": 4032101,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_462",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3267456,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Published December 2017",
+          "lines": [
+            {
+              "text": "Published December 2017",
+              "width_emu": 5088830,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_463",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "4",
+          "lines": [
+            {
+              "text": "4",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        },
+        {
+          "node_id": "chrome_source_464",
+          "node_type": "text",
+          "rect": {
+            "x": 10085130,
+            "y": 6035040,
+            "w": 826710,
+            "h": 365760
+          },
+          "text_content": "Source",
+          "lines": [
+            {
+              "text": "Source",
+              "width_emu": 643830,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "text_color": "#0072CE",
+          "href": "https://www.omg.org/spec/UML/"
+        }
+      ]
+    },
+    {
+      "slide_index": 4,
+      "page_number": 5,
+      "component": "timeline",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_465",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Where It Came From",
+          "lines": [
+            {
+              "text": "Where It Came From",
+              "width_emu": 5186846,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_date_466",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "1995",
+          "lines": [
+            {
+              "text": "1995",
+              "width_emu": 706313,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_title_467",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "Merged",
+          "lines": [
+            {
+              "text": "Merged",
+              "width_emu": 1535547,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_468",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "Three design methods combine",
+          "lines": [
+            {
+              "text": "Three",
+              "width_emu": 1127993,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "design",
+              "width_emu": 1272418,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "methods",
+              "width_emu": 1656147,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "combine",
+              "width_emu": 1632111,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "ev_date_469",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "1997",
+          "lines": [
+            {
+              "text": "1997",
+              "width_emu": 706313,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_title_470",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "OMG",
+          "lines": [
+            {
+              "text": "OMG",
+              "width_emu": 1031429,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_471",
+          "node_type": "text",
+          "rect": {
+            "x": 3345180,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "Adopted as a standard",
+          "lines": [
+            {
+              "text": "Adopted as",
+              "width_emu": 2184722,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "a standard",
+              "width_emu": 2040508,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "ev_date_472",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "2005",
+          "lines": [
+            {
+              "text": "2005",
+              "width_emu": 706313,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_title_473",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "ISO",
+          "lines": [
+            {
+              "text": "ISO",
+              "width_emu": 743843,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_474",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "Becomes an ISO standard",
+          "lines": [
+            {
+              "text": "Becomes",
+              "width_emu": 1799940,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "an ISO",
+              "width_emu": 1344104,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "standard",
+              "width_emu": 1680394,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "ev_date_475",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 1499616,
+            "w": 2613660,
+            "h": 381000
+          },
+          "text_content": "2017",
+          "lines": [
+            {
+              "text": "2017",
+              "width_emu": 706313,
+              "height_emu": 381000,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 25.0,
+          "bold": true,
+          "italic": false,
+          "is_caption": true,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "ev_title_476",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2154936,
+            "w": 2613660,
+            "h": 518159
+          },
+          "text_content": "UML 2.5.1",
+          "lines": [
+            {
+              "text": "UML 2.5.1",
+              "width_emu": 2007828,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false
+        },
+        {
+          "node_id": "ev_desc_477",
+          "node_type": "text",
+          "rect": {
+            "x": 9121140,
+            "y": 2947415,
+            "w": 2613660,
+            "h": 2813305
+          },
+          "text_content": "The version in use today",
+          "lines": [
+            {
+              "text": "The version",
+              "width_emu": 2255986,
+              "height_emu": 518160,
+              "overflows": false
+            },
+            {
+              "text": "in use today",
+              "width_emu": 2328515,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_478",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "5",
+          "lines": [
+            {
+              "text": "5",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        },
+        {
+          "node_id": "chrome_source_479",
+          "node_type": "text",
+          "rect": {
+            "x": 10085130,
+            "y": 6035040,
+            "w": 826710,
+            "h": 365760
+          },
+          "text_content": "Source",
+          "lines": [
+            {
+              "text": "Source",
+              "width_emu": 643830,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "text_color": "#0072CE",
+          "href": "https://en.wikipedia.org/wiki/Unified_Modeling_Language"
+        }
+      ]
+    },
+    {
+      "slide_index": 5,
+      "page_number": 6,
+      "component": "two-panel-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_480",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Fourteen Diagrams, Two Families",
+          "lines": [
+            {
+              "text": "Fourteen Diagrams, Two Families",
+              "width_emu": 8467204,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "lp_head_481",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 621791
+          },
+          "text_content": "Structure: what it is",
+          "lines": [
+            {
+              "text": "Structure: what it is",
+              "width_emu": 4030625,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "lp_head",
+          "text_color": "#0A2240"
+        },
+        {
+          "node_id": "lp_rule_482",
+          "node_type": "box",
+          "rect": {
+            "x": 548640,
+            "y": 2176271,
+            "w": 1650492,
+            "h": 54864
+          },
+          "group_id": "lp_head",
+          "fill_color": "#0A2240"
+        },
+        {
+          "node_id": "rp_head_483",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 621791
+          },
+          "text_content": "Behaviour: what it does",
+          "lines": [
+            {
+              "text": "Behaviour: what it does",
+              "width_emu": 4870400,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "rp_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "rp_rule_484",
+          "node_type": "box",
+          "rect": {
+            "x": 6324600,
+            "y": 2176271,
+            "w": 1650492,
+            "h": 54864
+          },
+          "group_id": "rp_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "lp_item_485",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Class",
+          "lines": [
+            {
+              "text": "Class",
+              "width_emu": 1079711,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "lp_head"
+        },
+        {
+          "node_id": "lp_item_486",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3608831,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Component",
+          "lines": [
+            {
+              "text": "Component",
+              "width_emu": 2232372,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "lp_head"
+        },
+        {
+          "node_id": "lp_item_487",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4821935,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Deployment",
+          "lines": [
+            {
+              "text": "Deployment",
+              "width_emu": 2304058,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "lp_head"
+        },
+        {
+          "node_id": "rp_item_488",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 2395727,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Use case",
+          "lines": [
+            {
+              "text": "Use case",
+              "width_emu": 1799940,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rp_head"
+        },
+        {
+          "node_id": "rp_item_489",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 3608831,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Sequence",
+          "lines": [
+            {
+              "text": "Sequence",
+              "width_emu": 1944787,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rp_head"
+        },
+        {
+          "node_id": "rp_item_490",
+          "node_type": "text",
+          "rect": {
+            "x": 6233160,
+            "y": 4821935,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "State machine",
+          "lines": [
+            {
+              "text": "State machine",
+              "width_emu": 2760315,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false,
+          "group_id": "rp_head"
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_491",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "6",
+          "lines": [
+            {
+              "text": "6",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 6,
+      "page_number": 7,
+      "component": "definition",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_494",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_492",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "Class diagram",
+          "lines": [
+            {
+              "text": "Class diagram",
+              "width_emu": 5209356,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "def_493",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "The things in a system and how they relate",
+          "lines": [
+            {
+              "text": "The things in a system and how they relate",
+              "width_emu": 8208628,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_495",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "7",
+          "lines": [
+            {
+              "text": "7",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 7,
+      "page_number": 8,
+      "component": "image-half-bleed",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_496",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "A Class Diagram, Concretely",
+          "lines": [
+            {
+              "text": "A Class Diagram, Concretely",
+              "width_emu": 7272784,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "image_497",
+          "node_type": "image",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 4261104
+          },
+          "text_content": "examples/assets/uml/class.png",
+          "slot_type": "image"
+        },
+        {
+          "node_id": "content_text_498",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Each box is a class",
+          "lines": [
+            {
+              "text": "Each box is a class",
+              "width_emu": 3696022,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_499",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2383536,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Each line is a link",
+          "lines": [
+            {
+              "text": "Each line is a link",
+              "width_emu": 3336119,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_500",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3267456,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Modelling ninth_circuit",
+          "lines": [
+            {
+              "text": "Modelling ninth_circuit",
+              "width_emu": 4272248,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_501",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "8",
+          "lines": [
+            {
+              "text": "8",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        },
+        {
+          "node_id": "chrome_source_502",
+          "node_type": "text",
+          "rect": {
+            "x": 10085130,
+            "y": 6035040,
+            "w": 826710,
+            "h": 365760
+          },
+          "text_content": "Source",
+          "lines": [
+            {
+              "text": "Source",
+              "width_emu": 643830,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "text_color": "#0072CE",
+          "href": "https://github.com/Victor-Palacios/ninth_circuit"
+        }
+      ]
+    },
+    {
+      "slide_index": 8,
+      "page_number": 9,
+      "component": "table-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_503",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Reading a Class Box",
+          "lines": [
+            {
+              "text": "Reading a Class Box",
+              "width_emu": 5276441,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_504",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 3388571,
+            "h": 518159
+          },
+          "text_content": "Part of the box",
+          "lines": [
+            {
+              "text": "Part of the box",
+              "width_emu": 3022811,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_505",
+          "node_type": "text",
+          "rect": {
+            "x": 4394411,
+            "y": 1499616,
+            "w": 3413661,
+            "h": 518159
+          },
+          "text_content": "What it holds",
+          "lines": [
+            {
+              "text": "What it holds",
+              "width_emu": 2710346,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "table_rule_506",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 7350872,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_507",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 3388571,
+            "h": 936752
+          },
+          "text_content": "Top",
+          "lines": [
+            {
+              "text": "Top",
+              "width_emu": 696193,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_508",
+          "node_type": "text",
+          "rect": {
+            "x": 4394411,
+            "y": 2401823,
+            "w": 3413661,
+            "h": 936752
+          },
+          "text_content": "The class name",
+          "lines": [
+            {
+              "text": "The class name",
+              "width_emu": 3047901,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_509",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3612895,
+            "w": 3388571,
+            "h": 936752
+          },
+          "text_content": "Middle",
+          "lines": [
+            {
+              "text": "Middle",
+              "width_emu": 1271997,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_510",
+          "node_type": "text",
+          "rect": {
+            "x": 4394411,
+            "y": 3612895,
+            "w": 3413661,
+            "h": 936752
+          },
+          "text_content": "Its attributes",
+          "lines": [
+            {
+              "text": "Its attributes",
+              "width_emu": 2351918,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_511",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4823967,
+            "w": 3388571,
+            "h": 936752
+          },
+          "text_content": "Bottom",
+          "lines": [
+            {
+              "text": "Bottom",
+              "width_emu": 1367929,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_512",
+          "node_type": "text",
+          "rect": {
+            "x": 4394411,
+            "y": 4823967,
+            "w": 3413661,
+            "h": 936752
+          },
+          "text_content": "Its operations",
+          "lines": [
+            {
+              "text": "Its operations",
+              "width_emu": 2592276,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_513",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "9",
+          "lines": [
+            {
+              "text": "9",
+              "width_emu": 113010,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 9,
+      "page_number": 10,
+      "component": "table-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_514",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "The Lines Between Classes",
+          "lines": [
+            {
+              "text": "The Lines Between Classes",
+              "width_emu": 6996187,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_515",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 3437907,
+            "h": 518159
+          },
+          "text_content": "Line end",
+          "lines": [
+            {
+              "text": "Line end",
+              "width_emu": 1775271,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_516",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 1499616,
+            "w": 4229822,
+            "h": 518159
+          },
+          "text_content": "Means",
+          "lines": [
+            {
+              "text": "Means",
+              "width_emu": 1343893,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "table_rule_517",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 8216369,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_518",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 3437907,
+            "h": 633984
+          },
+          "text_content": "Hollow triangle",
+          "lines": [
+            {
+              "text": "Hollow triangle",
+              "width_emu": 2832001,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_519",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 2401823,
+            "w": 4229822,
+            "h": 633984
+          },
+          "text_content": "Is a kind of",
+          "lines": [
+            {
+              "text": "Is a kind of",
+              "width_emu": 2088158,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_520",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3310127,
+            "w": 3437907,
+            "h": 633984
+          },
+          "text_content": "Filled diamond",
+          "lines": [
+            {
+              "text": "Filled diamond",
+              "width_emu": 2808176,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_521",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 3310127,
+            "w": 4229822,
+            "h": 633984
+          },
+          "text_content": "Owns, and dies with",
+          "lines": [
+            {
+              "text": "Owns, and dies with",
+              "width_emu": 3864062,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_522",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4218431,
+            "w": 3437907,
+            "h": 633984
+          },
+          "text_content": "Hollow diamond",
+          "lines": [
+            {
+              "text": "Hollow diamond",
+              "width_emu": 3072147,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_523",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 4218431,
+            "w": 4229822,
+            "h": 633984
+          },
+          "text_content": "Has, but shares",
+          "lines": [
+            {
+              "text": "Has, but shares",
+              "width_emu": 3024076,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_524",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 3437907,
+            "h": 633984
+          },
+          "text_content": "Plain line",
+          "lines": [
+            {
+              "text": "Plain line",
+              "width_emu": 1752290,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_525",
+          "node_type": "text",
+          "rect": {
+            "x": 4443747,
+            "y": 5126735,
+            "w": 4229822,
+            "h": 633984
+          },
+          "text_content": "Knows about",
+          "lines": [
+            {
+              "text": "Knows about",
+              "width_emu": 2496555,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_526",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "10",
+          "lines": [
+            {
+              "text": "10",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 10,
+      "page_number": 11,
+      "component": "definition",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_529",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_527",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "Sequence diagram",
+          "lines": [
+            {
+              "text": "Sequence diagram",
+              "width_emu": 6775772,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "def_528",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "Who talks to whom, and in what order",
+          "lines": [
+            {
+              "text": "Who talks to whom, and in what order",
+              "width_emu": 7224006,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_530",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "11",
+          "lines": [
+            {
+              "text": "11",
+              "width_emu": 210939,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 11,
+      "page_number": 12,
+      "component": "image-half-bleed",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_531",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "A Sequence Diagram, Concretely",
+          "lines": [
+            {
+              "text": "A Sequence Diagram, Concretely",
+              "width_emu": 8369275,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "image_532",
+          "node_type": "image",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 4261104
+          },
+          "text_content": "examples/assets/uml/seq.png",
+          "slot_type": "image"
+        },
+        {
+          "node_id": "content_text_533",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Time runs downward",
+          "lines": [
+            {
+              "text": "Time runs downward",
+              "width_emu": 3991620,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_534",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2383536,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Solid arrows: requests",
+          "lines": [
+            {
+              "text": "Solid arrows: requests",
+              "width_emu": 4271826,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_535",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3267456,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Dashed arrows: replies",
+          "lines": [
+            {
+              "text": "Dashed arrows: replies",
+              "width_emu": 4415830,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_536",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "12",
+          "lines": [
+            {
+              "text": "12",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        },
+        {
+          "node_id": "chrome_source_537",
+          "node_type": "text",
+          "rect": {
+            "x": 10085130,
+            "y": 6035040,
+            "w": 826710,
+            "h": 365760
+          },
+          "text_content": "Source",
+          "lines": [
+            {
+              "text": "Source",
+              "width_emu": 643830,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "text_color": "#0072CE",
+          "href": "https://github.com/Victor-Palacios/ninth_circuit"
+        }
+      ]
+    },
+    {
+      "slide_index": 12,
+      "page_number": 13,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_538",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Boxes That Change the Flow",
+          "lines": [
+            {
+              "text": "Boxes That Change the Flow",
+              "width_emu": 7290495,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_539",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "opt: happens only if true",
+          "lines": [
+            {
+              "text": "opt: happens only if true",
+              "width_emu": 4608959,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_540",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "alt: one branch or the other",
+          "lines": [
+            {
+              "text": "alt: one branch or the other",
+              "width_emu": 5184973,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_541",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "loop: repeats while true",
+          "lines": [
+            {
+              "text": "loop: repeats while true",
+              "width_emu": 4464534,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_542",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "par: happens at the same time",
+          "lines": [
+            {
+              "text": "par: happens at the same time",
+              "width_emu": 5832673,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_543",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "13",
+          "lines": [
+            {
+              "text": "13",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 13,
+      "page_number": 14,
+      "component": "definition",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_546",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2484120,
+            "w": 128016,
+            "h": 1889760
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "term_544",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2484120,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "State machine",
+          "lines": [
+            {
+              "text": "State machine",
+              "width_emu": 5166568,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "def_545",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 3764280,
+            "w": 10738104,
+            "h": 609600
+          },
+          "text_content": "The stages one thing moves through",
+          "lines": [
+            {
+              "text": "The stages one thing moves through",
+              "width_emu": 7009160,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_547",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "14",
+          "lines": [
+            {
+              "text": "14",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 14,
+      "page_number": 15,
+      "component": "image-half-bleed",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_548",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "A State Diagram, Concretely",
+          "lines": [
+            {
+              "text": "A State Diagram, Concretely",
+              "width_emu": 7153759,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "image_549",
+          "node_type": "image",
+          "rect": {
+            "x": 6233160,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 4261104
+          },
+          "text_content": "examples/assets/uml/state.png",
+          "slot_type": "image"
+        },
+        {
+          "node_id": "content_text_550",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Filled dot: the start",
+          "lines": [
+            {
+              "text": "Filled dot: the start",
+              "width_emu": 3552019,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_551",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2383536,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Ringed dot: the end",
+          "lines": [
+            {
+              "text": "Ringed dot: the end",
+              "width_emu": 3769184,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "content_text_552",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3267456,
+            "w": 5501640,
+            "h": 609600
+          },
+          "text_content": "Labels say why it moves",
+          "lines": [
+            {
+              "text": "Labels say why it moves",
+              "width_emu": 4679801,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_553",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "15",
+          "lines": [
+            {
+              "text": "15",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        },
+        {
+          "node_id": "chrome_source_554",
+          "node_type": "text",
+          "rect": {
+            "x": 10085130,
+            "y": 6035040,
+            "w": 826710,
+            "h": 365760
+          },
+          "text_content": "Source",
+          "lines": [
+            {
+              "text": "Source",
+              "width_emu": 643830,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "text_color": "#0072CE",
+          "href": "https://github.com/Victor-Palacios/ninth_circuit"
+        }
+      ]
+    },
+    {
+      "slide_index": 15,
+      "page_number": 16,
+      "component": "table-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_555",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Which Diagram, When",
+          "lines": [
+            {
+              "text": "Which Diagram, When",
+              "width_emu": 5630652,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_556",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 5214233,
+            "h": 518159
+          },
+          "text_content": "If you are asking",
+          "lines": [
+            {
+              "text": "If you are asking",
+              "width_emu": 3407594,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_557",
+          "node_type": "text",
+          "rect": {
+            "x": 6220073,
+            "y": 1499616,
+            "w": 3990519,
+            "h": 518159
+          },
+          "text_content": "Draw a",
+          "lines": [
+            {
+              "text": "Draw a",
+              "width_emu": 1416000,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "table_rule_558",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 9753392,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_559",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 5214233,
+            "h": 633984
+          },
+          "text_content": "What is it made of?",
+          "lines": [
+            {
+              "text": "What is it made of?",
+              "width_emu": 3695812,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_560",
+          "node_type": "text",
+          "rect": {
+            "x": 6220073,
+            "y": 2401823,
+            "w": 3990519,
+            "h": 633984
+          },
+          "text_content": "Class diagram",
+          "lines": [
+            {
+              "text": "Class diagram",
+              "width_emu": 2759683,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_561",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3310127,
+            "w": 5214233,
+            "h": 633984
+          },
+          "text_content": "Who talks to whom?",
+          "lines": [
+            {
+              "text": "Who talks to whom?",
+              "width_emu": 3887676,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_562",
+          "node_type": "text",
+          "rect": {
+            "x": 6220073,
+            "y": 3310127,
+            "w": 3990519,
+            "h": 633984
+          },
+          "text_content": "Sequence diagram",
+          "lines": [
+            {
+              "text": "Sequence diagram",
+              "width_emu": 3624759,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_563",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4218431,
+            "w": 5214233,
+            "h": 633984
+          },
+          "text_content": "What stages can it be in?",
+          "lines": [
+            {
+              "text": "What stages can it be in?",
+              "width_emu": 4848473,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_564",
+          "node_type": "text",
+          "rect": {
+            "x": 6220073,
+            "y": 4218431,
+            "w": 3990519,
+            "h": 633984
+          },
+          "text_content": "State diagram",
+          "lines": [
+            {
+              "text": "State diagram",
+              "width_emu": 2688208,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_565",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 5214233,
+            "h": 633984
+          },
+          "text_content": "What can a user do?",
+          "lines": [
+            {
+              "text": "What can a user do?",
+              "width_emu": 3984451,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_566",
+          "node_type": "text",
+          "rect": {
+            "x": 6220073,
+            "y": 5126735,
+            "w": 3990519,
+            "h": 633984
+          },
+          "text_content": "Use case diagram",
+          "lines": [
+            {
+              "text": "Use case diagram",
+              "width_emu": 3479912,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_567",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "16",
+          "lines": [
+            {
+              "text": "16",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 16,
+      "page_number": 17,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_568",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Tools for Drawing It",
+          "lines": [
+            {
+              "text": "Tools for Drawing It",
+              "width_emu": 4968329,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_569",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Pen and paper, honestly",
+          "lines": [
+            {
+              "text": "Pen and paper, honestly",
+              "width_emu": 4657452,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_570",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Mermaid: diagrams written as text",
+          "lines": [
+            {
+              "text": "Mermaid: diagrams written as text",
+              "width_emu": 6479108,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_571",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "PlantUML: also text",
+          "lines": [
+            {
+              "text": "PlantUML: also text",
+              "width_emu": 3743883,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_572",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "draw.io: drag and drop",
+          "lines": [
+            {
+              "text": "draw.io: drag and drop",
+              "width_emu": 4296916,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_573",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "17",
+          "lines": [
+            {
+              "text": "17",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 17,
+      "page_number": 18,
+      "component": "bullet-list",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_574",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Good Habits",
+          "lines": [
+            {
+              "text": "Good Habits",
+              "width_emu": 3170709,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "bl_item_575",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1908050,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Draw to explain, not to archive",
+          "lines": [
+            {
+              "text": "Draw to explain, not to archive",
+              "width_emu": 5808216,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_576",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2883409,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "One question per diagram",
+          "lines": [
+            {
+              "text": "One question per diagram",
+              "width_emu": 4992688,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_577",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3858768,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Leave out what does not matter",
+          "lines": [
+            {
+              "text": "Leave out what does not matter",
+              "width_emu": 6048995,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "bl_item_578",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4834127,
+            "w": 11277600,
+            "h": 518159
+          },
+          "text_content": "Keep it next to the code",
+          "lines": [
+            {
+              "text": "Keep it next to the code",
+              "width_emu": 4537063,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_579",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "18",
+          "lines": [
+            {
+              "text": "18",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 18,
+      "page_number": 19,
+      "component": "table-slide",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "title_580",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 457200,
+            "w": 11277600,
+            "h": 768096
+          },
+          "text_content": "Sources",
+          "lines": [
+            {
+              "text": "Sources",
+              "width_emu": 2104951,
+              "height_emu": 640080,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 42.0,
+          "bold": true,
+          "italic": false,
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_581",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 1499616,
+            "w": 4629152,
+            "h": 518159
+          },
+          "text_content": "Slide",
+          "lines": [
+            {
+              "text": "Slide",
+              "width_emu": 1031850,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "th_582",
+          "node_type": "text",
+          "rect": {
+            "x": 5634992,
+            "y": 1499616,
+            "w": 4637164,
+            "h": 518159
+          },
+          "text_content": "Taken from",
+          "lines": [
+            {
+              "text": "Taken from",
+              "width_emu": 2295413,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": true,
+          "italic": false,
+          "group_id": "table_head",
+          "text_color": "#0072CE"
+        },
+        {
+          "node_id": "table_rule_583",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2072639,
+            "w": 9814956,
+            "h": 54864
+          },
+          "group_id": "table_head",
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "td_584",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 2401823,
+            "w": 4629152,
+            "h": 633984
+          },
+          "text_content": "Specification",
+          "lines": [
+            {
+              "text": "Specification",
+              "width_emu": 2448272,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_585",
+          "node_type": "text",
+          "rect": {
+            "x": 5634992,
+            "y": 2401823,
+            "w": 4637164,
+            "h": 633984
+          },
+          "text_content": "omg.org/spec/UML",
+          "lines": [
+            {
+              "text": "omg.org/spec/UML",
+              "width_emu": 3647740,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_586",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 3310127,
+            "w": 4629152,
+            "h": 633984
+          },
+          "text_content": "History, diagram types",
+          "lines": [
+            {
+              "text": "History, diagram types",
+              "width_emu": 4263392,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_587",
+          "node_type": "text",
+          "rect": {
+            "x": 5634992,
+            "y": 3310127,
+            "w": 4637164,
+            "h": 633984
+          },
+          "text_content": "Wikipedia, UML",
+          "lines": [
+            {
+              "text": "Wikipedia, UML",
+              "width_emu": 3023443,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_588",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 4218431,
+            "w": 4629152,
+            "h": 633984
+          },
+          "text_content": "Example diagrams",
+          "lines": [
+            {
+              "text": "Example diagrams",
+              "width_emu": 3575844,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_589",
+          "node_type": "text",
+          "rect": {
+            "x": 5634992,
+            "y": 4218431,
+            "w": 4637164,
+            "h": 633984
+          },
+          "text_content": "Drawn with Mermaid",
+          "lines": [
+            {
+              "text": "Drawn with Mermaid",
+              "width_emu": 3935115,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_590",
+          "node_type": "text",
+          "rect": {
+            "x": 457200,
+            "y": 5126735,
+            "w": 4629152,
+            "h": 633984
+          },
+          "text_content": "What they model",
+          "lines": [
+            {
+              "text": "What they model",
+              "width_emu": 3239976,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        },
+        {
+          "node_id": "td_591",
+          "node_type": "text",
+          "rect": {
+            "x": 5634992,
+            "y": 5126735,
+            "w": 4637164,
+            "h": 633984
+          },
+          "text_content": "ninth_circuit README",
+          "lines": [
+            {
+              "text": "ninth_circuit README",
+              "width_emu": 4271404,
+              "height_emu": 518160,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 34.0,
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_592",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "19",
+          "lines": [
+            {
+              "text": "19",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    },
+    {
+      "slide_index": 19,
+      "page_number": 20,
+      "component": "question",
+      "canvas_w": 12192000,
+      "canvas_h": 6858000,
+      "nodes": [
+        {
+          "node_id": "accent_bar_594",
+          "node_type": "box",
+          "rect": {
+            "x": 457200,
+            "y": 2926080,
+            "w": 128016,
+            "h": 1005840
+          },
+          "fill_color": "#0072CE"
+        },
+        {
+          "node_id": "question_593",
+          "node_type": "text",
+          "rect": {
+            "x": 996696,
+            "y": 2926080,
+            "w": 10738104,
+            "h": 1005840
+          },
+          "text_content": "What would you draw first?",
+          "lines": [
+            {
+              "text": "What would you draw first?",
+              "width_emu": 9948044,
+              "height_emu": 914400,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 60.0,
+          "bold": true,
+          "italic": false
+        }
+      ],
+      "chrome": [
+        {
+          "node_id": "chrome_pagenum_595",
+          "node_type": "text",
+          "rect": {
+            "x": 11186160,
+            "y": 6035040,
+            "w": 548640,
+            "h": 365760
+          },
+          "text_content": "20",
+          "lines": [
+            {
+              "text": "20",
+              "width_emu": 226020,
+              "height_emu": 243840,
+              "overflows": false
+            }
+          ],
+          "font": "arial",
+          "size_pt": 16,
+          "bold": false,
+          "italic": false,
+          "is_chrome": true,
+          "align": "right"
+        }
+      ]
+    }
+  ]
+}
