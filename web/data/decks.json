@@ -4,7 +4,7 @@
     "w": 1280.0,
     "h": 720.0
   },
-  "count": 16,
+  "count": 18,
   "decks": [
     {
       "stem": "agents-in-ai",
@@ -1199,6 +1199,184 @@
           "height_px": 720.0,
           "background": "#FFFFFF",
           "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Before You Push</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Is .env in .gitignore?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Does git status show it?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Is .env.example up to date?</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Would you show this diff to anyone?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">10</div>"
+        }
+      ]
+    },
+    {
+      "stem": "github-intro",
+      "title": "What Is GitHub?",
+      "slide_count": 19,
+      "slides": [
+        {
+          "index": 1,
+          "component": "title-slide",
+          "caption": "What Is GitHub?",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:96.00px;top:270.40px;width:1088.00px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">What Is GitHub?</div>\n    <div class=\"node node-text\" style=\"left:96.00px;top:395.20px;width:1088.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">An entry-level tour, with real screenshots</div>"
+        },
+        {
+          "index": 2,
+          "component": "question",
+          "caption": "Where does your code live?",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:307.20px;width:13.44px;height:105.60px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:307.20px;width:1127.36px;height:105.60px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Where does your code live?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">2</div>"
+        },
+        {
+          "index": 3,
+          "component": "definition",
+          "caption": "Git",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:260.80px;width:13.44px;height:198.40px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:260.80px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Git</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:395.20px;width:1127.36px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A tool that remembers every version of your files</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">3</div>"
+        },
+        {
+          "index": 4,
+          "component": "this-vs-that",
+          "caption": "Git and GitHub Are Not the Same",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Git and GitHub Are Not the Same</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:291.52px;width:503.20px;height:96.00px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">Git</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:416.32px;width:503.20px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">On your computer</div>\n    <div class=\"node node-text\" style=\"left:728.80px;top:291.52px;width:503.20px;height:96.00px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">GitHub</div>\n    <div class=\"node node-text\" style=\"left:728.80px;top:416.32px;width:503.20px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">On the web</div>\n    <div class=\"node node-text\" style=\"left:580.00px;top:347.52px;width:120.00px;height:67.20px;color:#5B6B82;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">VS</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">4</div>"
+        },
+        {
+          "index": 5,
+          "component": "definition",
+          "caption": "Repository",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:260.80px;width:13.44px;height:198.40px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:260.80px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Repository</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:395.20px;width:1127.36px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">One project's folder, with its whole history</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">5</div>"
+        },
+        {
+          "index": 6,
+          "component": "image-half-bleed",
+          "caption": "A Real Repository",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">A Real Repository</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/github/repo.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">This is ninth_circuit</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Folders and files</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">584 commits of history</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">6</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://github.com/Victor-Palacios/ninth_circuit\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 7,
+          "component": "table-slide",
+          "caption": "Where Things Are on the Page",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Where Things Are on the Page</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:300.46px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Tab</div>\n    <div class=\"node node-text\" style=\"left:406.06px;top:157.44px;width:602.83px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">What it holds</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:217.60px;width:960.89px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:252.16px;width:300.46px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Code</div>\n    <div class=\"node node-text\" style=\"left:406.06px;top:252.16px;width:602.83px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The files themselves</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:347.52px;width:300.46px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Issues</div>\n    <div class=\"node node-text\" style=\"left:406.06px;top:347.52px;width:602.83px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">To-dos and bug reports</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:442.88px;width:300.46px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Pull requests</div>\n    <div class=\"node node-text\" style=\"left:406.06px;top:442.88px;width:602.83px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Changes waiting for review</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:538.24px;width:300.46px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Actions</div>\n    <div class=\"node node-text\" style=\"left:406.06px;top:538.24px;width:602.83px;height:66.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Jobs that run by themselves</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">7</div>"
+        },
+        {
+          "index": 8,
+          "component": "definition",
+          "caption": "Commit",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:260.80px;width:13.44px;height:198.40px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:260.80px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Commit</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:395.20px;width:1127.36px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A saved snapshot, with a note saying why</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">8</div>"
+        },
+        {
+          "index": 9,
+          "component": "image-half-bleed",
+          "caption": "History You Can Read",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">History You Can Read</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/github/commits.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Newest at the top</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Who, when, and why</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Any one can be restored</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">9</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://github.com/Victor-Palacios/ninth_circuit/commits\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 10,
+          "component": "numbered-steps",
+          "caption": "The Basic Loop",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Basic Loop</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:81.49px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">01</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:157.44px;width:1078.51px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Edit</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:229.44px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Change files on your computer</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:316.16px;width:81.49px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">02</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:316.16px;width:1078.51px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Commit</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:388.16px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Save a snapshot with a note</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:474.88px;width:81.49px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">03</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:474.88px;width:1078.51px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Push</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:546.88px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Send it up to GitHub</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">10</div>"
+        },
+        {
+          "index": 11,
+          "component": "definition",
+          "caption": "Branch",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:260.80px;width:13.44px;height:198.40px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:260.80px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Branch</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:395.20px;width:1127.36px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A separate line of work that leaves main alone</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">11</div>"
+        },
+        {
+          "index": 12,
+          "component": "image-half-bleed",
+          "caption": "Proposing a Change",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Proposing a Change</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/github/prs.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Show what you changed</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Others review it</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Then it is merged</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">12</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 13,
+          "component": "image-half-bleed",
+          "caption": "Work That Runs Itself",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Work That Runs Itself</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/github/actions.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Jobs on a schedule</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">1,451 runs so far</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">No laptop required</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">13</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://github.com/Victor-Palacios/ninth_circuit/actions\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 14,
+          "component": "bullet-list",
+          "caption": "What Actions Are Good For",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What Actions Are Good For</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Running your tests on every change</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A job every night, like fetching data</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Publishing a website</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Backing up your results</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">14</div>"
+        },
+        {
+          "index": 15,
+          "component": "image-half-bleed",
+          "caption": "A Free Website From a Repo",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">A Free Website From a Repo</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/github/pages.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">HTML, CSS, JavaScript</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Served from your repo</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A public web address</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">15</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 16,
+          "component": "bullet-list",
+          "caption": "Public or Private",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Public or Private</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Public: anyone can read it</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Private: only people you invite</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Both keep the full history</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">So never commit a password</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">16</div>"
+        },
+        {
+          "index": 17,
+          "component": "numbered-steps",
+          "caption": "Your First Ten Minutes",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Your First Ten Minutes</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:81.49px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">01</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:157.44px;width:1078.51px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Make an account</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:229.44px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">It is free</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:316.16px;width:81.49px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">02</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:316.16px;width:1078.51px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Create a repository</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:388.16px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Tick the box to add a README</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:474.88px;width:81.49px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">03</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:474.88px;width:1078.51px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Edit the README</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:546.88px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Commit it, and look at History</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">17</div>"
+        },
+        {
+          "index": 18,
+          "component": "table-slide",
+          "caption": "Screenshots, Captured 21 Oct 2026",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Screenshots, Captured 21 Oct 2026</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:340.66px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Screenshot</div>\n    <div class=\"node node-text\" style=\"left:446.26px;top:157.44px;width:519.56px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Captured from</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:217.60px;width:917.82px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:252.16px;width:340.66px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Repository</div>\n    <div class=\"node node-text\" style=\"left:446.26px;top:252.16px;width:519.56px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">…/ninth_circuit</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:328.45px;width:340.66px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Commit history</div>\n    <div class=\"node node-text\" style=\"left:446.26px;top:328.45px;width:519.56px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">…/ninth_circuit/commits</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:404.74px;width:340.66px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Actions</div>\n    <div class=\"node node-text\" style=\"left:446.26px;top:404.74px;width:519.56px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">…/ninth_circuit/actions</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:481.02px;width:340.66px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Pull requests</div>\n    <div class=\"node node-text\" style=\"left:446.26px;top:481.02px;width:519.56px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">docs.github.com</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:557.31px;width:340.66px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Pages</div>\n    <div class=\"node node-text\" style=\"left:446.26px;top:557.31px;width:519.56px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">docs.github.com</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">18</div>"
+        },
+        {
+          "index": 19,
+          "component": "question",
+          "caption": "What will you put in yours?",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:307.20px;width:13.44px;height:105.60px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:307.20px;width:1127.36px;height:105.60px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">What will you put in yours?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">19</div>"
         }
       ]
     },
@@ -5679,6 +5857,184 @@
           "height_px": 720.0,
           "background": "#FFFFFF",
           "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:275.20px;width:13.44px;height:169.60px;background:#E0873C;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:275.20px;width:1127.36px;height:76.80px;color:#1A1A2E;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">\"Make design quality auditable.\"</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:380.80px;width:1127.36px;height:64.00px;color:#8A8A9A;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">- Ngo, Teo &amp; Byrne (2003)</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#8A8A9A;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">20</div>"
+        }
+      ]
+    },
+    {
+      "stem": "supabase-intro",
+      "title": "What Is Supabase?",
+      "slide_count": 19,
+      "slides": [
+        {
+          "index": 1,
+          "component": "title-slide",
+          "caption": "What Is Supabase?",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:96.00px;top:270.40px;width:1088.00px;height:96.00px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">What Is Supabase?</div>\n    <div class=\"node node-text\" style=\"left:96.00px;top:395.20px;width:1088.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">An entry-level tour, with real screenshots</div>"
+        },
+        {
+          "index": 2,
+          "component": "question",
+          "caption": "Where does your data live?",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:307.20px;width:13.44px;height:105.60px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:307.20px;width:1127.36px;height:105.60px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Where does your data live?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">2</div>"
+        },
+        {
+          "index": 3,
+          "component": "definition",
+          "caption": "Backend",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:260.80px;width:13.44px;height:198.40px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:260.80px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Backend</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:395.20px;width:1127.36px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The part of an app you never see</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">3</div>"
+        },
+        {
+          "index": 4,
+          "component": "image-half-bleed",
+          "caption": "How Supabase Describes Itself",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">How Supabase Describes Itself</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/supabase/home.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">It starts as a database</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Then adds what apps need</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">All in one project</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">4</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://supabase.com/\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 5,
+          "component": "card-grid",
+          "caption": "The Four Main Pieces",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Four Main Pieces</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Database</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:226.24px;width:274.40px;height:378.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Tables of your data</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:157.44px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Auth</div>\n    <div class=\"node node-text\" style=\"left:351.20px;top:226.24px;width:274.40px;height:378.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Who is signed in</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:157.44px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Storage</div>\n    <div class=\"node node-text\" style=\"left:654.40px;top:226.24px;width:274.40px;height:378.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Files people upload</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:157.44px;width:274.40px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">API</div>\n    <div class=\"node node-text\" style=\"left:957.60px;top:226.24px;width:274.40px;height:378.56px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">How your page asks</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">5</div>"
+        },
+        {
+          "index": 6,
+          "component": "definition",
+          "caption": "Database",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:260.80px;width:13.44px;height:198.40px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:260.80px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">Database</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:395.20px;width:1127.36px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Organised tables your app can read and write</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">6</div>"
+        },
+        {
+          "index": 7,
+          "component": "image-half-bleed",
+          "caption": "A Table, Concretely",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">A Table, Concretely</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/supabase/database.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Each row is one record</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Each column is a field</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A spreadsheet with rules</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">7</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://supabase.com/database\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 8,
+          "component": "bullet-list",
+          "caption": "Four Things You Do to a Table",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Four Things You Do to a Table</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Add a row</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Find the rows you want</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Change a row</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Delete a row</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">8</div>"
+        },
+        {
+          "index": 9,
+          "component": "image-half-bleed",
+          "caption": "Sign-In, Built In",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Sign-In, Built In</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/supabase/auth.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Email and password</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Google, GitHub, others</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">No login code to write</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">9</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://supabase.com/auth\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 10,
+          "component": "bullet-list",
+          "caption": "Storage Is for Files",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Storage Is for Files</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:200.32px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Profile photos</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:302.72px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Uploaded PDFs</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:405.12px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Anything too big for a table</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:507.52px;width:1184.00px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Same access rules as the data</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">10</div>"
+        },
+        {
+          "index": 11,
+          "component": "definition",
+          "caption": "API",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:260.80px;width:13.44px;height:198.40px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:260.80px;width:1127.36px;height:105.60px;color:#0072CE;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">API</div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:395.20px;width:1127.36px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">How your page talks to the database</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">11</div>"
+        },
+        {
+          "index": 12,
+          "component": "this-vs-that",
+          "caption": "Why People Use It",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Why People Use It</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:291.52px;width:503.20px;height:96.00px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">Server</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:416.32px;width:503.20px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">You build and run it</div>\n    <div class=\"node node-text\" style=\"left:728.80px;top:291.52px;width:503.20px;height:96.00px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">Supabase</div>\n    <div class=\"node node-text\" style=\"left:728.80px;top:416.32px;width:503.20px;height:54.40px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;text-align:center;\">You set up a project</div>\n    <div class=\"node node-text\" style=\"left:580.00px;top:347.52px;width:120.00px;height:67.20px;color:#5B6B82;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;text-align:center;\">VS</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">12</div>"
+        },
+        {
+          "index": 13,
+          "component": "image-half-bleed",
+          "caption": "The Rule That Protects It",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">The Rule That Protects It</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/supabase/rls.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Turn on row level security</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Without it, data is open</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Supabase warns you itself</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">13</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://supabase.com/docs/guides/database/postgres/row-level-security\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 14,
+          "component": "table-slide",
+          "caption": "Row Level Security, by Example",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Row Level Security, by Example</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:396.20px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Setting</div>\n    <div class=\"node node-text\" style=\"left:501.80px;top:157.44px;width:549.88px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">What a visitor gets</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:217.60px;width:1003.68px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:252.16px;width:396.20px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Security off</div>\n    <div class=\"node node-text\" style=\"left:501.80px;top:252.16px;width:549.88px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Every row, read and write</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:379.31px;width:396.20px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">On, with no policy</div>\n    <div class=\"node node-text\" style=\"left:501.80px;top:379.31px;width:549.88px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Nothing at all</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:506.45px;width:396.20px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">On, owner policy</div>\n    <div class=\"node node-text\" style=\"left:501.80px;top:506.45px;width:549.88px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Only their own rows</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">14</div>"
+        },
+        {
+          "index": 15,
+          "component": "image-half-bleed",
+          "caption": "What It Costs to Start",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">What It Costs to Start</div>\n    <div class=\"node node-image\" style=\"left:654.40px;top:157.44px;width:577.60px;height:447.36px;\">[img: examples/assets/supabase/pricing.png]</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Free to begin</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:250.24px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">500 MB of database</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:343.04px;width:577.60px;height:64.00px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">50,000 users a month</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">15</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1058.81px;top:633.60px;width:86.79px;height:38.40px;color:#0072CE;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;\"><a href=\"https://supabase.com/pricing\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline\">Source</a></div>"
+        },
+        {
+          "index": 16,
+          "component": "table-slide",
+          "caption": "A Real Project That Uses It",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">A Real Project That Uses It</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:416.36px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">What it stores</div>\n    <div class=\"node node-text\" style=\"left:521.96px;top:157.44px;width:542.42px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Example</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:217.60px;width:1016.39px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:252.16px;width:416.36px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Court opinions</div>\n    <div class=\"node node-text\" style=\"left:521.96px;top:252.16px;width:542.42px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Thousands, fetched daily</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:379.31px;width:416.36px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Is it about asylum?</div>\n    <div class=\"node node-text\" style=\"left:521.96px;top:379.31px;width:542.42px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">A yes or a no each</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:506.45px;width:416.36px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Case details</div>\n    <div class=\"node node-text\" style=\"left:521.96px;top:506.45px;width:542.42px;height:98.35px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Country, outcome, more</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">16</div>"
+        },
+        {
+          "index": 17,
+          "component": "numbered-steps",
+          "caption": "Your First Ten Minutes",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Your First Ten Minutes</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:81.49px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">01</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:157.44px;width:1078.51px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Make an account</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:229.44px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">The free plan is enough</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:316.16px;width:81.49px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">02</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:316.16px;width:1078.51px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Create a project</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:388.16px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">You get a database right away</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:474.88px;width:81.49px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">03</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:474.88px;width:1078.51px;height:67.20px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Make one table</div>\n    <div class=\"node node-text\" style=\"left:153.49px;top:546.88px;width:1078.51px;height:57.92px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Then add a row by hand</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">17</div>"
+        },
+        {
+          "index": 18,
+          "component": "table-slide",
+          "caption": "Screenshots, Captured 21 Oct 2026",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-text\" style=\"left:48.00px;top:48.00px;width:1184.00px;height:80.64px;color:#0072CE;font-family:'Arial',Arial;font-size:56.0px;line-height:1.2;font-weight:bold;padding:0;\">Screenshots, Captured 21 Oct 2026</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:157.44px;width:373.51px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Screenshot</div>\n    <div class=\"node node-text\" style=\"left:479.11px;top:157.44px;width:532.37px;height:54.40px;color:#0072CE;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:bold;padding:0;\">Captured from</div>\n    <div class=\"node node-box\" style=\"left:48.00px;top:217.60px;width:963.48px;height:5.76px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:252.16px;width:373.51px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Homepage</div>\n    <div class=\"node node-text\" style=\"left:479.11px;top:252.16px;width:532.37px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">supabase.com</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:328.45px;width:373.51px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Table editor</div>\n    <div class=\"node node-text\" style=\"left:479.11px;top:328.45px;width:532.37px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">supabase.com/database</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:404.74px;width:373.51px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Sign-in</div>\n    <div class=\"node node-text\" style=\"left:479.11px;top:404.74px;width:532.37px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">supabase.com/auth</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:481.02px;width:373.51px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Security warning</div>\n    <div class=\"node node-text\" style=\"left:479.11px;top:481.02px;width:532.37px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">supabase.com/docs</div>\n    <div class=\"node node-text\" style=\"left:48.00px;top:557.31px;width:373.51px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">Pricing</div>\n    <div class=\"node node-text\" style=\"left:479.11px;top:557.31px;width:532.37px;height:47.49px;color:#0A2240;font-family:'Arial',Arial;font-size:45.3px;line-height:1.2;font-weight:normal;padding:0;\">supabase.com/pricing</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">18</div>"
+        },
+        {
+          "index": 19,
+          "component": "question",
+          "caption": "What should it remember?",
+          "width_px": 1280.0,
+          "height_px": 720.0,
+          "background": "#FFFFFF",
+          "nodes_html": "    <div class=\"node node-box\" style=\"left:48.00px;top:307.20px;width:13.44px;height:105.60px;background:#0072CE;\"></div>\n    <div class=\"node node-text\" style=\"left:104.64px;top:307.20px;width:1127.36px;height:105.60px;color:#0A2240;font-family:'Arial',Arial;font-size:80.0px;line-height:1.2;font-weight:bold;padding:0;\">What should it remember?</div>\n    <div class=\"node node-text node-chrome\" style=\"left:1174.40px;top:633.60px;width:57.60px;height:38.40px;color:#5B6B82;font-family:'Arial',Arial;font-size:21.3px;line-height:1.2;font-weight:normal;padding:0;text-align:right;\">19</div>"
         }
       ]
     },

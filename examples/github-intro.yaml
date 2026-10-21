@@ -1,0 +1,268 @@
+# What Is GitHub? — an entry-level tour, grounded in real screenshots.
+#
+# Every screenshot was captured on 2026-10-21 with headless Chromium at a
+# 1290x1000 viewport (the exact shape of the image slot, so nothing is
+# stretched), signed out, from these public pages:
+#   assets/github/repo.png ..... https://github.com/Victor-Palacios/ninth_circuit
+#   assets/github/commits.png .. https://github.com/Victor-Palacios/ninth_circuit/commits
+#   assets/github/actions.png .. https://github.com/Victor-Palacios/ninth_circuit/actions
+#   assets/github/prs.png ...... https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
+#   assets/github/pages.png .... https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages
+# Each slide that shows one carries that URL as its `source`, rendered as a
+# clickable Source link beside the page number. Figures quoted on slides
+# (584 commits, 1,451 workflow runs) are as shown on that date.
+#
+# Three-colour rule: `primary` is collapsed onto `accent`. Screenshots are the
+# one deliberate exception — they are evidence, shown as captured.
+version: 1
+theme:
+  font: arial
+  palette:
+    primary: "#0072CE"
+    accent: "#0072CE"
+page_numbers:
+  enabled: true
+  start_at: 1
+  skip_title_slide: true
+
+slides:
+  - component: title-slide
+    title: "What Is GitHub?"
+    subtitle: "An entry-level tour, with real screenshots"
+    notes: >-
+      This is an entry-level tour of GitHub: what it does, the handful of words
+      you will hear constantly, and a real project to show each one.
+
+  - component: question
+    question: "Where does your code live?"
+    notes: >-
+      If your project only lives on your laptop, losing the laptop loses the
+      project, and nobody else can work on it with you. GitHub is the usual
+      answer to that.
+
+  - component: definition
+    term: "Git"
+    definition: "A tool that remembers every version of your files"
+    notes: >-
+      Git is a tool that remembers every version of your files, so you can see
+      what changed and go back to any earlier point.
+
+  - component: this-vs-that
+    title: "Git and GitHub Are Not the Same"
+    left:
+      value: "Git"
+      label: "On your computer"
+    right:
+      value: "GitHub"
+      label: "On the web"
+    notes: >-
+      Git runs on your computer. GitHub is a website that keeps a copy of your
+      Git project online, where other people can see it and work on it.
+
+  - component: definition
+    term: "Repository"
+    definition: "One project's folder, with its whole history"
+    notes: >-
+      A repository, or repo, is one project's folder together with its complete
+      history of changes.
+
+  - component: image-half-bleed
+    title: "A Real Repository"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/github/repo.png"
+      fit: contain
+      alt: "Screenshot of github.com/Victor-Palacios/ninth_circuit, captured 2026-10-21"
+    content:
+      - type: text
+        content: "This is ninth_circuit"
+      - type: text
+        content: "Folders and files"
+      - type: text
+        content: "584 commits of history"
+    source: "https://github.com/Victor-Palacios/ninth_circuit"
+    notes: >-
+      This is a real public repository called ninth_circuit. You can see its
+      folders and files, and in the corner, five hundred and eighty-four commits
+      of history.
+
+  - component: table-slide
+    title: "Where Things Are on the Page"
+    headers: ["Tab", "What it holds"]
+    rows:
+      - ["Code", "The files themselves"]
+      - ["Issues", "To-dos and bug reports"]
+      - ["Pull requests", "Changes waiting for review"]
+      - ["Actions", "Jobs that run by themselves"]
+    notes: >-
+      Across the top of every repository are the same tabs. Code holds the files,
+      Issues holds to-dos and bug reports, Pull requests holds changes waiting
+      for review, and Actions holds jobs that run by themselves.
+
+  - component: definition
+    term: "Commit"
+    definition: "A saved snapshot, with a note saying why"
+    notes: >-
+      A commit is a saved snapshot of your files, with a short note saying what
+      changed and why.
+
+  - component: image-half-bleed
+    title: "History You Can Read"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/github/commits.png"
+      fit: contain
+      alt: "Screenshot of github.com/Victor-Palacios/ninth_circuit/commits, captured 2026-10-21"
+    content:
+      - type: text
+        content: "Newest at the top"
+      - type: text
+        content: "Who, when, and why"
+      - type: text
+        content: "Any one can be restored"
+    source: "https://github.com/Victor-Palacios/ninth_circuit/commits"
+    notes: >-
+      This is that project's commit history: newest at the top, each one saying
+      who made it, when, and why — and any one of them can be restored.
+
+  - component: numbered-steps
+    title: "The Basic Loop"
+    steps:
+      - title: "Edit"
+        body: "Change files on your computer"
+      - title: "Commit"
+        body: "Save a snapshot with a note"
+      - title: "Push"
+        body: "Send it up to GitHub"
+    notes: >-
+      Day to day the loop has three steps: edit files on your computer, commit a
+      snapshot with a note, and push it up to GitHub.
+
+  - component: definition
+    term: "Branch"
+    definition: "A separate line of work that leaves main alone"
+    notes: >-
+      A branch is a separate line of work. You can try something out on it
+      without touching the main version everyone else relies on.
+
+  - component: image-half-bleed
+    title: "Proposing a Change"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/github/prs.png"
+      fit: contain
+      alt: "Screenshot of the GitHub Docs page About pull requests, captured 2026-10-21"
+    content:
+      - type: text
+        content: "Show what you changed"
+      - type: text
+        content: "Others review it"
+      - type: text
+        content: "Then it is merged"
+    source: "https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests"
+    notes: >-
+      When a branch is ready, you open a pull request. It shows exactly what you
+      changed, other people review it, and then it is merged into the main
+      version.
+
+  - component: image-half-bleed
+    title: "Work That Runs Itself"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/github/actions.png"
+      fit: contain
+      alt: "Screenshot of github.com/Victor-Palacios/ninth_circuit/actions, captured 2026-10-21"
+    content:
+      - type: text
+        content: "Jobs on a schedule"
+      - type: text
+        content: "1,451 runs so far"
+      - type: text
+        content: "No laptop required"
+    source: "https://github.com/Victor-Palacios/ninth_circuit/actions"
+    notes: >-
+      GitHub Actions runs jobs for you on GitHub's own computers. This project's
+      Actions tab shows one thousand four hundred and fifty-one runs, most of
+      them on a schedule, with no laptop involved.
+
+  - component: bullet-list
+    title: "What Actions Are Good For"
+    items:
+      - "Running your tests on every change"
+      - "A job every night, like fetching data"
+      - "Publishing a website"
+      - "Backing up your results"
+    notes: >-
+      Actions are good for running tests on every change, a nightly job such as
+      fetching new data, publishing a website, and backing up results — all four
+      of which that project does.
+
+  - component: image-half-bleed
+    title: "A Free Website From a Repo"
+    image_side: right
+    image:
+      type: image
+      path: "examples/assets/github/pages.png"
+      fit: contain
+      alt: "Screenshot of the GitHub Docs page What is GitHub Pages, captured 2026-10-21"
+    content:
+      - type: text
+        content: "HTML, CSS, JavaScript"
+      - type: text
+        content: "Served from your repo"
+      - type: text
+        content: "A public web address"
+    source: "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages"
+    notes: >-
+      GitHub Pages turns a repository into a website. It takes HTML, CSS and
+      JavaScript files straight from your repo and gives them a public web
+      address.
+
+  - component: bullet-list
+    title: "Public or Private"
+    items:
+      - "Public: anyone can read it"
+      - "Private: only people you invite"
+      - "Both keep the full history"
+      - "So never commit a password"
+    notes: >-
+      A public repository can be read by anyone, a private one only by people you
+      invite, and both keep their full history forever — which is why a password
+      should never be committed to either.
+
+  - component: numbered-steps
+    title: "Your First Ten Minutes"
+    steps:
+      - title: "Make an account"
+        body: "It is free"
+      - title: "Create a repository"
+        body: "Tick the box to add a README"
+      - title: "Edit the README"
+        body: "Commit it, and look at History"
+    notes: >-
+      To try it: make a free account, create a repository with a README, then
+      edit that README on the website, commit it, and look at the history you
+      just made.
+
+  - component: table-slide
+    title: "Screenshots, Captured 21 Oct 2026"
+    headers: ["Screenshot", "Captured from"]
+    rows:
+      - ["Repository", "…/ninth_circuit"]
+      - ["Commit history", "…/ninth_circuit/commits"]
+      - ["Actions", "…/ninth_circuit/actions"]
+      - ["Pull requests", "docs.github.com"]
+      - ["Pages", "docs.github.com"]
+    notes: >-
+      Every screenshot in this deck was captured on the twenty-first of October
+      2026 from the pages listed here, and each slide's Source link opens the
+      exact page.
+
+  - component: question
+    question: "What will you put in yours?"
+    notes: >-
+      So the last question is yours: what will you put in your first repository?
